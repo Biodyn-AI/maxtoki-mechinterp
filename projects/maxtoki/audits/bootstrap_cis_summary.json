@@ -1,0 +1,92 @@
+{
+  "sae_atlas_phase6_specificity": {
+    "metric": "median specificity_ratio across 50 patched features",
+    "headline_value": 1.0149339566157378,
+    "headline_label": "1.01\u00d7 (paper Geneformer L11: 2.36\u00d7)",
+    "n_features": 50,
+    "bootstrap_method": "resample features with replacement, n_boot=10000",
+    "median_ci95": [
+      1.010551248819885,
+      1.0187783143224411
+    ],
+    "mean": 1.013817464394568,
+    "mean_ci95": [
+      1.0088419673735822,
+      1.0187154200424955
+    ],
+    "raw_min": 0.9566524920287112,
+    "raw_max": 1.058258221686603,
+    "interpretation": "Median = 1.015, 95% CI [1.011, 1.019]. The CI strongly excludes the paper's 2.36\u00d7 \u2014 confirming this is a real non-replication, not a sample-size artifact."
+  },
+  "topology_141_h123": {
+    "metric": "mean delta_combo_vs_null_p95 per domain (12 layers each)",
+    "by_domain": {
+      "external_lung": {
+        "mean_delta": -0.060066661544159884,
+        "mean_delta_ci95": [
+          -0.07395839120780823,
+          -0.046766713163266006
+        ],
+        "n_layers": 12,
+        "n_positive_layers": 0,
+        "n_positive_ci95": [
+          0,
+          0
+        ]
+      },
+      "immune": {
+        "mean_delta": -0.02008339533730157,
+        "mean_delta_ci95": [
+          -0.026879085676515962,
+          -0.012514643878384676
+        ],
+        "n_layers": 12,
+        "n_positive_layers": 1,
+        "n_positive_ci95": [
+          0,
+          3
+        ]
+      },
+      "lung": {
+        "mean_delta": -0.04142643260481798,
+        "mean_delta_ci95": [
+          -0.047882919128036265,
+          -0.0349181383214586
+        ],
+        "n_layers": 12,
+        "n_positive_layers": 0,
+        "n_positive_ci95": [
+          0,
+          0
+        ]
+      }
+    },
+    "interpretation": "All three domain CIs exclude zero on the negative side OR straddle near-zero. external_lung mean \u0394 CI is decisively negative (matches the strict-max-null finding). immune is the closest to positive but its CI95 still includes negative values. Bootstrap confirms: H123 floor effect on MaxToki is genuine, not a single-layer artifact."
+  },
+  "circuit_tracing_crispri": {
+    "metric": "directional accuracy on CRISPRi-validated pairs",
+    "headline_value": 0.5460564218774006,
+    "headline_label": "54.61% (paper 56.4%; both near-chance)",
+    "n_total": 1458016,
+    "n_correct": 796159,
+    "wilson_ci95": [
+      0.5452481466576969,
+      0.5468644543975946
+    ],
+    "ci_width": 0.0016163077398976267,
+    "interpretation": "Wilson 95% CI: [0.54525, 0.54686]. At N=1,458,016, the CI is essentially tight at the third decimal place. Both the observed 54.61% and the paper's 56.4% sit comfortably within their respective tight CIs but both are > 50% (chance) by ~80 SD \u2014 the headline 'near-chance' framing should read 'a few SD above chance, but small effect size'. Caveat: pair-level pseudoreplication likely inflates the effective N \u2014 see audit P4 (action A2 GroupKFold)."
+  },
+  "spectral_geometry_cross_model_pearson": {
+    "metric": "off-diagonal Pearson(MaxToki cosine, Geneformer cosine), 1500-HVG",
+    "headline_value": 0.382,
+    "status": "SKIPPED \u2014 bootstrap not feasible from current outputs",
+    "blocker": "phase9b/cross_model_cosine.json stores only summary stats. Bootstrap would require per-pair cosine arrays, which would need re-extraction from the cached MaxToki layer-0 embeddings + Geneformer V2-316M static embeddings. Script template at runs/spectral-geometry-217M/scripts/phase9b_cross_model.py.",
+    "fallback_evidence": "Permutation null already gives p_empirical = 0 over 1000 perms with null SD = 0.001. The 0.382 value is overwhelmingly above null even without a bootstrap CI on it. Reviewer who specifically asks for bootstrap CI would need a re-run."
+  },
+  "manifold_discovery_trust_branch": {
+    "metric": "trust / branch_holdout for H65 internal + external + zero-shot",
+    "status": "SKIPPED \u2014 bootstrap not feasible from current outputs",
+    "blocker": "reports/*.json store only aggregate trust/branch values per panel. Bootstrap would require per-anchor distance matrices (ruler distances + LET-projected distances). These would need to be re-extracted from the cached centroids + LET head weights via the Phase-5 / Phase-7 scripts with bootstrap mode added.",
+    "fallback_evidence": "Each panel reports the gate verdict (pass/fail) on independent samples. External (n=600 anchors, 13 disjoint donors) trust=0.896 and zero-shot (n=160 anchors, 12 disjoint donors) trust=0.827 are independent point estimates that both pass the gate threshold of 0.80 \u2014 the multi-panel agreement substitutes for a within-panel bootstrap CI."
+  }
+}

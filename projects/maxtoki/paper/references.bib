@@ -1,0 +1,436 @@
+% ============================================================
+% Single-cell foundation models
+% ============================================================
+
+@article{cui2024scgpt,
+  title={{scGPT}: toward building a foundation model for single-cell multi-omics using generative {AI}},
+  author={Cui, Haotian and Wang, Chloe and Maan, Hassaan and Pang, Kuan and Luo, Fengning and Duan, Nan and Wang, Bo},
+  journal={Nature Methods},
+  volume={21},
+  pages={1470--1480},
+  year={2024},
+  doi={10.1038/s41592-024-02201-0}
+}
+
+@article{theodoris2023geneformer,
+  title={Transfer learning enables predictions in network biology},
+  author={Theodoris, Christina V. and Xiao, Ling and Chopra, Anant and Chaffin, Mark D. and Al Sayed, Zeina R. and Hill, Matthew C. and Mantineo, Helene and Brydon, Elizabeth M. and Zeng, Zexian and Liu, X. Shirley and Ellinor, Patrick T.},
+  journal={Nature},
+  volume={618},
+  pages={616--624},
+  year={2023},
+  doi={10.1038/s41586-023-06139-9}
+}
+
+@article{hao2024scfoundation,
+  title={Large-scale foundation model on single-cell transcriptomics},
+  author={Hao, Minsheng and Gong, Jing and Zeng, Xin and Liu, Chiming and Guo, Yucheng and Cheng, Xingyi and Wang, Taifeng and Ma, Jianzhu and Zhang, Xuegong and Song, Le},
+  journal={Nature Methods},
+  volume={21},
+  pages={1481--1491},
+  year={2024},
+  doi={10.1038/s41592-024-02305-7}
+}
+
+% bioRxiv 2026 uses the new 10.64898 DOI prefix; this is correct.
+@article{maxtoki2026,
+  title={Temporal {AI} model predicts drivers of cell state trajectories across human aging},
+  author={G{\'o}mez Ortega, Javier and Nadadur, Rangarajan D. and Kunitomi, Akira and Kurtoglu, Sarp D. and Kim, Bumjoon and Reid, Madigan M. and Lu, Thomas and Chen, Han and Zhang, Yujie and Ancheta, Sarah and Lichtarge, Sara and Johnson, William A. and Thompson, Chris and Yang, Andrew C. and Yamanaka, Shinya and Alexanian, Michael and Theodoris, Christina V.},
+  journal={bioRxiv},
+  year={2026},
+  doi={10.64898/2026.03.30.715396}
+}
+
+@article{kedzierska2023assessing,
+  title={Assessing the limits of zero-shot foundation models in single-cell biology},
+  author={Kedzierska, Kasia Z. and Crawford, Lorin and Amini, Ava P. and Lu, Alex X.},
+  journal={bioRxiv},
+  year={2023},
+  doi={10.1101/2023.10.16.561085}
+}
+
+@article{liu2023evaluating,
+  title={Evaluating the Utilities of Foundation Models in Single-cell Data Analysis},
+  author={Liu, Tianyu and Li, Kexing and Wang, Yuge and Li, Hongyu and Zhao, Hongyu},
+  journal={bioRxiv},
+  year={2023},
+  doi={10.1101/2023.09.08.555192}
+}
+
+@article{wenteler2024perteval,
+  title={{PertEval-scFM}: Benchmarking Single-Cell Foundation Models for Perturbation Effect Prediction},
+  author={Wenteler, Aaron and Occhetta, Martina and Branson, Nikhil and Curean, Victor and Huebner, Magdalena and Dee, William and Connell, William and Chung, Siu Pui and Hawkins-Hooker, Alex and Ektefaie, Yasha and Valdez C{\'o}rdova, C{\'e}sar Miguel and Gallagher-Syed, Amaya},
+  journal={bioRxiv},
+  year={2024},
+  doi={10.1101/2024.10.02.616248}
+}
+
+% ============================================================
+% Source papers for the pipeline catalogue (the prior work)
+% ============================================================
+
+@article{anon2026attention,
+  title={Systematic Evaluation of Single-Cell Foundation Model Interpretability: Attention-Derived Edge Scores Add No Incremental Value Over Gene-Level Features for Perturbation-Target Prediction},
+  author={Anonymous},
+  journal={arXiv preprint arXiv:2602.17532},
+  year={2026}
+}
+
+@article{anon2026spectral,
+  title={Multi-Dimensional Spectral Geometry of Biological Knowledge in Single-Cell Transformer Representations},
+  author={Anonymous},
+  journal={arXiv preprint arXiv:2602.22247},
+  year={2026}
+}
+
+@article{anon2026topology,
+  title={What Topological and Geometric Structure Do Biological Foundation Models Learn? Evidence from 141 Hypotheses},
+  author={Anonymous},
+  journal={arXiv preprint arXiv:2602.22289},
+  year={2026}
+}
+
+@article{anon2026sae,
+  title={Sparse Autoencoders Reveal Organized Biological Knowledge but Minimal Regulatory Logic in Single-Cell Foundation Models: A Comparative Atlas of {Geneformer} and {scGPT}},
+  author={Anonymous},
+  journal={arXiv preprint arXiv:2603.02952},
+  year={2026}
+}
+
+@article{anon2026circuits,
+  title={Causal Circuit Tracing Reveals Distinct Computational Architectures in Single-Cell Foundation Models: Inhibitory Dominance, Biological Coherence, and Cross-Model Convergence},
+  author={Anonymous},
+  journal={arXiv preprint arXiv:2603.01752},
+  year={2026}
+}
+
+@article{anon2026manifold,
+  title={Discovery of a Hematopoietic Manifold in {scGPT} Yields a Method for Extracting Performant Algorithms from Biological Foundation Model Internals},
+  author={Anonymous},
+  journal={arXiv preprint arXiv:2603.10261},
+  year={2026}
+}
+
+@article{anon2026exhaustive,
+  title={Exhaustive Circuit Mapping of a Single-Cell Foundation Model Reveals Massive Redundancy, Heavy-Tailed Hub Architecture, and Layer-Dependent Differentiation Control},
+  author={Anonymous},
+  journal={arXiv preprint arXiv:2603.11940},
+  year={2026}
+}
+
+% ============================================================
+% Mech-interp foundations: SAEs, circuit tracing, activation patching
+% ============================================================
+
+@article{bricken2023monosemanticity,
+  title={Towards Monosemanticity: Decomposing Language Models with Dictionary Learning},
+  author={Bricken, Trenton and Templeton, Adly and Batson, Joshua and Chen, Brian and Jermyn, Adam and Conerly, Tom and Turner, Nicholas L. and Anil, Cem and Denison, Carson and Askell, Amanda and Lasenby, Robert and Wu, Yifan and Kravec, Shauna and Schiefer, Nicholas and Maxwell, Tim and Joseph, Nicholas and Tamkin, Alex and Nguyen, Karina and McLean, Brayden and Burke, Josiah and Hume, Tristan and Carter, Shan and Henighan, Tom and Olah, Christopher},
+  journal={Transformer Circuits Thread},
+  year={2023},
+  url={https://transformer-circuits.pub/2023/monosemantic-features}
+}
+
+@inproceedings{cunningham2023sparse,
+  title={Sparse Autoencoders Find Highly Interpretable Features in Language Models},
+  author={Cunningham, Hoagy and Ewart, Aidan and Riggs, Logan and Huben, Robert and Sharkey, Lee},
+  booktitle={International Conference on Learning Representations (ICLR)},
+  year={2024}
+}
+
+@article{templeton2024scaling,
+  title={Scaling Monosemanticity: Extracting Interpretable Features from {C}laude 3 {S}onnet},
+  author={Templeton, Adly and Conerly, Tom and Marcus, Jonathan and Lindsey, Jack and Bricken, Trenton and Chen, Brian and Pearce, Adam and Citro, Craig and Ameisen, Emmanuel and Jermyn, Adam and Batson, Joshua and Olah, Christopher},
+  journal={Transformer Circuits Thread},
+  year={2024},
+  url={https://transformer-circuits.pub/2024/scaling-monosemanticity}
+}
+
+@inproceedings{conmy2023acdc,
+  title={Towards Automated Circuit Discovery for Mechanistic Interpretability},
+  author={Conmy, Arthur and Mavor-Parker, Augustine N. and Lynch, Aengus and Heimersheim, Stefan and Garriga-Alonso, Adri{\`a}},
+  booktitle={Advances in Neural Information Processing Systems (NeurIPS)},
+  year={2023}
+}
+
+@inproceedings{wang2023ioi,
+  title={Interpretability in the Wild: a Circuit for Indirect Object Identification in {GPT-2} Small},
+  author={Wang, Kevin and Variengien, Alexandre and Conmy, Arthur and Shlegeris, Buck and Steinhardt, Jacob},
+  booktitle={International Conference on Learning Representations (ICLR)},
+  year={2023}
+}
+
+@article{lieberum2024gemmascope,
+  title={Gemma Scope: Open Sparse Autoencoders Everywhere All At Once on {G}emma 2},
+  author={Lieberum, Tom and Rajamanoharan, Senthooran and Conmy, Arthur and Smith, Lewis and Sonnerat, Nicolas and Varma, Vikrant and Kram{\'a}r, J{\'a}nos and Dragan, Anca and Shah, Rohin and Nanda, Neel},
+  journal={arXiv preprint arXiv:2408.05147},
+  year={2024}
+}
+
+@article{olsson2022induction,
+  title={In-context Learning and Induction Heads},
+  author={Olsson, Catherine and Elhage, Nelson and Nanda, Neel and Joseph, Nicholas and DasSarma, Nova and Henighan, Tom and Mann, Ben and Askell, Amanda and Bai, Yuntao and Chen, Anna and others},
+  journal={Transformer Circuits Thread},
+  year={2022},
+  url={https://transformer-circuits.pub/2022/in-context-learning-and-induction-heads/}
+}
+
+@inproceedings{marks2024sparsefeaturecircuits,
+  title={Sparse Feature Circuits: Discovering and Editing Interpretable Causal Graphs in Language Models},
+  author={Marks, Samuel and Rager, Can and Michaud, Eric J. and Belinkov, Yonatan and Bau, David and Mueller, Aaron},
+  booktitle={International Conference on Learning Representations (ICLR)},
+  year={2025},
+  doi={10.48550/arXiv.2403.19647}
+}
+
+@inproceedings{meng2022rome,
+  title={Locating and Editing Factual Associations in {GPT}},
+  author={Meng, Kevin and Bau, David and Andonian, Alex and Belinkov, Yonatan},
+  booktitle={Advances in Neural Information Processing Systems (NeurIPS)},
+  year={2022},
+  doi={10.48550/arXiv.2202.05262}
+}
+
+@article{sharkey2025open,
+  title={Open Problems in Mechanistic Interpretability},
+  author={Sharkey, Lee and Chughtai, Bilal and Batson, Joshua and Lindsey, Jack and Wu, Jeff and Bushnaq, Lucius and Goldowsky-Dill, Nicholas and Heimersheim, Stefan and Ortega, Alejandro and Bloom, Joseph and others},
+  journal={Transactions on Machine Learning Research (TMLR)},
+  year={2025},
+  doi={10.48550/arXiv.2501.16496}
+}
+
+@article{lindsey2024crosscoders,
+  title={Sparse Crosscoders for Cross-Layer Features and Model Diffing},
+  author={Lindsey, Jack and Templeton, Adly and Marcus, Jonathan and Conerly, Tom and Batson, Joshua and Olah, Christopher},
+  journal={Transformer Circuits Thread},
+  year={2024},
+  url={https://transformer-circuits.pub/2024/crosscoders/index.html}
+}
+
+@article{gao2024scalingsae,
+  title={Scaling and Evaluating Sparse Autoencoders},
+  author={Gao, Leo and {Dupr{\'e} la Tour}, Tom and Tillman, Henk and Goh, Gabriel and Troll, Rajan and Radford, Alec and Sutskever, Ilya and Leike, Jan and Wu, Jeffrey},
+  journal={arXiv preprint arXiv:2406.04093},
+  year={2024}
+}
+
+@article{simon2025interplm,
+  title={{InterPLM}: discovering interpretable features in protein language models via sparse autoencoders},
+  author={Simon, Elana and Zou, James},
+  journal={Nature Methods},
+  year={2025},
+  doi={10.1038/s41592-025-02836-7}
+}
+
+% ============================================================
+% Statistical methodology
+% ============================================================
+
+@article{benjamini1995fdr,
+  title={Controlling the False Discovery Rate: A Practical and Powerful Approach to Multiple Testing},
+  author={Benjamini, Yoav and Hochberg, Yosef},
+  journal={Journal of the Royal Statistical Society. Series B (Methodological)},
+  volume={57},
+  number={1},
+  pages={289--300},
+  year={1995}
+}
+
+@article{phipson2010permp,
+  title={Permutation {P}-values Should Never Be Zero: Calculating Exact {P}-values When Permutations Are Randomly Drawn},
+  author={Phipson, Belinda and Smyth, Gordon K.},
+  journal={Statistical Applications in Genetics and Molecular Biology},
+  volume={9},
+  number={1},
+  pages={Article 39},
+  year={2010},
+  doi={10.2202/1544-6115.1585}
+}
+
+@inproceedings{venna2001trustworthiness,
+  title={Neighborhood Preservation in Nonlinear Projection Methods: An Experimental Study},
+  author={Venna, Jarkko and Kaski, Samuel},
+  booktitle={Artificial Neural Networks --- {ICANN} 2001},
+  series={Lecture Notes in Computer Science},
+  volume={2130},
+  pages={485--491},
+  year={2001},
+  publisher={Springer},
+  doi={10.1007/3-540-44668-0_68}
+}
+
+@article{jumper2021alphafold,
+  title={Highly accurate protein structure prediction with {AlphaFold}},
+  author={Jumper, John and Evans, Richard and Pritzel, Alexander and Green, Tim and Figurnov, Michael and Ronneberger, Olaf and Tunyasuvunakool, Kathryn and Bates, Russ and {\v{Z}}{\'i}dek, Augustin and Potapenko, Anna and Bridgland, Alex and Meyer, Clemens and Kohl, Simon A. A. and Ballard, Andrew J. and Cowie, Andrew and Romera-Paredes, Bernardino and Nikolov, Stanislav and Jain, Rishub and Adler, Jonas and Back, Trevor and Petersen, Stig and Reiman, David and Clancy, Ellen and Zielinski, Michal and Steinegger, Martin and Pacholska, Michalina and Berghammer, Tamas and Bodenstein, Sebastian and Silver, David and Vinyals, Oriol and Senior, Andrew W. and Kavukcuoglu, Koray and Kohli, Pushmeet and Hassabis, Demis},
+  journal={Nature},
+  volume={596},
+  pages={583--589},
+  year={2021},
+  doi={10.1038/s41586-021-03819-2}
+}
+
+% ============================================================
+% Reference databases and validation datasets used inline
+% ============================================================
+
+@article{garcia-alonso2019dorothea,
+  title={Benchmark and integration of resources for the estimation of human transcription factor activities},
+  author={Garc\'ia-Alonso, Luz and Holland, Christian H. and Ibrahim, Mahmoud M. and T{\"u}rei, D{\'e}nes and Saez-Rodriguez, Julio},
+  journal={Genome Research},
+  volume={29},
+  number={8},
+  pages={1363--1375},
+  year={2019},
+  doi={10.1101/gr.240663.118}
+}
+
+@article{replogle2022perturbseq,
+  title={Mapping information-rich genotype--phenotype landscapes with genome-scale {Perturb-seq}},
+  author={Replogle, Joseph M. and Saunders, Reuben A. and Pogson, Angela N. and Hussmann, Jeffrey A. and Lenail, Alexander and Guna, Alina and Mascibroda, Lauren and Wagner, Eric J. and Adelman, Karen and Lithwick-Yanai, Gila and Iremadze, Nika and Oberstrass, Florian and Lipson, Doron and Bonnar, Jessica L. and Jost, Marco and Norman, Thomas M. and Weissman, Jonathan S.},
+  journal={Cell},
+  volume={185},
+  number={14},
+  pages={2559--2575},
+  year={2022},
+  doi={10.1016/j.cell.2022.05.013}
+}
+
+@article{tabulasapiens2022,
+  title={The {Tabula Sapiens}: A multiple-organ, single-cell transcriptomic atlas of humans},
+  author={{The Tabula Sapiens Consortium}},
+  journal={Science},
+  volume={376},
+  number={6594},
+  pages={eabl4896},
+  year={2022},
+  doi={10.1126/science.abl4896}
+}
+
+@article{roohani2024gears,
+  title={Predicting transcriptional outcomes of novel multigene perturbations with {GEARS}},
+  author={Roohani, Yusuf and Huang, Kexin and Leskovec, Jure},
+  journal={Nature Biotechnology},
+  volume={42},
+  pages={927--935},
+  year={2024},
+  doi={10.1038/s41587-023-01905-6}
+}
+
+@article{lotfollahi2019scgen,
+  title={{scGen} predicts single-cell perturbation responses},
+  author={Lotfollahi, Mohammad and Wolf, F. Alexander and Theis, Fabian J.},
+  journal={Nature Methods},
+  volume={16},
+  pages={715--721},
+  year={2019},
+  doi={10.1038/s41592-019-0494-8}
+}
+
+% ============================================================
+% Other biological foundation models (for generalization discussion)
+% ============================================================
+
+@article{lin2023esm2,
+  title={Evolutionary-scale prediction of atomic-level protein structure with a language model},
+  author={Lin, Zeming and Akin, Halil and Rao, Roshan and Hie, Brian and Zhu, Zhongkai and Lu, Wenting and Smetanin, Nikita and Verkuil, Robert and Kabeli, Ori and Shmueli, Yaniv and dos Santos Costa, Allan and Fazel-Zarandi, Maryam and Sercu, Tom and Candido, Salvatore and Rives, Alexander},
+  journal={Science},
+  volume={379},
+  number={6637},
+  pages={1123--1130},
+  year={2023},
+  doi={10.1126/science.ade2574}
+}
+
+@article{nguyen2024evo,
+  title={Sequence modeling and design from molecular to genome scale with {Evo}},
+  author={Nguyen, Eric and Poli, Michael and Durrant, Matthew G. and Kang, Brian and Katrekar, Dhruva and Li, David B. and Bartie, Liam J. and Thomas, Armin W. and King, Samuel H. and Brixi, Garyk and others},
+  journal={Science},
+  volume={386},
+  number={6723},
+  pages={eado9336},
+  year={2024},
+  doi={10.1126/science.ado9336}
+}
+
+@article{dallatorre2024nucleotide,
+  title={Nucleotide Transformer: building and evaluating robust foundation models for human genomics},
+  author={Dalla-Torre, Hugo and Gonzalez, Liam and Mendoza-Revilla, Javier and Lopez Carranza, Nicolas and Grzywaczewski, Adam Henryk and Oteri, Francesco and Dallago, Christian and Trop, Evan and de Almeida, Bernardo P. and Sirelkhatim, Hassan and others},
+  journal={Nature Methods},
+  year={2024},
+  doi={10.1038/s41592-024-02523-z}
+}
+
+% ============================================================
+% Autonomous AI agents for scientific research and tool use
+% ============================================================
+
+@misc{autogpt2023,
+  title={{AutoGPT}: An Autonomous {GPT-4} Experiment},
+  author={{Significant Gravitas}},
+  year={2023},
+  howpublished={\url{https://github.com/Significant-Gravitas/AutoGPT}}
+}
+
+@article{lu2024aiscientist,
+  title={The {AI} Scientist: Towards Fully Automated Open-Ended Scientific Discovery},
+  author={Lu, Chris and Lu, Cong and Lange, Robert Tjarko and Foerster, Jakob and Clune, Jeff and Ha, David},
+  journal={arXiv preprint arXiv:2408.06292},
+  year={2024}
+}
+
+@article{boiko2023autonomous,
+  title={Autonomous chemical research with large language models},
+  author={Boiko, Daniil A. and MacKnight, Robert and Kline, Ben and Gomes, Gabe},
+  journal={Nature},
+  volume={624},
+  pages={570--578},
+  year={2023},
+  doi={10.1038/s41586-023-06792-0}
+}
+
+@article{mbran2024chemcrow,
+  title={Augmenting large language models with chemistry tools},
+  author={M. Bran, Andres and Cox, Sam and Schilter, Oliver and Baldassari, Carlo and White, Andrew D. and Schwaller, Philippe},
+  journal={Nature Machine Intelligence},
+  volume={6},
+  pages={525--535},
+  year={2024},
+  doi={10.1038/s42256-024-00832-8}
+}
+
+@inproceedings{yao2023react,
+  title={{ReAct}: Synergizing Reasoning and Acting in Language Models},
+  author={Yao, Shunyu and Zhao, Jeffrey and Yu, Dian and Du, Nan and Shafran, Izhak and Narasimhan, Karthik and Cao, Yuan},
+  booktitle={International Conference on Learning Representations (ICLR)},
+  year={2023}
+}
+
+@inproceedings{shinn2023reflexion,
+  title={Reflexion: Language Agents with Verbal Reinforcement Learning},
+  author={Shinn, Noah and Cassano, Federico and Berman, Edward and Gopinath, Ashwin and Narasimhan, Karthik and Yao, Shunyu},
+  booktitle={Advances in Neural Information Processing Systems (NeurIPS)},
+  year={2023}
+}
+
+@inproceedings{schick2023toolformer,
+  title={{Toolformer}: Language Models Can Teach Themselves to Use Tools},
+  author={Schick, Timo and Dwivedi-Yu, Jane and Dess{\`i}, Roberto and Raileanu, Roberta and Lomeli, Maria and Zettlemoyer, Luke and Cancedda, Nicola and Scialom, Thomas},
+  booktitle={Advances in Neural Information Processing Systems (NeurIPS)},
+  year={2023},
+  doi={10.48550/arXiv.2302.04761}
+}
+
+@inproceedings{yang2024sweagent,
+  title={{SWE-agent}: Agent-Computer Interfaces Enable Automated Software Engineering},
+  author={Yang, John and Jimenez, Carlos E. and Wettig, Alexander and Lieret, Kilian and Yao, Shunyu and Narasimhan, Karthik and Press, Ofir},
+  booktitle={Advances in Neural Information Processing Systems (NeurIPS)},
+  year={2024},
+  doi={10.48550/arXiv.2405.15793}
+}
+
+@article{chan2024mlebench,
+  title={{MLE-bench}: Evaluating Machine Learning Agents on Machine Learning Engineering},
+  author={Chan, Jun Shern and Chowdhury, Neil and Jaffe, Oliver and Aung, James and Sherburn, Dane and Mays, Evan and Starace, Giulio and Liu, Kevin and Maksin, Leon and Patwardhan, Tejal and Weng, Lilian and M{\k a}dry, Aleksander},
+  journal={arXiv preprint arXiv:2410.07095},
+  year={2024},
+  doi={10.48550/arXiv.2410.07095}
+}

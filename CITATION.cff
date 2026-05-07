@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite the accompanying paper."
+title: "maxtoki-mechinterp: Agent-driven mechanistic interpretability pipelines for single-cell foundation models"
+abstract: >
+  Mechanistic-interpretability pipelines for single-cell foundation models,
+  with a deployment study on MaxToki-217M and a reusable audit framework that
+  codifies recurring peer-reviewer-flagged failure modes. Pipelines are
+  authored as markdown executable specifications consumable by LLM-based
+  research agents.
+authors:
+  - name: "Anonymous"
+license: "Apache-2.0"
+repository-code: "https://github.com/Biodyn-AI/maxtoki-mechinterp"
+type: software
+version: "0.1.0"
+date-released: "2026-05-08"
+keywords:
+  - mechanistic interpretability
+  - single-cell foundation models
+  - sparse autoencoders
+  - autonomous agents
+  - audit framework
+preferred-citation:
+  type: conference-paper
+  title: "An Agent-Driven Pipeline for Mechanistic Interpretability of Single-Cell Foundation Models: Findings on MaxToki-217M and a Reusable Audit Framework"
+  authors:
+    - name: "Anonymous"
+  year: 2026
+  conference:
+    name: "ICML 2026 Mechanistic Interpretability Workshop"
