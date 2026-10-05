@@ -1,12 +1,12 @@
 # Release notes
 
-Built by `projects/maxtoki/release/build_release.py` (the builder itself is not part of this tree). Newest source file: 2026-10-05 01:21 (local time).
+Built by `projects/maxtoki/release/build_release.py` (the builder itself is not part of this tree). Newest source file: 2026-10-05 20:02 (local time).
 
 ## What is here
 
 | Area | Files | Size |
 |---|---|---|
-| `CITATION.cff` | 1 | 1.7 KB |
+| `CITATION.cff` | 1 | 1.8 KB |
 | `CONTRIBUTING.md` | 1 | 3.8 KB |
 | `LICENSE` | 1 | 11.4 KB |
 | `NOTICE` | 1 | 14.9 KB |
@@ -54,7 +54,7 @@ Built by `projects/maxtoki/release/build_release.py` (the builder itself is not 
 - Model weights: see `CHECKPOINTS.md` (Hugging Face ids, revisions, sha256).
 - Input datasets: see `DATASETS.md` (public sources, version ids, sha256).
 - 2,146 files over 2 MB (108.4 GB) and the 1,862 files of the Study C snapshot (221.7 MB) are not in the git repository. `ZENODO_MANIFEST.csv` lists each one with its size, sha256, the Zenodo file that holds it
-  and a description. `python release_tools/fetch_zenodo.py --get` downloads them and puts them back at their paths
+  and a description. The Zenodo record is https://doi.org/10.5281/zenodo.23169989 . `python release_tools/fetch_zenodo.py --get` downloads them and puts them back at their paths
   (a full fetch needs about 83 GB free: about 41 GB of downloads kept in `.zenodo_cache/`, which can be
   deleted afterwards or put elsewhere with `--cache`, plus about 42 GB of placed files).
   36 of them are not deposited (67.0 GB); the `deposited` column says why and how to rebuild or re-extract them.

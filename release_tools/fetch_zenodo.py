@@ -20,7 +20,7 @@ every placed path, so git does not pick them up.
 import argparse, csv, hashlib, pathlib, shutil, sys, urllib.request, zipfile
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-RECORD = ""   # Zenodo record id
+RECORD = "23169989"   # Zenodo record id
 
 
 def sha256(p):
