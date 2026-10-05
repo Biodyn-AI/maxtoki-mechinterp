@@ -2,8 +2,9 @@
 """Download the files of this release that are kept on Zenodo and put them back at their paths.
 
 ZENODO_MANIFEST.csv lists every file that is not in the git repository. For each file it gives the
-Zenodo file that holds it: the file itself (large files, named after their path with "/" written as
-"__") or a zip archive (one per area; inside it, each file keeps its path in this release). Rows whose
+Zenodo file that holds it: the file itself (files over 0.5 GB, named after their path with "/" written
+as "__") or a zip archive (one or more per area, files_<area>.zip or files_<area>_partN.zip; inside it,
+each file keeps its path in this release). Rows whose
 `deposited` column is not "yes" are not on Zenodo; that column says how to rebuild them.
 
 Text files on Zenodo carry the same path placeholders as the repository (see PATH_MAP.md); run
