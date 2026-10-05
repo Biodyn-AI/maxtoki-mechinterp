@@ -1,0 +1,29 @@
+{
+  "external_lung": {
+    "n_genes": 380,
+    "cca_mean_r": 0.7661705028380451,
+    "pairwise_pearson": 0.38737420396956257,
+    "pairwise_pearson_z": 107.98709241786486,
+    "top1_retrieval": 0.3815789473684211,
+    "top1_retrieval_z": 149.13452249945746,
+    "verdict": "Layer-1 PARTIALLY REPLICATES (pearson z>3)"
+  },
+  "immune": {
+    "n_genes": 350,
+    "cca_mean_r": 0.7757347694928558,
+    "pairwise_pearson": 0.40032796368746865,
+    "pairwise_pearson_z": 86.07816531617598,
+    "top1_retrieval": 0.4657142857142857,
+    "top1_retrieval_z": 150.25728416267688,
+    "verdict": "Layer-1 PARTIALLY REPLICATES (pearson z>3)"
+  },
+  "lung": {
+    "n_genes": 382,
+    "cca_mean_r": 0.7831083136328606,
+    "pairwise_pearson": 0.3979362101701208,
+    "pairwise_pearson_z": 107.23946352075725,
+    "top1_retrieval": 0.450261780104712,
+    "top1_retrieval_z": 182.09591709682428,
+    "verdict": "Layer-1 PARTIALLY REPLICATES (pearson z>3)"
+  }
+}

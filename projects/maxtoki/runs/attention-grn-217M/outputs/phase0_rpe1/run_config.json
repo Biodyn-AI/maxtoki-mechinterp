@@ -1,0 +1,16 @@
+{
+  "pipeline": "attention-grn",
+  "phase": "0a",
+  "dataset": "rpe1",
+  "model": "MaxToki-217M-HF",
+  "model_n_layers": 11,
+  "model_n_heads": 8,
+  "device": "mps",
+  "n_ctrl": 2000,
+  "n_hvg": 1500,
+  "mean_seq_len": 2038.8755,
+  "mean_fwd_seconds": 2.1165070651769637,
+  "total_fwd_seconds": 4233.014130353928,
+  "total_phase_seconds": 4259.69699716568,
+  "seed": 42
+}

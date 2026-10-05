@@ -1,0 +1,195 @@
+{
+ "tie_self_test": {
+  "constant_score_auroc": 0.5,
+  "tied_score_rank_auroc": 0.5575115934244487,
+  "tied_score_sklearn_auroc": 0.5575115934244488
+ },
+ "runs": {
+  "217M_K562": {
+   "checks_vs_deployed": {
+    "n_deployed": 174,
+    "n_rederived": 174,
+    "n_matched": 174,
+    "n_positive_counts_equal": 174,
+    "max_abs_diff_attention": 1.1102230246251565e-16,
+    "max_abs_diff_variance": 1.1102230246251565e-16,
+    "max_abs_diff_rank_vs_sklearn": 1.1102230246251565e-16,
+    "phase3_pairs": 260826,
+    "phase3_pairs_matched": 260826,
+    "phase3_label_disagreements": 0,
+    "rederived_pairs_total": 260826
+   },
+   "n_perturbations": 174,
+   "n_positive_pairs": 9741,
+   "n_negative_pairs": 251085,
+   "median_positives_per_perturbation": 15.0,
+   "attention_mean_auroc": 0.511937906049327,
+   "attention_ci95": [
+    0.497044998617862,
+    0.5271904124183178
+   ],
+   "variance_mean_auroc": 0.59566434928783,
+   "variance_ci95": [
+    0.5806140245789252,
+    0.6111563549580481
+   ],
+   "gap_variance_minus_attention": 0.08372644323850298,
+   "gap_ci95": [
+    0.06155452621706168,
+    0.10675850785379772
+   ],
+   "n_perturbations_variance_gt_attention": 118,
+   "wilcoxon_variance_vs_attention": {
+    "test": "paired Wilcoxon signed-rank, zero_method='zsplit', two-sided, on per-perturbation AUROCs",
+    "p_raw_recomputed_from_deployed_csv": 9.307480355838002e-11,
+    "p_raw_deployed_file": 9.307480355838002e-11,
+    "p_bh_within_run_13_tests_recomputed": 4.033241487529801e-10,
+    "p_bh_within_run_deployed_file": 4.033241487529801e-10,
+    "max_abs_diff_family_raw_p": 2.7755575615628914e-17,
+    "p_raw_from_rederived_aurocs": 9.307536740549142e-11,
+    "p_bh_across_4_runs": 1.2409973807784003e-10
+   }
+  },
+  "217M_RPE1": {
+   "checks_vs_deployed": {
+    "n_deployed": 325,
+    "n_rederived": 325,
+    "n_matched": 325,
+    "n_positive_counts_equal": 325,
+    "max_abs_diff_attention": 2.220446049250313e-16,
+    "max_abs_diff_variance": 2.220446049250313e-16,
+    "max_abs_diff_rank_vs_sklearn": 2.220446049250313e-16,
+    "phase3_pairs": 487175,
+    "phase3_pairs_matched": 487175,
+    "phase3_label_disagreements": 0,
+    "rederived_pairs_total": 487175
+   },
+   "n_perturbations": 325,
+   "n_positive_pairs": 48245,
+   "n_negative_pairs": 438930,
+   "median_positives_per_perturbation": 103.0,
+   "attention_mean_auroc": 0.6032505785741721,
+   "attention_ci95": [
+    0.5935090139586289,
+    0.6121348668412233
+   ],
+   "variance_mean_auroc": 0.7664104602215869,
+   "variance_ci95": [
+    0.7565558241182934,
+    0.7764645741386413
+   ],
+   "gap_variance_minus_attention": 0.1631598816474148,
+   "gap_ci95": [
+    0.15358279241518785,
+    0.17355352717800196
+   ],
+   "n_perturbations_variance_gt_attention": 314,
+   "wilcoxon_variance_vs_attention": {
+    "test": "paired Wilcoxon signed-rank, zero_method='zsplit', two-sided, on per-perturbation AUROCs",
+    "p_raw_recomputed_from_deployed_csv": 2.3233645039193437e-52,
+    "p_raw_deployed_file": 2.3233645039193437e-52,
+    "p_bh_within_run_13_tests_recomputed": 1.5101869275475733e-51,
+    "p_bh_within_run_deployed_file": 1.5101869275475733e-51,
+    "max_abs_diff_family_raw_p": 1.2576745200831851e-17,
+    "p_raw_from_rederived_aurocs": 2.3233645039193437e-52,
+    "p_bh_across_4_runs": 9.293458015677375e-52
+   }
+  },
+  "217M_Adamson": {
+   "checks_vs_deployed": {
+    "n_deployed": 57,
+    "n_rederived": 57,
+    "n_matched": 57,
+    "n_positive_counts_equal": 57,
+    "max_abs_diff_attention": 2.220446049250313e-16,
+    "max_abs_diff_variance": 1.1102230246251565e-16,
+    "max_abs_diff_rank_vs_sklearn": 2.220446049250313e-16,
+    "phase3_pairs": 85443,
+    "phase3_pairs_matched": 85443,
+    "phase3_label_disagreements": 0,
+    "rederived_pairs_total": 85443
+   },
+   "n_perturbations": 57,
+   "n_positive_pairs": 4438,
+   "n_negative_pairs": 81005,
+   "median_positives_per_perturbation": 47.0,
+   "attention_mean_auroc": 0.5080613401677235,
+   "attention_ci95": [
+    0.4861821754295725,
+    0.5288579020024232
+   ],
+   "variance_mean_auroc": 0.7122601590661911,
+   "variance_ci95": [
+    0.6970111639300612,
+    0.7274042767525634
+   ],
+   "gap_variance_minus_attention": 0.20419881889846758,
+   "gap_ci95": [
+    0.174473475855033,
+    0.23564064926792658
+   ],
+   "n_perturbations_variance_gt_attention": 56,
+   "wilcoxon_variance_vs_attention": {
+    "test": "paired Wilcoxon signed-rank, zero_method='zsplit', two-sided, on per-perturbation AUROCs",
+    "p_raw_recomputed_from_deployed_csv": 6.363774575830323e-11,
+    "p_raw_deployed_file": 6.363774575830323e-11,
+    "p_bh_within_run_13_tests_recomputed": 1.3788178247632366e-10,
+    "p_bh_within_run_deployed_file": 1.3788178247632366e-10,
+    "max_abs_diff_family_raw_p": 1.3877787807814457e-17,
+    "p_raw_from_rederived_aurocs": 6.363774575830323e-11,
+    "p_bh_across_4_runs": 1.2409973807784003e-10
+   }
+  },
+  "1B_K562": {
+   "checks_vs_deployed": {
+    "n_deployed": 155,
+    "n_rederived": 155,
+    "n_matched": 155,
+    "n_positive_counts_equal": 155,
+    "max_abs_diff_attention": 1.1102230246251565e-16,
+    "max_abs_diff_variance": 1.1102230246251565e-16,
+    "max_abs_diff_rank_vs_sklearn": 1.1102230246251565e-16,
+    "phase3_pairs": 232345,
+    "phase3_pairs_matched": 232345,
+    "phase3_label_disagreements": 0,
+    "rederived_pairs_total": 232345
+   },
+   "n_perturbations": 155,
+   "n_positive_pairs": 8587,
+   "n_negative_pairs": 223758,
+   "median_positives_per_perturbation": 14.0,
+   "attention_mean_auroc": 0.5398362497364162,
+   "attention_ci95": [
+    0.5229860278465224,
+    0.5557038965145291
+   ],
+   "variance_mean_auroc": 0.596080029636302,
+   "variance_ci95": [
+    0.5803366275647338,
+    0.6117801415326116
+   ],
+   "gap_variance_minus_attention": 0.056243779899885826,
+   "gap_ci95": [
+    0.032717642700712674,
+    0.08043092978256855
+   ],
+   "n_perturbations_variance_gt_attention": 91,
+   "wilcoxon_variance_vs_attention": {
+    "test": "paired Wilcoxon signed-rank, zero_method='zsplit', two-sided, on per-perturbation AUROCs",
+    "p_raw_recomputed_from_deployed_csv": 5.8303999171029186e-05,
+    "p_raw_deployed_file": 5.8303999171029186e-05,
+    "p_bh_within_run_13_tests_recomputed": 9.474399865292243e-05,
+    "p_bh_within_run_deployed_file": 9.474399865292244e-05,
+    "max_abs_diff_family_raw_p": 7.621941272573096e-17,
+    "p_raw_from_rederived_aurocs": 5.8303999171029186e-05,
+    "p_bh_across_4_runs": 5.8303999171029186e-05
+   }
+  }
+ },
+ "bootstrap": {
+  "unit": "perturbation",
+  "method": "percentile, resample perturbations with replacement",
+  "n_reps": 2000,
+  "seed_base": 20261101
+ }
+}

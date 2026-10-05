@@ -1,0 +1,41 @@
+{
+  "n_joined": 130,
+  "n_manual_numbers_not_joined": 22,
+  "n_manual_rows_read": 252,
+  "n_manual_rows_without_a_number": 149,
+  "n_distinct_values_wrong_in_meaning": 23,
+  "n_distinct_values_wrong_in_meaning_traced": 23,
+  "by_manual_status": {
+    "NOT FOUND": {
+      "n": 4,
+      "traced_any_run": 4,
+      "chain": 4,
+      "in_summaries": 4
+    },
+    "DIFFERENT ENDPOINT": {
+      "n": 17,
+      "traced_any_run": 17,
+      "chain": 17,
+      "in_summaries": 17
+    },
+    "MATCH": {
+      "n": 98,
+      "traced_any_run": 96,
+      "chain": 94,
+      "in_summaries": 96
+    },
+    "MISMATCH": {
+      "n": 10,
+      "traced_any_run": 10,
+      "chain": 10,
+      "in_summaries": 10
+    },
+    "AMBIGUOUS": {
+      "n": 1,
+      "traced_any_run": 1,
+      "chain": 1,
+      "in_summaries": 1
+    }
+  },
+  "note": "traced = present in outputs within rounding; it does not test meaning. A number the manual audit marks MISMATCH or DIFFERENT ENDPOINT can still be present in the outputs."
+}

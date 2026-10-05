@@ -1,0 +1,105 @@
+{
+ "layer": 5,
+ "n_alive": 4928,
+ "N_universe": 6325,
+ "n_terms": 2377,
+ "n_tests": 11713856,
+ "A_deployed": 3340,
+ "A2_biosae": 3250,
+ "B_perfeature": 84,
+ "B_ge3": 43,
+ "B2_perfeature_ovl2": 2939,
+ "C_global": 5,
+ "Bu_perfeature": 84,
+ "Cu_global": 5,
+ "deployed_summary": {
+  "layer": 5,
+  "n_alive": 4928,
+  "n_annotated": 3340,
+  "annotation_rate": 0.6778,
+  "total_enrichments": 27661
+ },
+ "deployed_kept_tests": 34207,
+ "rows_mine": 27661,
+ "rows_deployed": 27661,
+ "rows_missing": 0,
+ "rows_extra": 0,
+ "max_abs_p_diff": 9.952975943416931e-17,
+ "overlap_col_match": true,
+ "n_col_match": true,
+ "K_col_match": true,
+ "N_col_match": true,
+ "max_abs_q_diff": 9.80118763926896e-17,
+ "deployed_max_raw_p_sig": 0.0401777698935241,
+ "deployed_share_overlap2": 0.8265066338888688,
+ "B_rows": 614,
+ "B_rows_share_overlap2": 0.5244299674267101,
+ "B_rows_overlap2_full20": 294,
+ "B_rows_overlap2_short": 28,
+ "B_rows_overlap1": 0,
+ "B_rate": 0.017045454545454544,
+ "B_wilson": [
+  0.013789543792478815,
+  0.02105372119393966
+ ],
+ "A_rate": 0.6777597402597403,
+ "A2_rate": 0.6594967532467533,
+ "B2_rate": 0.596387987012987,
+ "list_sizes_lt20": 121,
+ "global_features": [
+  {
+   "feature_id": 2560,
+   "n_terms_global": 1,
+   "n_terms_perfeature": 18,
+   "min_p": 3.541900076652894e-08,
+   "best_term": "GO_BP:Regulation Of Mitotic Nuclear Division (GO:0007088)"
+  },
+  {
+   "feature_id": 2588,
+   "n_terms_global": 1,
+   "n_terms_perfeature": 1,
+   "min_p": 9.707818097724707e-08,
+   "best_term": "GO_BP:Neuron Projection Morphogenesis (GO:0048812)"
+  },
+  {
+   "feature_id": 3078,
+   "n_terms_global": 9,
+   "n_terms_perfeature": 12,
+   "min_p": 1.9985563598653464e-17,
+   "best_term": "GO_BP:Mitochondrial Translation (GO:0032543)"
+  },
+  {
+   "feature_id": 4182,
+   "n_terms_global": 8,
+   "n_terms_perfeature": 9,
+   "min_p": 1.837829433983197e-09,
+   "best_term": "Reactome:Mitochondrial Translation Termination R-HSA-5419276"
+  },
+  {
+   "feature_id": 4235,
+   "n_terms_global": 5,
+   "n_terms_perfeature": 23,
+   "min_p": 2.5298913458592607e-09,
+   "best_term": "GO_BP:Cholesterol Biosynthetic Process (GO:0006695)"
+  }
+ ],
+ "phase6": {
+  "picks_equal_used": 50,
+  "n_used": 50,
+  "deployed_count_range": [
+   45,
+   152
+  ],
+  "count_50th": 45,
+  "count_51st": 45,
+  "n_tied_at_boundary": 7,
+  "n_tied_inside_top50": 6,
+  "annotated_perfeature": 23,
+  "ge3_perfeature": 19,
+  "annotated_global": 1,
+  "global_ids": [
+   2560
+  ]
+ },
+ "seconds": 15.1
+}

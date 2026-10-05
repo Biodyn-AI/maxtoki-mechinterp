@@ -1,0 +1,58 @@
+{
+  "iteration": "iter_0002",
+  "model": "MaxToki-217M-HF",
+  "hypotheses": [
+    {
+      "id": "H01",
+      "name": "H0 persistent topology of gene embedding filtration",
+      "family": "persistent_homology",
+      "method": "Betti-0 persistence barcode via union-find on cosine-distance MST edges, across all 12 layers. Null: per-dimension feature-shuffle preserving marginal distributions. Metrics: total persistence ratio (real/null), max component lifetime, n long-lived components (lifetime > 0.10 cosine dist).",
+      "status": "tested",
+      "primary_metric": "total_persistence_ratio",
+      "result_value": "L0=0.921 → L11=0.251 (monotonically decreasing); n_long_ratio L11=0.39 (real 590 vs null 1499 long-lived components)",
+      "result_direction": "negative",
+      "artifact_paths": ["h01_persistent_topology.csv"],
+      "decision": "promising",
+      "next_action": "Investigate which specific gene clusters collapse (biological annotation of persistent vs ephemeral components). Also test H1 (1-cycle) persistence if ripser becomes available.",
+      "novelty_type": "new_family",
+      "lineage": "none",
+      "retired": false,
+      "interpretation": "Real gene embeddings have consistently LOWER total H0 persistence than feature-shuffle null at all layers. Ratio drops from 0.92 (L0) to 0.25 (L11). This means late-layer real embeddings are far MORE COMPACT (fewer separated clusters) than random — genes converge into tighter clusters rather than spreading out. n_long decreases from 1499 at L0 to 590 at L11 (null stays at 1499), indicating the real embedding geometry at L11 has far fewer distinct topological features. This is a topological confirmation of rank compression: not just fewer singular-vector dimensions, but actual topological clustering of genes.",
+      "prior_phase_comparison": "phase9a stub reported only 1 connected component at a single threshold — not a true filtration. This analysis is entirely new."
+    },
+    {
+      "id": "H02",
+      "name": "Per-gene local intrinsic dimensionality stratified by TF/target annotation",
+      "family": "intrinsic_dimensionality",
+      "method": "Levina-Bickel MLE with k=20 cosine-kNN per gene per layer. Gene stratification: TF_only (n=151), TF_and_target (n=192), target_only (n=595), string_member (n=553), other (n=9). Mann-Whitney tests with BH-FDR correction.",
+      "status": "tested",
+      "primary_metric": "median_LID_TF_only_vs_target_only",
+      "result_value": "Mean global LID: 46.7 (L0) → 3.52 (L11), 13.3x compression. TF_only lower LID than target_only at L6 (q=0.015, delta=-0.77), L3 (q=0.116), L11 (q=0.055). string_member has lowest LID at most layers.",
+      "result_direction": "mixed",
+      "artifact_paths": ["h02_lid_summary.csv", "h02_lid_tests.csv", "h02_lid_per_gene.csv", "h02_lid_matrix.npy"],
+      "decision": "promising",
+      "next_action": "Visualize LID trajectories per group. Test whether genes with highest L0→L11 LID drop are enriched for specific pathways (GO BP / Reactome).",
+      "novelty_type": "new_method",
+      "lineage": "none",
+      "retired": false,
+      "interpretation": "TF genes consistently occupy lower-LID (more concentrated) neighborhoods than target genes across layers. The difference is statistically significant at L6 (q=0.015) and borderline at several other layers. STRING members have the lowest LID of all groups. Global LID compression (47→3.5, 13.3x) is stronger than previously measured TwoNN compression (6.1x), suggesting LID captures local structure the global TwoNN misses. The TF<target LID ordering is consistent with TFs being co-located regulatory hubs while targets are more dispersed."
+    },
+    {
+      "id": "H03",
+      "name": "STRING PPI cohesion in gene kNN graph across layers",
+      "family": "graph_topology",
+      "method": "kNN graph (k=15, cosine similarity) per layer. STRING precision@k: fraction of STRING 700/900 pairs that are direct kNN neighbors. Null: hypergeometric expectation (random edge assignment). Also: normalized Laplacian Fiedler value across layers.",
+      "status": "tested",
+      "primary_metric": "string_knn_precision_z700",
+      "result_value": "L0: z_700=23.0, z_900=21.2 (HIGHLY significant). Drops to z≈1-3 by L4-L6. Mild recovery: L8 z_700=3.8, z_900=4.2; L11 z_700=3.0. Fiedler value: 0.166 (L0) → 0.008 (L11), 21x decrease.",
+      "result_direction": "positive",
+      "artifact_paths": ["h03_spectral_gap.csv"],
+      "decision": "promising",
+      "next_action": "Characterize which STRING gene pairs persist as kNN neighbors through all layers (most structurally invariant pairs). Compare to which pairs appear only at L0 (token-embedding-encoded) vs only at late layers (contextually reconstructed).",
+      "novelty_type": "new_method",
+      "lineage": "none",
+      "retired": false,
+      "interpretation": "KEY FINDING: MaxToki L0 (token embeddings) STRONGLY encodes STRING PPI topology as kNN proximity (z=23.0 for STRING-700 pairs). This drops rapidly after the first transformer block (L1: z=10.8, L4: z=3.2) and partially recovers at L8 (z=3.8) and L11 (z=3.0). This differs from the SV3 analysis which found PPI signal at 3/12 layers: the kNN approach captures LOCAL co-localization and reveals strong L0 signal that the SVD-based global analysis missed (SVD axes are dominated by variance structure, not local pairwise proximity). The Fiedler decay (0.166→0.008) indicates the kNN graph becomes increasingly fragmented at late layers — consistent with gene clusters becoming very tight (within-cluster edges) while between-cluster connectivity drops to near zero."
+    }
+  ]
+}

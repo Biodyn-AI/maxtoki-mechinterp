@@ -1,0 +1,51 @@
+{
+  "item": "D10",
+  "script": "<REPO_ROOT>/projects/maxtoki/runs/spectral-geometry-217M/scripts/v2_crossmodel_pearson_ci.py",
+  "created": "2026-10-01 01:29:07",
+  "seeds": {
+    "boot": 20261101,
+    "perm": 20261102,
+    "boot_scgpt": 20261103,
+    "perm_scgpt": 20261104,
+    "published_subsample": 42
+  },
+  "inputs": {
+    "maxtoki_model_safetensors": {
+      "path": "<REPO_ROOT>/projects/maxtoki/setup/MaxToki-217M-HF/model.safetensors",
+      "resolved": "<REPO_ROOT>/projects/maxtoki/setup/MaxToki-217M-HF/model.safetensors",
+      "sha256": "9da1fbf8cc489486d158d4653a14e3f44ac49c75a8e1480566eab0e9f99cf898"
+    },
+    "geneformer_model_safetensors": {
+      "path": "<HF_CACHE>/hub/models--ctheodoris--Geneformer/snapshots/05fcbeb8a27d49e0a7a4349152202ee2c1cbfd28/Geneformer-V2-316M/model.safetensors",
+      "resolved": "<HF_CACHE>/hub/models--ctheodoris--Geneformer/blobs/965ceccea81953d362081ef3843560a0e4fef88d396c28017881f1e94b1246f3",
+      "sha256": "965ceccea81953d362081ef3843560a0e4fef88d396c28017881f1e94b1246f3"
+    },
+    "geneformer_token_dictionary": {
+      "path": "<HF_CACHE>/hub/models--ctheodoris--Geneformer/snapshots/05fcbeb8a27d49e0a7a4349152202ee2c1cbfd28/geneformer/token_dictionary_gc104M.pkl",
+      "resolved": "<HF_CACHE>/hub/models--ctheodoris--Geneformer/blobs/67c445f4385127adfc48dcc072320cd65d6822829bf27dd38070e6e787bc597f",
+      "sha256": "67c445f4385127adfc48dcc072320cd65d6822829bf27dd38070e6e787bc597f"
+    },
+    "scgpt_embeddings_pt": {
+      "path": "<DATA_ROOT>/biodyn-work/subproject_53_scgpt_gpl_replication/embeddings/scgpt_whole_human_gene_embeddings.pt",
+      "resolved": "<DATA_ROOT>/biodyn-work/subproject_53_scgpt_gpl_replication/embeddings/scgpt_whole_human_gene_embeddings.pt",
+      "sha256": "b41289b862126ccd8db166e2688e08bcbe4149c87a9a177f8409b4723bf33f4b"
+    },
+    "hvg_gene_features": {
+      "path": "<REPO_ROOT>/projects/maxtoki/runs/spectral-geometry-217M/outputs/phase0/gene_features.csv",
+      "resolved": "<REPO_ROOT>/projects/maxtoki/runs/spectral-geometry-217M/outputs/phase0/gene_features.csv",
+      "sha256": "9030bd55ecb333e2494995c90fb2aa835e9a59bd8fa3e1bf099bc40dff1622c5"
+    },
+    "published_bootstrap_json": {
+      "path": "<REPO_ROOT>/projects/maxtoki/runs/spectral-geometry-217M/outputs/phase9b/bootstrap_pearson.json",
+      "resolved": "<REPO_ROOT>/projects/maxtoki/runs/spectral-geometry-217M/outputs/phase9b/bootstrap_pearson.json",
+      "sha256": "e0c7eed653b29450e5fb7c1ec8bfc507a7652bad9a21eb8133c1d973606b270c"
+    }
+  },
+  "software": {
+    "python": "3.12.9",
+    "numpy": "1.26.4",
+    "torch": "2.11.0",
+    "pandas": "2.3.3"
+  },
+  "device": "CPU only; no model forward pass"
+}

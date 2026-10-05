@@ -1,0 +1,331 @@
+{
+  "layer": 11,
+  "feature": 3924,
+  "switch_score": 0.6864,
+  "direction": "negative",
+  "hook_layer": 10,
+  "alpha_results": {
+    "2": {
+      "n_steered": 50,
+      "frac_positive_direction": 1.0,
+      "frac_positive_maturity": 0.78,
+      "mean_logit_delta_scalar": -1.087763,
+      "mean_delta_s": 0.004477,
+      "top_upregulated": [
+        {
+          "token_id": 1711,
+          "gene": "FTL",
+          "mean_logit_delta": 1.790587
+        },
+        {
+          "token_id": 16946,
+          "gene": "MT-CO3",
+          "mean_logit_delta": 1.782216
+        },
+        {
+          "token_id": 16822,
+          "gene": "MT-CO2",
+          "mean_logit_delta": 1.768749
+        },
+        {
+          "token_id": 16868,
+          "gene": "MT-CO1",
+          "mean_logit_delta": 1.768627
+        },
+        {
+          "token_id": 16917,
+          "gene": "MT-ND1",
+          "mean_logit_delta": 1.765815
+        },
+        {
+          "token_id": 16915,
+          "gene": "MT-ND4",
+          "mean_logit_delta": 1.742281
+        },
+        {
+          "token_id": 16849,
+          "gene": "MT-ND2",
+          "mean_logit_delta": 1.726815
+        },
+        {
+          "token_id": 16890,
+          "gene": "MT-ND3",
+          "mean_logit_delta": 1.723231
+        },
+        {
+          "token_id": 16923,
+          "gene": "MT-ATP6",
+          "mean_logit_delta": 1.722278
+        },
+        {
+          "token_id": 12039,
+          "gene": "FTH1",
+          "mean_logit_delta": 1.708875
+        },
+        {
+          "token_id": 1124,
+          "gene": "PABPC1",
+          "mean_logit_delta": 1.690391
+        },
+        {
+          "token_id": 5229,
+          "gene": "HNRNPA2B1",
+          "mean_logit_delta": 1.612566
+        },
+        {
+          "token_id": 16857,
+          "gene": "MT-ND5",
+          "mean_logit_delta": 1.609046
+        },
+        {
+          "token_id": 9214,
+          "gene": "UBC",
+          "mean_logit_delta": 1.552153
+        },
+        {
+          "token_id": 16830,
+          "gene": "MT-CYB",
+          "mean_logit_delta": 1.541031
+        }
+      ],
+      "top_downregulated": [
+        {
+          "token_id": 15615,
+          "gene": "KRTAP23-1",
+          "mean_logit_delta": -5.116385
+        },
+        {
+          "token_id": 15667,
+          "gene": "LCE3B",
+          "mean_logit_delta": -5.040164
+        },
+        {
+          "token_id": 15602,
+          "gene": "KRTAP22-1",
+          "mean_logit_delta": -4.747326
+        },
+        {
+          "token_id": 19995,
+          "gene": "LCE7A",
+          "mean_logit_delta": -4.736113
+        },
+        {
+          "token_id": 19007,
+          "gene": "OR8U8",
+          "mean_logit_delta": -4.735348
+        },
+        {
+          "token_id": 19002,
+          "gene": "OR9G9",
+          "mean_logit_delta": -4.73417
+        },
+        {
+          "token_id": 15757,
+          "gene": "KRTAP10-8",
+          "mean_logit_delta": -4.599617
+        },
+        {
+          "token_id": 20159,
+          "gene": "ENSG00000288708",
+          "mean_logit_delta": -4.597059
+        },
+        {
+          "token_id": 19591,
+          "gene": "ENSG00000278178",
+          "mean_logit_delta": -4.585189
+        },
+        {
+          "token_id": 20067,
+          "gene": "ENSG00000288202",
+          "mean_logit_delta": -4.544218
+        },
+        {
+          "token_id": 19431,
+          "gene": "ENSG00000274971",
+          "mean_logit_delta": -4.544003
+        },
+        {
+          "token_id": 9155,
+          "gene": "OR5M9",
+          "mean_logit_delta": -4.543
+        },
+        {
+          "token_id": 20090,
+          "gene": "ENSG00000288350",
+          "mean_logit_delta": -4.528188
+        },
+        {
+          "token_id": 20126,
+          "gene": "ENSG00000288625",
+          "mean_logit_delta": -4.527835
+        },
+        {
+          "token_id": 17253,
+          "gene": "KRTAP1-4",
+          "mean_logit_delta": -4.508963
+        }
+      ]
+    },
+    "5": {
+      "n_steered": 50,
+      "frac_positive_direction": 1.0,
+      "frac_positive_maturity": 0.78,
+      "mean_logit_delta_scalar": -1.083772,
+      "mean_delta_s": 0.004435,
+      "top_upregulated": [
+        {
+          "token_id": 1711,
+          "gene": "FTL",
+          "mean_logit_delta": 1.786726
+        },
+        {
+          "token_id": 16946,
+          "gene": "MT-CO3",
+          "mean_logit_delta": 1.783108
+        },
+        {
+          "token_id": 16917,
+          "gene": "MT-ND1",
+          "mean_logit_delta": 1.768747
+        },
+        {
+          "token_id": 16822,
+          "gene": "MT-CO2",
+          "mean_logit_delta": 1.761123
+        },
+        {
+          "token_id": 16868,
+          "gene": "MT-CO1",
+          "mean_logit_delta": 1.757428
+        },
+        {
+          "token_id": 16915,
+          "gene": "MT-ND4",
+          "mean_logit_delta": 1.737057
+        },
+        {
+          "token_id": 16849,
+          "gene": "MT-ND2",
+          "mean_logit_delta": 1.725437
+        },
+        {
+          "token_id": 16923,
+          "gene": "MT-ATP6",
+          "mean_logit_delta": 1.720807
+        },
+        {
+          "token_id": 16890,
+          "gene": "MT-ND3",
+          "mean_logit_delta": 1.719517
+        },
+        {
+          "token_id": 12039,
+          "gene": "FTH1",
+          "mean_logit_delta": 1.700521
+        },
+        {
+          "token_id": 1124,
+          "gene": "PABPC1",
+          "mean_logit_delta": 1.692991
+        },
+        {
+          "token_id": 5229,
+          "gene": "HNRNPA2B1",
+          "mean_logit_delta": 1.60311
+        },
+        {
+          "token_id": 16857,
+          "gene": "MT-ND5",
+          "mean_logit_delta": 1.60258
+        },
+        {
+          "token_id": 9214,
+          "gene": "UBC",
+          "mean_logit_delta": 1.542128
+        },
+        {
+          "token_id": 16830,
+          "gene": "MT-CYB",
+          "mean_logit_delta": 1.535782
+        }
+      ],
+      "top_downregulated": [
+        {
+          "token_id": 15615,
+          "gene": "KRTAP23-1",
+          "mean_logit_delta": -5.10046
+        },
+        {
+          "token_id": 15667,
+          "gene": "LCE3B",
+          "mean_logit_delta": -5.022635
+        },
+        {
+          "token_id": 15602,
+          "gene": "KRTAP22-1",
+          "mean_logit_delta": -4.730824
+        },
+        {
+          "token_id": 19995,
+          "gene": "LCE7A",
+          "mean_logit_delta": -4.716332
+        },
+        {
+          "token_id": 19007,
+          "gene": "OR8U8",
+          "mean_logit_delta": -4.715649
+        },
+        {
+          "token_id": 19002,
+          "gene": "OR9G9",
+          "mean_logit_delta": -4.71508
+        },
+        {
+          "token_id": 20159,
+          "gene": "ENSG00000288708",
+          "mean_logit_delta": -4.58225
+        },
+        {
+          "token_id": 15757,
+          "gene": "KRTAP10-8",
+          "mean_logit_delta": -4.57926
+        },
+        {
+          "token_id": 19591,
+          "gene": "ENSG00000278178",
+          "mean_logit_delta": -4.565722
+        },
+        {
+          "token_id": 20067,
+          "gene": "ENSG00000288202",
+          "mean_logit_delta": -4.527765
+        },
+        {
+          "token_id": 9155,
+          "gene": "OR5M9",
+          "mean_logit_delta": -4.527437
+        },
+        {
+          "token_id": 19431,
+          "gene": "ENSG00000274971",
+          "mean_logit_delta": -4.526136
+        },
+        {
+          "token_id": 20126,
+          "gene": "ENSG00000288625",
+          "mean_logit_delta": -4.513425
+        },
+        {
+          "token_id": 20090,
+          "gene": "ENSG00000288350",
+          "mean_logit_delta": -4.511419
+        },
+        {
+          "token_id": 17253,
+          "gene": "KRTAP1-4",
+          "mean_logit_delta": -4.491454
+        }
+      ]
+    }
+  }
+}

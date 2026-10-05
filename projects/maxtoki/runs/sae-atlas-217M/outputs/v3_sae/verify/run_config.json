@@ -1,0 +1,134 @@
+{
+  "script": "<REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/scripts/v3_sae_verify.py",
+  "script_sha256": "443e9d1de8c9e33a6711decb55019137f1e6dfddbaecd1e1fa88614690d3abe6",
+  "env_cpu": {
+    "device": "cpu",
+    "torch": "2.11.0",
+    "transformers": "5.5.4",
+    "python": "3.12.9",
+    "platform": "macOS-26.3-arm64-arm-64bit",
+    "hooks_v2_sha256": "1ba6fda5ad761b1f82041a7b1397fa9332fa7438e13db955a00d751c4b440f54",
+    "model_dir": "<REPO_ROOT>/projects/maxtoki/setup/MaxToki-217M-HF",
+    "model_dtype": "float32",
+    "timestamp": "2026-10-02T03:43:59"
+  },
+  "env_mps": {
+    "device": "mps",
+    "torch": "2.11.0",
+    "transformers": "5.5.4",
+    "python": "3.12.9",
+    "platform": "macOS-26.3-arm64-arm-64bit",
+    "hooks_v2_sha256": "1ba6fda5ad761b1f82041a7b1397fa9332fa7438e13db955a00d751c4b440f54",
+    "model_dir": "<REPO_ROOT>/projects/maxtoki/setup/MaxToki-217M-HF",
+    "model_dtype": "float32",
+    "timestamp": "2026-10-02T03:43:59"
+  },
+  "seeds": {
+    "random_direction_null": 7,
+    "l0_protocol_training": 42
+  },
+  "recompute": {
+    "script": "<REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/scripts/v3_sae_verify.py",
+    "script_sha256": "443e9d1de8c9e33a6711decb55019137f1e6dfddbaecd1e1fa88614690d3abe6",
+    "env": {
+      "device": "cpu",
+      "torch": "2.11.0",
+      "transformers": "5.5.4",
+      "python": "3.12.9",
+      "platform": "macOS-26.3-arm64-arm-64bit",
+      "hooks_v2_sha256": "1ba6fda5ad761b1f82041a7b1397fa9332fa7438e13db955a00d751c4b440f54",
+      "model_dir": "<REPO_ROOT>/projects/maxtoki/setup/MaxToki-217M-HF",
+      "model_dtype": "float32",
+      "timestamp": "2026-10-02T03:38:05"
+    },
+    "null_seed": 7,
+    "inputs": "outputs/v3_sae/activations_eval/layer_XX.npy (held-out rows of the v3 extraction; encoding checked in v3_sae extract)",
+    "eval_rows_sha256": {
+      "layer_00": "3066b78912675a825ee3f7ef383e5db9ecd196e5866ad20d76e1d7dd6b517b74",
+      "layer_01": "c1714754da92e3ad1804b6f60e9ed09b4a8eaf13e0e9c9aa7a2f47a41fb4afae",
+      "layer_02": "b8ee6734f13d6622b37f758aa00ae24061424417623d0b3741cd4f22fdd6b929",
+      "layer_03": "2b2ae0b53b785e98193da868ac2df5fe1bc1f6a668f0079920311baed4882258",
+      "layer_04": "7fd2fe013f4cfc9bba30d74fbc8285e0dbd51f9586a486ac672c057c01104247",
+      "layer_05": "ac761a145d4a8fa344a0060e1b1bc32be63bcc95b83b1fb7a9e254deb4c9d40e",
+      "layer_06": "ea3f1bcbe6fd526b78a497e23bd661a59b9d46e62c7cc652495bdda3bc12c075",
+      "layer_07": "ec8895f253b72a45b2a67150429810de36eea269c110e8bb84fcdc0a30d7584e",
+      "layer_08": "5e4dc9f358d8287d7c0250d669c758e1e5313e8cd7386fdf245b90398837bc22",
+      "layer_09": "a91fedfa8dad829eb8140c208f177fe40fc49172e1c9b4eeea0f2de054a56c71",
+      "layer_10": "b7dec5e2ecfa95293accbaa687aa63ec6bcf7118e94dd9089bef9a5d930c7254",
+      "layer_11": "35bbd73248e548a7a37573f3a84728e92b9ca56890ad17e6652a94775f69a062"
+    }
+  },
+  "l0_build": {
+    "file": "<AGENT_TMP>/<SESSION_DIR>/d422dc33-6d6f-4b2b-bbf7-f274d8a82fae/scratchpad/l0_protocol/deployed_tokens_layer_00.npy",
+    "n_rows": 1019996,
+    "v3_lookup_rows_differing_from_stored": 0,
+    "tokens_deployed_sha256": "5e631772084c9966d3e60ef5c451ebc87d6b68f949d25ae0d5c33233c384f169",
+    "deployed_token_reproduction": {
+      "file": "<REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/outputs/phase0/layer_00/gene_names.json",
+      "n_positions_deployed": 1019996,
+      "n_positions_rebuilt": 1019996,
+      "identical": true,
+      "n_mismatch": 0
+    },
+    "seconds": 29.56660771369934
+  },
+  "l0_protocol_results": {
+    "d_model": 1232,
+    "d_sae": 4928,
+    "k": 32,
+    "n_train": 917996,
+    "n_eval": 102000,
+    "n_epochs": 4,
+    "lr": 0.0003,
+    "batch_size": 4096,
+    "variance_explained": 0.6935050236302918,
+    "n_alive": 2498,
+    "n_dead": 2430,
+    "dead_rate": 0.49310064935064934,
+    "mean_abs_decoder_cosine": 0.024708047421183436,
+    "total_train_seconds": 128.56395077705383,
+    "training_log": [
+      {
+        "epoch": 0,
+        "loss": 0.00031254107074346393,
+        "steps": 225,
+        "seconds": 31.444746017456055
+      },
+      {
+        "epoch": 1,
+        "loss": 0.0002080532748045193,
+        "steps": 450,
+        "seconds": 60.772902965545654
+      },
+      {
+        "epoch": 2,
+        "loss": 0.00016499399110519636,
+        "steps": 675,
+        "seconds": 93.77370190620422
+      },
+      {
+        "epoch": 3,
+        "loss": 0.0001433607031099705,
+        "steps": 900,
+        "seconds": 123.56189799308777
+      }
+    ],
+    "mean_l0_eval": 32.0,
+    "counts_on_cpu": true,
+    "input_encoding": "v3: counts = round(expm1(X)/unit) via setup/inputs_v3.py (checked)",
+    "train_mean_seconds": 12.704472780227661,
+    "device": "mps"
+  },
+  "l0_protocol_chunks": {
+    "train": [
+      {
+        "layer": 0,
+        "wall_seconds": 142.5141909122467,
+        "train_rows_source": "pread of a sha256-checked copy on the internal SSD",
+        "resumed_from_epoch": 0,
+        "timestamp": "2026-10-02T03:42:02"
+      }
+    ]
+  },
+  "note": "l0_build/l0_train use the DEPLOYED (wrongly encoded) tokens on purpose, only through the embedding lookup (no forward pass), to check that v3_sae.train_one reproduces the deployed layer-0 SAE. The 5 GB scratch copy of those rows was removed afterwards (rebuild: v3_sae_verify.py l0_build)."
+}

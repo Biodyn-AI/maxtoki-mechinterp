@@ -1,0 +1,157 @@
+{
+ "item": "V3-4 follow-up: count null, pairwise mechanism, v2 replay of the analysis code",
+ "script": "<REPO_ROOT>/projects/maxtoki/runs/exhaustive-mapping-217M/scripts/v3_triplets_followup.py",
+ "env": {
+  "device": "cpu",
+  "torch": "2.11.0",
+  "transformers": "5.5.4",
+  "python": "3.12.9",
+  "platform": "macOS-26.3-arm64-arm-64bit",
+  "hooks_v2_sha256": "1ba6fda5ad761b1f82041a7b1397fa9332fa7438e13db955a00d751c4b440f54",
+  "model_dir": "<REPO_ROOT>/projects/maxtoki/setup/MaxToki-217M-HF",
+  "model_dtype": "float32",
+  "timestamp": "2026-10-02T16:51:36"
+ },
+ "inputs": {
+  "v3_triplets_dir": "<REPO_ROOT>/projects/maxtoki/runs/exhaustive-mapping-217M/outputs/v3_triplets",
+  "v2_triplets_dir": "<REPO_ROOT>/projects/maxtoki/runs/exhaustive-mapping-217M/outputs/v2_triplets",
+  "main_script": "<REPO_ROOT>/projects/maxtoki/runs/exhaustive-mapping-217M/scripts/v3_triplets.py",
+  "main_script_sha256": "94e31c039de90776339871ad99a4f344e39cae20b7c1bebe8b4382c5120d7bb5"
+ },
+ "seeds": {
+  "signflip": "outputs/v3_triplets/signflip_signs.npy (seed 20261002, 999 x 20)",
+  "bootstrap": "outputs/v3_triplets/bootstrap_cell_weights.npy (seed 20261001, 1000 x 20)"
+ },
+ "chunks": [
+  {
+   "stage": "countnull",
+   "start": "2026-10-02T16:42:36",
+   "wall_seconds": 20.0,
+   "script_sha256": "735386e2509f357ab94521f663441e56ece087f16e265d9851ae974e544538c5"
+  },
+  {
+   "stage": "pairs",
+   "start": "2026-10-02T16:43:10",
+   "wall_seconds": 33.4,
+   "script_sha256": "735386e2509f357ab94521f663441e56ece087f16e265d9851ae974e544538c5"
+  },
+  {
+   "stage": "perfeature",
+   "start": "2026-10-02T16:44:18",
+   "wall_seconds": 55.7,
+   "script_sha256": "2bab7eb0176b0869c8a9bce4bbd8868d50888c260a9b209107ccc79d4890b75a"
+  },
+  {
+   "stage": "replay",
+   "start": "2026-10-02T16:45:22",
+   "wall_seconds": 373.5,
+   "script_sha256": "2bab7eb0176b0869c8a9bce4bbd8868d50888c260a9b209107ccc79d4890b75a",
+   "status": "DONE"
+  }
+ ],
+ "device": "cpu (no model run in this folder)",
+ "cells": {
+  "rows": [
+   289300,
+   292833,
+   293501,
+   294821,
+   296499,
+   296999,
+   297671,
+   298043,
+   298575,
+   304014,
+   304434,
+   306407,
+   308960,
+   310091,
+   310869,
+   314183,
+   315807,
+   316745,
+   317964,
+   322713
+  ],
+  "barcodes": [
+   "AATCGACAGTAAGAGG-19-k562",
+   "ACAGGGACAACACAAA-36-k562",
+   "ACATGCAGTGTATCCA-44-k562",
+   "ACCCTCAGTACTTCCC-27-k562",
+   "ACGGAAGCAGACGATG-42-k562",
+   "ACGGTCGTCTCCACTG-25-k562",
+   "ACGTAGTGTAGGCAGT-41-k562",
+   "ACGTTCCAGTTAACGA-11-k562",
+   "ACTATGGAGCACTAGG-17-k562",
+   "AGAGCAGTCAGAGCAG-15-k562",
+   "AGATAGATCCGGTAAT-19-k562",
+   "AGCGCCAGTTCCGCGA-22-k562",
+   "AGGCATTAGTGGATAT-25-k562",
+   "AGGGTCCCAACTGTGT-34-k562",
+   "AGGTCATAGCGTCTGC-40-k562",
+   "AGTGTTGCAGCCCACA-14-k562",
+   "ATAGAGATCAAGTAAG-40-k562",
+   "ATCACTTGTCCCTGAG-24-k562",
+   "ATCCGTCGTCAGTCCG-2-k562",
+   "ATGTCCCCAACTCCAA-23-k562"
+  ],
+  "counts_sha256": "4c138184148d089a8f1eaad357ace62531ac8f91920824247fad30dfe8a28d7a",
+  "tokens_sha256": "ec7162a2aa4e3c05e1a4d740d842effef4cc930e4d13c906d4400e3092184e70"
+ },
+ "features": {
+  "selection": {
+   "0": [
+    763,
+    3035,
+    2518,
+    3778,
+    859,
+    293,
+    1910,
+    3275
+   ],
+   "5": [
+    3812,
+    4369,
+    1812,
+    1550,
+    3142,
+    4903,
+    4821,
+    1053
+   ],
+   "9": [
+    1154,
+    4302,
+    1535,
+    235,
+    494,
+    110,
+    2772,
+    1628
+   ]
+  },
+  "null_features": {
+   "0": [
+    1581,
+    3049
+   ],
+   "5": [
+    3437,
+    4481
+   ],
+   "9": [
+    1995,
+    3537
+   ]
+  }
+ },
+ "input_encoding_check": "inherited: every model input of outputs/v3_triplets passed inputs_v3.check_encoding before its forward pass (20 of 20 cells, every model stage; see outputs/v3_triplets/run_config.json input_encoding and chunks)",
+ "input_files_sha256": {
+  "v3_signflip_signs": "f9463eff81ca7da2f24c57b992c4093f5a9da9fc77b004439d9809149b1533c0",
+  "v3_bootstrap_cell_weights": "0e9edd0d25d3debbc6600d9f8b56c1fed00e49a2ae1ad759ab4d13ac7ecb6b14",
+  "v3_per_triplet": "f0890abc897b11372d9181681d8f0a3f00f576c72627b1504a75000aac3feb24",
+  "v3_summary": "a3137782fbe5e1f0cd588f4777ecfe4746afb39d22fdbf4fd1c00ded56a7ba88"
+ },
+ "v2_replay_note": "v2_replay/ is the v3 analyze + power code run on the stored v2 grid (outputs/v2_triplets: deployed SAEs, log1p-ranked inputs, by design) only to test that the analysis code reproduces the v2 numbers."
+}

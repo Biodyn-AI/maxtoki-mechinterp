@@ -1,0 +1,61 @@
+{
+  "n_disease_domains": 469,
+  "n_total_domains": 2131,
+  "centrality_test": {
+    "disease_median": 388.0,
+    "non_disease_median": 360.0,
+    "mann_whitney_p": 0.3831638750022691
+  },
+  "per_category": [
+    {
+      "category": "Transcription regulation",
+      "n_domains": 104,
+      "n_edges": 136242
+    },
+    {
+      "category": "Immune response",
+      "n_domains": 51,
+      "n_edges": 107052
+    },
+    {
+      "category": "Apoptosis",
+      "n_domains": 27,
+      "n_edges": 40637
+    },
+    {
+      "category": "Cell cycle / cancer",
+      "n_domains": 87,
+      "n_edges": 174209
+    },
+    {
+      "category": "Protein quality control",
+      "n_domains": 51,
+      "n_edges": 66482
+    },
+    {
+      "category": "DNA damage / repair",
+      "n_domains": 37,
+      "n_edges": 52839
+    },
+    {
+      "category": "Oncogenic signalling",
+      "n_domains": 93,
+      "n_edges": 104601
+    },
+    {
+      "category": "Metastasis / migration",
+      "n_domains": 28,
+      "n_edges": 17207
+    },
+    {
+      "category": "Metabolism",
+      "n_domains": 28,
+      "n_edges": 11091
+    },
+    {
+      "category": "Angiogenesis",
+      "n_domains": 12,
+      "n_edges": 9772
+    }
+  ]
+}

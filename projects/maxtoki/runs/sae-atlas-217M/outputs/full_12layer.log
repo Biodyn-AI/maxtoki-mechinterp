@@ -1,0 +1,295 @@
+======================================================================
+FULL 12-LAYER SAE PIPELINE  N_ctrl=500  device=mps
+======================================================================
+
+[SETUP] Loading K562 controls + tokenizer...
+  annotation databases: 2377 terms after filtering
+  pre-tokenizing cells...
+  500 cells tokenized
+
+============================================================
+  LAYER 0 / 11
+============================================================
+  [Phase 0] Extracting activations...
+Loading weights:   0%|          | 0/102 [00:00<?, ?it/s]Loading weights:  56%|█████▌    | 57/102 [00:00<00:00, 568.80it/s]Loading weights: 100%|██████████| 102/102 [00:00<00:00, 856.94it/s]
+    1,019,996 positions saved (5.0 GB)
+  [Phase 1] Training SAE...
+  Loading activations from <REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/outputs/phase0/layer_00/activations.npy...
+  total positions: 1,019,996  d_model=1232
+  train=917,996  eval=102,000  d_sae=4928  k=32
+    epoch 0: loss=0.000313  steps=225  time=25.0s
+    epoch 1: loss=0.000208  steps=450  time=48.7s
+    epoch 2: loss=0.000165  steps=675  time=72.6s
+    epoch 3: loss=0.000143  steps=900  time=96.4s
+  var_explained=0.6934  alive=2498/4928  dead=2430  dec_cos=0.0247
+  [Phase 2] Annotating features...
+  [Phase 12] Computing UMAP...
+  [Phase 5] Co-activation modules...
+<REPO_ROOT>/projects/maxtoki/.venv/lib/python3.12/site-packages/umap/umap_.py:1952: UserWarning: n_jobs value 1 overridden to 1 by setting random_state. Use no seed for parallelism.
+  warn(
+  deleting raw activations (5.0 GB)...
+  L0 DONE in 600s  alive=2498 ann=80.7% modules=10
+
+============================================================
+  LAYER 1 / 11
+============================================================
+  [Phase 0] Extracting activations...
+Loading weights:   0%|          | 0/102 [00:00<?, ?it/s]Loading weights:  49%|████▉     | 50/102 [00:00<00:00, 482.66it/s]Loading weights: 100%|██████████| 102/102 [00:00<00:00, 860.91it/s]
+    1,019,996 positions saved (5.0 GB)
+  [Phase 1] Training SAE...
+  Loading activations from <REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/outputs/phase0/layer_01/activations.npy...
+  total positions: 1,019,996  d_model=1232
+  train=917,996  eval=102,000  d_sae=4928  k=32
+    epoch 0: loss=0.029212  steps=225  time=24.0s
+    epoch 1: loss=0.011399  steps=450  time=47.6s
+    epoch 2: loss=0.008719  steps=675  time=71.1s
+    epoch 3: loss=0.007663  steps=900  time=94.8s
+  var_explained=0.9042  alive=4928/4928  dead=0  dec_cos=0.0387
+  [Phase 2] Annotating features...
+  [Phase 12] Computing UMAP...
+  [Phase 5] Co-activation modules...
+<REPO_ROOT>/projects/maxtoki/.venv/lib/python3.12/site-packages/umap/umap_.py:1952: UserWarning: n_jobs value 1 overridden to 1 by setting random_state. Use no seed for parallelism.
+  warn(
+  deleting raw activations (5.0 GB)...
+  L1 DONE in 589s  alive=4928 ann=74.8% modules=10
+
+============================================================
+  LAYER 2 / 11
+============================================================
+  [Phase 0] Extracting activations...
+Loading weights:   0%|          | 0/102 [00:00<?, ?it/s]Loading weights:  44%|████▍     | 45/102 [00:00<00:00, 403.60it/s]Loading weights: 100%|██████████| 102/102 [00:00<00:00, 884.61it/s]
+    1,019,996 positions saved (5.0 GB)
+  [Phase 1] Training SAE...
+  Loading activations from <REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/outputs/phase0/layer_02/activations.npy...
+  total positions: 1,019,996  d_model=1232
+  train=917,996  eval=102,000  d_sae=4928  k=32
+    epoch 0: loss=0.065390  steps=225  time=24.9s
+    epoch 1: loss=0.017050  steps=450  time=48.3s
+    epoch 2: loss=0.011847  steps=675  time=71.6s
+    epoch 3: loss=0.010173  steps=900  time=94.9s
+  var_explained=0.9354  alive=4927/4928  dead=1  dec_cos=0.0375
+  [Phase 2] Annotating features...
+  [Phase 12] Computing UMAP...
+  [Phase 5] Co-activation modules...
+<REPO_ROOT>/projects/maxtoki/.venv/lib/python3.12/site-packages/umap/umap_.py:1952: UserWarning: n_jobs value 1 overridden to 1 by setting random_state. Use no seed for parallelism.
+  warn(
+  deleting raw activations (5.0 GB)...
+  L2 DONE in 639s  alive=4928 ann=71.1% modules=10
+
+============================================================
+  LAYER 3 / 11
+============================================================
+  [Phase 0] Extracting activations...
+Loading weights:   0%|          | 0/102 [00:00<?, ?it/s]Loading weights:  80%|████████  | 82/102 [00:00<00:00, 807.51it/s]Loading weights: 100%|██████████| 102/102 [00:00<00:00, 924.38it/s]
+    1,019,996 positions saved (5.0 GB)
+  [Phase 1] Training SAE...
+  Loading activations from <REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/outputs/phase0/layer_03/activations.npy...
+  total positions: 1,019,996  d_model=1232
+  train=917,996  eval=102,000  d_sae=4928  k=32
+    epoch 0: loss=0.079154  steps=225  time=24.7s
+    epoch 1: loss=0.022948  steps=450  time=49.0s
+    epoch 2: loss=0.015801  steps=675  time=72.9s
+    epoch 3: loss=0.013648  steps=900  time=96.9s
+  var_explained=0.9316  alive=4928/4928  dead=0  dec_cos=0.0419
+  [Phase 2] Annotating features...
+  [Phase 12] Computing UMAP...
+  [Phase 5] Co-activation modules...
+<REPO_ROOT>/projects/maxtoki/.venv/lib/python3.12/site-packages/umap/umap_.py:1952: UserWarning: n_jobs value 1 overridden to 1 by setting random_state. Use no seed for parallelism.
+  warn(
+  deleting raw activations (5.0 GB)...
+  L3 DONE in 551s  alive=4928 ann=68.3% modules=10
+
+============================================================
+  LAYER 4 / 11
+============================================================
+  [Phase 0] Extracting activations...
+Loading weights:   0%|          | 0/102 [00:00<?, ?it/s]Loading weights:  70%|██████▉   | 71/102 [00:00<00:00, 685.10it/s]Loading weights: 100%|██████████| 102/102 [00:00<00:00, 975.82it/s]
+    1,019,996 positions saved (5.0 GB)
+  [Phase 1] Training SAE...
+  Loading activations from <REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/outputs/phase0/layer_04/activations.npy...
+  total positions: 1,019,996  d_model=1232
+  train=917,996  eval=102,000  d_sae=4928  k=32
+    epoch 0: loss=0.101907  steps=225  time=24.5s
+    epoch 1: loss=0.034486  steps=450  time=47.9s
+    epoch 2: loss=0.024019  steps=675  time=71.3s
+    epoch 3: loss=0.020129  steps=900  time=94.4s
+  var_explained=0.9243  alive=4923/4928  dead=5  dec_cos=0.0424
+  [Phase 2] Annotating features...
+  [Phase 12] Computing UMAP...
+  [Phase 5] Co-activation modules...
+<REPO_ROOT>/projects/maxtoki/.venv/lib/python3.12/site-packages/umap/umap_.py:1952: UserWarning: n_jobs value 1 overridden to 1 by setting random_state. Use no seed for parallelism.
+  warn(
+  deleting raw activations (5.0 GB)...
+  L4 DONE in 555s  alive=4928 ann=66.1% modules=10
+
+============================================================
+  LAYER 5 / 11
+============================================================
+  [Phase 0] Extracting activations...
+Loading weights:   0%|          | 0/102 [00:00<?, ?it/s]Loading weights:  57%|█████▋    | 58/102 [00:00<00:00, 560.07it/s]Loading weights: 100%|██████████| 102/102 [00:00<00:00, 887.68it/s]
+    1,019,996 positions saved (5.0 GB)
+  [Phase 1] Training SAE...
+  Loading activations from <REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/outputs/phase0/layer_05/activations.npy...
+  total positions: 1,019,996  d_model=1232
+  train=917,996  eval=102,000  d_sae=4928  k=32
+    epoch 0: loss=0.132670  steps=225  time=24.9s
+    epoch 1: loss=0.055553  steps=450  time=48.3s
+    epoch 2: loss=0.042085  steps=675  time=71.7s
+    epoch 3: loss=0.036519  steps=900  time=95.1s
+  var_explained=0.8894  alive=4903/4928  dead=25  dec_cos=0.0367
+  [Phase 2] Annotating features...
+  [Phase 12] Computing UMAP...
+  [Phase 5] Co-activation modules...
+<REPO_ROOT>/projects/maxtoki/.venv/lib/python3.12/site-packages/umap/umap_.py:1952: UserWarning: n_jobs value 1 overridden to 1 by setting random_state. Use no seed for parallelism.
+  warn(
+  deleting raw activations (5.0 GB)...
+  L5 DONE in 553s  alive=4928 ann=67.8% modules=10
+
+============================================================
+  LAYER 6 / 11
+============================================================
+  [Phase 0] Extracting activations...
+Loading weights:   0%|          | 0/102 [00:00<?, ?it/s]Loading weights:  32%|███▏      | 33/102 [00:00<00:00, 316.11it/s]Loading weights:  82%|████████▏ | 84/102 [00:00<00:00, 424.84it/s]Loading weights: 100%|██████████| 102/102 [00:00<00:00, 483.09it/s]
+    1,019,996 positions saved (5.0 GB)
+  [Phase 1] Training SAE...
+  Loading activations from <REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/outputs/phase0/layer_06/activations.npy...
+  total positions: 1,019,996  d_model=1232
+  train=917,996  eval=102,000  d_sae=4928  k=32
+    epoch 0: loss=0.157208  steps=225  time=24.5s
+    epoch 1: loss=0.078477  steps=450  time=48.4s
+    epoch 2: loss=0.064483  steps=675  time=71.7s
+    epoch 3: loss=0.057691  steps=900  time=95.0s
+  var_explained=0.8457  alive=4876/4928  dead=52  dec_cos=0.0411
+  [Phase 2] Annotating features...
+  [Phase 12] Computing UMAP...
+  [Phase 5] Co-activation modules...
+<REPO_ROOT>/projects/maxtoki/.venv/lib/python3.12/site-packages/umap/umap_.py:1952: UserWarning: n_jobs value 1 overridden to 1 by setting random_state. Use no seed for parallelism.
+  warn(
+  deleting raw activations (5.0 GB)...
+  L6 DONE in 585s  alive=4928 ann=68.4% modules=10
+
+============================================================
+  LAYER 7 / 11
+============================================================
+  [Phase 0] Extracting activations...
+Loading weights:   0%|          | 0/102 [00:00<?, ?it/s]Loading weights:  41%|████      | 42/102 [00:00<00:00, 386.59it/s]Loading weights: 100%|██████████| 102/102 [00:00<00:00, 523.64it/s]
+    1,019,996 positions saved (5.0 GB)
+  [Phase 1] Training SAE...
+  Loading activations from <REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/outputs/phase0/layer_07/activations.npy...
+  total positions: 1,019,996  d_model=1232
+  train=917,996  eval=102,000  d_sae=4928  k=32
+    epoch 0: loss=0.199288  steps=225  time=24.4s
+    epoch 1: loss=0.111549  steps=450  time=47.6s
+    epoch 2: loss=0.094436  steps=675  time=70.7s
+    epoch 3: loss=0.085822  steps=900  time=93.9s
+  var_explained=0.8028  alive=4895/4928  dead=33  dec_cos=0.0442
+  [Phase 2] Annotating features...
+  [Phase 12] Computing UMAP...
+  [Phase 5] Co-activation modules...
+<REPO_ROOT>/projects/maxtoki/.venv/lib/python3.12/site-packages/umap/umap_.py:1952: UserWarning: n_jobs value 1 overridden to 1 by setting random_state. Use no seed for parallelism.
+  warn(
+  deleting raw activations (5.0 GB)...
+  L7 DONE in 500s  alive=4928 ann=69.6% modules=10
+
+============================================================
+  LAYER 8 / 11
+============================================================
+  [Phase 0] Extracting activations...
+Loading weights:   0%|          | 0/102 [00:00<?, ?it/s]Loading weights:  74%|███████▎  | 75/102 [00:00<00:00, 728.67it/s]Loading weights: 100%|██████████| 102/102 [00:00<00:00, 936.56it/s]
+    1,019,996 positions saved (5.0 GB)
+  [Phase 1] Training SAE...
+  Loading activations from <REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/outputs/phase0/layer_08/activations.npy...
+  total positions: 1,019,996  d_model=1232
+  train=917,996  eval=102,000  d_sae=4928  k=32
+    epoch 0: loss=0.338700  steps=225  time=25.9s
+    epoch 1: loss=0.202465  steps=450  time=50.2s
+    epoch 2: loss=0.173302  steps=675  time=75.7s
+    epoch 3: loss=0.158782  steps=900  time=99.5s
+  var_explained=0.7720  alive=4884/4928  dead=44  dec_cos=0.0401
+  [Phase 2] Annotating features...
+  [Phase 12] Computing UMAP...
+  [Phase 5] Co-activation modules...
+<REPO_ROOT>/projects/maxtoki/.venv/lib/python3.12/site-packages/umap/umap_.py:1952: UserWarning: n_jobs value 1 overridden to 1 by setting random_state. Use no seed for parallelism.
+  warn(
+  deleting raw activations (5.0 GB)...
+  L8 DONE in 516s  alive=4928 ann=71.5% modules=10
+
+============================================================
+  LAYER 9 / 11
+============================================================
+  [Phase 0] Extracting activations...
+Loading weights:   0%|          | 0/102 [00:00<?, ?it/s]Loading weights:  78%|███████▊  | 80/102 [00:00<00:00, 790.63it/s]Loading weights: 100%|██████████| 102/102 [00:00<00:00, 952.43it/s]
+    1,019,996 positions saved (5.0 GB)
+  [Phase 1] Training SAE...
+  Loading activations from <REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/outputs/phase0/layer_09/activations.npy...
+  total positions: 1,019,996  d_model=1232
+  train=917,996  eval=102,000  d_sae=4928  k=32
+    epoch 0: loss=0.461360  steps=225  time=24.0s
+    epoch 1: loss=0.284002  steps=450  time=47.3s
+    epoch 2: loss=0.246279  steps=675  time=70.5s
+    epoch 3: loss=0.228081  steps=900  time=93.8s
+  var_explained=0.7453  alive=4918/4928  dead=10  dec_cos=0.0423
+  [Phase 2] Annotating features...
+  [Phase 12] Computing UMAP...
+  [Phase 5] Co-activation modules...
+<REPO_ROOT>/projects/maxtoki/.venv/lib/python3.12/site-packages/umap/umap_.py:1952: UserWarning: n_jobs value 1 overridden to 1 by setting random_state. Use no seed for parallelism.
+  warn(
+  deleting raw activations (5.0 GB)...
+  L9 DONE in 513s  alive=4928 ann=69.8% modules=10
+
+============================================================
+  LAYER 10 / 11
+============================================================
+  [Phase 0] Extracting activations...
+Loading weights:   0%|          | 0/102 [00:00<?, ?it/s]Loading weights:  81%|████████▏ | 83/102 [00:00<00:00, 817.05it/s]Loading weights: 100%|██████████| 102/102 [00:00<00:00, 997.31it/s]
+    1,019,996 positions saved (5.0 GB)
+  [Phase 1] Training SAE...
+  Loading activations from <REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/outputs/phase0/layer_10/activations.npy...
+  total positions: 1,019,996  d_model=1232
+  train=917,996  eval=102,000  d_sae=4928  k=32
+    epoch 0: loss=0.863746  steps=225  time=24.2s
+    epoch 1: loss=0.517644  steps=450  time=47.4s
+    epoch 2: loss=0.449743  steps=675  time=70.6s
+    epoch 3: loss=0.419156  steps=900  time=93.9s
+  var_explained=0.7571  alive=4915/4928  dead=13  dec_cos=0.0555
+  [Phase 2] Annotating features...
+  [Phase 12] Computing UMAP...
+  [Phase 5] Co-activation modules...
+<REPO_ROOT>/projects/maxtoki/.venv/lib/python3.12/site-packages/umap/umap_.py:1952: UserWarning: n_jobs value 1 overridden to 1 by setting random_state. Use no seed for parallelism.
+  warn(
+  deleting raw activations (5.0 GB)...
+  L10 DONE in 597s  alive=4928 ann=64.1% modules=10
+
+============================================================
+  LAYER 11 / 11
+============================================================
+  [Phase 0] Extracting activations...
+Loading weights:   0%|          | 0/102 [00:00<?, ?it/s]Loading weights:  32%|███▏      | 33/102 [00:00<00:00, 328.65it/s]Loading weights:  65%|██████▍   | 66/102 [00:00<00:00, 313.04it/s]Loading weights: 100%|██████████| 102/102 [00:00<00:00, 481.54it/s]
+    1,019,996 positions saved (5.0 GB)
+  [Phase 1] Training SAE...
+  Loading activations from <REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/outputs/phase0/layer_11/activations.npy...
+  total positions: 1,019,996  d_model=1232
+  train=917,996  eval=102,000  d_sae=4928  k=32
+    epoch 0: loss=2.588077  steps=225  time=24.2s
+    epoch 1: loss=1.388726  steps=450  time=47.8s
+    epoch 2: loss=1.196394  steps=675  time=70.8s
+    epoch 3: loss=1.111561  steps=900  time=93.9s
+  var_explained=0.8276  alive=4813/4928  dead=115  dec_cos=0.0606
+  [Phase 2] Annotating features...
+  [Phase 12] Computing UMAP...
+  [Phase 5] Co-activation modules...
+<REPO_ROOT>/projects/maxtoki/.venv/lib/python3.12/site-packages/umap/umap_.py:1952: UserWarning: n_jobs value 1 overridden to 1 by setting random_state. Use no seed for parallelism.
+  warn(
+  deleting raw activations (5.0 GB)...
+  L11 DONE in 483s  alive=4924 ann=61.7% modules=10
+
+============================================================
+  GENERATING ATLAS DATA FILES
+============================================================
+
+  Atlas data: 46 files
+  Total size: 141761 KB
+
+============================================================
+  FULL 12-LAYER PIPELINE COMPLETE
+============================================================

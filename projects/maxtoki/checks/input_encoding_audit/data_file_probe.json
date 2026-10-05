@@ -1,0 +1,1116 @@
+{
+ "replogle_concat": {
+  "top_keys": [
+   "X",
+   "layers",
+   "obs",
+   "obsm",
+   "obsp",
+   "uns",
+   "var",
+   "varm",
+   "varp"
+  ],
+  "X": {
+   "kind": "dense",
+   "shape": [
+    643413,
+    6546
+   ],
+   "dtype": "float32"
+  },
+  "X_rows": {
+   "128682": {
+    "nnz": 3165,
+    "sum": 3415.368571460247,
+    "max": 4.240571975708008,
+    "min_nz": 0.6681681275367737,
+    "frac_int": 0.0,
+    "expm1_sum": 9034.12853496526
+   },
+   "257364": {
+    "nnz": 2377,
+    "sum": 2842.57426571846,
+    "max": 5.137657165527344,
+    "min_nz": 0.8296388387680054,
+    "frac_int": 0.0,
+    "expm1_sum": 9135.32375886105
+   },
+   "386047": {
+    "nnz": 3359,
+    "sum": 3167.732248902321,
+    "max": 5.5798468589782715,
+    "min_nz": 0.5341311693191528,
+    "frac_int": 0.0,
+    "expm1_sum": 9375.220832596242
+   },
+   "514729": {
+    "nnz": 1898,
+    "sum": 2397.4966628551483,
+    "max": 5.72416353225708,
+    "min_nz": 0.8596771359443665,
+    "frac_int": 0.0,
+    "expm1_sum": 8272.479429427622
+   },
+   "0": {
+    "nnz": 2502,
+    "sum": 2600.6775612831116,
+    "max": 5.572604656219482,
+    "min_nz": 0.6406247615814209,
+    "frac_int": 0.0,
+    "expm1_sum": 8530.521019097072
+   }
+  },
+  "layers": {},
+  "uns_keys": [
+   "hvg"
+  ]
+ },
+ "rpe1": {
+  "top_keys": [
+   "X",
+   "layers",
+   "obs",
+   "obsm",
+   "obsp",
+   "uns",
+   "var",
+   "varm",
+   "varp"
+  ],
+  "X": {
+   "kind": "dense",
+   "shape": [
+    247914,
+    8749
+   ],
+   "dtype": "float32"
+  },
+  "X_rows": {
+   "49582": {
+    "nnz": 3442,
+    "sum": 13317.0,
+    "max": 389.0,
+    "min_nz": 1.0,
+    "frac_int": 1.0,
+    "expm1_sum": null
+   },
+   "99165": {
+    "nnz": 4706,
+    "sum": 23448.0,
+    "max": 436.0,
+    "min_nz": 1.0,
+    "frac_int": 1.0,
+    "expm1_sum": null
+   },
+   "148747": {
+    "nnz": 3987,
+    "sum": 20055.0,
+    "max": 423.0,
+    "min_nz": 1.0,
+    "frac_int": 1.0,
+    "expm1_sum": null
+   },
+   "198330": {
+    "nnz": 3725,
+    "sum": 14310.0,
+    "max": 244.0,
+    "min_nz": 1.0,
+    "frac_int": 1.0,
+    "expm1_sum": null
+   },
+   "0": {
+    "nnz": 6085,
+    "sum": 37804.0,
+    "max": 412.0,
+    "min_nz": 1.0,
+    "frac_int": 1.0,
+    "expm1_sum": null
+   }
+  },
+  "layers": {},
+  "uns_keys": []
+ },
+ "adamson_symbols": {
+  "top_keys": [
+   "X",
+   "layers",
+   "obs",
+   "obsm",
+   "obsp",
+   "uns",
+   "var",
+   "varm",
+   "varp"
+  ],
+  "X": {
+   "kind": "csr_matrix",
+   "shape": [
+    68603,
+    4888
+   ],
+   "dtype": "float32"
+  },
+  "X_rows": {
+   "13720": {
+    "nnz": 1201,
+    "sum": 1266.1611733138561,
+    "max": 5.346664905548096,
+    "min_nz": 0.4648683965206146,
+    "frac_int": 0.0,
+    "expm1_sum": 5229.18630259639
+   },
+   "27440": {
+    "nnz": 1103,
+    "sum": 1386.7608657479286,
+    "max": 5.409765243530273,
+    "min_nz": 0.6877527832984924,
+    "frac_int": 0.0,
+    "expm1_sum": 5470.498560975938
+   },
+   "41161": {
+    "nnz": 1024,
+    "sum": 1389.1509098410606,
+    "max": 5.309110641479492,
+    "min_nz": 0.874224841594696,
+    "frac_int": 0.0,
+    "expm1_sum": 5263.95834826234
+   },
+   "54881": {
+    "nnz": 943,
+    "sum": 1181.978283405304,
+    "max": 5.503177642822266,
+    "min_nz": 0.6880139112472534,
+    "frac_int": 0.0,
+    "expm1_sum": 5225.931646251751
+   },
+   "0": {
+    "nnz": 654,
+    "sum": 1035.7284086942673,
+    "max": 5.374924659729004,
+    "min_nz": 1.0482972860336304,
+    "frac_int": 0.0,
+    "expm1_sum": 5095.17104191597
+   }
+  },
+  "layers": {},
+  "uns_keys": [
+   "non_dropout_gene_idx",
+   "non_zeros_gene_idx",
+   "rank_genes_groups_cov_all",
+   "top_non_dropout_de_20",
+   "top_non_zero_de_20"
+  ]
+ },
+ "ts_immune": {
+  "top_keys": [
+   "X",
+   "layers",
+   "obs",
+   "obsm",
+   "obsp",
+   "raw",
+   "uns",
+   "var",
+   "varm",
+   "varp"
+  ],
+  "X": {
+   "kind": "csr_matrix",
+   "shape": [
+    592317,
+    60606
+   ],
+   "dtype": "float32"
+  },
+  "X_rows": {
+   "118463": {
+    "nnz": 1810,
+    "sum": 2793.021837115288,
+    "max": 5.536338806152344,
+    "min_nz": 1.1624637842178345,
+    "frac_int": 0.0,
+    "expm1_sum": 9995.604776885815
+   },
+   "236926": {
+    "nnz": 1735,
+    "sum": 2547.1362652778625,
+    "max": 6.296316623687744,
+    "min_nz": 1.1363917589187622,
+    "frac_int": 0.0,
+    "expm1_sum": 9997.884204430504
+   },
+   "355389": {
+    "nnz": 2226,
+    "sum": 3286.1725124120712,
+    "max": 5.121106147766113,
+    "min_nz": 1.1603533029556274,
+    "frac_int": 0.0,
+    "expm1_sum": 9986.85397186738
+   },
+   "473852": {
+    "nnz": 2153,
+    "sum": 3009.4318187236786,
+    "max": 6.020923614501953,
+    "min_nz": 1.0747923851013184,
+    "frac_int": 0.0,
+    "expm1_sum": 9976.847401621751
+   },
+   "0": {
+    "nnz": 1849,
+    "sum": 2246.3698207829148,
+    "max": 5.576171398162842,
+    "min_nz": 0.01558756548911333,
+    "frac_int": 0.0,
+    "expm1_sum": 9995.94706866677
+   }
+  },
+  "raw_keys": [
+   "X",
+   "var",
+   "varm"
+  ],
+  "raw/X": {
+   "kind": "csr_matrix",
+   "shape": [
+    592317,
+    60606
+   ],
+   "dtype": "float32"
+  },
+  "raw/X_rows": {
+   "118463": {
+    "nnz": 1814,
+    "sum": 4687.0,
+    "max": 117.0,
+    "min_nz": 1.0,
+    "frac_int": 1.0,
+    "expm1_sum": null
+   },
+   "236926": {
+    "nnz": 1764,
+    "sum": 5161.0,
+    "max": 283.0,
+    "min_nz": 1.0,
+    "frac_int": 1.0,
+    "expm1_sum": null
+   },
+   "355389": {
+    "nnz": 2244,
+    "sum": 4817.0,
+    "max": 82.0,
+    "min_nz": 1.0,
+    "frac_int": 1.0,
+    "expm1_sum": null
+   },
+   "473852": {
+    "nnz": 2194,
+    "sum": 6095.0,
+    "max": 242.0,
+    "min_nz": 1.0,
+    "frac_int": 1.0,
+    "expm1_sum": null
+   },
+   "0": {
+    "nnz": 1849,
+    "sum": 636292.0,
+    "max": 16745.0,
+    "min_nz": 1.0,
+    "frac_int": 1.0,
+    "expm1_sum": null
+   }
+  },
+  "raw_var_n": 60606,
+  "layers": {
+   "decontXcounts": {
+    "kind": "csr_matrix",
+    "shape": [
+     592317,
+     60606
+    ],
+    "dtype": "int32",
+    "rows": {
+     "118463": {
+      "nnz": 1810,
+      "sum": 4548.0,
+      "max": 115.0,
+      "min_nz": 1.0,
+      "frac_int": 1.0,
+      "expm1_sum": null
+     },
+     "236926": {
+      "nnz": 1735,
+      "sum": 4726.0,
+      "max": 256.0,
+      "min_nz": 1.0,
+      "frac_int": 1.0,
+      "expm1_sum": null
+     }
+    }
+   },
+   "scale_data": {
+    "kind": "csr_matrix",
+    "shape": [
+     592317,
+     60606
+    ],
+    "dtype": "float32",
+    "rows": {
+     "118463": {
+      "nnz": 1810,
+      "sum": 5446.871682405472,
+      "max": 44.212989807128906,
+      "min_nz": 0.9522234201431274,
+      "frac_int": 0.0,
+      "expm1_sum": null
+     },
+     "236926": {
+      "nnz": 1735,
+      "sum": 5110.9117512106895,
+      "max": 49.95105743408203,
+      "min_nz": 0.8976325392723083,
+      "frac_int": 0.0005763688760806917,
+      "expm1_sum": null
+     }
+    }
+   }
+  },
+  "uns_keys": [
+   "_scvi_manager_uuid",
+   "_scvi_uuid",
+   "_training_mode",
+   "assay_ontology_term_id_colors",
+   "citation",
+   "compartment_colors",
+   "donor_id_colors",
+   "leiden",
+   "method_colors",
+   "neighbors",
+   "organism",
+   "organism_ontology_term_id",
+   "pca",
+   "schema_reference",
+   "schema_version",
+   "sex_ontology_term_id_colors",
+   "tissue_in_publication_colors",
+   "title",
+   "umap"
+  ]
+ },
+ "ts_immune_sub20k": {
+  "top_keys": [
+   "X",
+   "layers",
+   "obs",
+   "obsm",
+   "obsp",
+   "raw",
+   "uns",
+   "var",
+   "varm",
+   "varp"
+  ],
+  "X": {
+   "kind": "csr_matrix",
+   "shape": [
+    20000,
+    60606
+   ],
+   "dtype": "float32"
+  },
+  "X_rows": {
+   "3999": {
+    "nnz": 1588,
+    "sum": 2613.3067815303802,
+    "max": 5.444498538970947,
+    "min_nz": 1.3560965061187744,
+    "frac_int": 0.0,
+    "expm1_sum": 9982.714053738775
+   },
+   "7999": {
+    "nnz": 1348,
+    "sum": 2254.2121663093567,
+    "max": 6.973336696624756,
+    "min_nz": 1.3427746295928955,
+    "frac_int": 0.0,
+    "expm1_sum": 9999.999355382939
+   },
+   "11999": {
+    "nnz": 1267,
+    "sum": 2400.8753418922424,
+    "max": 5.57224702835083,
+    "min_nz": 1.523743987083435,
+    "frac_int": 0.0,
+    "expm1_sum": 9978.463808269704
+   },
+   "15999": {
+    "nnz": 2607,
+    "sum": 2888.2035722136497,
+    "max": 5.997971057891846,
+    "min_nz": 0.7658156752586365,
+    "frac_int": 0.0,
+    "expm1_sum": 9986.191152736345
+   },
+   "0": {
+    "nnz": 1541,
+    "sum": 1801.9809162840247,
+    "max": 5.653999328613281,
+    "min_nz": 0.01469935942441225,
+    "frac_int": 0.0,
+    "expm1_sum": 9987.013420685533
+   }
+  },
+  "raw_keys": [
+   "X",
+   "var",
+   "varm"
+  ],
+  "raw/X": {
+   "kind": "csr_matrix",
+   "shape": [
+    20000,
+    60606
+   ],
+   "dtype": "float32"
+  },
+  "raw/X_rows": {
+   "3999": {
+    "nnz": 1591,
+    "sum": 3677.0,
+    "max": 88.0,
+    "min_nz": 1.0,
+    "frac_int": 1.0,
+    "expm1_sum": null
+   },
+   "7999": {
+    "nnz": 1349,
+    "sum": 3544.0,
+    "max": 381.0,
+    "min_nz": 1.0,
+    "frac_int": 1.0,
+    "expm1_sum": null
+   },
+   "11999": {
+    "nnz": 1447,
+    "sum": 3220.0,
+    "max": 74.0,
+    "min_nz": 1.0,
+    "frac_int": 1.0,
+    "expm1_sum": null
+   },
+   "15999": {
+    "nnz": 2612,
+    "sum": 8774.0,
+    "max": 353.0,
+    "min_nz": 1.0,
+    "frac_int": 1.0,
+    "expm1_sum": null
+   },
+   "0": {
+    "nnz": 1541,
+    "sum": 674437.0,
+    "max": 19208.0,
+    "min_nz": 1.0,
+    "frac_int": 1.0,
+    "expm1_sum": null
+   }
+  },
+  "raw_var_n": 60606,
+  "layers": {
+   "decontXcounts": {
+    "kind": "csr_matrix",
+    "shape": [
+     20000,
+     60606
+    ],
+    "dtype": "int32",
+    "rows": {
+     "3999": {
+      "nnz": 1588,
+      "sum": 3465.0,
+      "max": 80.0,
+      "min_nz": 1.0,
+      "frac_int": 1.0,
+      "expm1_sum": null
+     },
+     "7999": {
+      "nnz": 1348,
+      "sum": 3534.0,
+      "max": 377.0,
+      "min_nz": 1.0,
+      "frac_int": 1.0,
+      "expm1_sum": null
+     }
+    }
+   },
+   "scale_data": {
+    "kind": "csr_matrix",
+    "shape": [
+     20000,
+     60606
+    ],
+    "dtype": "float32",
+    "rows": {
+     "3999": {
+      "nnz": 1588,
+      "sum": 5859.93834990263,
+      "max": 128.65087890625,
+      "min_nz": 0.8931758403778076,
+      "frac_int": 0.0,
+      "expm1_sum": null
+     },
+     "7999": {
+      "nnz": 1348,
+      "sum": 4779.882612884045,
+      "max": 175.08648681640625,
+      "min_nz": 0.9988378882408142,
+      "frac_int": 0.0,
+      "expm1_sum": null
+     }
+    }
+   }
+  },
+  "uns_keys": [
+   "_scvi_manager_uuid",
+   "_scvi_uuid",
+   "_training_mode",
+   "assay_ontology_term_id_colors",
+   "citation",
+   "compartment_colors",
+   "donor_id_colors",
+   "leiden",
+   "method_colors",
+   "neighbors",
+   "organism",
+   "organism_ontology_term_id",
+   "pca",
+   "schema_reference",
+   "schema_version",
+   "sex_ontology_term_id_colors",
+   "tissue_in_publication_colors",
+   "title",
+   "umap"
+  ]
+ },
+ "ts_lung": {
+  "top_keys": [
+   "X",
+   "layers",
+   "obs",
+   "obsm",
+   "obsp",
+   "raw",
+   "uns",
+   "var",
+   "varm",
+   "varp"
+  ],
+  "X": {
+   "kind": "csr_matrix",
+   "shape": [
+    65847,
+    60606
+   ],
+   "dtype": "float32"
+  },
+  "X_rows": {
+   "13169": {
+    "nnz": 3584,
+    "sum": 3213.7645406126976,
+    "max": 5.997086524963379,
+    "min_nz": 0.5114129781723022,
+    "frac_int": 0.0,
+    "expm1_sum": 9991.320553496324
+   },
+   "26338": {
+    "nnz": 2913,
+    "sum": 3607.442625105381,
+    "max": 5.255816459655762,
+    "min_nz": 0.8806342482566833,
+    "frac_int": 0.0,
+    "expm1_sum": 9978.813342369229
+   },
+   "39507": {
+    "nnz": 2145,
+    "sum": 3268.8762323856354,
+    "max": 6.454259872436523,
+    "min_nz": 1.2549099922180176,
+    "frac_int": 0.0,
+    "expm1_sum": 9982.44740365732
+   },
+   "52676": {
+    "nnz": 5670,
+    "sum": 4090.695415198803,
+    "max": 5.825191020965576,
+    "min_nz": 0.36209699511528015,
+    "frac_int": 0.0,
+    "expm1_sum": 9981.23749113394
+   },
+   "0": {
+    "nnz": 2756,
+    "sum": 2156.5089298933744,
+    "max": 6.771646022796631,
+    "min_nz": 0.03992801159620285,
+    "frac_int": 0.0,
+    "expm1_sum": 9997.718893813544
+   }
+  },
+  "raw_keys": [
+   "X",
+   "var",
+   "varm"
+  ],
+  "raw/X": {
+   "kind": "csr_matrix",
+   "shape": [
+    65847,
+    60606
+   ],
+   "dtype": "float32"
+  },
+  "raw/X_rows": {
+   "13169": {
+    "nnz": 3585,
+    "sum": 15027.0,
+    "max": 607.0,
+    "min_nz": 1.0,
+    "frac_int": 1.0,
+    "expm1_sum": null
+   },
+   "26338": {
+    "nnz": 2940,
+    "sum": 7388.0,
+    "max": 143.0,
+    "min_nz": 1.0,
+    "frac_int": 1.0,
+    "expm1_sum": null
+   },
+   "39507": {
+    "nnz": 2178,
+    "sum": 4279.0,
+    "max": 269.0,
+    "min_nz": 1.0,
+    "frac_int": 1.0,
+    "expm1_sum": null
+   },
+   "52676": {
+    "nnz": 5729,
+    "sum": 24542.0,
+    "max": 804.0,
+    "min_nz": 1.0,
+    "frac_int": 1.0,
+    "expm1_sum": null
+   },
+   "0": {
+    "nnz": 2756,
+    "sum": 245428.0,
+    "max": 21400.0,
+    "min_nz": 1.0,
+    "frac_int": 1.0,
+    "expm1_sum": null
+   }
+  },
+  "raw_var_n": 60606,
+  "layers": {
+   "decontXcounts": {
+    "kind": "csr_matrix",
+    "shape": [
+     65847,
+     60606
+    ],
+    "dtype": "int32",
+    "rows": {
+     "13169": {
+      "nnz": 3584,
+      "sum": 14965.0,
+      "max": 601.0,
+      "min_nz": 1.0,
+      "frac_int": 1.0,
+      "expm1_sum": null
+     },
+     "26338": {
+      "nnz": 2913,
+      "sum": 7065.0,
+      "max": 135.0,
+      "min_nz": 1.0,
+      "frac_int": 1.0,
+      "expm1_sum": null
+     }
+    }
+   },
+   "scale_data": {
+    "kind": "csr_matrix",
+    "shape": [
+     65847,
+     60606
+    ],
+    "dtype": "float32",
+    "rows": {
+     "13169": {
+      "nnz": 3584,
+      "sum": 6712.163179725409,
+      "max": 20.802627563476562,
+      "min_nz": 0.44752445816993713,
+      "frac_int": 0.0,
+      "expm1_sum": 2214206946.5454826
+     },
+     "26338": {
+      "nnz": 2913,
+      "sum": 7902.376051187515,
+      "max": 81.00411224365234,
+      "min_nz": 0.5585436820983887,
+      "frac_int": 0.0,
+      "expm1_sum": null
+     }
+    }
+   }
+  },
+  "uns_keys": [
+   "_scvi_manager_uuid",
+   "_scvi_uuid",
+   "_training_mode",
+   "assay_ontology_term_id_colors",
+   "citation",
+   "compartment_colors",
+   "donor_id_colors",
+   "leiden",
+   "method_colors",
+   "neighbors",
+   "organism",
+   "organism_ontology_term_id",
+   "pca",
+   "schema_reference",
+   "schema_version",
+   "sex_ontology_term_id_colors",
+   "tissue_in_publication_colors",
+   "title",
+   "umap"
+  ]
+ },
+ "ts_kidney": {
+  "top_keys": [
+   "X",
+   "layers",
+   "obs",
+   "obsm",
+   "obsp",
+   "raw",
+   "uns",
+   "var",
+   "varm",
+   "varp"
+  ],
+  "X": {
+   "kind": "csr_matrix",
+   "shape": [
+    11376,
+    60606
+   ],
+   "dtype": "float32"
+  },
+  "X_rows": {
+   "2275": {
+    "nnz": 1862,
+    "sum": 2962.2554438114166,
+    "max": 5.138685703277588,
+    "min_nz": 1.2830321788787842,
+    "frac_int": 0.0,
+    "expm1_sum": 9997.39240964003
+   },
+   "4550": {
+    "nnz": 3838,
+    "sum": 3626.938726723194,
+    "max": 5.018961429595947,
+    "min_nz": 0.55189448595047,
+    "frac_int": 0.0,
+    "expm1_sum": 9992.63465298525
+   },
+   "6825": {
+    "nnz": 1819,
+    "sum": 2817.824758529663,
+    "max": 5.256436824798584,
+    "min_nz": 1.1770133972167969,
+    "frac_int": 0.0,
+    "expm1_sum": 9997.755757817908
+   },
+   "9100": {
+    "nnz": 4364,
+    "sum": 3546.448573678732,
+    "max": 4.954415321350098,
+    "min_nz": 0.43009480834007263,
+    "frac_int": 0.0,
+    "expm1_sum": 9994.0885319135
+   },
+   "0": {
+    "nnz": 1192,
+    "sum": 1515.1207632683218,
+    "max": 5.438004493713379,
+    "min_nz": 0.024959927424788475,
+    "frac_int": 0.0,
+    "expm1_sum": 9999.949389827874
+   }
+  },
+  "raw_keys": [
+   "X",
+   "var",
+   "varm"
+  ],
+  "raw/X": {
+   "kind": "csr_matrix",
+   "shape": [
+    11376,
+    60606
+   ],
+   "dtype": "float32"
+  },
+  "raw/X_rows": {
+   "2275": {
+    "nnz": 1868,
+    "sum": 4633.0,
+    "max": 200.0,
+    "min_nz": 1.0,
+    "frac_int": 1.0,
+    "expm1_sum": null
+   },
+   "4550": {
+    "nnz": 3839,
+    "sum": 13592.0,
+    "max": 210.0,
+    "min_nz": 1.0,
+    "frac_int": 1.0,
+    "expm1_sum": null
+   },
+   "6825": {
+    "nnz": 1842,
+    "sum": 7885.0,
+    "max": 744.0,
+    "min_nz": 1.0,
+    "frac_int": 1.0,
+    "expm1_sum": null
+   },
+   "9100": {
+    "nnz": 4373,
+    "sum": 22192.0,
+    "max": 887.0,
+    "min_nz": 1.0,
+    "frac_int": 1.0,
+    "expm1_sum": null
+   },
+   "0": {
+    "nnz": 1192,
+    "sum": 395661.0,
+    "max": 9060.0,
+    "min_nz": 1.0,
+    "frac_int": 1.0,
+    "expm1_sum": null
+   }
+  },
+  "raw_var_n": 60606,
+  "layers": {
+   "decontXcounts": {
+    "kind": "csr_matrix",
+    "shape": [
+     11376,
+     60606
+    ],
+    "dtype": "int32",
+    "rows": {
+     "2275": {
+      "nnz": 1862,
+      "sum": 3834.0,
+      "max": 65.0,
+      "min_nz": 1.0,
+      "frac_int": 1.0,
+      "expm1_sum": null
+     },
+     "4550": {
+      "nnz": 3838,
+      "sum": 13567.0,
+      "max": 204.0,
+      "min_nz": 1.0,
+      "frac_int": 1.0,
+      "expm1_sum": null
+     }
+    }
+   },
+   "scale_data": {
+    "kind": "csr_matrix",
+    "shape": [
+     11376,
+     60606
+    ],
+    "dtype": "float32",
+    "rows": {
+     "2275": {
+      "nnz": 1862,
+      "sum": 5928.737468957901,
+      "max": 42.1465950012207,
+      "min_nz": 1.1393275260925293,
+      "frac_int": 0.0005370569280343716,
+      "expm1_sum": null
+     },
+     "4550": {
+      "nnz": 3838,
+      "sum": 7598.1706547141075,
+      "max": 23.988094329833984,
+      "min_nz": 0.38826656341552734,
+      "frac_int": 0.0,
+      "expm1_sum": 26193059413.605637
+     }
+    }
+   }
+  },
+  "uns_keys": [
+   "_scvi_manager_uuid",
+   "_scvi_uuid",
+   "_training_mode",
+   "assay_ontology_term_id_colors",
+   "citation",
+   "compartment_colors",
+   "donor_id_colors",
+   "leiden",
+   "method_colors",
+   "neighbors",
+   "organism",
+   "organism_ontology_term_id",
+   "pca",
+   "schema_reference",
+   "schema_version",
+   "sex_ontology_term_id_colors",
+   "tissue_in_publication_colors",
+   "title",
+   "umap"
+  ]
+ },
+ "krasnow": {
+  "top_keys": [
+   "X",
+   "layers",
+   "obs",
+   "obsm",
+   "obsp",
+   "raw",
+   "uns",
+   "var",
+   "varm",
+   "varp"
+  ],
+  "X": {
+   "kind": "csr_matrix",
+   "shape": [
+    9409,
+    53514
+   ],
+   "dtype": "float32"
+  },
+  "X_rows": {
+   "1881": {
+    "nnz": 1956,
+    "sum": 9250.866615891457,
+    "max": 10.750895500183105,
+    "min_nz": 1.129643201828003,
+    "frac_int": 0.0,
+    "expm1_sum": 991192.3958953099
+   },
+   "3763": {
+    "nnz": 5413,
+    "sum": 19492.60792005062,
+    "max": 11.769556999206543,
+    "min_nz": 0.5893085598945618,
+    "frac_int": 0.0,
+    "expm1_sum": 992245.5303391361
+   },
+   "5644": {
+    "nnz": 825,
+    "sum": 4502.703742742538,
+    "max": 10.378010749816895,
+    "min_nz": 2.8907816410064697,
+    "frac_int": 0.0,
+    "expm1_sum": 991921.4938247947
+   },
+   "7526": {
+    "nnz": 3127,
+    "sum": 12830.608714580536,
+    "max": 11.19681167602539,
+    "min_nz": 0.7346593141555786,
+    "frac_int": 0.0003197953309881676,
+    "expm1_sum": 990294.5496230255
+   },
+   "0": {
+    "nnz": 1673,
+    "sum": 7987.6093492507935,
+    "max": 10.104233741760254,
+    "min_nz": 1.04519522190094,
+    "frac_int": 0.0,
+    "expm1_sum": 950006.7608904636
+   }
+  },
+  "raw_keys": [
+   "X",
+   "var",
+   "varm"
+  ],
+  "raw/X": {
+   "kind": "csr_matrix",
+   "shape": [
+    9409,
+    53514
+   ],
+   "dtype": "float32"
+  },
+  "raw/X_rows": {
+   "1881": {
+    "nnz": 1956,
+    "sum": 473224.0,
+    "max": 22282.0,
+    "min_nz": 1.0,
+    "frac_int": 1.0,
+    "expm1_sum": null
+   },
+   "3763": {
+    "nnz": 5413,
+    "sum": 1236071.0,
+    "max": 161018.0,
+    "min_nz": 1.0,
+    "frac_int": 1.0,
+    "expm1_sum": null
+   },
+   "5644": {
+    "nnz": 825,
+    "sum": 58323.0,
+    "max": 1890.0,
+    "min_nz": 1.0,
+    "frac_int": 1.0,
+    "expm1_sum": null
+   },
+   "7526": {
+    "nnz": 3127,
+    "sum": 912906.0,
+    "max": 67200.0,
+    "min_nz": 1.0,
+    "frac_int": 1.0,
+    "expm1_sum": null
+   },
+   "0": {
+    "nnz": 1673,
+    "sum": 515201.0,
+    "max": 13257.0,
+    "min_nz": 1.0,
+    "frac_int": 1.0,
+    "expm1_sum": null
+   }
+  },
+  "raw_var_n": 53514,
+  "layers": {},
+  "uns_keys": [
+   "cell_type_ontology_term_id_colors",
+   "citation",
+   "default_embedding",
+   "organism",
+   "organism_ontology_term_id",
+   "schema_reference",
+   "schema_version",
+   "title"
+  ]
+ }
+}

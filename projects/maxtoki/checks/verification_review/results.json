@@ -1,0 +1,325 @@
+{
+ "V1_sections": {
+  "n_fail": 7,
+  "per_spec": {
+   "attention-grn-extraction-and-evaluation.md": {
+    "ok": false,
+    "missing": [
+     "code references"
+    ]
+   },
+   "residual-stream-spectral-geometry.md": {
+    "ok": false,
+    "missing": [
+     "code references"
+    ]
+   },
+   "topology-geometry-141-hypotheses.md": {
+    "ok": false,
+    "missing": [
+     "code references"
+    ]
+   },
+   "manifold-discovery-extraction-compactification.md": {
+    "ok": false,
+    "missing": [
+     "code references"
+    ]
+   },
+   "longevity-mechinterp-donor-aware.md": {
+    "ok": true,
+    "missing": []
+   },
+   "01-sae-atlas.md": {
+    "ok": false,
+    "missing": [
+     "code references"
+    ]
+   },
+   "02-causal-circuit-tracing.md": {
+    "ok": false,
+    "missing": [
+     "code references"
+    ]
+   },
+   "03-exhaustive-mapping-and-steering.md": {
+    "ok": false,
+    "missing": [
+     "code references"
+    ]
+   }
+  }
+ },
+ "V2_coderefs": {
+  "n_refs": 230,
+  "required_form": 5,
+  "exists": 218,
+  "as_written": 165,
+  "pattern": 10,
+  "not_resolved": 2,
+  "in_clone_without_git": 174,
+  "symbols_not_found": 4
+ },
+ "V3_V4_numbers": {
+  "pooled_rows": 1647,
+  "distinct_numbers": 1186,
+  "rows_repeating_a_number": 461,
+  "traced": 1132,
+  "traced_share": 0.9545,
+  "traced_wilson": [
+   0.9411,
+   0.9649
+  ],
+  "tool_chance": 0.7783,
+  "tool_chance_ci_numbers": [
+   0.7602,
+   0.7956
+  ],
+  "excess_tool": 0.1762,
+  "excess_tool_ci_numbers": [
+   0.159,
+   0.1937
+  ],
+  "weak": 980,
+  "untraced_not_in_spec": 32,
+  "pooled_by_run_weighting": {
+   "traced": 0.9545,
+   "tool_chance": 0.7783,
+   "foreign_chance_class_matched": 0.6799
+  },
+  "run_cluster_ci": {
+   "traced": [
+    0.9036,
+    0.9836
+   ],
+   "tool_chance": [
+    0.6519,
+    0.8824
+   ],
+   "foreign_chance_class_matched": [
+    0.5601,
+    0.7978
+   ]
+  },
+  "excess_tool_run_cluster_ci": [
+   0.0903,
+   0.2681
+  ],
+  "excess_foreign": 0.2745,
+  "excess_foreign_run_cluster_ci": [
+   0.1591,
+   0.3842
+  ],
+  "per_run": {
+   "attention-grn-217M": {
+    "n": 102,
+    "traced": 0.9803921568627451,
+    "tool_chance": 0.9513725490196078,
+    "foreign_chance_class_matched": 0.9044821829533087,
+    "n_foreign": 786,
+    "class_mix": {
+     "integer>=10": 25,
+     "decimal_2+dp": 69,
+     "sci": 4,
+     "decimal_1dp": 4
+    },
+    "foreign_rate_by_class": {
+     "integer>=10": 0.7965367965367965,
+     "decimal_2+dp": 0.9514563106796117,
+     "sci": 0.8571428571428571,
+     "decimal_1dp": 0.8161764705882353
+    }
+   },
+   "circuit-tracing-217M": {
+    "n": 112,
+    "traced": 0.8571428571428571,
+    "tool_chance": 0.5791071428571428,
+    "foreign_chance_class_matched": 0.7806849852760012,
+    "n_foreign": 768,
+    "class_mix": {
+     "integer>=10": 61,
+     "decimal_1dp": 20,
+     "decimal_2+dp": 30,
+     "sci": 1
+    },
+    "foreign_rate_by_class": {
+     "integer>=10": 0.8601036269430051,
+     "decimal_1dp": 0.8067226890756303,
+     "decimal_2+dp": 0.6241610738255033,
+     "sci": 0.1111111111111111
+    }
+   },
+   "exhaustive-mapping-217M": {
+    "n": 149,
+    "traced": 0.9060402684563759,
+    "tool_chance": 0.528993288590604,
+    "foreign_chance_class_matched": 0.5303027311903579,
+    "n_foreign": 728,
+    "class_mix": {
+     "integer>=10": 52,
+     "decimal_1dp": 19,
+     "decimal_2+dp": 78
+    },
+    "foreign_rate_by_class": {
+     "integer>=10": 0.698019801980198,
+     "decimal_1dp": 0.47863247863247865,
+     "decimal_2+dp": 0.43107769423558895
+    }
+   },
+   "longevity-mechinterp-217M": {
+    "n": 35,
+    "traced": 0.6285714285714286,
+    "tool_chance": 0.2302857142857143,
+    "foreign_chance_class_matched": 0.15054245683528047,
+    "n_foreign": 867,
+    "class_mix": {
+     "integer>=10": 16,
+     "decimal_2+dp": 17,
+     "decimal_1dp": 2
+    },
+    "foreign_rate_by_class": {
+     "integer>=10": 0.25925925925925924,
+     "decimal_2+dp": 0.05508474576271186,
+     "decimal_1dp": 0.09219858156028368
+    }
+   },
+   "manifold-discovery-217M": {
+    "n": 276,
+    "traced": 0.9855072463768116,
+    "tool_chance": 0.7311594202898551,
+    "foreign_chance_class_matched": 0.5155649170604041,
+    "n_foreign": 596,
+    "class_mix": {
+     "integer>=10": 54,
+     "decimal_2+dp": 208,
+     "decimal_1dp": 13,
+     "sci": 1
+    },
+    "foreign_rate_by_class": {
+     "integer>=10": 0.6515151515151515,
+     "decimal_2+dp": 0.4664179104477612,
+     "decimal_1dp": 0.7768595041322314,
+     "sci": 0.0
+    }
+   },
+   "sae-atlas-217M": {
+    "n": 189,
+    "traced": 0.9894179894179894,
+    "tool_chance": 0.9615873015873014,
+    "foreign_chance_class_matched": 0.8822265660391084,
+    "n_foreign": 695,
+    "class_mix": {
+     "integer>=10": 85,
+     "decimal_1dp": 77,
+     "decimal_2+dp": 27
+    },
+    "foreign_rate_by_class": {
+     "integer>=10": 0.8132530120481928,
+     "decimal_1dp": 0.9354838709677419,
+     "decimal_2+dp": 0.9474835886214442
+    }
+   },
+   "spectral-geometry-217M": {
+    "n": 200,
+    "traced": 0.995,
+    "tool_chance": 0.9074000000000001,
+    "foreign_chance_class_matched": 0.7962757785029936,
+    "n_foreign": 676,
+    "class_mix": {
+     "integer>=10": 64,
+     "decimal_1dp": 26,
+     "decimal_2+dp": 105,
+     "sci": 5
+    },
+    "foreign_rate_by_class": {
+     "integer>=10": 0.6182795698924731,
+     "decimal_1dp": 0.9719626168224299,
+     "decimal_2+dp": 0.8912466843501327,
+     "sci": 0.16666666666666666
+    }
+   },
+   "topology-141-217M": {
+    "n": 123,
+    "traced": 0.983739837398374,
+    "tool_chance": 0.8882926829268292,
+    "foreign_chance_class_matched": 0.6027257305450527,
+    "n_foreign": 763,
+    "class_mix": {
+     "integer>=10": 42,
+     "decimal_2+dp": 74,
+     "decimal_1dp": 6,
+     "sci": 1
+    },
+    "foreign_rate_by_class": {
+     "integer>=10": 0.6933962264150944,
+     "decimal_2+dp": 0.5585365853658537,
+     "decimal_1dp": 0.5801526717557252,
+     "sci": 0.2
+    }
+   }
+  },
+  "methods": "unit = distinct number per run; Wilson over numbers; '_ci_numbers' = percentile bootstrap over numbers (2,000); 'run_cluster' = percentile bootstrap over the 8 runs (2,000)"
+ },
+ "V5_gates": [
+  {
+   "file": "quality_gates_let_anchor.json",
+   "object": "positive",
+   "panel": "internal",
+   "recorded_pass": true,
+   "computed_gates_pass": true,
+   "required_gates_missing": [
+    "blocked_permutation_p_max",
+    "n_permutations_min"
+   ],
+   "expected_to_fail": null
+  },
+  {
+   "file": "h38_lite_quality_gates.json",
+   "object": "positive",
+   "panel": "internal (no panel key; internal-panel anchors)",
+   "recorded_pass": true,
+   "computed_gates_pass": true,
+   "required_gates_missing": [
+    "blocked_permutation_p_max",
+    "n_permutations_min"
+   ],
+   "expected_to_fail": null
+  },
+  {
+   "file": "external_validation_external.json",
+   "object": "(root)",
+   "panel": "external",
+   "recorded_pass": true,
+   "computed_gates_pass": true,
+   "required_gates_missing": [],
+   "expected_to_fail": false
+  },
+  {
+   "file": "external_validation_lung_control.json",
+   "object": "(root)",
+   "panel": "lung_control",
+   "recorded_pass": true,
+   "computed_gates_pass": true,
+   "required_gates_missing": [],
+   "expected_to_fail": true
+  },
+  {
+   "file": "external_validation_lung_nonhema.json",
+   "object": "(root)",
+   "panel": "lung_nonhema",
+   "recorded_pass": false,
+   "computed_gates_pass": false,
+   "required_gates_missing": "rule does not name this panel",
+   "expected_to_fail": true
+  },
+  {
+   "file": "zeroshot_transfer_anchor_head.json",
+   "object": "(root)",
+   "panel": "zeroshot_multi_donor",
+   "recorded_pass": true,
+   "computed_gates_pass": true,
+   "required_gates_missing": "rule does not name this panel",
+   "expected_to_fail": null
+  }
+ ]
+}

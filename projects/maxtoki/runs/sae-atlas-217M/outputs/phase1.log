@@ -1,0 +1,35 @@
+======================================================================
+SAE Phase 1 — TopK SAE training  d_model=1232  layers=[0, 5, 11]
+======================================================================
+
+--- Training SAE for layer 0 ---
+  Loading activations from <REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/outputs/phase0/layer_00_activations.npy...
+  total positions: 1,019,996  d_model=1232
+  train=917,996  eval=102,000  d_sae=4928  k=32
+    epoch 0: loss=0.000313  steps=225  time=25.7s
+    epoch 1: loss=0.000208  steps=450  time=49.5s
+    epoch 2: loss=0.000165  steps=675  time=73.4s
+    epoch 3: loss=0.000143  steps=900  time=97.0s
+  var_explained=0.6934  alive=2498/4928  dead=2430  dec_cos=0.0247
+
+--- Training SAE for layer 5 ---
+  Loading activations from <REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/outputs/phase0/layer_05_activations.npy...
+  total positions: 1,019,996  d_model=1232
+  train=917,996  eval=102,000  d_sae=4928  k=32
+    epoch 0: loss=0.132670  steps=225  time=23.7s
+    epoch 1: loss=0.055553  steps=450  time=47.9s
+    epoch 2: loss=0.042085  steps=675  time=72.2s
+    epoch 3: loss=0.036519  steps=900  time=95.9s
+  var_explained=0.8894  alive=4903/4928  dead=25  dec_cos=0.0367
+
+--- Training SAE for layer 11 ---
+  Loading activations from <REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/outputs/phase0/layer_11_activations.npy...
+  total positions: 1,019,996  d_model=1232
+  train=917,996  eval=102,000  d_sae=4928  k=32
+    epoch 0: loss=2.588077  steps=225  time=24.4s
+    epoch 1: loss=1.388726  steps=450  time=48.6s
+    epoch 2: loss=1.196394  steps=675  time=73.2s
+    epoch 3: loss=1.111561  steps=900  time=97.6s
+  var_explained=0.8276  alive=4813/4928  dead=115  dec_cos=0.0606
+
+SAE PHASE 1 COMPLETE

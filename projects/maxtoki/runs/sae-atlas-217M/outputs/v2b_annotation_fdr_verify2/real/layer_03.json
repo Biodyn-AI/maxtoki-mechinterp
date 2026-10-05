@@ -1,0 +1,80 @@
+{
+ "layer": 3,
+ "n_alive": 4928,
+ "N_universe": 6325,
+ "n_terms": 2377,
+ "n_tests": 11713856,
+ "A_deployed": 3364,
+ "A2_biosae": 3312,
+ "B_perfeature": 83,
+ "B_ge3": 44,
+ "B2_perfeature_ovl2": 2977,
+ "C_global": 4,
+ "Bu_perfeature": 83,
+ "Cu_global": 4,
+ "deployed_summary": {
+  "layer": 3,
+  "n_alive": 4928,
+  "n_annotated": 3364,
+  "annotation_rate": 0.6826,
+  "total_enrichments": 28778
+ },
+ "deployed_kept_tests": 34942,
+ "rows_mine": 28778,
+ "rows_deployed": 28778,
+ "rows_missing": 0,
+ "rows_extra": 0,
+ "max_abs_p_diff": 9.8879238130678e-17,
+ "overlap_col_match": true,
+ "n_col_match": true,
+ "K_col_match": true,
+ "N_col_match": true,
+ "max_abs_q_diff": 9.952975943416931e-17,
+ "deployed_max_raw_p_sig": 0.0390821735587719,
+ "deployed_share_overlap2": 0.8180902077976232,
+ "B_rows": 784,
+ "B_rows_share_overlap2": 0.5586734693877551,
+ "B_rows_overlap2_full20": 438,
+ "B_rows_overlap2_short": 0,
+ "B_rows_overlap1": 0,
+ "B_rate": 0.016842532467532468,
+ "B_wilson": [
+  0.013607845685215728,
+  0.02082989126128108
+ ],
+ "A_rate": 0.6826298701298701,
+ "A2_rate": 0.672077922077922,
+ "B2_rate": 0.604099025974026,
+ "list_sizes_lt20": 2,
+ "global_features": [
+  {
+   "feature_id": 2229,
+   "n_terms_global": 5,
+   "n_terms_perfeature": 18,
+   "min_p": 1.0247490322500331e-11,
+   "best_term": "GO_BP:Sterol Biosynthetic Process (GO:0016126)"
+  },
+  {
+   "feature_id": 2541,
+   "n_terms_global": 10,
+   "n_terms_perfeature": 10,
+   "min_p": 7.064115920630751e-18,
+   "best_term": "Reactome:Mitochondrial Translation Termination R-HSA-5419276"
+  },
+  {
+   "feature_id": 2543,
+   "n_terms_global": 8,
+   "n_terms_perfeature": 10,
+   "min_p": 2.0466267896315934e-11,
+   "best_term": "Reactome:Mitochondrial Translation Termination R-HSA-5419276"
+  },
+  {
+   "feature_id": 2899,
+   "n_terms_global": 1,
+   "n_terms_perfeature": 8,
+   "min_p": 9.90778403023514e-08,
+   "best_term": "GO_BP:Endoplasmic Reticulum To Golgi Vesicle-Mediated Transport (GO:0006888)"
+  }
+ ],
+ "seconds": 3.9
+}

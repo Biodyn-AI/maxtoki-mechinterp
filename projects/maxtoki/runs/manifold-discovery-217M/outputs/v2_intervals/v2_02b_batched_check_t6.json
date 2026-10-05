@@ -1,0 +1,228 @@
+{
+  "threads": 6,
+  "n_members": 20,
+  "seconds_total": 169.2783420085907,
+  "seconds_per_member": 8.463917100429535,
+  "comparisons": [
+    {
+      "id": "repro_full|H65",
+      "metric": "trust",
+      "exact": 0.810936329588015,
+      "batched": 0.8226768263808171,
+      "diff": 0.011740496792802091
+    },
+    {
+      "id": "repro_full|H65",
+      "metric": "global_rho",
+      "exact": 0.986828358136645,
+      "batched": 0.9867586785885613,
+      "diff": -6.967954808378973e-05
+    },
+    {
+      "id": "repro_branch|H65|T_lineage",
+      "metric": "rho",
+      "exact": 0.030649756416565397,
+      "batched": 0.037763177204619226,
+      "diff": 0.007113420788053829
+    },
+    {
+      "id": "repro_branch|H65|B_lineage",
+      "metric": "rho",
+      "exact": 0.1535981878239143,
+      "batched": 0.16070431088128506,
+      "diff": 0.007106123057370767
+    },
+    {
+      "id": "repro_branch|H65|monocyte",
+      "metric": "rho",
+      "exact": -0.07464624792419637,
+      "batched": -0.07693415919435533,
+      "diff": -0.0022879112701589543
+    },
+    {
+      "id": "repro_branch|H65|granulocyte",
+      "metric": "rho",
+      "exact": 0.7084125811530857,
+      "batched": 0.7024419409660467,
+      "diff": -0.005970640187038967
+    },
+    {
+      "id": "repro_branch|H65|erythroid",
+      "metric": "rho",
+      "exact": 0.7833494518006403,
+      "batched": 0.7833494518006403,
+      "diff": 0.0
+    },
+    {
+      "id": "repro_branch|H65|stem",
+      "metric": "rho",
+      "exact": 0.6210590034081188,
+      "batched": 0.6210590034081188,
+      "diff": 0.0
+    },
+    {
+      "id": "perm|0",
+      "metric": "stat",
+      "exact": 0.98616547265035,
+      "batched": 0.9818040584684352,
+      "diff": -0.0043614141819148244
+    },
+    {
+      "id": "perm|0",
+      "metric": "trust",
+      "exact": 0.5696637823410392,
+      "batched": 0.5782134400964312,
+      "diff": 0.00854965775539196
+    },
+    {
+      "id": "perm|1",
+      "metric": "stat",
+      "exact": 0.9851544413477215,
+      "batched": 0.9824755457660372,
+      "diff": -0.0026788955816842153
+    },
+    {
+      "id": "perm|1",
+      "metric": "trust",
+      "exact": 0.5847079082181755,
+      "batched": 0.5835619269017176,
+      "diff": -0.0011459813164579336
+    },
+    {
+      "id": "perm|2",
+      "metric": "stat",
+      "exact": 0.9863263099241462,
+      "batched": 0.9847772560932067,
+      "diff": -0.0015490538309395063
+    },
+    {
+      "id": "perm|2",
+      "metric": "trust",
+      "exact": 0.5794713504670885,
+      "batched": 0.5793292866675277,
+      "diff": -0.00014206379956083204
+    },
+    {
+      "id": "perm|3",
+      "metric": "stat",
+      "exact": 0.9829652441638933,
+      "batched": 0.9837084042270889,
+      "diff": 0.0007431600631956359
+    },
+    {
+      "id": "perm|3",
+      "metric": "trust",
+      "exact": 0.5688906108743381,
+      "batched": 0.5624719101123595,
+      "diff": -0.006418700761978591
+    },
+    {
+      "id": "perm|4",
+      "metric": "stat",
+      "exact": 0.9803779622065931,
+      "batched": 0.9760715461478121,
+      "diff": -0.004306416058781015
+    },
+    {
+      "id": "perm|4",
+      "metric": "trust",
+      "exact": 0.6021989754186576,
+      "batched": 0.5958000774893453,
+      "diff": -0.006398897929312364
+    },
+    {
+      "id": "perm|5",
+      "metric": "stat",
+      "exact": 0.9766377716218331,
+      "batched": 0.985946898275454,
+      "diff": 0.009309126653620936
+    },
+    {
+      "id": "perm|5",
+      "metric": "trust",
+      "exact": 0.5849309053338498,
+      "batched": 0.5623849498471738,
+      "diff": -0.02254595548667604
+    },
+    {
+      "id": "boot_full|0",
+      "metric": "trust",
+      "exact": 0.8181731570799096,
+      "batched": 0.8181731570799096,
+      "diff": 0.0
+    },
+    {
+      "id": "boot_full|0",
+      "metric": "global_rho",
+      "exact": 0.9859916331166556,
+      "batched": 0.9859916313479928,
+      "diff": -1.7686627717949932e-09
+    },
+    {
+      "id": "boot_branch|0|B_lineage",
+      "metric": "rho",
+      "exact": 0.23751843281513702,
+      "batched": 0.23751843281513702,
+      "diff": 0.0
+    },
+    {
+      "id": "boot_branch|0|T_lineage",
+      "metric": "rho",
+      "exact": 0.006696034156552625,
+      "batched": 0.004418494381251653,
+      "diff": -0.002277539775300972
+    },
+    {
+      "id": "boot_branch|0|erythroid",
+      "metric": "rho",
+      "exact": 0.7833494518006403,
+      "batched": 0.7833494518006403,
+      "diff": 0.0
+    },
+    {
+      "id": "boot_branch|0|granulocyte",
+      "metric": "rho",
+      "exact": 0.6904589680538815,
+      "batched": 0.6876945981759448,
+      "diff": -0.002764369877936712
+    },
+    {
+      "id": "boot_branch|0|monocyte",
+      "metric": "rho",
+      "exact": -0.11426948468586788,
+      "batched": -0.11426948468586788,
+      "diff": 0.0
+    },
+    {
+      "id": "boot_branch|0|stem",
+      "metric": "rho",
+      "exact": 0.6210590034081188,
+      "batched": 0.6210590034081188,
+      "diff": 0.0
+    }
+  ],
+  "absdiff_trust": {
+    "n": 8,
+    "median": 0.006408799345645477,
+    "max": 0.02254595548667604,
+    "mean_signed": -0.0020451805932239636
+  },
+  "absdiff_global_rho": {
+    "n": 2,
+    "median": 3.4840658373280764e-05,
+    "max": 6.967954808378973e-05,
+    "mean_signed": -3.4840658373280764e-05
+  },
+  "absdiff_rho": {
+    "n": 12,
+    "median": 0.001138769887650486,
+    "max": 0.007113420788053829,
+    "mean_signed": 7.659022791574922e-05
+  },
+  "absdiff_stat": {
+    "n": 6,
+    "median": 0.0034926558202326152,
+    "max": 0.009309126653620936,
+    "mean_signed": -0.0004739154894171649
+  }
+}

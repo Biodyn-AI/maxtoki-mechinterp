@@ -1,0 +1,210 @@
+\section*{Discussion}
+
+\subsection*{What the evaluation supports}
+The deployment produced many serious errors, and its own audit caught few
+of them. The written sweep report of the in-session audit fully detected
+10\% of the 68 reference errors and none of the 6 critical errors among
+them. Across the full ledger, the report flagged none of the 11 critical
+errors that were already present when the audit ran (one of them only
+partly present). Later, during the audit's second repair round, the
+deployment agent found one of these 11: the direction-of-change metric.
+The other 2 of the 13 critical errors were made during the
+audit's repair rounds. Fresh agents that audited the same snapshot found four times as
+many reference errors, whether they used the checklist or a generic
+instruction to review critically.
+
+In the pre-registered comparisons with Claude Opus~5.5, the checklist did
+not clearly help reviewers find more problems than a generic review of
+the same budget in any of the three studies, and in none did it reduce
+false alarms. There were two partial exceptions. In the exploratory arm
+with Claude Haiku~4.5, a checklist review followed by repair raised the
+share of pitfalls handled by 6.4 percentage points more than a generic
+review followed by repair (95\% bootstrap interval over the 28 paired
+executor runs, pooled over tasks, 1.3 to 11.7), but it did not raise the
+share of correct verdicts. In Study~C the two checklist arms (generic and
+as deployed) fully detected more of the 17 missing baselines and nulls
+(51\% and 55\% against 39\% for the generic review) and of the 9 wrong
+statistics (22\% and 37\% against 15\%), but fewer of the 12 code bugs
+(69\% and 58\% against 81\%); these splits by error type were not tested
+for significance. The specifications did not change whether a current
+agent reached the correct conclusion on focused analysis tasks: with
+Claude Opus~5.5 every executor run reached the correct verdict with or
+without them. With a smaller model, Claude Haiku~4.5, they may help:
+correct verdicts rose from 10 to 15 of 20 runs, a difference that 20 runs
+per arm cannot confirm. The framework as deployed therefore did not make
+the agent's work reliable, and the checklist added little over a generic
+review of the same budget.
+
+What did catch errors was independent review in a fresh context. The
+blind re-audits of Study~C and the verification that built the ledger
+were carried out by agents that had not produced the work and had no
+stake in it. The in-session audit, by contrast, was written and applied
+by the deployment agent itself, in one working session on the last day of
+the deployment. Apart from a same-day extension of the topological
+hypothesis screen, the work it audited had been done in other sessions.
+The audit's sweep of all eight pipelines took about
+8~minutes from request to report (3.7~hours counting the two repair
+rounds), against 21 to 29~minutes for each blind re-audit, and it graded
+run summaries more than code. We cannot separate the effects of
+independence, more time and a different model: the deployment and its
+in-session audit ran on Claude Opus~4.7, and the re-audits on Claude
+Opus~5.5. Whatever the cause, an
+audit by the agent that did the work was weak evidence that the work was
+correct.
+
+\subsection*{Most of the errors that mattered were in code}
+Seven of the 13 critical errors were code bugs: an intervention hook that
+edited the wrong tensor and deleted a transformer block (three ledger
+entries), combined edits that overwrote each other, a model input encoded
+on the wrong scale, a metric that ignored the prediction, and a lookup
+that read the wrong embedding rows. None of these is a methodological
+pattern of the kind the checklist describes, and the checklist did not
+help fresh reviewers find them (the generic review found more of the code
+bugs). Each of the seven, however, would have been caught by a short
+deterministic test written for the analysis: an edit of zero must change
+nothing; an edit at layer~$l$ must leave earlier layers unchanged;
+combined edits must differ from single edits; the token order must match
+the model's reference encoder on a few cells; a direction-of-change
+accuracy must be compared with the constant-sign predictor on the same
+records; and for a few named genes, the embedding row read must be the
+row that the model's own vocabulary file gives them. Such tests are cheap
+and do not depend on an agent's judgment. The other six critical errors
+were not code bugs: three were missing or wrong nulls or baselines, two
+were wrong statistics (one of them in the audit's own summary) and one
+was an invalid proxy axis. The ledger places five of these six under a
+checklist pattern (P1, P3 or P5 in Table~\ref{tab:checklist}; S1~Table).
+The generic deterministic checks we built (structure of the
+specification, parameter deviations, number tracing) catch a different
+class of problem. By design they do not test whether a null randomises,
+an edit lands on the right tensor, an input is encoded as the model
+expects, a lookup reads the right rows or a number means what the text
+says, so they would not have caught 12 of the 13 critical errors. The thirteenth, the audit's percentage with
+no cell-by-cell record behind it, is the kind of problem the number
+tracer looks for. We ran the tracer only on the run summaries, not on the
+audit reports, so we did not test whether it would have flagged it. For
+agent-run interpretability we would therefore recommend
+analysis-specific tests of interventions, inputs, lookups and baselines,
+run before results are summarised, together with independent
+fresh-context review, rather than a longer checklist.
+
+The held-out benchmark adds a second observation. Every review of a
+flawed, single-analysis package found its documented error. This
+included a raw-count input fed to an encoder that expects binned values,
+the same kind of error as MaxToki's input encoding. Only part of
+the MaxToki input-encoding error was in the Study~C reference set: three attention runs
+fed $\log(1+\text{CP10k})$ values in as if they were counts (S1~Table,
+L118). Of the nine blind audits of the whole MaxToki project, three were
+graded as fully detecting this part and two as detecting it partly. These
+five suspected that the Adamson input was log-normalised and noted that
+no code checked for raw counts. None found that every run except the RPE1
+attention run was encoded on the wrong scale.
+Reviewing one analysis at a time, with its code, outputs and summary
+together, appears far more effective than reviewing a large project in
+one pass. This comparison is across studies, with different budgets per
+analysis, and should be tested directly.
+
+Reviews also over-called errors. Most reviews of correct analyses (53 of
+66) claimed at least one error in a main result that was not one. On
+correct and flawed analyses together, the reviews made 105 such claims.
+The graders marked 82 of them as false alarms (73 on correct and 9 on
+flawed analyses); the verifier agent ruled the other 23 false alarms
+after a grader dispute. A post-hoc check of the 82, which was not
+pre-registered, found that 76 were accurate observations whose severity
+was overstated. A review step
+is therefore only as good as the step that checks its points against the
+data before acting on them. In Study~A a repair step was meant to do
+this, and it did not always succeed. With Opus~5.5, repairs after generic
+reviews turned 3 of 40 correct verdicts into wrong ones, and repairs
+after checklist reviews turned none. In all three cases the reviewer
+leaned on metrics named in the specification, one of which has a high
+chance level that the specification does not state. A specification can
+thus mislead a reviewer even when the executor that followed it was not
+misled. In the exploratory Haiku~4.5 arm the pattern was reversed:
+repairs after checklist reviews turned 3 of 21 correct verdicts wrong
+(and 3 wrong verdicts right), and repairs after generic reviews turned
+none wrong. So each review style, with one of the two models, led
+repairs to turn correct verdicts wrong.
+
+\subsection*{Specifications and prompts}
+During the deployment a specification was, in practice, a long and
+structured prompt: nothing checked that it was complete, that its
+parameters were used or that its validation criteria were met, and the
+executing agent changed parameters (for example, the number of null
+draws) without recording why in most cases. What can be checked by code
+is narrow (Table~\ref{tab:checks}): document structure, resolvable code
+references, deviations from machine-readable parameters, and whether a
+stored gate flag matches the stored numbers. Whether a null randomises,
+an intervention edits the intended tensor or a number means what the text
+says remains a matter of judgment unless an analysis-specific test is
+written for it. The specifications also carry expectations from earlier
+studies; one stated that a negative verdict was the expected outcome. For
+a strong agent on a focused task this made no difference to the verdict,
+but a contract that states the expected answer is a source of bias that a
+pre-registered analysis plan would avoid.
+
+\subsection*{Transfer to other models and settings}
+The held-out items came from other projects by the author: a text-model
+cell embedding (Cell2Sentence), a protein language model (ESM-2), published
+single-cell transformers (scGPT, Geneformer and STATE), and
+gene-regulatory-network benchmarks that used no model. Every documented
+error was found in each of these four groups. In three groups most
+reviews of correct analyses raised a false alarm: 18 of 18 reviews for
+Cell2Sentence, 12 of 18 for ESM-2 and 17 of 18 for single-cell
+transformers. In the gene-regulatory-network group half did (6 of 12).
+Each group had only two or three correct items, too few to compare the
+groups. Because the checklist's patterns concern study
+design rather than any model's internals, we expect the review findings
+to transfer to other foundation models in biology. The code-level tests do not transfer
+unchanged: each architecture and tokenizer needs its own tests of where an
+edit lands and how inputs are encoded. We tested one agent model family
+(Claude) as executor, reviewer and grader, one deployment, and analyses
+from one author's projects; other agent families, other research groups'
+analyses and human reviewers were not tested.
+
+\subsection*{No human or non-agent baseline}
+We did not compare the agent workflow with human analysts or human
+reviewers, and we make no claim about efficiency. The deployment's
+supervision time was not logged, and the controlled studies measured
+agent effort (tool calls, time), not human effort. Whether a human
+reviewer with the same budget would find more of the code-level errors,
+or raise fewer false alarms, is an open question that a study with human
+reviewers could answer on the same items, which are released for this
+purpose.
+
+\subsection*{What the case study says about MaxToki-217M, and what it does not}
+The corrected analyses describe MaxToki-217M given one cell at a time,
+with rank-value inputs from K562, RPE1 and Tabula Sapiens cells, and
+judged against TRRUST, DoRothEA and CRISPR-interference screens. They do
+not test MaxToki's multi-cell trajectory mode, the larger MaxToki-1B
+(except for one attention run, whose inputs were encoded incorrectly and
+which we do not report), or other single-cell foundation models. Negative
+results here mean that these probes, with these references, found no
+signal beyond simple baselines in this model; they are not evidence that
+\scfm{}s in general lack regulatory information. The references themselves
+are limited: TRRUST covers few transcription factors per cell line, and
+the knockdown fold-changes are noisy, so modest signals could be missed.
+
+\subsection*{Limitations}
+The executor, reviewer, repairer and grader agents all came from one model
+family, so shared blind spots cannot be excluded; graders agreed closely
+with each other, but no human graded the deliverables. Study~A showed a
+ceiling for Opus~5.5, which leaves it without power to detect benefits of
+the specification for that model; the exploratory Haiku arm was added
+after that ceiling was seen and has 20 runs per arm (S2~Appendix). The Study~A tasks were built from the
+deployment's data and so are not independent of it. The Study~B items
+came from the author's own projects. Each flawed item held one documented
+error, and every review found it, in both arms (33 of 33 per arm). So
+Study~B could not show whether the checklist finds more of the documented
+errors. It could compare only false alarms and the number of other real
+problems found per review (2.1 in each arm). The error ledger is a lower bound:
+blind re-audits added 60 errors to it and the full input-encoding error was
+found last, so detection rates are relative to the errors known when
+each study's key was frozen. The deployment ran on Claude Opus~4.7 (its
+one automated loop called Claude Sonnet), while the evaluation used
+Opus~5.5 and, in the exploratory arm, Haiku~4.5. So a difference in
+model may explain part of the gap between the in-session audit and the
+blind re-audits. Finally, this manuscript
+was drafted by an agent under the author's direction. The source data of
+every figure, the error ledger with the file location of each error
+(S1~Table), and a results map that lists every number in the paper with
+its source file (RESULTS\_MAP.csv) are released with the code.

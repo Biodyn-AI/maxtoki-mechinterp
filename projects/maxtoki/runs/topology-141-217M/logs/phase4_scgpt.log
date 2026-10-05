@@ -1,0 +1,92 @@
+<CONDA_ROOT>/lib/python3.11/site-packages/sklearn/cross_decomposition/_pls.py:113: ConvergenceWarning: Maximum number of iterations reached
+  warnings.warn("Maximum number of iterations reached", ConvergenceWarning)
+========================================================================
+PHASE 4 — cross-model alignment (MaxToki-217M ↔ scGPT)
+========================================================================
+
+[1] Loading scGPT static embeddings...
+  scGPT: (60697, 512)  vocab len 60697
+
+[2] Loading MaxToki static embeddings...
+  MaxToki static: (20275, 1232)
+
+[lung] shared symbols: 382/382  PCA-aligned dim: 30
+  CCA mean_r=0.401  Spearman=-0.007  Pearson=-0.008 (z=-1.5)
+  Top-1 retrieval=5.0%  (null p95 0.7%)
+
+[immune] shared symbols: 350/350  PCA-aligned dim: 30
+  CCA mean_r=0.438  Spearman=-0.018  Pearson=-0.019 (z=-3.0)
+  Top-1 retrieval=6.6%  (null p95 0.9%)
+
+[external_lung] shared symbols: 380/380  PCA-aligned dim: 30
+  CCA mean_r=0.406  Spearman=-0.003  Pearson=-0.005 (z=-0.8)
+  Top-1 retrieval=7.6%  (null p95 0.5%)
+
+[phase 4 vs scGPT] summary:
+{
+  "external_lung": {
+    "n_genes": 380,
+    "cca_mean_r": 0.40574059184960853,
+    "pairwise_pearson": -0.004658742560532193,
+    "pairwise_spearman": -0.0029686328076906727,
+    "pairwise_pearson_z": -0.8302501635549948,
+    "top1_retrieval": 0.07631578947368421,
+    "top1_retrieval_z": 30.75516559417176
+  },
+  "immune": {
+    "n_genes": 350,
+    "cca_mean_r": 0.4381780902651185,
+    "pairwise_pearson": -0.018784154343424845,
+    "pairwise_spearman": -0.01844233148105162,
+    "pairwise_pearson_z": -2.9524416395038533,
+    "top1_retrieval": 0.06571428571428571,
+    "top1_retrieval_z": 21.990474775586147
+  },
+  "lung": {
+    "n_genes": 382,
+    "cca_mean_r": 0.40108044687701455,
+    "pairwise_pearson": -0.00839948602027915,
+    "pairwise_spearman": -0.0071241409764198895,
+    "pairwise_pearson_z": -1.4600290157506601,
+    "top1_retrieval": 0.049738219895287955,
+    "top1_retrieval_z": 19.47598319519623
+  },
+  "triangulation_vs_phase14": {
+    "external_lung": {
+      "geneformer": {
+        "cca_mean_r": 0.7661705028380451,
+        "pairwise_pearson": 0.3873742039695625,
+        "top1_retrieval": 0.3815789473684211
+      },
+      "scgpt": {
+        "cca_mean_r": 0.40574059184960853,
+        "pairwise_pearson": -0.004658742560532193,
+        "top1_retrieval": 0.07631578947368421
+      }
+    },
+    "immune": {
+      "geneformer": {
+        "cca_mean_r": 0.7757347694928558,
+        "pairwise_pearson": 0.4003279636874686,
+        "top1_retrieval": 0.4657142857142857
+      },
+      "scgpt": {
+        "cca_mean_r": 0.4381780902651185,
+        "pairwise_pearson": -0.018784154343424845,
+        "top1_retrieval": 0.06571428571428571
+      }
+    },
+    "lung": {
+      "geneformer": {
+        "cca_mean_r": 0.7831083136328606,
+        "pairwise_pearson": 0.3979362101701208,
+        "top1_retrieval": 0.450261780104712
+      },
+      "scgpt": {
+        "cca_mean_r": 0.40108044687701455,
+        "pairwise_pearson": -0.00839948602027915,
+        "top1_retrieval": 0.049738219895287955
+      }
+    }
+  }
+}

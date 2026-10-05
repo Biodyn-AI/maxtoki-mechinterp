@@ -1,0 +1,272 @@
+{
+  "overlap": {
+    "internal_external_donors": [],
+    "internal_zeroshot_donors": [],
+    "zeroshot_donors_subset_of_external": true,
+    "external_donors_not_in_zeroshot": [
+      "TSP19"
+    ],
+    "zeroshot_external_shared_donors": 12,
+    "zeroshot_external_shared_anchor_ids": 0,
+    "zeroshot_external_shared_cells_gathered": 0,
+    "internal_external_shared_cells_gathered": 0,
+    "internal_zeroshot_shared_cells_gathered": 0,
+    "zeroshot_tissues": 45,
+    "zeroshot_tissues_also_in_external": 41,
+    "zeroshot_anchors_sharing_donor_tissue_celltype_with_an_external_anchor": 13,
+    "lung_nonhema_donors": [
+      "TSP1",
+      "TSP14",
+      "TSP2",
+      "TSP25"
+    ],
+    "lung_nonhema_donors_in_internal_training": [
+      "TSP2"
+    ],
+    "lung_nonhema_donors_in_external": [
+      "TSP1",
+      "TSP14",
+      "TSP25"
+    ],
+    "lung_nonhema_stage_labels": "drawn uniformly at random from the 34 DAG stages (phase1a_lung_nonhema_panel.py:91)",
+    "lung_control_v1_note": "first lung control = lung-resident IMMUNE cells (51 anchors); it passed all four gates (reports/external_validation_lung_control.json) and was replaced by lung_nonhema"
+  },
+  "anchor_definition": "anchor = all cells sharing donor x tissue x cell_type x hema_stage, >= 5 cells in the atlas (phase1a_subsample_and_tokenize.py:65-79); the LARGEST groups are kept first (lines 94-106); <= 50 cells per anchor gathered (line 49); for the forward pass external was cut to 20 and zero-shot to 32 cells per anchor (phase1bc_hidden_states_and_centroids.py:50-54, 122-142). Centroid = mean over the anchor's cells of the per-cell hidden state; per-cell hidden state = mean over gene-token positions (BOS/EOS excluded) at each of the 12 hidden-state entries.",
+  "trustworthiness": {
+    "call": "sklearn.manifold.trustworthiness(X=features, X_embedded=z, n_neighbors=15), Euclidean metric",
+    "code": [
+      "phase5_let_anchor.py:236",
+      "phase7_external_validation.py:94",
+      "phase8_zeroshot_transfer.py:76",
+      "phase15_validate_candidate.py:148"
+    ],
+    "X": "2,464-d pooled-drift features of each anchor centroid, standardised with the INTERNAL panel mean/std",
+    "X_embedded": "the 10-d LET head output z for the same anchors",
+    "uses_biological_ruler": false,
+    "unit": "anchors (centroids), not cells",
+    "internal": "in-sample: the head was fitted on the same 290 anchors",
+    "external_zeroshot_lung": "frozen head; no re-fit",
+    "k": 15,
+    "plain": "Of each anchor's 15 nearest anchors in the 10-d head output, how many were also near in the 2,464-d model feature space (penalised by how far down the feature-space ranking they sit). It asks whether the small read-out keeps the model's own neighbourhoods. It does not compare the model with biology."
+  },
+  "branch_metrics": {
+    "internal_branch_holdout": "for each branch with >= 3 anchors: re-fit the head WITHOUT that branch, project the held-out anchors, Spearman(arc-cos latent distance, ruler distance) over held-out pairs; plain mean over branches whose ruler is not constant (phase5_let_anchor.py:167-199). 6 branches scored (T, B, monocyte, granulocyte, erythroid, stem).",
+    "external_zeroshot_lung_within_branch": "head frozen (trained on ALL internal branches); for each branch with >= 3 anchors, Spearman(arc-cos latent, ruler) over within-branch pairs; plain mean (phase7_external_validation.py:132-150, phase8_zeroshot_transfer.py:120-139). Nothing is held out. Branches with one stage give a constant ruler and are dropped.",
+    "donor_metric_internal": "refit leaving one donor out (donors with >= 3 anchors)",
+    "donor_metric_frozen": "mean within-donor Spearman under the frozen head",
+    "random_metric_internal": "10 random 80/20 anchor splits with refit (n_iters=10; comment says 20), phase5:240",
+    "random_metric_frozen": "20 random 20% anchor subsets, frozen head, no refit (phase7:101-114)",
+    "branch_labels": "branch = stage_to_branch of planning/h65_stage_dag.json"
+  },
+  "compaction": {
+    "full_drift_operator": {
+      "what": "A_early, A_mid, A_late: each the mean over a layer block of the full o_proj matrix transposed (1232 x 1232), applied to block-mean hidden states; feature = concat(y_early - y_mid, y_mid - y_late) = 2,464-d",
+      "shape_each": [
+        1232,
+        1232
+      ],
+      "dtype": "float32",
+      "bytes_total": 18213888,
+      "mb_in_report": 18.213888
+    },
+    "single_head_L10H6": {
+      "what": "A = o_proj(layer 10)[:, 6*154:7*154].T, shape (154, 1232); feature = h @ A.T (154-d), where h = centroid entry 11 = the LAST hidden state",
+      "shape": [
+        154,
+        1232
+      ],
+      "bytes": 758912,
+      "mb_in_report": 0.758912
+    },
+    "hard_sparse_16f_60g": {
+      "what": "keep the top 16 singular triplets (u_k, s_k, v_k) of A_L10H6; in each, keep the 60 largest-|value| entries of u_k (60 of 154 head-dimension coordinates) and of v_k (60 of 1,232 residual-stream coordinates); A_sparse = sum_k s_k u_k v_k^T (phase10_compaction_chain.py:148-165)",
+      "stored_values_counted": "16 x (60 + 60) + 16 singular values = 1936 float32 numbers",
+      "bytes_counted": 7744,
+      "mb_in_report": 0.007744,
+      "not_counted": {
+        "indices_of_the_kept_entries": "1920 indices = 3840 bytes as int16, 7680 bytes as int32",
+        "LET_head_on_154_d_features": "W 10x154 + b 154 + log_beta = 1,695 float32 = 6,780 bytes; saved file artifacts/heads/compact/hard_sparse_16f_60g.pt = 8973 bytes",
+        "feature_standardisation": "154 means + 154 SDs from the internal panel (1,232 bytes); computed at run time, not saved anywhere",
+        "model": "a full MaxToki-217M forward pass through all 11 layers for every cell, mean over gene tokens, then averaging cells into anchors"
+      },
+      "the_60_are_genes": false
+    },
+    "ratios": {
+      "full_drift_bytes_over_hard_sparse_bytes": 2352.0,
+      "single_head_bytes_over_hard_sparse_bytes": 98.0,
+      "reported_as": "2,400x 'from a 154-dimensional dense form' (paper) - the 2,352x is from the 2,464-d pooled operator, the 154-d single-head operator gives 98x"
+    },
+    "quality_numbers": {
+      "full_drift_reference": {
+        "trustworthiness": 0.810936329588015,
+        "random_holdout": 0.8339392558547665,
+        "donor_holdout": 0.715887968347085,
+        "branch_holdout": 0.37040378877968805
+      },
+      "compact_top1_L10H6": {
+        "trustworthiness": 0.8817943088380903,
+        "random_holdout": 0.8169864563117182,
+        "donor_holdout": 0.7185592654448592,
+        "branch_holdout": 0.4674029250589304
+      },
+      "rank8_svd": {
+        "trustworthiness": 0.9556287399371475,
+        "random_holdout": 0.7944017032762821,
+        "donor_holdout": 0.7390379317140486,
+        "branch_holdout": 0.3518239892505212
+      },
+      "rank16_svd": {
+        "trustworthiness": 0.9317706315381635,
+        "random_holdout": 0.8231149211701888,
+        "donor_holdout": 0.7647244135906798,
+        "branch_holdout": 0.21576547485940045
+      },
+      "rank32_svd": {
+        "trustworthiness": 0.9261586809591459,
+        "random_holdout": 0.8319958642404955,
+        "donor_holdout": 0.7935765097575677,
+        "branch_holdout": 0.41956894117043536
+      },
+      "rank64_svd": {
+        "trustworthiness": 0.9120263463773731,
+        "random_holdout": 0.8216685828804995,
+        "donor_holdout": 0.7739104153001253,
+        "branch_holdout": 0.5136653225202011
+      },
+      "hard_sparse_16f_60g": {
+        "trustworthiness": 0.9094278703344957,
+        "random_holdout": 0.8330181643104959,
+        "donor_holdout": 0.7462894950214012,
+        "branch_holdout": 0.4333237136281909
+      }
+    },
+    "evaluation_scope": "internal panel only, head re-fitted per variant, in-sample trust; no external or zero-shot test of any compact operator; no interval; L10H6 was chosen on the same internal panel",
+    "head_choice": "L10H6 = top of reports/head_layer_screen.csv by score = 0.5*trust + 0.25*random + 0.25*branch (phase9_head_attribution.py:98-105), all on the internal panel; not an ablation or contribution test",
+    "last_hidden_state_note": "in transformers 4.37.1 (the anaconda env that ran Phase 1B) the last hidden_states entry is taken AFTER the final RMSNorm (modeling_llama.py:1087-1091)"
+  },
+  "factor_ablation": {
+    "operator": "rank-64 SVD truncation of A_L10H6",
+    "probe_setup": "LET head fitted on the rank-64 features of the 290 internal anchors; five linear probes fitted on the head output of the SAME anchors (800 Adam steps, no holdout); every ablation is scored on the same 290 anchors with head and probes frozen (phase11_factor_ablation.py:150-193)",
+    "pooled_drop_definition": "sum over 7 endpoint metrics (branch bal.acc, branch macro-F1, stage bal.acc, stage macro-F1, CD4/CD8 AUROC, mono/macro AUROC, pseudotime Spearman) of max(0, intact - ablated) when ONE factor is removed (phase11:229); docstring says 'sum of squared drops' but the code sums plain drops",
+    "four_strongest_axes": {
+      "factors": [
+        1,
+        4,
+        11,
+        9
+      ],
+      "how_chosen": "top 4 by leave-one-factor-out pooled drop (not by singular value)",
+      "singular_values": {
+        "1": 1.1168701648712158,
+        "4": 1.040974497795105,
+        "11": 1.0040805339813232,
+        "9": 1.0143837928771973
+      },
+      "rank_by_singular_value": {
+        "1": 2,
+        "4": 5,
+        "11": 12,
+        "9": 10
+      }
+    },
+    "share_18_3": {
+      "value_json": 0.18252924533058643,
+      "recomputed_from_csv": 0.18252924533058645,
+      "share_of_top4_by_singular_value_factors_0_1_2_3": 0.08949270730753432,
+      "meaning": "sum of the single-factor pooled drops of the 4 highest-impact factors divided by the sum over all 64 factors"
+    },
+    "share_66_2": "the source paper's figure for scGPT (pipeline spec manifold-discovery-extraction-compactification.md lines 26 and 424); not recomputed in this project; same definition is assumed, not verified",
+    "0.973_to_0.123": {
+      "intact_branch_balanced_acc": 0.9728397172822617,
+      "core_only_branch_balanced_acc": 0.12339780489676876,
+      "what": "branch BALANCED ACCURACY of the frozen linear branch probe when the operator keeps ONLY the 4 core factors (the other 60 zeroed) vs all 64; in-sample; not branch-holdout",
+      "n_branch_classes": 12,
+      "branch_classes": [
+        "B_lineage",
+        "NK",
+        "T_lineage",
+        "dendritic",
+        "erythroid",
+        "granulocyte",
+        "lymphoid",
+        "macrophage",
+        "megakaryocyte",
+        "monocyte",
+        "myeloid",
+        "stem"
+      ],
+      "chance_balanced_accuracy": 0.08333333333333333
+    }
+  },
+  "orderings_summary": {
+    "n_sweep_candidates": 18,
+    "sweep_candidates": [
+      "H101",
+      "H102",
+      "H103",
+      "H104",
+      "H105",
+      "H106",
+      "H107",
+      "H108",
+      "H109",
+      "H110",
+      "H111",
+      "H112",
+      "H92",
+      "H93",
+      "H94",
+      "H95",
+      "H96",
+      "H97"
+    ],
+    "catalogue_of_141": "not found in the run; 141 is the topology pipeline's hypothesis count",
+    "H115_H118": "no record in the run",
+    "three_gate_fallback_timeline": {
+      "sweep1_registry_written": "2026-05-05 17:37",
+      "fallback_script_written": "2026-05-05 18:19",
+      "sweep1_reevaluated": "2026-05-05 18:27",
+      "sweep2_script_written": "2026-05-05 18:34",
+      "sweep2_registry_written": "2026-05-05 18:52",
+      "H103_external": "2026-05-05 19:10",
+      "H103_zeroshot_no_script": "2026-05-05 19:11",
+      "H95_external_no_script": "2026-05-05 19:11",
+      "sweep3_registry": "2026-05-07 12:50",
+      "sweep3_script_last_edit_after_registry": "2026-05-07 12:54",
+      "H38_H95_backfill": "2026-05-07 12:51"
+    },
+    "H103_ruler_in_practice": {
+      "internal": {
+        "depth_counts": {
+          "1": 31,
+          "5": 14
+        },
+        "cell_types": [
+          "b cell",
+          "plasma cell"
+        ]
+      },
+      "external": {
+        "depth_counts": {
+          "1": 68,
+          "5": 38
+        },
+        "cell_types": [
+          "b cell",
+          "plasma cell"
+        ]
+      },
+      "zeroshot": {
+        "depth_counts": {
+          "1": 12,
+          "5": 6
+        },
+        "cell_types": [
+          "b cell",
+          "plasma cell"
+        ]
+      }
+    }
+  },
+  "permutation_gate_in_run": "quality_gates_spec.json fixes blocked_permutation_p_max 0.001 with >= 2000 permutations, blocked by donor and tissue, two-sided; no script in scripts/ computes it"
+}

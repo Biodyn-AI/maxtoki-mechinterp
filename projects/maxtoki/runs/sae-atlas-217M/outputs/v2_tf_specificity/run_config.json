@@ -1,0 +1,139 @@
+{
+  "item": "D3 TF specificity of layer-5 SAE features",
+  "device_model_runs": "mps",
+  "torch": "2.11.0",
+  "transformers": "5.5.4",
+  "python": "3.12.9",
+  "platform": "macOS-26.3-arm64-arm-64bit",
+  "model_dir": "<REPO_ROOT>/projects/maxtoki/setup/MaxToki-217M-HF",
+  "model_dtype": "float32",
+  "hooks_v2_sha256": "1ba6fda5ad761b1f82041a7b1397fa9332fa7438e13db955a00d751c4b440f54",
+  "sae_path": "<REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/outputs/phase1/layer_05/sae_final.pt",
+  "sae_sha256": "9405f2f266771a74a13fbcba7a041a706c543271ab4c66101f043e3df65613a6",
+  "layer_site": "input of model.model.layers[5] = hidden_states[5] (hooks_v2.site_module)",
+  "max_len": 2048,
+  "seeds": {
+    "cells": {
+      "catalog": 42,
+      "ctrl": 20261001,
+      "kd": 20261002
+    },
+    "stats": {
+      "stats": 20261003,
+      "fake_per_size": "20261003+1000+n",
+      "power": 20261010,
+      "calibration": 20261102
+    },
+    "calib_check": {
+      "repartition": 20261034,
+      "fakeK_repro": "SEED+4000+n",
+      "calibration_D": 20269891
+    },
+    "gata1_bootstrap": 20263027
+  },
+  "seed_note": "run_config_stats.json lists 'calibration': SEED+99; that seed is not used. The calibration in v2_tf_specificity_stats.py draws with default_rng(SEED + 555) = 20261558.",
+  "cell_ids": "cell_manifest.csv: dataset row index (0-based, h5ad X row) + cell_barcode + gem_group; groups ref/pool/kd/catalog",
+  "dataset_path": "<DATA_ROOT>/biodyn-nmi-paper/src/02_cssi_method/crispri_validation/data/replogle_concat.h5ad",
+  "feature_ids": "all 4,928 features of runs/sae-atlas-217M/outputs/phase1/layer_05/sae_final.pt",
+  "wall_time_per_chunk_extract": [
+    {
+      "start": "2026-10-01T01:45:59",
+      "wall_s": 420.4,
+      "n_cells": 1262,
+      "s_per_cell": 0.32,
+      "stop_reason": "max_minutes"
+    },
+    {
+      "start": "2026-10-01T01:54:31",
+      "wall_s": 450.6,
+      "n_cells": 1001,
+      "s_per_cell": 0.434,
+      "stop_reason": "max_minutes"
+    },
+    {
+      "start": "2026-10-01T02:05:22",
+      "wall_s": 450.8,
+      "n_cells": 1238,
+      "s_per_cell": 0.344,
+      "stop_reason": "max_minutes"
+    },
+    {
+      "start": "2026-10-01T02:17:28",
+      "wall_s": 450.2,
+      "n_cells": 1459,
+      "s_per_cell": 0.295,
+      "stop_reason": "max_minutes"
+    },
+    {
+      "start": "2026-10-01T02:27:46",
+      "wall_s": 450.4,
+      "n_cells": 1392,
+      "s_per_cell": 0.308,
+      "stop_reason": "max_minutes"
+    },
+    {
+      "start": "2026-10-01T02:46:57",
+      "wall_s": 450.4,
+      "n_cells": 1387,
+      "s_per_cell": 0.306,
+      "stop_reason": "max_minutes"
+    },
+    {
+      "start": "2026-10-01T02:55:11",
+      "wall_s": 445.3,
+      "n_cells": 1461,
+      "s_per_cell": 0.29,
+      "stop_reason": "finished"
+    }
+  ],
+  "wall_time_stats_s": 407.7,
+  "wall_time_summary_s": 71.6,
+  "calib_check_runs": [
+    {
+      "parts": "D",
+      "wall_s": 158.6
+    },
+    {
+      "parts": "AC",
+      "wall_s": 18.1
+    },
+    {
+      "parts": "B",
+      "wall_s": 405.6
+    }
+  ],
+  "code_sha256": {
+    "v2_tf_specificity_extract.py": "cdc12b48e407c4e28c11a983844138523f0bbf018f4832decc3ac4c5e56d1e9f",
+    "v2_tf_specificity_taskdata.py": "992db4229594d6e4ad7aeeb3267bd24820f9d6a6255cd54ac3bf84a033c4f394",
+    "v2_tf_specificity_stats.py": "872fd24a23217ac655d73db6eb1e596981dd91491866418df4a3ead41736c69f",
+    "v2_tf_specificity_calib_check.py": "b407ed5ea2adf38428f736769bae36f5c8246a466a13a96166ea5e128a3841ab",
+    "v2_tf_specificity_summary.py": "b7e11ccb951ba3d85d90c2b73264eb653169c13e8ec957caac55bb47a95d4ddf"
+  },
+  "parameters": {
+    "B_fake": 2000,
+    "R_power": 200,
+    "B_cal_per_tf": 250,
+    "cutoffs": [
+      0.5,
+      0.25,
+      0.1,
+      0.05,
+      0.02,
+      0.01,
+      0.0
+    ],
+    "primary_cutoff": 0.5,
+    "q_feature": 0.05,
+    "thresholds": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "min_candidate_targets": {
+      "ChIP": 20,
+      "TRRUST": 5
+    },
+    "n_boot_gata1": 1000
+  }
+}

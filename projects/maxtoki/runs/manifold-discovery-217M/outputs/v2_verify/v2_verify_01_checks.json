@@ -1,0 +1,645 @@
+{
+  "A_frozen_reproduction": {
+    "external": {
+      "trust_k15": 0.8957111496244945,
+      "branch_plain": 0.34644289735383554,
+      "branch_anchor_weighted": 0.33316954647782104,
+      "branches": [
+        [
+          "B_lineage",
+          106,
+          0.37531213116169654
+        ],
+        [
+          "T_lineage",
+          219,
+          0.2885323302622094
+        ],
+        [
+          "erythroid",
+          21,
+          0.5792651202162871
+        ],
+        [
+          "granulocyte",
+          57,
+          0.6012149196515815
+        ],
+        [
+          "monocyte",
+          54,
+          0.07542245129030668
+        ],
+        [
+          "stem",
+          7,
+          0.15891043154093204
+        ]
+      ],
+      "donor_plain": 0.8869530613268931,
+      "global": 0.8821200260296242,
+      "deployed": {
+        "trustworthiness": 0.895688041594454,
+        "branch_holdout": 0.34644275347273074,
+        "donor_holdout": 0.8869530363318562,
+        "global_correlation": 0.8821200321268053
+      },
+      "max_abs_diff_vs_deployed": 2.3108030040464023e-05
+    },
+    "zeroshot": {
+      "trust_k15": 0.8267244525547446,
+      "branch_plain": 0.31683028161845,
+      "branch_anchor_weighted": 0.31124261959226296,
+      "branches": [
+        [
+          "B_lineage",
+          18,
+          0.15975073422574362
+        ],
+        [
+          "T_lineage",
+          56,
+          0.39195438693685986
+        ],
+        [
+          "erythroid",
+          5,
+          0.8528028654224417
+        ],
+        [
+          "granulocyte",
+          23,
+          0.5865209703966504
+        ],
+        [
+          "monocyte",
+          20,
+          -0.18763727456584908
+        ],
+        [
+          "stem",
+          4,
+          0.09759000729485333
+        ]
+      ],
+      "donor_plain": 0.870309332142926,
+      "global": 0.8989749011574495,
+      "deployed": {
+        "trustworthiness": 0.8267244525547446,
+        "branch_holdout": 0.31683028161845,
+        "donor_holdout": 0.8703093321429258,
+        "global_correlation": 0.8989748601586247
+      },
+      "max_abs_diff_vs_deployed": 4.099882477959227e-08
+    },
+    "lung_nonhema": {
+      "trust_k15": 0.7995555555555556,
+      "branch_plain": -0.14687071442603894,
+      "branch_anchor_weighted": -0.02286424711276709,
+      "branches": [
+        [
+          "B_lineage",
+          4,
+          -0.44136741475237473
+        ],
+        [
+          "T_lineage",
+          14,
+          0.1873036281245014
+        ],
+        [
+          "dendritic",
+          5,
+          -0.21320071635561041
+        ],
+        [
+          "granulocyte",
+          10,
+          0.13516528049858717
+        ],
+        [
+          "monocyte",
+          5,
+          -0.4022543496452981
+        ]
+      ],
+      "donor_plain": 0.013397271021981181,
+      "global": -0.017499871255280627,
+      "deployed": {
+        "trustworthiness": 0.7995555555555556,
+        "branch_holdout": -0.14687071442603894,
+        "donor_holdout": 0.01339727102198118,
+        "global_correlation": -0.017499871255280627
+      },
+      "max_abs_diff_vs_deployed": 1.734723475976807e-18
+    }
+  },
+  "B_trust_vs_k_and_n": {
+    "internal_in_sample_saved_head": {
+      "3": 0.8611413591449889,
+      "5": 0.8514380044020543,
+      "8": 0.8353727865796832,
+      "10": 0.8306211921361724,
+      "15": 0.810936329588015,
+      "20": 0.7972486877948309,
+      "30": 0.7863535716804175
+    },
+    "external": {
+      "3": 0.9081185807656396,
+      "5": 0.902106981981982,
+      "8": 0.9001060283687943,
+      "10": 0.9001676646706587,
+      "15": 0.8957111496244945,
+      "20": 0.8907490488732807
+    },
+    "zeroshot": {
+      "3": 0.8973118279569893,
+      "5": 0.884514802631579,
+      "8": 0.8674417372881356,
+      "10": 0.855242214532872,
+      "15": 0.8267244525547446,
+      "20": 0.812746138996139
+    },
+    "lung_nonhema": {
+      "3": 0.912,
+      "5": 0.8714285714285714,
+      "8": 0.841,
+      "10": 0.8252173913043479,
+      "15": 0.7995555555555556,
+      "20": 0.7552820512820513
+    },
+    "internal_saved_head_random_anchor_subsets_k15_40_draws": {
+      "103": {
+        "mean": 0.778889563106796,
+        "sd": 0.02004294646403319,
+        "min": 0.7354854368932039,
+        "max": 0.8162783171521035
+      },
+      "150": {
+        "mean": 0.7848981627296588,
+        "sd": 0.015510911278401915,
+        "min": 0.7574033245844269,
+        "max": 0.8375818022747157
+      },
+      "200": {
+        "mean": 0.7954004708097928,
+        "sd": 0.010609091271043997,
+        "min": 0.7744745762711864,
+        "max": 0.8194877589453861
+      },
+      "250": {
+        "mean": 0.8038903083700439,
+        "sd": 0.006010113647307549,
+        "min": 0.7918249632892804,
+        "max": 0.8190555066079295
+      }
+    },
+    "internal_saved_head_without_TSP2_no_refit_k15": 0.7775566343042071,
+    "internal_saved_head_TSP2_only_no_refit_k15": 0.8018716577540107
+  },
+  "C_copies_in_frozen_bootstrap": {
+    "external": {
+      "n_reps": 2000,
+      "corr_trust_vs_share_copied": 0.3025259752537515,
+      "mean_trust_by_share_copied_tercile": {
+        "low": 0.8899,
+        "mid": 0.8955,
+        "high": 0.8993
+      },
+      "own_masked_vs_saved_max_abs_diff_first40": 6.287626502021748e-05,
+      "copies_masked_percentile_ci": [
+        0.8642223241142611,
+        0.9175500369264052
+      ],
+      "copies_masked_frac_below_0.80": 0.0005,
+      "copies_dropped_percentile_ci": [
+        0.8404291845493562,
+        0.9011114032362151
+      ],
+      "copies_dropped_frac_below_0.80": 0.0005,
+      "copies_dropped_n_distinct_range": [
+        68,
+        589
+      ],
+      "note": "copies dropped = trust on the distinct anchors of each donor resample (a random subset of donors, no copies); it is a different estimator, shown only to see how much copy handling moves the tail"
+    },
+    "zeroshot": {
+      "n_reps": 2000,
+      "corr_trust_vs_share_copied": 0.38109625590221274,
+      "mean_trust_by_share_copied_tercile": {
+        "low": 0.8117,
+        "mid": 0.8287,
+        "high": 0.8393
+      },
+      "own_masked_vs_saved_max_abs_diff_first40": 1.1102230246251565e-16,
+      "copies_masked_percentile_ci": [
+        0.7493285764140816,
+        0.8730179751980003
+      ],
+      "copies_masked_frac_below_0.80": 0.1795,
+      "copies_dropped_percentile_ci": [
+        0.7531794305267571,
+        0.8395464500066696
+      ],
+      "copies_dropped_frac_below_0.80": 0.39056224899598396,
+      "copies_dropped_n_distinct_range": [
+        18,
+        157
+      ],
+      "note": "copies dropped = trust on the distinct anchors of each donor resample (a random subset of donors, no copies); it is a different estimator, shown only to see how much copy handling moves the tail"
+    }
+  },
+  "D_frozen_permutation_own_stream": {
+    "external": {
+      "rebuilt_ruler_equals_saved": true,
+      "observed": 0.8821200260296242,
+      "B": 2000,
+      "null_mean": 0.04290290272222539,
+      "null_max": 0.089116589322851,
+      "n_null_ge_obs": 0,
+      "p_two_sided_doubled": 0.0009995002498750624,
+      "n_blocks": 113,
+      "n_singleton_blocks": 21,
+      "v2_saved": {
+        "observed": 0.8821200321268053,
+        "null_mean": 0.043069892368738066,
+        "null_max": 0.10997302189631965,
+        "p_two_sided_doubled": 0.00019998000199980003,
+        "n_blocks": 113,
+        "n_singleton_blocks": 21
+      }
+    },
+    "zeroshot": {
+      "rebuilt_ruler_equals_saved": true,
+      "observed": 0.8989749011574495,
+      "B": 2000,
+      "null_mean": 0.3190092936425938,
+      "null_max": 0.5669252981624274,
+      "n_null_ge_obs": 0,
+      "p_two_sided_doubled": 0.0009995002498750624,
+      "n_blocks": 92,
+      "n_singleton_blocks": 46,
+      "v2_saved": {
+        "observed": 0.8989748601586247,
+        "null_mean": 0.31922003524435655,
+        "null_max": 0.583873765142322,
+        "p_two_sided_doubled": 0.00019998000199980003,
+        "n_blocks": 92,
+        "n_singleton_blocks": 46
+      }
+    },
+    "lung_nonhema": {
+      "rebuilt_ruler_equals_saved": true,
+      "observed": -0.017499871255280627,
+      "B": 2000,
+      "null_mean": 8.849527756704556e-05,
+      "null_max": 0.15384752457035225,
+      "n_null_ge_obs": 1258,
+      "p_two_sided_doubled": 0.7426286856571714,
+      "n_blocks": 4,
+      "n_singleton_blocks": 0,
+      "v2_saved": {
+        "observed": -0.017499871255280634,
+        "null_mean": -4.677045091835979e-05,
+        "null_max": 0.22645546973223618,
+        "p_two_sided_doubled": 0.7411258874112588,
+        "n_blocks": 4,
+        "n_singleton_blocks": 0
+      }
+    }
+  },
+  "E_internal_permutation": {
+    "B": 2000,
+    "distinct_b": 2000,
+    "observed_1thread": 0.986828358136645,
+    "observed_4threads": 0.986828358136645,
+    "null_mean": 0.9784079560014488,
+    "null_max": 0.9865932375953682,
+    "n_null_ge_obs": 0,
+    "p_two_sided_doubled": 0.0009995002498750624,
+    "smallest_p_possible_with_B": 0.0009995002498750624,
+    "margin_obs_minus_null_max": 0.00023512054127683424,
+    "null_values_within_0.001_of_obs": 250,
+    "perm_threads": [
+      1
+    ],
+    "n_changed_reproduced_for_b0_19": 20,
+    "blocks_internal": 44,
+    "singleton_blocks_internal": 9
+  },
+  "F_internal_bootstrap_structure": {
+    "corr_trust_vs_n_train": 0.7217968816926984,
+    "trust_by_TSP2_copies": {
+      "0": {
+        "n_reps": 107,
+        "mean_trust": 0.7731906914668871,
+        "frac_below_0.80": 0.822429906542056
+      },
+      "1": {
+        "n_reps": 114,
+        "mean_trust": 0.8177071076371869,
+        "frac_below_0.80": 0.12280701754385964
+      },
+      "2": {
+        "n_reps": 58,
+        "mean_trust": 0.8419349322238207,
+        "frac_below_0.80": 0.0
+      },
+      "3": {
+        "n_reps": 18,
+        "mean_trust": 0.8497231034882522,
+        "frac_below_0.80": 0.0
+      },
+      "4": {
+        "n_reps": 2,
+        "mean_trust": 0.8506019756031677,
+        "frac_below_0.80": 0.0
+      },
+      "5": {
+        "n_reps": 1,
+        "mean_trust": 0.8543476898589413,
+        "frac_below_0.80": 0.0
+      }
+    },
+    "share_of_below_0.80_reps_without_TSP2": 0.8627450980392157,
+    "branch_plain_by_n_branches": {
+      "2": {
+        "n_reps": 12,
+        "mean": 0.30761078533459213
+      },
+      "3": {
+        "n_reps": 95,
+        "mean": 0.36666725669094
+      },
+      "6": {
+        "n_reps": 193,
+        "mean": 0.39152182742537184
+      }
+    },
+    "branch_plain_6_branch_reps_only": {
+      "n": 193,
+      "ci": [
+        0.28130299069048853,
+        0.46596469042776845
+      ],
+      "frac_below_0.20": 0.0
+    },
+    "branch_aw_6_branch_reps_only": {
+      "ci": [
+        0.1217134558117808,
+        0.24402590670527832
+      ],
+      "frac_below_0.20": 0.6787564766839378
+    },
+    "lotdo_branch_n_scored": {
+      "TSP12": 6,
+      "TSP15": 6,
+      "TSP17": 6,
+      "TSP2": 3,
+      "TSP20": 6,
+      "TSP28": 6,
+      "TSP3": 6,
+      "TSP30": 6,
+      "TSP4": 6,
+      "TSP5": 6,
+      "TSP9": 6
+    },
+    "lotdo_trust": {
+      "TSP12": 0.8374414744933613,
+      "TSP15": 0.8047291471237575,
+      "TSP17": 0.8084760649978041,
+      "TSP2": 0.7626699029126214,
+      "TSP20": 0.8034021978021978,
+      "TSP28": 0.8236689799427441,
+      "TSP3": 0.8571840542832909,
+      "TSP30": 0.8135936408106219,
+      "TSP4": 0.8146814008466656,
+      "TSP5": 0.8182603968469693,
+      "TSP9": 0.8123647730361512
+    },
+    "lotdo_n_train": {
+      "TSP12": 288,
+      "TSP15": 277,
+      "TSP17": 276,
+      "TSP2": 103,
+      "TSP20": 273,
+      "TSP28": 286,
+      "TSP3": 285,
+      "TSP30": 288,
+      "TSP4": 258,
+      "TSP5": 283,
+      "TSP9": 283
+    },
+    "internal_anchor_weighted_rederived": 0.15346096354532715,
+    "internal_plain_rederived": 0.370403788779688
+  },
+  "G_facts": {
+    "pooled_operator_bytes": 18213888,
+    "L10H6_shape": [
+      154,
+      1232
+    ],
+    "L10H6_bytes": 758912,
+    "sparse_values_bytes": 7744,
+    "compaction_chain_mb": {
+      "full_drift_reference": 18.213888,
+      "compact_top1_L10H6": 0.758912,
+      "rank8_svd": 0.044384,
+      "rank16_svd": 0.088768,
+      "rank32_svd": 0.177536,
+      "rank64_svd": 0.355072,
+      "hard_sparse_16f_60g": 0.007744
+    },
+    "ratio_pooled_over_sparse": 2352.0,
+    "ratio_L10H6_over_sparse": 98.0,
+    "factor_core": [
+      1,
+      4,
+      11,
+      9
+    ],
+    "top4_share_json": 0.18252924533058643,
+    "top4_share_csv": 0.18252924533058645,
+    "factors0to3_share": 0.08949270730753432,
+    "singular_values_descending": true,
+    "branch_bal_acc": [
+      0.9728397172822617,
+      0.12339780489676876
+    ],
+    "dag_nodes": 34,
+    "dag_edges": 35,
+    "cell_type_to_stage_entries": 62,
+    "dag_branches": [
+      "B_lineage",
+      "NK",
+      "T_lineage",
+      "dendritic",
+      "erythroid",
+      "granulocyte",
+      "lymphoid",
+      "macrophage",
+      "megakaryocyte",
+      "monocyte",
+      "myeloid",
+      "stem"
+    ],
+    "internal_branches_present": [
+      "B_lineage",
+      "NK",
+      "T_lineage",
+      "dendritic",
+      "erythroid",
+      "granulocyte",
+      "lymphoid",
+      "macrophage",
+      "megakaryocyte",
+      "monocyte",
+      "myeloid",
+      "stem"
+    ],
+    "ruler_range": {
+      "internal": [
+        0.0,
+        9.0
+      ],
+      "external": [
+        0.0,
+        9.0
+      ],
+      "zeroshot": [
+        0.0,
+        9.0
+      ],
+      "lung_nonhema": [
+        0.0,
+        10.0
+      ]
+    },
+    "cohort": {
+      "internal": {
+        "anchors": 290,
+        "donors": 11,
+        "tissues": 39,
+        "cells_centroided": 11804,
+        "top_donor": "TSP2",
+        "top_donor_share": 0.6448275862068965
+      },
+      "external": {
+        "anchors": 600,
+        "donors": 13,
+        "tissues": 46,
+        "cells_centroided": 12000,
+        "top_donor": "TSP25",
+        "top_donor_share": 0.215
+      },
+      "zeroshot": {
+        "anchors": 160,
+        "donors": 12,
+        "tissues": 45,
+        "cells_centroided": 5120,
+        "top_donor": "TSP14",
+        "top_donor_share": 0.275
+      },
+      "lung_nonhema": {
+        "anchors": 50,
+        "donors": 4,
+        "tissues": 1,
+        "cells_centroided": 1500,
+        "top_donor": "TSP25",
+        "top_donor_share": 0.3
+      },
+      "lung_control": {
+        "anchors": 51,
+        "donors": 4,
+        "tissues": 1,
+        "cells_centroided": 2124,
+        "top_donor": "TSP1",
+        "top_donor_share": 0.29411764705882354
+      }
+    },
+    "zeroshot_donors_subset_external": true,
+    "external_not_in_zeroshot": [
+      "TSP19"
+    ],
+    "internal_external_donor_overlap": [],
+    "zeroshot_tissues_in_external": [
+      45,
+      41
+    ],
+    "lung_nonhema_donors": [
+      "TSP1",
+      "TSP14",
+      "TSP2",
+      "TSP25"
+    ],
+    "lung_nonhema_in_internal": [
+      "TSP2"
+    ],
+    "external_top5_donor_anchors": 496
+  },
+  "H_consistency": {
+    "table_rows": 118,
+    "fig_rows": 20,
+    "external_trust_frozen_boot_n_below_0.80": 1,
+    "external_trust_frozen_boot_min": 0.7989203918322296,
+    "lung_branch_frac_below": 0.988,
+    "value_checks": [
+      {
+        "check": "ext trust value vs own A",
+        "a": 0.895688041594454,
+        "b": 0.8957111496244945,
+        "ok": true
+      },
+      {
+        "check": "ext branch value vs own A",
+        "a": 0.3464427534727307,
+        "b": 0.34644289735383554,
+        "ok": true
+      },
+      {
+        "check": "ext branch_aw vs own A",
+        "a": 0.3331693402868043,
+        "b": 0.33316954647782104,
+        "ok": true
+      },
+      {
+        "check": "zs branch_aw vs own A",
+        "a": 0.3112426195922629,
+        "b": 0.31124261959226296,
+        "ok": true
+      },
+      {
+        "check": "lung branch_aw vs own A",
+        "a": -0.022864247112767,
+        "b": -0.02286424711276709,
+        "ok": true
+      },
+      {
+        "check": "internal aw vs re-derived",
+        "a": 0.1534609635453271,
+        "b": 0.15346096354532715,
+        "ok": true
+      },
+      {
+        "check": "external perm: null values >= observed (v2 B=10,000 vs own B=2,000)",
+        "a": 0.0,
+        "b": 0.0,
+        "ok": true
+      },
+      {
+        "check": "zeroshot perm: null values >= observed (v2 B=10,000 vs own B=2,000)",
+        "a": 0.0,
+        "b": 0.0,
+        "ok": true
+      },
+      {
+        "check": "lung_nonhema perm p vs own stream (B 10,000 vs 2,000)",
+        "a": 0.7411258874112588,
+        "b": 0.7426286856571714,
+        "ok": true
+      }
+    ],
+    "all_value_checks_ok": true
+  },
+  "elapsed_s": 147.85876512527466
+}

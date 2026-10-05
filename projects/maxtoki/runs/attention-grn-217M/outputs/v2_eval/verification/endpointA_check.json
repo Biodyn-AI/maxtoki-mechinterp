@@ -1,0 +1,196 @@
+{
+ "217M_K562": {
+  "n_perturbations": 174,
+  "n_positive_pairs": 9741,
+  "attention_mean": 0.511937906049327,
+  "variance_mean": 0.59566434928783,
+  "gap": 0.08372644323850292,
+  "boot_ci_attention": [
+   0.49777821748847123,
+   0.5261691988462156
+  ],
+  "boot_ci_variance": [
+   0.5812551309500655,
+   0.6118078908320362
+  ],
+  "boot_ci_gap": [
+   0.06139542231831104,
+   0.10654739461993841
+  ],
+  "normal_ci_gap": [
+   0.06144877363029404,
+   0.10600411284671181
+  ],
+  "wilcoxon_p_raw": 9.307480355838002e-11,
+  "n_var_gt_att": 118,
+  "max_abs_diff_vs_agent_per_pert_att": 1.6653345369377348e-16,
+  "max_abs_diff_vs_agent_per_pert_var": 1.1102230246251565e-16,
+  "n_matched_to_agent": 174,
+  "agent_reported": {
+   "n_perturbations": 174,
+   "n_positive_pairs": 9741,
+   "attention_mean_auroc": 0.511937906049327,
+   "attention_ci95": [
+    0.497044998617862,
+    0.5271904124183178
+   ],
+   "variance_mean_auroc": 0.59566434928783,
+   "variance_ci95": [
+    0.5806140245789252,
+    0.6111563549580481
+   ],
+   "gap_variance_minus_attention": 0.08372644323850298,
+   "gap_ci95": [
+    0.06155452621706168,
+    0.10675850785379772
+   ]
+  }
+ },
+ "217M_RPE1": {
+  "n_perturbations": 325,
+  "n_positive_pairs": 48245,
+  "attention_mean": 0.603250578574172,
+  "variance_mean": 0.7664104602215868,
+  "gap": 0.16315988164741474,
+  "boot_ci_attention": [
+   0.594288639269564,
+   0.6125569486361173
+  ],
+  "boot_ci_variance": [
+   0.7568275613031663,
+   0.7763087513138629
+  ],
+  "boot_ci_gap": [
+   0.15344865740447156,
+   0.1732907448252465
+  ],
+  "normal_ci_gap": [
+   0.1531766625788265,
+   0.17314310071600297
+  ],
+  "wilcoxon_p_raw": 2.3233645039193437e-52,
+  "n_var_gt_att": 314,
+  "max_abs_diff_vs_agent_per_pert_att": 2.220446049250313e-16,
+  "max_abs_diff_vs_agent_per_pert_var": 2.220446049250313e-16,
+  "n_matched_to_agent": 325,
+  "agent_reported": {
+   "n_perturbations": 325,
+   "n_positive_pairs": 48245,
+   "attention_mean_auroc": 0.6032505785741721,
+   "attention_ci95": [
+    0.5935090139586289,
+    0.6121348668412233
+   ],
+   "variance_mean_auroc": 0.7664104602215869,
+   "variance_ci95": [
+    0.7565558241182934,
+    0.7764645741386413
+   ],
+   "gap_variance_minus_attention": 0.1631598816474148,
+   "gap_ci95": [
+    0.15358279241518785,
+    0.17355352717800196
+   ]
+  }
+ },
+ "217M_Adamson": {
+  "n_perturbations": 57,
+  "n_positive_pairs": 4438,
+  "attention_mean": 0.5080613401677235,
+  "variance_mean": 0.7122601590661911,
+  "gap": 0.20419881889846747,
+  "boot_ci_attention": [
+   0.4868835161177223,
+   0.5296165179250717
+  ],
+  "boot_ci_variance": [
+   0.698201929571284,
+   0.7272102006777267
+  ],
+  "boot_ci_gap": [
+   0.17444935623743796,
+   0.23378568517661852
+  ],
+  "normal_ci_gap": [
+   0.1741715644747323,
+   0.23422607332220263
+  ],
+  "wilcoxon_p_raw": 6.363774575830323e-11,
+  "n_var_gt_att": 56,
+  "max_abs_diff_vs_agent_per_pert_att": 2.220446049250313e-16,
+  "max_abs_diff_vs_agent_per_pert_var": 1.1102230246251565e-16,
+  "n_matched_to_agent": 57,
+  "agent_reported": {
+   "n_perturbations": 57,
+   "n_positive_pairs": 4438,
+   "attention_mean_auroc": 0.5080613401677235,
+   "attention_ci95": [
+    0.4861821754295725,
+    0.5288579020024232
+   ],
+   "variance_mean_auroc": 0.7122601590661911,
+   "variance_ci95": [
+    0.6970111639300612,
+    0.7274042767525634
+   ],
+   "gap_variance_minus_attention": 0.20419881889846758,
+   "gap_ci95": [
+    0.174473475855033,
+    0.23564064926792658
+   ]
+  }
+ },
+ "1B_K562": {
+  "n_perturbations": 155,
+  "n_positive_pairs": 8587,
+  "attention_mean": 0.5398362497364162,
+  "variance_mean": 0.596080029636302,
+  "gap": 0.056243779899885896,
+  "boot_ci_attention": [
+   0.5234841601802669,
+   0.5559355876632491
+  ],
+  "boot_ci_variance": [
+   0.5803898770547062,
+   0.6115977520101511
+  ],
+  "boot_ci_gap": [
+   0.03408184304032811,
+   0.07927217789364072
+  ],
+  "normal_ci_gap": [
+   0.03267613141985801,
+   0.07981142837991378
+  ],
+  "wilcoxon_p_raw": 5.8303999171029186e-05,
+  "n_var_gt_att": 91,
+  "max_abs_diff_vs_agent_per_pert_att": 1.6653345369377348e-16,
+  "max_abs_diff_vs_agent_per_pert_var": 1.1102230246251565e-16,
+  "n_matched_to_agent": 155,
+  "agent_reported": {
+   "n_perturbations": 155,
+   "n_positive_pairs": 8587,
+   "attention_mean_auroc": 0.5398362497364162,
+   "attention_ci95": [
+    0.5229860278465224,
+    0.5557038965145291
+   ],
+   "variance_mean_auroc": 0.596080029636302,
+   "variance_ci95": [
+    0.5803366275647338,
+    0.6117801415326116
+   ],
+   "gap_variance_minus_attention": 0.056243779899885826,
+   "gap_ci95": [
+    0.032717642700712674,
+    0.08043092978256855
+   ]
+  }
+ },
+ "_method": {
+  "labels": "deployed phase3 full_pair_dataset.csv is_de",
+  "auroc": "sklearn roc_auc_score",
+  "bootstrap": "percentile, over perturbations, 2000 reps, seed 7+run_index",
+  "normal": "mean +/- 1.96 SD/sqrt(n) over perturbations"
+ }
+}

@@ -1,0 +1,216 @@
+{
+  "item": "V3-2 TF specificity of v3 layer-5 SAE features, correctly encoded K562 inputs",
+  "device_model_runs": "mps",
+  "torch": "2.11.0",
+  "transformers": "5.5.4",
+  "python": "3.12.9",
+  "platform": "macOS-26.3-arm64-arm-64bit",
+  "model_dir": "<REPO_ROOT>/projects/maxtoki/setup/MaxToki-217M-HF",
+  "model_dtype": "float32",
+  "attention": "eager",
+  "batch_size_forward": 1,
+  "threads": {
+    "OMP_NUM_THREADS": "4",
+    "torch": 4
+  },
+  "hooks_v2_sha256": "1ba6fda5ad761b1f82041a7b1397fa9332fa7438e13db955a00d751c4b440f54",
+  "sae_path": "<REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/outputs/v3_sae/layer_05/sae_final.pt",
+  "sae_sha256": "aff63f2744474945df50cac688b8fd402f50c8434a56fac5b670051b3cc05a25",
+  "layer_site": "input of model.model.layers[5] = hidden_states[5] (hooks_v2.site_module)",
+  "max_len": 2048,
+  "input_encoding": {
+    "inputs_module": "<REPO_ROOT>/projects/maxtoki/setup/inputs_v3.py",
+    "inputs_v3_sha256": "019e38346748c027a55ce3d32c33c9096f9e60b9434e51e51b1d836a6bfc3707",
+    "dataset": "k562",
+    "file": {
+      "path": "<DATA_ROOT>/biodyn-nmi-paper/src/02_cssi_method/crispri_validation/data/replogle_concat.h5ad",
+      "size": 30010775846,
+      "mtime": "2026-02-14T23:33:00",
+      "sha256_head_tail_16MB": "ef45fd6a820bf4f2795ab091c1f22ac25fb5f39daae1712804d902b9680bb995"
+    },
+    "count_source": "expm1_X",
+    "count_source_description": "expm1(X) (X = log1p(CP10k)), checked per row to be whole-number multiples of the cell's smallest non-zero value; by default divided by that value and rounded (= integer counts up to one per-cell factor; expm1_mode='integer')",
+    "encoding": "counts / row total * 1e4 / Geneformer gc104M gene median, ranked high->low, first max_len-2 genes, <bos>=2 ... <eos>=3 (maxtoki_adapter.tokenize_cell)",
+    "gene_median_pkl": "<DATA_ROOT>/biodyn-nmi-paper/src/02_cssi_method/crispri_validation/data/gene_median_dictionary_gc104M.pkl",
+    "token_dictionary": "<REPO_ROOT>/projects/maxtoki/setup/token_dictionary.json"
+  },
+  "input_encoding_check": {
+    "batches": 368,
+    "cells_checked": 9200,
+    "cells_done": 9200,
+    "all_pass": true,
+    "positions_tie_reordered": 1212,
+    "max_order_violations": 0,
+    "rule": "every cell of every 25-cell batch passes inputs_v3.assert_encoding_batch before its forward pass; a failure raises EncodingError and aborts",
+    "rows_accepted_unit_one": [
+      282850,
+      401789
+    ],
+    "old_v2_tokens_fail_check_on_sample": 100,
+    "verify_12_cells": {
+      "label": "verify 12 cells",
+      "n_checked": 12,
+      "n_cells": 12,
+      "all_pass": true,
+      "max_order_violations": 0,
+      "n_positions_tie_reordered": 0,
+      "check": "inputs_v3.check_encoding (token order == counts/median order; counts count-like)"
+    }
+  },
+  "inputs_v3_note": "inputs_v3.counts_accept_unit_one was ADDED to setup/inputs_v3.py by this item (nothing existing was changed). The first extraction call ran with reader.counts and stopped on row 282850 (expm1(X) already whole numbers) before any forward pass of that batch; 400 cells were done by then with identical code otherwise.",
+  "seeds": {
+    "cells": {
+      "catalog": 42,
+      "ctrl": 20261001,
+      "kd": 20261002
+    },
+    "stats": {
+      "stats": 20261003,
+      "mw_check_fake": 20261004,
+      "swap_mc": 20261006,
+      "fixed_feats": 20261008,
+      "fake_per_size": "20261003+1000+n",
+      "power": "default_rng([20261010, TF index in primary])",
+      "calibration": "default_rng([20261558, TF index in primary])"
+    },
+    "calib_check": {
+      "repartition": "default_rng([20261034, block]) for 4 blocks of 250",
+      "fakeK_repro": "SEED+4000+n",
+      "calibration_D": "default_rng([20269891, TF index in primary list])"
+    },
+    "gata1_bootstrap": 20263027,
+    "power_ci_bootstrap": 20263028,
+    "order_sample": "20261001+77"
+  },
+  "cell_ids": "cell_manifest.csv: dataset row index (0-based, X row of replogle_concat.h5ad) + cell_barcode + gem_group; groups ref/pool/kd/catalog; identical to v2_tf_specificity/cell_manifest.csv (checked)",
+  "dataset_file": {
+    "path": "<DATA_ROOT>/biodyn-nmi-paper/src/02_cssi_method/crispri_validation/data/replogle_concat.h5ad",
+    "size": 30010775846,
+    "mtime": "2026-02-14T23:33:00",
+    "sha256_head_tail_16MB": "ef45fd6a820bf4f2795ab091c1f22ac25fb5f39daae1712804d902b9680bb995"
+  },
+  "input_sha256": {
+    "per_cell_counts_and_tokens_combined": "4310b97b3d64ae644011084e15546155a78c33be23a147be5aa8d19c45f8efa1",
+    "how": "sha256 over 'row:counts_sha256[:16]:tokens_sha256[:16];' for all 9,200 cells (cells/summ_*.npz)",
+    "v3_sae_codes_layer_05": {
+      "codes_layer_05_topk.npz": "614f9e01da44585a199e04bac01c4610f2c9f9c81b4430daaa32f75173cc156c",
+      "gene_names_v3.json": "55f14c20030d95b718b775111b5f48bc5d3281c30782156a6a0b6645f55a413f",
+      "cells.npz": "04cded211a3be521a441e61dc11d8f0bc727cf0531e773ca3ad1abd8cdeb33a3"
+    }
+  },
+  "feature_ids": "all 4,928 features of runs/sae-atlas-217M/outputs/v3_sae/layer_05/sae_final.pt",
+  "wall_time_per_chunk_extract": [
+    {
+      "start": "2026-10-02T03:55:31",
+      "wall_s": 453.1,
+      "n_cells": 2050,
+      "s_per_cell": 0.207,
+      "mem_gb_at_start": 16.94,
+      "stop_reason": "max_minutes"
+    },
+    {
+      "start": "2026-10-02T04:05:41",
+      "wall_s": 452.5,
+      "n_cells": 1975,
+      "s_per_cell": 0.213,
+      "mem_gb_at_start": 13.95,
+      "stop_reason": "max_minutes"
+    },
+    {
+      "start": "2026-10-02T04:15:14",
+      "wall_s": 453.7,
+      "n_cells": 2075,
+      "s_per_cell": 0.21,
+      "mem_gb_at_start": 9.78,
+      "stop_reason": "max_minutes"
+    },
+    {
+      "start": "2026-10-02T04:24:30",
+      "wall_s": 453.5,
+      "n_cells": 2050,
+      "s_per_cell": 0.212,
+      "mem_gb_at_start": 9.3,
+      "stop_reason": "max_minutes"
+    },
+    {
+      "start": "2026-10-02T04:32:28",
+      "wall_s": 146.3,
+      "n_cells": 650,
+      "s_per_cell": 0.215,
+      "mem_gb_at_start": 16.89,
+      "stop_reason": "finished"
+    }
+  ],
+  "extract_first_call_note": "first extract call: 400 cells in about 1.6 min, then stopped (EncodingError, see inputs_v3_note); not in chunks list",
+  "stats_calls": [
+    {
+      "start": "2026-10-02T04:40:33"
+    },
+    {
+      "start": "2026-10-02T04:47:55",
+      "wall_s": 142.3
+    }
+  ],
+  "calib_check_runs": [
+    {
+      "parts": "AC",
+      "wall_s": 12.4,
+      "status": "complete"
+    },
+    {
+      "parts": "B",
+      "wall_s": 168.7,
+      "status": "complete"
+    },
+    {
+      "parts": "D",
+      "wall_s": 81.3,
+      "status": "complete"
+    }
+  ],
+  "verify_wall_s": 8.8,
+  "replay_v2_wall_s": 17.5,
+  "taskdata_wall_s": 16.2,
+  "summary_wall_s": 299.7,
+  "code_sha256": {
+    "v3_tf_specificity_extract.py": "eb7dbfd18f377e32ea9c6f12f923c6ffae3d67b8e58bde0bb42790466e044d2d",
+    "v3_tf_specificity_taskdata.py": "341850b4d06e83b2c450c53a44b2c331682e6fe15e2b693957e2f513abe93349",
+    "v3_tf_specificity_stats.py": "49923e9c7e758992329c7e0ed44b312da34a1021aa14e71581ab9c92fbb3aa4e",
+    "v3_tf_specificity_calib_check.py": "34a5a1b93110728973ae8c0a97799a53f2b8f7c6b0079beb7231a8b59e26afab",
+    "v3_tf_specificity_verify.py": "73cfed23620de9f330dc8be83348b3a7669db2cf984bd47baaebe13d0fc8cbdb",
+    "v3_tf_specificity_replay_v2.py": "b121c7932ac8fe26ae6edaefd93726b129926451ad5d54392d515a7320da2a10",
+    "v3_tf_specificity_summary.py": "8c89c424bde2a110d79aba35e42a7f2825cf3e6050c6c82314618d052fc0e1f6"
+  },
+  "shared_code_sha256": {
+    "setup/inputs_v3.py": "019e38346748c027a55ce3d32c33c9096f9e60b9434e51e51b1d836a6bfc3707",
+    "setup/hooks_v2.py": "1ba6fda5ad761b1f82041a7b1397fa9332fa7438e13db955a00d751c4b440f54",
+    "setup/topk_sae.py": "621e7f350d0939979f3cac2c2cd271aea299231d745f2e28a386da2365922bb9"
+  },
+  "parameters": {
+    "B_fake": 2000,
+    "R_power": 200,
+    "B_cal_per_tf": 250,
+    "cutoffs": [
+      0.5,
+      0.25,
+      0.1,
+      0.05,
+      0.02,
+      0.01,
+      0.0
+    ],
+    "primary_cutoff": 0.5,
+    "q_feature": 0.05,
+    "thresholds": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "min_candidate_targets": {
+      "ChIP": 20,
+      "TRRUST": 5
+    },
+    "n_boot_gata1": 1000
+  }
+}

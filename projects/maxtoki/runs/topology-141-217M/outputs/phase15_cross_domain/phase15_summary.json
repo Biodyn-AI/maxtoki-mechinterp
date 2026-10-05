@@ -1,0 +1,35 @@
+{
+  "immune_vs_external_lung": {
+    "n_layers": 12,
+    "mean_pearson": 0.7403146378885825,
+    "median_pearson": 0.7576406573512335,
+    "min_pearson_z": 6.62466762499189,
+    "mean_pearson_z": 16.782813281548552,
+    "mean_top1": 0.788961038961039,
+    "median_top1": 0.9285714285714286,
+    "best_layer": 0,
+    "verdict": "STRONG cross-tissue invariance (mean Pearson > 0.5)"
+  },
+  "lung_vs_external_lung": {
+    "n_layers": 12,
+    "mean_pearson": 0.7675755028769636,
+    "median_pearson": 0.76381858479874,
+    "min_pearson_z": 12.929530769957106,
+    "mean_pearson_z": 24.348669944895125,
+    "mean_top1": 0.7653769841269841,
+    "median_top1": 0.9851190476190477,
+    "best_layer": 0,
+    "verdict": "STRONG cross-tissue invariance (mean Pearson > 0.5)"
+  },
+  "lung_vs_immune": {
+    "n_layers": 12,
+    "mean_pearson": 0.8614836795269558,
+    "median_pearson": 0.8669233417820245,
+    "min_pearson_z": 8.651829186645964,
+    "mean_pearson_z": 16.08077591612623,
+    "mean_top1": 0.9077777777777779,
+    "median_top1": 0.9733333333333334,
+    "best_layer": 0,
+    "verdict": "STRONG cross-tissue invariance (mean Pearson > 0.5)"
+  }
+}

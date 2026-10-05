@@ -1,0 +1,42 @@
+{
+  "d_model": 1232,
+  "d_sae": 4928,
+  "k": 32,
+  "n_train": 917996,
+  "n_eval": 102000,
+  "n_epochs": 4,
+  "lr": 0.0003,
+  "batch_size": 4096,
+  "variance_explained": 0.8893993829432885,
+  "n_alive": 4903,
+  "n_dead": 25,
+  "dead_rate": 0.005073051948051948,
+  "mean_abs_decoder_cosine": 0.03667087870277464,
+  "total_train_seconds": 99.2520809173584,
+  "training_log": [
+    {
+      "epoch": 0,
+      "loss": 0.13267030368248622,
+      "steps": 225,
+      "seconds": 24.852354764938354
+    },
+    {
+      "epoch": 1,
+      "loss": 0.05555305952827136,
+      "steps": 450,
+      "seconds": 48.34697079658508
+    },
+    {
+      "epoch": 2,
+      "loss": 0.042084910753700466,
+      "steps": 675,
+      "seconds": 71.74859595298767
+    },
+    {
+      "epoch": 3,
+      "loss": 0.03651933282613754,
+      "steps": 900,
+      "seconds": 95.08298969268799
+    }
+  ]
+}

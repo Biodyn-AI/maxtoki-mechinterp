@@ -1,0 +1,59 @@
+{
+  "reproduced": {
+    "variance_explained": 0.6935050236302918,
+    "n_dead": 2430,
+    "n_alive": 2498,
+    "mean_l0_eval": 32.0
+  },
+  "deployed": {
+    "variance_explained": 0.6934377761190331,
+    "n_dead": 2430,
+    "n_alive": 2498
+  },
+  "fve_abs_diff": 6.724751125863904e-05,
+  "epoch_losses_reproduced_vs_deployed": [
+    [
+      0.00031254107074346393,
+      0.00031254141578554277
+    ],
+    [
+      0.0002080532748045193,
+      0.00020805745663690485
+    ],
+    [
+      0.00016499399110519636,
+      0.00016500290224535599
+    ],
+    [
+      0.0001433607031099705,
+      0.0001433769482213797
+    ]
+  ],
+  "epoch_loss_max_rel_diff": 0.00011330350946021389,
+  "weights": {
+    "W_enc_weight": {
+      "max_abs_diff": 0.017080945894122124,
+      "rel_fro_diff": 0.03398201762480793
+    },
+    "W_enc_bias": {
+      "max_abs_diff": 0.00150226429104805,
+      "rel_fro_diff": 0.005136921515394383
+    },
+    "W_dec_weight": {
+      "max_abs_diff": 0.021469897590577602,
+      "rel_fro_diff": 0.05223366654281429
+    },
+    "mu": {
+      "max_abs_diff": 3.725290298461914e-09,
+      "rel_fro_diff": 6.70427875164494e-08
+    }
+  },
+  "deployed_columns_moved_from_init": 2576,
+  "same_index_abs_cos_moved_columns": {
+    "median": 0.9979212372169556,
+    "min": 0.9696455282073495,
+    "share_ge_0.99": 0.9825310559006211
+  },
+  "same_index_abs_cos_unmoved_columns_min": 0.9999998354480322,
+  "init_check": "TopKSAE(1232, 4928, 32) after torch.manual_seed(42) on CPU, as train_sae"
+}

@@ -1,0 +1,44 @@
+{
+  "panel": "external",
+  "n_anchors": 600,
+  "n_bootstrap": 200,
+  "bootstrap_method": "subsample 80% of anchors without replacement",
+  "subsample_size": 480,
+  "observed": {
+    "trustworthiness": 0.895688041594454,
+    "random_holdout": 0.8857749063129917,
+    "donor_holdout": 0.8869530363318562,
+    "branch_holdout": 0.34644275347273074
+  },
+  "bootstrap_ci95": {
+    "trustworthiness": [
+      0.8839212253829322,
+      0.8990762825188428
+    ],
+    "random_holdout": [
+      0.8691897304338337,
+      0.8932631233128029
+    ],
+    "donor_holdout": [
+      0.82228471322582,
+      0.9043238032807642
+    ],
+    "branch_holdout": [
+      0.2697597361791274,
+      0.47978636313627887
+    ]
+  },
+  "bootstrap_mean": {
+    "trustworthiness": 0.891619643508388,
+    "random_holdout": 0.8817078797975904,
+    "donor_holdout": 0.8791555478296524,
+    "branch_holdout": 0.36939667511961877
+  },
+  "all_gates_ci_above_threshold": {
+    "trust_ci_lower_above_0.80": true,
+    "rand_ci_lower_above_0.20": true,
+    "donor_ci_lower_above_0.20": true,
+    "branch_ci_lower_above_0.20": true
+  },
+  "interpretation": "All four gates' 2.5% percentiles remain above their respective thresholds (trust \u2265 0.80, rand/donor/branch \u2265 0.20). The H65 manifold's external-panel pass is robust to anchor resampling: trust 95% CI [0.884, 0.899], branch 95% CI [0.270, 0.480]."
+}

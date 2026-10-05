@@ -1,0 +1,146 @@
+{
+ "files": {
+  "MaxToki-217M-HF/model.safetensors": {
+   "path": "<REPO_ROOT>/projects/maxtoki/setup/MaxToki-217M-HF/model.safetensors",
+   "size": 867797760,
+   "sha256": "9da1fbf8cc489486d158d4653a14e3f44ac49c75a8e1480566eab0e9f99cf898",
+   "seconds": 1.8,
+   "equals_original_agent_hash": true
+  },
+  "MaxToki-1B-HF/model.safetensors": {
+   "path": "<REPO_ROOT>/projects/maxtoki/setup/MaxToki-1B-HF/model.safetensors",
+   "size": 4196167128,
+   "sha256": "96c6c8f9d61732c9bedfc37a9cfd937359e6ce0bfa860526646d101815a242e6",
+   "seconds": 8.5,
+   "equals_original_agent_hash": true
+  },
+  "MaxToki-217M-HF/config.json": {
+   "path": "<REPO_ROOT>/projects/maxtoki/setup/MaxToki-217M-HF/config.json",
+   "size": 676,
+   "sha256": "a4effbdf27969b7cc4d6cce34fc24b3f2134886946a19e7999c3ebd08babf9bd",
+   "seconds": 0.0,
+   "equals_original_agent_hash": true,
+   "git_blob_sha1": "d55a18cd382c0eff3c9fca48bd88df7c356e2f34"
+  },
+  "MaxToki-1B-HF/config.json": {
+   "path": "<REPO_ROOT>/projects/maxtoki/setup/MaxToki-1B-HF/config.json",
+   "size": 823,
+   "sha256": "23358e6663b32e796dec2818a1d9cff97eb9e150d259850ba26b1bf2144eba9e",
+   "seconds": 0.0,
+   "equals_original_agent_hash": true,
+   "git_blob_sha1": "7b0e9401b2fb5c1a210fb1662b9ed3846308ab89"
+  },
+  "MaxToki-217M-HF/generation_config.json": {
+   "path": "<REPO_ROOT>/projects/maxtoki/setup/MaxToki-217M-HF/generation_config.json",
+   "size": 132,
+   "sha256": "3ecb636c810f6805b0534c7e8f6df2c53788726ec81b4b6372de0fed944d458e",
+   "seconds": 0.0,
+   "equals_original_agent_hash": true,
+   "git_blob_sha1": "f718cbb634ad6adf7cee66f5801a429128fef391"
+  },
+  "MaxToki-1B-HF/generation_config.json": {
+   "path": "<REPO_ROOT>/projects/maxtoki/setup/MaxToki-1B-HF/generation_config.json",
+   "size": 111,
+   "sha256": "b10a73d1785bb92ee3ff879dc114a6cb3adcf84caa3a4d31973b301cf059ddec",
+   "seconds": 0.0,
+   "equals_original_agent_hash": true,
+   "git_blob_sha1": "9142117462ac69b2ff300000fe68d619fa7674ab"
+  },
+  "Geneformer-V2-316M/model.safetensors": {
+   "path": "<HF_CACHE>/hub/models--ctheodoris--Geneformer/snapshots/05fcbeb8a27d49e0a7a4349152202ee2c1cbfd28/Geneformer-V2-316M/model.safetensors",
+   "size": 1265455076,
+   "sha256": "965ceccea81953d362081ef3843560a0e4fef88d396c28017881f1e94b1246f3",
+   "seconds": 1.3,
+   "equals_original_agent_hash": true
+  },
+  "replogle_concat.h5ad": {
+   "path": "<DATA_ROOT>/biodyn-nmi-paper/src/02_cssi_method/crispri_validation/data/replogle_concat.h5ad",
+   "size": 30010775846,
+   "sha256": "a7992a6109d589f2d49c2eaccff45a9f860418af23125d41b80d8e3929a33d56",
+   "seconds": 60.7,
+   "equals_original_agent_hash": true
+  },
+  "ReplogleWeissman2022_rpe1.h5ad": {
+   "path": "<DATA_ROOT>/biodyn-nmi-paper/results/round13_non_k562_replication/data/ReplogleWeissman2022_rpe1.h5ad",
+   "size": 1236886900,
+   "sha256": "12d6a0cf9378c4f09411e27f0ce07b59f1d97731bd576d6fadf112f6f088d1a4",
+   "seconds": 4.5,
+   "equals_original_agent_hash": true,
+   "md5": "cc7f1ec50aeb3a3e1b4a6cfa713d80fa"
+  },
+  "adamson perturb_processed_symbols.h5ad": {
+   "path": "<DATA_ROOT>/biodyn-work/single_cell_mechinterp/data/perturb/adamson/perturb_processed_symbols.h5ad",
+   "size": 601696516,
+   "sha256": "3b816440acd5f02e55e63df83e697d9e80f3787f5e9056bf965c66acad5d7fc2",
+   "seconds": 1.2,
+   "equals_original_agent_hash": true
+  }
+ },
+ "maxtoki_revisions_with_identical_files": {
+  "1523f7c2": {
+   "MaxToki-1B-HF": "folder absent at this revision",
+   "MaxToki-217M-HF": {
+    "MaxToki-217M-HF/config.json": true,
+    "MaxToki-217M-HF/generation_config.json": true,
+    "MaxToki-217M-HF/model.safetensors": true
+   }
+  },
+  "21aa7b7f": {
+   "MaxToki-1B-HF": {
+    "MaxToki-1B-HF/config.json": true,
+    "MaxToki-1B-HF/generation_config.json": true,
+    "MaxToki-1B-HF/model.safetensors": true
+   },
+   "MaxToki-217M-HF": {
+    "MaxToki-217M-HF/config.json": true,
+    "MaxToki-217M-HF/generation_config.json": true,
+    "MaxToki-217M-HF/model.safetensors": true
+   }
+  },
+  "e7041eb7": {
+   "MaxToki-1B-HF": {
+    "MaxToki-1B-HF/config.json": true,
+    "MaxToki-1B-HF/generation_config.json": true,
+    "MaxToki-1B-HF/model.safetensors": true
+   },
+   "MaxToki-217M-HF": {
+    "MaxToki-217M-HF/config.json": true,
+    "MaxToki-217M-HF/generation_config.json": true,
+    "MaxToki-217M-HF/model.safetensors": true
+   }
+  },
+  "main": {
+   "MaxToki-1B-HF": {
+    "MaxToki-1B-HF/config.json": true,
+    "MaxToki-1B-HF/generation_config.json": true,
+    "MaxToki-1B-HF/model.safetensors": true
+   },
+   "MaxToki-217M-HF": {
+    "MaxToki-217M-HF/config.json": true,
+    "MaxToki-217M-HF/generation_config.json": true,
+    "MaxToki-217M-HF/model.safetensors": true
+   }
+  }
+ },
+ "geneformer_05fcbeb8_match": true,
+ "replogle_concat_matches_state_replogle_main": true,
+ "rpe1_zenodo_13350497": {
+  "checksum": "md5:cc7f1ec50aeb3a3e1b4a6cfa713d80fa",
+  "size": 1236886900,
+  "match": true
+ },
+ "inputs_sha256": {
+  "hf_geneformer_tree_05fcbeb8_V2-316M.json": "5c54e26c7af397b470592de609c38f9c0b388056cc90171dd57219b6b4bdefc7",
+  "hf_maxtoki_commits_main.json": "28ed3e723f7fb88ced093cd0acdd410f2378d0078a2f89bee69857a77fc66adc",
+  "hf_maxtoki_tree_1523f7c2_MaxToki-1B-HF.json": "4ba64b901c1e7ac6f9e786ed2bc87deaf4d327f44c86d1f7b6e4a3bf29f98530",
+  "hf_maxtoki_tree_1523f7c2_MaxToki-217M-HF.json": "ad385b73c8709fc73a4d6c0cd6f1afafdfc23f0bd7d15c8e095a16ff360131ee",
+  "hf_maxtoki_tree_21aa7b7f_MaxToki-1B-HF.json": "e90d5b08df54f2917c8f9bc26d6e800061a5d7f521851c10d31052a263605807",
+  "hf_maxtoki_tree_21aa7b7f_MaxToki-217M-HF.json": "ad385b73c8709fc73a4d6c0cd6f1afafdfc23f0bd7d15c8e095a16ff360131ee",
+  "hf_maxtoki_tree_e7041eb7_MaxToki-1B-HF.json": "e90d5b08df54f2917c8f9bc26d6e800061a5d7f521851c10d31052a263605807",
+  "hf_maxtoki_tree_e7041eb7_MaxToki-217M-HF.json": "ad385b73c8709fc73a4d6c0cd6f1afafdfc23f0bd7d15c8e095a16ff360131ee",
+  "hf_maxtoki_tree_main_MaxToki-1B-HF.json": "e90d5b08df54f2917c8f9bc26d6e800061a5d7f521851c10d31052a263605807",
+  "hf_maxtoki_tree_main_MaxToki-217M-HF.json": "ad385b73c8709fc73a4d6c0cd6f1afafdfc23f0bd7d15c8e095a16ff360131ee",
+  "hf_state_replogle_tree_main.json": "9f1291ed1565e0fbe34fef525fd9a1dbe1bfe55e846d92050bb296c9fbee06e4",
+  "zenodo_record_13350497.json": "2bd71db2619789f318acaf012a280d36aaafe889dd42df520b808143d0a5d8ee"
+ }
+}

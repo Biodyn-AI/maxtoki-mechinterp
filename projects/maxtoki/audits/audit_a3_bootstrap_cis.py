@@ -24,7 +24,7 @@ import numpy as np
 import pandas as pd
 from scipy import stats
 
-PROJ = Path(".")
+PROJ = Path("<REPO_ROOT>/projects/maxtoki")
 OUT = PROJ / "audits"
 N_BOOT = 10_000
 SEED = 42

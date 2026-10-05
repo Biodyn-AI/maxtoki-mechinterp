@@ -1,0 +1,101 @@
+======================================================================
+PHASES 3 + 4 + 5 — biological encoding on SV axes
+======================================================================
+  sv shape: (12, 1500, 7)  n_nz=1500  layers=12  topk_sv=7
+
+[Phase 3] SV1 vs GO Cellular Component...
+  rows: 96  significant (p_bh<0.05): 10
+                              term  layer         z  observed_rate  null_mean     p_bh
+             ER_lumen (GO:0005788)      8 -0.059147       0.062500   0.065125 1.000000
+              cytosol (GO:0005829)      0  1.266050       0.078571   0.069414 0.670659
+endoplasmic_reticulum (GO:0005783)      7  1.278017       0.096296   0.069822 0.692768
+  extracellular_space (GO:0005615)      2  5.211624       0.181102   0.067969 0.019162
+ mitochondrial_matrix (GO:0005759)      0  0.092420       0.069767   0.066233 1.000000
+        mitochondrion (GO:0005739)      6  1.881561       0.103261   0.068880 0.332136
+              nucleus (GO:0005634)      7  1.063818       0.075227   0.068514 0.692768
+      plasma_membrane (GO:0005886)     11  4.666788       0.123249   0.069087 0.019162
+
+[Phase 4] SV2-SV4 vs STRING PPI...
+  STRING pairs_700: 2747  pairs_900: 1675
+  in-vocab after mapping: 700=844  900=506
+  Axis summary on STRING pairs_700:
+    SV1: mean_z=+0.36  significant_layers=0/12
+    SV2: mean_z=+2.62  significant_layers=1/12
+    SV3: mean_z=+3.12  significant_layers=3/12
+    SV4: mean_z=+1.78  significant_layers=0/12
+    SV5: mean_z=+1.24  significant_layers=1/12
+    SV6: mean_z=+1.72  significant_layers=0/12
+    SV7: mean_z=+1.98  significant_layers=2/12
+
+  2-point confidence gradient (700 vs 900):
+    SV2 pairs_700: mean z = +2.625
+    SV2 pairs_900: mean z = +2.464
+    Δ (higher confidence should give larger z): -0.161
+
+[Phase 5] SV5-SV7 — TRRUST + TF-vs-target + edge AUROC...
+  TFs in non-zero HVG: 343  targets (total): 787  target-only: 595
+ layer  auc_joint_SV2_SV7  auc_SV2_SV4  auc_SV5_SV7  null_mean   perm_p
+     0           0.595938     0.529912     0.585849   0.543601 0.009901
+     1           0.558527     0.522145     0.547875   0.542948 0.099010
+     2           0.552586     0.548438     0.510143   0.543550 0.267327
+     3           0.537090     0.539616     0.503917   0.545805 0.673267
+     4           0.534439     0.528099     0.504025   0.544042 0.752475
+     5           0.532097     0.525379     0.503080   0.544580 0.782178
+     6           0.609614     0.603658     0.508788   0.541559 0.009901
+     7           0.573413     0.564338     0.516765   0.539704 0.019802
+     8           0.566639     0.569787     0.517106   0.540221 0.009901
+     9           0.558262     0.560252     0.524718   0.541500 0.128713
+    10           0.561580     0.558640     0.524914   0.541743 0.089109
+    11           0.619742     0.603293     0.551393   0.539255 0.009901
+
+[Phase 5b] Edge-level TF→target AUROC (SV5-SV7 cosine)...
+  TRRUST positive edges in-vocab: 1997
+  TF-matched negatives: 6976
+ layer  auc_SV5_SV7_edge  auc_SV2_SV4_edge  null_mean   perm_p
+     0          0.489955          0.511723   0.500723 0.910891
+     1          0.507149          0.515190   0.500482 0.198020
+     2          0.517588          0.505173   0.500538 0.009901
+     3          0.503105          0.507131   0.499055 0.336634
+     4          0.487444          0.505959   0.499744 0.960396
+     5          0.487124          0.509309   0.500217 0.970297
+     6          0.497143          0.525481   0.500702 0.702970
+     7          0.492596          0.538678   0.499836 0.831683
+     8          0.504942          0.540807   0.499480 0.257426
+     9          0.508533          0.553558   0.499588 0.128713
+    10          0.514192          0.545844   0.499500 0.009901
+    11          0.517325          0.541656   0.500264 0.039604
+
+  SV5-SV7 edge-AUROC vs depth: ρ=+0.350  p=2.65e-01
+
+[Phase 5c] Repression vs activation edges...
+  repression edges: 445  activation edges: 663
+ layer       mode      auc  n_pos
+     0 repression 0.486317    445
+     0 activation 0.492468    663
+     1 repression 0.512694    445
+     1 activation 0.494892    663
+     2 repression 0.516943    445
+     2 activation 0.502934    663
+     3 repression 0.511215    445
+     3 activation 0.485480    663
+     4 repression 0.471626    445
+     4 activation 0.488745    663
+     5 repression 0.473001    445
+     5 activation 0.492709    663
+     6 repression 0.490687    445
+     6 activation 0.510479    663
+     7 repression 0.493512    445
+     7 activation 0.495257    663
+     8 repression 0.506072    445
+     8 activation 0.507976    663
+     9 repression 0.506318    445
+     9 activation 0.513835    663
+    10 repression 0.518021    445
+    10 activation 0.510174    663
+    11 repression 0.524369    445
+    11 activation 0.516492    663
+
+PHASES 3-5 COMPLETE
+  phase3: <REPO_ROOT>/projects/maxtoki/runs/spectral-geometry-217M/outputs/phase3
+  phase4: <REPO_ROOT>/projects/maxtoki/runs/spectral-geometry-217M/outputs/phase4
+  phase5: <REPO_ROOT>/projects/maxtoki/runs/spectral-geometry-217M/outputs/phase5

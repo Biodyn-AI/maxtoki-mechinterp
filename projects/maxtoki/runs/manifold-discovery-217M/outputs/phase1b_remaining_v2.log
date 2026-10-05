@@ -1,0 +1,17 @@
+=== panel: zeroshot  start: 2026-05-04T01:33:19+02:00 ===
+======================================================================
+PHASE 1B+C — panel=zeroshot  device=mps
+======================================================================
+  cells: 7796  anchors: 160  L_cap: 4096
+  seq_len  median: 2096  mean: 2261.1  max: 4096
+
+[1] Loading MaxToki-217M on mps...
+  n_layers=11 hidden=1232  loaded in 3.9s
+
+[2] Running forward passes (mean-pool hidden states across gene-token positions)...
+    cell 155/7796  elapsed 117.3s  eta 5783.9s
+    cell 310/7796  elapsed 212.8s  eta 5138.3s
+    cell 465/7796  elapsed 460.0s  eta 7252.8s
+    cell 620/7796  elapsed 1659.1s  eta 19203.2s
+projects/maxtoki/runs/manifold-discovery-217M/scripts/phase1bc_run_remaining_panels.sh: line 12:  7949 Terminated: 15          $PY -u "$SCRIPT" "$panel" 2>&1
+      7950 Done                    | tee "$LOGDIR/phase1b_$panel.log"

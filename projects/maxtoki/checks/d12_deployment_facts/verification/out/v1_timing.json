@@ -1,0 +1,190 @@
+{
+ "whole": {
+  "n_files": 2192,
+  "n_excluded_after_cutoff": 288,
+  "n_excluded_born_before_cutoff": 0,
+  "first": [
+   "2026-04-15 23:59:54",
+   "setup/token_dictionary.json"
+  ],
+  "last": [
+   "2026-05-07 21:10:46",
+   "audits/audit-20260507-completion-v2.md"
+  ],
+  "span_days": 21.883,
+  "n_active_days": 11,
+  "active_days": [
+   "2026-04-15",
+   "2026-04-16",
+   "2026-04-17",
+   "2026-04-18",
+   "2026-04-19",
+   "2026-04-20",
+   "2026-04-23",
+   "2026-05-03",
+   "2026-05-04",
+   "2026-05-05",
+   "2026-05-07"
+  ],
+  "n_clock_hours": 66
+ },
+ "log_windows": {
+  "n_logs": 113,
+  "per_pipeline_h": {
+   "spectral-geometry-217M": 3.63,
+   "attention-grn-217M": 8.83,
+   "topology-141-217M": 2.59,
+   "sae-atlas-217M": 10.1,
+   "circuit-tracing-217M": 4.17,
+   "exhaustive-mapping-217M": 7.72,
+   "manifold-discovery-217M": 15.21,
+   "longevity-mechinterp-217M": 1.54
+  },
+  "sum_over_pipelines_h": 53.79,
+  "overlap_aware_h": 47.75,
+  "hours_by_n_running": {
+   "1": 44.35,
+   "2": 1.46,
+   "3": 1.24,
+   "4": 0.7
+  },
+  "hours_with_2_or_more": 3.4,
+  "first_second_with_4": "2026-05-05 16:18:28",
+  "longest_single_log_windows": [
+   {
+    "pipeline": "exhaustive-mapping-217M",
+    "log": "runs/exhaustive-mapping-217M/outputs/experiment1.log",
+    "start": "2026-04-20 14:18:31",
+    "end": "2026-04-20 19:51:10",
+    "h": 5.544
+   },
+   {
+    "pipeline": "circuit-tracing-217M",
+    "log": "runs/circuit-tracing-217M/outputs/circuit_trace.log",
+    "start": "2026-04-19 22:24:22",
+    "end": "2026-04-20 02:27:21",
+    "h": 4.05
+   },
+   {
+    "pipeline": "manifold-discovery-217M",
+    "log": "runs/manifold-discovery-217M/outputs/phase1b_lung_external_chain.log",
+    "start": "2026-05-04 03:16:57",
+    "end": "2026-05-04 07:18:13",
+    "h": 4.021
+   },
+   {
+    "pipeline": "manifold-discovery-217M",
+    "log": "runs/manifold-discovery-217M/outputs/phase1b_external_v3.log",
+    "start": "2026-05-04 03:43:41",
+    "end": "2026-05-04 07:16:58",
+    "h": 3.555
+   },
+   {
+    "pipeline": "sae-atlas-217M",
+    "log": "runs/sae-atlas-217M/outputs/phases2_to_8.log",
+    "start": "2026-04-17 16:09:07",
+    "end": "2026-04-17 19:29:36",
+    "h": 3.341
+   },
+   {
+    "pipeline": "manifold-discovery-217M",
+    "log": "runs/manifold-discovery-217M/outputs/phase1b_internal.log",
+    "start": "2026-05-03 20:34:29",
+    "end": "2026-05-03 23:37:42",
+    "h": 3.054
+   },
+   {
+    "pipeline": "attention-grn-217M",
+    "log": "runs/attention-grn-217M/outputs/phase0_k562_1b.log",
+    "start": "2026-04-16 15:45:49",
+    "end": "2026-04-16 18:22:46",
+    "h": 2.616
+   },
+   {
+    "pipeline": "manifold-discovery-217M",
+    "log": "runs/manifold-discovery-217M/outputs/phase1b_zeroshot.log",
+    "start": "2026-05-03 23:39:19",
+    "end": "2026-05-04 02:01:11",
+    "h": 2.364
+   }
+  ],
+  "note": "second-level occupancy: each log window [birth, mtime) is marked second by second; union = number of marked seconds",
+  "work_blocks_gap3h_h": {
+   "spectral-geometry-217M": 3.74,
+   "attention-grn-217M": 9.62,
+   "topology-141-217M": 7.06,
+   "sae-atlas-217M": 15.87,
+   "circuit-tracing-217M": 7.4,
+   "exhaustive-mapping-217M": 9.07,
+   "manifold-discovery-217M": 20.69,
+   "longevity-mechinterp-217M": 1.59
+  }
+ },
+ "audit": {
+  "session_prompt_times_may7": [
+   "2026-05-07 11:33:38",
+   "2026-05-07 11:35:42",
+   "2026-05-07 11:38:36",
+   "2026-05-07 11:40:32",
+   "2026-05-07 15:55:24",
+   "2026-05-07 16:49:46",
+   "2026-05-07 17:30:17",
+   "2026-05-07 17:50:00",
+   "2026-05-07 18:47:31",
+   "2026-05-07 18:48:59",
+   "2026-05-07 23:31:08"
+  ],
+  "n_prompts_session_may7": 11,
+  "spec_file": "2026-05-07 16:57:38",
+  "report_file": "2026-05-07 17:38:25",
+  "completion_v1": "2026-05-07 18:09:25",
+  "completion_v2": "2026-05-07 21:10:46",
+  "used_prompts": {
+   "spec_request": "2026-05-07 16:49:46",
+   "apply": "2026-05-07 17:30:17",
+   "fix": "2026-05-07 17:50:00",
+   "done_q": "2026-05-07 18:47:31",
+   "fix2": "2026-05-07 18:48:59"
+  },
+  "spec_min": 7.9,
+  "sweep_min": 8.1,
+  "round1_min": 19.4,
+  "round2_min": 141.8,
+  "total_from_apply_h": 3.675,
+  "total_from_spec_request_h": 4.35
+ },
+ "prompts": {
+  "history_sha256": "1aa095fd1389c86b6573ce4cf66c86b6102c2bd88b0b4302a8adb922e2bc2ccb",
+  "n_rows": 2304,
+  "n_same_folder_in_window": 127,
+  "n_maxtoki_sessions": 97,
+  "per_session": {
+   "17b19da0": 14,
+   "965ec1c8": 35,
+   "8fb71b84": 17,
+   "3af9282c": 2,
+   "8be46b0f": 3,
+   "b9b1ea22": 1,
+   "2a9284b9": 11,
+   "58d03bad": 2,
+   "5137b56d": 3,
+   "862b8d39": 9
+  },
+  "per_day_all_maxtoki_sessions": {
+   "2026-04-15": 22,
+   "2026-04-16": 3,
+   "2026-04-17": 8,
+   "2026-04-18": 1,
+   "2026-04-19": 11,
+   "2026-04-20": 4,
+   "2026-04-23": 10,
+   "2026-04-24": 1,
+   "2026-05-03": 7,
+   "2026-05-05": 5,
+   "2026-05-07": 19,
+   "2026-05-08": 6
+  },
+  "n_session_17b19da0": 14,
+  "n_session_862b8d39": 9
+ }
+}

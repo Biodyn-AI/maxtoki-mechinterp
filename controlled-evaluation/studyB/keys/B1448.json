@@ -1,0 +1,43 @@
+{
+ "opaque_id": "B1448",
+ "pair_id": "P01",
+ "status": "clean",
+ "twin_id": "B1131",
+ "source_project": "biotensor / codebase/route_branchpoint (branch-point curvature across SCFMs)",
+ "analysis": "Significance test of full-space branch-point curvature (CV R2 of a degree-2 poly-kernel ridge minus a linear-kernel ridge, predicting diffusion pseudotime) in Geneformer V2-316M and scGPT whole-human layer-11 cell embeddings, lung/gut/pancreas, 1,500 cells each, 200 null draws, BH across 6 cells.",
+ "error": null,
+ "detection_rule": "Clean item: no documented error. Any finding that asserts a load-bearing error is a false alarm unless a verifier shows it by running code on the package.",
+ "known_true_facts": [
+  "The curvature values are the same in both twins: geneformer lung +0.0180, scgpt lung +0.0076, geneformer gut +0.0407, scgpt gut +0.0174, geneformer pancreas +0.0021, scgpt pancreas +0.0024.",
+  "Linear CV R2 ranges 0.759 (geneformer gut) to 0.973 (scgpt pancreas); both mouse pancreas cells have linear R2 >= 0.945 (0.9455, 0.9726).",
+  "The p-value formula (count(null >= real) + 1) / (N_NULL + 1) is standard; with N_NULL = 200 the smallest possible p is 1/201 = 0.005.",
+  "bh_fdr implements Benjamini-Hochberg correctly (step-up with cumulative minimum from the largest p).",
+  "The FoldSolver eigendecomposition solver gives the same predictions as ordinary kernel ridge; the curvature matches the original source script on the same cells.",
+  "Lin and poly decoders use the same CV folds and the same alpha grid; null draws are scored with the same folds and the same max-over-alpha selection, so selection optimism is applied equally to real and null.",
+  "The degree-2 kernel (K_lin)^2 = (Xz.Xz^T/d + 1)^2 contains the linear features, so the poly decoder nests the linear one.",
+  "The bootstrap resamples cells from fixed out-of-fold predictions; it does not refit and is not a significance test against chance.",
+  "Geneformer pancreas bootstrap lower bound is +0.00002 and 2.4% of resamples are <= 0.",
+  "Each package runs in about 1.5-2.5 minutes on CPU with < 0.5 GB memory and reproduces outputs/ exactly.",
+  "The null is a blocked permutation of pseudotime (sort by pseudotime, blocks of 50, shuffle block order). Null mean is positive in all 6 cells (+0.0006 to +0.0164).",
+  "Only geneformer gut is significant: p 0.005, q 0.030, z +5.73. The other five have q >= 0.338.",
+  "scgpt lung (z -0.65), geneformer pancreas (z -0.22) and scgpt pancreas (z -0.68) have curvature below the null mean.",
+  "Under the blocked permutation the linear R2 drops far below the real one (checked: about 0.04 for geneformer gut, 0.13 for scgpt lung, 0.07 for geneformer pancreas, mean of the first 10 null draws); the SUMMARY states this headroom mismatch as a caveat.",
+  "The SUMMARY makes no species claim and says species and headroom cannot be separated; this is accurate."
+ ],
+ "possible_false_alarms": [
+  "StandardScaler is fit on all cells before cross-validation. It does not use y and is unsupervised, so it does not leak pseudotime; not an error.",
+  "Alpha is chosen as the max CV R2 on the same folds (no nested CV). This biases both decoders and every null draw the same way, so it does not explain the result; at most a minor note.",
+  "The bootstrap interval holds the fitted decoders fixed. This is stated in README/SUMMARY and is a limitation, not the documented error.",
+  "Only 1,500 cells per tissue and one layer (11); the source analysis used up to 3,000 cells. Subsampling is documented and does not change the direction of any conclusion.",
+  "Pseudotime is computed upstream from expression (dpt), not from the embedding; this is the intended target, not circular.",
+  "Mouse genes mapped to human symbols by uppercasing for the pancreas data; a known approximation, documented, not the error.",
+  "scGPT input uses 51-bin quantile binning; this matches scGPT's pretraining and is correct.",
+  "Thread environment variables are set to 1 inside the script; this only affects speed.",
+  "DISPUTED, NOT a safe false alarm (see P01_VERIFICATION.md). Blocked permutation with block = 50 keeps label structure tied to the embedding: per-draw corr(real, permuted pseudotime) has mean +0.02 to +0.03 but SD about 0.18 (mean |r| about 0.15), linear CV R2 under the null is 0.04-0.13 rather than about 0, and the permuted label is a scrambled nonlinear function of decodable pseudotime, so part of the positive null mean is real nonlinear signal, not chance. Linear-truth nulls that keep the real fitted direction (residual permutation or wild bootstrap) give negative null means and 6/6 cells significant (BH q <= 0.01), so this criticism CAN change the 1/6 verdict.",
+  "With 6 tests and N_NULL = 200, a cell that is alone at the p floor gets BH q = 6 x 0.005 = 0.030; this is a power limit, not an error.",
+  "Bootstrap CIs clearly exclude zero in five cells (geneformer pancreas lower bound is +0.00002, just above zero) while the null test is significant in only one; this is not a contradiction (the bootstrap measures sampling stability, not chance gain), and the SUMMARY says so."
+ ],
+ "other_real_issues": [
+  "VERIFICATION PROBLEM (see P01_VERIFICATION.md): the 1/6 verdict depends on the blocked-permutation null, which is not a clean 'no relation' null here. The permuted label is a scrambled nonlinear function of pseudotime, which the embedding decodes, so the null keeps linear CV R2 0.04-0.13 and part of its positive null mean (+0.0006 to +0.0164) is real nonlinear signal, not chance gain. Linear-truth nulls that keep the real fitted linear direction (in-sample linear fit plus real residuals, permuted or sign-flipped, 200 draws; keys/P01_verify_linear_null.py) give negative null means and 6/6 cells significant (BH q <= 0.010). So 'the curvature is not general' and 'the polynomial decoder gains R2 by chance' are not established. A finding that says this is CORRECT; do not count it as a false alarm."
+ ]
+}

@@ -1,0 +1,314 @@
+{
+  "threads_default": 6,
+  "head_fit_seconds_default_threads": 27.22172498703003,
+  "refit_vs_saved_maxabs_default_threads": {
+    "b": 0.0,
+    "log_beta": 0.0,
+    "W.weight": 0.0
+  },
+  "head_fit_seconds_1_thread": 16.141727924346924,
+  "refit_vs_saved_maxabs_1_thread": {
+    "b": 0.0,
+    "log_beta": 0.0,
+    "W.weight": 0.0
+  },
+  "external": {
+    "n_anchors": 600,
+    "n_donors": 13,
+    "n_tissues": 46,
+    "trust_sklearn_k15": 0.895688041594454,
+    "trust_masked_k15": 0.8956878490275371,
+    "random_holdout_frozen": 0.8857749063129917,
+    "donor_within_mean": 0.8869530363318562,
+    "n_donor_groups_scored": 12,
+    "branch_within_mean": 0.34644275347273074,
+    "n_branches_scored": 6,
+    "branch_within_anchor_weighted_mean": 0.3331693402868043,
+    "branch_within_pair_weighted_mean": 0.31102383072329753,
+    "global_spearman": 0.8821200321268053,
+    "published": {
+      "trustworthiness": 0.895688041594454,
+      "random_holdout": 0.8857749063129917,
+      "donor_holdout": 0.8869530363318562,
+      "branch_holdout": 0.34644275347273074,
+      "global_correlation": 0.8821200321268053
+    },
+    "per_donor": [
+      {
+        "group": "TSP14",
+        "n_anchors": 125,
+        "n_distinct_anchors": 125,
+        "n_pairs": 7750,
+        "rho": 0.8825709222706513
+      },
+      {
+        "group": "TSP1",
+        "n_anchors": 29,
+        "n_distinct_anchors": 29,
+        "n_pairs": 406,
+        "rho": 0.8908852563133357
+      },
+      {
+        "group": "TSP25",
+        "n_anchors": 129,
+        "n_distinct_anchors": 129,
+        "n_pairs": 8256,
+        "rho": 0.8981458658062622
+      },
+      {
+        "group": "TSP7",
+        "n_anchors": 61,
+        "n_distinct_anchors": 61,
+        "n_pairs": 1830,
+        "rho": 0.8128648661148691
+      },
+      {
+        "group": "TSP27",
+        "n_anchors": 82,
+        "n_distinct_anchors": 82,
+        "n_pairs": 3321,
+        "rho": 0.9061631101728762
+      },
+      {
+        "group": "TSP21",
+        "n_anchors": 99,
+        "n_distinct_anchors": 99,
+        "n_pairs": 4851,
+        "rho": 0.8939713022167347
+      },
+      {
+        "group": "TSP8",
+        "n_anchors": 4,
+        "n_distinct_anchors": 4,
+        "n_pairs": 6,
+        "rho": 0.9276336570439175
+      },
+      {
+        "group": "TSP19",
+        "n_anchors": 11,
+        "n_distinct_anchors": 11,
+        "n_pairs": 55,
+        "rho": 0.9244860980161573
+      },
+      {
+        "group": "TSP6",
+        "n_anchors": 15,
+        "n_distinct_anchors": 15,
+        "n_pairs": 105,
+        "rho": 0.9381041807878125
+      },
+      {
+        "group": "TSP10",
+        "n_anchors": 26,
+        "n_distinct_anchors": 26,
+        "n_pairs": 325,
+        "rho": 0.9307297815179215
+      },
+      {
+        "group": "TSP26",
+        "n_anchors": 10,
+        "n_distinct_anchors": 10,
+        "n_pairs": 45,
+        "rho": 0.7094546393602438
+      },
+      {
+        "group": "TSP11",
+        "n_anchors": 8,
+        "n_distinct_anchors": 8,
+        "n_pairs": 28,
+        "rho": 0.9284267563614905
+      }
+    ]
+  },
+  "zeroshot": {
+    "n_anchors": 160,
+    "n_donors": 12,
+    "n_tissues": 45,
+    "trust_sklearn_k15": 0.8267244525547446,
+    "trust_masked_k15": 0.8267244525547446,
+    "random_holdout_frozen": 0.8925656989707351,
+    "donor_within_mean": 0.8703093321429258,
+    "n_donor_groups_scored": 11,
+    "branch_within_mean": 0.31683028161845,
+    "n_branches_scored": 6,
+    "branch_within_anchor_weighted_mean": 0.31124261959226296,
+    "branch_within_pair_weighted_mean": 0.3484683597863093,
+    "global_spearman": 0.8989748601586247,
+    "published": {
+      "trustworthiness": 0.8267244525547446,
+      "random_holdout": 0.8925656989707351,
+      "donor_holdout": 0.8703093321429258,
+      "branch_holdout": 0.31683028161845,
+      "global_correlation": 0.8989748601586247
+    },
+    "per_donor": [
+      {
+        "group": "TSP14",
+        "n_anchors": 44,
+        "n_distinct_anchors": 44,
+        "n_pairs": 946,
+        "rho": 0.9163413769704635
+      },
+      {
+        "group": "TSP7",
+        "n_anchors": 11,
+        "n_distinct_anchors": 11,
+        "n_pairs": 55,
+        "rho": 0.8351916015325476
+      },
+      {
+        "group": "TSP21",
+        "n_anchors": 34,
+        "n_distinct_anchors": 34,
+        "n_pairs": 561,
+        "rho": 0.9239197798149371
+      },
+      {
+        "group": "TSP27",
+        "n_anchors": 17,
+        "n_distinct_anchors": 17,
+        "n_pairs": 136,
+        "rho": 0.8124460256886183
+      },
+      {
+        "group": "TSP10",
+        "n_anchors": 4,
+        "n_distinct_anchors": 4,
+        "n_pairs": 6,
+        "rho": 0.9411239481143202
+      },
+      {
+        "group": "TSP6",
+        "n_anchors": 4,
+        "n_distinct_anchors": 4,
+        "n_pairs": 6,
+        "rho": 0.7944613465542746
+      },
+      {
+        "group": "TSP13",
+        "n_anchors": 5,
+        "n_distinct_anchors": 5,
+        "n_pairs": 10,
+        "rho": 0.6928494815184638
+      },
+      {
+        "group": "TSP25",
+        "n_anchors": 29,
+        "n_distinct_anchors": 29,
+        "n_pairs": 406,
+        "rho": 0.9250182858096822
+      },
+      {
+        "group": "TSP1",
+        "n_anchors": 3,
+        "n_distinct_anchors": 3,
+        "n_pairs": 3,
+        "rho": 0.8660254037844387
+      },
+      {
+        "group": "TSP26",
+        "n_anchors": 3,
+        "n_distinct_anchors": 3,
+        "n_pairs": 3,
+        "rho": 0.8660254037844387
+      },
+      {
+        "group": "TSP8",
+        "n_anchors": 3,
+        "n_distinct_anchors": 3,
+        "n_pairs": 3,
+        "rho": null
+      },
+      {
+        "group": "TSP11",
+        "n_anchors": 3,
+        "n_distinct_anchors": 3,
+        "n_pairs": 3,
+        "rho": 1.0
+      }
+    ]
+  },
+  "lung_nonhema": {
+    "n_anchors": 50,
+    "n_donors": 4,
+    "n_tissues": 1,
+    "trust_sklearn_k15": 0.7995555555555556,
+    "trust_masked_k15": 0.7995555555555556,
+    "random_holdout_frozen": -0.01642006280037764,
+    "donor_within_mean": 0.01339727102198118,
+    "n_donor_groups_scored": 4,
+    "branch_within_mean": -0.14687071442603894,
+    "n_branches_scored": 5,
+    "branch_within_anchor_weighted_mean": -0.02286424711276709,
+    "branch_within_pair_weighted_mean": 0.08842168292125133,
+    "global_spearman": -0.017499871255280627,
+    "published": {
+      "trustworthiness": 0.7995555555555556,
+      "random_holdout": -0.01642006280037764,
+      "donor_holdout": 0.01339727102198118,
+      "branch_holdout": -0.14687071442603894,
+      "global_correlation": -0.017499871255280627
+    },
+    "per_donor": [
+      {
+        "group": "TSP14",
+        "n_anchors": 12,
+        "n_distinct_anchors": 12,
+        "n_pairs": 66,
+        "rho": 0.07911026684942665
+      },
+      {
+        "group": "TSP2",
+        "n_anchors": 11,
+        "n_distinct_anchors": 11,
+        "n_pairs": 55,
+        "rho": 0.007400388199323566
+      },
+      {
+        "group": "TSP25",
+        "n_anchors": 15,
+        "n_distinct_anchors": 15,
+        "n_pairs": 105,
+        "rho": 0.059047051127360924
+      },
+      {
+        "group": "TSP1",
+        "n_anchors": 12,
+        "n_distinct_anchors": 12,
+        "n_pairs": 66,
+        "rho": -0.09196862208818642
+      }
+    ]
+  },
+  "published_internal": {
+    "branch": "H65_anchor_LET10D",
+    "panel": "internal",
+    "feature": "pooled_drift_2464",
+    "head_variant": "anchor_trained_baseline",
+    "n_anchors": 290,
+    "gates_thresholds": {
+      "trustworthiness_min": 0.8,
+      "random_holdout_correlation_min": 0.2,
+      "donor_holdout_correlation_min": 0.2,
+      "clade_branch_holdout_correlation_min": 0.2,
+      "blocked_permutation_p_max": 0.001,
+      "n_permutations_min": 2000
+    },
+    "positive": {
+      "trustworthiness": 0.810936329588015,
+      "random_holdout": 0.8341080550865551,
+      "donor_holdout": 0.715887968347085,
+      "branch_holdout": 0.37040378877968805,
+      "passes": true
+    },
+    "null_shuffled": {
+      "trustworthiness": 0.7985001506737268,
+      "random_holdout": 0.7985932357123123,
+      "donor_holdout": 0.7071285065298346,
+      "branch_holdout": -0.0010123536030740103,
+      "passes": false
+    },
+    "verdict": "POSITIVE: H65 passes all four gates and null fails at least one"
+  },
+  "elapsed_s": 51.81210899353027
+}

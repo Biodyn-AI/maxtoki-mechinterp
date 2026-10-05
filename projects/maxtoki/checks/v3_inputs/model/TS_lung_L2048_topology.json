@@ -1,0 +1,77 @@
+{
+ "group": "TS_lung_L2048_topology",
+ "dataset": "ts_lung",
+ "max_len": 2048,
+ "rows": [
+  19287,
+  20077,
+  23329,
+  28283,
+  59609
+ ],
+ "encoding_check": {
+  "label": "TS_lung_L2048_topology",
+  "n_checked": 5,
+  "n_cells": 5,
+  "all_pass": true,
+  "max_order_violations": 0,
+  "n_positions_tie_reordered": 0,
+  "check": "inputs_v3.check_encoding (token order == counts/median order; counts count-like)"
+ },
+ "cells": [
+  {
+   "row": 19287,
+   "assay": "10x 3' v3",
+   "n_tokens": 2048,
+   "finite": true,
+   "nll_mean": 3.618196964263916,
+   "nll_first200": 5.438941478729248,
+   "top1": 0.14662756025791168,
+   "top1_first200": 0.054999999701976776
+  },
+  {
+   "row": 20077,
+   "assay": "10x 3' v3",
+   "n_tokens": 2048,
+   "finite": true,
+   "nll_mean": 3.4548776149749756,
+   "nll_first200": 5.251132965087891,
+   "top1": 0.165689155459404,
+   "top1_first200": 0.07999999821186066
+  },
+  {
+   "row": 23329,
+   "assay": "10x 3' v3",
+   "n_tokens": 1799,
+   "finite": true,
+   "nll_mean": 2.9979615211486816,
+   "nll_first200": 4.72349214553833,
+   "top1": 0.22148025035858154,
+   "top1_first200": 0.10999999940395355
+  },
+  {
+   "row": 28283,
+   "assay": "10x 3' v3",
+   "n_tokens": 2048,
+   "finite": true,
+   "nll_mean": 3.455249071121216,
+   "nll_first200": 5.310308933258057,
+   "top1": 0.17253176867961884,
+   "top1_first200": 0.054999999701976776
+  },
+  {
+   "row": 59609,
+   "assay": "10x 3' v3",
+   "n_tokens": 1531,
+   "finite": true,
+   "nll_mean": 3.188321352005005,
+   "nll_first200": 4.980241775512695,
+   "top1": 0.20601700246334076,
+   "top1_first200": 0.05999999865889549
+  }
+ ],
+ "zero_delta_max_abs_logit_diff": null,
+ "pass": true,
+ "wall_s": 4.889430046081543,
+ "free_gb_before": 6.787874816
+}

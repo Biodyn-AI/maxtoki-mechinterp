@@ -1,0 +1,7 @@
+predictor,accuracy,balanced_acc,mcc,frac_pred_dec,frac_obs_dec,note
+model (majority sign of SAE edges),0.5347610229558443,0.49830448741689765,-0.005521320173723073,0.8955998637761672,0.546059353149644,uses no CRISPRi labels
+always decrease,0.546059353149644,0.5,,1.0,0.546059353149644,constant
+always increase,0.453940646850356,0.5,,0.0,0.546059353149644,constant
+global majority from training source folds,0.546059353149644,0.5,,1.0,0.546059353149644,"GroupKFold by source, the script's own 5 folds"
+per-target majority from training source folds,0.5915420165384248,0.5769335948469545,0.1623858513584465,0.6656695986718176,0.546059353149644,GroupKFold by source: target gene's usual direction across OTHER silenced genes
+per-source majority from the source's own other target folds,0.5642546800336302,0.5413546755477872,0.09540595105614902,0.7524018762704469,0.546059353149644,within-source 5-fold over targets; uses labels of the SAME knockdown

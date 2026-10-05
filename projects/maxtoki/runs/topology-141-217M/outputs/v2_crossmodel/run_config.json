@@ -1,0 +1,126 @@
+{
+  "item": "D10 cross-model alignment",
+  "created": "2026-10-01 00:51:26",
+  "scripts": [
+    "scripts/v2_crossmodel_common.py",
+    "scripts/v2_crossmodel_prepare.py",
+    "scripts/v2_crossmodel_stats.py",
+    "scripts/v2_crossmodel_paired.py",
+    "scripts/v2_crossmodel_summarize.py",
+    "../spectral-geometry-217M/scripts/v2_crossmodel_pearson_ci.py"
+  ],
+  "settings_copied_from_deployed": {
+    "pca_dim": 30,
+    "pca_random_state": 42,
+    "cca": "sklearn CCA(n_components=10, max_iter=200), mean of 10 in-sample canonical r",
+    "top1": "orthogonal Procrustes on PCA-30, fitted and scored on same genes"
+  },
+  "inputs": {
+    "maxtoki_model_safetensors": {
+      "path": "<REPO_ROOT>/projects/maxtoki/setup/MaxToki-217M-HF/model.safetensors",
+      "resolved": "<REPO_ROOT>/projects/maxtoki/setup/MaxToki-217M-HF/model.safetensors",
+      "bytes": 867797760,
+      "sha256": "9da1fbf8cc489486d158d4653a14e3f44ac49c75a8e1480566eab0e9f99cf898"
+    },
+    "maxtoki_token_dictionary": {
+      "path": "<REPO_ROOT>/projects/maxtoki/setup/token_dictionary.json",
+      "resolved": "<REPO_ROOT>/projects/maxtoki/setup/token_dictionary.json",
+      "bytes": 560316,
+      "sha256": "3d06ba6f896c3c0f8721a78e39b68e660d9d12ea525af8c2ffdf631ac0a32d87"
+    },
+    "geneformer_v2_316m_model_safetensors": {
+      "path": "<HF_CACHE>/hub/models--ctheodoris--Geneformer/snapshots/05fcbeb8a27d49e0a7a4349152202ee2c1cbfd28/Geneformer-V2-316M/model.safetensors",
+      "resolved": "<HF_CACHE>/hub/models--ctheodoris--Geneformer/blobs/965ceccea81953d362081ef3843560a0e4fef88d396c28017881f1e94b1246f3",
+      "bytes": 1265455076,
+      "sha256": "965ceccea81953d362081ef3843560a0e4fef88d396c28017881f1e94b1246f3"
+    },
+    "geneformer_token_dictionary_gc104M": {
+      "path": "<HF_CACHE>/hub/models--ctheodoris--Geneformer/snapshots/05fcbeb8a27d49e0a7a4349152202ee2c1cbfd28/geneformer/token_dictionary_gc104M.pkl",
+      "resolved": "<HF_CACHE>/hub/models--ctheodoris--Geneformer/blobs/67c445f4385127adfc48dcc072320cd65d6822829bf27dd38070e6e787bc597f",
+      "bytes": 425590,
+      "sha256": "67c445f4385127adfc48dcc072320cd65d6822829bf27dd38070e6e787bc597f"
+    },
+    "scgpt_whole_human_gene_embeddings_pt": {
+      "path": "<DATA_ROOT>/biodyn-work/subproject_53_scgpt_gpl_replication/embeddings/scgpt_whole_human_gene_embeddings.pt",
+      "resolved": "<DATA_ROOT>/biodyn-work/subproject_53_scgpt_gpl_replication/embeddings/scgpt_whole_human_gene_embeddings.pt",
+      "bytes": 249944756,
+      "sha256": "b41289b862126ccd8db166e2688e08bcbe4149c87a9a177f8409b4723bf33f4b"
+    },
+    "scgpt_gene_embeddings_npz_crosscheck": {
+      "path": "<DATA_ROOT>/biodyn-work/subproject_53_scgpt_gpl_replication/embeddings/scgpt_gene_embeddings.npz",
+      "resolved": "<DATA_ROOT>/biodyn-work/subproject_53_scgpt_gpl_replication/embeddings/scgpt_gene_embeddings.npz",
+      "bytes": 131585118,
+      "sha256": "4882d38227aea4edec69f10fd486e2cd1053a42e2000709aab66ad5d5b055cf9"
+    },
+    "scgpt_checkpoint_crosscheck": {
+      "path": "<DATA_ROOT>/biodyn-work/single_cell_mechinterp/external/scGPT_checkpoints/whole-human/best_model.pt",
+      "resolved": "<DATA_ROOT>/biodyn-work/single_cell_mechinterp/external/scGPT_checkpoints/whole-human/best_model.pt",
+      "bytes": 205385258,
+      "sha256": "6cb5d451ab5c4b33eb673adbe4fddc61d2389df1b89b7651a9fe2e557572b922"
+    },
+    "deployed_phase14_csv": {
+      "path": "<REPO_ROOT>/projects/maxtoki/runs/topology-141-217M/outputs/phase14_cross_model/cross_model_alignment.csv",
+      "resolved": "<REPO_ROOT>/projects/maxtoki/runs/topology-141-217M/outputs/phase14_cross_model/cross_model_alignment.csv",
+      "bytes": 808,
+      "sha256": "98908ff70f722aba466c3df8a4ed394a11ff0cf3d2d24e7d4c00e7a8b83c06fb"
+    },
+    "deployed_phase4_csv": {
+      "path": "<REPO_ROOT>/projects/maxtoki/runs/topology-141-217M/outputs/phase4_scgpt/cross_model_alignment_scgpt.csv",
+      "resolved": "<REPO_ROOT>/projects/maxtoki/runs/topology-141-217M/outputs/phase4_scgpt/cross_model_alignment_scgpt.csv",
+      "bytes": 995,
+      "sha256": "7035ba593db6248285bb4fe56252cdf917198d76ba0eeb3db24315fbe377222b"
+    },
+    "gene_features_lung": {
+      "path": "<REPO_ROOT>/projects/maxtoki/runs/topology-141-217M/outputs/phase0/lung/gene_features.csv",
+      "resolved": "<REPO_ROOT>/projects/maxtoki/runs/topology-141-217M/outputs/phase0/lung/gene_features.csv",
+      "bytes": 24075,
+      "sha256": "10d82a9325b074272540e4801ba9630a3d08761cc5d8899d6296b6548725c421"
+    },
+    "gene_features_immune": {
+      "path": "<REPO_ROOT>/projects/maxtoki/runs/topology-141-217M/outputs/phase0/immune/gene_features.csv",
+      "resolved": "<REPO_ROOT>/projects/maxtoki/runs/topology-141-217M/outputs/phase0/immune/gene_features.csv",
+      "bytes": 21906,
+      "sha256": "a6bc15cf8cc11e670e953deb2a7d6db9dfc19ed97ef1b3ec2e466d17e522843a"
+    },
+    "gene_features_external_lung": {
+      "path": "<REPO_ROOT>/projects/maxtoki/runs/topology-141-217M/outputs/phase0/external_lung/gene_features.csv",
+      "resolved": "<REPO_ROOT>/projects/maxtoki/runs/topology-141-217M/outputs/phase0/external_lung/gene_features.csv",
+      "bytes": 24203,
+      "sha256": "b83cdca9126efde39f7449f86e7928480d9f027ee250bd078babb6cef6d337f7"
+    },
+    "prepared_embeddings_subset_npz": {
+      "path": "<REPO_ROOT>/projects/maxtoki/runs/topology-141-217M/outputs/v2_crossmodel/embeddings_subset.npz",
+      "sha256": "11838a7028331e9aafeaad6260797e27adf5911ec6d94e1fa757b671621e7e9e"
+    }
+  },
+  "software": {
+    "python": "3.12.9",
+    "numpy": "1.26.4",
+    "sklearn": "1.8.0",
+    "torch": "2.11.0",
+    "pandas": "2.3.3"
+  },
+  "device": "CPU only; no model forward pass",
+  "wall_seconds_prepare": 8.953171014785767,
+  "seeds": {
+    "stats_jobs": "20261001 + 1000*model_index(gf=0, scgpt_fixed=1, scgpt_deployed=2) + 100*domain_index(lung=0, immune=1, external_lung=2) + part_index(perm=1, permcheck=2, boot=3, cv=4, cvperm=5, bootgene=6); oob reuses the boot resamples; exact seed stored in each job JSON",
+    "paired": "20261201 + domain_index; 1,500-HVG paired Pearson 20261211",
+    "pca_random_state": 42
+  },
+  "counts": {
+    "permutations_chance": 1000,
+    "gene_bootstrap": 1000,
+    "heldout_cv_repeats": 10,
+    "heldout_cv_permutations": 200,
+    "paired_pearson_bootstrap": 2000,
+    "paired_oob_bootstrap": 500
+  },
+  "outputs": {
+    "summary.json": "bfc36ce347890744cfb0adef0cd7211adbc407e7bdd194089fb57e5ebed5a4d9",
+    "fig_crossmodel.csv": "4ebd70f234ff5bd84fdad1bbab8d41c350e56f6ff7d315f89441c890ebb6b9b3",
+    "paired_differences.json": "904ef2f83f377dfcdcf85d3a57e4dd81ca8a5e4f93f9949683dd83928e45691e",
+    "prepare_checks.json": "9a236429643a1ec11a2802835811baf1f80ab1516338d6e773a089d23586e07a",
+    "embeddings_subset.npz": "11838a7028331e9aafeaad6260797e27adf5911ec6d94e1fa757b671621e7e9e",
+    "spectral pearson_1500hvg_ci.json": "67e21b671d3690b6f5e5facca5c596db756a9b73e4382632a9b75ee78d04c573"
+  }
+}

@@ -1,0 +1,307 @@
+%% ---------------------------------------------------------------- tab:inherited
+{\footnotesize
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.15}
+\begin{longtable}{@{}p{0.30\linewidth}p{0.17\linewidth}p{0.48\linewidth}@{}}
+\caption{\textbf{What this study developed and what it inherited.}}
+\label{tab:inherited}\\
+\toprule
+\textbf{Component} & \textbf{Origin} & \textbf{Role in this paper} \\
+\midrule
+\endfirsthead
+\multicolumn{3}{@{}l}{\footnotesize\emph{Table \thetable\ continued from previous page.}}\\
+\toprule
+\textbf{Component} & \textbf{Origin} & \textbf{Role in this paper} \\
+\midrule
+\endhead
+\midrule
+\multicolumn{3}{r@{}}{\footnotesize\emph{continued on next page}}\\
+\endfoot
+\bottomrule
+\endlastfoot
+Eight interpretability methods (attention analysis, residual-stream
+spectral geometry, topological screening, sparse-autoencoder atlas,
+circuit tracing, exhaustive mapping and steering, manifold discovery,
+donor-aware ageing probe) & Author's earlier studies of scGPT and
+Geneformer & Inherited. The source papers of four of them (attention
+analysis, topological screening, sparse-autoencoder atlas, circuit
+tracing) are given to agents in Study~A as the source method. \\
+MaxToki-217M and MaxToki-1B & Third party~\cite{maxtoki2026} & Deployment
+target. \\
+Perturb-seq screens, Tabula Sapiens, the Human Lung Cell Atlas, TRRUST, DoRothEA, STRING, GO, KEGG,
+Reactome & Third party & Data and reference sets. \\
+Claude Code and Claude models & Third party (Anthropic) & Agents in the
+deployment and subjects in Studies~A--C. \\
+\addlinespace
+Pipeline specifications (eight markdown files) & This study (written
+at the start of the deployment by Claude Opus~4.7) & First part of the framework; the treatment in
+Study~A's contract arm, where the executor also received the deployed
+specification. \\
+Ten-pattern audit checklist & This study, distilled from six earlier
+peer-review comment sets & Second part of the framework; the treatment in
+the checklist arms of Studies~A--C. \\
+Deployment runs on MaxToki-217M and the in-session audit & This study &
+Source of the error ledger and of the Study~C snapshot. \\
+Independent verification, error ledger, deterministic checker & This
+study & Evaluation of the deployment. \\
+Studies~A, B and C (tasks, items, keys, protocol) & This study &
+Controlled evaluation of the framework. \\
+Corrected MaxToki-217M analyses (fixed intervention hooks, corrected
+input encoding, retrained sparse autoencoders) & This study & Case study
+of MaxToki-217M. \\
+\end{longtable}
+}
+
+%% ---------------------------------------------------------------- tab:checklist
+{\footnotesize
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.15}
+\begin{longtable}{@{}p{0.17\linewidth}p{0.26\linewidth}p{0.28\linewidth}p{0.24\linewidth}@{}}
+\caption{\textbf{The ten-pattern audit checklist.}}
+\label{tab:checklist}\\
+\toprule
+\textbf{Pattern} & \textbf{Objection} & \textbf{Signature searched for} &
+\textbf{Prescribed repair} \\
+\midrule
+\endfirsthead
+\multicolumn{4}{@{}l}{\footnotesize\emph{Table \thetable\ continued from previous page.}}\\
+\toprule
+\textbf{Pattern} & \textbf{Objection} & \textbf{Signature searched for} &
+\textbf{Prescribed repair} \\
+\midrule
+\endhead
+\midrule
+\multicolumn{4}{r@{}}{\footnotesize\emph{continued on next page}}\\
+\endfoot
+\bottomrule
+\endlastfoot
+\textbf{P1} Weak null or no chance anchor & ``What would chance alone give?''
+& A number without its chance value; a null that only shuffles labels; a
+$p$-value without a named null. & Report the null mean and spread next to
+every load-bearing number; prefer the strictest null. \\
+\textbf{P2} No trivial baseline & ``What does a simpler method give?'' &
+A performance figure without a comparison to expression-only or
+gene-level baselines. & State every capability as a gain over the
+simplest comparator. \\
+\textbf{P3} Endpoint does not match the claim & ``The metric measures
+something else.'' & A regulatory claim resting on a ranking score; the
+same database used to select and to evaluate. & State what the endpoint
+literally measures; weaken the claim to match. \\
+\textbf{P4} Wrong unit of inference & ``Your unit is donors, not
+cells.'' & $p$-values over cells for donor-level claims; random
+cross-validation splits when rows share a factor. & Name the unit;
+group resampling and splits by the shared factor. \\
+\textbf{P5} Selection-driven inflation & ``You selected on one property
+and tested another.'' & Hand-picked subsets; ranking and testing on the
+same data. & Separate selection from evaluation; control the selected
+property. \\
+\textbf{P6} No positive control & ``Could the pipeline detect a signal at
+all?'' & A negative result with no planted or known-true signal. & Run a
+synthetic and a real positive control first. \\
+\textbf{P7} Generalisation from one condition & ``One cell line, one
+architecture.'' & Conclusions from one dataset, tissue or model without
+a scope statement. & Replicate on a held-out condition or state the
+scope. \\
+\textbf{P8} Unknown stability & ``What is the interval? Another seed?'' &
+Point estimates without intervals, threshold sweeps or seed checks. &
+Bootstrap at the unit of inference; report threshold and seed
+sensitivity. \\
+\textbf{P9} Causal overreach & ``Say `is consistent with', not
+`confirms'.'' & Causal verbs on correlational evidence. & Weaken the verb
+or run the intervention. \\
+\textbf{P10} Missing reproducibility scaffolding & ``Provide code,
+environment and compute.'' & Cited scripts absent; no pinned environment,
+seeds or compute record. & Freeze environment and seeds; publish every
+script; report compute. \\
+\end{longtable}
+\begin{flushleft}
+Each row is an
+objection that reviewers raised repeatedly on the author's earlier
+interpretability papers, rewritten so that an agent can search for it.
+AUROC is the area under the receiver-operating-characteristic curve (0.5
+is chance); a null model is a randomised version of the data that keeps
+some structure and destroys the effect under test.
+\end{flushleft}
+}
+
+%% ---------------------------------------------------------------- tab:checks
+{\footnotesize
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.15}
+\begin{longtable}{@{}p{0.22\linewidth}p{0.36\linewidth}p{0.36\linewidth}@{}}
+\caption{\textbf{How the framework's requirements were checked.}}
+\label{tab:checks}\\
+\toprule
+\textbf{Requirement} & \textbf{During the deployment} & \textbf{Deterministic checker} \\
+\midrule
+\endfirsthead
+\multicolumn{3}{@{}l}{\footnotesize\emph{Table \thetable\ continued from previous page.}}\\
+\toprule
+\textbf{Requirement} & \textbf{During the deployment} & \textbf{Deterministic checker} \\
+\midrule
+\endhead
+\midrule
+\multicolumn{3}{r@{}}{\footnotesize\emph{continued on next page}}\\
+\endfoot
+\bottomrule
+\endlastfoot
+Specification has the ten sections, in order & Instruction to the agent;
+not checked & Detects missing or misordered sections. \\
+Pinned code and code references resolve & Agent wrote commit hashes; not
+checked & Detects unresolvable pins, malformed references, missing paths
+and lines. \\
+Parameters used equal the specification, or the deviation is justified &
+Agent's choice; partly noted in code comments & Detects deviations from
+machine-readable defaults and ranges where the run records the value;
+cannot judge whether a deviation is acceptable. \\
+Null models actually randomise & Agent judgment (audit pattern P1) &
+Checks null size only; cannot tell whether a null randomises. \\
+Trivial baselines and positive controls exist & Agent judgment (P2, P6) &
+Detects whether the specification has a labelled slot; cannot judge
+adequacy. \\
+Intervals name their method and resampling unit & Agent judgment (P4, P8)
+& Points to interval statements without a method; cannot judge
+correctness. \\
+Wording matches the evidence & Agent judgment (P3, P9) & Lists causal
+words for a reader; cannot judge context. \\
+Every reported number comes from the run's outputs & Not checked & Searches the stored outputs for
+each number and gives the rate of chance matches; cannot judge
+meaning. \\
+Pre-registered quality gates are computed and not loosened & Two
+pipelines computed their own pass/fail flags & Recomputes stored gate
+flags and detects uncomputed gates. \\
+Seeds, environment, device and checkpoint are recorded & Agent judgment
+(P10) & Detects scripts that use random numbers without a seed, and runs
+with no device, package-version, checkpoint or run-manifest record;
+cannot tell whether every random call uses the seed. \\
+Hypothesis retirement in automated loops & Described in the
+specifications (retire after two negatives in a row); not coded in any
+pipeline. A scripted batch of six hypotheses in the topological screen
+coded its own promote, inconclusive or retire label, with a stop after
+three retires in a row that was never reached; a manual review later
+changed 4 of the 6 labels & Detects whether a decision log exists. \\
+Go/no-go decisions on expensive runs & Author's prompts; not logged &
+Not checkable from files. \\
+\end{longtable}
+\begin{flushleft}
+``During
+the deployment'' describes what was in place when the eight runs and the
+in-session audit were carried out. ``Deterministic checker'' describes
+what the checker written afterwards can detect by reading files; what it
+cannot detect remains a matter of judgment.
+\end{flushleft}
+}
+
+%% ---------------------------------------------------------------- tab:pipelines
+{\footnotesize
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.15}
+\begin{longtable}{@{}p{0.20\linewidth}p{0.28\linewidth}p{0.36\linewidth}r@{}}
+\caption{\textbf{The eight pipelines as run on MaxToki-217M.}}
+\label{tab:pipelines}\\
+\toprule
+\textbf{Pipeline} & \textbf{Question} & \textbf{What was run} & \textbf{Log h} \\
+\midrule
+\endfirsthead
+\multicolumn{4}{@{}l}{\footnotesize\emph{Table \thetable\ continued from previous page.}}\\
+\toprule
+\textbf{Pipeline} & \textbf{Question} & \textbf{What was run} & \textbf{Log h} \\
+\midrule
+\endhead
+\midrule
+\multicolumn{4}{r@{}}{\footnotesize\emph{continued on next page}}\\
+\endfoot
+\bottomrule
+\endlastfoot
+Residual-stream spectral geometry & How does each layer's representation
+of genes change with depth? & Per-layer singular-value geometry,
+effective rank and stability across cell samples; 2,000 TS immune cells;
+a later cross-model comparison with Geneformer V2-316M. & 3.6 \\
+Attention-derived regulatory networks & Do attention maps recover
+regulator--target pairs? & Layer-8 attention against TRRUST and against
+knockdown responses; four runs (K562, RPE1, Adamson with MaxToki-217M;
+K562 with MaxToki-1B). & 8.8 \\
+Topological hypothesis screen & Does higher-order geometry of gene pairs
+carry regulatory information? & A subset of the catalogue (21 of 141
+hypotheses had code); the strictest null at 3 of 12 layer states; a
+cross-model comparison with scGPT. & 2.6 \\
+SAE atlas & What do sparse features of the residual stream represent? &
+TopK SAEs (4,928 features, $k=32$) at all 12 layer states, trained on 500
+K562 cells; annotation; a transcription-factor specificity test;
+feature patching. & 10.1 \\
+SAE circuit tracing & Which feature-to-feature edges carry causal
+influence? & Ablation-based edges from 30 features at each of four layers
+(200 K562 cells); a CRISPRi direction-of-change test. & 4.2 \\
+Exhaustive mapping and steering & Is the computation built from
+combinatorial logic, and can features steer cell state? & Edges from
+1,000 layer-5 features (20 cells); four feature triplets (50 cells);
+steering at five layers (50 TS immune cells). & 7.7 \\
+Manifold discovery & Is there a recoverable developmental ordering of
+cells? & A pre-set hematopoietic ordering and 18 candidate orderings,
+scored with quality gates on cell-group centroids from TS donors. & 15.2 \\
+Donor-aware ageing probe & Is donor age encoded? & First stage only; its
+gate failed. & 1.5 \\
+\end{longtable}
+\begin{flushleft}
+``Log
+hours'' is the span covered by each pipeline's log files, with
+overlapping runs counted once; it is laptop wall-clock time, not GPU
+time, and can include idle time. Model computation ran on one laptop;
+the runs that recorded a device used the Apple-silicon MPS backend (one
+also used the CPU). The 12 layer states are the hidden states the model
+exposes: the token embedding (layer~0) and the outputs of its 11
+transformer blocks (layers 1--11; layer~11 is taken after the final
+normalisation). TS, Tabula Sapiens; SAE, sparse autoencoder.
+\end{flushleft}
+}
+
+%% ---------------------------------------------------------------- tab:tasks
+{\footnotesize
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.15}
+\begin{longtable}{@{}p{0.06\linewidth}p{0.30\linewidth}p{0.22\linewidth}p{0.36\linewidth}@{}}
+\caption{\textbf{Study A tasks.}}
+\label{tab:tasks}\\
+\toprule
+& \textbf{Question} & \textbf{Key verdict} & \textbf{Main pitfalls (not stated in the brief)} \\
+\midrule
+\endfirsthead
+\toprule
+& \textbf{Question} & \textbf{Key verdict} & \textbf{Main pitfalls} \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+T1 & Do layer-8 attention scores encode TRRUST regulator--target pairs
+(RPE1 cells)? & Not supported (``inconclusive'' accepted under stated
+conditions) & Gene-level properties of targets; a degree-preserving null
+that actually rewires; few transcription factors as the resampling unit;
+model-free pair signals. \\
+T2 & Do SAE-circuit predictions get the direction of change after a
+CRISPRi knockdown right (K562)? & Not supported (``inconclusive''
+accepted under stated conditions) & Unbalanced classes (50\% is not
+chance); constant-sign predictors; records clustered by silenced gene; a
+model-free target-direction baseline. \\
+T3 & Are SAE features that respond to a transcription factor's knockdown
+specific to its target genes? & Not supported & Rare and long genes
+dominate feature gene lists; specificity requires comparison with other
+factors' targets; threshold search; one factor is not the question. \\
+T4 & Is MaxToki-217M's gene-embedding geometry aligned with scGPT's, and
+how does that compare with Geneformer V2-316M? & Aligned with scGPT, but
+clearly less than with Geneformer & scGPT rows must be looked up by
+token id; in-sample canonical correlation has a high chance level; genes
+are the resampling unit. \\
+\end{longtable}
+\begin{flushleft}
+Each task's data are a fixed snapshot of
+the deployment's outputs, except T2. The deployed circuit edges were made
+by an intervention hook that deleted a transformer block, so T2's circuit edges come from a re-run
+of the deployed circuit tracing with corrected hooks (S2~Appendix,
+Amendment~1). The re-run used the same cells, input encoding, sparse
+autoencoders and source features as the deployment. Each answer key
+refers to its task's data. T2 and T3 use sparse-autoencoder features trained on the deployment's incorrectly
+encoded inputs (see \emph{Errors in the deployment's outputs} in
+Results); this does not affect the tasks as analysis exercises, because
+their keys were computed on the same data.
+\end{flushleft}
+}

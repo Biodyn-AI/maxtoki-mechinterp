@@ -1,0 +1,321 @@
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+======================================================================
+PHASE 14 SWEEP #3 — fresh manifold candidates (mixed Hamming + ordinal)
+======================================================================
+
+--- H107_antigen_receptor_type: Antigen-receptor type: TCR-αβ / BCR / innate-lymphoid / myeloid-prog (Hamming) ---
+  [H107_antigen_receptor_type] trained 1500 epochs in 9.9s
+  [rand-holdout] trained 1500 epochs in 8.6s
+  [rand-holdout] trained 1500 epochs in 8.4s
+  [rand-holdout] trained 1500 epochs in 8.5s
+  [rand-holdout] trained 1500 epochs in 8.7s
+  [rand-holdout] trained 1500 epochs in 8.6s
+  [H107_antigen_receptor_type-donor] groups: 11
+  [H107_antigen_receptor_type-donor-TSP2] trained 1500 epochs in 3.4s
+  [H107_antigen_receptor_type-donor-TSP20] trained 1500 epochs in 9.6s
+  [H107_antigen_receptor_type-donor-TSP9] trained 1500 epochs in 9.8s
+  [H107_antigen_receptor_type-donor-TSP4] trained 1500 epochs in 9.3s
+  [H107_antigen_receptor_type-donor-TSP17] trained 1500 epochs in 9.7s
+  [H107_antigen_receptor_type-donor-TSP5] trained 1500 epochs in 13.6s
+  [H107_antigen_receptor_type-donor-TSP15] trained 1500 epochs in 24.9s
+  [H107_antigen_receptor_type-donor-TSP28] trained 1500 epochs in 24.8s
+  [H107_antigen_receptor_type-donor-TSP3] trained 1500 epochs in 25.2s
+  [H107_antigen_receptor_type-cat] groups: 4
+  [H107_antigen_receptor_type-cat-myeloid_progenitor] trained 1500 epochs in 17.3s
+  [H107_antigen_receptor_type-cat-tcr_ab] trained 1500 epochs in 19.5s
+  [H107_antigen_receptor_type-cat-bcr] trained 1500 epochs in 23.0s
+  [H107_antigen_receptor_type-cat-innate_lymphoid] trained 1500 epochs in 24.6s
+  [H107_antigen_receptor_type_null] trained 1500 epochs in 26.5s
+  [rand-holdout] trained 1500 epochs in 21.8s
+  [rand-holdout] trained 1500 epochs in 22.0s
+  [rand-holdout] trained 1500 epochs in 21.2s
+  [rand-holdout] trained 1500 epochs in 21.4s
+  [rand-holdout] trained 1500 epochs in 21.7s
+  [H107_antigen_receptor_type-donor-null] groups: 11
+  [H107_antigen_receptor_type-donor-null-TSP2] trained 1500 epochs in 10.3s
+  [H107_antigen_receptor_type-donor-null-TSP20] trained 1500 epochs in 24.8s
+  [H107_antigen_receptor_type-donor-null-TSP9] trained 1500 epochs in 25.5s
+  [H107_antigen_receptor_type-donor-null-TSP4] trained 1500 epochs in 24.0s
+  [H107_antigen_receptor_type-donor-null-TSP17] trained 1500 epochs in 24.9s
+  [H107_antigen_receptor_type-donor-null-TSP5] trained 1500 epochs in 25.6s
+  [H107_antigen_receptor_type-donor-null-TSP15] trained 1500 epochs in 24.6s
+  [H107_antigen_receptor_type-donor-null-TSP28] trained 1500 epochs in 24.9s
+  [H107_antigen_receptor_type-donor-null-TSP3] trained 1500 epochs in 25.0s
+  [H107_antigen_receptor_type-cat-null] groups: 4
+  [H107_antigen_receptor_type-cat-null-myeloid_progenitor] trained 1500 epochs in 16.7s
+  [H107_antigen_receptor_type-cat-null-innate_lymphoid] trained 1500 epochs in 24.3s
+  [H107_antigen_receptor_type-cat-null-tcr_ab] trained 1500 epochs in 22.2s
+  [H107_antigen_receptor_type-cat-null-bcr] trained 1500 epochs in 23.7s
+  POS trust=0.771 rand=0.7723501169073799 donor=0.6899443512584799 cat=None
+  NULL trust=0.577 rand=0.0657526665231786 donor=0.020095572475914848 cat=None
+  VERDICT: INCONCLUSIVE  (700.9s)
+
+--- H108_cytotoxic_potential: Cytotoxic potential ordinal: 0 non-cyto / 1 phagocytic-killer / 2 cyto-lymphoid ---
+  [H108_cytotoxic_potential] trained 1500 epochs in 29.7s
+  [rand-holdout] trained 1500 epochs in 27.0s
+  [rand-holdout] trained 1500 epochs in 23.2s
+  [rand-holdout] trained 1500 epochs in 22.7s
+  [rand-holdout] trained 1500 epochs in 22.8s
+  [rand-holdout] trained 1500 epochs in 22.8s
+  [H108_cytotoxic_potential-donor] groups: 11
+  [H108_cytotoxic_potential-donor-TSP2] trained 1500 epochs in 11.5s
+  [H108_cytotoxic_potential-donor-TSP20] trained 1500 epochs in 25.4s
+  [H108_cytotoxic_potential-donor-TSP9] trained 1500 epochs in 26.4s
+  [H108_cytotoxic_potential-donor-TSP4] trained 1500 epochs in 24.9s
+  [H108_cytotoxic_potential-donor-TSP17] trained 1500 epochs in 25.8s
+  [H108_cytotoxic_potential-donor-TSP5] trained 1500 epochs in 26.2s
+  [H108_cytotoxic_potential-donor-TSP15] trained 1500 epochs in 26.0s
+  [H108_cytotoxic_potential-donor-TSP28] trained 1500 epochs in 27.1s
+  [H108_cytotoxic_potential-donor-TSP3] trained 1500 epochs in 26.9s
+  [H108_cytotoxic_potential-cat] groups: 3
+  [H108_cytotoxic_potential-cat-1] trained 1500 epochs in 20.1s
+  [H108_cytotoxic_potential-cat-0] trained 1500 epochs in 19.2s
+  [H108_cytotoxic_potential-cat-2] trained 1500 epochs in 22.0s
+  [H108_cytotoxic_potential_null] trained 1500 epochs in 27.7s
+  [rand-holdout] trained 1500 epochs in 22.5s
+  [rand-holdout] trained 1500 epochs in 20.9s
+  [rand-holdout] trained 1500 epochs in 21.6s
+  [rand-holdout] trained 1500 epochs in 23.4s
+  [rand-holdout] trained 1500 epochs in 22.4s
+  [H108_cytotoxic_potential-donor-null] groups: 11
+  [H108_cytotoxic_potential-donor-null-TSP2] trained 1500 epochs in 11.2s
+  [H108_cytotoxic_potential-donor-null-TSP20] trained 1500 epochs in 26.4s
+  [H108_cytotoxic_potential-donor-null-TSP9] trained 1500 epochs in 26.4s
+  [H108_cytotoxic_potential-donor-null-TSP4] trained 1500 epochs in 26.4s
+  [H108_cytotoxic_potential-donor-null-TSP17] trained 1500 epochs in 26.9s
+  [H108_cytotoxic_potential-donor-null-TSP5] trained 1500 epochs in 27.3s
+  [H108_cytotoxic_potential-donor-null-TSP15] trained 1500 epochs in 26.6s
+  [H108_cytotoxic_potential-donor-null-TSP28] trained 1500 epochs in 27.0s
+  [H108_cytotoxic_potential-donor-null-TSP3] trained 1500 epochs in 27.9s
+  [H108_cytotoxic_potential-cat-null] groups: 3
+  [H108_cytotoxic_potential-cat-null-0] trained 1500 epochs in 20.1s
+  [H108_cytotoxic_potential-cat-null-1] trained 1500 epochs in 17.1s
+  [H108_cytotoxic_potential-cat-null-2] trained 1500 epochs in 21.3s
+  POS trust=0.715 rand=0.6982248368016808 donor=0.5477300719278265 cat=None
+  NULL trust=0.595 rand=-0.025713565343445564 donor=0.012341409593637637 cat=None
+  VERDICT: INCONCLUSIVE  (854.9s)
+
+--- H109_lineage_compartment_refined: Refined lineage: lymphocyte / MNP / granulocyte / ery-mega / progenitor ---
+  [H109_lineage_compartment_refined] trained 1500 epochs in 27.3s
+  [rand-holdout] trained 1500 epochs in 21.3s
+  [rand-holdout] trained 1500 epochs in 23.2s
+  [rand-holdout] trained 1500 epochs in 22.9s
+  [rand-holdout] trained 1500 epochs in 23.2s
+  [rand-holdout] trained 1500 epochs in 23.4s
+  [H109_lineage_compartment_refined-donor] groups: 11
+  [H109_lineage_compartment_refined-donor-TSP2] trained 1500 epochs in 11.7s
+  [H109_lineage_compartment_refined-donor-TSP20] trained 1500 epochs in 27.3s
+  [H109_lineage_compartment_refined-donor-TSP9] trained 1500 epochs in 28.5s
+  [H109_lineage_compartment_refined-donor-TSP4] trained 1500 epochs in 26.1s
+  [H109_lineage_compartment_refined-donor-TSP17] trained 1500 epochs in 26.1s
+  [H109_lineage_compartment_refined-donor-TSP5] trained 1500 epochs in 27.6s
+  [H109_lineage_compartment_refined-donor-TSP15] trained 1500 epochs in 27.0s
+  [H109_lineage_compartment_refined-donor-TSP28] trained 1500 epochs in 27.4s
+  [H109_lineage_compartment_refined-donor-TSP3] trained 1500 epochs in 27.8s
+  [H109_lineage_compartment_refined-cat] groups: 5
+  [H109_lineage_compartment_refined-cat-mnp] trained 1500 epochs in 21.0s
+  [H109_lineage_compartment_refined-cat-lymphocyte] trained 1500 epochs in 12.5s
+  [H109_lineage_compartment_refined-cat-ery_mega] trained 1500 epochs in 26.9s
+  [H109_lineage_compartment_refined-cat-granulocyte] trained 1500 epochs in 26.5s
+  [H109_lineage_compartment_refined-cat-progenitor] trained 1500 epochs in 27.7s
+  [H109_lineage_compartment_refined_null] trained 1500 epochs in 29.3s
+  [rand-holdout] trained 1500 epochs in 27.3s
+  [rand-holdout] trained 1500 epochs in 25.2s
+  [rand-holdout] trained 1500 epochs in 23.5s
+  [rand-holdout] trained 1500 epochs in 23.6s
+  [rand-holdout] trained 1500 epochs in 22.6s
+  [H109_lineage_compartment_refined-donor-null] groups: 11
+  [H109_lineage_compartment_refined-donor-null-TSP2] trained 1500 epochs in 12.0s
+  [H109_lineage_compartment_refined-donor-null-TSP20] trained 1500 epochs in 26.9s
+  [H109_lineage_compartment_refined-donor-null-TSP9] trained 1500 epochs in 28.0s
+  [H109_lineage_compartment_refined-donor-null-TSP4] trained 1500 epochs in 26.0s
+  [H109_lineage_compartment_refined-donor-null-TSP17] trained 1500 epochs in 26.6s
+  [H109_lineage_compartment_refined-donor-null-TSP5] trained 1500 epochs in 27.2s
+  [H109_lineage_compartment_refined-donor-null-TSP15] trained 1500 epochs in 27.1s
+  [H109_lineage_compartment_refined-donor-null-TSP28] trained 1500 epochs in 27.4s
+  [H109_lineage_compartment_refined-donor-null-TSP3] trained 1500 epochs in 8.6s
+  [H109_lineage_compartment_refined-cat-null] groups: 5
+  [H109_lineage_compartment_refined-cat-null-mnp] trained 1500 epochs in 6.7s
+  [H109_lineage_compartment_refined-cat-null-lymphocyte] trained 1500 epochs in 3.4s
+  [H109_lineage_compartment_refined-cat-null-ery_mega] trained 1500 epochs in 8.2s
+  [H109_lineage_compartment_refined-cat-null-progenitor] trained 1500 epochs in 8.6s
+  [H109_lineage_compartment_refined-cat-null-granulocyte] trained 1500 epochs in 8.4s
+  POS trust=0.719 rand=0.8160774595218714 donor=0.6905539949134862 cat=None
+  NULL trust=0.701 rand=0.11539399839037331 donor=0.011542883158662465 cat=None
+  VERDICT: INCONCLUSIVE  (886.0s)
+
+--- H110_tissue_class: Tissue class: circulating / 1° lymph / 2° lymph / mucosal / parenchymal ---
+  [H110_tissue_class] trained 1500 epochs in 8.7s
+  [rand-holdout] trained 1500 epochs in 8.1s
+  [rand-holdout] trained 1500 epochs in 7.8s
+  [rand-holdout] trained 1500 epochs in 7.5s
+  [rand-holdout] trained 1500 epochs in 7.6s
+  [rand-holdout] trained 1500 epochs in 7.4s
+  [H110_tissue_class-donor] groups: 11
+  [H110_tissue_class-donor-TSP2] trained 1500 epochs in 3.0s
+  [H110_tissue_class-donor-TSP20] trained 1500 epochs in 8.3s
+  [H110_tissue_class-donor-TSP9] trained 1500 epochs in 8.4s
+  [H110_tissue_class-donor-TSP4] trained 1500 epochs in 7.9s
+  [H110_tissue_class-donor-TSP17] trained 1500 epochs in 8.3s
+  [H110_tissue_class-donor-TSP5] trained 1500 epochs in 8.5s
+  [H110_tissue_class-donor-TSP15] trained 1500 epochs in 8.4s
+  [H110_tissue_class-donor-TSP28] trained 1500 epochs in 8.9s
+  [H110_tissue_class-donor-TSP3] trained 1500 epochs in 8.7s
+  [H110_tissue_class-cat] groups: 5
+  [H110_tissue_class-cat-circulating] trained 1500 epochs in 8.4s
+  [H110_tissue_class-cat-mucosal] trained 1500 epochs in 7.3s
+  [H110_tissue_class-cat-secondary_lymphoid] trained 1500 epochs in 7.7s
+  [H110_tissue_class-cat-primary_lymphoid] trained 1500 epochs in 8.0s
+  [H110_tissue_class-cat-parenchymal_other] trained 1500 epochs in 5.3s
+  [H110_tissue_class_null] trained 1500 epochs in 8.6s
+  [rand-holdout] trained 1500 epochs in 7.9s
+  [rand-holdout] trained 1500 epochs in 7.6s
+  [rand-holdout] trained 1500 epochs in 7.7s
+  [rand-holdout] trained 1500 epochs in 7.6s
+  [rand-holdout] trained 1500 epochs in 7.6s
+  [H110_tissue_class-donor-null] groups: 11
+  [H110_tissue_class-donor-null-TSP2] trained 1500 epochs in 3.2s
+  [H110_tissue_class-donor-null-TSP20] trained 1500 epochs in 8.3s
+  [H110_tissue_class-donor-null-TSP9] trained 1500 epochs in 8.6s
+  [H110_tissue_class-donor-null-TSP4] trained 1500 epochs in 8.2s
+  [H110_tissue_class-donor-null-TSP17] trained 1500 epochs in 8.3s
+  [H110_tissue_class-donor-null-TSP5] trained 1500 epochs in 8.8s
+  [H110_tissue_class-donor-null-TSP15] trained 1500 epochs in 8.5s
+  [H110_tissue_class-donor-null-TSP28] trained 1500 epochs in 8.7s
+  [H110_tissue_class-donor-null-TSP3] trained 1500 epochs in 8.6s
+  [H110_tissue_class-cat-null] groups: 5
+  [H110_tissue_class-cat-null-primary_lymphoid] trained 1500 epochs in 8.3s
+  [H110_tissue_class-cat-null-mucosal] trained 1500 epochs in 7.5s
+  [H110_tissue_class-cat-null-secondary_lymphoid] trained 1500 epochs in 7.8s
+  [H110_tissue_class-cat-null-parenchymal_other] trained 1500 epochs in 5.2s
+  [H110_tissue_class-cat-null-circulating] trained 1500 epochs in 8.4s
+  POS trust=0.637 rand=0.6805407247038737 donor=0.036409329778607474 cat=None
+  NULL trust=0.616 rand=-0.010860032343619826 donor=0.0021199436971212193 cat=None
+  VERDICT: INCONCLUSIVE  (310.1s)
+
+--- H111_lifespan_turnover: Cell lifespan ordinal: 0 hours-days / 1 days-weeks / 2 weeks-months / 3 months-years ---
+  [H111_lifespan_turnover] trained 1500 epochs in 8.8s
+  [rand-holdout] trained 1500 epochs in 7.8s
+  [rand-holdout] trained 1500 epochs in 7.7s
+  [rand-holdout] trained 1500 epochs in 7.6s
+  [rand-holdout] trained 1500 epochs in 7.5s
+  [rand-holdout] trained 1500 epochs in 7.7s
+  [H111_lifespan_turnover-donor] groups: 11
+  [H111_lifespan_turnover-donor-TSP2] trained 1500 epochs in 3.2s
+  [H111_lifespan_turnover-donor-TSP20] trained 1500 epochs in 8.5s
+  [H111_lifespan_turnover-donor-TSP9] trained 1500 epochs in 8.9s
+  [H111_lifespan_turnover-donor-TSP4] trained 1500 epochs in 8.0s
+  [H111_lifespan_turnover-donor-TSP17] trained 1500 epochs in 8.4s
+  [H111_lifespan_turnover-donor-TSP5] trained 1500 epochs in 8.7s
+  [H111_lifespan_turnover-donor-TSP15] trained 1500 epochs in 8.8s
+  [H111_lifespan_turnover-donor-TSP28] trained 1500 epochs in 8.9s
+  [H111_lifespan_turnover-donor-TSP3] trained 1500 epochs in 8.8s
+  [H111_lifespan_turnover-cat] groups: 4
+  [H111_lifespan_turnover-cat-1] trained 1500 epochs in 7.8s
+  [H111_lifespan_turnover-cat-2] trained 1500 epochs in 3.6s
+  [H111_lifespan_turnover-cat-3] trained 1500 epochs in 7.7s
+  [H111_lifespan_turnover-cat-0] trained 1500 epochs in 8.3s
+  [H111_lifespan_turnover_null] trained 1500 epochs in 8.9s
+  [rand-holdout] trained 1500 epochs in 7.7s
+  [rand-holdout] trained 1500 epochs in 7.5s
+  [rand-holdout] trained 1500 epochs in 7.1s
+  [rand-holdout] trained 1500 epochs in 7.5s
+  [rand-holdout] trained 1500 epochs in 7.3s
+  [H111_lifespan_turnover-donor-null] groups: 11
+  [H111_lifespan_turnover-donor-null-TSP2] trained 1500 epochs in 3.0s
+  [H111_lifespan_turnover-donor-null-TSP20] trained 1500 epochs in 8.0s
+  [H111_lifespan_turnover-donor-null-TSP9] trained 1500 epochs in 8.5s
+  [H111_lifespan_turnover-donor-null-TSP4] trained 1500 epochs in 7.9s
+  [H111_lifespan_turnover-donor-null-TSP17] trained 1500 epochs in 8.4s
+  [H111_lifespan_turnover-donor-null-TSP5] trained 1500 epochs in 8.4s
+  [H111_lifespan_turnover-donor-null-TSP15] trained 1500 epochs in 8.3s
+  [H111_lifespan_turnover-donor-null-TSP28] trained 1500 epochs in 8.5s
+  [H111_lifespan_turnover-donor-null-TSP3] trained 1500 epochs in 8.1s
+  [H111_lifespan_turnover-cat-null] groups: 4
+  [H111_lifespan_turnover-cat-null-1] trained 1500 epochs in 7.4s
+  [H111_lifespan_turnover-cat-null-3] trained 1500 epochs in 7.5s
+  [H111_lifespan_turnover-cat-null-2] trained 1500 epochs in 3.6s
+  [H111_lifespan_turnover-cat-null-0] trained 1500 epochs in 8.1s
+  POS trust=0.732 rand=0.8109784163526059 donor=0.7627675749213109 cat=None
+  NULL trust=0.617 rand=0.06813136715212499 donor=0.047296703900633286 cat=None
+  VERDICT: INCONCLUSIVE  (288.9s)
+
+--- H112_adaptive_innate_ordinal: Adaptive→Innate ordinal: 0 naive / 1 experienced / 2 innate-like / 3 pure innate ---
+  [H112_adaptive_innate_ordinal] trained 1500 epochs in 8.4s
+  [rand-holdout] trained 1500 epochs in 7.5s
+  [rand-holdout] trained 1500 epochs in 7.1s
+  [rand-holdout] trained 1500 epochs in 7.3s
+  [rand-holdout] trained 1500 epochs in 7.4s
+  [rand-holdout] trained 1500 epochs in 7.2s
+  [H112_adaptive_innate_ordinal-donor] groups: 11
+  [H112_adaptive_innate_ordinal-donor-TSP2] trained 1500 epochs in 3.1s
+  [H112_adaptive_innate_ordinal-donor-TSP20] trained 1500 epochs in 7.9s
+  [H112_adaptive_innate_ordinal-donor-TSP9] trained 1500 epochs in 8.1s
+  [H112_adaptive_innate_ordinal-donor-TSP4] trained 1500 epochs in 7.9s
+  [H112_adaptive_innate_ordinal-donor-TSP17] trained 1500 epochs in 8.0s
+  [H112_adaptive_innate_ordinal-donor-TSP5] trained 1500 epochs in 8.4s
+  [H112_adaptive_innate_ordinal-donor-TSP15] trained 1500 epochs in 8.1s
+  [H112_adaptive_innate_ordinal-donor-TSP28] trained 1500 epochs in 8.1s
+  [H112_adaptive_innate_ordinal-donor-TSP3] trained 1500 epochs in 8.2s
+  [H112_adaptive_innate_ordinal-cat] groups: 4
+  [H112_adaptive_innate_ordinal-cat-3] trained 1500 epochs in 4.1s
+  [H112_adaptive_innate_ordinal-cat-1] trained 1500 epochs in 3.7s
+  [H112_adaptive_innate_ordinal-cat-0] trained 1500 epochs in 8.2s
+  [H112_adaptive_innate_ordinal-cat-2] trained 1500 epochs in 8.3s
+  [H112_adaptive_innate_ordinal_null] trained 1500 epochs in 8.4s
+  [rand-holdout] trained 1500 epochs in 7.6s
+  [rand-holdout] trained 1500 epochs in 7.4s
+  [rand-holdout] trained 1500 epochs in 7.4s
+  [rand-holdout] trained 1500 epochs in 7.1s
+  [rand-holdout] trained 1500 epochs in 7.1s
+  [H112_adaptive_innate_ordinal-donor-null] groups: 11
+  [H112_adaptive_innate_ordinal-donor-null-TSP2] trained 1500 epochs in 3.1s
+  [H112_adaptive_innate_ordinal-donor-null-TSP20] trained 1500 epochs in 8.0s
+  [H112_adaptive_innate_ordinal-donor-null-TSP9] trained 1500 epochs in 8.0s
+  [H112_adaptive_innate_ordinal-donor-null-TSP4] trained 1500 epochs in 7.7s
+  [H112_adaptive_innate_ordinal-donor-null-TSP17] trained 1500 epochs in 8.2s
+  [H112_adaptive_innate_ordinal-donor-null-TSP5] trained 1500 epochs in 8.3s
+  [H112_adaptive_innate_ordinal-donor-null-TSP15] trained 1500 epochs in 8.1s
+  [H112_adaptive_innate_ordinal-donor-null-TSP28] trained 1500 epochs in 8.3s
+  [H112_adaptive_innate_ordinal-donor-null-TSP3] trained 1500 epochs in 8.0s
+  [H112_adaptive_innate_ordinal-cat-null] groups: 4
+  [H112_adaptive_innate_ordinal-cat-null-3] trained 1500 epochs in 4.0s
+  [H112_adaptive_innate_ordinal-cat-null-1] trained 1500 epochs in 3.6s
+  [H112_adaptive_innate_ordinal-cat-null-2] trained 1500 epochs in 8.0s
+  [H112_adaptive_innate_ordinal-cat-null-0] trained 1500 epochs in 8.3s
+  POS trust=0.743 rand=0.7913364809019156 donor=0.7501662591121854 cat=None
+  NULL trust=0.626 rand=-0.001516071610210782 donor=0.008273867554883518 cat=None
+  VERDICT: INCONCLUSIVE  (273.9s)
+
+=== Sweep #3 SUMMARY ===
+H107_antigen_receptor_type             INCONCLUSIVE                     trust=0.771/0.577
+H108_cytotoxic_potential               INCONCLUSIVE                     trust=0.715/0.595
+H109_lineage_compartment_refined       INCONCLUSIVE                     trust=0.719/0.701
+H110_tissue_class                      INCONCLUSIVE                     trust=0.637/0.616
+H111_lifespan_turnover                 INCONCLUSIVE                     trust=0.732/0.617
+H112_adaptive_innate_ordinal           INCONCLUSIVE                     trust=0.743/0.626
+
+Total time: 3314.8s

@@ -1,0 +1,79 @@
+{
+ "n_cells": 2000,
+ "union_genes": 2373,
+ "C_plus_CT_equals_pair_counts_offdiag": true,
+ "diag_C_zero": true,
+ "pair_counts_equal_tokens_PtP": true,
+ "zero_pattern_by_layer": [
+  {
+   "layer": 0,
+   "C0_but_E_pos": 0,
+   "Cpos_but_E0": 0
+  },
+  {
+   "layer": 1,
+   "C0_but_E_pos": 0,
+   "Cpos_but_E0": 0
+  },
+  {
+   "layer": 2,
+   "C0_but_E_pos": 0,
+   "Cpos_but_E0": 0
+  },
+  {
+   "layer": 3,
+   "C0_but_E_pos": 0,
+   "Cpos_but_E0": 0
+  },
+  {
+   "layer": 4,
+   "C0_but_E_pos": 0,
+   "Cpos_but_E0": 0
+  },
+  {
+   "layer": 5,
+   "C0_but_E_pos": 0,
+   "Cpos_but_E0": 0
+  },
+  {
+   "layer": 6,
+   "C0_but_E_pos": 0,
+   "Cpos_but_E0": 0
+  },
+  {
+   "layer": 7,
+   "C0_but_E_pos": 0,
+   "Cpos_but_E0": 0
+  },
+  {
+   "layer": 8,
+   "C0_but_E_pos": 0,
+   "Cpos_but_E0": 0
+  },
+  {
+   "layer": 9,
+   "C0_but_E_pos": 0,
+   "Cpos_but_E0": 0
+  },
+  {
+   "layer": 10,
+   "C0_but_E_pos": 0,
+   "Cpos_but_E0": 0
+  }
+ ],
+ "n_offdiag_pairs_n_pair_gt0": 5628746,
+ "max_layer8_attention_mass_above_diagonal_any_cell": 0.0,
+ "nll_next_gene_mean": 3.0885489639043806,
+ "nll_next_gene_ci95_cell_bootstrap": [
+  3.0819044753998517,
+  3.0954407824248076
+ ],
+ "top1_next_gene_mean": 0.20734763899726652,
+ "n_encoding_check_blocks": 80,
+ "n_cells_encoding_checked_before_forward": 2000,
+ "all_encoding_checks_pass": true,
+ "new_slice_gene_order_matches_gene_features": true,
+ "deployed_slice_gene_order_matches_deployed_table": true,
+ "pair_counts_median_new": 649.0,
+ "seconds": 5.751195907592773
+}

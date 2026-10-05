@@ -1,0 +1,85 @@
+[lung] L11  n_genes=382  n_pairs=1308  n_pos=252
+[immune] L11  n_genes=350  n_pairs=2544  n_pos=504
+[external_lung] L11  n_genes=380  n_pairs=751  n_pos=138
+{
+  "scope": {
+    "layer": 11,
+    "n_cv": 3,
+    "n_null": 8,
+    "knn": 12,
+    "seed": 42,
+    "feature_dim": 12,
+    "support_dir": "knn_rank_asymmetry"
+  },
+  "per_domain": [
+    {
+      "domain": "lung",
+      "status": "ok",
+      "layer": 11,
+      "n_pairs": 1308,
+      "n_pos": 252,
+      "auc_sec": 0.6115131974506974,
+      "auc_tri_h70": 0.5021194083694084,
+      "delta_vs_h70": 0.10939378908128905,
+      "null_swap_mean": 0.6051225611772486,
+      "null_swap_q95": 0.6121458258177007,
+      "null_rowshuf_mean": 0.5010465518278019,
+      "null_rowshuf_q95": 0.5205028333934584,
+      "null_label_mean": 0.4851603835978836,
+      "null_label_q95": 0.5230081694925445,
+      "null_max_q95": 0.6121458258177007,
+      "null_gap": -0.0006326283670032851,
+      "strict_positive": false,
+      "directional_positive": true
+    },
+    {
+      "domain": "immune",
+      "status": "ok",
+      "layer": 11,
+      "n_pairs": 2544,
+      "n_pos": 504,
+      "auc_sec": 0.5887536959228136,
+      "auc_tri_h70": 0.5362686741363212,
+      "delta_vs_h70": 0.05248502178649239,
+      "null_swap_mean": 0.5825258228291317,
+      "null_swap_q95": 0.5881389083411143,
+      "null_rowshuf_mean": 0.4968042425303455,
+      "null_rowshuf_q95": 0.5137831660441954,
+      "null_label_mean": 0.498551538671024,
+      "null_label_q95": 0.5246923630563336,
+      "null_max_q95": 0.5881389083411143,
+      "null_gap": 0.0006147875816993054,
+      "strict_positive": true,
+      "directional_positive": true
+    },
+    {
+      "domain": "external_lung",
+      "status": "ok",
+      "layer": 11,
+      "n_pairs": 751,
+      "n_pos": 138,
+      "auc_sec": 0.5482303709482942,
+      "auc_tri_h70": 0.5727120126722935,
+      "delta_vs_h70": -0.02448164172399936,
+      "null_swap_mean": 0.5551871291108117,
+      "null_swap_q95": 0.582216823888219,
+      "null_rowshuf_mean": 0.5245658675556186,
+      "null_rowshuf_q95": 0.5666471617372391,
+      "null_label_mean": 0.5064647019883207,
+      "null_label_q95": 0.5311706504007376,
+      "null_max_q95": 0.582216823888219,
+      "null_gap": -0.03398645293992486,
+      "strict_positive": false,
+      "directional_positive": false
+    }
+  ],
+  "aggregate": {
+    "n_domains": 3,
+    "mean_auc_sec": 0.5828324214406018,
+    "mean_auc_tri_h70": 0.5370333650593411,
+    "mean_delta_vs_h70": 0.045799056381260694,
+    "mean_null_gap": -0.01133476457507628,
+    "n_directional_positive": 2,
+    "n_strict_positive": 1
+  }
+}

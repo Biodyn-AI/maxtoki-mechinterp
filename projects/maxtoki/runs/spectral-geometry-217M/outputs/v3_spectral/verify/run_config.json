@@ -1,0 +1,177 @@
+{
+  "verify_code": {
+    "time": "2026-10-02T21:26:32",
+    "code": {
+      "script": "<REPO_ROOT>/projects/maxtoki/runs/spectral-geometry-217M/scripts/v3_spectral.py",
+      "script_sha256": "1c41677de72c0dff769c3c4322ef29e99047df50233cb84ecfeb44dfdd30f1da",
+      "inputs_v3_sha256": "019e38346748c027a55ce3d32c33c9096f9e60b9434e51e51b1d836a6bfc3707",
+      "hooks_v2_sha256": "1ba6fda5ad761b1f82041a7b1397fa9332fa7438e13db955a00d751c4b440f54",
+      "maxtoki_adapter_sha256": "cab725dfc391ec74d6b9c2930ffd87b53badff47f5f04e93d29977b7a771540a",
+      "deployed_phase0_extract_sha256": "397294259b3601058a27b9f284184688713cb45c6e36dce7af0087e230f6a4fd",
+      "deployed_phase1_svd_sha256": "2aaba31931a2ae55d1958811506d65b0ad76ec9d1986824fc766766e71c2c1ef",
+      "deployed_phase8_stability_sha256": "e7749d929b9103f1a1ff0af1959dba9059bac9417e07aaeccfc224d80bfd7299"
+    },
+    "env": {
+      "device": "mps",
+      "torch": "2.11.0",
+      "transformers": "5.5.4",
+      "python": "3.12.9",
+      "platform": "macOS-26.3-arm64-arm-64bit",
+      "hooks_v2_sha256": "1ba6fda5ad761b1f82041a7b1397fa9332fa7438e13db955a00d751c4b440f54",
+      "model_dir": "<REPO_ROOT>/projects/maxtoki/setup/MaxToki-217M-HF",
+      "model_dtype": "float32",
+      "timestamp": "2026-10-02T21:26:32"
+    },
+    "wall_s": 0.2
+  },
+  "verify_samples": {
+    "time": "2026-10-02T21:26:40",
+    "code": {
+      "script": "<REPO_ROOT>/projects/maxtoki/runs/spectral-geometry-217M/scripts/v3_spectral.py",
+      "script_sha256": "1c41677de72c0dff769c3c4322ef29e99047df50233cb84ecfeb44dfdd30f1da",
+      "inputs_v3_sha256": "019e38346748c027a55ce3d32c33c9096f9e60b9434e51e51b1d836a6bfc3707",
+      "hooks_v2_sha256": "1ba6fda5ad761b1f82041a7b1397fa9332fa7438e13db955a00d751c4b440f54",
+      "maxtoki_adapter_sha256": "cab725dfc391ec74d6b9c2930ffd87b53badff47f5f04e93d29977b7a771540a",
+      "deployed_phase0_extract_sha256": "397294259b3601058a27b9f284184688713cb45c6e36dce7af0087e230f6a4fd",
+      "deployed_phase1_svd_sha256": "2aaba31931a2ae55d1958811506d65b0ad76ec9d1986824fc766766e71c2c1ef",
+      "deployed_phase8_stability_sha256": "e7749d929b9103f1a1ff0af1959dba9059bac9417e07aaeccfc224d80bfd7299"
+    },
+    "env": {
+      "device": "mps",
+      "torch": "2.11.0",
+      "transformers": "5.5.4",
+      "python": "3.12.9",
+      "platform": "macOS-26.3-arm64-arm-64bit",
+      "hooks_v2_sha256": "1ba6fda5ad761b1f82041a7b1397fa9332fa7438e13db955a00d751c4b440f54",
+      "model_dir": "<REPO_ROOT>/projects/maxtoki/setup/MaxToki-217M-HF",
+      "model_dtype": "float32",
+      "timestamp": "2026-10-02T21:26:40"
+    },
+    "wall_s": 0.1
+  },
+  "verify_tokens": {
+    "time": "2026-10-02T21:26:48",
+    "code": {
+      "script": "<REPO_ROOT>/projects/maxtoki/runs/spectral-geometry-217M/scripts/v3_spectral.py",
+      "script_sha256": "1c41677de72c0dff769c3c4322ef29e99047df50233cb84ecfeb44dfdd30f1da",
+      "inputs_v3_sha256": "019e38346748c027a55ce3d32c33c9096f9e60b9434e51e51b1d836a6bfc3707",
+      "hooks_v2_sha256": "1ba6fda5ad761b1f82041a7b1397fa9332fa7438e13db955a00d751c4b440f54",
+      "maxtoki_adapter_sha256": "cab725dfc391ec74d6b9c2930ffd87b53badff47f5f04e93d29977b7a771540a",
+      "deployed_phase0_extract_sha256": "397294259b3601058a27b9f284184688713cb45c6e36dce7af0087e230f6a4fd",
+      "deployed_phase1_svd_sha256": "2aaba31931a2ae55d1958811506d65b0ad76ec9d1986824fc766766e71c2c1ef",
+      "deployed_phase8_stability_sha256": "e7749d929b9103f1a1ff0af1959dba9059bac9417e07aaeccfc224d80bfd7299"
+    },
+    "env": {
+      "device": "mps",
+      "torch": "2.11.0",
+      "transformers": "5.5.4",
+      "python": "3.12.9",
+      "platform": "macOS-26.3-arm64-arm-64bit",
+      "hooks_v2_sha256": "1ba6fda5ad761b1f82041a7b1397fa9332fa7438e13db955a00d751c4b440f54",
+      "model_dir": "<REPO_ROOT>/projects/maxtoki/setup/MaxToki-217M-HF",
+      "model_dtype": "float32",
+      "timestamp": "2026-10-02T21:26:48"
+    },
+    "wall_s": 0.9
+  },
+  "verify_sums": {
+    "time": "2026-10-02T21:27:28",
+    "code": {
+      "script": "<REPO_ROOT>/projects/maxtoki/runs/spectral-geometry-217M/scripts/v3_spectral.py",
+      "script_sha256": "1c41677de72c0dff769c3c4322ef29e99047df50233cb84ecfeb44dfdd30f1da",
+      "inputs_v3_sha256": "019e38346748c027a55ce3d32c33c9096f9e60b9434e51e51b1d836a6bfc3707",
+      "hooks_v2_sha256": "1ba6fda5ad761b1f82041a7b1397fa9332fa7438e13db955a00d751c4b440f54",
+      "maxtoki_adapter_sha256": "cab725dfc391ec74d6b9c2930ffd87b53badff47f5f04e93d29977b7a771540a",
+      "deployed_phase0_extract_sha256": "397294259b3601058a27b9f284184688713cb45c6e36dce7af0087e230f6a4fd",
+      "deployed_phase1_svd_sha256": "2aaba31931a2ae55d1958811506d65b0ad76ec9d1986824fc766766e71c2c1ef",
+      "deployed_phase8_stability_sha256": "e7749d929b9103f1a1ff0af1959dba9059bac9417e07aaeccfc224d80bfd7299"
+    },
+    "env": {
+      "device": "mps",
+      "torch": "2.11.0",
+      "transformers": "5.5.4",
+      "python": "3.12.9",
+      "platform": "macOS-26.3-arm64-arm-64bit",
+      "hooks_v2_sha256": "1ba6fda5ad761b1f82041a7b1397fa9332fa7438e13db955a00d751c4b440f54",
+      "model_dir": "<REPO_ROOT>/projects/maxtoki/setup/MaxToki-217M-HF",
+      "model_dtype": "float32",
+      "timestamp": "2026-10-02T21:27:28"
+    },
+    "wall_s": 27.0
+  },
+  "verify_l0": {
+    "time": "2026-10-02T21:27:51",
+    "code": {
+      "script": "<REPO_ROOT>/projects/maxtoki/runs/spectral-geometry-217M/scripts/v3_spectral.py",
+      "script_sha256": "1c41677de72c0dff769c3c4322ef29e99047df50233cb84ecfeb44dfdd30f1da",
+      "inputs_v3_sha256": "019e38346748c027a55ce3d32c33c9096f9e60b9434e51e51b1d836a6bfc3707",
+      "hooks_v2_sha256": "1ba6fda5ad761b1f82041a7b1397fa9332fa7438e13db955a00d751c4b440f54",
+      "maxtoki_adapter_sha256": "cab725dfc391ec74d6b9c2930ffd87b53badff47f5f04e93d29977b7a771540a",
+      "deployed_phase0_extract_sha256": "397294259b3601058a27b9f284184688713cb45c6e36dce7af0087e230f6a4fd",
+      "deployed_phase1_svd_sha256": "2aaba31931a2ae55d1958811506d65b0ad76ec9d1986824fc766766e71c2c1ef",
+      "deployed_phase8_stability_sha256": "e7749d929b9103f1a1ff0af1959dba9059bac9417e07aaeccfc224d80bfd7299"
+    },
+    "env": {
+      "device": "mps",
+      "torch": "2.11.0",
+      "transformers": "5.5.4",
+      "python": "3.12.9",
+      "platform": "macOS-26.3-arm64-arm-64bit",
+      "hooks_v2_sha256": "1ba6fda5ad761b1f82041a7b1397fa9332fa7438e13db955a00d751c4b440f54",
+      "model_dir": "<REPO_ROOT>/projects/maxtoki/setup/MaxToki-217M-HF",
+      "model_dtype": "float32",
+      "timestamp": "2026-10-02T21:27:51"
+    },
+    "wall_s": 12.2
+  },
+  "verify_metrics2": {
+    "time": "2026-10-02T21:28:06",
+    "code": {
+      "script": "<REPO_ROOT>/projects/maxtoki/runs/spectral-geometry-217M/scripts/v3_spectral.py",
+      "script_sha256": "1c41677de72c0dff769c3c4322ef29e99047df50233cb84ecfeb44dfdd30f1da",
+      "inputs_v3_sha256": "019e38346748c027a55ce3d32c33c9096f9e60b9434e51e51b1d836a6bfc3707",
+      "hooks_v2_sha256": "1ba6fda5ad761b1f82041a7b1397fa9332fa7438e13db955a00d751c4b440f54",
+      "maxtoki_adapter_sha256": "cab725dfc391ec74d6b9c2930ffd87b53badff47f5f04e93d29977b7a771540a",
+      "deployed_phase0_extract_sha256": "397294259b3601058a27b9f284184688713cb45c6e36dce7af0087e230f6a4fd",
+      "deployed_phase1_svd_sha256": "2aaba31931a2ae55d1958811506d65b0ad76ec9d1986824fc766766e71c2c1ef",
+      "deployed_phase8_stability_sha256": "e7749d929b9103f1a1ff0af1959dba9059bac9417e07aaeccfc224d80bfd7299"
+    },
+    "env": {
+      "device": "mps",
+      "torch": "2.11.0",
+      "transformers": "5.5.4",
+      "python": "3.12.9",
+      "platform": "macOS-26.3-arm64-arm-64bit",
+      "hooks_v2_sha256": "1ba6fda5ad761b1f82041a7b1397fa9332fa7438e13db955a00d751c4b440f54",
+      "model_dir": "<REPO_ROOT>/projects/maxtoki/setup/MaxToki-217M-HF",
+      "model_dtype": "float32",
+      "timestamp": "2026-10-02T21:28:06"
+    },
+    "wall_s": 6.5
+  },
+  "verify_forward": {
+    "time": "2026-10-02T21:28:41",
+    "code": {
+      "script": "<REPO_ROOT>/projects/maxtoki/runs/spectral-geometry-217M/scripts/v3_spectral.py",
+      "script_sha256": "1c41677de72c0dff769c3c4322ef29e99047df50233cb84ecfeb44dfdd30f1da",
+      "inputs_v3_sha256": "019e38346748c027a55ce3d32c33c9096f9e60b9434e51e51b1d836a6bfc3707",
+      "hooks_v2_sha256": "1ba6fda5ad761b1f82041a7b1397fa9332fa7438e13db955a00d751c4b440f54",
+      "maxtoki_adapter_sha256": "cab725dfc391ec74d6b9c2930ffd87b53badff47f5f04e93d29977b7a771540a",
+      "deployed_phase0_extract_sha256": "397294259b3601058a27b9f284184688713cb45c6e36dce7af0087e230f6a4fd",
+      "deployed_phase1_svd_sha256": "2aaba31931a2ae55d1958811506d65b0ad76ec9d1986824fc766766e71c2c1ef",
+      "deployed_phase8_stability_sha256": "e7749d929b9103f1a1ff0af1959dba9059bac9417e07aaeccfc224d80bfd7299"
+    },
+    "env": {
+      "device": "mps",
+      "torch": "2.11.0",
+      "transformers": "5.5.4",
+      "python": "3.12.9",
+      "platform": "macOS-26.3-arm64-arm-64bit",
+      "hooks_v2_sha256": "1ba6fda5ad761b1f82041a7b1397fa9332fa7438e13db955a00d751c4b440f54",
+      "model_dir": "<REPO_ROOT>/projects/maxtoki/setup/MaxToki-217M-HF",
+      "model_dtype": "float32",
+      "timestamp": "2026-10-02T21:28:41"
+    },
+    "wall_s": 21.0
+  }
+}

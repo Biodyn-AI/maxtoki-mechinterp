@@ -1,0 +1,15 @@
+{
+  "metric": "off-diagonal Pearson(MaxToki cosine, Geneformer V2-316M cosine), 1500-HVG static embeddings",
+  "observed_pearson": 0.38198441170824876,
+  "n_hvg": 1500,
+  "n_bootstrap": 1000,
+  "bootstrap_method": "subsample 80% of genes without replacement; recompute off-diagonal Pearson on (sub_n \u00d7 sub_n) submatrix. With-replacement bootstrap is biased upward here because duplicate-gene rows would contribute self-similarity (=1) entries to the off-diagonal vector.",
+  "subsample_size": 1200,
+  "bootstrap_ci95": [
+    0.3797381344334986,
+    0.3843356435408159
+  ],
+  "bootstrap_mean": 0.3820325682943445,
+  "bootstrap_sd": 0.0011547393427346578,
+  "interpretation": "Observed Pearson = 0.3820; bootstrap 95% CI = [0.3797, 0.3843]. The CI is tight and decisively excludes zero, confirming the cross-model alignment result is gene-resampling-stable. Compare to the audit's residual exposure: this CI addresses sampling-of-genes uncertainty but NOT the architectural-family scope qualifier (scGPT yields r=0.40 on the same comparison; cross-model alignment does not generalize across architectural families)."
+}

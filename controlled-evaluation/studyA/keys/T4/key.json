@@ -1,0 +1,415 @@
+{
+ "task": "T4",
+ "question": "Is MaxToki-217M's gene-embedding geometry aligned with scGPT's, and how does that alignment compare with its alignment to Geneformer V2-316M (which shares MaxToki's gene vocabulary)?",
+ "verdict_options": [
+  "aligned with scGPT about as well as with Geneformer",
+  "aligned with scGPT but clearly less than with Geneformer",
+  "not aligned with scGPT beyond chance",
+  "inconclusive"
+ ],
+ "key_verdict": "aligned with scGPT but clearly less than with Geneformer",
+ "key_conclusion": "With scGPT rows looked up by token id, MaxToki-217M's input gene-embedding table agrees with scGPT's far above chance on all three panels (gene-pair cosine Pearson 0.26-0.28 vs chance 0.00, SD 0.004; held-out canonical r about 0.48-0.50 vs chance about 0.00). It agrees clearly more with Geneformer V2-316M: Geneformer minus scGPT is +0.10 to +0.14 in gene-pair Pearson (paired gene-bootstrap 95% CIs about [0.09, 0.15], never touching 0) and about +0.10 in held-out canonical r (CIs exclude 0). The apparent absence of scGPT alignment (CCA about 0.40, Pearson about 0) arises only when scGPT rows are read by the position of the symbol in vocab.json, which reads another gene's vector for every gene.",
+ "acceptable_alternatives": [],
+ "acceptable_alternatives_note": "None. 'about as well as' is not acceptable: the paired Geneformer-minus-scGPT differences are about one third of the Geneformer Pearson value and their CIs exclude 0 on every panel for Pearson and held-out CCA; a reader who looks only at raw in-sample CCA (0.72-0.74 vs 0.77-0.78) without chance level or a paired interval has not shown 'about as well'. 'not aligned beyond chance' is the wrong-lookup result. 'inconclusive' is not supported: every estimate is far from chance and the gap is consistent across panels and metrics. Independent verification found the gap on every metric it tried (gene-pair Pearson and Spearman, linear CKA, in-sample CCA above chance with PCA-20 or PCA-30, held-out CCA, held-out top-1, top-10 and top-20 neighbour overlap). Its size depends on the metric: it is smallest for local neighbour overlap (top-10 overlap 0.18-0.21 for Geneformer vs 0.16 for scGPT, chance 0.03), but even there the paired per-gene interval is above 0 on every panel. So a deliverable that uses other reasonable metrics should still reach the key verdict.",
+ "key_numbers": [
+  {
+   "name": "pearson_geneformer_lung",
+   "value": 0.398,
+   "tolerance": 0.01,
+   "definition": "Pearson r between the upper-triangle entries of the gene x gene cosine-similarity matrix of MaxToki-217M's embed_tokens rows and that of the other model's rows, on the panel's genes, using the full (not PCA-reduced) vectors. scGPT rows = vocab.json[symbol] (token id), LayerNorm(enc_norm) applied; the raw scGPT table gives 0.266 / 0.256 / 0.284, inside the tolerance. Source report 4.3; reference.py gives 0.3979; gene-bootstrap 95% CI [0.383, 0.414] (unit = gene, copy pairs dropped)."
+  },
+  {
+   "name": "pearson_geneformer_immune",
+   "value": 0.4,
+   "tolerance": 0.01,
+   "definition": "Pearson r between the upper-triangle entries of the gene x gene cosine-similarity matrix of MaxToki-217M's embed_tokens rows and that of the other model's rows, on the panel's genes, using the full (not PCA-reduced) vectors. scGPT rows = vocab.json[symbol] (token id), LayerNorm(enc_norm) applied; the raw scGPT table gives 0.266 / 0.256 / 0.284, inside the tolerance. Source report 4.3; reference.py gives 0.4003; gene-bootstrap 95% CI [0.385, 0.416] (unit = gene, copy pairs dropped)."
+  },
+  {
+   "name": "pearson_geneformer_external_lung",
+   "value": 0.387,
+   "tolerance": 0.01,
+   "definition": "Pearson r between the upper-triangle entries of the gene x gene cosine-similarity matrix of MaxToki-217M's embed_tokens rows and that of the other model's rows, on the panel's genes, using the full (not PCA-reduced) vectors. scGPT rows = vocab.json[symbol] (token id), LayerNorm(enc_norm) applied; the raw scGPT table gives 0.266 / 0.256 / 0.284, inside the tolerance. Source report 4.3; reference.py gives 0.3874; gene-bootstrap 95% CI [0.374, 0.402] (unit = gene, copy pairs dropped)."
+  },
+  {
+   "name": "pearson_scgpt_lung",
+   "value": 0.265,
+   "tolerance": 0.012,
+   "definition": "Pearson r between the upper-triangle entries of the gene x gene cosine-similarity matrix of MaxToki-217M's embed_tokens rows and that of the other model's rows, on the panel's genes, using the full (not PCA-reduced) vectors. scGPT rows = vocab.json[symbol] (token id), LayerNorm(enc_norm) applied; the raw scGPT table gives 0.266 / 0.256 / 0.284, inside the tolerance. Source report 4.3; reference.py gives 0.2655; gene-bootstrap 95% CI [0.246, 0.287] (unit = gene, copy pairs dropped)."
+  },
+  {
+   "name": "pearson_scgpt_immune",
+   "value": 0.263,
+   "tolerance": 0.012,
+   "definition": "Pearson r between the upper-triangle entries of the gene x gene cosine-similarity matrix of MaxToki-217M's embed_tokens rows and that of the other model's rows, on the panel's genes, using the full (not PCA-reduced) vectors. scGPT rows = vocab.json[symbol] (token id), LayerNorm(enc_norm) applied; the raw scGPT table gives 0.266 / 0.256 / 0.284, inside the tolerance. Source report 4.3; reference.py gives 0.2632; gene-bootstrap 95% CI [0.245, 0.282] (unit = gene, copy pairs dropped)."
+  },
+  {
+   "name": "pearson_scgpt_external_lung",
+   "value": 0.283,
+   "tolerance": 0.012,
+   "definition": "Pearson r between the upper-triangle entries of the gene x gene cosine-similarity matrix of MaxToki-217M's embed_tokens rows and that of the other model's rows, on the panel's genes, using the full (not PCA-reduced) vectors. scGPT rows = vocab.json[symbol] (token id), LayerNorm(enc_norm) applied; the raw scGPT table gives 0.266 / 0.256 / 0.284, inside the tolerance. Source report 4.3; reference.py gives 0.2835; gene-bootstrap 95% CI [0.267, 0.3] (unit = gene, copy pairs dropped)."
+  },
+  {
+   "name": "pearson_chance_mean_any_panel",
+   "value": 0.0,
+   "tolerance": 0.01,
+   "definition": "Mean of the gene-pair Pearson under random permutation of the gene correspondence (SD about 0.004 at n = 350-382). Source report 4.3; reference.py gives -0.0002 to 0.0001."
+  },
+  {
+   "name": "pearson_diff_geneformer_minus_scgpt_lung",
+   "value": 0.132,
+   "tolerance": 0.015,
+   "definition": "Geneformer gene-pair Pearson minus scGPT gene-pair Pearson on the same genes. Paired gene bootstrap (same resamples for both, 2,000 draws, copy pairs dropped) 95% CI [0.119, 0.147] in the source report 4.6; reference.py CI [0.118, 0.147]. The CI excludes 0 on every panel."
+  },
+  {
+   "name": "pearson_diff_ci_low_lung",
+   "value": 0.119,
+   "tolerance": 0.012,
+   "definition": "Lower 95% bound of the paired gene-bootstrap interval of the Geneformer minus scGPT gene-pair Pearson difference."
+  },
+  {
+   "name": "pearson_diff_geneformer_minus_scgpt_immune",
+   "value": 0.137,
+   "tolerance": 0.015,
+   "definition": "Geneformer gene-pair Pearson minus scGPT gene-pair Pearson on the same genes. Paired gene bootstrap (same resamples for both, 2,000 draws, copy pairs dropped) 95% CI [0.121, 0.153] in the source report 4.6; reference.py CI [0.121, 0.153]. The CI excludes 0 on every panel."
+  },
+  {
+   "name": "pearson_diff_ci_low_immune",
+   "value": 0.121,
+   "tolerance": 0.012,
+   "definition": "Lower 95% bound of the paired gene-bootstrap interval of the Geneformer minus scGPT gene-pair Pearson difference."
+  },
+  {
+   "name": "pearson_diff_geneformer_minus_scgpt_external_lung",
+   "value": 0.104,
+   "tolerance": 0.015,
+   "definition": "Geneformer gene-pair Pearson minus scGPT gene-pair Pearson on the same genes. Paired gene bootstrap (same resamples for both, 2,000 draws, copy pairs dropped) 95% CI [0.088, 0.119] in the source report 4.6; reference.py CI [0.089, 0.119]. The CI excludes 0 on every panel."
+  },
+  {
+   "name": "pearson_diff_ci_low_external_lung",
+   "value": 0.088,
+   "tolerance": 0.012,
+   "definition": "Lower 95% bound of the paired gene-bootstrap interval of the Geneformer minus scGPT gene-pair Pearson difference."
+  },
+  {
+   "name": "cca_insample_geneformer_lung",
+   "value": 0.783,
+   "tolerance": 0.02,
+   "definition": "Mean of the 10 in-sample canonical correlations between PCA-30 of MaxToki rows and PCA-30 of the other model's rows (each centred, PCA fitted separately), the deployed setting (sklearn PCA random_state=42, sklearn CCA(10)). Exact SVD-PCA gives up to +0.011 (Geneformer 0.794/0.779/0.769; scGPT 0.730/0.741/0.730). Source report 4.1; no valid with-replacement bootstrap interval exists for this statistic."
+  },
+  {
+   "name": "cca_insample_geneformer_immune",
+   "value": 0.776,
+   "tolerance": 0.02,
+   "definition": "Mean of the 10 in-sample canonical correlations between PCA-30 of MaxToki rows and PCA-30 of the other model's rows (each centred, PCA fitted separately), the deployed setting (sklearn PCA random_state=42, sklearn CCA(10)). Exact SVD-PCA gives up to +0.011 (Geneformer 0.794/0.779/0.769; scGPT 0.730/0.741/0.730). Source report 4.1; no valid with-replacement bootstrap interval exists for this statistic."
+  },
+  {
+   "name": "cca_insample_geneformer_external_lung",
+   "value": 0.766,
+   "tolerance": 0.02,
+   "definition": "Mean of the 10 in-sample canonical correlations between PCA-30 of MaxToki rows and PCA-30 of the other model's rows (each centred, PCA fitted separately), the deployed setting (sklearn PCA random_state=42, sklearn CCA(10)). Exact SVD-PCA gives up to +0.011 (Geneformer 0.794/0.779/0.769; scGPT 0.730/0.741/0.730). Source report 4.1; no valid with-replacement bootstrap interval exists for this statistic."
+  },
+  {
+   "name": "cca_insample_scgpt_lung",
+   "value": 0.722,
+   "tolerance": 0.02,
+   "definition": "Mean of the 10 in-sample canonical correlations between PCA-30 of MaxToki rows and PCA-30 of the other model's rows (each centred, PCA fitted separately), the deployed setting (sklearn PCA random_state=42, sklearn CCA(10)). Exact SVD-PCA gives up to +0.011 (Geneformer 0.794/0.779/0.769; scGPT 0.730/0.741/0.730). Source report 4.1; no valid with-replacement bootstrap interval exists for this statistic."
+  },
+  {
+   "name": "cca_insample_scgpt_immune",
+   "value": 0.736,
+   "tolerance": 0.02,
+   "definition": "Mean of the 10 in-sample canonical correlations between PCA-30 of MaxToki rows and PCA-30 of the other model's rows (each centred, PCA fitted separately), the deployed setting (sklearn PCA random_state=42, sklearn CCA(10)). Exact SVD-PCA gives up to +0.011 (Geneformer 0.794/0.779/0.769; scGPT 0.730/0.741/0.730). Source report 4.1; no valid with-replacement bootstrap interval exists for this statistic."
+  },
+  {
+   "name": "cca_insample_scgpt_external_lung",
+   "value": 0.733,
+   "tolerance": 0.02,
+   "definition": "Mean of the 10 in-sample canonical correlations between PCA-30 of MaxToki rows and PCA-30 of the other model's rows (each centred, PCA fitted separately), the deployed setting (sklearn PCA random_state=42, sklearn CCA(10)). Exact SVD-PCA gives up to +0.011 (Geneformer 0.794/0.779/0.769; scGPT 0.730/0.741/0.730). Source report 4.1; no valid with-replacement bootstrap interval exists for this statistic."
+  },
+  {
+   "name": "cca_insample_chance_mean_lung",
+   "value": 0.411,
+   "tolerance": 0.015,
+   "definition": "Mean in-sample CCA (same n, 30 dims, 10 components) after permuting the gene correspondence and refitting CCA; 1,000 permutations, SD about 0.009-0.010. Source report 4.1; reference.py 0.411."
+  },
+  {
+   "name": "cca_insample_chance_mean_immune",
+   "value": 0.429,
+   "tolerance": 0.015,
+   "definition": "Mean in-sample CCA (same n, 30 dims, 10 components) after permuting the gene correspondence and refitting CCA; 1,000 permutations, SD about 0.009-0.010. Source report 4.1; reference.py 0.43."
+  },
+  {
+   "name": "cca_insample_chance_mean_external_lung",
+   "value": 0.412,
+   "tolerance": 0.015,
+   "definition": "Mean in-sample CCA (same n, 30 dims, 10 components) after permuting the gene correspondence and refitting CCA; 1,000 permutations, SD about 0.009-0.010. Source report 4.1; reference.py 0.412."
+  },
+  {
+   "name": "cca_heldout_geneformer_lung",
+   "value": 0.604,
+   "tolerance": 0.03,
+   "definition": "Held-out canonical correlation: 5-fold split of genes; PCA-30 of each model, CCA(10) fitted on the training 80%; mean of the 10 correlations of held-out canonical scores; averaged over folds and 10 random splits. Chance about 0.00 (95th pct 0.03). Source report 4.2 (verification pass 0.607/0.573/0.579 and 0.499/0.496/0.504); reference.py 0.612; OOB-bootstrap 95% CI [0.512, 0.605] (unit = gene)."
+  },
+  {
+   "name": "cca_heldout_geneformer_immune",
+   "value": 0.558,
+   "tolerance": 0.03,
+   "definition": "Held-out canonical correlation: 5-fold split of genes; PCA-30 of each model, CCA(10) fitted on the training 80%; mean of the 10 correlations of held-out canonical scores; averaged over folds and 10 random splits. Chance about 0.00 (95th pct 0.03). Source report 4.2 (verification pass 0.607/0.573/0.579 and 0.499/0.496/0.504); reference.py 0.573; OOB-bootstrap 95% CI [0.488, 0.573] (unit = gene)."
+  },
+  {
+   "name": "cca_heldout_geneformer_external_lung",
+   "value": 0.578,
+   "tolerance": 0.03,
+   "definition": "Held-out canonical correlation: 5-fold split of genes; PCA-30 of each model, CCA(10) fitted on the training 80%; mean of the 10 correlations of held-out canonical scores; averaged over folds and 10 random splits. Chance about 0.00 (95th pct 0.03). Source report 4.2 (verification pass 0.607/0.573/0.579 and 0.499/0.496/0.504); reference.py 0.573; OOB-bootstrap 95% CI [0.499, 0.591] (unit = gene)."
+  },
+  {
+   "name": "cca_heldout_scgpt_lung",
+   "value": 0.495,
+   "tolerance": 0.03,
+   "definition": "Held-out canonical correlation: 5-fold split of genes; PCA-30 of each model, CCA(10) fitted on the training 80%; mean of the 10 correlations of held-out canonical scores; averaged over folds and 10 random splits. Chance about 0.00 (95th pct 0.03). Source report 4.2 (verification pass 0.607/0.573/0.579 and 0.499/0.496/0.504); reference.py 0.497; OOB-bootstrap 95% CI [0.405, 0.503] (unit = gene)."
+  },
+  {
+   "name": "cca_heldout_scgpt_immune",
+   "value": 0.481,
+   "tolerance": 0.03,
+   "definition": "Held-out canonical correlation: 5-fold split of genes; PCA-30 of each model, CCA(10) fitted on the training 80%; mean of the 10 correlations of held-out canonical scores; averaged over folds and 10 random splits. Chance about 0.00 (95th pct 0.03). Source report 4.2 (verification pass 0.607/0.573/0.579 and 0.499/0.496/0.504); reference.py 0.491; OOB-bootstrap 95% CI [0.371, 0.476] (unit = gene)."
+  },
+  {
+   "name": "cca_heldout_scgpt_external_lung",
+   "value": 0.493,
+   "tolerance": 0.03,
+   "definition": "Held-out canonical correlation: 5-fold split of genes; PCA-30 of each model, CCA(10) fitted on the training 80%; mean of the 10 correlations of held-out canonical scores; averaged over folds and 10 random splits. Chance about 0.00 (95th pct 0.03). Source report 4.2 (verification pass 0.607/0.573/0.579 and 0.499/0.496/0.504); reference.py 0.498; OOB-bootstrap 95% CI [0.396, 0.497] (unit = gene)."
+  },
+  {
+   "name": "cca_heldout_diff_geneformer_minus_scgpt_lung",
+   "value": 0.112,
+   "tolerance": 0.03,
+   "definition": "Mean over 500 paired out-of-bag gene-bootstrap draws of (Geneformer held-out canonical r minus scGPT held-out canonical r). Source report 4.6 (CIs about [0.04-0.05, 0.15-0.17]); reference.py 0.108 CI [0.056, 0.168]."
+  },
+  {
+   "name": "cca_heldout_diff_geneformer_minus_scgpt_immune",
+   "value": 0.106,
+   "tolerance": 0.03,
+   "definition": "Mean over 500 paired out-of-bag gene-bootstrap draws of (Geneformer held-out canonical r minus scGPT held-out canonical r). Source report 4.6 (CIs about [0.04-0.05, 0.15-0.17]); reference.py 0.104 CI [0.049, 0.159]."
+  },
+  {
+   "name": "cca_heldout_diff_geneformer_minus_scgpt_external_lung",
+   "value": 0.1,
+   "tolerance": 0.03,
+   "definition": "Mean over 500 paired out-of-bag gene-bootstrap draws of (Geneformer held-out canonical r minus scGPT held-out canonical r). Source report 4.6 (CIs about [0.04-0.05, 0.15-0.17]); reference.py 0.1 CI [0.042, 0.165]."
+  },
+  {
+   "name": "top1_heldout_geneformer_lung",
+   "value": 0.179,
+   "tolerance": 0.03,
+   "definition": "Held-out top-1 retrieval (fraction): orthogonal Procrustes from MaxToki PCA-30 to the other model's PCA-30 fitted on the training 80% of genes; a held-out gene is a hit if its nearest neighbour (cosine) among ALL panel genes of the other model is itself; 5-fold, 10 splits. Chance about 0.002-0.003. Source report 4.5; reference.py 0.171."
+  },
+  {
+   "name": "top1_heldout_geneformer_immune",
+   "value": 0.158,
+   "tolerance": 0.03,
+   "definition": "Held-out top-1 retrieval (fraction): orthogonal Procrustes from MaxToki PCA-30 to the other model's PCA-30 fitted on the training 80% of genes; a held-out gene is a hit if its nearest neighbour (cosine) among ALL panel genes of the other model is itself; 5-fold, 10 splits. Chance about 0.002-0.003. Source report 4.5; reference.py 0.171."
+  },
+  {
+   "name": "top1_heldout_geneformer_external_lung",
+   "value": 0.146,
+   "tolerance": 0.03,
+   "definition": "Held-out top-1 retrieval (fraction): orthogonal Procrustes from MaxToki PCA-30 to the other model's PCA-30 fitted on the training 80% of genes; a held-out gene is a hit if its nearest neighbour (cosine) among ALL panel genes of the other model is itself; 5-fold, 10 splits. Chance about 0.002-0.003. Source report 4.5; reference.py 0.148."
+  },
+  {
+   "name": "top1_heldout_scgpt_lung",
+   "value": 0.059,
+   "tolerance": 0.03,
+   "definition": "Held-out top-1 retrieval (fraction): orthogonal Procrustes from MaxToki PCA-30 to the other model's PCA-30 fitted on the training 80% of genes; a held-out gene is a hit if its nearest neighbour (cosine) among ALL panel genes of the other model is itself; 5-fold, 10 splits. Chance about 0.002-0.003. Source report 4.5; reference.py 0.048."
+  },
+  {
+   "name": "top1_heldout_scgpt_immune",
+   "value": 0.091,
+   "tolerance": 0.03,
+   "definition": "Held-out top-1 retrieval (fraction): orthogonal Procrustes from MaxToki PCA-30 to the other model's PCA-30 fitted on the training 80% of genes; a held-out gene is a hit if its nearest neighbour (cosine) among ALL panel genes of the other model is itself; 5-fold, 10 splits. Chance about 0.002-0.003. Source report 4.5; reference.py 0.096."
+  },
+  {
+   "name": "top1_heldout_scgpt_external_lung",
+   "value": 0.068,
+   "tolerance": 0.03,
+   "definition": "Held-out top-1 retrieval (fraction): orthogonal Procrustes from MaxToki PCA-30 to the other model's PCA-30 fitted on the training 80% of genes; a held-out gene is a hit if its nearest neighbour (cosine) among ALL panel genes of the other model is itself; 5-fold, 10 splits. Chance about 0.002-0.003. Source report 4.5; reference.py 0.066."
+  },
+  {
+   "name": "top1_insample_geneformer_lung",
+   "value": 0.45,
+   "tolerance": 0.06,
+   "definition": "In-sample top-1 retrieval (deployed metric): Procrustes fitted and scored on the same genes. Moves by up to 5 points with the exact PCA solver (Geneformer 0.487/0.514/0.403). Source report 4.5."
+  },
+  {
+   "name": "top1_insample_geneformer_immune",
+   "value": 0.466,
+   "tolerance": 0.06,
+   "definition": "In-sample top-1 retrieval (deployed metric): Procrustes fitted and scored on the same genes. Moves by up to 5 points with the exact PCA solver (Geneformer 0.487/0.514/0.403). Source report 4.5."
+  },
+  {
+   "name": "top1_insample_geneformer_external_lung",
+   "value": 0.382,
+   "tolerance": 0.06,
+   "definition": "In-sample top-1 retrieval (deployed metric): Procrustes fitted and scored on the same genes. Moves by up to 5 points with the exact PCA solver (Geneformer 0.487/0.514/0.403). Source report 4.5."
+  },
+  {
+   "name": "top1_insample_scgpt_lung",
+   "value": 0.309,
+   "tolerance": 0.06,
+   "definition": "In-sample top-1 retrieval (deployed metric): Procrustes fitted and scored on the same genes. Moves by up to 5 points with the exact PCA solver (Geneformer 0.487/0.514/0.403). Source report 4.5."
+  },
+  {
+   "name": "top1_insample_scgpt_immune",
+   "value": 0.349,
+   "tolerance": 0.06,
+   "definition": "In-sample top-1 retrieval (deployed metric): Procrustes fitted and scored on the same genes. Moves by up to 5 points with the exact PCA solver (Geneformer 0.487/0.514/0.403). Source report 4.5."
+  },
+  {
+   "name": "top1_insample_scgpt_external_lung",
+   "value": 0.313,
+   "tolerance": 0.06,
+   "definition": "In-sample top-1 retrieval (deployed metric): Procrustes fitted and scored on the same genes. Moves by up to 5 points with the exact PCA solver (Geneformer 0.487/0.514/0.403). Source report 4.5."
+  },
+  {
+   "name": "top1_insample_chance_rotation_refit_lung",
+   "value": 0.066,
+   "tolerance": 0.015,
+   "definition": "Mean in-sample top-1 when the gene correspondence is permuted and the rotation is refitted each time (Geneformer table; scGPT table 0.054/0.067/0.055). A null that keeps the rotation fitted on the true pairing gives about 0.003 and is wrong. Source report 4.5."
+  },
+  {
+   "name": "top1_insample_chance_rotation_refit_immune",
+   "value": 0.08,
+   "tolerance": 0.015,
+   "definition": "Mean in-sample top-1 when the gene correspondence is permuted and the rotation is refitted each time (Geneformer table; scGPT table 0.054/0.067/0.055). A null that keeps the rotation fitted on the true pairing gives about 0.003 and is wrong. Source report 4.5."
+  },
+  {
+   "name": "top1_insample_chance_rotation_refit_external_lung",
+   "value": 0.072,
+   "tolerance": 0.015,
+   "definition": "Mean in-sample top-1 when the gene correspondence is permuted and the rotation is refitted each time (Geneformer table; scGPT table 0.054/0.067/0.055). A null that keeps the rotation fitted on the true pairing gives about 0.003 and is wrong. Source report 4.5."
+  },
+  {
+   "name": "WRONG_LOOKUP_scgpt_pearson_lung",
+   "value": -0.008,
+   "tolerance": 0.01,
+   "definition": "NOT a correct value. What the scGPT comparison gives when rows are read by the POSITION of the symbol among vocab.json keys instead of its token id (the deployed error). A result matching this means trap scgpt_row_lookup was hit. Source report 1 and 4."
+  },
+  {
+   "name": "WRONG_LOOKUP_scgpt_pearson_immune",
+   "value": -0.019,
+   "tolerance": 0.01,
+   "definition": "NOT a correct value. What the scGPT comparison gives when rows are read by the POSITION of the symbol among vocab.json keys instead of its token id (the deployed error). A result matching this means trap scgpt_row_lookup was hit. Source report 1 and 4."
+  },
+  {
+   "name": "WRONG_LOOKUP_scgpt_pearson_external_lung",
+   "value": -0.005,
+   "tolerance": 0.01,
+   "definition": "NOT a correct value. What the scGPT comparison gives when rows are read by the POSITION of the symbol among vocab.json keys instead of its token id (the deployed error). A result matching this means trap scgpt_row_lookup was hit. Source report 1 and 4."
+  },
+  {
+   "name": "WRONG_LOOKUP_scgpt_cca_lung",
+   "value": 0.401,
+   "tolerance": 0.015,
+   "definition": "NOT a correct value. What the scGPT comparison gives when rows are read by the POSITION of the symbol among vocab.json keys instead of its token id (the deployed error). A result matching this means trap scgpt_row_lookup was hit. Source report 1 and 4."
+  },
+  {
+   "name": "WRONG_LOOKUP_scgpt_cca_immune",
+   "value": 0.438,
+   "tolerance": 0.015,
+   "definition": "NOT a correct value. What the scGPT comparison gives when rows are read by the POSITION of the symbol among vocab.json keys instead of its token id (the deployed error). A result matching this means trap scgpt_row_lookup was hit. Source report 1 and 4."
+  },
+  {
+   "name": "WRONG_LOOKUP_scgpt_cca_external_lung",
+   "value": 0.406,
+   "tolerance": 0.015,
+   "definition": "NOT a correct value. What the scGPT comparison gives when rows are read by the POSITION of the symbol among vocab.json keys instead of its token id (the deployed error). A result matching this means trap scgpt_row_lookup was hit. Source report 1 and 4."
+  },
+  {
+   "name": "WRONG_LOOKUP_scgpt_top1_lung",
+   "value": 0.05,
+   "tolerance": 0.02,
+   "definition": "NOT a correct value. What the scGPT comparison gives when rows are read by the POSITION of the symbol among vocab.json keys instead of its token id (the deployed error). A result matching this means trap scgpt_row_lookup was hit. Source report 1 and 4."
+  },
+  {
+   "name": "WRONG_LOOKUP_scgpt_top1_immune",
+   "value": 0.066,
+   "tolerance": 0.02,
+   "definition": "NOT a correct value. What the scGPT comparison gives when rows are read by the POSITION of the symbol among vocab.json keys instead of its token id (the deployed error). A result matching this means trap scgpt_row_lookup was hit. Source report 1 and 4."
+  },
+  {
+   "name": "WRONG_LOOKUP_scgpt_top1_external_lung",
+   "value": 0.076,
+   "tolerance": 0.02,
+   "definition": "NOT a correct value. What the scGPT comparison gives when rows are read by the POSITION of the symbol among vocab.json keys instead of its token id (the deployed error). A result matching this means trap scgpt_row_lookup was hit. Source report 1 and 4."
+  },
+  {
+   "name": "pearson_geneformer_union_828",
+   "value": 0.373,
+   "tolerance": 0.01,
+   "definition": "Gene-pair Pearson, MaxToki vs Geneformer, on the union of the three panels (828 genes). From reference.py only (not in the source report)."
+  },
+  {
+   "name": "pearson_scgpt_union_828",
+   "value": 0.238,
+   "tolerance": 0.012,
+   "definition": "Gene-pair Pearson, MaxToki vs scGPT, on the 828-gene union. From reference.py only. Paired Geneformer minus scGPT CI [0.128, 0.142]."
+  }
+ ],
+ "traps": [
+  {
+   "id": "scgpt_row_lookup",
+   "description": "scGPT's vocab.json is a dict symbol -> token id whose key order is not the id order (only 1 of 60,697 keys sits at the position equal to its id). Rows of encoder_embedding_weight must be taken at vocab[symbol]. The deployment enumerated the keys and used the position as the row, so 0 of 382/350/380 panel genes got their own vector.",
+   "correct_handling": "Index scGPT rows by the dict value (token id), after mapping Ensembl -> symbol. Ideally check the lookup, e.g. related pairs have high cosine (CD3D-CD3E 0.62, HBA1-HBB 0.57, RPL3-RPL5 0.47 vs random pairs 0.09 +/- 0.10), or row/id assertions.",
+   "mishandling": "Using the position of the symbol among the keys (e.g. {s: i for i, s in enumerate(vocab)}), or a row order taken from a sorted/listed key set. Gives Pearson -0.02 to -0.005, in-sample CCA 0.40-0.44 and top-1 5-8%, all at chance, and the verdict 'not aligned with scGPT beyond chance'."
+  },
+  {
+   "id": "insample_cca_chance_level",
+   "description": "Mean of 10 in-sample canonical correlations on 30-dim PCA of 350-382 genes is about 0.41-0.43 for unrelated tables (n/dims ratio makes CCA overfit). The deployment reported 0.78 as strong alignment and 0.40 as failure without stating this chance level.",
+   "correct_handling": "Give a chance level from permutations of the gene correspondence with CCA refitted each time, and/or use held-out canonical correlations (chance about 0). State excess over chance (Geneformer about 0.35-0.38, scGPT about 0.31-0.32).",
+   "mishandling": "Reading 0.72-0.78 against a zero baseline; calling about 0.40 'partial/moderate alignment'; comparing Geneformer and scGPT on raw in-sample CCA alone; a permutation null that does not refit CCA."
+  },
+  {
+   "id": "insample_top1_null",
+   "description": "In-sample Procrustes top-1 fits the rotation on the genes it scores, so chance is 5-8%, not 1/n. A null that keeps the rotation fitted on the true pairing and only shuffles labels gives about 0.3% (the deployed null), which makes in-sample top-1 look hugely significant.",
+   "correct_handling": "Refit the rotation on every permutation, or score held-out genes (Geneformer about 14-19%, scGPT about 5-10%, chance about 0.3%).",
+   "mishandling": "Reporting in-sample 38-47% (Geneformer) as gene-level retrieval against a 0.3% null or 1/n; z-scores against the non-refitted null."
+  },
+  {
+   "id": "resampling_unit_and_interval_validity",
+   "description": "Uncertainty must resample genes, not gene pairs (about 60,000-73,000 pairs share 350-382 genes). A with-replacement gene bootstrap of in-sample CCA or top-1 is biased upward by duplicate genes (Geneformer lung: bootstrap mean 0.91, CI [0.89, 0.93], which excludes the observed 0.78-0.79). The Geneformer vs scGPT comparison should be paired on the same genes and resamples.",
+   "correct_handling": "Gene bootstrap with copy pairs dropped (or gene jackknife) for Pearson; held-out or out-of-bag resampling for CCA and top-1; paired resamples for the difference; say the unit is the gene and that genes are not fully independent.",
+   "mishandling": "Pair-level bootstrap or Fisher-z intervals with n = number of pairs; percentile intervals of in-sample CCA from a with-replacement gene bootstrap; no uncertainty at all for the Geneformer-scGPT gap; calling the gap uncertain only because two unpaired intervals overlap. (Unpaired gene-level intervals that do not overlap are a conservative check and are not a mishandling.)"
+  },
+  {
+   "id": "panels_not_independent",
+   "description": "The three panels share genes (75 / 168 / 77 pairwise, 36 in all three, 828 in the union) and the static tables do not depend on cells, so a panel only sets a gene list. They are overlapping gene samples from three tissue datasets, not cell-type panels and not independent replications. The spec's 'combined Fisher p across domains' assumes independence.",
+   "correct_handling": "Describe panels as overlapping tissue/dataset gene lists; do not multiply evidence across them as independent (or analyse the union / note the overlap). A report that never calls the panels independent replications and never combines their p-values as independent counts as handled; stating the overlap is best.",
+   "mishandling": "'Replicates in three independent tissues/cell types'; Fisher-combined p-values across panels treated as independent."
+  },
+  {
+   "id": "scope_and_attribution",
+   "description": "Only static input token tables are compared, so the result is about input gene-embedding tables, not internal or contextual (layer-wise) geometry. Geneformer is a BERT encoder and MaxToki a Llama decoder, so they are not the same architecture family; scGPT differs from MaxToki in vocabulary, tokenization, architecture and training data at once.",
+   "correct_handling": "State that the comparison is of input embedding tables, not internal layers; do not attribute the Geneformer-scGPT gap to one difference. Best: say the design cannot tell which difference (vocabulary/tokenization, data, architecture) explains it.",
+   "mishandling": "Claims about internal/contextual geometry; 'alignment breaks across architecture families'; calling Geneformer and MaxToki the same architecture family."
+  }
+ ],
+ "false_statement_checks": [
+  "MaxToki's gene embeddings are not aligned with scGPT's beyond chance (CCA about 0.40, gene-pair correlation about 0).",
+  "A mean canonical correlation of 0.78 (or 0.72) is near-complete alignment; unrelated tables would score near 0 on this in-sample CCA.",
+  "In-sample Procrustes top-1 of about 45% means about 45% of genes can be matched across models, against a chance level of about 0.3% (or 1/n).",
+  "scGPT aligns with MaxToki about as well as Geneformer does.",
+  "The three panels are independent replications (or cell-type-specific tests), so their p-values can be combined as independent.",
+  "The Geneformer-scGPT gap shows that alignment depends on architecture family / MaxToki and Geneformer share an architecture.",
+  "The result shows that MaxToki's internal (layer-wise or contextual) gene geometry matches the other models.",
+  "Using scGPT's table with or without its LayerNorm changes the conclusion (it does not: Pearson 0.266/0.256/0.284 raw vs 0.265/0.263/0.283 normed).",
+  "A confidence interval from resampling gene pairs (n of about 70,000) is a valid interval for the gene-pair Pearson."
+ ],
+ "sources": {
+  "source_report": "biomi_automation/projects/maxtoki/runs/topology-141-217M/V2_CROSSMODEL_REPORT.md (corrected analysis and Verification notes)",
+  "deployed_scripts": [
+   "runs/topology-141-217M/scripts/phase4_scgpt_cross_model.py (lookup at lines 119-121)",
+   "runs/topology-141-217M/scripts/phase14_cross_model_cca.py"
+  ],
+  "reference": "studyA/keys/T4/reference.py -> reference_output.json (computed from the package data only)"
+ }
+}

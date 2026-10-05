@@ -1,0 +1,256 @@
+{
+  "model": "MaxToki-217M",
+  "total_features": 59136,
+  "total_alive": 56702,
+  "total_annotated": 39128,
+  "total_enrichments": 333623,
+  "total_modules": 120,
+  "total_novel": 56702,
+  "n_features_per_layer": 4928,
+  "n_layers": 12,
+  "d_model": 1232,
+  "d_sae": 4928,
+  "k": 32,
+  "layers": [
+    {
+      "layer": 0,
+      "n_alive": 2498,
+      "n_dead": 2430,
+      "variance_explained": 0.6934377761190331,
+      "annotation_rate": 0.807,
+      "n_annotated": 2016,
+      "total_enrichments": 23074,
+      "ontology_counts": {
+        "Reactome": 11453,
+        "GO_BP": 9005,
+        "KEGG": 1993,
+        "TRRUST_TF": 623
+      },
+      "n_modules": 10,
+      "n_svd_aligned": 0,
+      "n_novel": 2498,
+      "mean_feature_cosine": 0.024713357992004602,
+      "svd_top50_var": 0.20956575870513916
+    },
+    {
+      "layer": 1,
+      "n_alive": 4928,
+      "n_dead": 0,
+      "variance_explained": 0.9042102566024861,
+      "annotation_rate": 0.7478,
+      "n_annotated": 3685,
+      "total_enrichments": 30031,
+      "ontology_counts": {
+        "Reactome": 13588,
+        "GO_BP": 12757,
+        "KEGG": 2726,
+        "TRRUST_TF": 960
+      },
+      "n_modules": 10,
+      "n_svd_aligned": 0,
+      "n_novel": 4928,
+      "mean_feature_cosine": 0.03874260160746053,
+      "svd_top50_var": 0.30515849590301514
+    },
+    {
+      "layer": 2,
+      "n_alive": 4928,
+      "n_dead": 0,
+      "variance_explained": 0.9354481507868194,
+      "annotation_rate": 0.7108,
+      "n_annotated": 3503,
+      "total_enrichments": 29566,
+      "ontology_counts": {
+        "Reactome": 13179,
+        "GO_BP": 12613,
+        "KEGG": 2856,
+        "TRRUST_TF": 918
+      },
+      "n_modules": 10,
+      "n_svd_aligned": 0,
+      "n_novel": 4928,
+      "mean_feature_cosine": 0.037543494923505935,
+      "svd_top50_var": 0.5829306840896606
+    },
+    {
+      "layer": 3,
+      "n_alive": 4928,
+      "n_dead": 0,
+      "variance_explained": 0.9316112690991661,
+      "annotation_rate": 0.6826,
+      "n_annotated": 3364,
+      "total_enrichments": 28778,
+      "ontology_counts": {
+        "Reactome": 12895,
+        "GO_BP": 12039,
+        "KEGG": 2972,
+        "TRRUST_TF": 872
+      },
+      "n_modules": 10,
+      "n_svd_aligned": 0,
+      "n_novel": 4928,
+      "mean_feature_cosine": 0.041930209608748555,
+      "svd_top50_var": 0.6054741740226746
+    },
+    {
+      "layer": 4,
+      "n_alive": 4928,
+      "n_dead": 0,
+      "variance_explained": 0.9242523041034938,
+      "annotation_rate": 0.6605,
+      "n_annotated": 3255,
+      "total_enrichments": 27029,
+      "ontology_counts": {
+        "Reactome": 11781,
+        "GO_BP": 11465,
+        "KEGG": 2933,
+        "TRRUST_TF": 850
+      },
+      "n_modules": 10,
+      "n_svd_aligned": 0,
+      "n_novel": 4928,
+      "mean_feature_cosine": 0.04242226105742156,
+      "svd_top50_var": 0.6349779963493347
+    },
+    {
+      "layer": 5,
+      "n_alive": 4928,
+      "n_dead": 0,
+      "variance_explained": 0.8893993829432885,
+      "annotation_rate": 0.6778,
+      "n_annotated": 3340,
+      "total_enrichments": 27661,
+      "ontology_counts": {
+        "Reactome": 12299,
+        "GO_BP": 11840,
+        "KEGG": 2683,
+        "TRRUST_TF": 839
+      },
+      "n_modules": 10,
+      "n_svd_aligned": 0,
+      "n_novel": 4928,
+      "mean_feature_cosine": 0.03667087870277464,
+      "svd_top50_var": 0.6500224471092224
+    },
+    {
+      "layer": 6,
+      "n_alive": 4928,
+      "n_dead": 0,
+      "variance_explained": 0.845714873549706,
+      "annotation_rate": 0.6841,
+      "n_annotated": 3371,
+      "total_enrichments": 29518,
+      "ontology_counts": {
+        "Reactome": 13145,
+        "GO_BP": 12418,
+        "KEGG": 3010,
+        "TRRUST_TF": 945
+      },
+      "n_modules": 10,
+      "n_svd_aligned": 0,
+      "n_novel": 4928,
+      "mean_feature_cosine": 0.0411490861508064,
+      "svd_top50_var": 0.6302955746650696
+    },
+    {
+      "layer": 7,
+      "n_alive": 4928,
+      "n_dead": 0,
+      "variance_explained": 0.8028160026085,
+      "annotation_rate": 0.696,
+      "n_annotated": 3430,
+      "total_enrichments": 32092,
+      "ontology_counts": {
+        "Reactome": 14552,
+        "GO_BP": 13463,
+        "KEGG": 3099,
+        "TRRUST_TF": 978
+      },
+      "n_modules": 10,
+      "n_svd_aligned": 0,
+      "n_novel": 4928,
+      "mean_feature_cosine": 0.044162461157888175,
+      "svd_top50_var": 0.6113205552101135
+    },
+    {
+      "layer": 8,
+      "n_alive": 4928,
+      "n_dead": 0,
+      "variance_explained": 0.7720233638031216,
+      "annotation_rate": 0.7149,
+      "n_annotated": 3523,
+      "total_enrichments": 32339,
+      "ontology_counts": {
+        "Reactome": 14396,
+        "GO_BP": 13591,
+        "KEGG": 3357,
+        "TRRUST_TF": 995
+      },
+      "n_modules": 10,
+      "n_svd_aligned": 0,
+      "n_novel": 4928,
+      "mean_feature_cosine": 0.04008604748081416,
+      "svd_top50_var": 0.5619117021560669
+    },
+    {
+      "layer": 9,
+      "n_alive": 4928,
+      "n_dead": 0,
+      "variance_explained": 0.7452991347243652,
+      "annotation_rate": 0.6985,
+      "n_annotated": 3442,
+      "total_enrichments": 28938,
+      "ontology_counts": {
+        "Reactome": 12694,
+        "GO_BP": 12307,
+        "KEGG": 2974,
+        "TRRUST_TF": 963
+      },
+      "n_modules": 10,
+      "n_svd_aligned": 0,
+      "n_novel": 4928,
+      "mean_feature_cosine": 0.042291960088070485,
+      "svd_top50_var": 0.4928534924983978
+    },
+    {
+      "layer": 10,
+      "n_alive": 4928,
+      "n_dead": 0,
+      "variance_explained": 0.7571488755246195,
+      "annotation_rate": 0.641,
+      "n_annotated": 3159,
+      "total_enrichments": 23838,
+      "ontology_counts": {
+        "Reactome": 10291,
+        "GO_BP": 10153,
+        "KEGG": 2530,
+        "TRRUST_TF": 864
+      },
+      "n_modules": 10,
+      "n_svd_aligned": 0,
+      "n_novel": 4928,
+      "mean_feature_cosine": 0.05545356463268399,
+      "svd_top50_var": 0.4660564959049225
+    },
+    {
+      "layer": 11,
+      "n_alive": 4924,
+      "n_dead": 4,
+      "variance_explained": 0.827571481825031,
+      "annotation_rate": 0.6174,
+      "n_annotated": 3040,
+      "total_enrichments": 20759,
+      "ontology_counts": {
+        "GO_BP": 8838,
+        "Reactome": 8833,
+        "KEGG": 2171,
+        "TRRUST_TF": 917
+      },
+      "n_modules": 10,
+      "n_svd_aligned": 0,
+      "n_novel": 4924,
+      "mean_feature_cosine": 0.06064030591212213,
+      "svd_top50_var": 0.6238366365432739
+    }
+  ]
+}

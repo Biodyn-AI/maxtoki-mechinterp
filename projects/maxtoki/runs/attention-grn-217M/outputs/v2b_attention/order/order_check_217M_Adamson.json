@@ -1,0 +1,38 @@
+{
+ "run": "217M_Adamson",
+ "input_scale": "log1p(CP10k) fed as counts",
+ "facts": {
+  "n_cells": 2000,
+  "n_genes_in_file": 4888,
+  "frac_nonzero_values_whole_numbers": 0.0,
+  "max_value": 6.8375701904296875,
+  "median_cell_sum_expm1_X": 5238.669656640159,
+  "spearman_single_log_var_vs_deployed_var": 0.6161208569426031,
+  "max_abs_diff_single_log_var_vs_deployed_var": 0.8921854495444728
+ },
+ "checks": {
+  "n_cells_tokenised_with_ge2_genes": 2000,
+  "mean_seq_len": 991.08,
+  "pair_counts_reproduced_exactly": true,
+  "n_pair_count_mismatches": 0,
+  "C_plus_CT_equals_pair_counts_offdiag": true,
+  "layer8_pairs_C0_but_E_pos": 0,
+  "layer8_pairs_Cpos_but_E0": 0,
+  "n_offdiag_pairs_with_n_pair_gt0": 2248500,
+  "n_offdiag_pairs_with_n_pair_eq0": 0,
+  "frac_n_pair_gt0_pairs_with_C_eq0": 0.029505448076495442
+ },
+ "decomposition_layer8": {
+  "spearman_E_vs_F_all_pairs_with_n_pair_gt0": 0.5246276991630171,
+  "spearman_E_vs_Ec_all_pairs": 0.4722866619964611,
+  "spearman_F_vs_Ec_all_pairs": -0.35164970494253706,
+  "r2_logE_on_logF_pairs_with_C_gt0": 0.4996961646303655,
+  "var_share_logF": 1.0105076641893134,
+  "var_share_logEc": 0.5893154827796503,
+  "var_share_2cov": -0.5998234218453465,
+  "median_within_row_spearman_E_vs_F": 0.6164037138624914,
+  "median_within_row_spearman_F_vs_target_only_order_score": 0.9417727444856661
+ },
+ "seconds_read": 12.499079942703247,
+ "seconds_total": 29.898765087127686
+}

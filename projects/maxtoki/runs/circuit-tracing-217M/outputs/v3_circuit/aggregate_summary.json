@@ -1,0 +1,189 @@
+{
+  "n_cells": 200,
+  "dataset_rows_first5": [
+    282477,
+    285191,
+    286647,
+    287624,
+    288236
+  ],
+  "n_source_features": 120,
+  "v3": {
+    "total": 318387,
+    "share_inhibitory": 0.5792416147644219,
+    "edges_at_next_layer": 46478,
+    "abs_d_quantiles": {
+      "0.1": 0.5246311577529197,
+      "0.5": 0.6632575767333888,
+      "0.9": 1.5303983047017302,
+      "0.99": 3.4985771828293073
+    },
+    "frac_abs_d_gt_1": 0.18394595256715884,
+    "by_source_layer": {
+      "0": {
+        "n": 271835,
+        "share_inhibitory": 0.5727665679548255
+      },
+      "3": {
+        "n": 18278,
+        "share_inhibitory": 0.5840354524565051
+      },
+      "6": {
+        "n": 18592,
+        "share_inhibitory": 0.6452775387263339
+      },
+      "9": {
+        "n": 9682,
+        "share_inhibitory": 0.6251807477793844
+      }
+    },
+    "edges_per_source_feature_median_by_layer": null
+  },
+  "v2": {
+    "total": 272905,
+    "share_inhibitory": 0.5827082684450633,
+    "edges_at_next_layer": 37952,
+    "abs_d_quantiles": {
+      "0.1": 0.5227,
+      "0.5": 0.6509,
+      "0.9": 1.434,
+      "0.99": 3.521996000000002
+    },
+    "frac_abs_d_gt_1": 0.164408860226086,
+    "by_source_layer": {
+      "0": {
+        "n": 244025,
+        "share_inhibitory": 0.5817641635078373
+      },
+      "3": {
+        "n": 26357,
+        "share_inhibitory": 0.5759760215502523
+      },
+      "6": {
+        "n": 2070,
+        "share_inhibitory": 0.721256038647343
+      },
+      "9": {
+        "n": 453,
+        "share_inhibitory": 0.8498896247240618
+      }
+    },
+    "edges_per_source_feature_median_by_layer": null
+  },
+  "deployed": {
+    "total": 2144011,
+    "share_inhibitory": 0.8817240210054892,
+    "edges_at_next_layer": 0,
+    "abs_d_quantiles": {
+      "0.1": 0.6096,
+      "0.5": 1.3033,
+      "0.9": 3.7806,
+      "0.99": 5.3801
+    },
+    "frac_abs_d_gt_1": 0.6088858685892936,
+    "by_source_layer": {
+      "0": {
+        "n": 1189594,
+        "share_inhibitory": 0.9859481470148639
+      },
+      "3": {
+        "n": 620045,
+        "share_inhibitory": 0.8061382641582466
+      },
+      "6": {
+        "n": 255429,
+        "share_inhibitory": 0.5898390550798852
+      },
+      "9": {
+        "n": 78943,
+        "share_inhibitory": 0.8492709929949457
+      }
+    },
+    "edges_per_source_feature_median_by_layer": null
+  },
+  "v3_symmetric_rule": {
+    "total": 316461,
+    "n_v3_edges_failing_symmetric_rule": 1926
+  },
+  "v3_edges_per_source_feature": {
+    "mean": 2653.225,
+    "median": 567.0,
+    "max": 48035,
+    "n_features_with_zero_edges": 0,
+    "median_by_layer": {
+      "0": 7946.5,
+      "3": 560.0,
+      "6": 552.5,
+      "9": 281.0
+    },
+    "top5": [
+      {
+        "src_layer": 0,
+        "src_feature": 1883,
+        "n_edges": 48035,
+        "frac_special_positions_active": 1.0,
+        "frac_gene_positions_active": 0.01516983383644293
+      },
+      {
+        "src_layer": 0,
+        "src_feature": 3765,
+        "n_edges": 18270,
+        "frac_special_positions_active": 0.0,
+        "frac_gene_positions_active": 0.02926508053024742
+      },
+      {
+        "src_layer": 0,
+        "src_feature": 3635,
+        "n_edges": 14045,
+        "frac_special_positions_active": 0.0,
+        "frac_gene_positions_active": 0.022161029091380142
+      },
+      {
+        "src_layer": 0,
+        "src_feature": 4802,
+        "n_edges": 13205,
+        "frac_special_positions_active": 0.0,
+        "frac_gene_positions_active": 0.020496645717941974
+      },
+      {
+        "src_layer": 0,
+        "src_feature": 1116,
+        "n_edges": 12362,
+        "frac_special_positions_active": 0.0,
+        "frac_gene_positions_active": 0.02523366136864129
+      }
+    ]
+  },
+  "v3_unique_targets": 53006,
+  "source_feature_activity": {
+    "median_frac_cells_active": 1.0,
+    "n_features_never_active": 0,
+    "n_inactive_cell_feature_cases": 202,
+    "median_mean_active_positions": 14.7,
+    "n_features_active_on_special_tokens_gt_50pct": 1
+  },
+  "checks": {
+    "edges_at_l_plus_1": {
+      "L0->L1": 37382,
+      "L3->L4": 2360,
+      "L6->L7": 2598,
+      "L9->L10": 4138
+    },
+    "check_edges_at_l_plus_1_pass": true,
+    "zero_edit_max_abs_dz_any_cell": 0.0,
+    "zero_edit_n_edges": 0,
+    "check_zero_edit_pass": true,
+    "cells_in_order_rows_and_lengths_match_tokens": true
+  },
+  "per_cell_seconds": {
+    "mean": 57.044010180234906,
+    "total_hours": 3.169111676679717
+  },
+  "n_tokens": {
+    "min": 1434,
+    "median": 2048.0,
+    "max": 2048
+  },
+  "wall_seconds": 20.4,
+  "script_sha256": "aa201ea188e1682a771f56826eb60f6cdc7bf4093e384a631069c807aa713fe1"
+}

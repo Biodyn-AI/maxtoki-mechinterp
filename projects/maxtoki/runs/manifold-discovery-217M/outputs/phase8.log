@@ -1,0 +1,22 @@
+======================================================================
+PHASE 8 — frozen-head zero-shot transfer to zeroshot panel
+======================================================================
+[1] Re-training anchor LET head on internal panel (deterministic seed)...
+  [internal_anchor] trained 1500 epochs in 8.4s
+
+[2] Loading zeroshot centroids and ruler...
+  centroids: (160, 12, 1232)
+
+[3] Frozen forward pass (no retraining)...
+
+[4] Trustworthiness, random, donor, branch holdouts on zeroshot panel...
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase8_zeroshot_transfer.py:116: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat_t[triu_t], D_t[triu_t])
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase8_zeroshot_transfer.py:137: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat_t[triu_t], D_t[triu_t])
+
+======================================================================
+VERDICT: POSITIVE: frozen head transfers to zero-shot panel
+  trust=0.827  rand=0.893  donor=0.870  branch=0.317
+  global ρ on full zeroshot panel: 0.899
+Total time: 9.5s

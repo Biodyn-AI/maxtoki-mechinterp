@@ -1,0 +1,30 @@
+{
+  "script": "v2b_devorder_01_features_maxtoki",
+  "written_at": "2026-10-01 12:09:25",
+  "python": "3.12.9",
+  "torch": "2.11.0",
+  "numpy": "1.26.4",
+  "torch_threads": 6,
+  "inputs": {
+    "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/artifacts/anchors/anchor_meta_internal.csv": "9b8c5686d7d87497e5b973693dbbd2bf2bb865872d3c27b8e50622a3e7a784ca",
+    "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/artifacts/anchors/anchor_meta_external.csv": "85436fada49d034ae1f048b56b7dba394b0650ccb09e0c58e62b710365806011",
+    "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/artifacts/anchors/anchor_meta_zeroshot.csv": "6b6bae3162bacf37a21aa213794c3693ec4db9544905af59e302db9027c9ade2",
+    "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/artifacts/anchors/anchor_meta_lung_nonhema.csv": "6c1d4598c712892fa97184f6756b0d9b4bc2884f151dbf645cfb95cc767328c0",
+    "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/artifacts/anchors/centroids_internal.npy": "05f22f34619d0fb776d7e307365d6a854b0f1b350303447845efdc599778808f",
+    "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/artifacts/anchors/centroids_external.npy": "c8446e87cb644dc3c1bd1bd6315d9aa0ae8f818ba06049bf5f5867821d7da038",
+    "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/artifacts/anchors/centroids_zeroshot.npy": "515096f0164dc3873cf8d0c8bb8abf19c1fff07918f240ccf24984898d67d940",
+    "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/artifacts/anchors/centroids_lung_nonhema.npy": "deb18c0d83aab37d14ff05c7b6b61023773e1eb1332a9e72f08b5d855255f63f",
+    "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/artifacts/operators/pooled_drift_components.npz": "278bc09b5f294fed0eb0af8ee25029923ceacb4bf51f49877963b0ec29ecd130",
+    "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/artifacts/operators/operator_index.json": "76139ef1633f6b0822e21a648a2ed7da7bbfc2a760cb441b26e41f2cbb26c247"
+  },
+  "info": {
+    "maxtoki_pca64_explained_variance_ratio_sum": 0.969049003906548
+  },
+  "seconds": 5.909980297088623,
+  "seeds": {
+    "pca": 42,
+    "lookup_ct": "default_rng([7001,k]) codes, default_rng([7001,k,panel_index]) noise",
+    "lookup_cls": "default_rng([7002,k]) codes, default_rng([7002,k,panel_index]) noise",
+    "cell_subsample": "default_rng(42) as phase1bc"
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "device": "cpu",
+  "torch": "2.11.0",
+  "transformers": "5.5.4",
+  "python": "3.12.9",
+  "platform": "macOS-26.3-arm64-arm-64bit",
+  "hooks_v2_sha256": "1ba6fda5ad761b1f82041a7b1397fa9332fa7438e13db955a00d751c4b440f54",
+  "model_dir": "<REPO_ROOT>/projects/maxtoki/setup/MaxToki-217M-HF",
+  "model_dtype": "float32",
+  "timestamp": "2026-10-01T03:33:32",
+  "script": "<REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/scripts/v2_tf_specificity_stats.py",
+  "script_sha256": "872fd24a23217ac655d73db6eb1e596981dd91491866418df4a3ead41736c69f",
+  "extract_script_sha256": "cdc12b48e407c4e28c11a983844138523f0bbf018f4832decc3ac4c5e56d1e9f",
+  "seeds": {
+    "stats": 20261003,
+    "fake_per_size": "20261003+1000+n",
+    "power": 20261010,
+    "calibration": 20261102
+  },
+  "B_fake": 2000,
+  "R_power": 200,
+  "B_cal_per_tf": 250,
+  "cutoffs": [
+    0.5,
+    0.25,
+    0.1,
+    0.05,
+    0.02,
+    0.01,
+    0.0
+  ],
+  "primary_cutoff": 0.5,
+  "q_feature": 0.05,
+  "thresholds": [
+    2,
+    3,
+    4,
+    5
+  ],
+  "min_candidate_targets": {
+    "ChIP": 20,
+    "TRRUST": 5
+  },
+  "cell_ids": "cell_manifest.csv (dataset row + barcode), dataset <DATA_ROOT>/biodyn-nmi-paper/src/02_cssi_method/crispri_validation/data/replogle_concat.h5ad",
+  "feature_ids": "all 4,928 layer-5 SAE features",
+  "log": {
+    "n_ref": 400,
+    "n_pool": 800,
+    "tfs_complete": 87,
+    "tfs_incomplete": [],
+    "n_failed_tokenize": 0,
+    "nonzero_tied_values_total": 15732,
+    "fast_mw_check": [
+      {
+        "group": "GATA1",
+        "max_abs_dp": 7.363487983247374e-08,
+        "max_abs_dlog10p": 8.431455388091535e-05,
+        "max_abs_dq": 8.267775981896097e-08,
+        "same_bh_set": true
+      },
+      {
+        "group": "fake95",
+        "max_abs_dp": 8.206691967105328e-07,
+        "max_abs_dlog10p": 2.1879624396703434e-06,
+        "max_abs_dq": 2.220446049250313e-16,
+        "same_bh_set": true
+      }
+    ],
+    "GATA1_token_pooled_delta_deployed_features": {
+      "628": 0.6871487918444376,
+      "1334": 1.609029192148118,
+      "2006": 1.3338532259830256,
+      "2610": 0.46145981267992175,
+      "2627": 0.7546439804701077
+    },
+    "GATA1_cell_mean_delta_deployed_features": {
+      "628": 0.6880629062652588,
+      "1334": 1.6111749410629272,
+      "2006": 1.3355525732040405,
+      "2610": 0.46117913722991943,
+      "2627": 0.7555727958679199
+    },
+    "GATA1_q_deployed_features": {
+      "628": 6.48366787223381e-42,
+      "1334": 4.764260611948309e-43,
+      "2006": 9.020220314823591e-46,
+      "2610": 3.04048022421969e-42,
+      "2627": 3.1773916275424005e-32
+    },
+    "swap_null_validation": {
+      "cm": {
+        "E_overlap_2610": 4.4444532050413015,
+        "P_2610_ge8": 0.036586850640109664,
+        "P_max5_ge8": 0.03658769682412623,
+        "P_max5_ge5": 0.4722149536679304,
+        "MC": {
+          "E_overlap_2610": 4.4228,
+          "P_2610_ge8": 0.0405,
+          "P_max5_ge8": 0.0405,
+          "P_max5_ge5": 0.4655,
+          "n_sim": 10000
+        }
+      },
+      "cml": {
+        "E_overlap_2610": 5.117226377183279,
+        "P_2610_ge8": 0.07187975007556924,
+        "P_max5_ge8": 0.07188042087198147,
+        "P_max5_ge5": 0.6417989606235665,
+        "MC": {
+          "E_overlap_2610": 5.1403,
+          "P_2610_ge8": 0.0754,
+          "P_max5_ge8": 0.0754,
+          "P_max5_ge5": 0.645,
+          "n_sim": 10000
+        }
+      },
+      "investigation_null3": {
+        "cm": {
+          "E_overlap_2610": 4.44,
+          "P_2610_ge8": 0.038,
+          "P_max5_ge5": 0.47
+        },
+        "cml": {
+          "E_overlap_2610": 5.12,
+          "P_2610_ge8": 0.072,
+          "P_max5_ge5": 0.64
+        }
+      }
+    },
+    "t_observed_s": 82.1,
+    "t_power_done_s": 337.1,
+    "wall_s": 407.7
+  }
+}

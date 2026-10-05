@@ -1,0 +1,121 @@
+task,arm,rep,cond,delivered,verdict,correct,verdict_given,g1,g2,trap,false_statements,key_numbers
+T1,paper,1,none,True,not supported,True,not supported,True,True,1.0,0.0,1.0
+T1,paper,1,generic,True,not supported,True,not supported,True,True,1.0,0.0,1.0
+T1,paper,1,checklist,True,not supported,True,not supported,True,True,1.0,0.0,1.0
+T1,paper,2,none,True,not supported,True,not supported,True,True,0.9166666666666666,0.0,1.0
+T1,paper,2,generic,True,not supported,True,not supported,True,True,1.0,0.0,1.0
+T1,paper,2,checklist,True,not supported,True,not supported,True,True,1.0,0.5,1.0
+T1,paper,3,none,True,not supported,True,not supported,True,True,0.9166666666666666,1.0,1.0
+T1,paper,3,generic,True,not supported,True,not supported,True,True,0.9583333333333333,0.0,1.0
+T1,paper,3,checklist,True,not supported,True,not supported,True,True,0.9166666666666666,1.0,1.0
+T1,paper,4,none,True,not supported,True,not supported,True,True,1.0,0.0,0.7105263157894737
+T1,paper,4,generic,True,inconclusive,True,inconclusive,True,True,0.9583333333333333,0.0,1.0
+T1,paper,4,checklist,True,not supported,True,not supported,True,True,1.0,0.0,1.0
+T1,paper,5,none,True,not supported,True,not supported,True,True,0.8333333333333334,0.0,1.0
+T1,paper,5,generic,True,inconclusive,True,inconclusive,True,True,0.9166666666666666,0.0,1.0
+T1,paper,5,checklist,True,inconclusive,True,inconclusive,True,True,0.9166666666666666,0.0,1.0
+T1,contract,1,none,True,not supported,True,not supported,True,True,0.9166666666666666,0.0,1.0
+T1,contract,1,generic,True,not supported,True,not supported,True,True,0.9166666666666666,0.0,1.0
+T1,contract,1,checklist,True,not supported,True,not supported,True,True,0.9166666666666666,0.0,1.0
+T1,contract,2,none,True,not supported,True,not supported,True,True,0.875,0.0,1.0
+T1,contract,2,generic,True,not supported,True,not supported,True,True,0.9166666666666666,0.0,1.0
+T1,contract,2,checklist,True,not supported,True,not supported,True,True,0.9166666666666666,0.0,1.0
+T1,contract,3,none,True,not supported,True,not supported,True,True,0.875,2.0,1.0
+T1,contract,3,generic,True,not supported,True,not supported,True,True,0.875,0.0,1.0
+T1,contract,3,checklist,True,not supported,True,not supported,True,True,0.9166666666666666,0.0,1.0
+T1,contract,4,none,True,not supported,True,not supported,True,True,0.9166666666666666,0.0,1.0
+T1,contract,4,generic,True,not supported,True,not supported,True,True,0.875,0.5,1.0
+T1,contract,4,checklist,True,not supported,True,not supported,True,True,0.9166666666666666,0.0,1.0
+T1,contract,5,none,True,not supported,True,not supported,True,True,0.9166666666666666,0.0,1.0
+T1,contract,5,generic,True,not supported,True,not supported,True,True,0.9166666666666666,1.0,1.0
+T1,contract,5,checklist,True,not supported,True,not supported,True,True,0.9166666666666666,0.0,1.0
+T3,paper,1,none,True,not supported,True,not supported,True,True,0.9166666666666666,0.0,1.0
+T3,paper,1,generic,True,not supported,True,not supported,True,True,0.9166666666666666,0.0,1.0
+T3,paper,1,checklist,True,not supported,True,not supported,True,True,1.0,0.0,1.0
+T3,paper,2,none,True,not supported,True,not supported,True,True,0.9166666666666666,0.0,0.6666666666666666
+T3,paper,2,generic,True,not supported,True,not supported,True,True,0.9166666666666666,0.0,1.0
+T3,paper,2,checklist,True,not supported,True,not supported,True,True,0.875,0.5,1.0
+T3,paper,3,none,True,not supported,True,not supported,True,True,0.9166666666666666,0.0,1.0
+T3,paper,3,generic,True,not supported,True,not supported,True,True,1.0,0.0,1.0
+T3,paper,3,checklist,True,not supported,True,not supported,True,True,1.0,0.0,1.0
+T3,paper,4,none,True,not supported,True,not supported,True,True,0.9166666666666666,2.0,1.0
+T3,paper,4,generic,True,not supported,True,not supported,True,True,1.0,0.0,1.0
+T3,paper,4,checklist,True,not supported,True,not supported,True,True,1.0,0.0,1.0
+T3,paper,5,none,True,not supported,True,not supported,True,True,0.9166666666666666,0.0,1.0
+T3,paper,5,generic,True,not supported,True,not supported,True,True,0.9166666666666666,0.0,1.0
+T3,paper,5,checklist,True,not supported,True,not supported,True,True,1.0,0.0,1.0
+T3,contract,1,none,True,not supported,True,not supported,True,True,0.9083333333333333,0.0,1.0
+T3,contract,1,generic,True,not supported,True,not supported,True,True,1.0,0.0,1.0
+T3,contract,1,checklist,True,not supported,True,not supported,True,True,1.0,0.5,1.0
+T3,contract,2,none,True,not supported,True,not supported,True,True,0.875,1.0,1.0
+T3,contract,2,generic,True,not supported,True,not supported,True,True,1.0,0.0,1.0
+T3,contract,2,checklist,True,not supported,True,not supported,True,True,1.0,0.0,1.0
+T3,contract,3,none,True,not supported,True,not supported,True,True,0.8333333333333334,0.0,1.0
+T3,contract,3,generic,True,not supported,True,not supported,True,True,0.9083333333333333,0.0,1.0
+T3,contract,3,checklist,True,not supported,True,not supported,True,True,1.0,0.0,1.0
+T3,contract,4,none,True,not supported,True,not supported,True,True,0.9166666666666666,0.0,1.0
+T3,contract,4,generic,True,not supported,True,not supported,True,True,1.0,0.0,1.0
+T3,contract,4,checklist,True,not supported,True,not supported,True,True,0.8500000000000001,0.0,1.0
+T3,contract,5,none,True,not supported,True,not supported,True,True,0.875,0.0,1.0
+T3,contract,5,generic,True,not supported,True,not supported,True,True,1.0,0.0,1.0
+T3,contract,5,checklist,True,not supported,True,not supported,True,True,1.0,0.0,1.0
+T4,paper,1,none,True,aligned with scGPT but clearly less than with Geneformer,True,aligned with scGPT but clearly less than with Geneformer,True,True,1.0,0.0,0.0
+T4,paper,1,generic,True,aligned with scGPT but clearly less than with Geneformer,True,aligned with scGPT but clearly less than with Geneformer,True,True,1.0,0.0,
+T4,paper,1,checklist,True,aligned with scGPT but clearly less than with Geneformer,True,aligned with scGPT but clearly less than with Geneformer,True,True,1.0,0.0,
+T4,paper,2,none,True,aligned with scGPT but clearly less than with Geneformer,True,aligned with scGPT but clearly less than with Geneformer,True,True,0.9583333333333333,0.0,0.625
+T4,paper,2,generic,True,aligned with scGPT but clearly less than with Geneformer,True,aligned with scGPT but clearly less than with Geneformer,True,True,1.0,0.0,1.0
+T4,paper,2,checklist,True,aligned with scGPT but clearly less than with Geneformer,True,aligned with scGPT but clearly less than with Geneformer,True,True,1.0,0.0,1.0
+T4,paper,3,none,True,aligned with scGPT but clearly less than with Geneformer,True,aligned with scGPT but clearly less than with Geneformer,True,True,1.0,0.0,1.0
+T4,paper,3,generic,True,aligned with scGPT but clearly less than with Geneformer,True,aligned with scGPT but clearly less than with Geneformer,True,True,0.9583333333333333,0.0,0.25
+T4,paper,3,checklist,True,aligned with scGPT but clearly less than with Geneformer,True,aligned with scGPT but clearly less than with Geneformer,True,True,1.0,1.0,0.5
+T4,paper,4,none,True,aligned with scGPT but clearly less than with Geneformer,True,aligned with scGPT but clearly less than with Geneformer,True,True,1.0,0.0,0.8461538461538461
+T4,paper,4,generic,True,aligned with scGPT but clearly less than with Geneformer,True,aligned with scGPT but clearly less than with Geneformer,True,True,0.875,0.0,0.9
+T4,paper,4,checklist,True,aligned with scGPT but clearly less than with Geneformer,True,aligned with scGPT but clearly less than with Geneformer,True,True,1.0,0.0,0.8590909090909091
+T4,paper,5,none,True,aligned with scGPT but clearly less than with Geneformer,True,aligned with scGPT but clearly less than with Geneformer,True,True,1.0,0.0,0.9
+T4,paper,5,generic,True,aligned with scGPT but clearly less than with Geneformer,True,aligned with scGPT but clearly less than with Geneformer,True,True,1.0,0.0,0.9
+T4,paper,5,checklist,True,aligned with scGPT but clearly less than with Geneformer,True,aligned with scGPT but clearly less than with Geneformer,True,True,1.0,0.0,0.9
+T4,contract,1,none,True,aligned with scGPT but clearly less than with Geneformer,True,aligned with scGPT but clearly less than with Geneformer,True,True,0.9166666666666666,0.0,1.0
+T4,contract,1,generic,True,inconclusive,False,inconclusive,False,False,1.0,0.0,1.0
+T4,contract,1,checklist,True,aligned with scGPT but clearly less than with Geneformer,True,aligned with scGPT but clearly less than with Geneformer,True,True,1.0,0.0,1.0
+T4,contract,2,none,True,aligned with scGPT but clearly less than with Geneformer,True,aligned with scGPT but clearly less than with Geneformer,True,True,1.0,0.0,0.625
+T4,contract,2,generic,True,aligned with scGPT but clearly less than with Geneformer,True,aligned with scGPT but clearly less than with Geneformer,True,True,1.0,1.0,0.375
+T4,contract,2,checklist,True,aligned with scGPT but clearly less than with Geneformer,True,aligned with scGPT but clearly less than with Geneformer,True,True,1.0,0.0,1.0
+T4,contract,3,none,True,aligned with scGPT but clearly less than with Geneformer,True,aligned with scGPT but clearly less than with Geneformer,True,True,1.0,0.0,
+T4,contract,3,generic,True,aligned with scGPT but clearly less than with Geneformer,True,aligned with scGPT but clearly less than with Geneformer,True,True,1.0,0.0,
+T4,contract,3,checklist,True,aligned with scGPT but clearly less than with Geneformer,True,aligned with scGPT but clearly less than with Geneformer,True,True,1.0,0.0,0.0
+T4,contract,4,none,True,aligned with scGPT but clearly less than with Geneformer,True,aligned with scGPT but clearly less than with Geneformer,True,True,0.9166666666666666,0.0,
+T4,contract,4,generic,True,inconclusive,False,inconclusive,False,False,0.8333333333333334,0.5,
+T4,contract,4,checklist,True,aligned with scGPT but clearly less than with Geneformer,True,aligned with scGPT but clearly less than with Geneformer,True,True,1.0,0.0,
+T4,contract,5,none,True,aligned with scGPT but clearly less than with Geneformer,True,aligned with scGPT but clearly less than with Geneformer,True,True,1.0,0.0,1.0
+T4,contract,5,generic,True,inconclusive,False,inconclusive,False,False,1.0,0.5,
+T4,contract,5,checklist,True,aligned with scGPT but clearly less than with Geneformer,True,aligned with scGPT but clearly less than with Geneformer,True,True,1.0,0.0,1.0
+T2,paper,1,none,True,not supported,True,not supported,True,True,1.0,0.0,1.0
+T2,paper,1,generic,True,not supported,True,not supported,True,True,1.0,0.0,1.0
+T2,paper,1,checklist,True,not supported,True,not supported,True,True,0.8333333333333334,1.5,1.0
+T2,paper,2,none,True,not supported,True,not supported,True,True,1.0,0.5,1.0
+T2,paper,2,generic,True,not supported,True,not supported,True,True,1.0,0.0,1.0
+T2,paper,2,checklist,True,not supported,True,not supported,True,True,1.0,0.0,1.0
+T2,paper,3,none,True,not supported,True,not supported,True,True,0.9166666666666666,1.0,1.0
+T2,paper,3,generic,True,not supported,True,not supported,True,True,1.0,0.0,1.0
+T2,paper,3,checklist,True,not supported,True,not supported,True,True,1.0,0.0,1.0
+T2,paper,4,none,True,not supported,True,not supported,True,True,1.0,0.0,1.0
+T2,paper,4,generic,True,not supported,True,not supported,True,True,1.0,0.0,1.0
+T2,paper,4,checklist,True,not supported,True,not supported,True,True,1.0,0.0,1.0
+T2,paper,5,none,True,not supported,True,not supported,True,True,1.0,0.0,1.0
+T2,paper,5,generic,True,not supported,True,not supported,True,True,1.0,0.0,1.0
+T2,paper,5,checklist,True,not supported,True,not supported,True,True,1.0,0.0,1.0
+T2,contract,1,none,True,not supported,True,not supported,True,True,1.0,0.0,1.0
+T2,contract,1,generic,True,not supported,True,not supported,True,True,0.9166666666666666,0.0,1.0
+T2,contract,1,checklist,True,not supported,True,not supported,True,True,0.9166666666666666,0.0,1.0
+T2,contract,2,none,True,not supported,True,not supported,True,True,1.0,0.0,1.0
+T2,contract,2,generic,True,not supported,True,not supported,True,True,1.0,0.0,1.0
+T2,contract,2,checklist,True,not supported,True,not supported,True,True,1.0,0.0,1.0
+T2,contract,3,none,True,not supported,True,not supported,True,True,1.0,0.0,1.0
+T2,contract,3,generic,True,not supported,True,not supported,True,True,1.0,0.0,1.0
+T2,contract,3,checklist,True,not supported,True,not supported,True,True,1.0,0.0,1.0
+T2,contract,4,none,True,not supported,True,not supported,True,True,1.0,0.0,1.0
+T2,contract,4,generic,True,not supported,True,not supported,True,True,1.0,0.0,1.0
+T2,contract,4,checklist,True,not supported,True,not supported,True,True,1.0,0.0,1.0
+T2,contract,5,none,True,not supported,True,not supported,True,True,0.9166666666666666,0.0,1.0
+T2,contract,5,generic,True,not supported,True,not supported,True,True,1.0,0.0,1.0
+T2,contract,5,checklist,True,not supported,True,not supported,True,True,1.0,0.0,1.0

@@ -1,0 +1,69 @@
+{
+ "own_cells": [
+  {
+   "model": "scgpt",
+   "label": "scGPT layer 11",
+   "n": 3000,
+   "input_dim": 512,
+   "lin_r2": 0.8916280872201159,
+   "knn_r2": 0.8071075946861556,
+   "gap": -0.08452049253396032,
+   "out_of_plane_deg": 22.715021779851714,
+   "out_of_plane_null": 25.640391654267084,
+   "out_of_plane_null_sd": 2.291437300122488,
+   "p_out_of_plane": 0.9047619047619048,
+   "Hflat_rejected": false
+  },
+  {
+   "model": "geneformer",
+   "label": "Geneformer layer 11",
+   "n": 2000,
+   "input_dim": 1152,
+   "lin_r2": 0.8439595457506187,
+   "knn_r2": 0.662790490758908,
+   "gap": -0.18116905499171077,
+   "out_of_plane_deg": 34.16725824363156,
+   "out_of_plane_null": 35.72018534116704,
+   "out_of_plane_null_sd": 2.4299065438433836,
+   "p_out_of_plane": 0.7619047619047619,
+   "Hflat_rejected": false
+  },
+  {
+   "model": "expr",
+   "label": "expression (no model)",
+   "n": 3000,
+   "input_dim": 6546,
+   "lin_r2": 0.9286017322100604,
+   "knn_r2": 0.8575813920342077,
+   "gap": -0.07102034017585268,
+   "out_of_plane_deg": 17.936807927172598,
+   "out_of_plane_null": 17.942409869978665,
+   "out_of_plane_null_sd": 1.446521893843773,
+   "p_out_of_plane": 0.5714285714285714,
+   "Hflat_rejected": false
+  }
+ ],
+ "shared_cells": [
+  {
+   "model": "scgpt",
+   "label": "scGPT layer 11",
+   "n": 2000,
+   "lin_r2": 0.8956333714559439,
+   "knn_r2": 0.7965209174298464
+  },
+  {
+   "model": "geneformer",
+   "label": "Geneformer layer 11",
+   "n": 2000,
+   "lin_r2": 0.8439595457506187,
+   "knn_r2": 0.662790490758908
+  },
+  {
+   "model": "expr",
+   "label": "expression (no model)",
+   "n": 2000,
+   "lin_r2": 0.9354434605360794,
+   "knn_r2": 0.847607045450161
+  }
+ ]
+}

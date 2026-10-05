@@ -1,0 +1,59 @@
+{
+ "layer": 9,
+ "n_alive": 4928,
+ "N_universe": 6325,
+ "n_terms": 2377,
+ "n_tests": 11713856,
+ "A_deployed": 3442,
+ "A2_biosae": 3391,
+ "B_perfeature": 80,
+ "B_ge3": 34,
+ "B2_perfeature_ovl2": 3053,
+ "C_global": 1,
+ "Bu_perfeature": 80,
+ "Cu_global": 1,
+ "deployed_summary": {
+  "layer": 9,
+  "n_alive": 4928,
+  "n_annotated": 3442,
+  "annotation_rate": 0.6985,
+  "total_enrichments": 28938
+ },
+ "deployed_kept_tests": 36021,
+ "rows_mine": 28938,
+ "rows_deployed": 28938,
+ "rows_missing": 0,
+ "rows_extra": 0,
+ "max_abs_p_diff": 9.8879238130678e-17,
+ "overlap_col_match": true,
+ "n_col_match": true,
+ "K_col_match": true,
+ "N_col_match": true,
+ "max_abs_q_diff": 1.0061396160665481e-16,
+ "deployed_max_raw_p_sig": 0.0390821735587719,
+ "deployed_share_overlap2": 0.8257654295390144,
+ "B_rows": 549,
+ "B_rows_share_overlap2": 0.4918032786885246,
+ "B_rows_overlap2_full20": 270,
+ "B_rows_overlap2_short": 0,
+ "B_rows_overlap1": 0,
+ "B_rate": 0.016233766233766232,
+ "B_wilson": [
+  0.013063556152466188,
+  0.020157596674265595
+ ],
+ "A_rate": 0.6984577922077922,
+ "A2_rate": 0.6881087662337663,
+ "B2_rate": 0.6195211038961039,
+ "list_sizes_lt20": 31,
+ "global_features": [
+  {
+   "feature_id": 2720,
+   "n_terms_global": 1,
+   "n_terms_perfeature": 4,
+   "min_p": 3.6288133179212254e-10,
+   "best_term": "GO_BP:Glycolipid Biosynthetic Process (GO:0009247)"
+  }
+ ],
+ "seconds": 5.3
+}

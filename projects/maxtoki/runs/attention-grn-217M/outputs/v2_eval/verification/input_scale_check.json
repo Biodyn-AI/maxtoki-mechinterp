@@ -1,0 +1,73 @@
+{
+ "part1_value_scale": {
+  "217M_K562": {
+   "file": "<DATA_ROOT>/biodyn-nmi-paper/src/02_cssi_method/crispri_validation/data/replogle_concat.h5ad",
+   "n_cells": 2000,
+   "n_genes_in_file": 6546,
+   "frac_nonzero_values_whole_numbers": 0.0,
+   "median_cell_sum_of_expm1_X": 9417.4137408253,
+   "max_value": 6.646621227264404,
+   "min_nonzero_value": 0.2237250804901123
+  },
+  "217M_RPE1": {
+   "file": "<DATA_ROOT>/biodyn-nmi-paper/results/round13_non_k562_replication/data/ReplogleWeissman2022_rpe1.h5ad",
+   "n_cells": 2000,
+   "n_genes_in_file": 8749,
+   "frac_nonzero_values_whole_numbers": 1.0,
+   "median_cell_sum_of_expm1_X": null,
+   "max_value": 1491.0,
+   "min_nonzero_value": 1.0
+  },
+  "217M_Adamson": {
+   "file": "<DATA_ROOT>/biodyn-work/single_cell_mechinterp/data/perturb/adamson/perturb_processed_symbols.h5ad",
+   "n_cells": 2000,
+   "n_genes_in_file": 4888,
+   "frac_nonzero_values_whole_numbers": 0.0,
+   "median_cell_sum_of_expm1_X": 5238.669656640159,
+   "max_value": 6.8375701904296875,
+   "min_nonzero_value": 0.289411336183548
+  },
+  "1B_K562": {
+   "file": "<DATA_ROOT>/biodyn-nmi-paper/src/02_cssi_method/crispri_validation/data/replogle_concat.h5ad",
+   "n_cells": 200,
+   "n_genes_in_file": 6546,
+   "frac_nonzero_values_whole_numbers": 0.0,
+   "median_cell_sum_of_expm1_X": 9423.308787193786,
+   "max_value": 6.646621227264404,
+   "min_nonzero_value": 0.277810275554657
+  }
+ },
+ "part2_token_order": {
+  "217M_K562": {
+   "n_cells_checked": 500,
+   "mean_overlap_of_kept_genes": 0.9142473118279569,
+   "min_overlap_of_kept_genes": 0.8914956011730205,
+   "mean_spearman_rank_order": 0.8475011250032946,
+   "min_spearman_rank_order": 0.714018859136371
+  },
+  "217M_Adamson": {
+   "n_cells_checked": 500,
+   "mean_overlap_of_kept_genes": 1.0,
+   "min_overlap_of_kept_genes": 1.0,
+   "mean_spearman_rank_order": 0.7626446935942367,
+   "min_spearman_rank_order": 0.5150764895330113
+  }
+ },
+ "part3_single_log_labels_217M_K562": {
+  "n_perturbations": 19,
+  "n_positive_pairs": 106,
+  "attention_mean_auroc": 0.3733481310830591,
+  "variance_single_log_mean_auroc": 0.6272358221296023,
+  "variance_deployed_mean_auroc": 0.6257822854447562,
+  "gap_single_log_variance_minus_attention": 0.2538876910465432,
+  "gap_ci95_perturbation_bootstrap": [
+   0.13265112670865406,
+   0.36728191345448574
+  ],
+  "n_perturbations_shared_with_deployed": 19,
+  "deployed": {
+   "n_perturbations": 174,
+   "n_positive_pairs": 9741
+  }
+ }
+}

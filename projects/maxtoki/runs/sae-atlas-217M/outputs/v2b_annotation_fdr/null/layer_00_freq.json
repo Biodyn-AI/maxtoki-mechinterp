@@ -1,0 +1,842 @@
+[
+ {
+  "n_features": 2498,
+  "n_terms": 2377,
+  "n_tests": 5937746,
+  "A_deployed": {
+   "n_kept_tests": 23013,
+   "n_sig_rows": 19060,
+   "n_annotated": 2064,
+   "n_ge3": 1593,
+   "max_raw_p_sig": 0.04126327216317119,
+   "frac_sig_rows_overlap2": 0.8221406086044072,
+   "rate": 0.8262610088070457
+  },
+  "A2_overlap2_only": {
+   "n_kept_tests": 29081,
+   "n_sig_rows": 18057,
+   "n_annotated": 2043,
+   "n_ge3": 1552,
+   "rate": 0.8178542834267414
+  },
+  "B_perfeature_bh": {
+   "n_sig_rows": 409,
+   "n_annotated": 45,
+   "n_ge3": 17,
+   "rate": 0.018014411529223378
+  },
+  "C_global_bh": {
+   "n_sig_rows": 0,
+   "n_annotated": 0,
+   "n_ge3": 0,
+   "p_cutoff": -1.0,
+   "rate": 0.0
+  },
+  "layer": 0,
+  "kind": "freq",
+  "rep": 0,
+  "seed": 20261101,
+  "gene_count_corr_with_real": 0.9119639291688479,
+  "gene_count_max_abs_diff": 14.0,
+  "frac_gene_slots_same_as_real_list": 0.005595924162699407,
+  "seconds": 0.6
+ },
+ {
+  "n_features": 2498,
+  "n_terms": 2377,
+  "n_tests": 5937746,
+  "A_deployed": {
+   "n_kept_tests": 22647,
+   "n_sig_rows": 18655,
+   "n_annotated": 2077,
+   "n_ge3": 1615,
+   "max_raw_p_sig": 0.04089314895830532,
+   "frac_sig_rows_overlap2": 0.8269096756901635,
+   "rate": 0.8314651721377102
+  },
+  "A2_overlap2_only": {
+   "n_kept_tests": 28681,
+   "n_sig_rows": 17548,
+   "n_annotated": 2053,
+   "n_ge3": 1572,
+   "rate": 0.821857485988791
+  },
+  "B_perfeature_bh": {
+   "n_sig_rows": 103,
+   "n_annotated": 37,
+   "n_ge3": 9,
+   "rate": 0.014811849479583666
+  },
+  "C_global_bh": {
+   "n_sig_rows": 0,
+   "n_annotated": 0,
+   "n_ge3": 0,
+   "p_cutoff": -1.0,
+   "rate": 0.0
+  },
+  "layer": 0,
+  "kind": "freq",
+  "rep": 1,
+  "seed": 20261102,
+  "gene_count_corr_with_real": 0.917700158169641,
+  "gene_count_max_abs_diff": 15.0,
+  "frac_gene_slots_same_as_real_list": 0.005595924162699407,
+  "seconds": 0.4
+ },
+ {
+  "n_features": 2498,
+  "n_terms": 2377,
+  "n_tests": 5937746,
+  "A_deployed": {
+   "n_kept_tests": 22898,
+   "n_sig_rows": 19001,
+   "n_annotated": 2061,
+   "n_ge3": 1606,
+   "max_raw_p_sig": 0.041480328770671517,
+   "frac_sig_rows_overlap2": 0.8307983790326825,
+   "rate": 0.8250600480384307
+  },
+  "A2_overlap2_only": {
+   "n_kept_tests": 28869,
+   "n_sig_rows": 18117,
+   "n_annotated": 2046,
+   "n_ge3": 1578,
+   "rate": 0.8190552441953562
+  },
+  "B_perfeature_bh": {
+   "n_sig_rows": 287,
+   "n_annotated": 31,
+   "n_ge3": 11,
+   "rate": 0.012409927942353884
+  },
+  "C_global_bh": {
+   "n_sig_rows": 0,
+   "n_annotated": 0,
+   "n_ge3": 0,
+   "p_cutoff": -1.0,
+   "rate": 0.0
+  },
+  "layer": 0,
+  "kind": "freq",
+  "rep": 2,
+  "seed": 20261103,
+  "gene_count_corr_with_real": 0.9188208706175763,
+  "gene_count_max_abs_diff": 15.0,
+  "frac_gene_slots_same_as_real_list": 0.006159692641777332,
+  "seconds": 0.5
+ },
+ {
+  "n_features": 2498,
+  "n_terms": 2377,
+  "n_tests": 5937746,
+  "A_deployed": {
+   "n_kept_tests": 22539,
+   "n_sig_rows": 18681,
+   "n_annotated": 2054,
+   "n_ge3": 1616,
+   "max_raw_p_sig": 0.04132670018544843,
+   "frac_sig_rows_overlap2": 0.8373213425405492,
+   "rate": 0.822257806244996
+  },
+  "A2_overlap2_only": {
+   "n_kept_tests": 28667,
+   "n_sig_rows": 17621,
+   "n_annotated": 2038,
+   "n_ge3": 1574,
+   "rate": 0.8158526821457166
+  },
+  "B_perfeature_bh": {
+   "n_sig_rows": 366,
+   "n_annotated": 40,
+   "n_ge3": 21,
+   "rate": 0.016012810248198558
+  },
+  "C_global_bh": {
+   "n_sig_rows": 0,
+   "n_annotated": 0,
+   "n_ge3": 0,
+   "p_cutoff": -1.0,
+   "rate": 0.0
+  },
+  "layer": 0,
+  "kind": "freq",
+  "rep": 3,
+  "seed": 20261104,
+  "gene_count_corr_with_real": 0.9175694129339338,
+  "gene_count_max_abs_diff": 18.0,
+  "frac_gene_slots_same_as_real_list": 0.004990395055541635,
+  "seconds": 0.4
+ },
+ {
+  "n_features": 2498,
+  "n_terms": 2377,
+  "n_tests": 5937746,
+  "A_deployed": {
+   "n_kept_tests": 23843,
+   "n_sig_rows": 19991,
+   "n_annotated": 2065,
+   "n_ge3": 1594,
+   "max_raw_p_sig": 0.04175866103706344,
+   "frac_sig_rows_overlap2": 0.8321244560052024,
+   "rate": 0.8266613290632506
+  },
+  "A2_overlap2_only": {
+   "n_kept_tests": 29884,
+   "n_sig_rows": 19070,
+   "n_annotated": 2046,
+   "n_ge3": 1565,
+   "rate": 0.8190552441953562
+  },
+  "B_perfeature_bh": {
+   "n_sig_rows": 640,
+   "n_annotated": 49,
+   "n_ge3": 20,
+   "rate": 0.019615692554043235
+  },
+  "C_global_bh": {
+   "n_sig_rows": 0,
+   "n_annotated": 0,
+   "n_ge3": 0,
+   "p_cutoff": -1.0,
+   "rate": 0.0
+  },
+  "layer": 0,
+  "kind": "freq",
+  "rep": 4,
+  "seed": 20261105,
+  "gene_count_corr_with_real": 0.913417239288118,
+  "gene_count_max_abs_diff": 17.0,
+  "frac_gene_slots_same_as_real_list": 0.005261839138060637,
+  "seconds": 0.5
+ },
+ {
+  "n_features": 2498,
+  "n_terms": 2377,
+  "n_tests": 5937746,
+  "A_deployed": {
+   "n_kept_tests": 23063,
+   "n_sig_rows": 19158,
+   "n_annotated": 2081,
+   "n_ge3": 1595,
+   "max_raw_p_sig": 0.041480328770671517,
+   "frac_sig_rows_overlap2": 0.8330201482409437,
+   "rate": 0.83306645316253
+  },
+  "A2_overlap2_only": {
+   "n_kept_tests": 29136,
+   "n_sig_rows": 18275,
+   "n_annotated": 2072,
+   "n_ge3": 1566,
+   "rate": 0.8294635708566853
+  },
+  "B_perfeature_bh": {
+   "n_sig_rows": 363,
+   "n_annotated": 49,
+   "n_ge3": 21,
+   "rate": 0.019615692554043235
+  },
+  "C_global_bh": {
+   "n_sig_rows": 0,
+   "n_annotated": 0,
+   "n_ge3": 0,
+   "p_cutoff": -1.0,
+   "rate": 0.0
+  },
+  "layer": 0,
+  "kind": "freq",
+  "rep": 5,
+  "seed": 20261106,
+  "gene_count_corr_with_real": 0.9180962967681325,
+  "gene_count_max_abs_diff": 19.0,
+  "frac_gene_slots_same_as_real_list": 0.005762966675018792,
+  "seconds": 0.4
+ },
+ {
+  "n_features": 2498,
+  "n_terms": 2377,
+  "n_tests": 5937746,
+  "A_deployed": {
+   "n_kept_tests": 22150,
+   "n_sig_rows": 18227,
+   "n_annotated": 2068,
+   "n_ge3": 1584,
+   "max_raw_p_sig": 0.04070288306993001,
+   "frac_sig_rows_overlap2": 0.8266856860701157,
+   "rate": 0.8278622898318655
+  },
+  "A2_overlap2_only": {
+   "n_kept_tests": 28232,
+   "n_sig_rows": 17237,
+   "n_annotated": 2047,
+   "n_ge3": 1545,
+   "rate": 0.8194555644515612
+  },
+  "B_perfeature_bh": {
+   "n_sig_rows": 306,
+   "n_annotated": 40,
+   "n_ge3": 21,
+   "rate": 0.016012810248198558
+  },
+  "C_global_bh": {
+   "n_sig_rows": 0,
+   "n_annotated": 0,
+   "n_ge3": 0,
+   "p_cutoff": -1.0,
+   "rate": 0.0
+  },
+  "layer": 0,
+  "kind": "freq",
+  "rep": 6,
+  "seed": 20261107,
+  "gene_count_corr_with_real": 0.9165584057288583,
+  "gene_count_max_abs_diff": 15.0,
+  "frac_gene_slots_same_as_real_list": 0.004990395055541635,
+  "seconds": 0.4
+ },
+ {
+  "n_features": 2498,
+  "n_terms": 2377,
+  "n_tests": 5937746,
+  "A_deployed": {
+   "n_kept_tests": 23677,
+   "n_sig_rows": 19699,
+   "n_annotated": 2069,
+   "n_ge3": 1584,
+   "max_raw_p_sig": 0.041213838929153784,
+   "frac_sig_rows_overlap2": 0.8286715061678258,
+   "rate": 0.8282626100880705
+  },
+  "A2_overlap2_only": {
+   "n_kept_tests": 29874,
+   "n_sig_rows": 18746,
+   "n_annotated": 2057,
+   "n_ge3": 1544,
+   "rate": 0.8234587670136109
+  },
+  "B_perfeature_bh": {
+   "n_sig_rows": 304,
+   "n_annotated": 40,
+   "n_ge3": 20,
+   "rate": 0.016012810248198558
+  },
+  "C_global_bh": {
+   "n_sig_rows": 0,
+   "n_annotated": 0,
+   "n_ge3": 0,
+   "p_cutoff": -1.0,
+   "rate": 0.0
+  },
+  "layer": 0,
+  "kind": "freq",
+  "rep": 7,
+  "seed": 20261108,
+  "gene_count_corr_with_real": 0.9164717228971343,
+  "gene_count_max_abs_diff": 17.0,
+  "frac_gene_slots_same_as_real_list": 0.005115676939781174,
+  "seconds": 0.4
+ },
+ {
+  "n_features": 2498,
+  "n_terms": 2377,
+  "n_tests": 5937746,
+  "A_deployed": {
+   "n_kept_tests": 23347,
+   "n_sig_rows": 19501,
+   "n_annotated": 2068,
+   "n_ge3": 1625,
+   "max_raw_p_sig": 0.04175866103706344,
+   "frac_sig_rows_overlap2": 0.828111378903646,
+   "rate": 0.8278622898318655
+  },
+  "A2_overlap2_only": {
+   "n_kept_tests": 29327,
+   "n_sig_rows": 18582,
+   "n_annotated": 2049,
+   "n_ge3": 1590,
+   "rate": 0.8202562049639712
+  },
+  "B_perfeature_bh": {
+   "n_sig_rows": 459,
+   "n_annotated": 46,
+   "n_ge3": 21,
+   "rate": 0.018414731785428344
+  },
+  "C_global_bh": {
+   "n_sig_rows": 0,
+   "n_annotated": 0,
+   "n_ge3": 0,
+   "p_cutoff": -1.0,
+   "rate": 0.0
+  },
+  "layer": 0,
+  "kind": "freq",
+  "rep": 8,
+  "seed": 20261109,
+  "gene_count_corr_with_real": 0.9170824234996522,
+  "gene_count_max_abs_diff": 13.0,
+  "frac_gene_slots_same_as_real_list": 0.005595924162699407,
+  "seconds": 0.4
+ },
+ {
+  "n_features": 2498,
+  "n_terms": 2377,
+  "n_tests": 5937746,
+  "A_deployed": {
+   "n_kept_tests": 21891,
+   "n_sig_rows": 18001,
+   "n_annotated": 2082,
+   "n_ge3": 1574,
+   "max_raw_p_sig": 0.04020706289039917,
+   "frac_sig_rows_overlap2": 0.8300649963890895,
+   "rate": 0.833466773418735
+  },
+  "A2_overlap2_only": {
+   "n_kept_tests": 27822,
+   "n_sig_rows": 16944,
+   "n_annotated": 2062,
+   "n_ge3": 1528,
+   "rate": 0.8254603682946358
+  },
+  "B_perfeature_bh": {
+   "n_sig_rows": 156,
+   "n_annotated": 43,
+   "n_ge3": 15,
+   "rate": 0.01721377101681345
+  },
+  "C_global_bh": {
+   "n_sig_rows": 0,
+   "n_annotated": 0,
+   "n_ge3": 0,
+   "p_cutoff": -1.0,
+   "rate": 0.0
+  },
+  "layer": 0,
+  "kind": "freq",
+  "rep": 9,
+  "seed": 20261110,
+  "gene_count_corr_with_real": 0.9136310946837264,
+  "gene_count_max_abs_diff": 16.0,
+  "frac_gene_slots_same_as_real_list": 0.00522007850998079,
+  "seconds": 0.4
+ },
+ {
+  "n_features": 2498,
+  "n_terms": 2377,
+  "n_tests": 5937746,
+  "A_deployed": {
+   "n_kept_tests": 22273,
+   "n_sig_rows": 18384,
+   "n_annotated": 2050,
+   "n_ge3": 1575,
+   "max_raw_p_sig": 0.04126327216317119,
+   "frac_sig_rows_overlap2": 0.8249564838990426,
+   "rate": 0.8206565252201762
+  },
+  "A2_overlap2_only": {
+   "n_kept_tests": 28195,
+   "n_sig_rows": 17313,
+   "n_annotated": 2016,
+   "n_ge3": 1540,
+   "rate": 0.8070456365092074
+  },
+  "B_perfeature_bh": {
+   "n_sig_rows": 276,
+   "n_annotated": 45,
+   "n_ge3": 20,
+   "rate": 0.018014411529223378
+  },
+  "C_global_bh": {
+   "n_sig_rows": 0,
+   "n_annotated": 0,
+   "n_ge3": 0,
+   "p_cutoff": -1.0,
+   "rate": 0.0
+  },
+  "layer": 0,
+  "kind": "freq",
+  "rep": 10,
+  "seed": 20261111,
+  "gene_count_corr_with_real": 0.9146486068963127,
+  "gene_count_max_abs_diff": 14.0,
+  "frac_gene_slots_same_as_real_list": 0.005094796625741251,
+  "seconds": 0.5
+ },
+ {
+  "n_features": 2498,
+  "n_terms": 2377,
+  "n_tests": 5937746,
+  "A_deployed": {
+   "n_kept_tests": 23423,
+   "n_sig_rows": 19450,
+   "n_annotated": 2072,
+   "n_ge3": 1569,
+   "max_raw_p_sig": 0.041480328770671517,
+   "frac_sig_rows_overlap2": 0.8299228791773778,
+   "rate": 0.8294635708566853
+  },
+  "A2_overlap2_only": {
+   "n_kept_tests": 29577,
+   "n_sig_rows": 18426,
+   "n_annotated": 2051,
+   "n_ge3": 1536,
+   "rate": 0.8210568454763811
+  },
+  "B_perfeature_bh": {
+   "n_sig_rows": 257,
+   "n_annotated": 41,
+   "n_ge3": 12,
+   "rate": 0.016413130504403524
+  },
+  "C_global_bh": {
+   "n_sig_rows": 0,
+   "n_annotated": 0,
+   "n_ge3": 0,
+   "p_cutoff": -1.0,
+   "rate": 0.0
+  },
+  "layer": 0,
+  "kind": "freq",
+  "rep": 11,
+  "seed": 20261112,
+  "gene_count_corr_with_real": 0.9142920466037245,
+  "gene_count_max_abs_diff": 14.0,
+  "frac_gene_slots_same_as_real_list": 0.005512402906539714,
+  "seconds": 0.4
+ },
+ {
+  "n_features": 2498,
+  "n_terms": 2377,
+  "n_tests": 5937746,
+  "A_deployed": {
+   "n_kept_tests": 23619,
+   "n_sig_rows": 19620,
+   "n_annotated": 2089,
+   "n_ge3": 1612,
+   "max_raw_p_sig": 0.041480328770671517,
+   "frac_sig_rows_overlap2": 0.8234454638124363,
+   "rate": 0.8362690152121698
+  },
+  "A2_overlap2_only": {
+   "n_kept_tests": 29664,
+   "n_sig_rows": 18719,
+   "n_annotated": 2073,
+   "n_ge3": 1581,
+   "rate": 0.8298638911128903
+  },
+  "B_perfeature_bh": {
+   "n_sig_rows": 325,
+   "n_annotated": 38,
+   "n_ge3": 18,
+   "rate": 0.01521216973578863
+  },
+  "C_global_bh": {
+   "n_sig_rows": 0,
+   "n_annotated": 0,
+   "n_ge3": 0,
+   "p_cutoff": -1.0,
+   "rate": 0.0
+  },
+  "layer": 0,
+  "kind": "freq",
+  "rep": 12,
+  "seed": 20261113,
+  "gene_count_corr_with_real": 0.9159424289186877,
+  "gene_count_max_abs_diff": 15.0,
+  "frac_gene_slots_same_as_real_list": 0.0053871210223001755,
+  "seconds": 0.4
+ },
+ {
+  "n_features": 2498,
+  "n_terms": 2377,
+  "n_tests": 5937746,
+  "A_deployed": {
+   "n_kept_tests": 22581,
+   "n_sig_rows": 18805,
+   "n_annotated": 2062,
+   "n_ge3": 1587,
+   "max_raw_p_sig": 0.04126327216317119,
+   "frac_sig_rows_overlap2": 0.8320659399095985,
+   "rate": 0.8254603682946358
+  },
+  "A2_overlap2_only": {
+   "n_kept_tests": 28471,
+   "n_sig_rows": 17966,
+   "n_annotated": 2042,
+   "n_ge3": 1551,
+   "rate": 0.8174539631705364
+  },
+  "B_perfeature_bh": {
+   "n_sig_rows": 259,
+   "n_annotated": 41,
+   "n_ge3": 14,
+   "rate": 0.016413130504403524
+  },
+  "C_global_bh": {
+   "n_sig_rows": 0,
+   "n_annotated": 0,
+   "n_ge3": 0,
+   "p_cutoff": -1.0,
+   "rate": 0.0
+  },
+  "layer": 0,
+  "kind": "freq",
+  "rep": 13,
+  "seed": 20261114,
+  "gene_count_corr_with_real": 0.9188424730632284,
+  "gene_count_max_abs_diff": 16.0,
+  "frac_gene_slots_same_as_real_list": 0.005930009187338178,
+  "seconds": 0.5
+ },
+ {
+  "n_features": 2498,
+  "n_terms": 2377,
+  "n_tests": 5937746,
+  "A_deployed": {
+   "n_kept_tests": 23392,
+   "n_sig_rows": 19268,
+   "n_annotated": 2086,
+   "n_ge3": 1614,
+   "max_raw_p_sig": 0.04089314895830532,
+   "frac_sig_rows_overlap2": 0.8264479966784306,
+   "rate": 0.8350680544435548
+  },
+  "A2_overlap2_only": {
+   "n_kept_tests": 29550,
+   "n_sig_rows": 18280,
+   "n_annotated": 2066,
+   "n_ge3": 1585,
+   "rate": 0.8270616493194556
+  },
+  "B_perfeature_bh": {
+   "n_sig_rows": 178,
+   "n_annotated": 50,
+   "n_ge3": 21,
+   "rate": 0.020016012810248198
+  },
+  "C_global_bh": {
+   "n_sig_rows": 0,
+   "n_annotated": 0,
+   "n_ge3": 0,
+   "p_cutoff": -1.0,
+   "rate": 0.0
+  },
+  "layer": 0,
+  "kind": "freq",
+  "rep": 14,
+  "seed": 20261115,
+  "gene_count_corr_with_real": 0.9149831873284625,
+  "gene_count_max_abs_diff": 16.0,
+  "frac_gene_slots_same_as_real_list": 0.0054288816503800215,
+  "seconds": 0.5
+ },
+ {
+  "n_features": 2498,
+  "n_terms": 2377,
+  "n_tests": 5937746,
+  "A_deployed": {
+   "n_kept_tests": 23657,
+   "n_sig_rows": 19661,
+   "n_annotated": 2113,
+   "n_ge3": 1636,
+   "max_raw_p_sig": 0.04132670018544843,
+   "frac_sig_rows_overlap2": 0.8300188189817405,
+   "rate": 0.8458767013610888
+  },
+  "A2_overlap2_only": {
+   "n_kept_tests": 29844,
+   "n_sig_rows": 18732,
+   "n_annotated": 2095,
+   "n_ge3": 1603,
+   "rate": 0.8386709367493995
+  },
+  "B_perfeature_bh": {
+   "n_sig_rows": 332,
+   "n_annotated": 39,
+   "n_ge3": 18,
+   "rate": 0.015612489991993595
+  },
+  "C_global_bh": {
+   "n_sig_rows": 0,
+   "n_annotated": 0,
+   "n_ge3": 0,
+   "p_cutoff": -1.0,
+   "rate": 0.0
+  },
+  "layer": 0,
+  "kind": "freq",
+  "rep": 15,
+  "seed": 20261116,
+  "gene_count_corr_with_real": 0.9183781810101422,
+  "gene_count_max_abs_diff": 15.0,
+  "frac_gene_slots_same_as_real_list": 0.005533283220579638,
+  "seconds": 0.5
+ },
+ {
+  "n_features": 2498,
+  "n_terms": 2377,
+  "n_tests": 5937746,
+  "A_deployed": {
+   "n_kept_tests": 23607,
+   "n_sig_rows": 19529,
+   "n_annotated": 2035,
+   "n_ge3": 1569,
+   "max_raw_p_sig": 0.04132670018544843,
+   "frac_sig_rows_overlap2": 0.8221619130523836,
+   "rate": 0.8146517213771017
+  },
+  "A2_overlap2_only": {
+   "n_kept_tests": 29845,
+   "n_sig_rows": 18467,
+   "n_annotated": 2011,
+   "n_ge3": 1534,
+   "rate": 0.8050440352281826
+  },
+  "B_perfeature_bh": {
+   "n_sig_rows": 209,
+   "n_annotated": 30,
+   "n_ge3": 14,
+   "rate": 0.01200960768614892
+  },
+  "C_global_bh": {
+   "n_sig_rows": 0,
+   "n_annotated": 0,
+   "n_ge3": 0,
+   "p_cutoff": -1.0,
+   "rate": 0.0
+  },
+  "layer": 0,
+  "kind": "freq",
+  "rep": 16,
+  "seed": 20261117,
+  "gene_count_corr_with_real": 0.9141992272088003,
+  "gene_count_max_abs_diff": 14.0,
+  "frac_gene_slots_same_as_real_list": 0.005282719452100559,
+  "seconds": 0.4
+ },
+ {
+  "n_features": 2498,
+  "n_terms": 2377,
+  "n_tests": 5937746,
+  "A_deployed": {
+   "n_kept_tests": 23343,
+   "n_sig_rows": 19446,
+   "n_annotated": 2061,
+   "n_ge3": 1576,
+   "max_raw_p_sig": 0.04132670018544843,
+   "frac_sig_rows_overlap2": 0.8273680962665844,
+   "rate": 0.8250600480384307
+  },
+  "A2_overlap2_only": {
+   "n_kept_tests": 29263,
+   "n_sig_rows": 18564,
+   "n_annotated": 2043,
+   "n_ge3": 1539,
+   "rate": 0.8178542834267414
+  },
+  "B_perfeature_bh": {
+   "n_sig_rows": 286,
+   "n_annotated": 38,
+   "n_ge3": 12,
+   "rate": 0.01521216973578863
+  },
+  "C_global_bh": {
+   "n_sig_rows": 0,
+   "n_annotated": 0,
+   "n_ge3": 0,
+   "p_cutoff": -1.0,
+   "rate": 0.0
+  },
+  "layer": 0,
+  "kind": "freq",
+  "rep": 17,
+  "seed": 20261118,
+  "gene_count_corr_with_real": 0.9181961290596105,
+  "gene_count_max_abs_diff": 13.0,
+  "frac_gene_slots_same_as_real_list": 0.00561680447673933,
+  "seconds": 0.4
+ },
+ {
+  "n_features": 2498,
+  "n_terms": 2377,
+  "n_tests": 5937746,
+  "A_deployed": {
+   "n_kept_tests": 22560,
+   "n_sig_rows": 18871,
+   "n_annotated": 2088,
+   "n_ge3": 1577,
+   "max_raw_p_sig": 0.04132670018544843,
+   "frac_sig_rows_overlap2": 0.8333951565894759,
+   "rate": 0.8358686949559647
+  },
+  "A2_overlap2_only": {
+   "n_kept_tests": 28594,
+   "n_sig_rows": 18009,
+   "n_annotated": 2071,
+   "n_ge3": 1543,
+   "rate": 0.8290632506004804
+  },
+  "B_perfeature_bh": {
+   "n_sig_rows": 319,
+   "n_annotated": 46,
+   "n_ge3": 20,
+   "rate": 0.018414731785428344
+  },
+  "C_global_bh": {
+   "n_sig_rows": 0,
+   "n_annotated": 0,
+   "n_ge3": 0,
+   "p_cutoff": -1.0,
+   "rate": 0.0
+  },
+  "layer": 0,
+  "kind": "freq",
+  "rep": 18,
+  "seed": 20261119,
+  "gene_count_corr_with_real": 0.9168705706560353,
+  "gene_count_max_abs_diff": 14.0,
+  "frac_gene_slots_same_as_real_list": 0.005408001336340099,
+  "seconds": 0.6
+ },
+ {
+  "n_features": 2498,
+  "n_terms": 2377,
+  "n_tests": 5937746,
+  "A_deployed": {
+   "n_kept_tests": 23474,
+   "n_sig_rows": 19465,
+   "n_annotated": 2068,
+   "n_ge3": 1584,
+   "max_raw_p_sig": 0.04132670018544843,
+   "frac_sig_rows_overlap2": 0.8375545851528384,
+   "rate": 0.8278622898318655
+  },
+  "A2_overlap2_only": {
+   "n_kept_tests": 29535,
+   "n_sig_rows": 18593,
+   "n_annotated": 2046,
+   "n_ge3": 1561,
+   "rate": 0.8190552441953562
+  },
+  "B_perfeature_bh": {
+   "n_sig_rows": 457,
+   "n_annotated": 41,
+   "n_ge3": 15,
+   "rate": 0.016413130504403524
+  },
+  "C_global_bh": {
+   "n_sig_rows": 0,
+   "n_annotated": 0,
+   "n_ge3": 0,
+   "p_cutoff": -1.0,
+   "rate": 0.0
+  },
+  "layer": 0,
+  "kind": "freq",
+  "rep": 19,
+  "seed": 20261120,
+  "gene_count_corr_with_real": 0.9143675530309016,
+  "gene_count_max_abs_diff": 15.0,
+  "frac_gene_slots_same_as_real_list": 0.004969514741501712,
+  "seconds": 0.6
+ }
+]

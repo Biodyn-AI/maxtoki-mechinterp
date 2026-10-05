@@ -1,0 +1,26 @@
+{
+ "run": "1B_K562",
+ "dataset": "k562",
+ "n_control_cells_available": 10691,
+ "n_control_cells_used_for_DE": 5000,
+ "n_candidate_perturbations": 374,
+ "skipped_before_test": {
+  "lt30": 0,
+  "no_ens": 35,
+  "not_in_geneset": 974
+ },
+ "dropped_lt3_positives_or_negatives": 219,
+ "n_perturbations_evaluated": 155,
+ "n_positive_pairs": 8587,
+ "rule": {
+  "lfc_abs_min": 0.5,
+  "bh_q_max": 0.05,
+  "min_cells": 30,
+  "min_pos_and_neg": 3,
+  "n_ctrl_cap": 5000,
+  "ctrl_seed": 42,
+  "normalisation": "per cell, scale to 1e4 over the run's 1,500 genes, log1p",
+  "test": "Welch t (scipy ttest_ind equal_var=False), BH over 1,500 genes per perturbation"
+ },
+ "seconds": 25.277778148651123
+}

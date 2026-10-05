@@ -1,0 +1,2682 @@
+{
+ "files_scanned": 1708,
+ "strong": {
+  "added 2026-05-07": {
+   "n_hits": 6,
+   "hits": [
+    {
+     "file": "runs/manifold-discovery-217M/FINAL_SUMMARY.md",
+     "line": 265,
+     "text": "- `reports/external_validation_H38_lite.json` \u2014 H38 LITE external (POSITIVE, all 4 gates) [added 2026-05-07]"
+    },
+    {
+     "file": "runs/manifold-discovery-217M/FINAL_SUMMARY.md",
+     "line": 266,
+     "text": "- `reports/zeroshot_H38_lite.json` \u2014 H38 LITE zero-shot (3/4 gates; trust 0.787 just under) [added 2026-05-07]"
+    },
+    {
+     "file": "runs/manifold-discovery-217M/FINAL_SUMMARY.md",
+     "line": 267,
+     "text": "- `reports/zeroshot_H95.json` \u2014 H95 effector zero-shot (POSITIVE_3GATE_FALLBACK) [added 2026-05-07]"
+    },
+    {
+     "file": "runs/manifold-discovery-217M/FINAL_SUMMARY.md",
+     "line": 269,
+     "text": "## \u00a716. Phase 14 Sweep #3 + open-validation backfill (added 2026-05-07)"
+    },
+    {
+     "file": "runs/manifold-discovery-217M/FINAL_SUMMARY.md",
+     "line": 312,
+     "text": "## \u00a717. Trust-ceiling diagnostics + cross-axis orthogonality (added 2026-05-07)"
+    },
+    {
+     "file": "runs/topology-141-217M/README.md",
+     "line": 27,
+     "text": "The annotation-extension degradation chain (H124/H127/H130/H138) was added 2026-05-07"
+    }
+   ]
+  },
+  "audit action / residual": {
+   "n_hits": 0,
+   "hits": []
+  },
+  "audits/ folder": {
+   "n_hits": 0,
+   "hits": []
+  },
+  "audit spec file": {
+   "n_hits": 0,
+   "hits": []
+  },
+  "reviewer": {
+   "n_hits": 13,
+   "hits": [
+    {
+     "file": "pipelines/manifold-discovery-extraction-compactification.md",
+     "line": 5,
+     "text": "This pipeline is a **generalizable, model-agnostic workflow** for discovering biological manifolds inside single-cell foundation models, extracting them as standalone performant algorithms, evaluating"
+    },
+    {
+     "file": "pipelines/manifold-discovery-extraction-compactification.md",
+     "line": 40,
+     "text": "- `topology-geometry-141-hypotheses.md` (arxiv 2602.22289) \u2014 141-hypothesis topological screen. Same executor-reviewer discipline and hierarchical null-model framework."
+    },
+    {
+     "file": "pipelines/manifold-discovery-extraction-compactification.md",
+     "line": 135,
+     "text": "- **Autonomous-loop LLM backend:** the source paper uses the autonomous executor\u2013reviewer loop from the earlier Kendiukhov projects. The specific LLM (Claude, Codex 5.3, or author-led Phase-2) is not "
+    },
+    {
+     "file": "pipelines/manifold-discovery-extraction-compactification.md",
+     "line": 193,
+     "text": "**Fifth gate (adversarial reviewer):** the autonomous reviewer role rejects candidates that either (a) fail any of the four numeric gates, (b) show confound sensitivity in bootstrap audits, or (c) wou"
+    },
+    {
+     "file": "pipelines/manifold-discovery-extraction-compactification.md",
+     "line": 203,
+     "text": "**Architecture:** two-role executor\u2013reviewer loop, same as `topology-biomechinterp1` (Claude) / `topology-biomechinterp2` (Codex 5.3 xhigh)."
+    },
+    {
+     "file": "pipelines/manifold-discovery-extraction-compactification.md",
+     "line": 591,
+     "text": "16. **The paper does not specify executor and reviewer prompt templates.** Phase 3 autonomous loop architecture is described but the specific prompts are not released. Use the prompt templates from `r"
+    },
+    {
+     "file": "pipelines/manifold-discovery-extraction-compactification.md",
+     "line": 606,
+     "text": "8. **Run Phase 3a autonomous hypothesis sweep.** Adapt the executor + reviewer prompts from `repos/topology-biomechinterp2/prompts/` to emphasise operator-geometry-ruler combinations. **Require a pair"
+    },
+    {
+     "file": "pipelines/sparse-autoencoders/01-sae-atlas.md",
+     "line": 17,
+     "text": "- **GitHub repo:** https://github.com/Biodyn-AI/bio-sae \u2014 pinned commit `9277f5daec682cd34027172b04993833dfeb17e1` (2026-04-14, \"Add BMC Genomics revision: reviewer-driven experiments and manuscript u"
+    },
+    {
+     "file": "runs/spectral-geometry-217M/autoloop/iterations/iter_0002/brainstormer_prompt.md",
+     "line": 10,
+     "text": "- You are a hypothesis generator and navigator, not a conservative reviewer."
+    },
+    {
+     "file": "runs/spectral-geometry-217M/autoloop/iterations/iter_0003/brainstormer_prompt.md",
+     "line": 10,
+     "text": "- You are a hypothesis generator and navigator, not a conservative reviewer."
+    },
+    {
+     "file": "runs/spectral-geometry-217M/autoloop/prompts/brainstormer_prompt.md",
+     "line": 10,
+     "text": "- You are a hypothesis generator and navigator, not a conservative reviewer."
+    },
+    {
+     "file": "runs/spectral-geometry-217M/autoloop/runtime/iter_0002_brainstormer.log",
+     "line": 11,
+     "text": "- You are a hypothesis generator and navigator, not a conservative reviewer."
+    },
+    {
+     "file": "runs/spectral-geometry-217M/autoloop/runtime/iter_0003_brainstormer.log",
+     "line": 11,
+     "text": "- You are a hypothesis generator and navigator, not a conservative reviewer."
+    }
+   ]
+  },
+  "revision": {
+   "n_hits": 5,
+   "hits": [
+    {
+     "file": "pipelines/attention-grn-extraction-and-evaluation.md",
+     "line": 16,
+     "text": "- **Pinned commit:** `40e6da0ae21a768dbbcb2bfa62539845f0ef7c88` (2026-04-14, \"Add revision analyses: positive controls, scGPT ablation, colorblind palette\")"
+    },
+    {
+     "file": "pipelines/sparse-autoencoders/01-sae-atlas.md",
+     "line": 17,
+     "text": "- **GitHub repo:** https://github.com/Biodyn-AI/bio-sae \u2014 pinned commit `9277f5daec682cd34027172b04993833dfeb17e1` (2026-04-14, \"Add BMC Genomics revision: reviewer-driven experiments and manuscript u"
+    },
+    {
+     "file": "pipelines/sparse-autoencoders/01-sae-atlas.md",
+     "line": 165,
+     "text": "- **Variance explained > 75%.** If < 60%, the dictionary is under-expressive \u2014 try `d_SAE = 8 \u00d7 d_model` (but see \u00a79 pitfall on hyperparameter ablation \u2014 the paper's revision tested expansion \u2208 {2, 4,"
+    },
+    {
+     "file": "runs/spectral-geometry-217M/outputs/FINAL_SUMMARY.md",
+     "line": 168,
+     "text": "and 40 canonical lineage markers. Selection revision was necessary after"
+    },
+    {
+     "file": "summaries/spectral-geometry-217M-FINAL_SUMMARY.md",
+     "line": 168,
+     "text": "and 40 canonical lineage markers. Selection revision was necessary after"
+    }
+   ]
+  },
+  "investigation": {
+   "n_hits": 5,
+   "hits": [
+    {
+     "file": "pipelines/manifold-discovery-extraction-compactification.md",
+     "line": 199,
+     "text": "### Phase 3 \u2014 Autonomous research loop (Phase-1 broad hypothesis search + Phase-2 focused investigation)"
+    },
+    {
+     "file": "pipelines/manifold-discovery-extraction-compactification.md",
+     "line": 216,
+     "text": "**Phase 3b \u2014 Focused investigation (transitioning to author-led):**"
+    },
+    {
+     "file": "pipelines/manifold-discovery-extraction-compactification.md",
+     "line": 218,
+     "text": "Once the positive branch is identified, the workflow transitions to author-led investigation. Phase 3b runs:"
+    },
+    {
+     "file": "pipelines/manifold-discovery-extraction-compactification.md",
+     "line": 607,
+     "text": "9. **Transition to Phase 3b focused investigation.** Run equation-level LET replication, confidence intervals, bootstrap audits. Commit to a single positive branch for extraction."
+    },
+    {
+     "file": "pipelines/sparse-autoencoders/02-causal-circuit-tracing.md",
+     "line": 636,
+     "text": "9. **Run Phase 7 PMI validation against Stage 1 PMI graphs.** Target overlap must be > 80%. If < 60%, the causal graph is measuring something different from co-activation, which warrants investigation"
+    }
+   ]
+  },
+  "paper folders": {
+   "n_hits": 0,
+   "hits": []
+  },
+  "framework-eval / studyC": {
+   "n_hits": 0,
+   "hits": []
+  },
+  "54.61 / 53.48 / 53.42": {
+   "n_hits": 132,
+   "hits": [
+    {
+     "file": "runs/attention-grn-217M/outputs/phase0_adamson/gene_features.csv",
+     "line": 44,
+     "text": "42,CAP1,ENSG00000131236,6336,135,2.2910278,0.53422433,0.077,0.0"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase1_k562_1b/per_perturbation_auroc.csv",
+     "line": 131,
+     "text": "SDAD1,210,17,1482,0.5700166706358657,0.5700166706358657,0.5294117647058824,0.5686671429705485,0.570770818448837,0.5618798126538065,0.5342343415098834"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase1_rpe1/attention_per_layer_auroc.csv",
+     "line": 11,
+     "text": "9,0.5307001395690365,0.5348412598581269,0.09761359122124375,325"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase1_rpe1/per_perturbation_auroc.csv",
+     "line": 91,
+     "text": "EIF5,33,82,1417,0.6385957966848546,0.6385957966848546,0.7134103309981583,0.7400726371413326,0.608602853847875,0.5313871628483398,0.5348770160249239"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase1_rpe1/per_perturbation_auroc.csv",
+     "line": 236,
+     "text": "SF1,30,125,1374,0.487353711790393,0.487353711790393,0.6045997088791848,0.6093799126637556,0.5545618631732169,0.5348093158660845,0.4997379912663756"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase1_rpe1.log",
+     "line": 33,
+     "text": "9    0.530700      0.534841   0.097614      325"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase2_adamson/pair_dataset.csv",
+     "line": 44,
+     "text": "0,872,42,0,2.2910278,0.53422433,0.077,0.0,0.0008369254064746201,-0.026763806119561195,0.026763806119561195"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase2_adamson/pair_dataset.csv",
+     "line": 1543,
+     "text": "1,599,42,0,2.2910278,0.53422433,0.077,0.0,0.0014714817516505718,-0.014880766160786152,0.014880766160786152"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase2_adamson/pair_dataset.csv",
+     "line": 3042,
+     "text": "2,300,42,0,2.2910278,0.53422433,0.077,0.0,0.0007954856846481562,0.02629847265779972,0.02629847265779972"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase2_adamson/pair_dataset.csv",
+     "line": 4541,
+     "text": "3,209,42,0,2.2910278,0.53422433,0.077,0.0,0.00040224078111350536,-0.026301776990294456,0.026301776990294456"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase2_adamson/pair_dataset.csv",
+     "line": 6040,
+     "text": "4,574,42,0,2.2910278,0.53422433,0.077,0.0,0.000662617851048708,0.021200552582740784,0.021200552582740784"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase2_adamson/pair_dataset.csv",
+     "line": 7539,
+     "text": "5,1413,42,0,2.2910278,0.53422433,0.077,0.0,0.0010791037930175662,0.030412912368774414,0.030412912368774414"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase2_adamson/pair_dataset.csv",
+     "line": 9038,
+     "text": "6,918,42,0,2.2910278,0.53422433,0.077,0.0,0.0012016743421554565,0.054739631712436676,0.054739631712436676"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase2_adamson/pair_dataset.csv",
+     "line": 10537,
+     "text": "7,1023,42,0,2.2910278,0.53422433,0.077,0.0,0.0006974171847105026,0.03800882399082184,0.03800882399082184"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase2_adamson/pair_dataset.csv",
+     "line": 12036,
+     "text": "8,286,42,0,2.2910278,0.53422433,0.077,0.0,0.0007514976896345615,-0.013371635228395462,0.013371635228395462"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase2_adamson/pair_dataset.csv",
+     "line": 13535,
+     "text": "9,1032,42,0,2.2910278,0.53422433,0.077,0.0,0.0007427883101627231,-0.05859750881791115,0.05859750881791115"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase2_adamson/pair_dataset.csv",
+     "line": 15033,
+     "text": "10,11,42,0,2.2910278,0.53422433,0.077,0.0,0.001612927531823516,0.027463529258966446,0.027463529258966446"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase2_adamson/pair_dataset.csv",
+     "line": 16533,
+     "text": "11,1352,42,0,2.2910278,0.53422433,0.077,0.0,0.0006510672392323613,0.009633604437112808,0.009633604437112808"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase2_adamson/pair_dataset.csv",
+     "line": 18032,
+     "text": "12,1252,42,0,2.2910278,0.53422433,0.077,0.0,0.0006957026198506355,-0.0026388890109956264,0.0026388890109956264"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase2_adamson/pair_dataset.csv",
+     "line": 19530,
+     "text": "13,21,42,0,2.2910278,0.53422433,0.077,0.0,0.0011067154118791223,-0.0017739625182002783,0.0017739625182002783"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase2_adamson/pair_dataset.csv",
+     "line": 21030,
+     "text": "14,372,42,0,2.2910278,0.53422433,0.077,0.0,0.00047372732660733163,-0.013874934986233711,0.013874934986233711"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase2_adamson/pair_dataset.csv",
+     "line": 22529,
+     "text": "15,1128,42,0,2.2910278,0.53422433,0.077,0.0,0.0009349856409244239,0.02065211907029152,0.02065211907029152"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase2_adamson/pair_dataset.csv",
+     "line": 24028,
+     "text": "16,50,42,0,2.2910278,0.53422433,0.077,0.0,0.00034712738124653697,0.031703151762485504,0.031703151762485504"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase2_adamson/pair_dataset.csv",
+     "line": 25527,
+     "text": "17,210,42,0,2.2910278,0.53422433,0.077,0.0,0.0006038826541043818,0.016829222440719604,0.016829222440719604"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase2_adamson/pair_dataset.csv",
+     "line": 27026,
+     "text": "18,1125,42,0,2.2910278,0.53422433,0.077,0.0,0.0005243110354058444,0.014604193158447742,0.014604193158447742"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase2_adamson/pair_dataset.csv",
+     "line": 28525,
+     "text": "19,291,42,0,2.2910278,0.53422433,0.077,0.0,0.0004777417634613812,-0.023809952661395073,0.023809952661395073"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase2_adamson/pair_dataset.csv",
+     "line": 30024,
+     "text": "20,1344,42,0,2.2910278,0.53422433,0.077,0.0,0.0007747854106128216,-0.046372268348932266,0.046372268348932266"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase2_adamson/pair_dataset.csv",
+     "line": 31523,
+     "text": "21,1116,42,0,2.2910278,0.53422433,0.077,0.0,0.0007053595036268234,-0.035781364887952805,0.035781364887952805"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase2_adamson/pair_dataset.csv",
+     "line": 33022,
+     "text": "22,926,42,0,2.2910278,0.53422433,0.077,0.0,0.0010232148924842477,-0.041753388941287994,0.041753388941287994"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase2_adamson/pair_dataset.csv",
+     "line": 34521,
+     "text": "23,837,42,0,2.2910278,0.53422433,0.077,0.0,0.0010126387933269143,0.020179474726319313,0.020179474726319313"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase2_adamson/pair_dataset.csv",
+     "line": 36020,
+     "text": "24,981,42,0,2.2910278,0.53422433,0.077,0.0,0.00043287809239700437,-0.05695110931992531,0.05695110931992531"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase2_adamson/pair_dataset.csv",
+     "line": 37519,
+     "text": "25,171,42,0,2.2910278,0.53422433,0.077,0.0,0.0006811073399148881,-0.017089243978261948,0.017089243978261948"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase2_adamson/pair_dataset.csv",
+     "line": 39018,
+     "text": "26,1172,42,0,2.2910278,0.53422433,0.077,0.0,0.0006818842375651002,-0.014054765924811363,0.014054765924811363"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase2_adamson/pair_dataset.csv",
+     "line": 40517,
+     "text": "27,1341,42,0,2.2910278,0.53422433,0.077,0.0,0.0008264965726993978,-0.008196238428354263,0.008196238428354263"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase2_adamson/pair_dataset.csv",
+     "line": 42016,
+     "text": "28,329,42,0,2.2910278,0.53422433,0.077,0.0,0.0008426488493569195,-0.05587087571620941,0.05587087571620941"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase2_adamson/pair_dataset.csv",
+     "line": 43515,
+     "text": "29,1381,42,0,2.2910278,0.53422433,0.077,0.0,0.0006069037481211126,-0.03382215276360512,0.03382215276360512"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase2_adamson/pair_dataset.csv",
+     "line": 45014,
+     "text": "30,1482,42,0,2.2910278,0.53422433,0.077,0.0,0.0003921258612535894,-0.005751022603362799,0.005751022603362799"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase2_adamson/pair_dataset.csv",
+     "line": 46513,
+     "text": "31,1123,42,0,2.2910278,0.53422433,0.077,0.0,0.0006425592000596225,-0.0257064588367939,0.0257064588367939"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase2_adamson/pair_dataset.csv",
+     "line": 48012,
+     "text": "32,1324,42,0,2.2910278,0.53422433,0.077,0.0,0.000643092964310199,-0.03841320425271988,0.03841320425271988"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase2_adamson/pair_dataset.csv",
+     "line": 49511,
+     "text": "33,457,42,0,2.2910278,0.53422433,0.077,0.0,0.0009640085627324879,-0.009312591515481472,0.009312591515481472"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase2_adamson/pair_dataset.csv",
+     "line": 51010,
+     "text": "34,782,42,0,2.2910278,0.53422433,0.077,0.0,0.0009008930064737797,-0.009555271826684475,0.009555271826684475"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase2_adamson/pair_dataset.csv",
+     "line": 52509,
+     "text": "35,1476,42,0,2.2910278,0.53422433,0.077,0.0,0.00047681588330306113,-0.037531934678554535,0.037531934678554535"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase2_adamson/pair_dataset.csv",
+     "line": 54008,
+     "text": "36,950,42,0,2.2910278,0.53422433,0.077,0.0,0.000936525349970907,-0.06848016381263733,0.06848016381263733"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase2_adamson/pair_dataset.csv",
+     "line": 55507,
+     "text": "37,347,42,0,2.2910278,0.53422433,0.077,0.0,0.0009570677648298442,0.0022501149214804173,0.0022501149214804173"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase2_adamson/pair_dataset.csv",
+     "line": 57006,
+     "text": "38,601,42,0,2.2910278,0.53422433,0.077,0.0,0.0007626182050444186,0.031309861689805984,0.031309861689805984"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase2_adamson/pair_dataset.csv",
+     "line": 58505,
+     "text": "39,1295,42,0,2.2910278,0.53422433,0.077,0.0,0.0004781222087331116,0.058413419872522354,0.058413419872522354"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase2_adamson/pair_dataset.csv",
+     "line": 60004,
+     "text": "40,562,42,0,2.2910278,0.53422433,0.077,0.0,0.000853978912346065,0.008218750357627869,0.008218750357627869"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase2_adamson/pair_dataset.csv",
+     "line": 61503,
+     "text": "41,1204,42,0,2.2910278,0.53422433,0.077,0.0,0.0007949231658130884,0.05127652734518051,0.05127652734518051"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase2_adamson/pair_dataset.csv",
+     "line": 63002,
+     "text": "42,960,42,0,2.2910278,0.53422433,0.077,0.0,0.0009865302126854658,0.09374081343412399,0.09374081343412399"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase2_adamson/pair_dataset.csv",
+     "line": 64501,
+     "text": "43,437,42,0,2.2910278,0.53422433,0.077,0.0,0.0012698948848992586,0.04425138235092163,0.04425138235092163"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase2_adamson/pair_dataset.csv",
+     "line": 66000,
+     "text": "44,1313,42,0,2.2910278,0.53422433,0.077,0.0,0.0007702642469666898,-0.004512126091867685,0.004512126091867685"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase2_adamson/pair_dataset.csv",
+     "line": 67499,
+     "text": "45,353,42,0,2.2910278,0.53422433,0.077,0.0,0.0005431875470094383,0.009209315292537212,0.009209315292537212"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase2_adamson/pair_dataset.csv",
+     "line": 68998,
+     "text": "46,990,42,0,2.2910278,0.53422433,0.077,0.0,0.0007299046264961362,-0.022351358085870743,0.022351358085870743"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase2_adamson/pair_dataset.csv",
+     "line": 70497,
+     "text": "47,948,42,0,2.2910278,0.53422433,0.077,0.0,0.0009473679237999022,-0.017896899953484535,0.017896899953484535"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase2_adamson/pair_dataset.csv",
+     "line": 71996,
+     "text": "48,1192,42,0,2.2910278,0.53422433,0.077,0.0,0.0006830011261627078,-0.03349553421139717,0.03349553421139717"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase2_adamson/pair_dataset.csv",
+     "line": 73495,
+     "text": "49,1396,42,0,2.2910278,0.53422433,0.077,0.0,0.0005618607392534614,-0.015042930841445923,0.015042930841445923"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase2_adamson/pair_dataset.csv",
+     "line": 74994,
+     "text": "50,1129,42,0,2.2910278,0.53422433,0.077,0.0,0.0009721731184981763,0.03873107209801674,0.03873107209801674"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase2_adamson/pair_dataset.csv",
+     "line": 76493,
+     "text": "51,470,42,0,2.2910278,0.53422433,0.077,0.0,0.0007603389676660299,0.017330970615148544,0.017330970615148544"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase2_adamson/pair_dataset.csv",
+     "line": 77992,
+     "text": "52,1366,42,0,2.2910278,0.53422433,0.077,0.0,0.000758022244554013,-0.022374644875526428,0.022374644875526428"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase2_adamson/pair_dataset.csv",
+     "line": 79491,
+     "text": "53,598,42,0,2.2910278,0.53422433,0.077,0.0,0.000832639227155596,-0.02148999460041523,0.02148999460041523"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase2_adamson/pair_dataset.csv",
+     "line": 80990,
+     "text": "54,1067,42,0,2.2910278,0.53422433,0.077,0.0,0.0007384739583358169,-0.008638565428555012,0.008638565428555012"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase2_adamson/pair_dataset.csv",
+     "line": 82489,
+     "text": "55,500,42,0,2.2910278,0.53422433,0.077,0.0,0.0007602612022310495,-0.01846516877412796,0.01846516877412796"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase2_adamson/pair_dataset.csv",
+     "line": 83988,
+     "text": "56,76,42,0,2.2910278,0.53422433,0.077,0.0,0.0009014170500449836,-0.001544926897622645,0.001544926897622645"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase3_adamson/full_pair_dataset.csv",
+     "line": 44,
+     "text": "ARHGAP22,872,42,0,2.2910278,0.53422433,0.077,0.0008369254,0.026763806"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase3_adamson/full_pair_dataset.csv",
+     "line": 1543,
+     "text": "ASCC3,599,42,0,2.2910278,0.53422433,0.077,0.0014714818,0.014880766"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase3_adamson/full_pair_dataset.csv",
+     "line": 3042,
+     "text": "BHLHE40,300,42,0,2.2910278,0.53422433,0.077,0.0007954857,0.026298473"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase3_adamson/full_pair_dataset.csv",
+     "line": 4541,
+     "text": "CAD,209,42,0,2.2910278,0.53422433,0.077,0.00040224078,0.026301777"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase3_adamson/full_pair_dataset.csv",
+     "line": 6040,
+     "text": "CCND3,574,42,0,2.2910278,0.53422433,0.077,0.00066261785,0.021200553"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase3_adamson/full_pair_dataset.csv",
+     "line": 7539,
+     "text": "CHERP,1413,42,0,2.2910278,0.53422433,0.077,0.0010791038,0.030412912"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase3_adamson/full_pair_dataset.csv",
+     "line": 9038,
+     "text": "COPB1,918,42,0,2.2910278,0.53422433,0.077,0.0012016743,0.05473963"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase3_adamson/full_pair_dataset.csv",
+     "line": 10537,
+     "text": "COPZ1,1023,42,0,2.2910278,0.53422433,0.077,0.0006974172,0.038008824"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase3_adamson/full_pair_dataset.csv",
+     "line": 12036,
+     "text": "CREB1,286,42,0,2.2910278,0.53422433,0.077,0.0007514977,0.013371635"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase3_adamson/full_pair_dataset.csv",
+     "line": 13535,
+     "text": "DDIT3,1032,42,0,2.2910278,0.53422433,0.077,0.0007427883,0.05859751"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase3_adamson/full_pair_dataset.csv",
+     "line": 15033,
+     "text": "DDOST,11,42,0,2.2910278,0.53422433,0.077,0.0016129275,0.02746353"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase3_adamson/full_pair_dataset.csv",
+     "line": 16533,
+     "text": "DDRGK1,1352,42,0,2.2910278,0.53422433,0.077,0.00065106724,0.009633604"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase3_adamson/full_pair_dataset.csv",
+     "line": 18032,
+     "text": "DERL2,1252,42,0,2.2910278,0.53422433,0.077,0.0006957026,0.002638889"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase3_adamson/full_pair_dataset.csv",
+     "line": 19530,
+     "text": "DHDDS,21,42,0,2.2910278,0.53422433,0.077,0.0011067154,0.0017739625"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase3_adamson/full_pair_dataset.csv",
+     "line": 21030,
+     "text": "DNAJC19,372,42,0,2.2910278,0.53422433,0.077,0.00047372733,0.013874935"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase3_adamson/full_pair_dataset.csv",
+     "line": 22529,
+     "text": "EIF2B2,1128,42,0,2.2910278,0.53422433,0.077,0.00093498564,0.02065212"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase3_adamson/full_pair_dataset.csv",
+     "line": 24028,
+     "text": "EIF2B3,50,42,0,2.2910278,0.53422433,0.077,0.00034712738,0.03170315"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase3_adamson/full_pair_dataset.csv",
+     "line": 25527,
+     "text": "EIF2B4,210,42,0,2.2910278,0.53422433,0.077,0.00060388265,0.016829222"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase3_adamson/full_pair_dataset.csv",
+     "line": 27026,
+     "text": "EIF2S1,1125,42,0,2.2910278,0.53422433,0.077,0.00052431104,0.014604193"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase3_adamson/full_pair_dataset.csv",
+     "line": 28525,
+     "text": "FARSB,291,42,0,2.2910278,0.53422433,0.077,0.00047774176,0.023809953"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase3_adamson/full_pair_dataset.csv",
+     "line": 30024,
+     "text": "FECH,1344,42,0,2.2910278,0.53422433,0.077,0.0007747854,0.04637227"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase3_adamson/full_pair_dataset.csv",
+     "line": 31523,
+     "text": "GNPNAT1,1116,42,0,2.2910278,0.53422433,0.077,0.0007053595,0.035781365"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase3_adamson/full_pair_dataset.csv",
+     "line": 33022,
+     "text": "HSD17B12,926,42,0,2.2910278,0.53422433,0.077,0.0010232149,0.04175339"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase3_adamson/full_pair_dataset.csv",
+     "line": 34521,
+     "text": "HSPA5,837,42,0,2.2910278,0.53422433,0.077,0.0010126388,0.020179475"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase3_adamson/full_pair_dataset.csv",
+     "line": 36020,
+     "text": "HYOU1,981,42,0,2.2910278,0.53422433,0.077,0.0004328781,0.05695111"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase3_adamson/full_pair_dataset.csv",
+     "line": 37519,
+     "text": "IARS2,171,42,0,2.2910278,0.53422433,0.077,0.00068110734,0.017089244"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase3_adamson/full_pair_dataset.csv",
+     "line": 39018,
+     "text": "IDH3A,1172,42,0,2.2910278,0.53422433,0.077,0.00068188424,0.014054766"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase3_adamson/full_pair_dataset.csv",
+     "line": 40517,
+     "text": "IER3IP1,1341,42,0,2.2910278,0.53422433,0.077,0.0008264966,0.008196238"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase3_adamson/full_pair_dataset.csv",
+     "line": 42016,
+     "text": "MANF,329,42,0,2.2910278,0.53422433,0.077,0.00084264885,0.055870876"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase3_adamson/full_pair_dataset.csv",
+     "line": 43515,
+     "text": "MRGBP,1381,42,0,2.2910278,0.53422433,0.077,0.00060690375,0.033822153"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase3_adamson/full_pair_dataset.csv",
+     "line": 45014,
+     "text": "MRPL39,1482,42,0,2.2910278,0.53422433,0.077,0.00039212586,0.0057510226"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase3_adamson/full_pair_dataset.csv",
+     "line": 46513,
+     "text": "MTHFD1,1123,42,0,2.2910278,0.53422433,0.077,0.0006425592,0.025706459"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase3_adamson/full_pair_dataset.csv",
+     "line": 48012,
+     "text": "P4HB,1324,42,0,2.2910278,0.53422433,0.077,0.00064309296,0.038413204"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase3_adamson/full_pair_dataset.csv",
+     "line": 49511,
+     "text": "PPWD1,457,42,0,2.2910278,0.53422433,0.077,0.00096400856,0.0093125915"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase3_adamson/full_pair_dataset.csv",
+     "line": 51010,
+     "text": "PTDSS1,782,42,0,2.2910278,0.53422433,0.077,0.000900893,0.009555272"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase3_adamson/full_pair_dataset.csv",
+     "line": 52509,
+     "text": "SAMM50,1476,42,0,2.2910278,0.53422433,0.077,0.00047681588,0.037531935"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase3_adamson/full_pair_dataset.csv",
+     "line": 54008,
+     "text": "SCYL1,950,42,0,2.2910278,0.53422433,0.077,0.00093652535,0.068480164"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase3_adamson/full_pair_dataset.csv",
+     "line": 55507,
+     "text": "SEC61A1,347,42,0,2.2910278,0.53422433,0.077,0.00095706776,0.002250115"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase3_adamson/full_pair_dataset.csv",
+     "line": 57006,
+     "text": "SEC63,601,42,0,2.2910278,0.53422433,0.077,0.0007626182,0.03130986"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase3_adamson/full_pair_dataset.csv",
+     "line": 58505,
+     "text": "SLC35B1,1295,42,0,2.2910278,0.53422433,0.077,0.0004781222,0.05841342"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase3_adamson/full_pair_dataset.csv",
+     "line": 60004,
+     "text": "SLC39A7,562,42,0,2.2910278,0.53422433,0.077,0.0008539789,0.00821875"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase3_adamson/full_pair_dataset.csv",
+     "line": 61503,
+     "text": "SOCS1,1204,42,0,2.2910278,0.53422433,0.077,0.00079492317,0.051276527"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase3_adamson/full_pair_dataset.csv",
+     "line": 63002,
+     "text": "SPCS2,960,42,0,2.2910278,0.53422433,0.077,0.0009865302,0.09374081"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase3_adamson/full_pair_dataset.csv",
+     "line": 64501,
+     "text": "SPCS3,437,42,0,2.2910278,0.53422433,0.077,0.0012698949,0.044251382"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase3_adamson/full_pair_dataset.csv",
+     "line": 66000,
+     "text": "SRP68,1313,42,0,2.2910278,0.53422433,0.077,0.00077026425,0.004512126"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase3_adamson/full_pair_dataset.csv",
+     "line": 67499,
+     "text": "SRPRB,353,42,0,2.2910278,0.53422433,0.077,0.00054318755,0.009209315"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase3_adamson/full_pair_dataset.csv",
+     "line": 68998,
+     "text": "STT3A,990,42,0,2.2910278,0.53422433,0.077,0.0007299046,0.022351358"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase3_adamson/full_pair_dataset.csv",
+     "line": 70497,
+     "text": "SYVN1,948,42,0,2.2910278,0.53422433,0.077,0.0009473679,0.0178969"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase3_adamson/full_pair_dataset.csv",
+     "line": 71996,
+     "text": "TELO2,1192,42,0,2.2910278,0.53422433,0.077,0.0006830011,0.033495534"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase3_adamson/full_pair_dataset.csv",
+     "line": 73495,
+     "text": "TIMM44,1396,42,0,2.2910278,0.53422433,0.077,0.00056186074,0.015042931"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase3_adamson/full_pair_dataset.csv",
+     "line": 74994,
+     "text": "TMED10,1129,42,0,2.2910278,0.53422433,0.077,0.0009721731,0.038731072"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase3_adamson/full_pair_dataset.csv",
+     "line": 76493,
+     "text": "TMEM167A,470,42,0,2.2910278,0.53422433,0.077,0.00076033897,0.01733097"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase3_adamson/full_pair_dataset.csv",
+     "line": 77992,
+     "text": "TTI1,1366,42,0,2.2910278,0.53422433,0.077,0.00075802224,0.022374645"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase3_adamson/full_pair_dataset.csv",
+     "line": 79491,
+     "text": "UFL1,598,42,0,2.2910278,0.53422433,0.077,0.0008326392,0.021489995"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase3_adamson/full_pair_dataset.csv",
+     "line": 80990,
+     "text": "UFM1,1067,42,0,2.2910278,0.53422433,0.077,0.00073847396,0.008638565"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase3_adamson/full_pair_dataset.csv",
+     "line": 82489,
+     "text": "YIPF5,500,42,0,2.2910278,0.53422433,0.077,0.0007602612,0.018465169"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase3_adamson/full_pair_dataset.csv",
+     "line": 83988,
+     "text": "ZNF326,76,42,0,2.2910278,0.53422433,0.077,0.00090141705,0.0015449269"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase3_adamson/matched_pair_dataset.csv",
+     "line": 883,
+     "text": "BHLHE40,300,42,0,2.2910278,0.53422433,0.077,0.0007954857,0.026298473,0.0474075000998056"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase3_adamson/matched_pair_dataset.csv",
+     "line": 6541,
+     "text": "CREB1,286,42,0,2.2910278,0.53422433,0.077,0.0007514977,0.013371635,0.0474075000998056"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase3_adamson/matched_pair_dataset.csv",
+     "line": 25357,
+     "text": "ZNF326,76,42,0,2.2910278,0.53422433,0.077,0.00090141705,0.0015449269,0.0474075000998056"
+    },
+    {
+     "file": "runs/sae-atlas-217M/outputs/phase12/layer_01/feature_metadata.csv",
+     "line": 4637,
+     "text": "4635,TBL1XR1,\"TBL1XR1, AP1M1, NFATC2IP, OSBPL8, SPG7\",0.005434335036607987,2.922785520553589,7,3,10.534865379333496,4.796249866485596"
+    },
+    {
+     "file": "runs/sae-atlas-217M/outputs/phase12/layer_06/feature_metadata.csv",
+     "line": 4429,
+     "text": "4427,THOP1,\"THOP1, SLC19A1, FXR2, FKBP14, KNSTRN\",0.005406883948564504,4.9455037117004395,0,3,10.53480052947998,3.4995179176330566"
+    },
+    {
+     "file": "runs/sae-atlas-217M/outputs/phase12/layer_07/feature_metadata.csv",
+     "line": 1858,
+     "text": "1856,POLE3,\"POLE3, PEX13, PAFAH1B1, ALDH18A1, CDC23\",0.004709822391460359,7.866333961486816,14,9,-0.6826542019844055,10.534830093383789"
+    },
+    {
+     "file": "runs/sae-atlas-217M/outputs/phase12/layer_09/feature_metadata.csv",
+     "line": 79,
+     "text": "77,DENND4C,\"DENND4C, SLC9B2, PDPR, KCTD13, ZNF263\",0.006019631449535096,8.16258430480957,0,0,-0.5348166227340698,5.590673923492432"
+    },
+    {
+     "file": "runs/sae-atlas-217M/outputs/phase12/layer_11/feature_metadata.csv",
+     "line": 447,
+     "text": "445,YWHAZ,\"YWHAZ, SYNJ2, GNAS, DBI, NBPF1\",0.010413766328495406,24.891555786132812,0,4,0.5348197817802429,0.2892492115497589"
+    },
+    {
+     "file": "runs/sae-atlas-217M/outputs/phase12/layer_11/feature_metadata.csv",
+     "line": 1203,
+     "text": "1202,KLHL42,\"KLHL42, TRIM73, SLC48A1, MOCS2, HSP90AB1\",0.0009401997654892764,16.363906860351562,0,4,0.5342586040496826,0.442838579416275"
+    },
+    {
+     "file": "runs/spectral-geometry-217M/autoloop/data/embeddings/gene_features.csv",
+     "line": 84,
+     "text": "82,HDAC9,ENSG00000048052,635,634,0.5342694,0.6452368,0.67"
+    },
+    {
+     "file": "runs/spectral-geometry-217M/outputs/phase0/gene_features.csv",
+     "line": 84,
+     "text": "82,HDAC9,ENSG00000048052,635,634,0.5342694,0.6452368,0.67"
+    },
+    {
+     "file": "runs/topology-141-217M/outputs/phase6/distance_deltaauroc.csv",
+     "line": 78,
+     "text": "immune,7,euclidean,0.5348734632741986,0.5279859165888577,0.006887546685340862,0.5205960161842516,0.020596016184251553,,"
+    }
+   ]
+  },
+  "repair outputs": {
+   "n_hits": 0,
+   "hits": []
+  },
+  "V2_ / v2 re-run names": {
+   "n_hits": 43,
+   "hits": [
+    {
+     "file": "runs/spectral-geometry-217M/outputs/phase5/edge_level_auroc.csv",
+     "line": 1,
+     "text": "layer,auc_SV5_SV7_edge,auc_SV2_SV4_edge,null_mean,perm_p"
+    },
+    {
+     "file": "runs/spectral-geometry-217M/outputs/phase5/tf_vs_target_classifier.csv",
+     "line": 1,
+     "text": "layer,auc_joint_SV2_SV7,auc_SV2_SV4,auc_SV5_SV7,null_mean,perm_p"
+    },
+    {
+     "file": "runs/spectral-geometry-217M/outputs/phases_345.log",
+     "line": 37,
+     "text": "layer  auc_joint_SV2_SV7  auc_SV2_SV4  auc_SV5_SV7  null_mean   perm_p"
+    },
+    {
+     "file": "runs/spectral-geometry-217M/outputs/phases_345.log",
+     "line": 54,
+     "text": "layer  auc_SV5_SV7_edge  auc_SV2_SV4_edge  null_mean   perm_p"
+    },
+    {
+     "file": "runs/spectral-geometry-217M/outputs/remaining/phase5_coexpr_residualization.csv",
+     "line": 3,
+     "text": "0,SV2_SV4,0.5156712275982782,0.5130446529886572,0.04502274843501535"
+    },
+    {
+     "file": "runs/spectral-geometry-217M/outputs/remaining/phase5_coexpr_residualization.csv",
+     "line": 5,
+     "text": "1,SV2_SV4,0.5132234619130531,0.5080799955667447,0.027680944357015097"
+    },
+    {
+     "file": "runs/spectral-geometry-217M/outputs/remaining/phase5_coexpr_residualization.csv",
+     "line": 7,
+     "text": "2,SV2_SV4,0.5057744299936143,0.5053922627059856,0.018165271163243464"
+    },
+    {
+     "file": "runs/spectral-geometry-217M/outputs/remaining/phase5_coexpr_residualization.csv",
+     "line": 9,
+     "text": "3,SV2_SV4,0.5038075318252608,0.5033668622199353,0.011642431887127035"
+    },
+    {
+     "file": "runs/spectral-geometry-217M/outputs/remaining/phase5_coexpr_residualization.csv",
+     "line": 11,
+     "text": "4,SV2_SV4,0.5084194525733555,0.5088634959319713,0.030780318309108656"
+    },
+    {
+     "file": "runs/spectral-geometry-217M/outputs/remaining/phase5_coexpr_residualization.csv",
+     "line": 13,
+     "text": "5,SV2_SV4,0.5109655595778989,0.5114700433678039,0.03942389792049854"
+    },
+    {
+     "file": "runs/spectral-geometry-217M/outputs/remaining/phase5_coexpr_residualization.csv",
+     "line": 15,
+     "text": "6,SV2_SV4,0.5321306213908018,0.5294156831577642,0.10137993336207418"
+    },
+    {
+     "file": "runs/spectral-geometry-217M/outputs/remaining/phase5_coexpr_residualization.csv",
+     "line": 17,
+     "text": "7,SV2_SV4,0.539663853578533,0.5320324236354532,0.11060948517762437"
+    },
+    {
+     "file": "runs/spectral-geometry-217M/outputs/remaining/phase5_coexpr_residualization.csv",
+     "line": 19,
+     "text": "8,SV2_SV4,0.5380815632852949,0.5252292142341953,0.0868516361771861"
+    },
+    {
+     "file": "runs/spectral-geometry-217M/outputs/remaining/phase5_coexpr_residualization.csv",
+     "line": 21,
+     "text": "9,SV2_SV4,0.5494272084732603,0.5397212073844713,0.13857624074995378"
+    },
+    {
+     "file": "runs/spectral-geometry-217M/outputs/remaining/phase5_coexpr_residualization.csv",
+     "line": 23,
+     "text": "10,SV2_SV4,0.5447290775612961,0.5338829632062773,0.11764582531777436"
+    },
+    {
+     "file": "runs/spectral-geometry-217M/outputs/remaining/phase5_coexpr_residualization.csv",
+     "line": 25,
+     "text": "11,SV2_SV4,0.5386590493538472,0.5282335774303657,0.09572817518894344"
+    },
+    {
+     "file": "runs/spectral-geometry-217M/outputs/remaining/phase5_tf_tf_vs_tf_target.csv",
+     "line": 2,
+     "text": "0,SV2_SV4,0.50857111392935,0.5156712275982782"
+    },
+    {
+     "file": "runs/spectral-geometry-217M/outputs/remaining/phase5_tf_tf_vs_tf_target.csv",
+     "line": 4,
+     "text": "1,SV2_SV4,0.5011865102925352,0.5132234619130531"
+    },
+    {
+     "file": "runs/spectral-geometry-217M/outputs/remaining/phase5_tf_tf_vs_tf_target.csv",
+     "line": 6,
+     "text": "2,SV2_SV4,0.5016934692153057,0.5057744299936143"
+    },
+    {
+     "file": "runs/spectral-geometry-217M/outputs/remaining/phase5_tf_tf_vs_tf_target.csv",
+     "line": 8,
+     "text": "3,SV2_SV4,0.49805368310035836,0.5038075318252608"
+    },
+    {
+     "file": "runs/spectral-geometry-217M/outputs/remaining/phase5_tf_tf_vs_tf_target.csv",
+     "line": 10,
+     "text": "4,SV2_SV4,0.5013860565236188,0.5084194525733555"
+    },
+    {
+     "file": "runs/spectral-geometry-217M/outputs/remaining/phase5_tf_tf_vs_tf_target.csv",
+     "line": 12,
+     "text": "5,SV2_SV4,0.5007898300700107,0.5109655595778989"
+    },
+    {
+     "file": "runs/spectral-geometry-217M/outputs/remaining/phase5_tf_tf_vs_tf_target.csv",
+     "line": 14,
+     "text": "6,SV2_SV4,0.5069050921885161,0.5321306213908018"
+    },
+    {
+     "file": "runs/spectral-geometry-217M/outputs/remaining/phase5_tf_tf_vs_tf_target.csv",
+     "line": 16,
+     "text": "7,SV2_SV4,0.5007988044813243,0.539663853578533"
+    },
+    {
+     "file": "runs/spectral-geometry-217M/outputs/remaining/phase5_tf_tf_vs_tf_target.csv",
+     "line": 18,
+     "text": "8,SV2_SV4,0.49823688378055225,0.5380815632852949"
+    },
+    {
+     "file": "runs/spectral-geometry-217M/outputs/remaining/phase5_tf_tf_vs_tf_target.csv",
+     "line": 20,
+     "text": "9,SV2_SV4,0.49622330401027537,0.5494272084732603"
+    },
+    {
+     "file": "runs/spectral-geometry-217M/outputs/remaining/phase5_tf_tf_vs_tf_target.csv",
+     "line": 22,
+     "text": "10,SV2_SV4,0.5002898781290586,0.5447290775612961"
+    },
+    {
+     "file": "runs/spectral-geometry-217M/outputs/remaining/phase5_tf_tf_vs_tf_target.csv",
+     "line": 24,
+     "text": "11,SV2_SV4,0.5020993853584064,0.5386590493538472"
+    },
+    {
+     "file": "runs/spectral-geometry-217M/outputs/remaining.log",
+     "line": 43,
+     "text": "layer  auc_joint_SV2_SV7  auc_SV2_SV4  auc_SV5_SV7  null_mean   perm_p"
+    },
+    {
+     "file": "runs/spectral-geometry-217M/outputs/remaining.log",
+     "line": 60,
+     "text": "layer  auc_SV5_SV7_edge  auc_SV2_SV4_edge  null_mean   perm_p"
+    },
+    {
+     "file": "runs/spectral-geometry-217M/outputs/remaining.log",
+     "line": 126,
+     "text": "SV2_SV4: raw_auc mean=0.5250  resid_auc mean=0.5199  r_rb mean=+0.0686"
+    },
+    {
+     "file": "runs/spectral-geometry-217M/outputs/remaining.log",
+     "line": 129,
+     "text": "SV2_SV4: TF-TF mean=0.5014  TF-target mean=0.5250"
+    },
+    {
+     "file": "runs/spectral-geometry-217M/scripts/phase9_report.py",
+     "line": 106,
+     "text": "raw_rho, raw_p = spearmanr(merged[\"effective_rank\"], merged[\"auc_joint_SV2_SV7\"])"
+    },
+    {
+     "file": "runs/spectral-geometry-217M/scripts/phase9_report.py",
+     "line": 109,
+     "text": "lr_au = LinearRegression().fit(merged[[\"layer\"]], merged[\"auc_joint_SV2_SV7\"])"
+    },
+    {
+     "file": "runs/spectral-geometry-217M/scripts/phase9_report.py",
+     "line": 111,
+     "text": "res_au = merged[\"auc_joint_SV2_SV7\"] - lr_au.predict(merged[[\"layer\"]])"
+    },
+    {
+     "file": "runs/spectral-geometry-217M/scripts/phase9_report.py",
+     "line": 188,
+     "text": "lines.append(f\"- Joint SV2-SV7 AUROC mean across {n_layers} layers: {df5c['auc_joint_SV2_SV7'].mean():.4f}  max: {df5c['auc_joint_SV2_SV7'].max():.4f} at L{int(df5c['layer'].iloc[df5c['auc_joint_SV2_S"
+    },
+    {
+     "file": "runs/spectral-geometry-217M/scripts/phases_345.py",
+     "line": 287,
+     "text": "\"layer\": li, \"auc_joint_SV2_SV7\": auc_joint,"
+    },
+    {
+     "file": "runs/spectral-geometry-217M/scripts/phases_345.py",
+     "line": 288,
+     "text": "\"auc_SV2_SV4\": auc_234, \"auc_SV5_SV7\": auc_567,"
+    },
+    {
+     "file": "runs/spectral-geometry-217M/scripts/phases_345.py",
+     "line": 362,
+     "text": "\"auc_SV2_SV4_edge\": auc_234,"
+    },
+    {
+     "file": "runs/spectral-geometry-217M/scripts/remaining_analyses.py",
+     "line": 248,
+     "text": "for subspace_name, lo, hi in [(\"SV5_SV7\", 4, 7), (\"SV2_SV4\", 1, 4)]:"
+    },
+    {
+     "file": "runs/spectral-geometry-217M/scripts/remaining_analyses.py",
+     "line": 283,
+     "text": "for ss in [\"SV5_SV7\", \"SV2_SV4\"]:"
+    },
+    {
+     "file": "runs/spectral-geometry-217M/scripts/remaining_analyses.py",
+     "line": 299,
+     "text": "for ss, lo, hi in [(\"SV2_SV4\", 1, 4), (\"SV5_SV7\", 4, 7)]:"
+    },
+    {
+     "file": "runs/spectral-geometry-217M/scripts/remaining_analyses.py",
+     "line": 321,
+     "text": "for ss in [\"SV2_SV4\", \"SV5_SV7\"]:"
+    }
+   ]
+  },
+  "hook artefact wording": {
+   "n_hits": 0,
+   "hits": []
+  },
+  "sign bug wording": {
+   "n_hits": 0,
+   "hits": []
+  },
+  "off-by-one": {
+   "n_hits": 1,
+   "hits": [
+    {
+     "file": "pipelines/sparse-autoencoders/02-causal-circuit-tracing.md",
+     "line": 609,
+     "text": "6. **HuggingFace `output_hidden_states` indexing is off-by-one.** For Geneformer BertForMaskedLM, `outputs.hidden_states[\u2113 + 1]` is the output of layer `\u2113`, NOT `hidden_states[\u2113]` (which is the input "
+    }
+   ]
+  },
+  "A100": {
+   "n_hits": 0,
+   "hits": []
+  },
+  "spot-check": {
+   "n_hits": 7,
+   "hits": [
+    {
+     "file": "runs/topology-141-217M/EXTENDED_FINDINGS.md",
+     "line": 23,
+     "text": "| **H139 spot-check** | Sectional anisotropy descriptors over kNN graph in PCA-20, classified vs H70 triangle-defect baseline under three nulls (endpoint-swap / row-shuffle / label-permutation). Paper"
+    },
+    {
+     "file": "runs/topology-141-217M/README.md",
+     "line": 22,
+     "text": "| 10 | included (spot-check) | H23 Forman curvature directional check (in `phase16_extended/`) + H139 sectional anisotropy spot-check (`phase10/`); the broader 70+ negatives are not exhaustively re-sc"
+    },
+    {
+     "file": "runs/topology-141-217M/README.md",
+     "line": 60,
+     "text": "\u2502   \u251c\u2500\u2500 phase10/               \u2190 H139 sectional-anisotropy spot-check"
+    },
+    {
+     "file": "runs/topology-141-217M/scripts/phase10_h139_sectional_anisotropy.py",
+     "line": 1,
+     "text": "\"\"\"Phase 10 \u2014 H139 sectional-anisotropy spot-check."
+    },
+    {
+     "file": "runs/topology-141-217M/scripts/phase10_h139_sectional_anisotropy.py",
+     "line": 5,
+     "text": "spot-check."
+    },
+    {
+     "file": "runs/topology-141-217M/scripts/phase10_h139_sectional_anisotropy.py",
+     "line": 26,
+     "text": "reconstruct here; this is the documented spot-check simplification)"
+    },
+    {
+     "file": "runs/topology-141-217M/scripts/phase10_h139_sectional_anisotropy.py",
+     "line": 98,
+     "text": "Asymmetric, scale-free spot-check stand-in for the paper's H70/H136-derived"
+    }
+   ]
+  },
+  "Opus / Claude version": {
+   "n_hits": 0,
+   "hits": []
+  }
+ },
+ "weak": {
+  "audit (any)": {
+   "n_hits": 89,
+   "n_files": 33,
+   "by_file": {
+    "pipelines/topology-geometry-141-hypotheses.md": 17,
+    "pipelines/attention-grn-extraction-and-evaluation.md": 8,
+    "pipelines/manifold-discovery-extraction-compactification.md": 8,
+    "pipelines/longevity-mechinterp-donor-aware.md": 7,
+    "runs/topology-141-217M/scripts/phase12_strict_max_null.py": 4,
+    "runs/topology-141-217M/logs/phase12.log": 3,
+    "summaries/spectral-geometry-217M-FINAL_SUMMARY.md": 3,
+    "runs/spectral-geometry-217M/autoloop/iterations/iter_0002/executor_prompt.md": 2,
+    "runs/spectral-geometry-217M/autoloop/iterations/iter_0003/executor_prompt.md": 2,
+    "runs/spectral-geometry-217M/autoloop/iterations/iter_0004/executor_prompt.md": 2,
+    "runs/spectral-geometry-217M/autoloop/iterations/iter_0005/executor_prompt.md": 2,
+    "runs/spectral-geometry-217M/autoloop/prompts/executor_prompt.md": 2,
+    "runs/spectral-geometry-217M/autoloop/runtime/iter_0002.log": 2,
+    "runs/spectral-geometry-217M/autoloop/runtime/iter_0003.log": 2,
+    "runs/spectral-geometry-217M/autoloop/runtime/iter_0004.log": 2,
+    "runs/spectral-geometry-217M/autoloop/runtime/iter_0005.log": 2,
+    "runs/topology-141-217M/FINAL_SUMMARY.md": 2,
+    "runs/topology-141-217M/README.md": 2,
+    "runs/topology-141-217M/logs/phase12_lung.log": 2,
+    "runs/topology-141-217M/scripts/phase13_synthesis.py": 2,
+    "pipelines/residual-stream-spectral-geometry.md": 1,
+    "pipelines/sparse-autoencoders/01-sae-atlas.md": 1,
+    "pipelines/sparse-autoencoders/03-exhaustive-mapping-and-steering.md": 1,
+    "pipelines/sparse-autoencoders/README.md": 1,
+    "runs/attention-grn-217M/README.md": 1,
+    "runs/spectral-geometry-217M/autoloop/iterations/iter_0002/brainstormer_prompt.md": 1,
+    "runs/spectral-geometry-217M/autoloop/iterations/iter_0003/brainstormer_prompt.md": 1,
+    "runs/spectral-geometry-217M/autoloop/prompts/brainstormer_prompt.md": 1,
+    "runs/spectral-geometry-217M/autoloop/runtime/iter_0002_brainstormer.log": 1,
+    "runs/spectral-geometry-217M/autoloop/runtime/iter_0003_brainstormer.log": 1,
+    "runs/topology-141-217M/EXTENDED_FINDINGS.md": 1,
+    "runs/topology-141-217M/logs/phase12_immune.log": 1,
+    "runs/topology-141-217M/outputs/synthesis/layered_findings.csv": 1
+   },
+   "examples": [
+    {
+     "file": "pipelines/attention-grn-extraction-and-evaluation.md",
+     "line": 7,
+     "text": "The battery comprises **37 interlocking analyses yielding 153 statistical tests** (95 confirmatory, BH-corrected at \u03b1=0.05 framework-wide; 63/95 = 66% remain si"
+    },
+    {
+     "file": "pipelines/attention-grn-extraction-and-evaluation.md",
+     "line": 84,
+     "text": "12. **Boundary-condition report** (JSON): nine sub-reports \u2014 detectability phase diagrams, invariant causal discovery cross-tissue consistency, cross-species or"
+    },
+    {
+     "file": "pipelines/attention-grn-extraction-and-evaluation.md",
+     "line": 463,
+     "text": "### Phase 8 \u2014 Boundary-condition audits"
+    },
+    {
+     "file": "pipelines/attention-grn-extraction-and-evaluation.md",
+     "line": 528,
+     "text": "#### 8d \u2014 Pseudotime directionality audit (Supp Note 8; Figs. S16\u2013S17; Supp Table S10 \u00a77)"
+    },
+    {
+     "file": "pipelines/attention-grn-extraction-and-evaluation.md",
+     "line": 548,
+     "text": "#### 8e \u2014 Batch and donor leakage audit (Supp Note 9; Figs. S18\u2013S19; Supp Table S10 \u00a78)"
+    },
+    {
+     "file": "pipelines/attention-grn-extraction-and-evaluation.md",
+     "line": 599,
+     "text": "*Already detailed in Phase 5 step 5.* Critical methodological audit ruling out \"forced perturbation-gene HVG inclusion drives the RPE1 attention advantage.\""
+    },
+    {
+     "file": "pipelines/attention-grn-extraction-and-evaluation.md",
+     "line": 805,
+     "text": "11. **Donor / batch leakage** (Phase 8e). Donor identity is recoverable from edge-product features at AUC 0.85\u20130.96; assay method (10X vs Smart-seq2) at 0.96\u20130."
+    },
+    {
+     "file": "pipelines/attention-grn-extraction-and-evaluation.md",
+     "line": 824,
+     "text": "9. **Run Phase 8 (boundary-condition audits)** \u2014 all 9 sub-phases (8a\u20138i). The donor leakage audit (8e) and the batch blacklist are mandatory for any dataset wi"
+    },
+    {
+     "file": "pipelines/longevity-mechinterp-donor-aware.md",
+     "line": 91,
+     "text": "- **Stage 6** (`stage6_inflammation_followup_<date>/`): model-specific claim strict-gate audits, dose-response curves, cell-type anchor analyses, specificity ch"
+    },
+    {
+     "file": "pipelines/longevity-mechinterp-donor-aware.md",
+     "line": 93,
+     "text": "- **Stage 8** (`stage8_contrast_ci_gate_audit_<date>/`, `stage8_monocyte_aida_{v1,v2}_scale_summary_<date>/`): contrast + marginal CI gate audits, dose-scale cu"
+    },
+    {
+     "file": "pipelines/longevity-mechinterp-donor-aware.md",
+     "line": 228,
+     "text": "`summarize_stage6_model_specific_claims.py`, `summarize_stage6_dose_response.py`, `summarize_stage6_celltype_anchor.py`, `summarize_stage6_specificity.py`. Each"
+    },
+    {
+     "file": "pipelines/longevity-mechinterp-donor-aware.md",
+     "line": 244,
+     "text": "### Stage 8 \u2014 Contrast + marginal strict gate audit + monocyte scale focus"
+    },
+    {
+     "file": "pipelines/longevity-mechinterp-donor-aware.md",
+     "line": 246,
+     "text": "- `summarize_stage8_contrast_ci_gates.py` \u2014 audits contrast + marginal CI gates across the full (dataset, model, pathway, cell_type, scale) grid. Source paper r"
+    },
+    {
+     "file": "pipelines/longevity-mechinterp-donor-aware.md",
+     "line": 338,
+     "text": "| 6 | `implementation/scripts/summarize_stage6_{model_specific_claims,dose_response,celltype_anchor,specificity}.py` | strict-gate audit variants |"
+    },
+    {
+     "file": "pipelines/longevity-mechinterp-donor-aware.md",
+     "line": 340,
+     "text": "| 8 | `implementation/scripts/summarize_stage8_{contrast_ci_gates,monocyte_scale_focus}.py` | contrast+marginal gate audit + monocyte scale focus |"
+    },
+    {
+     "file": "pipelines/manifold-discovery-extraction-compactification.md",
+     "line": 41,
+     "text": "- `sparse-autoencoders/README.md` (arxiv 2603.02952/01752/11940) \u2014 SAE-based mechanistic interpretability. The four-factor-core mechanistic audit here uses a co"
+    },
+    {
+     "file": "pipelines/manifold-discovery-extraction-compactification.md",
+     "line": 48,
+     "text": "- **Protein foundation model precedent for manifold extraction:** Rives et al. 2021 (ESM), Lin et al. 2023 (ESMFold), Jumper et al. 2021 (AlphaFold), Nguyen et "
+    },
+    {
+     "file": "pipelines/manifold-discovery-extraction-compactification.md",
+     "line": 178,
+     "text": "**Critical rule:** no external panel data is used during any training step of Stages 2 or 3. This is enforced in Phase 7 by a deterministic artefact audit (Supp"
+    },
+    {
+     "file": "pipelines/manifold-discovery-extraction-compactification.md",
+     "line": 193,
+     "text": "**Fifth gate (adversarial reviewer):** the autonomous reviewer role rejects candidates that either (a) fail any of the four numeric gates, (b) show confound sen"
+    },
+    {
+     "file": "pipelines/manifold-discovery-extraction-compactification.md",
+     "line": 231,
+     "text": "- **D: Schema enrichment** (metadata audit and harmonisation)"
+    },
+    {
+     "file": "pipelines/manifold-discovery-extraction-compactification.md",
+     "line": 588,
+     "text": "13. **Donor reuse across Robust-V2 splits.** The 88-split benchmark has substantial donor reuse \u2014 15 unique test donors across all splits (14 unique in the 40-s"
+    },
+    {
+     "file": "pipelines/manifold-discovery-extraction-compactification.md",
+     "line": 607,
+     "text": "9. **Transition to Phase 3b focused investigation.** Run equation-level LET replication, confidence intervals, bootstrap audits. Commit to a single positive bra"
+    },
+    {
+     "file": "pipelines/manifold-discovery-extraction-compactification.md",
+     "line": 624,
+     "text": "21. **The pipelines are complementary, not redundant.** Each captures a different facet of model internals. A complete mechanistic audit of `NEWMODEL` reports a"
+    },
+    {
+     "file": "pipelines/residual-stream-spectral-geometry.md",
+     "line": 28,
+     "text": "- **Direct predecessor:** Kendiukhov 2026, arXiv:2602.17532 \u2014 the attention-based interpretability evaluation. See `pipelines/attention-grn-extraction-and-evalu"
+    },
+    {
+     "file": "pipelines/sparse-autoencoders/01-sae-atlas.md",
+     "line": 20,
+     "text": "- `../attention-grn-extraction-and-evaluation.md` \u2014 attention-based interpretability audit (Kendiukhov 2026, arXiv:2602.17532). The feature-level perturbation s"
+    },
+    {
+     "file": "pipelines/sparse-autoencoders/03-exhaustive-mapping-and-steering.md",
+     "line": 683,
+     "text": "11. **Cross-reference all four pipelines** (attention, Stage 1, Stage 2, Stage 3). A complete mechanistic audit of `NEWMODEL` produces four verdicts:"
+    },
+    {
+     "file": "pipelines/sparse-autoencoders/README.md",
+     "line": 209,
+     "text": "- **The companion attention-based interpretability pipeline** is at `../attention-grn-extraction-and-evaluation.md` (paper arxiv 2602.17532). The attention pipe"
+    },
+    {
+     "file": "pipelines/topology-geometry-141-hypotheses.md",
+     "line": 1,
+     "text": "# Pipeline: Topological and Geometric Structure Screening of Biological Foundation Models (141-Hypothesis Autonomous Audit)"
+    },
+    {
+     "file": "pipelines/topology-geometry-141-hypotheses.md",
+     "line": 5,
+     "text": "This pipeline maps the boundary between **real topological/geometric structure** and **statistical artefact** in the internal representations of single-cell fou"
+    },
+    {
+     "file": "pipelines/topology-geometry-141-hypotheses.md",
+     "line": 9,
+     "text": "The pipeline is **complementary** to the earlier residual-stream spectral-geometry pipeline (`residual-stream-spectral-geometry.md`, arxiv 2602.22247, which foc"
+    },
+    {
+     "file": "pipelines/topology-geometry-141-hypotheses.md",
+     "line": 17,
+     "text": "5. **Layer 5 \u2014 Localised robustness under strict auditing (fragile beyond immune tissue).** **H141: strict max-null audit** compares the observed signal against"
+    },
+    {
+     "file": "pipelines/topology-geometry-141-hypotheses.md",
+     "line": 50,
+     "text": "For a new-model audit, run this pipeline with the target model plus at least one reference model (scGPT or Geneformer) to enable the cross-model CCA alignment i"
+    },
+    {
+     "file": "pipelines/topology-geometry-141-hypotheses.md",
+     "line": 100,
+     "text": "12. **Strict max-null audit output (H141):** `data/h141_strict_max_null/` \u2014 per-domain strict margin (target: immune +0.012, lung \u22120.008, external-lung \u22120.023),"
+    },
+    {
+     "file": "pipelines/topology-geometry-141-hypotheses.md",
+     "line": 118,
+     "text": "The pipeline runs in thirteen phases. Phases 0\u20133 are setup; Phases 4\u201310 are the nine hypothesis families plus stability-selection; Phase 11 is the autonomous lo"
+    },
+    {
+     "file": "pipelines/topology-geometry-141-hypotheses.md",
+     "line": 388,
+     "text": "- **H95/H97: bridge-curvature lineage.** Raw effect \u0394AUROC +0.079 in 24/24 rows. **FAILS: 0/6 domain-splits survive null-gap auditing.**"
+    },
+    {
+     "file": "pipelines/topology-geometry-141-hypotheses.md",
+     "line": 440,
+     "text": "### Phase 12 \u2014 Strict max-null audit (H141)"
+    },
+    {
+     "file": "pipelines/topology-geometry-141-hypotheses.md",
+     "line": 457,
+     "text": "- **External-lung: negative (\u22120.023)** \u2014 fragile under strict auditing"
+    },
+    {
+     "file": "pipelines/topology-geometry-141-hypotheses.md",
+     "line": 488,
+     "text": "- **Layer 5 (localised to immune under strict audit):** H141 strict-positive subset, ~10% of total"
+    },
+    {
+     "file": "pipelines/topology-geometry-141-hypotheses.md",
+     "line": 498,
+     "text": "- Figure 7: strict max-null margin audit (H141)"
+    },
+    {
+     "file": "pipelines/topology-geometry-141-hypotheses.md",
+     "line": 551,
+     "text": "8. **Strict max-null audit** (Phase 12, H141): overall mean strict margin **\u22120.005**. **Only 3/9 domain-split groups strict-positive**. By domain: immune **+0.0"
+    },
+    {
+     "file": "pipelines/topology-geometry-141-hypotheses.md",
+     "line": 573,
+     "text": "14. **The external-lung domain is genuinely held out** \u2014 no tuning on this dataset. Do not use external-lung results to fit any hyperparameters (threshold choic"
+    },
+    {
+     "file": "pipelines/topology-geometry-141-hypotheses.md",
+     "line": 591,
+     "text": "11. **Run Phase 12 strict max-null audit.** Emit the per-domain strict margins. If the immune domain shows positive strict margin and other domains do not, you "
+    },
+    {
+     "file": "pipelines/topology-geometry-141-hypotheses.md",
+     "line": 597,
+     "text": "- **This pipeline** (`topology-geometry-141-hypotheses.md`): does the topological/geometric structure of the embedding manifold carry regulatory information und"
+    },
+    {
+     "file": "pipelines/topology-geometry-141-hypotheses.md",
+     "line": 598,
+     "text": "14. **A complete mechanistic audit of `NEWMODEL`** produces four independent verdicts across these four pipelines. A robust biological foundation model would id"
+    },
+    {
+     "file": "runs/attention-grn-217M/README.md",
+     "line": 88,
+     "text": "4. **No layer pre-specification dataset.** The paper pre-specifies L13 for Geneformer using an independent dataset (DLPFC brain). This run uses L8 as primary la"
+    },
+    {
+     "file": "runs/spectral-geometry-217M/autoloop/iterations/iter_0002/brainstormer_prompt.md",
+     "line": 18,
+     "text": "- Final summary (status of all phases + \u00a78 audit): `<REPO_ROOT>/projects/maxtoki/summaries/spectral-geometry-217M-FINAL_SU"
+    },
+    {
+     "file": "runs/spectral-geometry-217M/autoloop/iterations/iter_0002/executor_prompt.md",
+     "line": 6,
+     "text": "Primary goal: **find robust, reproducible evidence of meaningful geometric or topological structure in MaxToki-217M's residual stream that is novel relative to "
+    },
+    {
+     "file": "runs/spectral-geometry-217M/autoloop/iterations/iter_0002/executor_prompt.md",
+     "line": 25,
+     "text": "- \u00a78 validation audit (in FINAL_SUMMARY): 6 \u2705 replicate, 7 \u26a0\ufe0f partial, 6 \u274c do not replicate, 3 \ud83d\udd35 not testable."
+    },
+    {
+     "file": "runs/spectral-geometry-217M/autoloop/iterations/iter_0003/brainstormer_prompt.md",
+     "line": 18,
+     "text": "- Final summary (status of all phases + \u00a78 audit): `<REPO_ROOT>/projects/maxtoki/summaries/spectral-geometry-217M-FINAL_SU"
+    },
+    {
+     "file": "runs/spectral-geometry-217M/autoloop/iterations/iter_0003/executor_prompt.md",
+     "line": 6,
+     "text": "Primary goal: **find robust, reproducible evidence of meaningful geometric or topological structure in MaxToki-217M's residual stream that is novel relative to "
+    },
+    {
+     "file": "runs/spectral-geometry-217M/autoloop/iterations/iter_0003/executor_prompt.md",
+     "line": 25,
+     "text": "- \u00a78 validation audit (in FINAL_SUMMARY): 6 \u2705 replicate, 7 \u26a0\ufe0f partial, 6 \u274c do not replicate, 3 \ud83d\udd35 not testable."
+    },
+    {
+     "file": "runs/spectral-geometry-217M/autoloop/iterations/iter_0004/executor_prompt.md",
+     "line": 6,
+     "text": "Primary goal: **find robust, reproducible evidence of meaningful geometric or topological structure in MaxToki-217M's residual stream that is novel relative to "
+    },
+    {
+     "file": "runs/spectral-geometry-217M/autoloop/iterations/iter_0004/executor_prompt.md",
+     "line": 25,
+     "text": "- \u00a78 validation audit (in FINAL_SUMMARY): 6 \u2705 replicate, 7 \u26a0\ufe0f partial, 6 \u274c do not replicate, 3 \ud83d\udd35 not testable."
+    },
+    {
+     "file": "runs/spectral-geometry-217M/autoloop/iterations/iter_0005/executor_prompt.md",
+     "line": 6,
+     "text": "Primary goal: **find robust, reproducible evidence of meaningful geometric or topological structure in MaxToki-217M's residual stream that is novel relative to "
+    },
+    {
+     "file": "runs/spectral-geometry-217M/autoloop/iterations/iter_0005/executor_prompt.md",
+     "line": 25,
+     "text": "- \u00a78 validation audit (in FINAL_SUMMARY): 6 \u2705 replicate, 7 \u26a0\ufe0f partial, 6 \u274c do not replicate, 3 \ud83d\udd35 not testable."
+    },
+    {
+     "file": "runs/spectral-geometry-217M/autoloop/prompts/brainstormer_prompt.md",
+     "line": 18,
+     "text": "- Final summary (status of all phases + \u00a78 audit): `<REPO_ROOT>/projects/maxtoki/summaries/spectral-geometry-217M-FINAL_SU"
+    },
+    {
+     "file": "runs/spectral-geometry-217M/autoloop/prompts/executor_prompt.md",
+     "line": 6,
+     "text": "Primary goal: **find robust, reproducible evidence of meaningful geometric or topological structure in MaxToki-217M's residual stream that is novel relative to "
+    },
+    {
+     "file": "runs/spectral-geometry-217M/autoloop/prompts/executor_prompt.md",
+     "line": 25,
+     "text": "- \u00a78 validation audit (in FINAL_SUMMARY): 6 \u2705 replicate, 7 \u26a0\ufe0f partial, 6 \u274c do not replicate, 3 \ud83d\udd35 not testable."
+    },
+    {
+     "file": "runs/spectral-geometry-217M/autoloop/runtime/iter_0002.log",
+     "line": 7,
+     "text": "Primary goal: **find robust, reproducible evidence of meaningful geometric or topological structure in MaxToki-217M's residual stream that is novel relative to "
+    },
+    {
+     "file": "runs/spectral-geometry-217M/autoloop/runtime/iter_0002.log",
+     "line": 26,
+     "text": "- \u00a78 validation audit (in FINAL_SUMMARY): 6 \u2705 replicate, 7 \u26a0\ufe0f partial, 6 \u274c do not replicate, 3 \ud83d\udd35 not testable."
+    },
+    {
+     "file": "runs/spectral-geometry-217M/autoloop/runtime/iter_0002_brainstormer.log",
+     "line": 19,
+     "text": "- Final summary (status of all phases + \u00a78 audit): `<REPO_ROOT>/projects/maxtoki/summaries/spectral-geometry-217M-FINAL_SU"
+    },
+    {
+     "file": "runs/spectral-geometry-217M/autoloop/runtime/iter_0003.log",
+     "line": 7,
+     "text": "Primary goal: **find robust, reproducible evidence of meaningful geometric or topological structure in MaxToki-217M's residual stream that is novel relative to "
+    },
+    {
+     "file": "runs/spectral-geometry-217M/autoloop/runtime/iter_0003.log",
+     "line": 26,
+     "text": "- \u00a78 validation audit (in FINAL_SUMMARY): 6 \u2705 replicate, 7 \u26a0\ufe0f partial, 6 \u274c do not replicate, 3 \ud83d\udd35 not testable."
+    },
+    {
+     "file": "runs/spectral-geometry-217M/autoloop/runtime/iter_0003_brainstormer.log",
+     "line": 19,
+     "text": "- Final summary (status of all phases + \u00a78 audit): `<REPO_ROOT>/projects/maxtoki/summaries/spectral-geometry-217M-FINAL_SU"
+    },
+    {
+     "file": "runs/spectral-geometry-217M/autoloop/runtime/iter_0004.log",
+     "line": 7,
+     "text": "Primary goal: **find robust, reproducible evidence of meaningful geometric or topological structure in MaxToki-217M's residual stream that is novel relative to "
+    },
+    {
+     "file": "runs/spectral-geometry-217M/autoloop/runtime/iter_0004.log",
+     "line": 26,
+     "text": "- \u00a78 validation audit (in FINAL_SUMMARY): 6 \u2705 replicate, 7 \u26a0\ufe0f partial, 6 \u274c do not replicate, 3 \ud83d\udd35 not testable."
+    },
+    {
+     "file": "runs/spectral-geometry-217M/autoloop/runtime/iter_0005.log",
+     "line": 7,
+     "text": "Primary goal: **find robust, reproducible evidence of meaningful geometric or topological structure in MaxToki-217M's residual stream that is novel relative to "
+    },
+    {
+     "file": "runs/spectral-geometry-217M/autoloop/runtime/iter_0005.log",
+     "line": 26,
+     "text": "- \u00a78 validation audit (in FINAL_SUMMARY): 6 \u2705 replicate, 7 \u26a0\ufe0f partial, 6 \u274c do not replicate, 3 \ud83d\udd35 not testable."
+    },
+    {
+     "file": "runs/topology-141-217M/EXTENDED_FINDINGS.md",
+     "line": 23,
+     "text": "| **H139 spot-check** | Sectional anisotropy descriptors over kNN graph in PCA-20, classified vs H70 triangle-defect baseline under three nulls (endpoint-swap /"
+    },
+    {
+     "file": "runs/topology-141-217M/FINAL_SUMMARY.md",
+     "line": 31,
+     "text": "level and fails the strict max-null audit."
+    },
+    {
+     "file": "runs/topology-141-217M/FINAL_SUMMARY.md",
+     "line": 65,
+     "text": "| L5 | H141 strict max-null audit | EVALUATED | Overall mean strict margin = -0.050, 4/36 tests pass; external_lung: mean strict margin -0.078, 1/12 tests stric"
+    },
+    {
+     "file": "runs/topology-141-217M/README.md",
+     "line": 24,
+     "text": "| 12 | included | H141 strict max-null audit |"
+    },
+    {
+     "file": "runs/topology-141-217M/README.md",
+     "line": 62,
+     "text": "\u2502   \u251c\u2500\u2500 phase12/               \u2190 strict max-null audit"
+    },
+    {
+     "file": "runs/topology-141-217M/logs/phase12.log",
+     "line": 2,
+     "text": "[lung] strict audit on layers [3, 6, 9]"
+    },
+    {
+     "file": "runs/topology-141-217M/logs/phase12.log",
+     "line": 16,
+     "text": "[immune] strict audit on layers [3, 6, 9]"
+    },
+    {
+     "file": "runs/topology-141-217M/logs/phase12.log",
+     "line": 30,
+     "text": "[external_lung] strict audit on layers [3, 6, 9]"
+    },
+    {
+     "file": "runs/topology-141-217M/logs/phase12_immune.log",
+     "line": 2,
+     "text": "[immune] strict audit on layers [3, 6, 9]"
+    },
+    {
+     "file": "runs/topology-141-217M/logs/phase12_lung.log",
+     "line": 2,
+     "text": "[lung] strict audit on layers [3, 6, 9]"
+    },
+    {
+     "file": "runs/topology-141-217M/logs/phase12_lung.log",
+     "line": 16,
+     "text": "[immune] strict audit on layers [3, 6, 9]"
+    },
+    {
+     "file": "runs/topology-141-217M/outputs/synthesis/layered_findings.csv",
+     "line": 6,
+     "text": "5,H141 strict max-null audit,EVALUATED,\"Overall mean strict margin = -0.050, 4/36 tests pass; external_lung: mean strict margin -0.078, 1/12 tests strict-positi"
+    },
+    {
+     "file": "runs/topology-141-217M/scripts/phase12_strict_max_null.py",
+     "line": 1,
+     "text": "\"\"\"Phase 12 \u2014 H141 strict max-null audit."
+    },
+    {
+     "file": "runs/topology-141-217M/scripts/phase12_strict_max_null.py",
+     "line": 67,
+     "text": "\"\"\"Run the four-null audit on a distance-style pair feature.\"\"\""
+    },
+    {
+     "file": "runs/topology-141-217M/scripts/phase12_strict_max_null.py",
+     "line": 173,
+     "text": "# Audit a representative subset of layers (early/mid/late)"
+    },
+    {
+     "file": "runs/topology-141-217M/scripts/phase12_strict_max_null.py",
+     "line": 176,
+     "text": "print(f\"\\n[{domain}] strict audit on layers {layer_set}\")"
+    },
+    {
+     "file": "runs/topology-141-217M/scripts/phase13_synthesis.py",
+     "line": 94,
+     "text": "# Layer 5 \u2014 strict max-null audit"
+    },
+    {
+     "file": "runs/topology-141-217M/scripts/phase13_synthesis.py",
+     "line": 105,
+     "text": "finding=\"H141 strict max-null audit\","
+    },
+    {
+     "file": "summaries/spectral-geometry-217M-FINAL_SUMMARY.md",
+     "line": 313,
+     "text": "## Spec \u00a78 validation audit (22 signatures)"
+    },
+    {
+     "file": "summaries/spectral-geometry-217M-FINAL_SUMMARY.md",
+     "line": 342,
+     "text": "**Audit tally:** 6 \u2705 replicate, 7 \u26a0\ufe0f partial-or-different, 6 \u274c do not replicate, 3 \ud83d\udd35 not testable / uninformative on MaxToki (no fine-tuning seeds; persistent h"
+    },
+    {
+     "file": "summaries/spectral-geometry-217M-FINAL_SUMMARY.md",
+     "line": 344,
+     "text": "The audit confirms the FINAL_SUMMARY's overall verdict \u2014 MaxToki replicates the *structural* claims (rank compression, intrinsic dim, ER-AUROC confound, cell-ty"
+    }
+   ]
+  },
+  "bug (word)": {
+   "n_hits": 13,
+   "n_files": 8,
+   "by_file": {
+    "pipelines/topology-geometry-141-hypotheses.md": 3,
+    "pipelines/sparse-autoencoders/01-sae-atlas.md": 2,
+    "pipelines/sparse-autoencoders/02-causal-circuit-tracing.md": 2,
+    "summaries/exhaustive-mapping-217M-FINAL_SUMMARY.md": 2,
+    "pipelines/sparse-autoencoders/03-exhaustive-mapping-and-steering.md": 1,
+    "runs/manifold-discovery-217M/STATUS.md": 1,
+    "runs/manifold-discovery-217M/reports/hypothesis_registry_sweep3.json": 1,
+    "summaries/topology-141-217M-FINAL_SUMMARY.md": 1
+   },
+   "examples": [
+    {
+     "file": "pipelines/sparse-autoencoders/01-sae-atlas.md",
+     "line": 121,
+     "text": "8. **Verify extraction integrity.** Randomly sample 100 positions per layer, recompute the activation by re-running the model on the single cell, and check nume"
+    },
+    {
+     "file": "pipelines/sparse-autoencoders/01-sae-atlas.md",
+     "line": 648,
+     "text": "4. **Dead features at late Geneformer layers.** Layers 15\u201317 have 28\u201370 dead features each (out of 4,608). These are **not** an SAE training bug \u2014 they reflect "
+    },
+    {
+     "file": "pipelines/sparse-autoencoders/02-causal-circuit-tracing.md",
+     "line": 606,
+     "text": "3. **Ablation must add the delta to the original hidden state, not overwrite with the reconstruction.** Phase 3 step 3: `h^(L_src)_abl = h^(L_src)_clean + \u03b4` wh"
+    },
+    {
+     "file": "pipelines/sparse-autoencoders/02-causal-circuit-tracing.md",
+     "line": 609,
+     "text": "6. **HuggingFace `output_hidden_states` indexing is off-by-one.** For Geneformer BertForMaskedLM, `outputs.hidden_states[\u2113 + 1]` is the output of layer `\u2113`, NOT"
+    },
+    {
+     "file": "pipelines/sparse-autoencoders/03-exhaustive-mapping-and-steering.md",
+     "line": 653,
+     "text": "5. **The ablation-delta-to-original-hidden-state bug** (same as Stage 2 Pitfall #3). Phase 2 step 3 must apply `\u03b4 = h\u0303_ablated \u2212 h\u0303_original` to `h^(L5)_clean`,"
+    },
+    {
+     "file": "pipelines/topology-geometry-141-hypotheses.md",
+     "line": 553,
+     "text": "10. **Cross-model gene-correspondence failure** (Phase 4 step 4): **all 19 methods below 1% top-1 retrieval**. **This is a strong negative diagnostic.** If any "
+    },
+    {
+     "file": "pipelines/topology-geometry-141-hypotheses.md",
+     "line": 561,
+     "text": "2. **Rewiring null must preserve degree, not just edge count.** A common bug is to shuffle edges at random (preserving only the total edge count), which is equi"
+    },
+    {
+     "file": "pipelines/topology-geometry-141-hypotheses.md",
+     "line": 567,
+     "text": "8. **Gene-level correspondence impossibility is robust, not a bug.** All 19 methods failing to recover gene-level matches is **the finding**, not a failure of t"
+    },
+    {
+     "file": "runs/manifold-discovery-217M/STATUS.md",
+     "line": 121,
+     "text": "- 2026-05-03 phase 1A \u2014 first run got through panel selection (internal 290 / external 600 / zeroshot 160 / lung 51 anchors over 11+13+12 disjoint donors) but c"
+    },
+    {
+     "file": "runs/manifold-discovery-217M/reports/hypothesis_registry_sweep3.json",
+     "line": 2,
+     "text": "\"scope_note\": \"Phase 14 Sweep #3 \\u2014 fresh axes mixing Hamming + ordinal rulers, anchor-level on H65 internal panel. (verdict re-classified post-hoc to fix S"
+    },
+    {
+     "file": "summaries/exhaustive-mapping-217M-FINAL_SUMMARY.md",
+     "line": 167,
+     "text": "**Summary of validation status:** 3 signatures replicate (items 6, 8, part of 11), 4 are architecturally not-applicable (1, 9, 10 re: tertiles, 11c), 7 differ i"
+    },
+    {
+     "file": "summaries/exhaustive-mapping-217M-FINAL_SUMMARY.md",
+     "line": 185,
+     "text": "**Across-triplet standard deviation is < 0.0003** on every ratio. The per-pair spread (AB 0.165 vs BC 0.586) proves the ablation code is treating pairs distinct"
+    },
+    {
+     "file": "summaries/topology-141-217M-FINAL_SUMMARY.md",
+     "line": 86,
+     "text": "3. **Triangle-defect spectrum** built per the source paper recipe (k \u2208 {8,12,16}, sum across scales). One implementation bug found and fixed mid-run: common-nei"
+    }
+   ]
+  },
+  "2026-05-07 (date)": {
+   "n_hits": 15,
+   "n_files": 4,
+   "by_file": {
+    "runs/manifold-discovery-217M/STATUS.md": 8,
+    "runs/manifold-discovery-217M/FINAL_SUMMARY.md": 5,
+    "runs/longevity-mechinterp-217M/FINAL_SUMMARY.md": 1,
+    "runs/topology-141-217M/README.md": 1
+   },
+   "examples": [
+    {
+     "file": "runs/longevity-mechinterp-217M/FINAL_SUMMARY.md",
+     "line": 122,
+     "text": "## Status as of 2026-05-07"
+    },
+    {
+     "file": "runs/manifold-discovery-217M/FINAL_SUMMARY.md",
+     "line": 265,
+     "text": "- `reports/external_validation_H38_lite.json` \u2014 H38 LITE external (POSITIVE, all 4 gates) [added 2026-05-07]"
+    },
+    {
+     "file": "runs/manifold-discovery-217M/FINAL_SUMMARY.md",
+     "line": 266,
+     "text": "- `reports/zeroshot_H38_lite.json` \u2014 H38 LITE zero-shot (3/4 gates; trust 0.787 just under) [added 2026-05-07]"
+    },
+    {
+     "file": "runs/manifold-discovery-217M/FINAL_SUMMARY.md",
+     "line": 267,
+     "text": "- `reports/zeroshot_H95.json` \u2014 H95 effector zero-shot (POSITIVE_3GATE_FALLBACK) [added 2026-05-07]"
+    },
+    {
+     "file": "runs/manifold-discovery-217M/FINAL_SUMMARY.md",
+     "line": 269,
+     "text": "## \u00a716. Phase 14 Sweep #3 + open-validation backfill (added 2026-05-07)"
+    },
+    {
+     "file": "runs/manifold-discovery-217M/FINAL_SUMMARY.md",
+     "line": 312,
+     "text": "## \u00a717. Trust-ceiling diagnostics + cross-axis orthogonality (added 2026-05-07)"
+    },
+    {
+     "file": "runs/manifold-discovery-217M/STATUS.md",
+     "line": 5,
+     "text": "**Run RE-EXTENDED:** 2026-05-07 \u2014 Phase 14 Sweep #3 (6 fresh candidates: H107-H112) + backfill validation for H38 LITE (external + zero-shot) and H95 (zero-shot"
+    },
+    {
+     "file": "runs/manifold-discovery-217M/STATUS.md",
+     "line": 78,
+     "text": "- 2026-05-07 phase 17 \u2014 \u2705 Cross-axis H65 \u00d7 H95: PARTIALLY_ORTHOGONAL. Cross-head latent \u03c1=0.642 vs ground-truth ruler \u03c1=0.814 (\u0394=\u22120.173); null check \u03c1=0.022. Fi"
+    },
+    {
+     "file": "runs/manifold-discovery-217M/STATUS.md",
+     "line": 79,
+     "text": "- 2026-05-07 phase 16 \u2014 graph-DAG rescue for H107 (4 buckets \u00d7 subclass tree, 12 distinct distances): trust 0.769 \u2248 flat Hamming's 0.771. Trust ceiling is biolo"
+    },
+    {
+     "file": "runs/manifold-discovery-217M/STATUS.md",
+     "line": 80,
+     "text": "- 2026-05-07 phase 15 \u2014 H101 directional: external trust 0.717, zero-shot 0.706 (both BELOW internal 0.764). Trust ceiling not a panel-size artifact for H101 \u2014 "
+    },
+    {
+     "file": "runs/manifold-discovery-217M/STATUS.md",
+     "line": 81,
+     "text": "- 2026-05-07 phase 15 \u2014 \u2705 H95 zero-shot POSITIVE_3GATE_FALLBACK (trust 0.819, rand 0.806, donor 0.794, \u03c1 0.800). Closes H95 row of validation table."
+    },
+    {
+     "file": "runs/manifold-discovery-217M/STATUS.md",
+     "line": 82,
+     "text": "- 2026-05-07 phase 15 \u2014 \u2705 H38 LITE external POSITIVE all 4 gates (trust 0.883, rand 0.803, donor 0.759, cat 0.594, \u03c1 0.804). Zero-shot trust 0.787 just under 0."
+    },
+    {
+     "file": "runs/manifold-discovery-217M/STATUS.md",
+     "line": 83,
+     "text": "- 2026-05-07 phase 14 sweep#3 \u2014 6 candidates (H107-H112). 0 new POSITIVE. H107/H109/H111/H112 DIRECTIONAL_TRUST_SUBTHRESHOLD. H108 INCONCLUSIVE (rand 0.698 bord"
+    },
+    {
+     "file": "runs/manifold-discovery-217M/STATUS.md",
+     "line": 84,
+     "text": "- 2026-05-07 phase 14 \u2014 verdict-classification post-hoc fix on hypothesis_registry_sweep3.json (script's chained `is False and (... or ...)` clause didn't fire;"
+    },
+    {
+     "file": "runs/topology-141-217M/README.md",
+     "line": 27,
+     "text": "The annotation-extension degradation chain (H124/H127/H130/H138) was added 2026-05-07"
+    }
+   ]
+  },
+  "GATA1": {
+   "n_hits": 109,
+   "n_files": 17,
+   "by_file": {
+    "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv": 77,
+    "runs/sae-atlas-217M/outputs/phase2/layer_11/significant_enrichments.csv": 5,
+    "pipelines/attention-grn-extraction-and-evaluation.md": 4,
+    "runs/sae-atlas-217M/outputs/phase2/layer_09/significant_enrichments.csv": 4,
+    "pipelines/sparse-autoencoders/01-sae-atlas.md": 3,
+    "runs/sae-atlas-217M/outputs/phase2/layer_01/significant_enrichments.csv": 3,
+    "runs/sae-atlas-217M/outputs/phase2/layer_05/significant_enrichments.csv": 3,
+    "runs/attention-grn-217M/outputs/phase0_adamson/gene_features.csv": 1,
+    "runs/attention-grn-217M/outputs/phase0_adamson/hvg_gene_table.csv": 1,
+    "runs/sae-atlas-217M/outputs/phase2/layer_00/significant_enrichments.csv": 1,
+    "runs/sae-atlas-217M/outputs/phase2/layer_02/significant_enrichments.csv": 1,
+    "runs/sae-atlas-217M/outputs/phase2/layer_03/significant_enrichments.csv": 1,
+    "runs/sae-atlas-217M/outputs/phase2/layer_06/significant_enrichments.csv": 1,
+    "runs/sae-atlas-217M/outputs/phase2/layer_07/significant_enrichments.csv": 1,
+    "runs/sae-atlas-217M/outputs/phase2/layer_08/significant_enrichments.csv": 1,
+    "runs/sae-atlas-217M/outputs/phase8_true/perturbation_response.csv": 1,
+    "runs/sae-atlas-217M/outputs/phase9/perturbation_response_multitissue.csv": 1
+   },
+   "examples": [
+    {
+     "file": "pipelines/attention-grn-extraction-and-evaluation.md",
+     "line": 595,
+     "text": "*Already detailed in Phase 3 step 4.* Brief summary: restrict TRRUST to direction-known (Activation / Repression) entries only \u2014 4,859 of 8,427 unique pairs (58"
+    },
+    {
+     "file": "pipelines/attention-grn-extraction-and-evaluation.md",
+     "line": 666,
+     "text": "- GATA1 (master regulator, 18 targets): 0.842"
+    },
+    {
+     "file": "pipelines/attention-grn-extraction-and-evaluation.md",
+     "line": 671,
+     "text": "3. **Class comparison.** 9 master regulators (GATA1, PPARG, FOXA1, NKX2-5, KLF1, PAX3, TAL1, LEF1, WT1) vs 9 other TFs. Paper result: master regulators mean 0.8"
+    },
+    {
+     "file": "pipelines/attention-grn-extraction-and-evaluation.md",
+     "line": 672,
+     "text": "4. **Severe power limitation.** **13 of 18 TFs have only a single evaluable TRRUST target in the HVG set**, meaning AUROC reflects the rank of *one gene* among "
+    },
+    {
+     "file": "pipelines/sparse-autoencoders/01-sae-atlas.md",
+     "line": 76,
+     "text": "13. **Multi-tissue comparison:** `phase3_multitissue/perturbation_response_L{L}_multitissue.json` + `comparison_summary.json` \u2014 K562-only vs multi-tissue at lay"
+    },
+    {
+     "file": "pipelines/sparse-autoencoders/01-sae-atlas.md",
+     "line": 447,
+     "text": "- **Gained specificity:** 5 TFs \u2014 ATF5, BRCA1, GATA1, RBMX, NFRKB"
+    },
+    {
+     "file": "pipelines/sparse-autoencoders/01-sae-atlas.md",
+     "line": 633,
+     "text": "9. **Multi-tissue control** (Phase 9): best multi-tissue layer **L11 = 10.4%** (+4.2 percentage points over K562-only), with disjoint gained (ATF5, BRCA1, GATA1"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 417,
+     "text": "BCL11A\tGATA1\tActivation\t23071749"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 418,
+     "text": "BCL11A\tGATA1\tUnknown\t20542454"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 545,
+     "text": "CBFB\tGATA1\tUnknown\t8683991"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 740,
+     "text": "CEBPE\tGATA1\tRepression\t12202480"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 2050,
+     "text": "FLI1\tGATA1\tActivation\t12724402"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 2349,
+     "text": "GATA1\tAGGF1\tActivation\t19556247"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 2350,
+     "text": "GATA1\tALAS2\tUnknown\t23935018"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 2351,
+     "text": "GATA1\tBACE1\tUnknown\t12815710"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 2352,
+     "text": "GATA1\tBACH1\tActivation\t16492768"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 2353,
+     "text": "GATA1\tBDKRB1\tUnknown\t10842322"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 2354,
+     "text": "GATA1\tBST2\tActivation\t16249385"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 2355,
+     "text": "GATA1\tCBFB\tRepression\t19825991"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 2356,
+     "text": "GATA1\tCCR3\tUnknown\t22217447"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 2357,
+     "text": "GATA1\tCDA\tActivation\t14744791"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 2358,
+     "text": "GATA1\tCDC6\tActivation\t22871742"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 2359,
+     "text": "GATA1\tCEBPA\tRepression\t19825991"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 2360,
+     "text": "GATA1\tCOPS5\tUnknown\t21689417"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 2361,
+     "text": "GATA1\tCYBB\tActivation\t10734088"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 2362,
+     "text": "GATA1\tDACH1\tRepression\t22902925"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 2363,
+     "text": "GATA1\tDICER1\tActivation\t23426981"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 2364,
+     "text": "GATA1\tDPYSL2\tUnknown\t15207709"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 2365,
+     "text": "GATA1\tEPO\tActivation\t16471262"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 2366,
+     "text": "GATA1\tEPO\tRepression\t8677751"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 2367,
+     "text": "GATA1\tEPOR\tActivation\t16471262"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 2368,
+     "text": "GATA1\tEPOR\tUnknown\t23577103;7659529;8513868"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 2369,
+     "text": "GATA1\tF13A1\tUnknown\t10037697"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 2370,
+     "text": "GATA1\tFCER1A\tActivation\t11971001"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 2371,
+     "text": "GATA1\tFCER1A\tUnknown\t24639354"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 2372,
+     "text": "GATA1\tFLI1\tUnknown\t10523830"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 2373,
+     "text": "GATA1\tFURIN\tUnknown\t12411321"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 2374,
+     "text": "GATA1\tGATA1\tActivation\t16492768"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 2375,
+     "text": "GATA1\tGATA1\tUnknown\t17628529;20542454"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 2376,
+     "text": "GATA1\tGFI1B\tUnknown\t19965638;20564185"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 2377,
+     "text": "GATA1\tGNAS\tUnknown\t11418466"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 2378,
+     "text": "GATA1\tGP1BB\tActivation\t8703016"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 2379,
+     "text": "GATA1\tGP1BB\tUnknown\t11418466"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 2380,
+     "text": "GATA1\tGP6\tActivation\t12377757"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 2381,
+     "text": "GATA1\tGP9\tActivation\t15466856"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 2382,
+     "text": "GATA1\tGP9\tUnknown\t11418466;20564185"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 2383,
+     "text": "GATA1\tGYPB\tActivation\t1396593"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 2384,
+     "text": "GATA1\tHBA1\tUnknown\t12609092;20564185"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 2385,
+     "text": "GATA1\tHBA2\tUnknown\t12609092;20564185"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 2386,
+     "text": "GATA1\tHBB\tUnknown\t15833715;20564185"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 2387,
+     "text": "GATA1\tHBE1\tUnknown\t8423810"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 2388,
+     "text": "GATA1\tHBG1\tUnknown\t12609092;16200778;2336386"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 2389,
+     "text": "GATA1\tHEMGN\tRepression\t18599389"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 2390,
+     "text": "GATA1\tHEMGN\tUnknown\t20564185"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 2391,
+     "text": "GATA1\tPBXIP1\tUnknown\t22187427"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 2392,
+     "text": "GATA1\tIFNG\tUnknown\t12836278"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 2393,
+     "text": "GATA1\tIL1RL1\tUnknown\t22865859"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 2394,
+     "text": "GATA1\tITGA2B\tUnknown\t8408012"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 2395,
+     "text": "GATA1\tKLF1\tUnknown\t18487511;20564185"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 2396,
+     "text": "GATA1\tLTBP4\tUnknown\t23741501"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 2397,
+     "text": "GATA1\tMPL\tActivation\t15466856"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 2398,
+     "text": "GATA1\tMUC1\tUnknown\t17078870"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 2399,
+     "text": "GATA1\tNFE2\tUnknown\t20564185"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 2400,
+     "text": "GATA1\tPBXIP1\tUnknown\t22187427"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 2401,
+     "text": "GATA1\tPF4\tActivation\t12609849"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 2402,
+     "text": "GATA1\tPPOX\tUnknown\t18191920"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 2403,
+     "text": "GATA1\tPRG2\tActivation\t10438731;12202480"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 2404,
+     "text": "GATA1\tPTGFR\tRepression\t14746914"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 2405,
+     "text": "GATA1\tRUNX1\tUnknown\t16628190"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 2406,
+     "text": "GATA1\tSEMG1\tUnknown\t18602691"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 2407,
+     "text": "GATA1\tSMAD1\tUnknown\t22036566"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 2408,
+     "text": "GATA1\tSPI1\tRepression\t10753833"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 2409,
+     "text": "GATA1\tST2\tUnknown\t22865859"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 2410,
+     "text": "GATA1\tTAL1\tUnknown\t8058326"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 2411,
+     "text": "GATA1\tTBXA2R\tActivation\t18698092"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 2412,
+     "text": "GATA1\tWT1\tActivation\t19212333"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 2413,
+     "text": "GATA1\tWT1\tUnknown\t10360378"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 2414,
+     "text": "GATA1\tZNF268\tRepression\t22235304"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 2423,
+     "text": "GATA2\tGATA1\tActivation\t23071749"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 2424,
+     "text": "GATA2\tGATA1\tUnknown\t19279013"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 4192,
+     "text": "MYC\tGATA1\tRepression\t18838534"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 5564,
+     "text": "POU2F1\tGATA1\tUnknown\t7499351"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 7677,
+     "text": "SPI1\tGATA1\tActivation\t20304827"
+    },
+    {
+     "file": "reference_data/biomechinterp/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+     "line": 7678,
+     "text": "SPI1\tGATA1\tUnknown\t11001896"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase0_adamson/gene_features.csv",
+     "line": 714,
+     "text": "712,GATA1,ENSG00000102145,2618,2155,2.2115884,0.5984537,0.0925,57.0"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/phase0_adamson/hvg_gene_table.csv",
+     "line": 714,
+     "text": "712,GATA1,ENSG00000102145,2618,2155"
+    },
+    {
+     "file": "runs/sae-atlas-217M/outputs/phase2/layer_00/significant_enrichments.csv",
+     "line": 18405,
+     "text": "3795,TRRUST_TF:TRRUST_TF:GATA1,2,11,20,6325,0.000513656083722821,0.004564573170594141"
+    },
+    {
+     "file": "runs/sae-atlas-217M/outputs/phase2/layer_01/significant_enrichments.csv",
+     "line": 16438,
+     "text": "2644,TRRUST_TF:TRRUST_TF:GATA1,2,11,20,6325,0.000513656083722821,0.005744494574739252"
+    },
+    {
+     "file": "runs/sae-atlas-217M/outputs/phase2/layer_01/significant_enrichments.csv",
+     "line": 22151,
+     "text": "3601,TRRUST_TF:TRRUST_TF:GATA1,2,11,20,6325,0.000513656083722821,0.005744494574739252"
+    },
+    {
+     "file": "runs/sae-atlas-217M/outputs/phase2/layer_01/significant_enrichments.csv",
+     "line": 23006,
+     "text": "3768,TRRUST_TF:TRRUST_TF:GATA1,2,11,20,6325,0.000513656083722821,0.005744494574739252"
+    },
+    {
+     "file": "runs/sae-atlas-217M/outputs/phase2/layer_02/significant_enrichments.csv",
+     "line": 27396,
+     "text": "4563,TRRUST_TF:TRRUST_TF:GATA1,2,11,20,6325,0.000513656083722821,0.0055526053025191655"
+    },
+    {
+     "file": "runs/sae-atlas-217M/outputs/phase2/layer_03/significant_enrichments.csv",
+     "line": 22235,
+     "text": "3768,TRRUST_TF:TRRUST_TF:GATA1,2,11,20,6325,0.000513656083722821,0.005593072881721038"
+    },
+    {
+     "file": "runs/sae-atlas-217M/outputs/phase2/layer_05/significant_enrichments.csv",
+     "line": 653,
+     "text": "91,TRRUST_TF:TRRUST_TF:GATA1,2,11,20,6325,0.000513656083722821,0.0057969758020146945"
+    },
+    {
+     "file": "runs/sae-atlas-217M/outputs/phase2/layer_05/significant_enrichments.csv",
+     "line": 5401,
+     "text": "953,TRRUST_TF:TRRUST_TF:GATA1,2,11,20,6325,0.000513656083722821,0.0057969758020146945"
+    },
+    {
+     "file": "runs/sae-atlas-217M/outputs/phase2/layer_05/significant_enrichments.csv",
+     "line": 12190,
+     "text": "2111,TRRUST_TF:TRRUST_TF:GATA1,2,11,20,6325,0.000513656083722821,0.0057969758020146945"
+    },
+    {
+     "file": "runs/sae-atlas-217M/outputs/phase2/layer_06/significant_enrichments.csv",
+     "line": 206,
+     "text": "41,TRRUST_TF:TRRUST_TF:GATA1,2,11,20,6325,0.000513656083722821,0.0061450123280965335"
+    },
+    {
+     "file": "runs/sae-atlas-217M/outputs/phase2/layer_07/significant_enrichments.csv",
+     "line": 11188,
+     "text": "1752,TRRUST_TF:TRRUST_TF:GATA1,2,11,20,6325,0.000513656083722821,0.006216579957658007"
+    },
+    {
+     "file": "runs/sae-atlas-217M/outputs/phase2/layer_08/significant_enrichments.csv",
+     "line": 5100,
+     "text": "817,TRRUST_TF:TRRUST_TF:GATA1,2,11,20,6325,0.000513656083722821,0.006067495666336326"
+    },
+    {
+     "file": "runs/sae-atlas-217M/outputs/phase2/layer_09/significant_enrichments.csv",
+     "line": 4163,
+     "text": "694,TRRUST_TF:TRRUST_TF:GATA1,2,11,20,6325,0.000513656083722821,0.006238167832697147"
+    },
+    {
+     "file": "runs/sae-atlas-217M/outputs/phase2/layer_09/significant_enrichments.csv",
+     "line": 6624,
+     "text": "1142,TRRUST_TF:TRRUST_TF:GATA1,2,11,20,6325,0.000513656083722821,0.006238167832697147"
+    },
+    {
+     "file": "runs/sae-atlas-217M/outputs/phase2/layer_09/significant_enrichments.csv",
+     "line": 7736,
+     "text": "1339,TRRUST_TF:TRRUST_TF:GATA1,2,11,20,6325,0.000513656083722821,0.006238167832697147"
+    },
+    {
+     "file": "runs/sae-atlas-217M/outputs/phase2/layer_09/significant_enrichments.csv",
+     "line": 20623,
+     "text": "3581,TRRUST_TF:TRRUST_TF:GATA1,2,11,20,6325,0.000513656083722821,0.006238167832697147"
+    },
+    {
+     "file": "runs/sae-atlas-217M/outputs/phase2/layer_11/significant_enrichments.csv",
+     "line": 177,
+     "text": "39,TRRUST_TF:TRRUST_TF:GATA1,2,11,20,6325,0.000513656083722821,0.006242733067320095"
+    },
+    {
+     "file": "runs/sae-atlas-217M/outputs/phase2/layer_11/significant_enrichments.csv",
+     "line": 4569,
+     "text": "1049,TRRUST_TF:TRRUST_TF:GATA1,2,11,20,6325,0.000513656083722821,0.006242733067320095"
+    },
+    {
+     "file": "runs/sae-atlas-217M/outputs/phase2/layer_11/significant_enrichments.csv",
+     "line": 11585,
+     "text": "2621,TRRUST_TF:TRRUST_TF:GATA1,2,11,20,6325,0.000513656083722821,0.006242733067320095"
+    },
+    {
+     "file": "runs/sae-atlas-217M/outputs/phase2/layer_11/significant_enrichments.csv",
+     "line": 17453,
+     "text": "4060,TRRUST_TF:TRRUST_TF:GATA1,2,11,20,6325,0.000513656083722821,0.006242733067320095"
+    },
+    {
+     "file": "runs/sae-atlas-217M/outputs/phase2/layer_11/significant_enrichments.csv",
+     "line": 18492,
+     "text": "4336,TRRUST_TF:TRRUST_TF:GATA1,2,11,20,6325,0.000513656083722821,0.006242733067320095"
+    },
+    {
+     "file": "runs/sae-atlas-217M/outputs/phase8_true/perturbation_response.csv",
+     "line": 27,
+     "text": "GATA1,True,20,5,True,False"
+    },
+    {
+     "file": "runs/sae-atlas-217M/outputs/phase9/perturbation_response_multitissue.csv",
+     "line": 27,
+     "text": "GATA1,True,5,True,False"
+    }
+   ]
+  },
+  "ChIP": {
+   "n_hits": 20,
+   "n_files": 4,
+   "by_file": {
+    "pipelines/attention-grn-extraction-and-evaluation.md": 8,
+    "pipelines/topology-geometry-141-hypotheses.md": 6,
+    "pipelines/sparse-autoencoders/01-sae-atlas.md": 5,
+    "pipelines/manifold-discovery-extraction-compactification.md": 1
+   },
+   "examples": [
+    {
+     "file": "pipelines/attention-grn-extraction-and-evaluation.md",
+     "line": 20,
+     "text": "- **Key foundational references** (for context and theory; not re-implementations): Donoho & Jin 2004 (higher criticism / detectability), Peters et al. 2016 (in"
+    },
+    {
+     "file": "pipelines/attention-grn-extraction-and-evaluation.md",
+     "line": 60,
+     "text": "| **DoRothEA** (Garcia-Alonso et al. 2019) | Curated TF\u2192target | ~37,000 | Multi-model validation secondary reference |"
+    },
+    {
+     "file": "pipelines/attention-grn-extraction-and-evaluation.md",
+     "line": 102,
+     "text": "- **Reference files:** TRRUST v2, DoRothEA, STRING \u2265700 and \u2265900, Reactome, KEGG, GO BP (cached locally)."
+    },
+    {
+     "file": "pipelines/attention-grn-extraction-and-evaluation.md",
+     "line": 220,
+     "text": "4. **TRRUST circularity sensitivity analysis** (Supp Note 13.5). TRRUST entries curated partly via co-expression studies \u2014 a potential source of inflated AUROC."
+    },
+    {
+     "file": "pipelines/attention-grn-extraction-and-evaluation.md",
+     "line": 403,
+     "text": "**Scope note.** CSSI improves *reference-edge recovery* (TRRUST / DoRothEA), **not** perturbation-outcome predictive validity. The gene-level dominance finding "
+    },
+    {
+     "file": "pipelines/attention-grn-extraction-and-evaluation.md",
+     "line": 615,
+     "text": "- DoRothEA AUROC: 0.473 / 0.486 / 0.486 \u2014 near-random"
+    },
+    {
+     "file": "pipelines/attention-grn-extraction-and-evaluation.md",
+     "line": 617,
+     "text": "- Cross-model comparison: scGPT AUROC \u2248 0.46\u20130.51, Geneformer \u2248 0.44\u20130.55 \u2014 **both fail equivalently** against TRRUST and DoRothEA at matched cell counts."
+    },
+    {
+     "file": "pipelines/attention-grn-extraction-and-evaluation.md",
+     "line": 674,
+     "text": "6. **Verdict.** Hypothesis-generating only. The pattern is consistent with attention more reliably capturing regulatory relationships for master regulators with"
+    },
+    {
+     "file": "pipelines/manifold-discovery-extraction-compactification.md",
+     "line": 49,
+     "text": "- **Biological ground truth:** Han et al. 2018 (TRRUST v2), Garcia-Alonso et al. 2019 (DoRothEA), Szklarczyk et al. 2019 (STRING), Ashburner et al. 2000 (GO), T"
+    },
+    {
+     "file": "pipelines/sparse-autoencoders/01-sae-atlas.md",
+     "line": 424,
+     "text": "- Revision multi-database sensitivity (TRRUST + DoRothEA all + high-confidence): `repos/bio-sae/src_revision/c2_multidb_perturbation.py`"
+    },
+    {
+     "file": "pipelines/sparse-autoencoders/01-sae-atlas.md",
+     "line": 427,
+     "text": "**Critical sanity signature for Geneformer:** exactly 3/48 TFs specific (6.2%) at primary parameterisation. If > 15%, either (a) your TF target lists are wider "
+    },
+    {
+     "file": "pipelines/sparse-autoencoders/01-sae-atlas.md",
+     "line": 596,
+     "text": "| `annotation_databases` | **GO BP, KEGG, Reactome, STRING\u2265700, TRRUST v2** | +DoRothEA, +MSigDB | Phase 2 (+ b4) |"
+    },
+    {
+     "file": "pipelines/sparse-autoencoders/01-sae-atlas.md",
+     "line": 632,
+     "text": "8. **Perturbation specificity (central test)** (Phase 8): **92% detection, 6.2% (3/48) TRRUST TF specificity.** The 6.2% result is the central negative finding;"
+    },
+    {
+     "file": "pipelines/sparse-autoencoders/01-sae-atlas.md",
+     "line": 653,
+     "text": "9. **TRRUST target list boundary.** Phase 8 regulatory specificity test is highly sensitive to which target lists you use. **TRRUST v2 primary direct targets on"
+    },
+    {
+     "file": "pipelines/topology-geometry-141-hypotheses.md",
+     "line": 37,
+     "text": "- **Biological annotation databases:** Ashburner et al. 2000 (Gene Ontology); Garcia-Alonso et al. 2019 (DoRothEA); Han et al. 2018 (TRRUST v2); Szklarczyk et a"
+    },
+    {
+     "file": "pipelines/topology-geometry-141-hypotheses.md",
+     "line": 68,
+     "text": "| **DoRothEA** (Garcia-Alonso et al. 2019) | Curated TF\u2192target, confidence-tiered | Primary regulatory ground truth for edge classification |"
+    },
+    {
+     "file": "pipelines/topology-geometry-141-hypotheses.md",
+     "line": 112,
+     "text": "- **Reference databases:** DoRothEA (confidence-tiered), TRRUST v2 (signed), STRING v11 (PPI), Gene Ontology 2024-01."
+    },
+    {
+     "file": "pipelines/topology-geometry-141-hypotheses.md",
+     "line": 133,
+     "text": "4. **Vocabulary restriction.** Restrict to genes shared between the model's vocabulary and the regulatory ground-truth databases (DoRothEA, TRRUST, STRING). Typ"
+    },
+    {
+     "file": "pipelines/topology-geometry-141-hypotheses.md",
+     "line": 149,
+     "text": "1. **Load the unified regulatory edge set.** For each tissue domain, construct an edge list `(TF, target, sign, source_database)` from DoRothEA (confidence tier"
+    },
+    {
+     "file": "pipelines/topology-geometry-141-hypotheses.md",
+     "line": 302,
+     "text": "4. **Confidence-tier scaling (H19, H37) \u2014 a clear negative.** Test whether larger-confidence DoRothEA tiers (A > B > C) produce progressively stronger community"
+    }
+   ]
+  },
+  "corrected": {
+   "n_hits": 19,
+   "n_files": 9,
+   "by_file": {
+    "pipelines/residual-stream-spectral-geometry.md": 6,
+    "pipelines/attention-grn-extraction-and-evaluation.md": 5,
+    "pipelines/sparse-autoencoders/01-sae-atlas.md": 2,
+    "pipelines/sparse-autoencoders/02-causal-circuit-tracing.md": 1,
+    "runs/attention-grn-217M/outputs/FINAL_SUMMARY.md": 1,
+    "runs/attention-grn-217M/scripts/phase1_trivial_baselines.py": 1,
+    "runs/spectral-geometry-217M/autoloop/iterations/iter_0003/executor_iteration_report.md": 1,
+    "runs/spectral-geometry-217M/scripts/remaining_analyses.py": 1,
+    "summaries/attention-grn-217M-FINAL_SUMMARY.md": 1
+   },
+   "examples": [
+    {
+     "file": "pipelines/attention-grn-extraction-and-evaluation.md",
+     "line": 7,
+     "text": "The battery comprises **37 interlocking analyses yielding 153 statistical tests** (95 confirmatory, BH-corrected at \u03b1=0.05 framework-wide; 63/95 = 66% remain si"
+    },
+    {
+     "file": "pipelines/attention-grn-extraction-and-evaluation.md",
+     "line": 77,
+     "text": "5. **Perturbation-first AUROC table** (JSON) per perturbation, per layer, per edge type (attention / correlation / gene-level baselines / value-weighted), with "
+    },
+    {
+     "file": "pipelines/attention-grn-extraction-and-evaluation.md",
+     "line": 155,
+     "text": "4. **Statistical test:** paired *t*-test or Wilcoxon signed-rank between per-perturbation AUROCs (gene-level vs attention; gene-level vs correlation), BH-correc"
+    },
+    {
+     "file": "pipelines/attention-grn-extraction-and-evaluation.md",
+     "line": 721,
+     "text": "- **(a)** attention edges significantly outperform **every** gene-level baseline (variance, mean expression, 1\u2212dropout) at *p* < 0.05 BH-corrected (Phase 1 pass"
+    },
+    {
+     "file": "pipelines/attention-grn-extraction-and-evaluation.md",
+     "line": 789,
+     "text": "11. **Framework-level** (Phase 12): 153 tests run, 95 confirmatory, BH-corrected at \u03b1 = 0.05 yields **63 significant (66%)**. Deviation > 5 tests indicates inco"
+    },
+    {
+     "file": "pipelines/residual-stream-spectral-geometry.md",
+     "line": 19,
+     "text": "- **Critical negative findings** (essential for interpreting positives): persistent homology signals vanish under degree-preserving graph-rewiring nulls (0/24 t"
+    },
+    {
+     "file": "pipelines/residual-stream-spectral-geometry.md",
+     "line": 87,
+     "text": "14. **Negative-finding report** (JSON): results from persistent homology (feature-shuffle vs degree-preserving rewiring null contrast), cross-model alignment pe"
+    },
+    {
+     "file": "pipelines/residual-stream-spectral-geometry.md",
+     "line": 373,
+     "text": "**Critical pitfall:** the naive baseline **t = 0** is **incorrect**. The correct null is **t \u2248 0.5 by symmetry** \u2014 because a gene randomly positioned between tw"
+    },
+    {
+     "file": "pipelines/residual-stream-spectral-geometry.md",
+     "line": 377,
+     "text": "**Verdict: negative.** Methodological lesson: always use permutation-corrected baselines for betweenness statistics in high-dimensional spaces."
+    },
+    {
+     "file": "pipelines/residual-stream-spectral-geometry.md",
+     "line": 490,
+     "text": "| `ffl_permutation_baseline` | **t \u2248 0.5** (symmetry-corrected) | NOT t = 0 | Phase 9c |"
+    },
+    {
+     "file": "pipelines/residual-stream-spectral-geometry.md",
+     "line": 531,
+     "text": "3. **Feed-forward loop null must be 0.5, not 0.** See Phase 9c. The na\u00efve baseline for betweenness statistics in high-dimensional spaces is **not zero** \u2014 a ran"
+    },
+    {
+     "file": "pipelines/sparse-autoencoders/01-sae-atlas.md",
+     "line": 69,
+     "text": "6. **Feature annotations** per layer: `feature_annotations.json` \u2014 for each feature, the list of significant enrichment terms (term id, database source, OR, raw"
+    },
+    {
+     "file": "pipelines/sparse-autoencoders/01-sae-atlas.md",
+     "line": 405,
+     "text": "- BH-corrected *q* < 0.05"
+    },
+    {
+     "file": "pipelines/sparse-autoencoders/02-causal-circuit-tracing.md",
+     "line": 152,
+     "text": "1. **For each candidate source feature at a chosen source layer:** compute the **annotation quality score** as the sum `\u2211 \u2212log\u2081\u2080(p_i)` over all significant onto"
+    },
+    {
+     "file": "runs/attention-grn-217M/outputs/FINAL_SUMMARY.md",
+     "line": 36,
+     "text": "In every run, **a 1-feature gene-level univariate classifier (gene variance) crushes the attention-derived GRN** by 6\u201320 AUROC points at BH-corrected Wilcoxon p"
+    },
+    {
+     "file": "runs/attention-grn-217M/scripts/phase1_trivial_baselines.py",
+     "line": 14,
+     "text": "baseline vs attention and baseline vs correlation, BH-corrected."
+    },
+    {
+     "file": "runs/spectral-geometry-217M/autoloop/iterations/iter_0003/executor_iteration_report.md",
+     "line": 105,
+     "text": "Group comparison (BH-corrected):"
+    },
+    {
+     "file": "runs/spectral-geometry-217M/scripts/remaining_analyses.py",
+     "line": 25,
+     "text": "- Feed-forward loop geometry with permutation-corrected baseline"
+    },
+    {
+     "file": "summaries/attention-grn-217M-FINAL_SUMMARY.md",
+     "line": 36,
+     "text": "In every run, **a 1-feature gene-level univariate classifier (gene variance) crushes the attention-derived GRN** by 6\u201320 AUROC points at BH-corrected Wilcoxon p"
+    }
+   ]
+  },
+  "overwrite": {
+   "n_hits": 5,
+   "n_files": 2,
+   "by_file": {
+    "pipelines/sparse-autoencoders/02-causal-circuit-tracing.md": 3,
+    "pipelines/sparse-autoencoders/03-exhaustive-mapping-and-steering.md": 2
+   },
+   "examples": [
+    {
+     "file": "pipelines/sparse-autoencoders/02-causal-circuit-tracing.md",
+     "line": 202,
+     "text": "- **Geneformer:** register a hook at `L_src` that replaces the forward output with `h^(L_src)_abl`, then re-run the forward pass from the input (the hook interc"
+    },
+    {
+     "file": "pipelines/sparse-autoencoders/02-causal-circuit-tracing.md",
+     "line": 231,
+     "text": "**Critical pitfall:** the ablation must apply `\u03b4` to `h^(L_src)_clean` (the original hidden state), not to `h\u0303^(L_src)_clean` (the reconstructed state). If you "
+    },
+    {
+     "file": "pipelines/sparse-autoencoders/02-causal-circuit-tracing.md",
+     "line": 606,
+     "text": "3. **Ablation must add the delta to the original hidden state, not overwrite with the reconstruction.** Phase 3 step 3: `h^(L_src)_abl = h^(L_src)_clean + \u03b4` wh"
+    },
+    {
+     "file": "pipelines/sparse-autoencoders/03-exhaustive-mapping-and-steering.md",
+     "line": 241,
+     "text": "- Register a hook at L5 that overwrites the forward output with `h^(L5)_abl`, then run the forward pass from the input. The hook intercepts at L5 and all subseq"
+    },
+    {
+     "file": "pipelines/sparse-autoencoders/03-exhaustive-mapping-and-steering.md",
+     "line": 653,
+     "text": "5. **The ablation-delta-to-original-hidden-state bug** (same as Stage 2 Pitfall #3). Phase 2 step 3 must apply `\u03b4 = h\u0303_ablated \u2212 h\u0303_original` to `h^(L5)_clean`,"
+    }
+   ]
+  },
+  "power": {
+   "n_hits": 8,
+   "n_files": 4,
+   "by_file": {
+    "pipelines/attention-grn-extraction-and-evaluation.md": 3,
+    "pipelines/sparse-autoencoders/03-exhaustive-mapping-and-steering.md": 3,
+    "pipelines/sparse-autoencoders/02-causal-circuit-tracing.md": 1,
+    "runs/manifold-discovery-217M/FINAL_SUMMARY.md": 1
+   },
+   "examples": [
+    {
+     "file": "pipelines/attention-grn-extraction-and-evaluation.md",
+     "line": 190,
+     "text": "7. **Power check.** 559,720 observations provide > 99% power to detect \u0394AUROC = 0.005 at \u03b1 = 0.05."
+    },
+    {
+     "file": "pipelines/attention-grn-extraction-and-evaluation.md",
+     "line": 401,
+     "text": "10. **Per-edge FDR control (Fig. S23C).** CSSI maintains FDR \u2264 0.11 at K = 5\u201315 with 95%+ power, confirming the test family controls false-discovery at the edge"
+    },
+    {
+     "file": "pipelines/attention-grn-extraction-and-evaluation.md",
+     "line": 672,
+     "text": "4. **Severe power limitation.** **13 of 18 TFs have only a single evaluable TRRUST target in the HVG set**, meaning AUROC reflects the rank of *one gene* among "
+    },
+    {
+     "file": "pipelines/sparse-autoencoders/02-causal-circuit-tracing.md",
+     "line": 612,
+     "text": "9. **Cell count (200) limits statistical power for weak effects.** The 200-cell default is a compute/power tradeoff. Phase 4 thresholds (|d| > 0.5, consistency "
+    },
+    {
+     "file": "pipelines/sparse-autoencoders/03-exhaustive-mapping-and-steering.md",
+     "line": 252,
+     "text": "- **Cells per feature:** 20 (vs 200 in Stage 2) \u2014 compute tradeoff. With 4,065 features, using 200 cells/feature would cost 200/20 \u00d7 17.7 hr = 177 hr \u2248 7.4 days"
+    },
+    {
+     "file": "pipelines/sparse-autoencoders/03-exhaustive-mapping-and-steering.md",
+     "line": 584,
+     "text": "| `n_cells_per_feature` | **20** | 10\u2013200 (\u2191 = more power, \u2191 compute) | Phase 2 |"
+    },
+    {
+     "file": "pipelines/sparse-autoencoders/03-exhaustive-mapping-and-steering.md",
+     "line": 651,
+     "text": "3. **20 cells per feature reduces statistical power** (Limitation 1). Stage 2 uses 200 cells per feature and obtains mean |d| = 1.05; this pipeline uses 20 cell"
+    },
+    {
+     "file": "runs/manifold-discovery-217M/FINAL_SUMMARY.md",
+     "line": 306,
+     "text": "- Three of four (H65, H95, H103) clear zero-shot at gate-passing quality; H38 LITE is directionally positive but trust 0.787 misses the 0.80 frozen gate by 0.01"
+    }
+   ]
+  }
+ }
+}

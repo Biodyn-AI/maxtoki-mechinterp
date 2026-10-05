@@ -1,0 +1,158 @@
+{
+  "scope": "H123 motif AUROC under 4 CV schemes (no-grouping, GroupKFold-by-TF, GroupKFold-by-target, dual-axis disjoint), immune domain \u00d7 12 layers",
+  "n_folds": 5,
+  "by_layer": [
+    {
+      "domain": "immune",
+      "layer": 0,
+      "auc_no_grouping": 0.5327380952380952,
+      "auc_groupkfold_tf": 0.5221151489441931,
+      "auc_groupkfold_target": 0.5080743507676805,
+      "auc_dual_axis_disjoint": 0.47324991400068794,
+      "delta_no_group_minus_tf": 0.010622946293902147,
+      "delta_no_group_minus_target": 0.02466374447041475,
+      "delta_no_group_minus_dual": 0.05948818123740729,
+      "n_test_pairs_dual": 76
+    },
+    {
+      "domain": "immune",
+      "layer": 1,
+      "auc_no_grouping": 0.5069444444444444,
+      "auc_groupkfold_tf": 0.49638194219995685,
+      "auc_groupkfold_target": 0.5008671051749396,
+      "auc_dual_axis_disjoint": 0.46272359821121434,
+      "delta_no_group_minus_tf": 0.01056250224448757,
+      "delta_no_group_minus_target": 0.006077339269504822,
+      "delta_no_group_minus_dual": 0.04422084623323008,
+      "n_test_pairs_dual": 76
+    },
+    {
+      "domain": "immune",
+      "layer": 2,
+      "auc_no_grouping": 0.48908730158730157,
+      "auc_groupkfold_tf": 0.4806589703188968,
+      "auc_groupkfold_target": 0.48015021919056766,
+      "auc_dual_axis_disjoint": 0.46148520811833504,
+      "delta_no_group_minus_tf": 0.008428331268404754,
+      "delta_no_group_minus_target": 0.008937082396733909,
+      "delta_no_group_minus_dual": 0.027602093468966526,
+      "n_test_pairs_dual": 76
+    },
+    {
+      "domain": "immune",
+      "layer": 3,
+      "auc_no_grouping": 0.49503968253968256,
+      "auc_groupkfold_tf": 0.48248185331825033,
+      "auc_groupkfold_target": 0.4810395478631901,
+      "auc_dual_axis_disjoint": 0.46491658066735464,
+      "delta_no_group_minus_tf": 0.012557829221432226,
+      "delta_no_group_minus_target": 0.01400013467649247,
+      "delta_no_group_minus_dual": 0.030123101872327918,
+      "n_test_pairs_dual": 76
+    },
+    {
+      "domain": "immune",
+      "layer": 4,
+      "auc_no_grouping": 0.5009920634920635,
+      "auc_groupkfold_tf": 0.49555083090928675,
+      "auc_groupkfold_target": 0.48386059344794435,
+      "auc_dual_axis_disjoint": 0.4531518747850017,
+      "delta_no_group_minus_tf": 0.005441232582776734,
+      "delta_no_group_minus_target": 0.017131470044119135,
+      "delta_no_group_minus_dual": 0.047840188707061804,
+      "n_test_pairs_dual": 76
+    },
+    {
+      "domain": "immune",
+      "layer": 5,
+      "auc_no_grouping": 0.5029761904761905,
+      "auc_groupkfold_tf": 0.4915415925985779,
+      "auc_groupkfold_target": 0.4863357151105768,
+      "auc_dual_axis_disjoint": 0.4756664946680427,
+      "delta_no_group_minus_tf": 0.011434597877612585,
+      "delta_no_group_minus_target": 0.01664047536561364,
+      "delta_no_group_minus_dual": 0.027309695808147738,
+      "n_test_pairs_dual": 76
+    },
+    {
+      "domain": "immune",
+      "layer": 6,
+      "auc_no_grouping": 0.4930555555555556,
+      "auc_groupkfold_tf": 0.48188782724628315,
+      "auc_groupkfold_target": 0.47508508422857726,
+      "auc_dual_axis_disjoint": 0.46455538355693166,
+      "delta_no_group_minus_tf": 0.011167728309272429,
+      "delta_no_group_minus_target": 0.01797047132697832,
+      "delta_no_group_minus_dual": 0.028500171998623924,
+      "n_test_pairs_dual": 76
+    },
+    {
+      "domain": "immune",
+      "layer": 7,
+      "auc_no_grouping": 0.49503968253968256,
+      "auc_groupkfold_tf": 0.4873176914996768,
+      "auc_groupkfold_target": 0.4922702166116659,
+      "auc_dual_axis_disjoint": 0.4667483660130719,
+      "delta_no_group_minus_tf": 0.00772199104000576,
+      "delta_no_group_minus_target": 0.0027694659280166345,
+      "delta_no_group_minus_dual": 0.028291316526610655,
+      "n_test_pairs_dual": 76
+    },
+    {
+      "domain": "immune",
+      "layer": 8,
+      "auc_no_grouping": 0.5029761904761905,
+      "auc_groupkfold_tf": 0.4849831326761474,
+      "auc_groupkfold_target": 0.48422858784310663,
+      "auc_dual_axis_disjoint": 0.45622205022359824,
+      "delta_no_group_minus_tf": 0.017993057800043066,
+      "delta_no_group_minus_target": 0.018747602633083837,
+      "delta_no_group_minus_dual": 0.046754140252592225,
+      "n_test_pairs_dual": 76
+    },
+    {
+      "domain": "immune",
+      "layer": 9,
+      "auc_no_grouping": 0.5287698412698413,
+      "auc_groupkfold_tf": 0.492193459114415,
+      "auc_groupkfold_target": 0.48906229072559004,
+      "auc_dual_axis_disjoint": 0.46148520811833504,
+      "delta_no_group_minus_tf": 0.0365763821554263,
+      "delta_no_group_minus_target": 0.039707550544251236,
+      "delta_no_group_minus_dual": 0.06728463315150623,
+      "n_test_pairs_dual": 76
+    },
+    {
+      "domain": "immune",
+      "layer": 10,
+      "auc_no_grouping": 0.5148809523809523,
+      "auc_groupkfold_tf": 0.49392658505709974,
+      "auc_groupkfold_target": 0.4896626739489241,
+      "auc_dual_axis_disjoint": 0.45095889232886127,
+      "delta_no_group_minus_tf": 0.020954367323852585,
+      "delta_no_group_minus_target": 0.02521827843202823,
+      "delta_no_group_minus_dual": 0.06392206005209106,
+      "n_test_pairs_dual": 76
+    },
+    {
+      "domain": "immune",
+      "layer": 11,
+      "auc_no_grouping": 0.4990079365079365,
+      "auc_groupkfold_tf": 0.49322017749407454,
+      "auc_groupkfold_target": 0.4848669220968089,
+      "auc_dual_axis_disjoint": 0.4478887168902649,
+      "delta_no_group_minus_tf": 0.0057877590138619706,
+      "delta_no_group_minus_target": 0.014141014411127584,
+      "delta_no_group_minus_dual": 0.05111921961767163,
+      "n_test_pairs_dual": 76
+    }
+  ],
+  "aggregate": {
+    "mean_auc_no_grouping": 0.5051256613756614,
+    "mean_auc_groupkfold_tf": 0.49185493428140487,
+    "mean_auc_groupkfold_target": 0.48795860891746434,
+    "mean_auc_dual_axis": 0.4615876906318083,
+    "mean_delta_no_group_minus_dual": 0.04353797074385309
+  },
+  "interpretation": "On immune, mean H123 motif AUROC under no-grouping = 0.505; under GroupKFold-by-TF = 0.492; under GroupKFold-by-target = 0.488; under dual-axis disjoint = 0.462. Group-aware splits give materially LOWER AUROC \u2014 the original H123 number was inflated by shared-endpoint structure. The corrected numbers are the appropriate ones to report."
+}

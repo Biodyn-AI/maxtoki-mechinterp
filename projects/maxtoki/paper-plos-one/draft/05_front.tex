@@ -1,0 +1,51 @@
+\begin{document}
+\vspace*{0.2in}
+
+\begin{flushleft}
+{\Large
+\textbf{Checking agent-run interpretability of a single-cell foundation model: a controlled evaluation of method specifications and a reviewer-derived audit checklist, with a MaxToki-217M case study}
+}
+\newline
+\\
+Ihor Kendiukhov\textsuperscript{1*}
+\\
+\bigskip
+\textbf{1} Institute of Medical Genetics and Applied Genomics, University of T\"ubingen, T\"ubingen, Germany
+\\
+\bigskip
+
+* ihor.kendiukhov@student.uni-tuebingen.de
+
+\end{flushleft}
+
+\section*{Abstract}
+We evaluated one way to check interpretability analyses that
+large-language-model agents run on biological foundation models. Each
+method was written as an agent specification; outputs were audited with
+a ten-item checklist of peer reviewers' objections to earlier studies.
+An agent used both to run eight interpretability pipelines on the
+single-cell foundation model MaxToki-217M and to audit them. We confirmed 149 errors in the deployment's code and outputs, 13
+of them critical, including intervention code that deleted a transformer
+block and model inputs encoded on the wrong scale. The agent's own audit report found 10\% of a fixed set of 68
+errors that predated it, and no critical one; fresh agents in a blind re-audit found 41--45\%, with or
+without the checklist. In a controlled study of four known-answer tasks,
+all 40 Claude Opus~5.5 runs reached the correct conclusion, with or
+without the specification. Executors handled 94.5\% of pitfalls; review and repair added 2.0--2.8 points; generic reviews
+turned 3 of 40 correct conclusions wrong. In 11 held-out analyses from
+other projects, each in a flawed and a corrected version, every review
+of a flawed version found its error, but about 80\% of
+reviews of corrected versions claimed a serious error that was not one.
+With Opus~5.5, no study showed the checklist finding more errors or
+raising fewer false alarms than an equal-budget generic review. Of the 13 critical errors, author-directed agent checks found 8 first and
+blind re-audits 3. After correction, MaxToki-217M's attention scores,
+sparse-autoencoder features and traced circuits did not beat gene-level
+baselines; attention matched co-expression and beat rewired TRRUST
+networks in RPE1 cells, not K562. Its gene embeddings aligned with
+scGPT's and more with Geneformer's. Hidden states showed no
+developmental order beyond cell type; 14 of 15 features steered a maturity score no more than random features.
+
+\clearpage
+\newgeometry{top=0.85in,left=1in,right=1in,footskip=0.75in}
+\fancyheadoffset[L]{0pt}
+\fancyfootoffset[L]{0pt}
+\linenumbers

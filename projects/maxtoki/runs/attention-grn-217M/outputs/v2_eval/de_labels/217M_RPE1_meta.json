@@ -1,0 +1,26 @@
+{
+ "run": "217M_RPE1",
+ "dataset": "rpe1",
+ "n_control_cells_available": 11485,
+ "n_control_cells_used_for_DE": 5000,
+ "n_candidate_perturbations": 434,
+ "skipped_before_test": {
+  "lt30": 377,
+  "no_ens": 50,
+  "not_in_geneset": 1532
+ },
+ "dropped_lt3_positives_or_negatives": 109,
+ "n_perturbations_evaluated": 325,
+ "n_positive_pairs": 48245,
+ "rule": {
+  "lfc_abs_min": 0.5,
+  "bh_q_max": 0.05,
+  "min_cells": 30,
+  "min_pos_and_neg": 3,
+  "n_ctrl_cap": 5000,
+  "ctrl_seed": 42,
+  "normalisation": "per cell, scale to 1e4 over the run's 1,500 genes, log1p",
+  "test": "Welch t (scipy ttest_ind equal_var=False), BH over 1,500 genes per perturbation"
+ },
+ "seconds": 80.12795495986938
+}

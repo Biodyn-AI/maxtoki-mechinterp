@@ -1,0 +1,30 @@
+======================================================================
+PHASE 1 — Global spectral decomposition
+======================================================================
+  input: (12, 1500, 1232)  non-zero genes: 1500/1500
+
+[1] Per-layer SVD + metrics...
+  L 0: ER=560.809  PR=411.659  SV1%=0.007  TwoNN=102.00
+  L 1: ER=332.588  PR=230.385  SV1%=0.025  TwoNN=51.83
+  L 2: ER=338.146  PR=205.451  SV1%=0.032  TwoNN=47.03
+  L 3: ER=297.558  PR=146.035  SV1%=0.045  TwoNN=27.99
+  L 4: ER=231.696  PR= 93.793  SV1%=0.051  TwoNN=20.78
+  L 5: ER=212.064  PR= 78.599  SV1%=0.057  TwoNN=17.47
+  L 6: ER=169.443  PR= 52.905  SV1%=0.069  TwoNN=10.28
+  L 7: ER=174.407  PR= 51.410  SV1%=0.076  TwoNN=10.49
+  L 8: ER=201.736  PR= 64.141  SV1%=0.083  TwoNN=10.40
+  L 9: ER=201.907  PR= 71.797  SV1%=0.075  TwoNN=8.34
+  L10: ER=172.109  PR= 54.068  SV1%=0.105  TwoNN=6.35
+  L11: ER= 93.643  PR= 24.485  SV1%=0.173  TwoNN=6.70
+
+  depth correlations:
+    effective_rank: ρ=-0.895  p=8.37e-05
+    participation_ratio: ρ=-0.888  p=1.14e-04
+    sv1_variance_fraction: ρ=+0.979  p=3.09e-08
+    twonn_intrinsic_dim: ρ=-0.972  p=1.29e-07
+
+[2] Feature-shuffle null on final layer...
+  observed L11: ER=93.643
+  feature-shuffle: ER=573.081  (expected near the dimension count; the compression is learned, not architectural)
+
+PHASE 1 COMPLETE — outputs: <REPO_ROOT>/projects/maxtoki/runs/spectral-geometry-217M/outputs/phase1

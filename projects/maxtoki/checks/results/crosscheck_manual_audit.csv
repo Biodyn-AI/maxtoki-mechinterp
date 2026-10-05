@@ -1,0 +1,131 @@
+report,paper_line,value,manual_status,traced_any_run,chain,in_summaries,chance_union,manual_text
+numbers_A.md,224,15,NOT FOUND,True,True,True,1.0,NOT FOUND
+numbers_A.md,224,50,DIFFERENT ENDPOINT,True,True,True,1.0,DIFFERENT ENDPOINT
+numbers_A.md,230,"2,400",MATCH,True,True,True,1.0,MATCH (rounded)
+numbers_A.md,230,7.7,MATCH,True,True,True,1.0,MATCH
+numbers_A.md,306,15,NOT FOUND,True,True,True,1.0,NOT FOUND
+numbers_A.md,365,"20,275",MATCH,True,True,True,0.66,MATCH
+numbers_A.md,368,11,MATCH,True,True,True,1.0,MATCH
+numbers_A.md,525,"5,000",MATCH,True,True,True,1.0,MATCH
+numbers_A.md,526,2.1,DIFFERENT ENDPOINT,True,True,True,1.0,DIFFERENT ENDPOINT (number matches)
+numbers_A.md,575,15,NOT FOUND,True,True,True,1.0,NOT FOUND
+numbers_A.md,606,1000,MISMATCH,True,True,True,1.0,MISMATCH
+numbers_A.md,662,50,DIFFERENT ENDPOINT,True,True,True,1.0,DIFFERENT ENDPOINT
+numbers_A.md,808,1000,MATCH,True,True,True,1.0,MATCH (to spec); executed scheme differs
+numbers_A.md,839,2026,MATCH,True,True,True,1.0,MATCH
+numbers_A.md,841,175,MATCH,False,False,True,0.06,MATCH
+numbers_A.md,842,90,MATCH,True,True,True,1.0,MATCH
+numbers_A.md,855,"2,048",MATCH,True,True,True,1.0,MATCH
+numbers_A.md,870,11,MATCH,True,True,True,1.0,MATCH
+numbers_A.md,870,1232,MATCH,True,True,True,1.0,MATCH
+numbers_A.md,871,"20,275",MATCH,True,True,True,0.66,MATCH
+numbers_A.md,871,"4,096",MATCH,True,False,False,1.0,MATCH
+numbers_A.md,930,12,AMBIGUOUS,True,True,True,1.0,AMBIGUOUS (paper says 11 layers elsewhere)
+numbers_A.md,934,0.5,MATCH,True,True,True,1.0,MATCH (base); undercount
+numbers_A.md,947,5.5,MATCH,True,True,True,1.0,MATCH (compute time)
+numbers_A.md,954,141,MISMATCH,True,True,True,1.0,MISMATCH
+numbers_A.md,965,"5,000",MATCH,True,True,True,1.0,MATCH
+numbers_A.md,965,12,MATCH,True,True,True,1.0,MATCH
+numbers_A.md,969,2.5,MATCH,True,True,True,1.0,MATCH (base); undercount
+numbers_A.md,976,2.1,MATCH,True,True,True,1.0,MATCH (number)
+numbers_A.md,988,4.97,DIFFERENT ENDPOINT,True,True,True,0.1,"DIFFERENT ENDPOINT (""exhaustively"" overstated; hook)"
+numbers_A.md,989,"2,980",MISMATCH,True,True,True,1.0,MISMATCH
+numbers_A.md,992,5.5,MATCH,True,True,True,1.0,MATCH
+numbers_A.md,999,12,MATCH,True,True,True,1.0,MATCH (for the two-sweep version)
+numbers_A.md,1003,24,MATCH,True,True,True,1.0,MATCH (base); undercount
+numbers_A.md,1013,1.5,MATCH,True,True,True,1.0,MATCH
+numbers_B.md,1085,10,MISMATCH,True,True,True,1.0,MISMATCH
+numbers_B.md,1084,20,MATCH,True,True,True,1.0,"MATCH on values. DIFFERENT ENDPOINT on meaning: AUROC is against DE-called targets of each perturbation, and ""classifier"
+numbers_B.md,1095,53.48%,MATCH,True,True,True,1.0,MATCH on value. See base-rate row below.
+numbers_B.md,1096,"1,503,408",MATCH,True,True,True,0.0,MATCH on value. See base-rate row below.
+numbers_B.md,1099,53.42%,DIFFERENT ENDPOINT,True,True,True,1.0,"DIFFERENT ENDPOINT. 53.42% is the per-gene mean with a gene bootstrap. The 5-fold number is 53.47%. No model is trained,"
+numbers_B.md,1099,52.60%,DIFFERENT ENDPOINT,True,True,True,1.0,"DIFFERENT ENDPOINT. 53.42% is the per-gene mean with a gene bootstrap. The 5-fold number is 53.47%. No model is trained,"
+numbers_B.md,1099,54.16%,DIFFERENT ENDPOINT,True,True,True,1.0,"DIFFERENT ENDPOINT. 53.42% is the per-gene mean with a gene bootstrap. The 5-fold number is 53.47%. No model is trained,"
+numbers_B.md,1107,1.01,DIFFERENT ENDPOINT,True,True,True,1.0,DIFFERENT ENDPOINT (not TF targets; it is the feature's own top genes)
+numbers_B.md,1108,2.36,MATCH,True,True,True,1.0,MATCH
+numbers_B.md,1109,48,MATCH,True,True,True,1.0,MATCH on value; key context omitted
+numbers_B.md,1116,141,MISMATCH,True,True,True,1.0,MISMATCH / overstated
+numbers_B.md,1119,12,MATCH,True,True,True,1.0,MATCH
+numbers_B.md,1121,0.505,MATCH,True,True,True,1.0,"MATCH on values. It is AUROC, not accuracy. With 76 test pairs, 0.462 is not clearly below chance."
+numbers_B.md,1121,0.462,MATCH,True,True,True,1.0,"MATCH on values. It is AUROC, not accuracy. With 76 test pairs, 0.462 is not clearly below chance."
+numbers_B.md,1127,"2,980",DIFFERENT ENDPOINT,True,True,True,1.0,"DIFFERENT ENDPOINT (denominator is target features per triplet, not triplets)"
+numbers_B.md,1127,0.190,MATCH,True,True,True,1.0,MATCH. Note: all 4 unrelated triplets give the same ratio to 4 decimals (std 0.0001). This suggests the metric does not 
+numbers_B.md,1127,0.59,MATCH,True,True,True,1.0,MATCH. Note: all 4 unrelated triplets give the same ratio to 4 decimals (std 0.0001). This suggests the metric does not 
+numbers_B.md,1165,16,MISMATCH,True,True,True,1.0,"MISMATCH (""genes"" and ""in total"")"
+numbers_B.md,1165,60,MISMATCH,True,True,True,1.0,"MISMATCH (""genes"" and ""in total"")"
+numbers_B.md,1166,7.7,MISMATCH,True,True,True,1.0,"MISMATCH (""genes"" and ""in total"")"
+numbers_B.md,1173,0.811,MATCH,True,True,True,1.0,Values MATCH. DIFFERENT ENDPOINT on definition: model-feature space vs 10-D read-out; no biological ruler; anchors not c
+numbers_B.md,1173,0.799,MATCH,True,True,True,1.0,Values MATCH. DIFFERENT ENDPOINT on definition: model-feature space vs 10-D read-out; no biological ruler; anchors not c
+numbers_B.md,1177,0.370,MATCH,True,True,True,1.0,MATCH
+numbers_B.md,1177,0.001,MATCH,True,True,True,1.0,MATCH
+numbers_B.md,1178,0.834,MATCH,True,True,True,1.0,MATCH (holdout unit = anchors)
+numbers_B.md,1179,0.716,MATCH,True,True,True,1.0,MATCH (holdout unit = anchors)
+numbers_B.md,1184,0.799,MATCH,True,True,True,1.0,"MATCH. Note: `planning/research_plan.md:29` says the null ""must FAIL all four gates""; it failed only two."
+numbers_B.md,1185,0.707,MATCH,True,True,True,1.0,"MATCH. Note: `planning/research_plan.md:29` says the null ""must FAIL all four gates""; it failed only two."
+numbers_B.md,1190,13,MATCH,True,True,True,1.0,MATCH
+numbers_B.md,1191,0.896,MATCH,True,True,True,1.0,MATCH
+numbers_B.md,1192,0.884,DIFFERENT ENDPOINT,True,True,True,1.0,"DIFFERENT ENDPOINT (subsampling interval, not a bootstrap CI; anchor-level, not donor-level as audit A3 asked, `A/audit-"
+numbers_B.md,1192,0.899,DIFFERENT ENDPOINT,True,True,True,1.0,"DIFFERENT ENDPOINT (subsampling interval, not a bootstrap CI; anchor-level, not donor-level as audit A3 asked, `A/audit-"
+numbers_B.md,1192,0.346,DIFFERENT ENDPOINT,True,True,True,1.0,DIFFERENT ENDPOINT (no branch withheld)
+numbers_B.md,1194,0.827,MATCH,True,True,True,1.0,"Values MATCH; branch value is DIFFERENT ENDPOINT. External was also no-refit, so the contrast in the sentence is mislead"
+numbers_B.md,1194,0.317,MATCH,True,True,True,1.0,"Values MATCH; branch value is DIFFERENT ENDPOINT. External was also no-refit, so the contrast in the sentence is mislead"
+numbers_B.md,1199,"2,400",MISMATCH,True,True,True,1.0,MISMATCH
+numbers_B.md,1286,18.3%,DIFFERENT ENDPOINT,True,True,True,1.0,DIFFERENT ENDPOINT (value matches)
+numbers_B.md,1288,66.2%,MATCH,True,True,True,1.0,MATCH
+numbers_B.md,1290,0.973,DIFFERENT ENDPOINT,True,True,True,1.0,DIFFERENT ENDPOINT
+numbers_B.md,1290,0.123,DIFFERENT ENDPOINT,True,True,True,1.0,DIFFERENT ENDPOINT
+numbers_B.md,1305,48,MATCH,True,True,True,1.0,MATCH
+numbers_B.md,1309,57,MATCH,True,True,True,1.0,MATCH
+numbers_B.md,1309,10,MATCH,True,True,True,1.0,MATCH
+numbers_B.md,1316,2610,MATCH,True,True,True,1.0,MATCH
+numbers_B.md,1317,470,MATCH,True,True,True,1.0,MATCH
+numbers_B.md,1317,0.030,MATCH,True,True,True,1.0,MATCH on value; method differs from the citation
+numbers_B.md,1339,0%,MATCH,True,True,True,1.0,MATCH
+numbers_C.md,1372,20,MATCH,True,True,True,1.0,MATCH
+numbers_C.md,1406,0.78,MATCH,True,True,True,1.0,MATCH
+numbers_C.md,1407,0.382,MATCH,True,True,True,1.0,MATCH (values) / DIFFERENT ENDPOINT
+numbers_C.md,1408,0.380,MATCH,True,True,True,1.0,MATCH (values) / DIFFERENT ENDPOINT
+numbers_C.md,1408,0.384,MATCH,True,True,True,1.0,MATCH (values) / DIFFERENT ENDPOINT
+numbers_C.md,1408,0.40,MATCH,True,True,True,1.0,MATCH (approx.)
+numbers_C.md,1410,3.0,MATCH,True,True,True,1.0,MATCH
+numbers_C.md,1410,8%,MATCH,True,True,True,1.0,MATCH
+numbers_C.md,1410,38,MATCH,True,True,True,1.0,MATCH
+numbers_C.md,1410,47%,MATCH,True,True,True,1.0,MATCH
+numbers_C.md,1439,0.604,MATCH,True,True,True,1.0,MATCH
+numbers_C.md,1439,0.678,MATCH,True,False,False,1.0,MATCH
+numbers_C.md,1440,0.561,MATCH,True,True,True,1.0,MATCH
+numbers_C.md,1440,0.275,MATCH,True,True,True,1.0,MATCH
+numbers_C.md,1441,40%,MATCH,True,True,True,1.0,MATCH
+numbers_C.md,1453,561,MATCH,True,True,True,1.0,MATCH
+numbers_C.md,1453,94,MATCH,True,True,True,1.0,MATCH
+numbers_C.md,1456,0.895,MATCH,True,True,True,1.0,MATCH
+numbers_C.md,1457,573,MATCH,True,True,True,1.0,MATCH
+numbers_C.md,1457,6.1,MATCH,True,True,True,1.0,MATCH
+numbers_C.md,1464,1.000,MATCH,True,True,True,1.0,MATCH (numbers) / DIFFERENT ENDPOINT at L0
+numbers_C.md,1464,0.991,MATCH,True,True,True,1.0,MATCH (numbers) / DIFFERENT ENDPOINT at L0
+numbers_C.md,1465,0.979,MATCH,True,True,True,1.0,MATCH
+numbers_C.md,1465,0.779,MATCH,True,True,True,1.0,MATCH
+numbers_C.md,1469,175,MATCH,False,False,True,0.06,MATCH
+numbers_C.md,1471,1%,MATCH,True,True,True,1.0,MATCH
+numbers_C.md,1515,61%,MATCH,True,True,True,1.0,MATCH (as stated)
+numbers_C.md,1516,75%,MATCH,True,True,True,1.0,MATCH (as stated)
+numbers_C.md,1528,49,MATCH,True,True,True,1.0,MATCH
+numbers_C.md,1526,80,MATCH,True,True,True,1.0,MATCH
+numbers_C.md,1528,60,MATCH,True,True,True,1.0,MATCH
+numbers_C.md,1549,53.48%,MATCH,True,True,True,1.0,MATCH
+numbers_C.md,1550,53.42%,MATCH,True,True,True,1.0,MATCH
+numbers_C.md,1550,52.60%,MATCH,True,True,True,1.0,MATCH
+numbers_C.md,1550,54.16%,MATCH,True,True,True,1.0,MATCH
+numbers_C.md,1551,54.61%,MATCH,True,True,True,1.0,MATCH
+numbers_C.md,1556,0.003,MATCH,True,True,True,1.0,MATCH
+numbers_C.md,1568,1000,MISMATCH,True,True,True,1.0,MISMATCH
+numbers_C.md,1573,0.346,MATCH,True,True,True,1.0,MATCH (values) / DIFFERENT ENDPOINT
+numbers_C.md,1573,0.270,MATCH,True,True,True,1.0,MATCH (values) / DIFFERENT ENDPOINT
+numbers_C.md,1573,0.480,MATCH,True,True,True,1.0,MATCH (values) / DIFFERENT ENDPOINT
+numbers_C.md,1585,48,MATCH,True,True,True,1.0,MATCH
+numbers_C.md,1587,54.61%,MATCH,True,True,True,1.0,MATCH
+numbers_C.md,1610,12,DIFFERENT ENDPOINT,True,True,True,1.0,DIFFERENT ENDPOINT
+numbers_C.md,1611,24,DIFFERENT ENDPOINT,True,True,True,1.0,DIFFERENT ENDPOINT
+numbers_C.md,1649,50,MATCH,True,True,True,1.0,MATCH (approx.)
+numbers_C.md,1684,0.030,MATCH,True,True,True,1.0,MATCH (p) / MISMATCH (wording)
+numbers_C.md,1697,15,NOT FOUND,True,True,True,1.0,NOT FOUND

@@ -1,0 +1,18 @@
+{
+  "pipeline": "residual-stream-spectral-geometry",
+  "phase": "0",
+  "model": "MaxToki-217M-HF",
+  "dataset": "tabula_sapiens_immune",
+  "n_cells": 2000,
+  "n_hvg": 1500,
+  "max_len": 2048,
+  "device": "mps",
+  "n_layer_states": 12,
+  "hidden_size": 1232,
+  "mean_seq_len": 1783.629,
+  "mean_fwd_seconds": 0.39222485113143923,
+  "total_fwd_seconds": 784.4497022628784,
+  "total_phase_seconds": 907.3946018218994,
+  "n_genes_with_observations": 1500,
+  "seed": 42
+}

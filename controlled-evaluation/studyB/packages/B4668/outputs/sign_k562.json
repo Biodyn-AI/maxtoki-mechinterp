@@ -1,0 +1,265 @@
+{
+ "line": "k562",
+ "n": 8358,
+ "n_tfs": 429,
+ "frac_neg_matrix": 0.49128831125371547,
+ "frac_down_edges": 0.4997607083034219,
+ "all": {
+  "threshold_abs_dE": 1.6016662129914039e-06,
+  "DATABASE sign": {
+   "balanced": 0.49881494822959094,
+   "ci": [
+    0.4854995848211819,
+    0.5134102646242258
+   ],
+   "acc_activating": 0.49934810951760106,
+   "acc_inhibiting": 0.49828178694158076,
+   "balanced_over_observed": 0.499318456551598,
+   "n": 8358
+  },
+  "always-down (prior)": {
+   "balanced": 0.5005331612880102,
+   "ci": [
+    0.48620302916257835,
+    0.5139749974238005
+   ],
+   "acc_activating": 0.49934810951760106,
+   "acc_inhibiting": 0.5017182130584192,
+   "balanced_over_observed": 0.5,
+   "n": 8358
+  },
+  "random": {
+   "balanced": 0.5004438530386459,
+   "ci": [
+    0.48635113823214476,
+    0.514696665576449
+   ],
+   "acc_activating": 0.5012313486889758,
+   "acc_inhibiting": 0.49965635738831615,
+   "balanced_over_observed": 0.5009568807028981,
+   "n": 8358
+  },
+  "two_by_two": {
+   "n": 8358,
+   "n_activating": 6903,
+   "n_inhibiting": 1455,
+   "n_tfs": 429,
+   "n_tfs_with_both_classes": 206,
+   "table": {
+    "activation": {
+     "up": 3456,
+     "down": 3447
+    },
+    "inhibition": {
+     "up": 725,
+     "down": 730
+    }
+   },
+   "frac_up_activation": 0.500651890482399,
+   "frac_up_inhibition": 0.49828178694158076,
+   "odds_ratio": 0.990564355022831,
+   "fisher_p": 0.8853236285109355,
+   "shuffle_across_edges": {
+    "median": 1.000505511026235,
+    "q95": 1.0946272204153116,
+    "p_one_sided": 0.568215892053973
+   },
+   "shuffle_within_tf": {
+    "median": 1.0447540062536642,
+    "q95": 1.139506890116725,
+    "p_one_sided": 0.8750624687656172
+   },
+   "tf_bootstrap_ci": [
+    0.8705761328973965,
+    1.1332355724011303
+   ],
+   "tf_bootstrap_n_valid": 2000
+  }
+ },
+ "|dE| top 50%": {
+  "threshold_abs_dE": 0.0584946945309639,
+  "DATABASE sign": {
+   "balanced": 0.5105854711548913,
+   "ci": [
+    0.4905712937896378,
+    0.5296437743451303
+   ],
+   "acc_activating": 0.4975721222507855,
+   "acc_inhibiting": 0.523598820058997,
+   "balanced_over_observed": 0.5057558167503167,
+   "n": 4179
+  },
+  "always-down (prior)": {
+   "balanced": 0.48698665109589423,
+   "ci": [
+    0.4657879828266513,
+    0.5072151477580363
+   ],
+   "acc_activating": 0.4975721222507855,
+   "acc_inhibiting": 0.47640117994100295,
+   "balanced_over_observed": 0.5,
+   "n": 4179
+  },
+  "random": {
+   "balanced": 0.49824070493133443,
+   "ci": [
+    0.4770384662536367,
+    0.5184444615065733
+   ],
+   "acc_activating": 0.5038560411311054,
+   "acc_inhibiting": 0.49262536873156343,
+   "balanced_over_observed": 0.5019065792216538,
+   "n": 4179
+  },
+  "two_by_two": {
+   "n": 4179,
+   "n_activating": 3501,
+   "n_inhibiting": 678,
+   "n_tfs": 333,
+   "n_tfs_with_both_classes": 128,
+   "table": {
+    "activation": {
+     "up": 1759,
+     "down": 1742
+    },
+    "inhibition": {
+     "up": 355,
+     "down": 323
+    }
+   },
+   "frac_up_activation": 0.5024278777492145,
+   "frac_up_inhibition": 0.523598820058997,
+   "odds_ratio": 1.0884491434585863,
+   "fisher_p": 0.31428152508952056,
+   "shuffle_across_edges": {
+    "median": 0.9931574492099323,
+    "q95": 1.1440137682683966,
+    "p_one_sided": 0.15942028985507245
+   },
+   "shuffle_within_tf": {
+    "median": 1.1355531121952274,
+    "q95": 1.2810483870967742,
+    "p_one_sided": 0.7296351824087957
+   },
+   "tf_bootstrap_ci": [
+    0.9035457966055115,
+    1.3131919118446924
+   ],
+   "tf_bootstrap_n_valid": 2000
+  }
+ },
+ "|dE| top 10%": {
+  "threshold_abs_dE": 0.16588492691516876,
+  "DATABASE sign": {
+   "balanced": 0.5987996306555863,
+   "ci": [
+    0.552856648199446,
+    0.6449676823638042
+   ],
+   "acc_activating": 0.49584487534626037,
+   "acc_inhibiting": 0.7017543859649122,
+   "balanced_over_observed": 0.5467227431513145,
+   "n": 836
+  },
+  "always-down (prior)": {
+   "balanced": 0.39704524469067404,
+   "ci": [
+    0.35179478301015693,
+    0.4434441366574331
+   ],
+   "acc_activating": 0.49584487534626037,
+   "acc_inhibiting": 0.2982456140350877,
+   "balanced_over_observed": 0.5,
+   "n": 836
+  },
+  "random": {
+   "balanced": 0.4533702677746999,
+   "ci": [
+    0.4030413204062788,
+    0.5007156048014771
+   ],
+   "acc_activating": 0.46814404432132967,
+   "acc_inhibiting": 0.43859649122807015,
+   "balanced_over_observed": 0.46382607096892814,
+   "n": 836
+  },
+  "two_by_two": {
+   "n": 836,
+   "n_activating": 722,
+   "n_inhibiting": 114,
+   "n_tfs": 151,
+   "n_tfs_with_both_classes": 37,
+   "table": {
+    "activation": {
+     "up": 364,
+     "down": 358
+    },
+    "inhibition": {
+     "up": 80,
+     "down": 34
+    }
+   },
+   "frac_up_activation": 0.5041551246537396,
+   "frac_up_inhibition": 0.7017543859649122,
+   "odds_ratio": 2.314156431803491,
+   "fisher_p": 7.674318891773112e-05,
+   "shuffle_across_edges": {
+    "median": 1.0187201339967487,
+    "q95": 1.3603145235892693,
+    "p_one_sided": 0.0004997501249375312
+   },
+   "shuffle_within_tf": {
+    "median": 1.76,
+    "q95": 2.314156431803491,
+    "p_one_sided": 0.06496751624187906
+   },
+   "tf_bootstrap_ci": [
+    1.5138508154332382,
+    3.568239661654135
+   ],
+   "tf_bootstrap_n_valid": 2000
+  }
+ },
+ "levels_top10": {
+  "A": {
+   "balanced": 0.6293522267206477,
+   "acc_activating": 0.5587044534412956,
+   "acc_inhibiting": 0.7,
+   "n": 267,
+   "n_activating": 247,
+   "n_inhibiting": 20,
+   "n_tfs": 60,
+   "odds_ratio": 2.9541284403669725
+  },
+  "B": {
+   "balanced": 0.84375,
+   "acc_activating": 0.6875,
+   "acc_inhibiting": 1.0,
+   "n": 36,
+   "n_activating": 32,
+   "n_inhibiting": 4,
+   "n_tfs": 21,
+   "odds_ratio": 19.285714285714285
+  },
+  "C": {
+   "balanced": 0.6580645161290323,
+   "acc_activating": 0.5161290322580645,
+   "acc_inhibiting": 0.8,
+   "n": 36,
+   "n_activating": 31,
+   "n_inhibiting": 5,
+   "n_tfs": 26,
+   "odds_ratio": 4.266666666666667
+  },
+  "D": {
+   "balanced": 0.5620502569960023,
+   "acc_activating": 0.441747572815534,
+   "acc_inhibiting": 0.6823529411764706,
+   "n": 497,
+   "n_activating": 412,
+   "n_inhibiting": 85,
+   "n_tfs": 131,
+   "odds_ratio": 1.6998389694041869
+  }
+ }
+}

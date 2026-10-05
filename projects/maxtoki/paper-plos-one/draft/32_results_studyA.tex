@@ -1,0 +1,124 @@
+\subsection*{Study A: with Claude Opus 5.5 every executor reached the correct verdict with or without the specification, and generic reviews turned three correct verdicts wrong}
+All 40 executor runs and all 120 final deliverables were completed and
+graded. Every executor run reached the key's verdict, in both arms (20 of
+20 with the specification and 20 of 20 without it; risk difference 0,
+Newcombe 95\% interval $-16$ to $+16$ percentage points; Fisher
+$p = 1$; Mantel--Haenszel $p = 1$) (Fig~\ref{fig:studyA}A). After review
+and repair, 40 of 40 deliverables were correct in the checklist arm and 37
+of 40 in the generic-review arm (exact McNemar $p = 0.25$ against the
+checklist; $p = 0.25$ against no review). None of the four primary
+contrasts was significant (Holm-adjusted $p = 1$ for each). The two
+graders agreed on the verdict of all 120 deliverables.
+
+\begin{figure}[H]
+\caption{\textbf{Study A: controlled execution study with Claude Opus~5.5
+as executor, reviewer and repairer.} (A)~Number of the five executor runs
+per task whose final deliverable reached the key's verdict, by executor
+arm (paper: brief, data and source paper; contract: the same plus the
+deployed specification) and by what followed the executor (no review, a
+generic critical review then repair, or a generic-checklist review then
+repair). (B)~Share of each task's known pitfalls handled correctly (mean
+over deliverables; line, 95\% bootstrap interval over executor runs
+pooled over tasks).
+(C)~Review points judged valid or invalid (or unclear) by a grader with
+the key, over the 40 reviews of each style.}
+\label{fig:studyA}
+\end{figure}
+
+The three verdicts that became wrong were all on the cross-model
+alignment task (T4) in the contract arm (where the executor also received
+the deployed specification), after a generic review. In each,
+the reviewer argued that the executor's decision rule was too lenient, or
+that metrics named in the specification (the mean in-sample canonical
+correlation, or the Spearman correlation of pairwise distances) gave a
+weaker result than the executor's chosen metric. The repairing agent
+accepted these points, rewrote its decision rule, and changed the verdict
+from ``aligned with scGPT but clearly less than with Geneformer'' to
+``inconclusive''. The key does not accept ``inconclusive'': every estimate
+is far above chance, and the Geneformer-minus-scGPT difference has an
+interval that excludes zero on every panel. Canonical correlation finds
+pairs of directions, one in each embedding table, along which the genes'
+positions correlate as strongly as possible. When it is fitted and scored
+on the same genes (in-sample), as the reviewers used it, it is high even
+for shuffled genes.
+In the setting these executors used (20 principal components, mean of all
+20 canonical correlations), their own permutation tests put chance at
+about 0.20. The observed values were 0.40 for scGPT and 0.44 for
+Geneformer. This chance level depends on the number of components as well
+as on the number of genes, and the specification does not state it.
+Graders with the key judged 17 of the 22 points in these three reviews
+invalid. The checklist reviews of the same three executor outputs
+did not change the verdict.
+
+The secondary outcomes moved little (Fig~\ref{fig:studyA}B). Executors
+handled most of each task's pitfalls without help (94.5\% on average
+without review). Review and repair raised this slightly: by 2.8
+percentage points with the checklist (95\% bootstrap interval 0.9 to 4.7)
+and 2.0 points with a generic review (0.3 to 3.7); the checklist and the
+generic review did not differ ($+0.8$; $-0.9$ to $+2.5$). Without review,
+executors with the specification handled 2.3 points fewer pitfalls than
+those without it ($-5.4$ to $+0.8$) and reported 9.2 points more key
+numbers within tolerance ($-0.6$ to $+21.3$). These intervals resample
+executor runs pooled over tasks. The pre-registered bootstrap resamples
+runs within each task. It gives the same conclusions for the effects of
+review on pitfalls handled, in percentage points: 1.1 to 4.4 for the
+checklist against no review, 0.5 to 3.4 for a generic review against no
+review, and $-0.9$ to $+2.4$ for the checklist against a generic review.
+It also gives the same conclusions for the effects of review on pitfalls
+handled in the Haiku arm below. But for the two differences between the
+executor arms, its intervals just exclude zero: $-4.4$ to $-0.2$ points
+for pitfalls handled and $+0.6$ to $+18.9$ points for key numbers within
+tolerance. Both
+differences are small, and whether their intervals exclude zero depends on
+how the runs are resampled. Materially false statements were rare (0.13
+per deliverable) and did not differ between conditions.
+
+Most review points were judged invalid by a grader with the key, meaning
+the point was wrong, already handled in the deliverable, or did not
+matter for its results: 61\% of the 281 generic-review points and 70\% of
+the 297 checklist points (208 invalid and 1 unclear)
+(Fig~\ref{fig:studyA}C). Only in the three T4 cases above did acting on
+such points turn a correct verdict into a wrong one. Three other repairs,
+all on T1 in the paper arm (two after a generic review and one after a
+checklist review), changed ``not supported'' to ``inconclusive''. The T1
+key accepts that answer under stated conditions, so all three stayed
+correct.
+
+An executor run took a median of 27~minutes and 27 tool calls; a review
+took a median of about 14~minutes and 16 (checklist) or 18.5 (generic)
+tool calls, and a repair 21 to 25 tool calls.
+All 120 returned analysis scripts ran on the task data and printed their
+results. Six of them were stopped at least once because the shared
+machine was busy: five ran past the 20-minute limit, and two were stopped
+without output (one script had both). Run again with fewer scripts at a
+time, or on their own, all six finished in under 10~minutes. Of the
+11,045 estimates that the deliverables reported, 10,363 (94\%) could be matched by name to a number
+the script printed, and all 10,363 agreed within tolerance. Of the 682
+unmatched estimates, 681 were in T3, whose scripts printed their results
+under other names. For these, the only check left was to look for each
+value among all the numbers a script printed, within the same tolerance,
+and that check says little. In the 21 T3 scripts concerned, 98--100\% of
+the deliverable's own estimates were found this way, but so were
+61--97\% (median 89\%) of the same number of estimates drawn at random
+from deliverables of other tasks (mean of 50 draws per script).
+
+In the exploratory arm with Claude Haiku~4.5 as executor, reviewer and
+repairer (S2~Appendix), executors without review reached the key's verdict
+in 15 of 20 runs with the specification and in 10 of 20 without it
+(difference $+25$ points, Newcombe 95\% interval $-5$ to $+49$; Fisher
+$p = 0.19$); most of the difference came from T1 (3 of 5 against 0 of 5).
+Haiku executors handled far fewer pitfalls than Opus executors (30--36\%
+against 93--96\% without review). A checklist review followed by repair
+raised the share of pitfalls handled by 9.2 percentage points (95\%
+bootstrap interval over executor runs pooled over tasks, 4.9 to 13.6;
+pre-registered interval resampling runs within each task, 5.0 to 13.3).
+It raised it by 6.4 points more than a generic review followed by repair
+(over the 28 runs with both reviews valid: 1.3 to 11.7 pooled over tasks,
+2.1 to 10.4 within tasks). But it did not
+raise the share of correct verdicts. Of the 33 executor runs with a valid
+checklist review, repairs turned 3 of 12 wrong verdicts right and 3 of 21
+right verdicts wrong. Of the 35 executor runs with a valid generic review,
+repairs turned 2 of 13 wrong verdicts right and none of 22 right verdicts
+wrong. Twelve reviews (7 checklist, 5 generic) returned no valid output,
+so 12 of the 120 deliverables are missing.
+

@@ -1,0 +1,57 @@
+\subsection*{Study B: on held-out analyses both review styles find every documented error, and both over-call errors in correct analyses}
+In 132 reviews of the 22 held-out items, every review of a flawed item
+found its documented error, in both arms. This held for all 11 flawed
+items and for 33 of 33 reviews per arm (Wilson 95\% interval over items
+74--100\%; items are the unit because the three reviews of an item are
+not independent). It held whether the error fell inside the
+checklist's patterns (6 items) or outside them (5 items: a circular
+correlation that fails on evenly spread angles, span-filled residue
+labels, an arbitrary sign flip of singular vectors, raw counts fed to an
+encoder that expects binned values, and a row-index join that matched the
+wrong cells). Both graders judged all 66 reviews of flawed items to have
+found the documented error, so they agreed on all 66. Cohen's $\kappa$
+is not defined when every judgment is the same, so we report this raw
+agreement instead.
+
+On the 11 correct (clean) items, most reviews still claimed at least
+one error in a main result that the item's key does not count as an
+error (Fig~\ref{fig:studyB}A). This happened in 79\% of checklist
+reviews (26 of 33; 95\% bootstrap interval over items 58--94\%) and in
+82\% of generic reviews (27 of 33; 61--100\%). The paired difference,
+checklist minus generic, was $-3$ percentage points (95\% bootstrap
+interval over items $-21$ to $+15$; Wilcoxon $p=0.88$). Checklist
+reviews made 45 such claims in all (1.4 per review of a clean item), and
+generic reviews made 43 (1.3 per review). Checklist reviews were longer
+(9.2 against 7.8 findings per review); both arms found about two real
+problems per review beyond the documented error (2.1 in each).
+
+\begin{figure}[H]
+\caption{\textbf{Study B: held-out analyses from other projects.} Every
+review detected the documented error in every flawed item, in both arms
+(33 of 33 each; not plotted). (A)~For each of the 11 correct (clean)
+items, the number of its three reviews per arm that claimed at least one
+error in a main result that the item's key does not count as an error.
+(B)~Post-hoc classification of the 82 such claims that the graders
+marked as false alarms, on clean and flawed items, by arm. The 23
+further claims that the verifier ruled false alarms after a grader
+dispute are not included.}
+\label{fig:studyB}
+\end{figure}
+
+Across clean and flawed items, the reviews made 105 such claims (88 on
+clean items, 17 on flawed items). The graders marked 82 of them as false
+alarms (73 on clean items, 9 on flawed items). The other 23 (15 on clean
+items, 8 on flawed items) were findings that a grader marked as disputed
+and the verifier agent then ruled false alarms. After the results were
+known, we classified the 82 claims that the graders marked. This step was
+not pre-registered. One agent labelled each claim, with no second rater.
+Most of the 82 were accurate observations whose severity was overstated
+(Fig~\ref{fig:studyB}B): 59 were correct but did not change any stated
+conclusion (for example, that an input-label overlap weakened, but did
+not overturn, an interpretation), 17 were correct and already stated in
+the analysis's own summary or README (for example, that a replication in
+a second cell line rested mostly on one transcription factor), 3 were
+factually wrong and 3 were real problems that the key had missed. The
+pattern was the same in both arms. The 23 claims ruled by the verifier
+were not classified.
+

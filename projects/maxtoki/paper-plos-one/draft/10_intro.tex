@@ -1,0 +1,87 @@
+\section*{Introduction}
+
+Single-cell foundation models (\scfm{}s) such as
+scGPT~\cite{cui2024scgpt}, Geneformer~\cite{theodoris2023geneformer},
+scFoundation~\cite{hao2024scfoundation} and
+MaxToki~\cite{maxtoki2026} are trained on millions of single-cell
+transcriptomes and are reused for cell-type annotation, gene-network
+inference and in-silico perturbation. Whether their internal
+representations reflect regulatory biology, or mainly re-organise the
+co-expression already present in the training data, cannot be settled by
+benchmark accuracy
+alone~\cite{kedzierska2023assessing,liu2023evaluating,wenteler2024perteval}.
+Mechanistic interpretability asks this question directly: it studies what
+a trained model's internal components represent and how they combine,
+using probes, sparse autoencoders and causal
+interventions~\cite{bricken2023monosemanticity,conmy2023acdc,wang2023ioi,sharkey2025open}.
+
+Such analyses are long chains of code, statistics and interpretation, and
+each link can fail. A null model can fail to randomise; an intervention
+can edit the wrong tensor; a summary can describe a number as something
+it is not. Large-language-model (LLM) agents can now carry out chains of
+this length with little human
+input~\cite{lu2024aiscientist,boiko2023autonomous,mbran2024chemcrow,yang2024sweagent,chan2024mlebench},
+which makes the question of how to check their work practical. Agent
+benchmarks for data-driven science and for reproducing published
+analyses~\cite{chen2024scienceagentbench,siegel2024corebench,starace2025paperbench}
+show that agents often produce plausible results that do not hold up on
+inspection. For interpretability of biological models, a wrong result can
+be confidently stated, internally consistent and hard for a reader to
+detect.
+
+This paper evaluates one answer to that problem. The framework has two
+parts. First, each interpretability method is written as a markdown
+\emph{specification} that an agent follows when running the analysis.
+Each specification is written to a ten-section template, with methods,
+parameters, validation criteria and known pitfalls. Seven of the eight
+deployed specifications lacked the template's code-references section.
+Second, the agent's outputs are checked with an \emph{audit checklist}
+of ten methodological objections that peer reviewers raised repeatedly
+on the author's earlier interpretability studies. We
+deployed the framework on MaxToki-217M, a recently released
+trajectory-aware \scfm{}~\cite{maxtoki2026}. An agent ran eight
+interpretability pipelines over several working sessions. On the last
+day, one of these sessions audited the outputs of all eight with the
+checklist.
+
+We then asked how reliable the resulting outputs were, and what the two
+parts of the framework contribute. We did this in four ways.
+(1)~\emph{Independent verification}: every number in the run summaries was searched for in
+the stored run outputs by code, key statistics were re-derived, and the
+intervention code was unit-tested; every error found was recorded in an
+error ledger with the evidence that confirms it and with who or what found
+it first. (2)~A \emph{blind re-audit} (Study~C): fresh agents audited a
+copy of the project as it stood before its audit, under three
+instructions (the checklist as deployed, a generic version of the
+checklist, or a generic critical review of equal budget), and their
+findings were scored against the ledger. (3)~A \emph{controlled
+execution study} (Study~A): agents performed four analysis tasks built
+from the deployment's data, with or without the specification. Each
+output was kept as it was, and was also given a generic review and,
+separately, a checklist review. After each review, a fresh agent repaired
+the output, with the same repair instruction in both review arms. Graders
+compared the final conclusions with fixed answer keys. They did not know
+the review arm, but they could tell whether the agent had the
+specification. (4)~A \emph{held-out benchmark} (Study~B): reviewers with or
+without the checklist examined analyses from other projects and other
+model families, each in a version with one documented error and in a
+corrected version, so that missed errors and false alarms could both be
+measured. Finally, we re-ran the main MaxToki-217M analyses with corrected code
+and inputs and report what holds for that model. Some deployed analyses,
+such as the topology screen and the ageing probe, were not re-run and are
+not reported (Results).
+
+\subsubsection*{What this study adds, and what it inherits}
+The interpretability methods were developed in the author's earlier
+studies of scGPT and
+Geneformer~\cite{anon2026attention,anon2026spectral,anon2026topology,anon2026sae,anon2026circuits,anon2026manifold,anon2026exhaustive,anon2026ageing};
+MaxToki-217M, the datasets and the agent models are third-party
+resources. What was developed for this study is the framework itself (the
+specifications and the checklist), its deployment on MaxToki-217M, the
+verification and error ledger, the deterministic checks, the three
+controlled studies and the corrected MaxToki-217M analyses
+(Table~\ref{tab:inherited}). The three studies evaluate the framework;
+the MaxToki-217M results are a case study and are stated for that model
+only.
+
+% TABLE: inherited (tab:inherited) is inserted here.

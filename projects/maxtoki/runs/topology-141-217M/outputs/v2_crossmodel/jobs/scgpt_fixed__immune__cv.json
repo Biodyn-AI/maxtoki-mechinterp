@@ -1,0 +1,22 @@
+{
+  "seed_base": 20262105,
+  "n_repeats": 10,
+  "n_folds": 5,
+  "method": "5-fold split of genes; PCA-30 of each model, CCA(10, max_iter=200) and Procrustes fitted on training genes only; canonical r = correlation of held-out canonical scores (mean of 10, averaged over folds); top-1 = held-out gene's nearest neighbour among ALL n genes of the other model; values are means over repeats, range = min-max over repeats",
+  "cv_cca_mean_r": 0.48138721552153463,
+  "cv_cca_mean_r_range": [
+    0.4718180092936969,
+    0.4922681246421717
+  ],
+  "cv_cca_first_r": 0.7672514346210402,
+  "cv_top1": 0.09085714285714287,
+  "cv_top1_range": [
+    0.06285714285714286,
+    0.10571428571428572
+  ],
+  "top1_uniform_chance_1_over_n": 0.002857142857142857,
+  "wall_seconds": 1.8745849132537842,
+  "model": "scgpt_fixed",
+  "domain": "immune",
+  "part": "cv"
+}

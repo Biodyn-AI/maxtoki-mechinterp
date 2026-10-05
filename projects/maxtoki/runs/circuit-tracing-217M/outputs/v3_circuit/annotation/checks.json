@@ -1,0 +1,149 @@
+{
+  "enrichment_code_vs_deployed_csv": {
+    "rows": [
+      {
+        "layer": 0,
+        "n_deployed": 23074,
+        "n_recomputed": 23074,
+        "same_rows_same_order": true,
+        "same_overlap_K_n_N": true,
+        "max_abs_diff_p_raw": 9.8879238130678e-17,
+        "max_abs_diff_q_bh": 9.917739372811152e-17,
+        "max_rel_diff_p_raw": 8.287123385635866e-13
+      },
+      {
+        "layer": 1,
+        "n_deployed": 30031,
+        "n_recomputed": 30031,
+        "same_rows_same_order": true,
+        "same_overlap_K_n_N": true,
+        "max_abs_diff_p_raw": 9.8879238130678e-17,
+        "max_abs_diff_q_bh": 9.8879238130678e-17,
+        "max_rel_diff_p_raw": 8.287123385635866e-13
+      },
+      {
+        "layer": 2,
+        "n_deployed": 29566,
+        "n_recomputed": 29566,
+        "same_rows_same_order": true,
+        "same_overlap_K_n_N": true,
+        "max_abs_diff_p_raw": 9.8879238130678e-17,
+        "max_abs_diff_q_bh": 9.974659986866641e-17,
+        "max_rel_diff_p_raw": 8.287123385635866e-13
+      },
+      {
+        "layer": 3,
+        "n_deployed": 28778,
+        "n_recomputed": 28778,
+        "same_rows_same_order": true,
+        "same_overlap_K_n_N": true,
+        "max_abs_diff_p_raw": 9.8879238130678e-17,
+        "max_abs_diff_q_bh": 9.93129189996722e-17,
+        "max_rel_diff_p_raw": 8.287123385635866e-13
+      },
+      {
+        "layer": 4,
+        "n_deployed": 27029,
+        "n_recomputed": 27029,
+        "same_rows_same_order": true,
+        "same_overlap_K_n_N": true,
+        "max_abs_diff_p_raw": 9.974659986866641e-17,
+        "max_abs_diff_q_bh": 9.84455572616838e-17,
+        "max_rel_diff_p_raw": 8.287123385635866e-13
+      },
+      {
+        "layer": 5,
+        "n_deployed": 27661,
+        "n_recomputed": 27661,
+        "same_rows_same_order": true,
+        "same_overlap_K_n_N": true,
+        "max_abs_diff_p_raw": 9.952975943416931e-17,
+        "max_abs_diff_q_bh": 9.80118763926896e-17,
+        "max_rel_diff_p_raw": 8.287123385635866e-13
+      },
+      {
+        "layer": 6,
+        "n_deployed": 29518,
+        "n_recomputed": 29518,
+        "same_rows_same_order": true,
+        "same_overlap_K_n_N": true,
+        "max_abs_diff_p_raw": 9.952975943416931e-17,
+        "max_abs_diff_q_bh": 9.8879238130678e-17,
+        "max_rel_diff_p_raw": 8.287123385635866e-13
+      },
+      {
+        "layer": 7,
+        "n_deployed": 32092,
+        "n_recomputed": 32092,
+        "same_rows_same_order": true,
+        "same_overlap_K_n_N": true,
+        "max_abs_diff_p_raw": 9.8879238130678e-17,
+        "max_abs_diff_q_bh": 9.93129189996722e-17,
+        "max_rel_diff_p_raw": 8.505888270515542e-13
+      },
+      {
+        "layer": 8,
+        "n_deployed": 32339,
+        "n_recomputed": 32339,
+        "same_rows_same_order": true,
+        "same_overlap_K_n_N": true,
+        "max_abs_diff_p_raw": 9.8879238130678e-17,
+        "max_abs_diff_q_bh": 9.8879238130678e-17,
+        "max_rel_diff_p_raw": 8.287123385635866e-13
+      },
+      {
+        "layer": 9,
+        "n_deployed": 28938,
+        "n_recomputed": 28938,
+        "same_rows_same_order": true,
+        "same_overlap_K_n_N": true,
+        "max_abs_diff_p_raw": 9.8879238130678e-17,
+        "max_abs_diff_q_bh": 9.71445146547012e-17,
+        "max_rel_diff_p_raw": 8.287123385635866e-13
+      },
+      {
+        "layer": 10,
+        "n_deployed": 23838,
+        "n_recomputed": 23838,
+        "same_rows_same_order": true,
+        "same_overlap_K_n_N": true,
+        "max_abs_diff_p_raw": 9.8879238130678e-17,
+        "max_abs_diff_q_bh": 9.71445146547012e-17,
+        "max_rel_diff_p_raw": 8.287123385635866e-13
+      },
+      {
+        "layer": 11,
+        "n_deployed": 20759,
+        "n_recomputed": 20759,
+        "same_rows_same_order": true,
+        "same_overlap_K_n_N": true,
+        "max_abs_diff_p_raw": 9.952975943416931e-17,
+        "max_abs_diff_q_bh": 9.8879238130678e-17,
+        "max_rel_diff_p_raw": 8.287123385635866e-13
+      }
+    ],
+    "pass_": true
+  },
+  "selection_code_vs_deployed_features": {
+    "per_layer": {
+      "0": true,
+      "3": true,
+      "6": true,
+      "9": true
+    },
+    "pass_": true
+  },
+  "layer5_catalog_vs_v3_2": {
+    "n_features_mine": 4928,
+    "n_features_v3_2": 4928,
+    "n_identical_ordered_lists": 4928,
+    "pass_": true
+  },
+  "v3_vs_deployed_feature_ids_same_number": {
+    "0": 16,
+    "3": 2,
+    "6": 0,
+    "9": 1
+  },
+  "all_pass": true
+}

@@ -1,0 +1,53 @@
+======================================================================
+PHASE 11 — leave-one-factor-out ablation on rank-64 SVD
+======================================================================
+  using compact-V1 head L10H6
+  SVD: |S|=154, top-64 factors retained
+
+[1] Training fixed Stage-2 LET head on rank-64 intact features...
+  [rank64_fixed] trained 1500 epochs in 4.1s
+
+[2] Training fixed Stage-3 probes on z_intact...
+
+[3] Intact baseline (rank-64, no factors removed):
+  branch_balanced_acc             0.9728
+  branch_macro_f1                 0.9806
+  stage_balanced_acc              0.9114
+  stage_macro_f1                  0.9292
+  cd_auroc                        0.9888
+  mm_auroc                        0.9863
+  pseudotime_spearman             0.5099
+
+[4] Leave-one-factor-out ablation (64 factors)...
+
+[5] Top-10 factors by pooled drop:
+ factor  singular_value  pooled_drop  branch_balanced_acc  stage_balanced_acc  cd_auroc  mm_auroc  pseudotime_spearman
+      1        1.116870     1.802418             0.626863            0.438031  0.989853  0.980848             0.537822
+      4        1.040974     1.551532             0.699928            0.544169  0.988331  0.975376             0.319582
+     11        1.004081     1.315741             0.738745            0.675259  0.821410  0.948700             0.534134
+      9        1.014384     1.304341             0.751042            0.676147  0.918823  0.987688             0.472439
+     21        0.954297     1.261132             0.751093            0.558967  0.971588  0.948016             0.463809
+     18        0.967844     1.118932             0.726937            0.697812  0.983765  0.985636             0.324365
+     22        0.951742     1.075081             0.742779            0.776778  0.987823  0.967168             0.337709
+      7        1.023827     0.993154             0.857125            0.627231  0.965753  0.926813             0.439855
+     63        0.826335     0.961638             0.797172            0.730909  0.964992  0.986320             0.305839
+     41        0.886950     0.920326             0.782136            0.781157  0.983257  0.974692             0.304238
+
+[6] Core-sufficiency test: only factors [1, 4, 11, 9] retained
+  core endpoints:
+    branch_balanced_acc             0.1234  (intact 0.9728)
+    branch_macro_f1                 0.0780  (intact 0.9806)
+    stage_balanced_acc              0.0748  (intact 0.9114)
+    stage_macro_f1                  0.0302  (intact 0.9292)
+    cd_auroc                        0.5068  (intact 0.9888)
+    mm_auroc                        0.7558  (intact 0.9863)
+    pseudotime_spearman             0.0449  (intact 0.5099)
+
+[7] Saving gene loadings for core factors (top 60 read/write per factor)...
+
+[8] Summary:
+  factors needed for 50%/66%/80% pooled impact: 16 / 25 / 36
+  top-4 explain 18.3% of pooled impact
+  core ([1, 4, 11, 9]) sufficiency: branch 0.123 (intact 0.973)
+
+Phase 11 complete in 6.7s

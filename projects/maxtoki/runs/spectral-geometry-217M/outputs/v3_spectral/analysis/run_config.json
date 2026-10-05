@@ -1,0 +1,107 @@
+{
+  "metrics": {
+    "time": "2026-10-02T21:08:30",
+    "code": {
+      "script": "<REPO_ROOT>/projects/maxtoki/runs/spectral-geometry-217M/scripts/v3_spectral.py",
+      "script_sha256": "1c41677de72c0dff769c3c4322ef29e99047df50233cb84ecfeb44dfdd30f1da",
+      "inputs_v3_sha256": "019e38346748c027a55ce3d32c33c9096f9e60b9434e51e51b1d836a6bfc3707",
+      "hooks_v2_sha256": "1ba6fda5ad761b1f82041a7b1397fa9332fa7438e13db955a00d751c4b440f54",
+      "maxtoki_adapter_sha256": "cab725dfc391ec74d6b9c2930ffd87b53badff47f5f04e93d29977b7a771540a",
+      "deployed_phase0_extract_sha256": "397294259b3601058a27b9f284184688713cb45c6e36dce7af0087e230f6a4fd",
+      "deployed_phase1_svd_sha256": "2aaba31931a2ae55d1958811506d65b0ad76ec9d1986824fc766766e71c2c1ef",
+      "deployed_phase8_stability_sha256": "e7749d929b9103f1a1ff0af1959dba9059bac9417e07aaeccfc224d80bfd7299"
+    },
+    "labels_done": [
+      "deployed_A_phase0",
+      "deployed_seed43_phase8",
+      "deployed_seed44_phase8",
+      "v3_rand0_A_panelD_all",
+      "v3_rand0_A_panelD_umi",
+      "v3_rand0_A_panelS_all",
+      "v3_rand1_A_panelD_all",
+      "v3_rand1_A_panelD_umi",
+      "v3_rand1_A_panelS_all",
+      "v3_rand2_A_panelD_all",
+      "v3_rand2_A_panelD_umi",
+      "v3_rand2_A_panelS_all",
+      "v3_trained_A_panelD_all",
+      "v3_trained_A_panelD_umi",
+      "v3_trained_A_panelS_all",
+      "v3_trained_B_panelD_all",
+      "v3_trained_B_panelD_umi",
+      "v3_trained_C_panelD_all",
+      "v3_trained_C_panelD_umi"
+    ]
+  },
+  "cka": {
+    "time": "2026-10-02T21:16:38",
+    "code": {
+      "script": "<REPO_ROOT>/projects/maxtoki/runs/spectral-geometry-217M/scripts/v3_spectral.py",
+      "script_sha256": "1c41677de72c0dff769c3c4322ef29e99047df50233cb84ecfeb44dfdd30f1da",
+      "inputs_v3_sha256": "019e38346748c027a55ce3d32c33c9096f9e60b9434e51e51b1d836a6bfc3707",
+      "hooks_v2_sha256": "1ba6fda5ad761b1f82041a7b1397fa9332fa7438e13db955a00d751c4b440f54",
+      "maxtoki_adapter_sha256": "cab725dfc391ec74d6b9c2930ffd87b53badff47f5f04e93d29977b7a771540a",
+      "deployed_phase0_extract_sha256": "397294259b3601058a27b9f284184688713cb45c6e36dce7af0087e230f6a4fd",
+      "deployed_phase1_svd_sha256": "2aaba31931a2ae55d1958811506d65b0ad76ec9d1986824fc766766e71c2c1ef",
+      "deployed_phase8_stability_sha256": "e7749d929b9103f1a1ff0af1959dba9059bac9417e07aaeccfc224d80bfd7299"
+    },
+    "boot_seed": 20261006,
+    "n_boot_gene": 500,
+    "n_boot_cell": 200
+  },
+  "cka_half": {
+    "time": "2026-10-02T20:25:25",
+    "code": {
+      "script": "<REPO_ROOT>/projects/maxtoki/runs/spectral-geometry-217M/scripts/v3_spectral.py",
+      "script_sha256": "1c41677de72c0dff769c3c4322ef29e99047df50233cb84ecfeb44dfdd30f1da",
+      "inputs_v3_sha256": "019e38346748c027a55ce3d32c33c9096f9e60b9434e51e51b1d836a6bfc3707",
+      "hooks_v2_sha256": "1ba6fda5ad761b1f82041a7b1397fa9332fa7438e13db955a00d751c4b440f54",
+      "maxtoki_adapter_sha256": "cab725dfc391ec74d6b9c2930ffd87b53badff47f5f04e93d29977b7a771540a",
+      "deployed_phase0_extract_sha256": "397294259b3601058a27b9f284184688713cb45c6e36dce7af0087e230f6a4fd",
+      "deployed_phase1_svd_sha256": "2aaba31931a2ae55d1958811506d65b0ad76ec9d1986824fc766766e71c2c1ef",
+      "deployed_phase8_stability_sha256": "e7749d929b9103f1a1ff0af1959dba9059bac9417e07aaeccfc224d80bfd7299"
+    },
+    "boot_seed": 20261506,
+    "n_boot": 200
+  },
+  "intervals_er": {
+    "time": "2026-10-02T21:20:46",
+    "script": "<REPO_ROOT>/projects/maxtoki/runs/spectral-geometry-217M/scripts/v3_spectral_intervals.py",
+    "script_sha256": "1092e349f407808c4910bcab53d246a1b65ab7616a5df772b24576b097901065",
+    "jk_seed": 20261007,
+    "n_gene_groups": 30,
+    "wall_s": 225.7
+  },
+  "intervals_cka": {
+    "time": "2026-10-02T21:23:06",
+    "script": "<REPO_ROOT>/projects/maxtoki/runs/spectral-geometry-217M/scripts/v3_spectral_intervals.py",
+    "script_sha256": "1092e349f407808c4910bcab53d246a1b65ab7616a5df772b24576b097901065",
+    "jk_seed": 20261007,
+    "n_gene_groups": 30,
+    "wall_s": 124.1
+  },
+  "intervals_half": {
+    "time": "2026-10-02T21:26:12",
+    "script": "<REPO_ROOT>/projects/maxtoki/runs/spectral-geometry-217M/scripts/v3_spectral_intervals.py",
+    "script_sha256": "1092e349f407808c4910bcab53d246a1b65ab7616a5df772b24576b097901065",
+    "jk_seed": 20261007,
+    "n_gene_groups": 30,
+    "wall_s": 172.9
+  },
+  "intervals_tables": {
+    "time": "2026-10-02T21:33:38",
+    "script": "<REPO_ROOT>/projects/maxtoki/runs/spectral-geometry-217M/scripts/v3_spectral_intervals.py",
+    "script_sha256": "986fb16a30ecce8cbde219f5bf3e95d857690d8e73a606af224affb1092153c9",
+    "jk_seed": 20261007,
+    "n_gene_groups": 30,
+    "wall_s": 0.1
+  },
+  "intervals_index": {
+    "time": "2026-10-02T21:33:52",
+    "script": "<REPO_ROOT>/projects/maxtoki/runs/spectral-geometry-217M/scripts/v3_spectral_intervals.py",
+    "script_sha256": "986fb16a30ecce8cbde219f5bf3e95d857690d8e73a606af224affb1092153c9",
+    "jk_seed": 20261007,
+    "n_gene_groups": 30,
+    "wall_s": 0.0
+  }
+}

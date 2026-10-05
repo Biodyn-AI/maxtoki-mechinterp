@@ -1,0 +1,51 @@
+======================================================================
+PHASE 6 — Stage 3 task probes
+======================================================================
+  [anchor_head] trained 1500 epochs in 13.2s
+  z_final shape: (290, 10)
+  anchor counts:
+    branches available: 12; total labelled: 290
+    T lineage subset: 101 (CD4 73, CD8 27)
+    Mono/Macro subset: 77 (mono 34, macro 43)
+
+[1] Branch / Stage classification (multi-class)...
+<CONDA_ROOT>/lib/python3.11/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<CONDA_ROOT>/lib/python3.11/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<CONDA_ROOT>/lib/python3.11/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<CONDA_ROOT>/lib/python3.11/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+  branch_classification           bal_acc=0.906±0.062  macro_f1=0.856
+<CONDA_ROOT>/lib/python3.11/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<CONDA_ROOT>/lib/python3.11/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<CONDA_ROOT>/lib/python3.11/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<CONDA_ROOT>/lib/python3.11/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<CONDA_ROOT>/lib/python3.11/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<CONDA_ROOT>/lib/python3.11/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<CONDA_ROOT>/lib/python3.11/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<CONDA_ROOT>/lib/python3.11/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<CONDA_ROOT>/lib/python3.11/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+  stage_classification            bal_acc=0.884±0.070  macro_f1=0.817
+
+[2] CD4 vs CD8 (T-lineage subset)...
+  cd4_cd8                         bal_acc=1.000±0.000  macro_f1=1.000  auroc=1.000
+
+[3] Mono vs Macro...
+  mono_macro                      bal_acc=1.000±0.000  macro_f1=1.000  auroc=1.000
+
+[4] Pseudotime regression (stage depth on H65 DAG)...
+  pseudotime_spearman             ρ=0.567±0.109
+
+Phase 6 complete in 22.3s
+Saved: reports/probe_metrics_anchor_head.json

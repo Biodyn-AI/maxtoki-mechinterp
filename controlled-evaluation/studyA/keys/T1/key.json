@@ -1,0 +1,246 @@
+{
+ "task": "T1",
+ "question": "Do MaxToki-217M's attention maps encode regulator-to-target relationships? Use the TRRUST curated network as ground truth.",
+ "key_verdict": "not supported",
+ "key_conclusion": "Layer-8 attention ranks TRRUST targets above chance (pooled AUROC 0.605, TF-bootstrap 95% CI 0.549-0.655; 16 TFs, 138 positive pairs), but gene-level properties of the candidate gene do better with no model at all (variance alone 0.686; a mean/variance/dropout model 0.749). A degree-preserving null that keeps each TF's and each target's number of edges already gives 0.574, so about 70% of the excess over 0.5 is target popularity; the rest is small and borderline (z = 1.8, one-sided p = 0.046; per-TF statistic z = 0.75), disappears after OLS residualisation on gene features (0.492), and is matched by model-free pair scores from the same cells (expression proximity z = 1.8; co-detection lift z = 3.1). There is no evidence that attention encodes regulator-to-target relationships beyond gene-level properties and co-expression.",
+ "acceptable_alternatives": [
+  {
+   "verdict": "inconclusive",
+   "counts_as_correct_only_if": "the report (1) shows that attention does not beat gene-level baselines, or that most of its above-chance AUROC is explained by gene-level properties or a degree-preserving null, AND (2) does not present the raw above-chance AUROC or a label-permutation p-value as evidence for encoding, AND (3) bases the hedge on the small, borderline or choice-dependent pair-specific excess (16 TFs; z about 1.8 for the provided score, up to about 3 for symmetrised attention) or on not being able to separate it from co-expression with these data.",
+   "reason": "Some pair-specific excess over target popularity exists in some score variants (symmetrised attention: degree-null z = 3.3; OLS-residualised 0.551, CI 0.489-0.611), and the package has no expression matrix to compute co-expression directly. An analyst who controls for gene-level properties and degree but declines to call this a clear negative has reached the same scientific picture. 'supported' is never correct for this task."
+  }
+ ],
+ "key_numbers": [
+  {
+   "name": "n_trrust_rows",
+   "value": 192,
+   "tolerance": 0,
+   "definition": "Rows in data/trrust_edges_in_gene_set.tsv."
+  },
+  {
+   "name": "n_unique_non_self_edges",
+   "value": 173,
+   "tolerance": 0,
+   "definition": "Unique (tf_index, target_index) pairs with tf != target (175 unique pairs, of which 2 are self-pairs)."
+  },
+  {
+   "name": "n_tfs_evaluated",
+   "value": 16,
+   "tolerance": 0,
+   "definition": "TFs with >= 3 unique non-self targets among the 1,500 genes."
+  },
+  {
+   "name": "n_positive_pairs",
+   "value": 138,
+   "tolerance": 0,
+   "definition": "Evaluated pairs: TFs with >= 3 unique non-self TRRUST targets among the 1,500 genes (16 TFs); for each TF the candidates are the other 1,499 genes; positive = TRRUST lists TF -> candidate (duplicate rows merged, self-pairs dropped); all (TF, candidate) pairs pooled into one AUROC."
+  },
+  {
+   "name": "n_negative_pairs",
+   "value": 23846,
+   "tolerance": 0,
+   "definition": "Evaluated pairs: TFs with >= 3 unique non-self TRRUST targets among the 1,500 genes (16 TFs); for each TF the candidates are the other 1,499 genes; positive = TRRUST lists TF -> candidate (duplicate rows merged, self-pairs dropped); all (TF, candidate) pairs pooled into one AUROC. 16 x 1,499 - 138."
+  },
+  {
+   "name": "attention_auroc_pooled",
+   "value": 0.60451,
+   "tolerance": 0.003,
+   "definition": "Evaluated pairs: TFs with >= 3 unique non-self TRRUST targets among the 1,500 genes (16 TFs); for each TF the candidates are the other 1,499 genes; positive = TRRUST lists TF -> candidate (duplicate rows merged, self-pairs dropped); all (TF, candidate) pairs pooled into one AUROC. Score = attention[TF row (query), candidate column (key)], diagonal never scored."
+  },
+  {
+   "name": "attention_auroc_pooled_ci_low",
+   "value": 0.54869,
+   "tolerance": 0.015,
+   "definition": "2.5th percentile, percentile bootstrap over the 16 TFs (a TF drawn k times counts k times), 2,000 resamples."
+  },
+  {
+   "name": "attention_auroc_pooled_ci_high",
+   "value": 0.65468,
+   "tolerance": 0.015,
+   "definition": "97.5th percentile of the same TF bootstrap."
+  },
+  {
+   "name": "attention_auroc_per_tf_mean",
+   "value": 0.58667,
+   "tolerance": 0.003,
+   "definition": "Mean over the 16 TFs of the per-TF AUROC (same score and pairs)."
+  },
+  {
+   "name": "attention_auroc_tf_as_key",
+   "value": 0.54629,
+   "tolerance": 0.003,
+   "definition": "Evaluated pairs: TFs with >= 3 unique non-self TRRUST targets among the 1,500 genes (16 TFs); for each TF the candidates are the other 1,499 genes; positive = TRRUST lists TF -> candidate (duplicate rows merged, self-pairs dropped); all (TF, candidate) pairs pooled into one AUROC. Score = attention[candidate (query), TF (key)]."
+  },
+  {
+   "name": "attention_auroc_symmetrised_mean",
+   "value": 0.63825,
+   "tolerance": 0.003,
+   "definition": "Evaluated pairs: TFs with >= 3 unique non-self TRRUST targets among the 1,500 genes (16 TFs); for each TF the candidates are the other 1,499 genes; positive = TRRUST lists TF -> candidate (duplicate rows merged, self-pairs dropped); all (TF, candidate) pairs pooled into one AUROC. Score = (attention[TF, cand] + attention[cand, TF]) / 2."
+  },
+  {
+   "name": "variance_auroc_pooled",
+   "value": 0.68638,
+   "tolerance": 0.003,
+   "definition": "Evaluated pairs: TFs with >= 3 unique non-self TRRUST targets among the 1,500 genes (16 TFs); for each TF the candidates are the other 1,499 genes; positive = TRRUST lists TF -> candidate (duplicate rows merged, self-pairs dropped); all (TF, candidate) pairs pooled into one AUROC. Score = candidate gene's variance (gene_stats_control_cells.tsv); no model."
+  },
+  {
+   "name": "gene_model_auroc_pooled",
+   "value": 0.74941,
+   "tolerance": 0.02,
+   "definition": "Evaluated pairs: TFs with >= 3 unique non-self TRRUST targets among the 1,500 genes (16 TFs); for each TF the candidates are the other 1,499 genes; positive = TRRUST lists TF -> candidate (duplicate rows merged, self-pairs dropped); all (TF, candidate) pairs pooled into one AUROC. Logistic regression on candidate mean, variance, dropout (standardised, balanced class weights), 5-fold GroupKFold by TF, pooled out-of-fold predictions. Other gene-only models give about 0.64-0.82, depending on the model, its settings and the grouping of folds (boosted trees: 0.80-0.82 with folds by TF, 0.64-0.68 with folds by gene)."
+  },
+  {
+   "name": "gap_variance_minus_attention",
+   "value": 0.08186,
+   "tolerance": 0.005,
+   "definition": "variance AUROC - attention AUROC (pooled)."
+  },
+  {
+   "name": "gap_variance_minus_attention_ci_low",
+   "value": 0.0281,
+   "tolerance": 0.02,
+   "definition": "TF bootstrap, 2,000 resamples."
+  },
+  {
+   "name": "gap_gene_model_minus_attention",
+   "value": 0.14489,
+   "tolerance": 0.02,
+   "definition": "gene-model AUROC - attention AUROC (pooled); CI 0.055-0.238 by TF bootstrap."
+  },
+  {
+   "name": "degree_null_mean",
+   "value": 0.57394,
+   "tolerance": 0.006,
+   "definition": "Mean pooled attention AUROC over networks that keep every TF's and every gene's number of edges (Curveball or checkerboard swaps; (TF, own gene) never an edge)."
+  },
+  {
+   "name": "degree_null_sd",
+   "value": 0.01682,
+   "tolerance": 0.004,
+   "definition": "SD of the same null."
+  },
+  {
+   "name": "degree_null_z",
+   "value": 1.81737,
+   "tolerance": 0.35,
+   "definition": "(observed - null mean) / null SD, pooled statistic."
+  },
+  {
+   "name": "degree_null_p_one_sided",
+   "value": 0.046,
+   "tolerance": 0.025,
+   "definition": "(1 + #null >= observed) / (1 + n draws)."
+  },
+  {
+   "name": "degree_null_z_per_tf_mean",
+   "value": 0.74958,
+   "tolerance": 0.4,
+   "definition": "Same null, statistic = mean of per-TF AUROCs."
+  },
+  {
+   "name": "label_permutation_null_z",
+   "value": 4.11979,
+   "tolerance": 0.5,
+   "definition": "z against a null that shuffles the 138 positive labels uniformly over all 23,984 pairs (null mean 0.50, SD 0.025). This null keeps neither TF nor target degree."
+  },
+  {
+   "name": "expr_proximity_degree_null_z",
+   "value": 1.84677,
+   "tolerance": 0.4,
+   "definition": "Model-free score -|mean(TF) - mean(candidate)| scored on the same pairs, against the same degree-preserving null (pooled)."
+  },
+  {
+   "name": "co_detection_lift_degree_null_z",
+   "value": 3.09201,
+   "tolerance": 0.5,
+   "definition": "Model-free score pair_cell_counts[TF, cand] * 2000 / (n_TF * n_cand), with n = diagonal of pair_cell_counts; same degree-preserving null (pooled; per-TF z = 3.0)."
+  },
+  {
+   "name": "symmetrised_attention_degree_null_z",
+   "value": 3.26273,
+   "tolerance": 0.5,
+   "definition": "Symmetrised attention (mean of both directions), same degree-preserving null (pooled; per-TF z = 2.3)."
+  },
+  {
+   "name": "residualised_attention_auroc_ols",
+   "value": 0.49219,
+   "tolerance": 0.015,
+   "definition": "Attention of every ordered pair predicted by OLS from source mean, source variance, target mean, target variance, target dropout; 5-fold cross-fitting over pairs; residual scored on the evaluated pairs. TF-bootstrap CI 0.404-0.568."
+  },
+  {
+   "name": "residualised_attention_auroc_hgb",
+   "value": 0.55857,
+   "tolerance": 0.03,
+   "definition": "Same, with gradient-boosted trees on mean, variance, dropout of both genes. TF-bootstrap CI 0.488-0.617. Depends on the residualiser."
+  },
+  {
+   "name": "incremental_auroc_logreg",
+   "value": 0.01284,
+   "tolerance": 0.008,
+   "definition": "Pooled out-of-fold AUROC of logistic(gene features + attention) minus logistic(gene features), GroupKFold by TF. CI 0.0005-0.025 (TF bootstrap, models fixed); by-gene grouping 0.009 [-0.002, 0.019]; with a boosted-tree gene model -0.015 [-0.035, 0.003] (folds by TF). The boosted-tree result moves with settings and seed: -0.015 to -0.037 with folds by TF; -0.013 to +0.046 with folds by gene, where the boosted gene-only model is weak (0.64-0.68) and gene + attention (0.66-0.71) stays below the logistic gene-only model (0.75). Judge incremental-value claims against the strongest gene-only model."
+  },
+  {
+   "name": "attention_auroc_two_way_bootstrap_ci_low",
+   "value": 0.50908,
+   "tolerance": 0.02,
+   "definition": "Lower 95% bound when TFs and candidate genes are both resampled (pair weight = TF count x gene count). Upper bound 0.699."
+  }
+ ],
+ "traps": [
+  {
+   "id": "gene_level_confound",
+   "description": "TRRUST targets in this gene set are genes with particular gene-level properties (high variance, many listing TFs), and attention to a key gene depends strongly on gene-level properties (its expression rank sets its position in a causal, expression-ordered sequence). A raw AUROC above 0.5 therefore does not show pair-specific knowledge.",
+   "correct_handling": "Compares attention with gene-level scores on the same pairs (candidate variance 0.686; mean/variance/dropout model about 0.75) and/or residualises attention on gene features (OLS 0.492) or tests incremental value over gene features; reports that attention does not beat them.",
+   "mishandling": "Reports attention AUROC 0.605 (CI excluding 0.5) as evidence that attention encodes regulatory relationships, with no gene-level comparison, or mentions gene-level effects only as a limitation without testing them."
+  },
+  {
+   "id": "degree_preserving_null",
+   "description": "The 138 positives fall on 87 distinct target genes and 16 TFs with 4-21 targets each. Any score that favours popular target genes beats 0.5. The right null keeps each TF's and each target's number of edges, and it must actually rewire the network. The original deployment's 'degree-preserving' null left the evaluated network unchanged in 37 of 50 draws and reported a meaningless z of about 0.",
+   "correct_handling": "Uses a degree-preserving null (Curveball or checkerboard swaps, or an equivalent stratified permutation that keeps target popularity), checks that draws differ from the observed network and keep the margins, and reports null mean about 0.574, z about 1.8 (p about 0.05) for the pooled statistic and z about 0.75 for the per-TF mean; concludes that most of the raw excess is target popularity.",
+   "mishandling": "Uses only a uniform label permutation, a random-pair null, or a null that keeps only each TF's number of targets and draws targets uniformly (all centred near 0.50; z about 4.1-4.2, p about 0.001) and reads it as evidence of regulatory encoding; or runs a null that keeps the network almost unchanged and reports z near 0 as a clean negative."
+  },
+  {
+   "id": "resampling_unit",
+   "description": "The roughly 24,000 pairs are not independent. They are crossed between 16 TFs and 1,499 candidate genes, and the 138 positives fall on 87 target genes, many shared across TFs. In these data, resampling pairs or resampling TFs gives almost the same interval for the provided score (pair bootstrap 0.547-0.655; TF bootstrap 0.549-0.655). Resampling TFs and candidate genes together widens it to about 0.51-0.70 and makes the variance - attention gap include zero (about -0.04 to 0.20); the gene-model gap stays above zero (about 0.002-0.28). So the unit does not change \"above 0.5\" for the provided score, but it does change how sure one can be about the gaps and about small excesses.",
+   "correct_handling": "States what was resampled and that pairs share TFs and target genes. Resamples TFs, candidate genes or both (TF bootstrap 0.549-0.655; two-way TF x gene bootstrap 0.509-0.699), or uses pair-level resampling while saying plainly that it ignores this dependence and is too narrow. Treats the small number of TFs (16) as a main limit.",
+   "mishandling": "Treats the pairs as independent without saying so (pair bootstrap, DeLong, Hanley-McNeil or Mann-Whitney; e.g. p = 4e-5 against 0.5) and leans on that pair-level precision for a strong claim, for example that a small gap or a small excess over a null is clearly significant; or reports no uncertainty. A pair bootstrap on its own is not a mishandling here if the dependence is acknowledged, because it gives nearly the same attention interval as the TF bootstrap."
+  },
+  {
+   "id": "model_free_pair_signal",
+   "description": "Beating the degree-preserving null is not by itself evidence of model knowledge. The model sees expression order and co-occurrence in its input, and TRRUST pairs are more co-detected and co-expressed than degree-matched pairs. Model-free pair scores built from the same cells beat the same null about as strongly as attention. The source re-evaluation found the same with |Spearman| co-expression (z = 3.1).",
+   "correct_handling": "Compares any excess over the degree null with a model-free pair score under the same null (expression proximity z = 1.8 matches the provided attention score; co-detection lift z = 3.1 matches symmetrised attention z = 3.3), or explicitly says the excess cannot be separated from co-expression with these data and does not claim regulatory encoding from it.",
+   "mishandling": "Concludes 'supported' because some attention variant beats a degree-preserving null (e.g. symmetrised attention z = 3.3, p = 0.001) without any model-free pair comparison."
+  },
+  {
+   "id": "forking_paths",
+   "description": "Many reasonable analyst choices move the number: score direction (TF as query 0.605, TF as key 0.546, symmetrised mean 0.638, max 0.647), pooled vs per-TF statistic (null z 1.8 vs 0.75), TF threshold (>= 1 target: 42 TFs, 0.595; >= 5: 11 TFs, 0.609), residualiser (OLS 0.492 vs boosted trees 0.559), and gene model for incremental value (logistic +0.013 [0.0005, 0.025] vs boosted trees -0.015 [-0.035, 0.003] with folds by TF; boosted trees with folds by gene range from -0.013 to +0.046 across seeds and settings, because that gene-only model is weak). The original deployment over-stated one of these: it said residualising 'collapses attention to chance in every run', while in this run the result depends on the residualiser.",
+   "correct_handling": "Fixes the main choices before looking (or reports all variants), applies the same baselines and null to every variant, and does not build the verdict on the most favourable variant; notes that no variant beats the gene-level model and that the incremental value is not robust.",
+   "mishandling": "Tries several variants and reports the best as the main result (e.g. symmetrised score with its degree-null z = 3.3, or the logistic incremental value +0.013 with CI just above 0) as decisive positive evidence; or claims a clean collapse to chance from one residualiser while another keeps 0.559 [0.488, 0.617]."
+  },
+  {
+   "id": "pair_set_definition",
+   "description": "The TRRUST file has 192 rows but 175 unique pairs (duplicates differ in mode or PMID), including 2 self-pairs (TF listed as its own target). The attention diagonal is self-attention and is about 160 times larger than an average off-diagonal score.",
+   "correct_handling": "Merges duplicate rows, drops self-pairs, excludes the TF itself from its own candidates (never scores the diagonal), and states the final counts (16 TFs, 138 positives, 23,846 negatives under the >= 3 targets rule).",
+   "mishandling": "Counts duplicate rows as extra positives or scores self-pairs with the diagonal (AUROC rises to 0.610-0.624), or reports edge counts that mix rows and unique pairs."
+  }
+ ],
+ "false_statement_checks": [
+  "Attention ranks TRRUST targets better than gene-level features such as the candidate's variance. (False: 0.605 vs 0.686; a mean/variance/dropout model gives about 0.75.)",
+  "The above-chance AUROC of attention reflects recognition of specific TF-target pairs. (False: a degree-preserving null already gives 0.574 of the 0.605.)",
+  "The provided attention score clearly beats a degree-preserving null (z >= 3 or p < 0.01). (False: pooled z = 1.8, p = 0.046; per-TF z = 0.75, p = 0.22.)",
+  "A label-permutation p-value of about 0.001 shows that attention captures TF-target relationships. (False: that null keeps neither TF nor target degree; it is centred at 0.50 while degree alone gives 0.574.)",
+  "After removing gene-level effects, attention remains clearly above chance. (False: OLS residual 0.492 [0.404, 0.568]; boosted-tree residual 0.559 [0.488, 0.617].)",
+  "Attention adds robust predictive value over gene-level features. (False: +0.013 with a logistic gene model grouped by TF, CI just above 0; not significant when grouped by gene; -0.015 to -0.037 with a boosted-tree gene model grouped by TF. A positive boosted-tree gain with folds grouped by gene comes from a weak gene-only model; gene + attention there (0.66-0.71) is still below the logistic gene-only model (0.75).)",
+  "Beating the degree-preserving null shows that the model has learned regulatory knowledge. (False: model-free expression proximity and co-detection scores from the same cells beat the same null about as strongly.)",
+  "Attention scores are symmetric, so attention[i, j] and attention[j, i] carry the same information. (False: the model is causal; the two directions give 0.605 and 0.546.)",
+  "There are 192 distinct regulator-target edges in the gene set. (False: 192 rows, 175 unique pairs, 173 without self-pairs; 138 among the 16 evaluated TFs.)",
+  "The data show that no layer or head of MaxToki-217M carries TRRUST information. (Not supported: only the layer-8 head mean is provided. In the source data some earlier layers beat the degree null, though co-expression does too.)"
+ ],
+ "reference": {
+  "script": "reference.py (sections: main, null, null_alt, resid, incr_hgb)",
+  "output": "reference_output.json",
+  "notes": "NOTES.md",
+  "source_agreement": "All numbers for the provided score reproduce the source re-evaluation exactly (same seeds): pooled AUROCs, TF-bootstrap CIs, gaps, Curveball null (z = 1.8174, p = 0.0460), per-TF null z = 0.7496, residualised OLS 0.4922 and boosted-tree 0.5586."
+ },
+ "verification": "Independently re-derived and amended on 2026-10-01; see VERIFICATION.md."
+}

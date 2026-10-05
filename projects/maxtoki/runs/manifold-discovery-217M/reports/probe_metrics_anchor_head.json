@@ -1,0 +1,45 @@
+{
+  "endpoints": [
+    {
+      "name": "branch_classification",
+      "balanced_acc": 0.9057744107744108,
+      "macro_f1": 0.855606861699885,
+      "std_balanced_acc": 0.0616346520617509,
+      "n_anchors": 290
+    },
+    {
+      "name": "stage_classification",
+      "balanced_acc": 0.8835119047619047,
+      "macro_f1": 0.8170893532851737,
+      "std_balanced_acc": 0.06983751850044376,
+      "n_anchors": 290
+    },
+    {
+      "name": "cd4_cd8",
+      "balanced_acc": 1.0,
+      "macro_f1": 1.0,
+      "auroc": 1.0,
+      "std_balanced_acc": 0.0,
+      "n_anchors": 100
+    },
+    {
+      "name": "mono_macro",
+      "balanced_acc": 1.0,
+      "macro_f1": 1.0,
+      "auroc": 1.0,
+      "std_balanced_acc": 0.0,
+      "n_anchors": 77
+    },
+    {
+      "name": "pseudotime_spearman",
+      "spearman": 0.5666414345274084,
+      "std": 0.10871121682396107,
+      "n_anchors": 290
+    }
+  ],
+  "latent_dim": 10,
+  "n_anchors_total": 290,
+  "seed": 42,
+  "n_seeds": 10,
+  "elapsed_s": 22.337085962295532
+}

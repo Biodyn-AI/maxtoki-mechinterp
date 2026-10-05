@@ -1,0 +1,98 @@
+======================================================================
+EXPERIMENT 1 — Exhaustive tracing at L5
+  N_features=1000  N_cells=20  downstream=[6, 8, 11]
+======================================================================
+
+[Phase 0] Loading SAEs...
+
+[Phase 1] Selecting features...
+  active features (freq >= 0.001): 4555
+  selected: 500 annotated + 500 unannotated = 1000
+  20 cells
+Loading weights:   0%|          | 0/102 [00:00<?, ?it/s]Loading weights: 100%|██████████| 102/102 [00:00<00:00, 1402.33it/s]
+  [20/1000] edges=99,366  this_feat=4959  6.6min elapsed  ETA=322min
+  [40/1000] edges=198,986  this_feat=4966  13.5min elapsed  ETA=323min
+  [60/1000] edges=298,339  this_feat=4967  20.3min elapsed  ETA=318min
+  [80/1000] edges=397,709  this_feat=4969  26.8min elapsed  ETA=308min
+  [100/1000] edges=497,025  this_feat=4962  33.2min elapsed  ETA=299min
+  [120/1000] edges=596,370  this_feat=4960  39.7min elapsed  ETA=291min
+  [140/1000] edges=696,209  this_feat=4972  46.1min elapsed  ETA=283min
+  [160/1000] edges=795,795  this_feat=4967  52.6min elapsed  ETA=276min
+  [180/1000] edges=895,268  this_feat=4974  59.0min elapsed  ETA=269min
+  [200/1000] edges=994,625  this_feat=4963  65.5min elapsed  ETA=262min
+  [220/1000] edges=1,093,987  this_feat=4975  72.0min elapsed  ETA=255min
+  [240/1000] edges=1,193,355  this_feat=4966  78.5min elapsed  ETA=248min
+  [260/1000] edges=1,292,687  this_feat=4987  85.0min elapsed  ETA=242min
+  [280/1000] edges=1,392,254  this_feat=4967  91.4min elapsed  ETA=235min
+  [300/1000] edges=1,491,581  this_feat=4971  97.9min elapsed  ETA=228min
+  [320/1000] edges=1,590,888  this_feat=4964  104.4min elapsed  ETA=222min
+  [340/1000] edges=1,690,233  this_feat=4967  110.8min elapsed  ETA=215min
+  [360/1000] edges=1,789,748  this_feat=4974  117.3min elapsed  ETA=208min
+  [380/1000] edges=1,889,076  this_feat=4962  123.7min elapsed  ETA=202min
+  [400/1000] edges=1,988,879  this_feat=4963  130.2min elapsed  ETA=195min
+  [420/1000] edges=2,088,378  this_feat=4978  136.7min elapsed  ETA=189min
+  [440/1000] edges=2,187,768  this_feat=4969  143.1min elapsed  ETA=182min
+  [460/1000] edges=2,287,098  this_feat=4969  149.6min elapsed  ETA=176min
+  [480/1000] edges=2,386,467  this_feat=4965  156.1min elapsed  ETA=169min
+  [500/1000] edges=2,485,795  this_feat=4960  162.5min elapsed  ETA=163min
+  [520/1000] edges=2,585,152  this_feat=4969  169.0min elapsed  ETA=156min
+  [540/1000] edges=2,684,614  this_feat=4965  175.4min elapsed  ETA=149min
+  [560/1000] edges=2,783,983  this_feat=4976  181.9min elapsed  ETA=143min
+  [580/1000] edges=2,883,328  this_feat=4969  188.4min elapsed  ETA=136min
+  [600/1000] edges=2,982,704  this_feat=4987  195.7min elapsed  ETA=130min
+  [620/1000] edges=3,082,060  this_feat=4962  203.0min elapsed  ETA=124min
+  [640/1000] edges=3,181,435  this_feat=4969  210.4min elapsed  ETA=118min
+  [660/1000] edges=3,280,800  this_feat=4983  217.6min elapsed  ETA=112min
+  [680/1000] edges=3,380,172  this_feat=4972  225.2min elapsed  ETA=106min
+  [700/1000] edges=3,479,551  this_feat=4968  232.0min elapsed  ETA=99min
+  [720/1000] edges=3,578,930  this_feat=4983  238.7min elapsed  ETA=93min
+  [740/1000] edges=3,678,271  this_feat=4962  245.4min elapsed  ETA=86min
+  [760/1000] edges=3,777,611  this_feat=4969  252.1min elapsed  ETA=80min
+  [780/1000] edges=3,877,015  this_feat=4967  259.0min elapsed  ETA=73min
+  [800/1000] edges=3,976,347  this_feat=4967  265.8min elapsed  ETA=66min
+  [820/1000] edges=4,075,658  this_feat=4971  272.3min elapsed  ETA=60min
+  [840/1000] edges=4,175,219  this_feat=4965  279.0min elapsed  ETA=53min
+  [860/1000] edges=4,274,555  this_feat=4964  285.6min elapsed  ETA=46min
+  [880/1000] edges=4,373,911  this_feat=4973  292.1min elapsed  ETA=40min
+  [900/1000] edges=4,473,283  this_feat=4970  298.6min elapsed  ETA=33min
+  [920/1000] edges=4,572,604  this_feat=4970  305.1min elapsed  ETA=27min
+  [940/1000] edges=4,671,985  this_feat=4972  311.7min elapsed  ETA=20min
+  [960/1000] edges=4,771,360  this_feat=4962  318.2min elapsed  ETA=13min
+  [980/1000] edges=4,870,706  this_feat=4964  324.7min elapsed  ETA=7min
+  [1000/1000] edges=4,970,096  this_feat=4971  331.2min elapsed  ETA=0min
+
+[Phase 3] Hub analysis...
+  total edges: 4,970,096
+  mean/feature: 4970.1
+  features with >1000 edges: 1000
+  features with 0 edges: 0
+
+  Top 20 hubs:
+    F856: 5400 edges (annotated)
+    F2388: 5261 edges (annotated)
+    F85: 5228 edges (annotated)
+    F2929: 5195 edges (annotated)
+    F2133: 5194 edges (annotated)
+    F73: 5182 edges (unannotated)
+    F2393: 5162 edges (annotated)
+    F1217: 5139 edges (annotated)
+    F2713: 5101 edges (annotated)
+    F2660: 5092 edges (annotated)
+    F3153: 5082 edges (unannotated)
+    F706: 4994 edges (unannotated)
+    F1862: 4990 edges (unannotated)
+    F179: 4990 edges (unannotated)
+    F718: 4989 edges (annotated)
+    F470: 4988 edges (unannotated)
+    F3231: 4987 edges (annotated)
+    F3394: 4987 edges (unannotated)
+    F1201: 4987 edges (unannotated)
+    F2823: 4986 edges (unannotated)
+
+[Phase 4] Annotation bias:
+  overall annotation rate: 50.0%
+  top-20 hubs annotated: 11/20 (55%)
+  top-100 hubs annotated: 45/100 (45%)
+  unannotated in top-20: 9 (45%)
+
+EXPERIMENT 1 COMPLETE — 4,970,096 edges across 1000 features

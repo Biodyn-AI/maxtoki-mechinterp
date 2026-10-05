@@ -1,0 +1,790 @@
+{
+  "layer_00": {
+    "v3": {
+      "fve_heldout_mean": 0.6996532268178925,
+      "fve_own_mu": 0.6996569474544729,
+      "mean_l0": 32.0,
+      "dead_heldout": 2431,
+      "sse_per_token": 0.16494734986720247,
+      "var_per_token": 0.5491896853747483
+    },
+    "deployed": {
+      "fve_heldout_mean": 0.6669214521584141,
+      "fve_own_mu": 0.6670066860227726,
+      "mean_l0": 32.0,
+      "dead_heldout": 2430,
+      "sse_per_token": 0.1829233028941986,
+      "var_per_token": 0.5491896853747483
+    },
+    "deployed_recentred_on_v3_mu": {
+      "fve_heldout_mean": 0.6644365589996215,
+      "mean_l0": 32.0,
+      "dead_heldout": 2430
+    },
+    "mean_shift_over_per_token_variance": {
+      "heldout_mean_vs_v3_mu": 1.2387956200873384e-05,
+      "heldout_mean_vs_deployed_mu": 0.00025596268988203376,
+      "cos_v3_mu_deployed_mu": 0.98809147479131,
+      "norm_v3_mu": 0.07100221813916843,
+      "norm_deployed_mu": 0.07464304814057728,
+      "var_per_token_heldout": 0.5491896853747483
+    },
+    "decoder_match": {
+      "n_v3_alive_heldout": 2497,
+      "v3_alive_vs_deployed_alive_max_abs_cos": {
+        "median": 0.9178712566858035,
+        "share_ge_0.9": 0.6784140969162996,
+        "share_ge_0.7": 0.9815778934721666,
+        "share_ge_0.5": 0.9907889467360833
+      },
+      "v3_alive_vs_random_null_max_abs_cos": {
+        "median": 0.10791456247851751,
+        "share_ge_0.9": 0.0,
+        "share_ge_0.7": 0.0,
+        "share_ge_0.5": 0.0
+      },
+      "same_index_abs_cos_v3_alive": {
+        "median": 0.9181715165739343,
+        "share_ge_0.9": 0.6808169803764518,
+        "share_ge_0.7": 0.987585102122547,
+        "share_ge_0.5": 1.0
+      },
+      "same_index_abs_cos_dead_in_both": {
+        "median": 1.0,
+        "share_ge_0.9": 1.0,
+        "share_ge_0.7": 1.0,
+        "share_ge_0.5": 1.0
+      },
+      "note": "both SAEs start from the same seed-42 init, so a feature that never fires keeps its init in both (same-index cos ~1); only alive features are informative"
+    },
+    "vs_summary_absdiff": {
+      "v3_fve": 1.909661317966993e-11,
+      "v3_fve_own_mu": 6.137939045913754e-10,
+      "dep_fve": 5.555322868389112e-11,
+      "dep_fve_own_mu": 1.7916046424204524e-10,
+      "v3_l0": 0.0,
+      "dep_l0": 0.0,
+      "v3_dead_equal": true,
+      "dep_dead_equal": true
+    }
+  },
+  "layer_01": {
+    "v3": {
+      "fve_heldout_mean": 0.9104897723585258,
+      "fve_own_mu": 0.9105024483990009,
+      "mean_l0": 32.0,
+      "dead_heldout": 0,
+      "sse_per_token": 12.289637551357186,
+      "var_per_token": 137.29869619572764
+    },
+    "deployed": {
+      "fve_heldout_mean": 0.8476964104202406,
+      "fve_own_mu": 0.8543679251698166,
+      "mean_l0": 32.0,
+      "dead_heldout": 0,
+      "sse_per_token": 20.911084275230184,
+      "var_per_token": 137.29869619572764
+    },
+    "deployed_recentred_on_v3_mu": {
+      "fve_heldout_mean": 0.881276181467252,
+      "mean_l0": 32.0,
+      "dead_heldout": 0
+    },
+    "mean_shift_over_per_token_variance": {
+      "heldout_mean_vs_v3_mu": 0.0001416356117931801,
+      "heldout_mean_vs_deployed_mu": 0.04581075121916346,
+      "cos_v3_mu_deployed_mu": 0.9174663538456495,
+      "norm_v3_mu": 5.067593642193501,
+      "norm_deployed_mu": 6.18171284756873,
+      "var_per_token_heldout": 137.29869619572764
+    },
+    "decoder_match": {
+      "n_v3_alive_heldout": 4928,
+      "v3_alive_vs_deployed_alive_max_abs_cos": {
+        "median": 0.5941480186022439,
+        "share_ge_0.9": 0.0,
+        "share_ge_0.7": 0.05905032467532467,
+        "share_ge_0.5": 0.8311688311688312
+      },
+      "v3_alive_vs_random_null_max_abs_cos": {
+        "median": 0.10833428801148665,
+        "share_ge_0.9": 0.0,
+        "share_ge_0.7": 0.0,
+        "share_ge_0.5": 0.0
+      },
+      "same_index_abs_cos_v3_alive": {
+        "median": 0.5940805023384783,
+        "share_ge_0.9": 0.0,
+        "share_ge_0.7": 0.05864448051948052,
+        "share_ge_0.5": 0.830762987012987
+      },
+      "same_index_abs_cos_dead_in_both": {},
+      "note": "both SAEs start from the same seed-42 init, so a feature that never fires keeps its init in both (same-index cos ~1); only alive features are informative"
+    },
+    "vs_summary_absdiff": {
+      "v3_fve": 1.3460343950555398e-12,
+      "v3_fve_own_mu": 2.495081918851838e-11,
+      "dep_fve": 1.2457938458609874e-08,
+      "dep_fve_own_mu": 1.189883980234896e-08,
+      "v3_l0": 0.0,
+      "dep_l0": 0.0,
+      "v3_dead_equal": true,
+      "dep_dead_equal": true
+    }
+  },
+  "layer_02": {
+    "v3": {
+      "fve_heldout_mean": 0.927808771966557,
+      "fve_own_mu": 0.927817507850883,
+      "mean_l0": 32.0,
+      "dead_heldout": 0,
+      "sse_per_token": 16.95158855811699,
+      "var_per_token": 234.8150740733219
+    },
+    "deployed": {
+      "fve_heldout_mean": 0.8034863934413045,
+      "fve_own_mu": 0.8156683428795034,
+      "mean_l0": 32.0,
+      "dead_heldout": 2,
+      "sse_per_token": 46.14435708049573,
+      "var_per_token": 234.8150740733219
+    },
+    "deployed_recentred_on_v3_mu": {
+      "fve_heldout_mean": 0.8480793680240839,
+      "mean_l0": 32.0,
+      "dead_heldout": 2
+    },
+    "mean_shift_over_per_token_variance": {
+      "heldout_mean_vs_v3_mu": 0.0001210249752526682,
+      "heldout_mean_vs_deployed_mu": 0.06608712593646171,
+      "cos_v3_mu_deployed_mu": 0.8804167131392102,
+      "norm_v3_mu": 6.759713554616173,
+      "norm_deployed_mu": 8.251635433007936,
+      "var_per_token_heldout": 234.8150740733219
+    },
+    "decoder_match": {
+      "n_v3_alive_heldout": 4928,
+      "v3_alive_vs_deployed_alive_max_abs_cos": {
+        "median": 0.4522778225339946,
+        "share_ge_0.9": 0.006087662337662338,
+        "share_ge_0.7": 0.009334415584415584,
+        "share_ge_0.5": 0.3234577922077922
+      },
+      "v3_alive_vs_random_null_max_abs_cos": {
+        "median": 0.1081769244360768,
+        "share_ge_0.9": 0.0,
+        "share_ge_0.7": 0.0,
+        "share_ge_0.5": 0.0
+      },
+      "same_index_abs_cos_v3_alive": {
+        "median": 0.45061092588192997,
+        "share_ge_0.9": 0.006087662337662338,
+        "share_ge_0.7": 0.008928571428571428,
+        "share_ge_0.5": 0.320211038961039
+      },
+      "same_index_abs_cos_dead_in_both": {},
+      "note": "both SAEs start from the same seed-42 init, so a feature that never fires keeps its init in both (same-index cos ~1); only alive features are informative"
+    },
+    "vs_summary_absdiff": {
+      "v3_fve": 9.872325179571817e-12,
+      "v3_fve_own_mu": 4.0869818640487665e-10,
+      "dep_fve": 1.9874435430722315e-11,
+      "dep_fve_own_mu": 7.608904284417406e-09,
+      "v3_l0": 0.0,
+      "dep_l0": 0.0,
+      "v3_dead_equal": true,
+      "dep_dead_equal": true
+    }
+  },
+  "layer_03": {
+    "v3": {
+      "fve_heldout_mean": 0.9121559876910815,
+      "fve_own_mu": 0.9121814087057828,
+      "mean_l0": 32.0,
+      "dead_heldout": 0,
+      "sse_per_token": 25.68154265922968,
+      "var_per_token": 292.35393493771846
+    },
+    "deployed": {
+      "fve_heldout_mean": 0.5921562240050107,
+      "fve_own_mu": 0.6513406263680397,
+      "mean_l0": 32.0,
+      "dead_heldout": 0,
+      "sse_per_token": 119.23473275199251,
+      "var_per_token": 292.35393493771846
+    },
+    "deployed_recentred_on_v3_mu": {
+      "fve_heldout_mean": 0.6920611385133071,
+      "mean_l0": 32.0,
+      "dead_heldout": 1
+    },
+    "mean_shift_over_per_token_variance": {
+      "heldout_mean_vs_v3_mu": 0.0002894719025506883,
+      "heldout_mean_vs_deployed_mu": 0.16974849047225982,
+      "cos_v3_mu_deployed_mu": 0.8125938001030875,
+      "norm_v3_mu": 9.713906559212857,
+      "norm_deployed_mu": 12.096981890833082,
+      "var_per_token_heldout": 292.35393493771846
+    },
+    "decoder_match": {
+      "n_v3_alive_heldout": 4928,
+      "v3_alive_vs_deployed_alive_max_abs_cos": {
+        "median": 0.3165942635461072,
+        "share_ge_0.9": 0.006087662337662338,
+        "share_ge_0.7": 0.006899350649350649,
+        "share_ge_0.5": 0.04586038961038961
+      },
+      "v3_alive_vs_random_null_max_abs_cos": {
+        "median": 0.1079989288549966,
+        "share_ge_0.9": 0.0,
+        "share_ge_0.7": 0.0,
+        "share_ge_0.5": 0.0
+      },
+      "same_index_abs_cos_v3_alive": {
+        "median": 0.30136205545558953,
+        "share_ge_0.9": 0.006087662337662338,
+        "share_ge_0.7": 0.006493506493506494,
+        "share_ge_0.5": 0.04362824675324675
+      },
+      "same_index_abs_cos_dead_in_both": {},
+      "note": "both SAEs start from the same seed-42 init, so a feature that never fires keeps its init in both (same-index cos ~1); only alive features are informative"
+    },
+    "vs_summary_absdiff": {
+      "v3_fve": 1.1363798790853252e-11,
+      "v3_fve_own_mu": 1.6856172013746118e-10,
+      "dep_fve": 3.172129225958997e-11,
+      "dep_fve_own_mu": 3.681424609602857e-09,
+      "v3_l0": 0.0,
+      "dep_l0": 0.0,
+      "v3_dead_equal": true,
+      "dep_dead_equal": true
+    }
+  },
+  "layer_04": {
+    "v3": {
+      "fve_heldout_mean": 0.8999181946552082,
+      "fve_own_mu": 0.8999476699219117,
+      "mean_l0": 32.0,
+      "dead_heldout": 0,
+      "sse_per_token": 35.08941849271824,
+      "var_per_token": 350.6073693598122
+    },
+    "deployed": {
+      "fve_heldout_mean": 0.41735222480145506,
+      "fve_own_mu": 0.4997006200210693,
+      "mean_l0": 32.0,
+      "dead_heldout": 26,
+      "sse_per_token": 204.28060372570906,
+      "var_per_token": 350.6073693598122
+    },
+    "deployed_recentred_on_v3_mu": {
+      "fve_heldout_mean": 0.5149075268931088,
+      "mean_l0": 32.0,
+      "dead_heldout": 16
+    },
+    "mean_shift_over_per_token_variance": {
+      "heldout_mean_vs_v3_mu": 0.0002945985034079511,
+      "heldout_mean_vs_deployed_mu": 0.1645982356066126,
+      "cos_v3_mu_deployed_mu": 0.7836356198917525,
+      "norm_v3_mu": 10.960016012993606,
+      "norm_deployed_mu": 11.937098916572698,
+      "var_per_token_heldout": 350.6073693598122
+    },
+    "decoder_match": {
+      "n_v3_alive_heldout": 4928,
+      "v3_alive_vs_deployed_alive_max_abs_cos": {
+        "median": 0.2576519965391014,
+        "share_ge_0.9": 0.006087662337662338,
+        "share_ge_0.7": 0.006696428571428571,
+        "share_ge_0.5": 0.013392857142857142
+      },
+      "v3_alive_vs_random_null_max_abs_cos": {
+        "median": 0.10802439551114136,
+        "share_ge_0.9": 0.0,
+        "share_ge_0.7": 0.0,
+        "share_ge_0.5": 0.0
+      },
+      "same_index_abs_cos_v3_alive": {
+        "median": 0.1867429387870072,
+        "share_ge_0.9": 0.006087662337662338,
+        "share_ge_0.7": 0.006087662337662338,
+        "share_ge_0.5": 0.011160714285714286
+      },
+      "same_index_abs_cos_dead_in_both": {},
+      "note": "both SAEs start from the same seed-42 init, so a feature that never fires keeps its init in both (same-index cos ~1); only alive features are informative"
+    },
+    "vs_summary_absdiff": {
+      "v3_fve": 2.836175738707425e-12,
+      "v3_fve_own_mu": 8.781035898408618e-10,
+      "dep_fve": 7.579936678325794e-12,
+      "dep_fve_own_mu": 8.58932636127463e-09,
+      "v3_l0": 0.0,
+      "dep_l0": 0.0,
+      "v3_dead_equal": true,
+      "dep_dead_equal": true
+    }
+  },
+  "layer_05": {
+    "v3": {
+      "fve_heldout_mean": 0.8623414492887678,
+      "fve_own_mu": 0.862386205368958,
+      "mean_l0": 32.0,
+      "dead_heldout": 0,
+      "sse_per_token": 60.65903490985073,
+      "var_per_token": 440.6485074588341
+    },
+    "deployed": {
+      "fve_heldout_mean": 0.2893027908982716,
+      "fve_own_mu": 0.3940058545544428,
+      "mean_l0": 32.0,
+      "dead_heldout": 101,
+      "sse_per_token": 313.16766444583556,
+      "var_per_token": 440.6485074588341
+    },
+    "deployed_recentred_on_v3_mu": {
+      "fve_heldout_mean": 0.4051566405938458,
+      "mean_l0": 32.0,
+      "dead_heldout": 64
+    },
+    "mean_shift_over_per_token_variance": {
+      "heldout_mean_vs_v3_mu": 0.0003252296058717181,
+      "heldout_mean_vs_deployed_mu": 0.17277900198060248,
+      "cos_v3_mu_deployed_mu": 0.7574156352716056,
+      "norm_v3_mu": 12.766661509803143,
+      "norm_deployed_mu": 12.16319543283631,
+      "var_per_token_heldout": 440.6485074588341
+    },
+    "decoder_match": {
+      "n_v3_alive_heldout": 4928,
+      "v3_alive_vs_deployed_alive_max_abs_cos": {
+        "median": 0.26523082166997913,
+        "share_ge_0.9": 0.006087662337662338,
+        "share_ge_0.7": 0.008319805194805194,
+        "share_ge_0.5": 0.02556818181818182
+      },
+      "v3_alive_vs_random_null_max_abs_cos": {
+        "median": 0.10826813375370738,
+        "share_ge_0.9": 0.0,
+        "share_ge_0.7": 0.0,
+        "share_ge_0.5": 0.0
+      },
+      "same_index_abs_cos_v3_alive": {
+        "median": 0.145681984780693,
+        "share_ge_0.9": 0.00588474025974026,
+        "share_ge_0.7": 0.00588474025974026,
+        "share_ge_0.5": 0.009537337662337662
+      },
+      "same_index_abs_cos_dead_in_both": {},
+      "note": "both SAEs start from the same seed-42 init, so a feature that never fires keeps its init in both (same-index cos ~1); only alive features are informative"
+    },
+    "vs_summary_absdiff": {
+      "v3_fve": 2.1862955890128433e-11,
+      "v3_fve_own_mu": 1.875147592755866e-09,
+      "dep_fve": 9.207112849907162e-11,
+      "dep_fve_own_mu": 9.584218974012515e-09,
+      "v3_l0": 0.0,
+      "dep_l0": 0.0,
+      "v3_dead_equal": true,
+      "dep_dead_equal": true
+    }
+  },
+  "layer_06": {
+    "v3": {
+      "fve_heldout_mean": 0.8471508958472435,
+      "fve_own_mu": 0.8472180785575415,
+      "mean_l0": 32.0,
+      "dead_heldout": 0,
+      "sse_per_token": 89.89928620354155,
+      "var_per_token": 588.1571024040593
+    },
+    "deployed": {
+      "fve_heldout_mean": 0.1885888667525698,
+      "fve_own_mu": 0.3460501249339685,
+      "mean_l0": 32.0,
+      "dead_heldout": 262,
+      "sse_per_token": 477.2372209892026,
+      "var_per_token": 588.1571024040593
+    },
+    "deployed_recentred_on_v3_mu": {
+      "fve_heldout_mean": 0.33685170383916363,
+      "mean_l0": 32.0,
+      "dead_heldout": 127
+    },
+    "mean_shift_over_per_token_variance": {
+      "heldout_mean_vs_v3_mu": 0.0004397294500798655,
+      "heldout_mean_vs_deployed_mu": 0.24078490444776002,
+      "cos_v3_mu_deployed_mu": 0.7764208475714213,
+      "norm_v3_mu": 18.853624884615684,
+      "norm_deployed_mu": 14.181496921895228,
+      "var_per_token_heldout": 588.1571024040593
+    },
+    "decoder_match": {
+      "n_v3_alive_heldout": 4928,
+      "v3_alive_vs_deployed_alive_max_abs_cos": {
+        "median": 0.31064375148435125,
+        "share_ge_0.9": 0.006290584415584416,
+        "share_ge_0.7": 0.04241071428571429,
+        "share_ge_0.5": 0.17146915584415584
+      },
+      "v3_alive_vs_random_null_max_abs_cos": {
+        "median": 0.10831899725034938,
+        "share_ge_0.9": 0.0,
+        "share_ge_0.7": 0.0,
+        "share_ge_0.5": 0.0
+      },
+      "same_index_abs_cos_v3_alive": {
+        "median": 0.11679922324517211,
+        "share_ge_0.9": 0.005681818181818182,
+        "share_ge_0.7": 0.007305194805194805,
+        "share_ge_0.5": 0.014813311688311688
+      },
+      "same_index_abs_cos_dead_in_both": {},
+      "note": "both SAEs start from the same seed-42 init, so a feature that never fires keeps its init in both (same-index cos ~1); only alive features are informative"
+    },
+    "vs_summary_absdiff": {
+      "v3_fve": 2.4749202687246452e-11,
+      "v3_fve_own_mu": 2.7882929298783665e-10,
+      "dep_fve": 1.7528312135084434e-10,
+      "dep_fve_own_mu": 8.848544563733185e-09,
+      "v3_l0": 0.0,
+      "dep_l0": 0.0,
+      "v3_dead_equal": true,
+      "dep_dead_equal": true
+    }
+  },
+  "layer_07": {
+    "v3": {
+      "fve_heldout_mean": 0.8471656796326741,
+      "fve_own_mu": 0.8472406703625646,
+      "mean_l0": 32.0,
+      "dead_heldout": 5,
+      "sse_per_token": 125.88332237865298,
+      "var_per_token": 823.6587310762513
+    },
+    "deployed": {
+      "fve_heldout_mean": 0.11226813167699845,
+      "fve_own_mu": 0.3122832498721617,
+      "mean_l0": 32.0,
+      "dead_heldout": 261,
+      "sse_per_token": 731.1881041988734,
+      "var_per_token": 823.6587310762513
+    },
+    "deployed_recentred_on_v3_mu": {
+      "fve_heldout_mean": 0.2840210049020768,
+      "mean_l0": 32.0,
+      "dead_heldout": 75
+    },
+    "mean_shift_over_per_token_variance": {
+      "heldout_mean_vs_v3_mu": 0.0004909076916521048,
+      "heldout_mean_vs_deployed_mu": 0.29083938723025643,
+      "cos_v3_mu_deployed_mu": 0.7745165768346333,
+      "norm_v3_mu": 24.370725861668127,
+      "norm_deployed_mu": 17.462470443907236,
+      "var_per_token_heldout": 823.6587310762513
+    },
+    "decoder_match": {
+      "n_v3_alive_heldout": 4923,
+      "v3_alive_vs_deployed_alive_max_abs_cos": {
+        "median": 0.29496897767345664,
+        "share_ge_0.9": 0.006093845216331505,
+        "share_ge_0.7": 0.04367255738370912,
+        "share_ge_0.5": 0.15397115579930937
+      },
+      "v3_alive_vs_random_null_max_abs_cos": {
+        "median": 0.10804026476619841,
+        "share_ge_0.9": 0.0,
+        "share_ge_0.7": 0.0,
+        "share_ge_0.5": 0.0
+      },
+      "same_index_abs_cos_v3_alive": {
+        "median": 0.12170323491464113,
+        "share_ge_0.9": 0.005484460694698354,
+        "share_ge_0.7": 0.0075157424334755234,
+        "share_ge_0.5": 0.017672151127361365
+      },
+      "same_index_abs_cos_dead_in_both": {},
+      "note": "both SAEs start from the same seed-42 init, so a feature that never fires keeps its init in both (same-index cos ~1); only alive features are informative"
+    },
+    "vs_summary_absdiff": {
+      "v3_fve": 1.7042034450298615e-11,
+      "v3_fve_own_mu": 1.8983892235979738e-10,
+      "dep_fve": 4.448774681975465e-11,
+      "dep_fve_own_mu": 2.9034585846687833e-10,
+      "v3_l0": 0.0,
+      "dep_l0": 0.0,
+      "v3_dead_equal": true,
+      "dep_dead_equal": true
+    }
+  },
+  "layer_08": {
+    "v3": {
+      "fve_heldout_mean": 0.8419344802883051,
+      "fve_own_mu": 0.8420642583916857,
+      "mean_l0": 32.0,
+      "dead_heldout": 18,
+      "sse_per_token": 235.0898126929069,
+      "var_per_token": 1487.293453510298
+    },
+    "deployed": {
+      "fve_heldout_mean": -0.04143286819255976,
+      "fve_own_mu": 0.3399368878177488,
+      "mean_l0": 32.0,
+      "dead_heldout": 823,
+      "sse_per_token": 1548.916287133247,
+      "var_per_token": 1487.293453510298
+    },
+    "deployed_recentred_on_v3_mu": {
+      "fve_heldout_mean": 0.30745569171329246,
+      "mean_l0": 32.0,
+      "dead_heldout": 16
+    },
+    "mean_shift_over_per_token_variance": {
+      "heldout_mean_vs_v3_mu": 0.0008217145913857174,
+      "heldout_mean_vs_deployed_mu": 0.5777777139362522,
+      "cos_v3_mu_deployed_mu": 0.6945951095741066,
+      "norm_v3_mu": 38.95725308926784,
+      "norm_deployed_mu": 18.534549507854628,
+      "var_per_token_heldout": 1487.293453510298
+    },
+    "decoder_match": {
+      "n_v3_alive_heldout": 4910,
+      "v3_alive_vs_deployed_alive_max_abs_cos": {
+        "median": 0.3048678523841888,
+        "share_ge_0.9": 0.005295315682281059,
+        "share_ge_0.7": 0.0384928716904277,
+        "share_ge_0.5": 0.16761710794297352
+      },
+      "v3_alive_vs_random_null_max_abs_cos": {
+        "median": 0.10813099051517859,
+        "share_ge_0.9": 0.0,
+        "share_ge_0.7": 0.0,
+        "share_ge_0.5": 0.0
+      },
+      "same_index_abs_cos_v3_alive": {
+        "median": 0.13363985929449496,
+        "share_ge_0.9": 0.004887983706720978,
+        "share_ge_0.7": 0.01120162932790224,
+        "share_ge_0.5": 0.02505091649694501
+      },
+      "same_index_abs_cos_dead_in_both": {
+        "median": 0.620924867066758,
+        "share_ge_0.9": 0.0,
+        "share_ge_0.7": 0.5,
+        "share_ge_0.5": 0.5
+      },
+      "note": "both SAEs start from the same seed-42 init, so a feature that never fires keeps its init in both (same-index cos ~1); only alive features are informative"
+    },
+    "vs_summary_absdiff": {
+      "v3_fve": 1.4062704334349974e-08,
+      "v3_fve_own_mu": 1.4261074099408688e-08,
+      "dep_fve": 1.4914158796841548e-10,
+      "dep_fve_own_mu": 1.0317997567454995e-08,
+      "v3_l0": 0.0,
+      "dep_l0": 0.0,
+      "v3_dead_equal": true,
+      "dep_dead_equal": true
+    }
+  },
+  "layer_09": {
+    "v3": {
+      "fve_heldout_mean": 0.8587227352935942,
+      "fve_own_mu": 0.8588208435252394,
+      "mean_l0": 32.0,
+      "dead_heldout": 12,
+      "sse_per_token": 278.3135272611513,
+      "var_per_token": 1969.9810004074347
+    },
+    "deployed": {
+      "fve_heldout_mean": -0.13118567302043638,
+      "fve_own_mu": 0.44812686135487023,
+      "mean_l0": 32.0,
+      "dead_heldout": 1496,
+      "sse_per_token": 2228.414283783357,
+      "var_per_token": 1969.9810004074347
+    },
+    "deployed_recentred_on_v3_mu": {
+      "fve_heldout_mean": 0.31519187806745697,
+      "mean_l0": 32.0,
+      "dead_heldout": 21
+    },
+    "mean_shift_over_per_token_variance": {
+      "heldout_mean_vs_v3_mu": 0.0006949200866121803,
+      "heldout_mean_vs_deployed_mu": 1.0497204770602575,
+      "cos_v3_mu_deployed_mu": 0.47547186924984375,
+      "norm_v3_mu": 51.11767314569418,
+      "norm_deployed_mu": 17.53982730396746,
+      "var_per_token_heldout": 1969.9810004074347
+    },
+    "decoder_match": {
+      "n_v3_alive_heldout": 4916,
+      "v3_alive_vs_deployed_alive_max_abs_cos": {
+        "median": 0.29212361012679167,
+        "share_ge_0.9": 0.005085435313262815,
+        "share_ge_0.7": 0.024613506916192025,
+        "share_ge_0.5": 0.1307973962571196
+      },
+      "v3_alive_vs_random_null_max_abs_cos": {
+        "median": 0.10804233392715752,
+        "share_ge_0.9": 0.0,
+        "share_ge_0.7": 0.0,
+        "share_ge_0.5": 0.0
+      },
+      "same_index_abs_cos_v3_alive": {
+        "median": 0.13512443070254698,
+        "share_ge_0.9": 0.004882017900732303,
+        "share_ge_0.7": 0.009764035801464606,
+        "share_ge_0.5": 0.026240846216436128
+      },
+      "same_index_abs_cos_dead_in_both": {
+        "median": 0.38363019534950393,
+        "share_ge_0.9": 0.0,
+        "share_ge_0.7": 0.0,
+        "share_ge_0.5": 0.0
+      },
+      "note": "both SAEs start from the same seed-42 init, so a feature that never fires keeps its init in both (same-index cos ~1); only alive features are informative"
+    },
+    "vs_summary_absdiff": {
+      "v3_fve": 2.4498181261378704e-11,
+      "v3_fve_own_mu": 1.3925971487083189e-10,
+      "dep_fve": 4.3062131638293977e-10,
+      "dep_fve_own_mu": 9.786450316795481e-09,
+      "v3_l0": 0.0,
+      "dep_l0": 0.0,
+      "v3_dead_equal": true,
+      "dep_dead_equal": true
+    }
+  },
+  "layer_10": {
+    "v3": {
+      "fve_heldout_mean": 0.8692435702785097,
+      "fve_own_mu": 0.8693202551145045,
+      "mean_l0": 32.0,
+      "dead_heldout": 4,
+      "sse_per_token": 332.0051617169116,
+      "var_per_token": 2539.111555921791
+    },
+    "deployed": {
+      "fve_heldout_mean": -0.011850687632626755,
+      "fve_own_mu": 0.4920103225970809,
+      "mean_l0": 32.0,
+      "dead_heldout": 1402,
+      "sse_per_token": 2569.2017738354134,
+      "var_per_token": 2539.111555921791
+    },
+    "deployed_recentred_on_v3_mu": {
+      "fve_heldout_mean": 0.34207409515851084,
+      "mean_l0": 32.0,
+      "dead_heldout": 5
+    },
+    "mean_shift_over_per_token_variance": {
+      "heldout_mean_vs_v3_mu": 0.0005868150114771852,
+      "heldout_mean_vs_deployed_mu": 0.9918725372643025,
+      "cos_v3_mu_deployed_mu": 0.4849774356324519,
+      "norm_v3_mu": 57.182430733485674,
+      "norm_deployed_mu": 23.703744595977543,
+      "var_per_token_heldout": 2539.111555921791
+    },
+    "decoder_match": {
+      "n_v3_alive_heldout": 4924,
+      "v3_alive_vs_deployed_alive_max_abs_cos": {
+        "median": 0.24928353708624573,
+        "share_ge_0.9": 0.0030463038180341185,
+        "share_ge_0.7": 0.010966693744922826,
+        "share_ge_0.5": 0.06519090170593014
+      },
+      "v3_alive_vs_random_null_max_abs_cos": {
+        "median": 0.10840701613379358,
+        "share_ge_0.9": 0.0,
+        "share_ge_0.7": 0.0,
+        "share_ge_0.5": 0.0
+      },
+      "same_index_abs_cos_v3_alive": {
+        "median": 0.14844231209780495,
+        "share_ge_0.9": 0.0030463038180341185,
+        "share_ge_0.7": 0.007514216084484159,
+        "share_ge_0.5": 0.022339561332250204
+      },
+      "same_index_abs_cos_dead_in_both": {
+        "median": 0.7836968509965294,
+        "share_ge_0.9": 0.0,
+        "share_ge_0.7": 1.0,
+        "share_ge_0.5": 1.0
+      },
+      "note": "both SAEs start from the same seed-42 init, so a feature that never fires keeps its init in both (same-index cos ~1); only alive features are informative"
+    },
+    "vs_summary_absdiff": {
+      "v3_fve": 2.388411690645853e-11,
+      "v3_fve_own_mu": 1.0170531083986134e-11,
+      "dep_fve": 2.148183853023511e-10,
+      "dep_fve_own_mu": 3.454486141585278e-09,
+      "v3_l0": 0.0,
+      "dep_l0": 0.0,
+      "v3_dead_equal": true,
+      "dep_dead_equal": true
+    }
+  },
+  "layer_11": {
+    "v3": {
+      "fve_heldout_mean": 0.8713367490306836,
+      "fve_own_mu": 0.871430502574398,
+      "mean_l0": 32.0,
+      "dead_heldout": 4,
+      "sse_per_token": 929.004840760767,
+      "var_per_token": 7220.436556373938
+    },
+    "deployed": {
+      "fve_heldout_mean": 0.17223664761449764,
+      "fve_own_mu": 0.324970135133955,
+      "mean_l0": 32.0,
+      "dead_heldout": 436,
+      "sse_per_token": 5976.812769590923,
+      "var_per_token": 7220.436556373938
+    },
+    "deployed_recentred_on_v3_mu": {
+      "fve_heldout_mean": 0.2963797370655705,
+      "mean_l0": 32.0,
+      "dead_heldout": 15
+    },
+    "mean_shift_over_per_token_variance": {
+      "heldout_mean_vs_v3_mu": 0.0007292051815687079,
+      "heldout_mean_vs_deployed_mu": 0.2262618225784221,
+      "cos_v3_mu_deployed_mu": 0.6059411447318638,
+      "norm_v3_mu": 40.4171776969369,
+      "norm_deployed_mu": 48.626492654947576,
+      "var_per_token_heldout": 7220.436556373938
+    },
+    "decoder_match": {
+      "n_v3_alive_heldout": 4924,
+      "v3_alive_vs_deployed_alive_max_abs_cos": {
+        "median": 0.24694911008447945,
+        "share_ge_0.9": 0.0,
+        "share_ge_0.7": 0.0012185215272136475,
+        "share_ge_0.5": 0.03310316815597075
+      },
+      "v3_alive_vs_random_null_max_abs_cos": {
+        "median": 0.10824821117860567,
+        "share_ge_0.9": 0.0,
+        "share_ge_0.7": 0.0,
+        "share_ge_0.5": 0.0
+      },
+      "same_index_abs_cos_v3_alive": {
+        "median": 0.18695243017263294,
+        "share_ge_0.9": 0.0,
+        "share_ge_0.7": 0.0016246953696181965,
+        "share_ge_0.5": 0.04305442729488221
+      },
+      "same_index_abs_cos_dead_in_both": {},
+      "note": "both SAEs start from the same seed-42 init, so a feature that never fires keeps its init in both (same-index cos ~1); only alive features are informative"
+    },
+    "vs_summary_absdiff": {
+      "v3_fve": 2.9953817204386723e-13,
+      "v3_fve_own_mu": 1.883315725592638e-11,
+      "dep_fve": 8.281964003487019e-11,
+      "dep_fve_own_mu": 5.332356778353642e-11,
+      "v3_l0": 0.0,
+      "dep_l0": 0.0,
+      "v3_dead_equal": true,
+      "dep_dead_equal": true
+    }
+  }
+}

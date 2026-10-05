@@ -1,0 +1,95 @@
+{
+ "n_reviews": 132,
+ "n_items": 22,
+ "checklist": {
+  "sensitivity": [
+   1.0,
+   1.0,
+   1.0
+  ],
+  "sensitivity_in_checklist_True": [
+   1.0,
+   1.0,
+   1.0,
+   6
+  ],
+  "sensitivity_in_checklist_False": [
+   1.0,
+   1.0,
+   1.0,
+   5
+  ],
+  "clean_any_false_alarm": [
+   0.7878787878787878,
+   0.5757575757575757,
+   0.9393939393939394
+  ],
+  "clean_false_alarms_per_review": [
+   1.3636363636363635,
+   0.8787878787878789,
+   1.9090909090909092
+  ],
+  "flawed_any_false_alarm": [
+   0.2121212121212121,
+   0.0606060606060606,
+   0.36363636363636365
+  ],
+  "mean_findings": 9.242424242424242,
+  "mean_other_real": 2.090909090909091
+ },
+ "generic": {
+  "sensitivity": [
+   1.0,
+   1.0,
+   1.0
+  ],
+  "sensitivity_in_checklist_True": [
+   1.0,
+   1.0,
+   1.0,
+   6
+  ],
+  "sensitivity_in_checklist_False": [
+   1.0,
+   1.0,
+   1.0,
+   5
+  ],
+  "clean_any_false_alarm": [
+   0.818181818181818,
+   0.606060606060606,
+   1.0
+  ],
+  "clean_false_alarms_per_review": [
+   1.303030303030303,
+   0.8787878787878789,
+   1.696969696969697
+  ],
+  "flawed_any_false_alarm": [
+   0.2424242424242424,
+   0.0606060606060606,
+   0.4848484848484848
+  ],
+  "mean_findings": 7.757575757575758,
+  "mean_other_real": 2.0606060606060606
+ },
+ "paired_sensitivity_checklist_minus_generic": {
+  "mean": 0.0,
+  "ci_low": 0.0,
+  "ci_high": 0.0,
+  "wilcoxon_p": 1.0,
+  "n_items": 11
+ },
+ "paired_false_alarm_checklist_minus_generic": {
+  "mean": -0.030303030303030307,
+  "ci_low": -0.21212121212121213,
+  "ci_high": 0.15151515151515155,
+  "wilcoxon_p": 0.875,
+  "n_items": 11
+ },
+ "grader_agreement_detected": {
+  "n": 66,
+  "agreement": 1.0,
+  "kappa": 1.0
+ }
+}

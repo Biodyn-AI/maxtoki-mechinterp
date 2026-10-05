@@ -1,0 +1,96 @@
+
+========================================================================
+[iter_01_ollivier_ricci] H-orc: Ollivier-Ricci curvature direction (high curvature = less regulatory)
+========================================================================
+  decision: INCONCLUSIVE
+  brief:    36 rows, mean Δ_vs_null=-0.027, positive 10/36, by-domain {'mean': {'external_lung': -0.05747698812366517, 'immune': -0.005951813595808699, 'lung': -0.017822069905403245}, 'count': {'external_lung': 12, 'immune': 12, 'lung': 12}}
+
+========================================================================
+[iter_02_gromov_hyperbolicity] H-hyp: 4-point Gromov hyperbolicity per layer
+========================================================================
+  decision: INCONCLUSIVE
+  brief:    36 rows, mean Δ_vs_null=-0.005, positive 5/36, by-domain {'mean': {'external_lung': -0.004095190524594434, 'immune': -0.004857805174272419, 'lung': -0.004639766734616464}, 'count': {'external_lung': 12, 'immune': 12, 'lung': 12}}
+
+========================================================================
+[iter_03_coex_residual_triangle] H-coex-res: Coexpression-residualized triangle-defect ΔAUROC
+========================================================================
+  decision: INCONCLUSIVE
+  brief:    36 rows, mean Δ_vs_null=-0.034, positive 9/36, by-domain {'mean': {'external_lung': -0.0206691175891119, 'immune': -0.06017160510037345, 'lung': -0.0209503736521966}, 'count': {'external_lung': 12, 'immune': 12, 'lung': 12}}
+
+========================================================================
+[iter_04_cross_layer_consistency] H-cross: Cross-layer Pearson of H123 motif score per domain
+========================================================================
+  decision: INCONCLUSIVE
+  brief:    3 rows, mean Δ_vs_null=0.345, positive 3/3, by-domain {'mean': {'external_lung': 0.37791466645748567, 'immune': 0.304049028891799, 'lung': 0.35423772864836095}, 'count': {'external_lung': 1, 'immune': 1, 'lung': 1}}
+
+========================================================================
+[iter_05_token_frequency_strata] H-tokfreq: H123 motif AUROC stratified by token-popularity tertile
+========================================================================
+  decision: INCONCLUSIVE
+  brief:    36 rows, mean Δ_vs_null=-0.112, positive 6/36, by-domain {'mean': {'external_lung': -0.012962962962962935, 'immune': -0.10325361512791988, 'lung': -0.21963207893770006}, 'count': {'external_lung': 12, 'immune': 12, 'lung': 12}}
+
+========================================================================
+[iter_06_pooled_multi_tissue] H-pooled: H123 on pooled multi-tissue kNN over common gene set
+========================================================================
+  decision: RETIRE_no_signal
+  brief:    1 rows, no delta_vs_null_p95
+
+========================================================================
+AUTOLOOP DONE
+========================================================================
+{
+  "n_iterations": 6,
+  "per_iter": [
+    {
+      "iteration": "iter_01_ollivier_ricci",
+      "hypothesis_id": "H-orc",
+      "description": "Ollivier-Ricci curvature direction (high curvature = less regulatory)",
+      "n_rows": 36,
+      "decision": "INCONCLUSIVE",
+      "brief": "36 rows, mean \u0394_vs_null=-0.027, positive 10/36, by-domain {'mean': {'external_lung': -0.05747698812366517, 'immune': -0.005951813595808699, 'lung': -0.017822069905403245}, 'count': {'external_lung': 12, 'immune': 12, 'lung': 12}}"
+    },
+    {
+      "iteration": "iter_02_gromov_hyperbolicity",
+      "hypothesis_id": "H-hyp",
+      "description": "4-point Gromov hyperbolicity per layer",
+      "n_rows": 36,
+      "decision": "INCONCLUSIVE",
+      "brief": "36 rows, mean \u0394_vs_null=-0.005, positive 5/36, by-domain {'mean': {'external_lung': -0.004095190524594434, 'immune': -0.004857805174272419, 'lung': -0.004639766734616464}, 'count': {'external_lung': 12, 'immune': 12, 'lung': 12}}"
+    },
+    {
+      "iteration": "iter_03_coex_residual_triangle",
+      "hypothesis_id": "H-coex-res",
+      "description": "Coexpression-residualized triangle-defect \u0394AUROC",
+      "n_rows": 36,
+      "decision": "INCONCLUSIVE",
+      "brief": "36 rows, mean \u0394_vs_null=-0.034, positive 9/36, by-domain {'mean': {'external_lung': -0.0206691175891119, 'immune': -0.06017160510037345, 'lung': -0.0209503736521966}, 'count': {'external_lung': 12, 'immune': 12, 'lung': 12}}"
+    },
+    {
+      "iteration": "iter_04_cross_layer_consistency",
+      "hypothesis_id": "H-cross",
+      "description": "Cross-layer Pearson of H123 motif score per domain",
+      "n_rows": 3,
+      "decision": "INCONCLUSIVE",
+      "brief": "3 rows, mean \u0394_vs_null=0.345, positive 3/3, by-domain {'mean': {'external_lung': 0.37791466645748567, 'immune': 0.304049028891799, 'lung': 0.35423772864836095}, 'count': {'external_lung': 1, 'immune': 1, 'lung': 1}}"
+    },
+    {
+      "iteration": "iter_05_token_frequency_strata",
+      "hypothesis_id": "H-tokfreq",
+      "description": "H123 motif AUROC stratified by token-popularity tertile",
+      "n_rows": 36,
+      "decision": "INCONCLUSIVE",
+      "brief": "36 rows, mean \u0394_vs_null=-0.112, positive 6/36, by-domain {'mean': {'external_lung': -0.012962962962962935, 'immune': -0.10325361512791988, 'lung': -0.21963207893770006}, 'count': {'external_lung': 12, 'immune': 12, 'lung': 12}}"
+    },
+    {
+      "iteration": "iter_06_pooled_multi_tissue",
+      "hypothesis_id": "H-pooled",
+      "description": "H123 on pooled multi-tissue kNN over common gene set",
+      "n_rows": 1,
+      "decision": "RETIRE_no_signal",
+      "brief": "1 rows, no delta_vs_null_p95"
+    }
+  ],
+  "n_promote": 0,
+  "n_inconclusive": 5,
+  "n_retire": 1
+}

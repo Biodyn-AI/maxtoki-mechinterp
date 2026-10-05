@@ -1,0 +1,20 @@
+======================================================================
+PHASE 7 — frozen-head external validation on panel='external'
+======================================================================
+[1] Re-training anchor LET head on internal panel (deterministic)...
+  [internal_anchor] trained 1500 epochs in 7.2s
+
+[2] Loading external panel...
+  centroids: (600, 12, 1232)
+
+[3] Frozen forward pass...
+
+[4] Trustworthiness, holdouts on external...
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase7_external_validation.py:148: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(np.arccos(cos_t)[triu_t], D_t[triu_t])
+
+======================================================================
+VERDICT: POSITIVE: external panel passes all gates
+  trust=0.896  rand=0.886  donor=0.887  branch=0.346
+  global ρ on full panel: 0.882
+Total time: 8.6s

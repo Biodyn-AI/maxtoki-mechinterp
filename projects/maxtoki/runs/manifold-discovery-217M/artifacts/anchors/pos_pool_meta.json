@@ -1,0 +1,62 @@
+{
+  "internal": {
+    "pool_method": "mean across gene-token positions (excluding BOS at 0 and EOS at L-1)",
+    "n_cells": 11804,
+    "n_anchors": 290,
+    "centroid_shape": [
+      290,
+      12,
+      1232
+    ],
+    "device": "mps",
+    "elapsed_seconds": 10985.373340129852
+  },
+  "zeroshot": {
+    "pool_method": "mean across gene-token positions (excluding BOS at 0 and EOS at L-1)",
+    "n_cells": 5120,
+    "n_anchors": 160,
+    "centroid_shape": [
+      160,
+      12,
+      1232
+    ],
+    "device": "mps",
+    "elapsed_seconds": 4445.105558872223
+  },
+  "lung_control": {
+    "pool_method": "mean across gene-token positions (excluding BOS at 0 and EOS at L-1)",
+    "n_cells": 2124,
+    "n_anchors": 51,
+    "centroid_shape": [
+      51,
+      12,
+      1232
+    ],
+    "device": "mps",
+    "elapsed_seconds": 1573.6650760173798
+  },
+  "external": {
+    "pool_method": "mean across gene-token positions (excluding BOS at 0 and EOS at L-1)",
+    "n_cells": 12000,
+    "n_anchors": 600,
+    "centroid_shape": [
+      600,
+      12,
+      1232
+    ],
+    "device": "mps",
+    "elapsed_seconds": 12789.013534069061
+  },
+  "lung_nonhema": {
+    "pool_method": "mean across gene-token positions (excluding BOS at 0 and EOS at L-1)",
+    "n_cells": 1500,
+    "n_anchors": 50,
+    "centroid_shape": [
+      50,
+      12,
+      1232
+    ],
+    "device": "mps",
+    "elapsed_seconds": 1325.439215183258
+  }
+}

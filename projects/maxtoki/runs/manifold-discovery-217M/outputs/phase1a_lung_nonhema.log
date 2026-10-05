@@ -1,0 +1,29 @@
+======================================================================
+PHASE 1A — lung_nonhema panel construction (proper negative control)
+======================================================================
+
+[1] Loading TS lung...
+  shape: (65847, 60606)
+  non-hematopoietic cells: 36371 (cell types: 19)
+  viable groups: 67
+
+[2] Selected 50 non-hematopoietic anchors. Sample:
+        anchor_id donor_id tissue                      cell_type    n hema_stage
+lung_nonhema_0000    TSP14   lung pulmonary alveolar type 2 cell 4689        GMP
+lung_nonhema_0001     TSP2   lung pulmonary alveolar type 2 cell 4133  Dendritic
+lung_nonhema_0002     TSP2   lung     capillary endothelial cell 3568   Pro_Mono
+lung_nonhema_0003    TSP14   lung pulmonary alveolar type 1 cell 2802 Memory_CD4
+lung_nonhema_0004     TSP2   lung                     basal cell 2400 Memory_CD4
+lung_nonhema_0005    TSP25   lung     capillary endothelial cell 1801   Basophil
+lung_nonhema_0006    TSP25   lung pulmonary alveolar type 2 cell 1472        CMP
+lung_nonhema_0007    TSP25   lung                     basal cell 1429    Cl_Mono
+lung_nonhema_0008     TSP1   lung pulmonary alveolar type 2 cell 1299      Pro_B
+lung_nonhema_0009    TSP14   lung     capillary endothelial cell 1283        GMP
+
+[3] Gathered 1500 cells across 50 anchors.
+
+[4] Tokenizing cells via MaxTokiTokenizer (chunks of 1000)...
+    chunk 1000/1500 done
+    chunk 1500/1500 done
+
+Done in 54.9s. Tokens at <REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/outputs/phase1/cells_lung_nonhema.npz.

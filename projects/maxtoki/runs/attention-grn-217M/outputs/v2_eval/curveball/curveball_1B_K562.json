@@ -1,0 +1,54 @@
+{
+ "n_tfs": 12,
+ "n_edges": 73,
+ "n_columns_with_edges": 50,
+ "observed_pooled_auroc": 0.5553997377264785,
+ "observed_per_tf_mean_auroc": 0.5594896398448767,
+ "curveball": {
+  "n_draws": 1000,
+  "n_trades_per_draw": 5000,
+  "null_mean": 0.5385069861866729,
+  "null_sd": 0.022016516223824226,
+  "null_q025_q975": [
+   0.49665030643181846,
+   0.5821248934274867
+  ],
+  "z": 0.7672763196534184,
+  "p_one_sided_phipson_smyth": 0.21678321678321677,
+  "per_tf_mean_statistic": {
+   "null_mean": 0.5399029424001258,
+   "null_sd": 0.02842366567953165,
+   "z": 0.689098220672344,
+   "p": 0.24175824175824176
+  },
+  "draws_identical_to_observed": 0,
+  "draws_failing_margin_or_structural_zero_check": 0,
+  "mean_jaccard_distance_from_observed": 0.8724852252919251,
+  "min_jaccard_distance_from_observed": 0.7833333333333333,
+  "variance_baseline_auroc_observed": 0.6292415860283913,
+  "variance_baseline_auroc_null_max_abs_change": 0.0
+ },
+ "checkerboard_check": {
+  "n_draws": 1000,
+  "accepted_swaps_per_draw": 2190,
+  "null_mean": 0.5404097824964922,
+  "null_sd": 0.022188628055334975,
+  "z": 0.6755692687535144,
+  "p": 0.24075924075924077,
+  "per_tf_mean_null_mean": 0.5429883260456357,
+  "mean_jaccard_distance_from_observed": 0.8719787494909242,
+  "draws_failing_margin_or_structural_zero_check": 0
+ },
+ "deployed_null_rerun": {
+  "n_draws": 50,
+  "n_iter": 480,
+  "matrix": "full 1,500 x 1,500 TRRUST matrix",
+  "draws_identical_on_evaluated_rows": 46,
+  "draws_identical_whole_matrix": 41,
+  "self_loops_created_total": 3,
+  "null_mean": 0.5554297959542589,
+  "null_sd_ddof0": 0.0006714484211579831,
+  "z_as_deployed": -0.04476624984613271
+ },
+ "seconds": 172.83495211601257
+}

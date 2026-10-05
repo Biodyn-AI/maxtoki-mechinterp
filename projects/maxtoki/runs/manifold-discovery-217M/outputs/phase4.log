@@ -1,0 +1,17 @@
+======================================================================
+PHASE 4 — operator library export from MaxToki-217M-HF
+======================================================================
+
+[1] Loading MaxToki-217M-HF (CPU; only needed for o_proj weights)...
+  loaded in 0.7s. n_layers=11, n_heads=8, head_dim=154, hidden=1232
+
+[2] Extracting per-head operators A_{l,h} ∈ R^(154, 1232)...
+  exported 88 per-head operators
+
+[3] Building pooled drift components (A_early, A_mid, A_late)...
+  shapes: early (1232, 1232), mid (1232, 1232), late (1232, 1232)
+
+[4] Writing operator_index.json...
+
+Phase 4 complete in 1.7s
+Operator library at artifacts/operators/

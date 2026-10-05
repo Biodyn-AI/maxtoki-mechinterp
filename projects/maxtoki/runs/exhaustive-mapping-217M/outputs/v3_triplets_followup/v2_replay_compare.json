@@ -1,0 +1,502 @@
+{
+  "numeric_values_compared(summary.json)": 627,
+  "differing(rel > 1e-6)": 4,
+  "diffs": [
+    {
+      "path": "redundancy_ratios / marginal_C_given_AB / ci95_of_median / 1",
+      "v2": 0.2789544097448264,
+      "replay": 0.2789538285995398,
+      "rel_diff": 2.0832984396685516e-06
+    },
+    {
+      "path": "redundancy_ratios / marginal_C_given_AB / ci95_percentile_of_median(biased; for reference) / 0",
+      "v2": 0.2275536458939314,
+      "replay": 0.22755422703921796,
+      "rel_diff": 2.553876032634194e-06
+    },
+    {
+      "path": "redundancy_ratios / pairwise_mean_minus_additive / ci95_of_median / 1",
+      "v2": -0.02642088259782631,
+      "replay": -0.026420913145206754,
+      "rel_diff": 1.1561818577854113e-06
+    },
+    {
+      "path": "redundancy_ratios / noise_corrected_energy_share_I_ABC_logits / ci95_percentile_of_median(biased; for reference) / 0",
+      "v2": 2.4807555121242334e-09,
+      "replay": 2.480749727862275e-09,
+      "rel_diff": 2.3316533734150713e-06
+    }
+  ],
+  "keys_in_v2_summary_missing_in_replay": [
+    "by_annotation_pattern(L0,L5,L9; a=annotated,u=unannotated)",
+    "by_annotation_pattern(L0,L5,L9; a=annotated,u=unannotated) / aaa",
+    "by_annotation_pattern(L0,L5,L9; a=annotated,u=unannotated) / aaa / frac_any_BH_across",
+    "by_annotation_pattern(L0,L5,L9; a=annotated,u=unannotated) / aaa / median_share_I",
+    "by_annotation_pattern(L0,L5,L9; a=annotated,u=unannotated) / aaa / median_three_way",
+    "by_annotation_pattern(L0,L5,L9; a=annotated,u=unannotated) / aaa / n",
+    "by_annotation_pattern(L0,L5,L9; a=annotated,u=unannotated) / aau",
+    "by_annotation_pattern(L0,L5,L9; a=annotated,u=unannotated) / aau / frac_any_BH_across",
+    "by_annotation_pattern(L0,L5,L9; a=annotated,u=unannotated) / aau / median_share_I",
+    "by_annotation_pattern(L0,L5,L9; a=annotated,u=unannotated) / aau / median_three_way",
+    "by_annotation_pattern(L0,L5,L9; a=annotated,u=unannotated) / aau / n",
+    "by_annotation_pattern(L0,L5,L9; a=annotated,u=unannotated) / aua",
+    "by_annotation_pattern(L0,L5,L9; a=annotated,u=unannotated) / aua / frac_any_BH_across",
+    "by_annotation_pattern(L0,L5,L9; a=annotated,u=unannotated) / aua / median_share_I",
+    "by_annotation_pattern(L0,L5,L9; a=annotated,u=unannotated) / aua / median_three_way",
+    "by_annotation_pattern(L0,L5,L9; a=annotated,u=unannotated) / aua / n",
+    "by_annotation_pattern(L0,L5,L9; a=annotated,u=unannotated) / auu",
+    "by_annotation_pattern(L0,L5,L9; a=annotated,u=unannotated) / auu / frac_any_BH_across",
+    "by_annotation_pattern(L0,L5,L9; a=annotated,u=unannotated) / auu / median_share_I",
+    "by_annotation_pattern(L0,L5,L9; a=annotated,u=unannotated) / auu / median_three_way",
+    "by_annotation_pattern(L0,L5,L9; a=annotated,u=unannotated) / auu / n",
+    "by_annotation_pattern(L0,L5,L9; a=annotated,u=unannotated) / uaa",
+    "by_annotation_pattern(L0,L5,L9; a=annotated,u=unannotated) / uaa / frac_any_BH_across",
+    "by_annotation_pattern(L0,L5,L9; a=annotated,u=unannotated) / uaa / median_share_I",
+    "by_annotation_pattern(L0,L5,L9; a=annotated,u=unannotated) / uaa / median_three_way",
+    "by_annotation_pattern(L0,L5,L9; a=annotated,u=unannotated) / uaa / n",
+    "by_annotation_pattern(L0,L5,L9; a=annotated,u=unannotated) / uau",
+    "by_annotation_pattern(L0,L5,L9; a=annotated,u=unannotated) / uau / frac_any_BH_across",
+    "by_annotation_pattern(L0,L5,L9; a=annotated,u=unannotated) / uau / median_share_I",
+    "by_annotation_pattern(L0,L5,L9; a=annotated,u=unannotated) / uau / median_three_way",
+    "by_annotation_pattern(L0,L5,L9; a=annotated,u=unannotated) / uau / n",
+    "by_annotation_pattern(L0,L5,L9; a=annotated,u=unannotated) / uua",
+    "by_annotation_pattern(L0,L5,L9; a=annotated,u=unannotated) / uua / frac_any_BH_across",
+    "by_annotation_pattern(L0,L5,L9; a=annotated,u=unannotated) / uua / median_share_I",
+    "by_annotation_pattern(L0,L5,L9; a=annotated,u=unannotated) / uua / median_three_way",
+    "by_annotation_pattern(L0,L5,L9; a=annotated,u=unannotated) / uua / n",
+    "by_annotation_pattern(L0,L5,L9; a=annotated,u=unannotated) / uuu",
+    "by_annotation_pattern(L0,L5,L9; a=annotated,u=unannotated) / uuu / frac_any_BH_across",
+    "by_annotation_pattern(L0,L5,L9; a=annotated,u=unannotated) / uuu / median_share_I",
+    "by_annotation_pattern(L0,L5,L9; a=annotated,u=unannotated) / uuu / median_three_way",
+    "by_annotation_pattern(L0,L5,L9; a=annotated,u=unannotated) / uuu / n",
+    "deployed_v2_for_comparison",
+    "deployed_v2_for_comparison / n_triplets",
+    "deployed_v2_for_comparison / pair_mean",
+    "deployed_v2_for_comparison / superadditive",
+    "deployed_v2_for_comparison / three_way",
+    "deployed_v2_for_comparison / three_way_std",
+    "noise_floor / null_A / null_feature_live_n_active_max",
+    "noise_floor / null_B / null_feature_live_n_active_max",
+    "noise_floor / null_C / null_feature_live_n_active_max",
+    "noise_floor / null_all / null_feature_live_n_active_max",
+    "sanity / data_integrity / recheck / mean_abs_dlogit_max_rel_err",
+    "sanity / data_integrity / recheck / mean_abs_dlogit_stored_wrong(rel>1e-3)",
+    "sanity / data_integrity / recheck / note",
+    "sanity / old_run_three_way_std",
+    "sanity / single_effect_eff_std_by_layer",
+    "sanity / single_effect_eff_std_by_layer / L0",
+    "sanity / single_effect_eff_std_by_layer / L5",
+    "sanity / single_effect_eff_std_by_layer / L9",
+    "wall_seconds"
+  ],
+  "power_comparison": [
+    {
+      "what": "aggregate proportional 0.05",
+      "v2_followup": {
+        "detected_p05": 47,
+        "detected_BH05_within_64": 46,
+        "n_triplets": 64
+      },
+      "replay": {
+        "detected_p05": 47,
+        "detected_BH05_within_64": 46,
+        "n_triplets": 64
+      },
+      "equal": true
+    },
+    {
+      "what": "aggregate proportional 0.1",
+      "v2_followup": {
+        "detected_p05": 64,
+        "detected_BH05_within_64": 64,
+        "n_triplets": 64
+      },
+      "replay": {
+        "detected_p05": 64,
+        "detected_BH05_within_64": 64,
+        "n_triplets": 64
+      },
+      "equal": true
+    },
+    {
+      "what": "aggregate proportional 0.2",
+      "v2_followup": {
+        "detected_p05": 64,
+        "detected_BH05_within_64": 64,
+        "n_triplets": 64
+      },
+      "replay": {
+        "detected_p05": 64,
+        "detected_BH05_within_64": 64,
+        "n_triplets": 64
+      },
+      "equal": true
+    },
+    {
+      "what": "aggregate proportional 0.3",
+      "v2_followup": {
+        "detected_p05": 64,
+        "detected_BH05_within_64": 64,
+        "n_triplets": 64
+      },
+      "replay": {
+        "detected_p05": 64,
+        "detected_BH05_within_64": 64,
+        "n_triplets": 64
+      },
+      "equal": true
+    },
+    {
+      "what": "aggregate proportional 0.5",
+      "v2_followup": {
+        "detected_p05": 64,
+        "detected_BH05_within_64": 64,
+        "n_triplets": 64
+      },
+      "replay": {
+        "detected_p05": 64,
+        "detected_BH05_within_64": 64,
+        "n_triplets": 64
+      },
+      "equal": true
+    },
+    {
+      "what": "aggregate proportional 1.0",
+      "v2_followup": {
+        "detected_p05": 64,
+        "detected_BH05_within_64": 64,
+        "n_triplets": 64
+      },
+      "replay": {
+        "detected_p05": 64,
+        "detected_BH05_within_64": 64,
+        "n_triplets": 64
+      },
+      "equal": true
+    },
+    {
+      "what": "per-target constant_kappa0.05",
+      "v2_followup": {
+        "triplets_any_target_BH_within": 64,
+        "triplets_any_target_BH_across_64": 64,
+        "targets_BH_across_64_total": 119631,
+        "n_triplets": 64
+      },
+      "replay": {
+        "triplets_any_target_BH_within": 64,
+        "triplets_any_target_BH_across_64": 64,
+        "targets_BH_across_64_total": 119631,
+        "n_triplets": 64
+      },
+      "equal": true
+    },
+    {
+      "what": "per-target constant_kappa0.1",
+      "v2_followup": {
+        "triplets_any_target_BH_within": 64,
+        "triplets_any_target_BH_across_64": 64,
+        "targets_BH_across_64_total": 122968,
+        "n_triplets": 64
+      },
+      "replay": {
+        "triplets_any_target_BH_within": 64,
+        "triplets_any_target_BH_across_64": 64,
+        "targets_BH_across_64_total": 122968,
+        "n_triplets": 64
+      },
+      "equal": true
+    },
+    {
+      "what": "per-target constant_kappa0.2",
+      "v2_followup": {
+        "triplets_any_target_BH_within": 64,
+        "triplets_any_target_BH_across_64": 64,
+        "targets_BH_across_64_total": 131529,
+        "n_triplets": 64
+      },
+      "replay": {
+        "triplets_any_target_BH_within": 64,
+        "triplets_any_target_BH_across_64": 64,
+        "targets_BH_across_64_total": 131529,
+        "n_triplets": 64
+      },
+      "equal": true
+    },
+    {
+      "what": "per-target constant_kappa0.3",
+      "v2_followup": {
+        "triplets_any_target_BH_within": 64,
+        "triplets_any_target_BH_across_64": 64,
+        "targets_BH_across_64_total": 142803,
+        "n_triplets": 64
+      },
+      "replay": {
+        "triplets_any_target_BH_within": 64,
+        "triplets_any_target_BH_across_64": 64,
+        "targets_BH_across_64_total": 142803,
+        "n_triplets": 64
+      },
+      "equal": true
+    },
+    {
+      "what": "per-target constant_kappa0.5",
+      "v2_followup": {
+        "triplets_any_target_BH_within": 64,
+        "triplets_any_target_BH_across_64": 64,
+        "targets_BH_across_64_total": 166337,
+        "n_triplets": 64
+      },
+      "replay": {
+        "triplets_any_target_BH_within": 64,
+        "triplets_any_target_BH_across_64": 64,
+        "targets_BH_across_64_total": 166337,
+        "n_triplets": 64
+      },
+      "equal": true
+    },
+    {
+      "what": "per-target constant_kappa1.0",
+      "v2_followup": {
+        "triplets_any_target_BH_within": 64,
+        "triplets_any_target_BH_across_64": 64,
+        "targets_BH_across_64_total": 208712,
+        "n_triplets": 64
+      },
+      "replay": {
+        "triplets_any_target_BH_within": 64,
+        "triplets_any_target_BH_across_64": 64,
+        "targets_BH_across_64_total": 208712,
+        "n_triplets": 64
+      },
+      "equal": true
+    },
+    {
+      "what": "per-target proportional_kappa0.05",
+      "v2_followup": {
+        "triplets_any_target_BH_within": 27,
+        "triplets_any_target_BH_across_64": 20,
+        "targets_BH_across_64_total": 21,
+        "n_triplets": 64
+      },
+      "replay": {
+        "triplets_any_target_BH_within": 27,
+        "triplets_any_target_BH_across_64": 20,
+        "targets_BH_across_64_total": 21,
+        "n_triplets": 64
+      },
+      "equal": true
+    },
+    {
+      "what": "per-target proportional_kappa0.1",
+      "v2_followup": {
+        "triplets_any_target_BH_within": 39,
+        "triplets_any_target_BH_across_64": 38,
+        "targets_BH_across_64_total": 49,
+        "n_triplets": 64
+      },
+      "replay": {
+        "triplets_any_target_BH_within": 39,
+        "triplets_any_target_BH_across_64": 38,
+        "targets_BH_across_64_total": 49,
+        "n_triplets": 64
+      },
+      "equal": true
+    },
+    {
+      "what": "per-target proportional_kappa0.2",
+      "v2_followup": {
+        "triplets_any_target_BH_within": 48,
+        "triplets_any_target_BH_across_64": 50,
+        "targets_BH_across_64_total": 125,
+        "n_triplets": 64
+      },
+      "replay": {
+        "triplets_any_target_BH_within": 48,
+        "triplets_any_target_BH_across_64": 50,
+        "targets_BH_across_64_total": 125,
+        "n_triplets": 64
+      },
+      "equal": true
+    },
+    {
+      "what": "per-target proportional_kappa0.3",
+      "v2_followup": {
+        "triplets_any_target_BH_within": 50,
+        "triplets_any_target_BH_across_64": 53,
+        "targets_BH_across_64_total": 193,
+        "n_triplets": 64
+      },
+      "replay": {
+        "triplets_any_target_BH_within": 50,
+        "triplets_any_target_BH_across_64": 53,
+        "targets_BH_across_64_total": 193,
+        "n_triplets": 64
+      },
+      "equal": true
+    },
+    {
+      "what": "per-target proportional_kappa0.5",
+      "v2_followup": {
+        "triplets_any_target_BH_within": 56,
+        "triplets_any_target_BH_across_64": 59,
+        "targets_BH_across_64_total": 415,
+        "n_triplets": 64
+      },
+      "replay": {
+        "triplets_any_target_BH_within": 56,
+        "triplets_any_target_BH_across_64": 59,
+        "targets_BH_across_64_total": 415,
+        "n_triplets": 64
+      },
+      "equal": true
+    },
+    {
+      "what": "per-target proportional_kappa1.0",
+      "v2_followup": {
+        "triplets_any_target_BH_within": 56,
+        "triplets_any_target_BH_across_64": 63,
+        "targets_BH_across_64_total": 853,
+        "n_triplets": 64
+      },
+      "replay": {
+        "triplets_any_target_BH_within": 56,
+        "triplets_any_target_BH_across_64": 63,
+        "targets_BH_across_64_total": 853,
+        "n_triplets": 64
+      },
+      "equal": true
+    },
+    {
+      "what": "BH effect targets A",
+      "v2_followup": {
+        "median": 7.5,
+        "p05": 0.0,
+        "p95": 228.0,
+        "min": 0.0,
+        "max": 228.0,
+        "mean": 38.375,
+        "n_negative": 0,
+        "n": 512
+      },
+      "replay": {
+        "n": 512,
+        "mean": 38.375,
+        "std": 73.10555861620294,
+        "min": 0.0,
+        "p05": 0.0,
+        "p25": 1.0,
+        "median": 7.5,
+        "p75": 24.0,
+        "p95": 228.0,
+        "max": 228.0
+      },
+      "equal": true
+    },
+    {
+      "what": "BH effect targets B",
+      "v2_followup": {
+        "median": 1.5,
+        "p05": 0.0,
+        "p95": 7.0,
+        "min": 0.0,
+        "max": 7.0,
+        "mean": 2.625,
+        "n_negative": 0,
+        "n": 512
+      },
+      "replay": {
+        "n": 512,
+        "mean": 2.625,
+        "std": 2.8284271247461903,
+        "min": 0.0,
+        "p05": 0.0,
+        "p25": 0.0,
+        "median": 1.5,
+        "p75": 5.25,
+        "p95": 7.0,
+        "max": 7.0
+      },
+      "equal": true
+    },
+    {
+      "what": "BH effect targets C",
+      "v2_followup": {
+        "median": 2.0,
+        "p05": 0.0,
+        "p95": 13.0,
+        "min": 0.0,
+        "max": 13.0,
+        "mean": 3.625,
+        "n_negative": 0,
+        "n": 512
+      },
+      "replay": {
+        "n": 512,
+        "mean": 3.625,
+        "std": 4.389990393563213,
+        "min": 0.0,
+        "p05": 0.0,
+        "p25": 0.0,
+        "median": 2.0,
+        "p75": 5.5,
+        "p95": 13.0,
+        "max": 13.0
+      },
+      "equal": true
+    },
+    {
+      "what": "BH effect targets ABC",
+      "v2_followup": {
+        "median": 17.0,
+        "p05": 0.0,
+        "p95": 173.45,
+        "min": 0.0,
+        "max": 217.0,
+        "mean": 36.291015625,
+        "n_negative": 0,
+        "n": 512
+      },
+      "replay": {
+        "n": 512,
+        "mean": 36.291015625,
+        "std": 52.01432962787966,
+        "min": 0.0,
+        "p05": 0.0,
+        "p25": 7.75,
+        "median": 17.0,
+        "p75": 33.0,
+        "p95": 173.45,
+        "max": 217.0
+      },
+      "equal": true
+    },
+    {
+      "what": "BH effect targets I",
+      "v2_followup": {
+        "median": 0.0,
+        "p05": 0.0,
+        "p95": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "n_negative": 0,
+        "n": 512
+      },
+      "replay": {
+        "n": 512,
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "p05": 0.0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 0.0,
+        "p95": 0.0,
+        "max": 0.0
+      },
+      "equal": true
+    }
+  ],
+  "power_rows_equal": 23,
+  "power_rows_compared": 23
+}

@@ -1,0 +1,103 @@
+[stage1] writing to <REPO_ROOT>/projects/maxtoki/runs/longevity-mechinterp-217M/outputs/stage1_20260505
+[stage1] columns: age=development_stage donor=donor_id ct=cell_type
+[stage1] sampled 2974 cells across 17 donors, age labels: {'(21.999, 56.0]': 1713, '(56.0, 60.0]': 661, '(60.0, 74.0]': 600}
+[stage1] cell types (38): {'macrophage': 478, 'CD8-positive, alpha-beta T cell': 471, 'CD4-positive, alpha-beta T cell': 439, 'B cell': 369, 'neutrophil': 337, 'plasma cell': 156, 'monocyte': 128, 'classical monocyte': 93}
+[stage1] loaded subset adata: (2974, 60606)
+[stage1] computing HVG-PCA baseline (n_components=50)
+[stage1] HVG-PCA shape=(2974, 50)  (2.5s)
+[stage1] extracting MaxToki layer[5] representations
+Loading weights:   0%|          | 0/102 [00:00<?, ?it/s]Loading weights: 100%|██████████| 102/102 [00:00<00:00, 50749.59it/s]
+[runtime] mapped 19982/60606 adata genes onto MaxToki vocab
+[runtime] 200/2974  mean_fwd=0.21s  seq_len=941  skipped=0  elapsed=43s  eta=596s
+[runtime] 400/2974  mean_fwd=0.20s  seq_len=1014  skipped=0  elapsed=83s  eta=537s
+[runtime] 600/2974  mean_fwd=0.21s  seq_len=1022  skipped=0  elapsed=125s  eta=494s
+[runtime] 800/2974  mean_fwd=0.21s  seq_len=969  skipped=0  elapsed=167s  eta=454s
+[runtime] 1000/2974  mean_fwd=0.21s  seq_len=1016  skipped=0  elapsed=209s  eta=412s
+[runtime] 1200/2974  mean_fwd=0.21s  seq_len=963  skipped=0  elapsed=251s  eta=372s
+[runtime] 1400/2974  mean_fwd=0.22s  seq_len=1011  skipped=0  elapsed=294s  eta=331s
+[runtime] 1600/2974  mean_fwd=0.21s  seq_len=1020  skipped=0  elapsed=336s  eta=289s
+[runtime] 1800/2974  mean_fwd=0.21s  seq_len=1010  skipped=0  elapsed=379s  eta=247s
+[runtime] 2000/2974  mean_fwd=0.21s  seq_len=1021  skipped=0  elapsed=420s  eta=205s
+[runtime] 2200/2974  mean_fwd=0.21s  seq_len=1013  skipped=0  elapsed=462s  eta=163s
+[runtime] 2400/2974  mean_fwd=0.21s  seq_len=1015  skipped=0  elapsed=504s  eta=121s
+[runtime] 2600/2974  mean_fwd=0.21s  seq_len=958  skipped=0  elapsed=546s  eta=79s
+[runtime] 2800/2974  mean_fwd=0.21s  seq_len=1002  skipped=0  elapsed=588s  eta=37s
+[runtime] 2974/2974  mean_fwd=0.21s  seq_len=994  skipped=0  elapsed=624s  eta=0s
+[runtime] cached extraction to <REPO_ROOT>/projects/maxtoki/runs/longevity-mechinterp-217M/outputs/stage1_20260505/maxtoki_layer_reps.npy
+[stage1] dropped 0 cells with NaN representations
+[stage1] final n_cells: 2974, donors: 17
+[stage1] evaluating representations...
+<REPO_ROOT>/projects/maxtoki/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<REPO_ROOT>/projects/maxtoki/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<REPO_ROOT>/projects/maxtoki/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<REPO_ROOT>/projects/maxtoki/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<REPO_ROOT>/projects/maxtoki/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<REPO_ROOT>/projects/maxtoki/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<REPO_ROOT>/projects/maxtoki/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<REPO_ROOT>/projects/maxtoki/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<REPO_ROOT>/projects/maxtoki/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<REPO_ROOT>/projects/maxtoki/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+
+[stage1] probe aggregate:
+ n_valid_splits  balanced_accuracy_mean  balanced_accuracy_std  macro_f1_mean  macro_f1_std  mean_train_cells  mean_test_cells       representation  n_cells  n_features  n_age_classes  n_donors                         dataset_id
+              5                0.275453               0.034581       0.208942      0.030434            2116.6            857.4 maxtoki217m_layer_05     2974        1232              3        17 tabula_sapiens_immune_subset_20000
+              5                0.172181               0.036954       0.147168      0.022716            2116.6            857.4           hvg_pca_50     2974          50              3        17 tabula_sapiens_immune_subset_20000
+
+[stage1] manifold diagnostics:
+ pca_dim_used  participation_ratio  pc1_explained_ratio  pc5_cumulative_explained_ratio  pc1_age_corr  age_label_silhouette       representation  n_cells  n_features                         dataset_id
+         32.0             7.998517             0.238742                        0.498445      0.038351             -0.005704 maxtoki217m_layer_05     2974        1232 tabula_sapiens_immune_subset_20000
+         32.0             7.875935             0.254881                        0.641647      0.070933              0.005058           hvg_pca_50     2974          50 tabula_sapiens_immune_subset_20000
+[stage1] permutation null (n_perm=100) on best rep...
+<REPO_ROOT>/projects/maxtoki/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<REPO_ROOT>/projects/maxtoki/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<REPO_ROOT>/projects/maxtoki/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<REPO_ROOT>/projects/maxtoki/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<REPO_ROOT>/projects/maxtoki/.venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2924: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+
+[stage1] permutation null:
+      representation                 metric  observed  null_mean  null_std  null_p95  p_value_right_tail  n_permutations
+maxtoki217m_layer_05 balanced_accuracy_mean  0.275453   0.331979  0.010338  0.348712                 1.0             100
+Traceback (most recent call last):
+  File "<REPO_ROOT>/projects/maxtoki/.venv/lib/python3.12/site-packages/pandas/compat/_optional.py", line 135, in import_optional_dependency
+    module = importlib.import_module(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<HOMEBREW_PREFIX>/Cellar/python@3.12/3.12.9/Frameworks/Python.framework/Versions/3.12/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'tabulate'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<REPO_ROOT>/projects/maxtoki/runs/longevity-mechinterp-217M/scripts/run_stage1.py", line 284, in <module>
+    main()
+  File "<REPO_ROOT>/projects/maxtoki/runs/longevity-mechinterp-217M/scripts/run_stage1.py", line 246, in main
+    md.append(probe_df.to_markdown(index=False, floatfmt=".4f"))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<REPO_ROOT>/projects/maxtoki/.venv/lib/python3.12/site-packages/pandas/util/_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "<REPO_ROOT>/projects/maxtoki/.venv/lib/python3.12/site-packages/pandas/core/frame.py", line 2994, in to_markdown
+    tabulate = import_optional_dependency("tabulate")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<REPO_ROOT>/projects/maxtoki/.venv/lib/python3.12/site-packages/pandas/compat/_optional.py", line 138, in import_optional_dependency
+    raise ImportError(msg)
+ImportError: Missing optional dependency 'tabulate'.  Use pip or conda to install tabulate.

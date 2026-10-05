@@ -1,0 +1,602 @@
+{
+  "summary": "Post-hoc classification of Study B load-bearing false alarms into factually wrong / acknowledged / no effect / real problem missed by the key",
+  "agentCount": 8,
+  "logs": [],
+  "result": [
+    {
+      "uid": "B1249:generic:2:F3",
+      "category": "right_but_no_effect_on_conclusions",
+      "reason": "The near-duplicate pairs are real: I re-ran difflib and got Q47450/A0A0H2VAQ6 0.979, B1JDQ5/A5VYT2 0.974 and P60311/P83345 0.833, and the README only claims the split is disjoint by protein. But dropping the five test proteins leaves L32H13's test AP almost unchanged (0.718 to 0.715), and only one parameter (the head) is selected. ESM-2 never saw disulfide labels in pretraining, so the result and the 'from the sequence alone' input claim stand."
+    },
+    {
+      "uid": "B2101:generic:1:F1",
+      "category": "right_but_no_effect_on_conclusions",
+      "reason": "The grader reproduced the baselines: a 3-class module-score call gives R_diff 0.869, a 2-class call gives 0.646, and both pass the lax gate. The finding itself reports within-arc ordering (Spearman 0.49-0.71). A coarse phase call is still a phase readout, and the summary claims only that both readouts transfer and recover RPE1 phase, never finer-than-class resolution, so no stated result is overturned."
+    },
+    {
+      "uid": "B2101:generic:1:F3",
+      "category": "right_but_no_effect_on_conclusions",
+      "reason": "The marker overlap and the matching label construction are real and are not flagged as a limitation in SUMMARY.md. But the finding's own numbers undercut its 'inflated' claim: without the markers, expression still transfers at 0.839 with retention 0.97 (above the reported 0.96). The RPE1 label is a valid cell-cycle phase (S before G2/M, about 100 deg apart), so Interpretation 2 and the transfer results stand."
+    },
+    {
+      "uid": "B2101:generic:2:F1",
+      "category": "right_but_no_effect_on_conclusions",
+      "reason": "It is true that both labels come from the same marker/PCA recipe and that a markers-only readout transfers at 0.918, so the argument for Interpretation 2 is not independent of the markers. But the readout without markers still transfers at 0.839, and the label shows the expected S-then-G2/M order, so the 'technical axis' alternative is speculation and no conclusion changes."
+    },
+    {
+      "uid": "B2101:generic:3:F1",
+      "category": "right_but_no_effect_on_conclusions",
+      "reason": "The grader reproduced the evidence: K562 marker loadings applied to RPE1 give R_diff 0.992, so the marker-PCA plane is shared across the two lines. That weakens the independence of Interpretation 2's argument but does not make it false. The RPE1 label is a canonical marker-based cell-cycle phase with consistent S/G2M orientation, and the transfer numbers are unaffected."
+    },
+    {
+      "uid": "B2101:checklist:1:F1",
+      "category": "right_but_no_effect_on_conclusions",
+      "reason": "The marker-based baselines do beat the model readout (two scores 0.961, markers-only 0.918, no-marker 0.839, against the model's 0.789), and SUMMARY.md never mentions this. But the summary claims only that both readouts transfer and that the model's signal is not K562-specific; it makes no claim that the model adds information beyond the markers, so no stated result is wrong."
+    },
+    {
+      "uid": "B2101:checklist:1:F2",
+      "category": "right_but_no_effect_on_conclusions",
+      "reason": "The label/feature circularity and the lack of an independent phase check are accurate, and SUMMARY.md does not raise them. The correlation of PC1 with summed expression is consistent with cell-cycle biology: G2/M cells carry more RNA. The RPE1 label still has the canonical S-to-G2/M structure, so Interpretation 2's conclusion is not shown to be wrong."
+    },
+    {
+      "uid": "B2101:checklist:2:F1",
+      "category": "right_but_no_effect_on_conclusions",
+      "reason": "The baseline numbers reproduce, and the model readout is indeed the weakest. But SUMMARY.md lines 42-44 decline any head-to-head ranking, and Interpretation 3 claims only that the layer-21 signal carries over to RPE1, which holds at 0.789. A signal that derives from the cell sentence is expected, since the cell sentence is the model's input."
+    },
+    {
+      "uid": "B2101:checklist:2:F2",
+      "category": "right_but_no_effect_on_conclusions",
+      "reason": "It is correct that the 87 markers sit inside the expression features and the cell sentences, and that no independent phase reference is used. This weakens the support for Interpretation 2 but does not make it false. The label is a standard tricycle/Revelio marker phase with consistent S/G2M ordering in both lines, and every reported transfer number stands."
+    },
+    {
+      "uid": "B2101:checklist:2:F3",
+      "category": "right_but_no_effect_on_conclusions",
+      "reason": "The gate is lenient (a depth-only readout passes at 0.255 and 67.6 deg), and R_diff is rotation-invariant by construction. But SUMMARY.md reports the rotation separately, and the actual offsets (-4/-2 deg) and raw errors (24/16 deg) confirm the predictions land in the right place, so the conclusions are unaffected; at most the wording is loose."
+    },
+    {
+      "uid": "B2101:checklist:2:F4",
+      "category": "right_but_no_effect_on_conclusions",
+      "reason": "The alpha sensitivity is real: model transfer ranges from 0.591 to 0.821 and retention from 0.82 to 0.92. But every setting stays more than 10x above the 0.043 floor, and the bootstrap CIs are narrow, so 'both readouts transfer' holds; only the exact third-decimal and retention values depend on the choice of alpha."
+    },
+    {
+      "uid": "B2101:checklist:3:F1",
+      "category": "right_but_no_effect_on_conclusions",
+      "reason": "The marker overlap is real: both labels are marker-PCA angles, and the markers are among the readout features. The SUMMARY does not mention it. But the reviewer's own check shows expression with the markers removed still transfers at R_diff 0.839, and the key's RPE1 refit (R_diff 0.909/0.952) confirms the label is a valid cell-cycle phase. The modest Interpretation 2 ('behaves as a cell-cycle label') therefore stands; 'circular' overstates the problem."
+    },
+    {
+      "uid": "B2101:checklist:3:F2",
+      "category": "right_but_no_effect_on_conclusions",
+      "reason": "The baseline built from marker presence in each cell's top-512 genes, with no model, does roughly match the model (grader: transfer about 0.787 vs 0.789). But Interpretation 3 only says the layer-21 signal carries over to RPE1 without refitting, which is true. The SUMMARY never claims the model adds anything beyond its input, and it explicitly declines a head-to-head comparison (Limits, lines 42-44). No stated result changes."
+    },
+    {
+      "uid": "B2418:generic:1:F1",
+      "category": "right_but_no_effect_on_conclusions",
+      "reason": "Most observations are correct. STATE's d90 grows with n (I got 287/454/631 at n=500/1000/2000), its mid-spectrum reproduces poorly between halves, and the SUMMARY leaves out STATE's d90 halves (644-650). Even so, STATE's PR stays around 48-53 at every n versus about 8 and about 2.7 for the others, and it is last on every measure in every half. Its embeddings come from STATE's own dataloader, so Conclusions 3-4 still hold for the cloud as produced."
+    },
+    {
+      "uid": "B2418:generic:1:F2",
+      "category": "right_but_no_effect_on_conclusions",
+      "reason": "Correct, and not acknowledged in the SUMMARY: Geneformer's PC1 tracks genes detected (I measured Spearman 0.993 on the 200 raw cells). But the README defines the endpoint as the compactness of the embedding cloud each model produces, and the key notes PC1 tracks depth in every model. Conclusion 1's PR and PC1-share statements stay true as measured; only the 'cell manifold' wording is loose."
+    },
+    {
+      "uid": "B2418:generic:1:F5",
+      "category": "right_but_no_effect_on_conclusions",
+      "reason": "The facts are right: args.json has trunc_by_sample true, the extractor keeps the top 1,200 genes by count and then bins those, and the models pool over different gene sets. The SUMMARY caveats do not cover this. But the key's re-run of scGPT's own pipeline gives PR 7.73 / PC1 0.297 versus 7.20 / 0.313 here, with per-cell cosine 0.97, so no ranking or conclusion changes."
+    },
+    {
+      "uid": "B2418:generic:2:F1",
+      "category": "right_but_no_effect_on_conclusions",
+      "reason": "The depth correlations are correct (I measured Geneformer PC1 vs n_genes rho 0.99 and STATE 0.97 on 200 cells), and the SUMMARY does not mention depth. But the analysis measures the geometry of the produced embedding cloud, and depth-driven PC1 is expected from mean-pooling in every model. The reviewer concedes the PR ordering survives removing PC1, so Conclusion 1's numbers stand."
+    },
+    {
+      "uid": "B2418:generic:2:F2",
+      "category": "right_but_no_effect_on_conclusions",
+      "reason": "The n-dependence of STATE's d90 is real (I reproduced 287→454→631 for n=500→2000), and the SUMMARY omits STATE's d90 halves. Width effects are already a stated caveat (lines 39-40). Still, STATE is last on d90 in every half (644-650 vs 18-20) and at every n, so 'last on every measure and in every random half' and the ranking hold."
+    },
+    {
+      "uid": "B2418:generic:3:F1",
+      "category": "right_but_no_effect_on_conclusions",
+      "reason": "Reproduced: regressing log UMI and log n_genes out of the 200 raw cells moves Geneformer from PR 2.71 / PC1 0.578 to 6.73 / 0.340, while scGPT goes to 10.59 / 0.198. So even after this adjustment Geneformer stays more compact by PR and PC1 share. The depth axis is unacknowledged but common to all models, and Conclusion 1 about the produced cloud is not overturned."
+    },
+    {
+      "uid": "B2418:checklist:1:F1",
+      "category": "right_but_no_effect_on_conclusions",
+      "reason": "The numbers reproduce exactly: after linear depth residualization on 200 cells, Geneformer goes to PR 6.73 / d90 53 and scGPT to 10.59 / 18. Only d90 flips, and only on a depth-residualized 200-cell subset, which is a different endpoint from the README's stated question (compactness of the cloud each model produces). The stated full-data d90 values (19 vs 20) and Conclusions 1-2 remain true as measured."
+    },
+    {
+      "uid": "B2418:checklist:2:F1",
+      "category": "right_but_no_effect_on_conclusions",
+      "reason": "The correlations are right (I measured Geneformer PC1 vs log n_genes Spearman 0.993), and the reported flip after cubic/quadratic depth regression was reproduced by the grader. But that is a redefined endpoint: a nonlinearly depth-residualized cloud on only 200 cells. The SUMMARY's conclusions are about the embedding cloud as produced, where depth is an expected mean-pooling property shared by all models. The 'cell manifold' wording is loose, but the stated numeric results hold."
+    },
+    {
+      "uid": "B2418:checklist:3:F1",
+      "category": "right_but_no_effect_on_conclusions",
+      "reason": "The depth link is real and unacknowledged (I measured Geneformer PC1 vs n_genes rho 0.99 and STATE 0.97). But the claimed order flip needs a heavy nonlinear depth basis, including truncation caps, on only 200 cells. That measures a different quantity from the README's stated endpoint, the cloud each model produces. Conclusions 1-2 remain correct statements about that cloud."
+    },
+    {
+      "uid": "B2977:generic:1:F4",
+      "category": "right_but_no_effect_on_conclusions",
+      "reason": "The counts check out: ACT_SITE has 1,534 residues in 928 proteins, TRANSIT 73 runs in 73 proteins, and VARIANT's top 5 proteins hold 61% of its positives. But the 1e-3 residue-prevalence floor is a design choice stated in the README with a reason, and the stated results stay true under it: 21 concepts are scored, ACT_SITE (9.6e-4) is really below the floor, and catalytic residues are therefore not scored. Instability of F1 for span concepts, or ACT_SITE flipping in another sample, is argued but not shown."
+    },
+    {
+      "uid": "B3100:generic:3:F5",
+      "category": "right_but_no_effect_on_conclusions",
+      "reason": "It is correct that singles recur across folds. But the sum-only model has no perturbation-identity features, and its per-pair correlation does not depend on the fitted slope magnitude. My inline gene-disjoint checks gave sum-only mean r 0.370 (leave-one-single-out) and 0.364 (singles split into 5 groups) vs the reported 0.370, so claims 2 and 3 do not change. The grader's own check did not support the side claim that shared-single noise feeds the offset."
+    },
+    {
+      "uid": "B4174:generic:1:F2",
+      "category": "right_but_acknowledged",
+      "reason": "README lines 26-28 state the <=40-cysteine rule and say it dropped exactly two test proteins (64 and 41 cysteines), so the exclusion is disclosed. The finding's added claims (post-hoc curation, a change in headline figures) are speculation that the shipped data cannot test, and the rule applies to every scorer."
+    },
+    {
+      "uid": "B4174:generic:2:F1",
+      "category": "right_but_acknowledged",
+      "reason": "The facts are correct (the dropped proteins would add 2,836 pairs), but README lines 26-28 already state the rule and name the two dropped test proteins. The finding itself concedes the result probably holds; that the cap was tuned on test data is speculation."
+    },
+    {
+      "uid": "B4174:generic:3:F1",
+      "category": "right_but_acknowledged",
+      "reason": "The README discloses both the rule and the two dropped test proteins (64 and 41 cysteines). The drop to 0.48-0.69 AP comes from synthetic pairs, not the actual proteins. The finding admits the qualitative conclusion (attention far above chance and above the baselines) survives, and the stated AP is correct for the disclosed test set."
+    },
+    {
+      "uid": "B4174:checklist:3:F1",
+      "category": "right_but_acknowledged",
+      "reason": "The exclusion of the two test proteins (64 and 41 cysteines) by the <=40-cysteine rule is stated in README lines 26-28, and '236 proteins' is the correct count of kept proteins. The zero-skill simulation giving AP of about 0.6 is hypothetical, and the rule applies equally to all scorers, so the comparative conclusions stand."
+    },
+    {
+      "uid": "B4328:generic:1:F1",
+      "category": "right_but_acknowledged",
+      "reason": "The low-power claim reproduces: in my inline scGPT-setting simulation, a second-harmonic loop with a=0.3 gave 26.2/26.8/29.1 deg, all under the null 95th percentile of 29.2, so it was not rejected; a=0.5 was rejected 3/3. However, SUMMARY Conclusion 3 already calls the result a failure to reject with 20 draws and not proof of flatness, and the README gives the p floor. The miscalibration argument (scGPT 22.7 vs 25.6 +- 2.3) is not demonstrated."
+    },
+    {
+      "uid": "B4328:generic:1:F4",
+      "category": "right_but_acknowledged",
+      "reason": "Verified inline: expression without the 87 markers gives linear circ-R2 0.895 (kNN 0.833), and the markers alone give 0.965. SUMMARY Conclusion 2 already says the label is a projection of marker expression, which gives expression a built-in advantage. scGPT (0.892) still does not beat marker-free expression, so 'the models do not add to it' is not contradicted."
+    },
+    {
+      "uid": "B4328:generic:2:F4",
+      "category": "right_but_acknowledged",
+      "reason": "The figures reproduce (0.895 without markers, 0.929 with, scGPT 0.892), but Conclusion 2 explicitly states expression's built-in advantage from the marker-defined label. 'Expression does better' is literally true and robust, and marker-free expression is still at or above scGPT, so the conclusion stands."
+    },
+    {
+      "uid": "B4328:checklist:1:F4",
+      "category": "right_but_no_effect_on_conclusions",
+      "reason": "The numbers at other dimensions reproduce (grader-verified), but kNN beats linear only at 5 PCs, where both readouts fail (about 0.3-0.7). At the analysed 20 PCs, and at 10 and 50 PCs and with unwhitened PCs at 20, linear stays ahead. So Conclusion 1 is not an artifact of whitening or dimension."
+    },
+    {
+      "uid": "B4328:checklist:3:F4",
+      "category": "right_but_acknowledged",
+      "reason": "Verified inline: without the 87 markers expression gives 0.895 linear / 0.833 kNN, and the markers alone give 0.965. But Conclusion 2 already states the built-in advantage from the marker-based label, and 'expression does better' is literally true. 'Target leakage' overstates a design limitation the package acknowledges, and the models still do not exceed marker-free expression."
+    },
+    {
+      "uid": "B4481:generic:1:F1",
+      "category": "right_but_no_effect_on_conclusions",
+      "reason": "The numbers reproduce: VARIANT has 141 proteins, the top 5 hold 61% and the top 10 hold 85%, and long 'Missing' spans such as SMAD6 14..496 'Missing (in AOVD2)' supply most positives. The SUMMARY does not mention this. However, these features really do span those residues, so under the README's rule ('which FT keys cover that residue') the labels, the 21-concept count and Conclusion 3 (two variation keys scored as the control) all stand. The concentration is a caveat for downstream use."
+    },
+    {
+      "uid": "B4481:generic:2:F1",
+      "category": "right_but_no_effect_on_conclusions",
+      "reason": "The descriptive points are correct and not acknowledged: about 84% of VARIANT residues come from 'Missing' ranges, and the top 10 proteins hold 85% of positives. But 'should be 20' only follows if the label is redefined to point sites. A deletion or truncation range genuinely covers those residues, so the stated count of 21 (matching build_log) and Conclusion 3 do not change."
+    },
+    {
+      "uid": "B4481:generic:3:F1",
+      "category": "right_but_no_effect_on_conclusions",
+      "reason": "The recomputation is accurate: the long nested 'Missing' ranges (13 in SMAD6 ending at 496, MYBPP 518..984 and others) dominate VARIANT, and the SUMMARY is silent about it. Range-filling is still the correct reading of these UniProt features, so the headline of 21 concepts and the 'control in place' conclusion still hold under the stated rule. This is a caveat about how good the control is, not an error in a stated result."
+    },
+    {
+      "uid": "B4481:generic:3:F4",
+      "category": "right_but_acknowledged",
+      "reason": "ACT_SITE has 1,534 residues in 928 proteins (verified). However, README lines 18-19 state the 1e-3 floor and its rationale as a design choice. SUMMARY lines 55-56 say ACT_SITE 'sits just under the floor' and that 'Catalytic residues are therefore not tested'. Preferring a protein-count criterion is a design preference against a disclosed rule."
+    },
+    {
+      "uid": "B4481:checklist:1:F2",
+      "category": "right_but_no_effect_on_conclusions",
+      "reason": "Verified: only 307 proteins (6.8% of residues) carry any HELIX/STRAND/TURN feature, and within them HELIX prevalence is 0.288. Neither README nor SUMMARY mentions that unannotated residues count as negatives. This is an inherent limitation of using UniProt as ground truth: it caps absolute F1 for 3 of the 21 concepts but does not change any count or prevalence (prevalence is defined over all residues). Nor does it overturn 'the label set is usable' for comparing features."
+    },
+    {
+      "uid": "B4481:checklist:1:F3",
+      "category": "right_but_no_effect_on_conclusions",
+      "reason": "The protein-level bootstrap reproduces: exactly 21 concepts clear the floor in 73% of resamples, P(ACT_SITE) = 0.09, P(MOD_RES) = 0.956 and P(CONFLICT) = 0.846. The clustering and redundancy points are not acknowledged. But the floor is applied deterministically to the stated corpus, the SUMMARY already flags ACT_SITE, DISULFID and MOD_RES as near the floor, and no stated count or conclusion changes."
+    },
+    {
+      "uid": "B4481:checklist:2:F1",
+      "category": "right_but_no_effect_on_conclusions",
+      "reason": "The counts are correct and unacknowledged: 31 ranged VARIANT features, 591 point-only positions, and the top 10 proteins hold 84.8% of positives. But 'these residues are not variant positions' misreads UniProt 'Missing' ranges, which do cover the deleted residues. So the stated 21 concepts and Conclusion 3 hold under the package's label definition. The concern about how good the control is matters for downstream use only."
+    },
+    {
+      "uid": "B4481:checklist:2:F3",
+      "category": "right_but_acknowledged",
+      "reason": "The sweep reproduces (23/21/16 concepts at 5e-4/1e-3/2e-3), as do the bootstrap probabilities. But the floor and its rationale are stated in the README. The SUMMARY explicitly says ACT_SITE is just under the floor so catalytic residues are 'therefore not tested', and that DISULFID and MOD_RES are just above it. So the fragility and the ACT_SITE consequence are disclosed, and no stated result changes."
+    },
+    {
+      "uid": "B4481:checklist:3:F1",
+      "category": "right_but_no_effect_on_conclusions",
+      "reason": "The rebuild is correct: 591 point VARIANT positions, 85% of positives in the top 10 proteins, and SMAD6 'Missing' ranges. None of this is in the SUMMARY. But the ranges are genuine deletion and truncation spans, so filling them is consistent with the stated label rule. Conclusion 3 only says two variation keys are scored as the control, which is true. MUTAGEN is not scored, so its enrichment at functional sites affects no conclusion."
+    },
+    {
+      "uid": "B4481:checklist:3:F3",
+      "category": "right_but_acknowledged",
+      "reason": "The figures are correct: ACT_SITE has 1,534 residues over 928 proteins, and bootstrap P(clears floor) is 0.09 for ACT_SITE, 0.85 for CONFLICT and 0.96 for MOD_RES. But the 1e-3 rule is a documented design choice (README lines 18-19), and the SUMMARY openly states the knife-edge cases: ACT_SITE just under, DISULFID and MOD_RES just above, and that catalytic residues are therefore not tested. No stated result changes."
+    },
+    {
+      "uid": "B4668:checklist:1:F7",
+      "category": "right_but_no_effect_on_conclusions",
+      "reason": "My sweep confirms the reviewer's numbers: K562 within-TF p is never below 0.05 (lowest about 0.07 at the top 10%), RPE1 TF-bootstrap CIs include 1 at every cut, and MYC supplies 138 of the K562 top-10% edges. However, the K562 Fisher association is significant at every cut from top 30% to top 3% (p 0.0048 to 7.7e-5), and the top-10% p values survive Bonferroni over six tests. So the headline ORs are not a product of cut selection or multiplicity. The TF-level weakness at 10% is already reported in SUMMARY Interpretation 3."
+    },
+    {
+      "uid": "B6874:generic:1:F1",
+      "category": "right_but_no_effect_on_conclusions",
+      "reason": "The sensitivity points are correct: the S vs G2M two-block structure dominates circ_corr, and coarse or noisy labels score about 0.98. But the finding's own within-group shuffle null (and my rerun: median 0.795, 95th percentile 0.856, max 0.94, observed 0.983) shows the real label beats a null that keeps the S/G2M split. So Conclusions 1-3, that the labels agree across lines, still stand; only the test's power is overstated."
+    },
+    {
+      "uid": "B6874:generic:2:F1",
+      "category": "right_but_no_effect_on_conclusions",
+      "reason": "Rotation invariance is correct (I reproduced 0.9832 at +45/90/180 deg). But SUMMARY also reports the 15-deg median difference, which does respond to offset (50/95/165 deg). Downstream R_diff ignores a fixed rotation anyway. The finding's own arbitrary PC projections (median 0.906) fall below 0.983, so the claim that a high value is 'nearly guaranteed' is overstated and the agreement conclusion stands."
+    },
+    {
+      "uid": "B6874:generic:3:F1",
+      "category": "right_but_no_effect_on_conclusions",
+      "reason": "The marker overlap (31/43 genes) and the absence of a reported null are both correct. But the finding's own within-cluster null (and mine: 95th percentile 0.856, max 0.94) sits well below 0.983. A crude S/G2M-score angle is still a valid phase label, so its matching score shows robustness, not a failed test. Cross-line agreement holds."
+    },
+    {
+      "uid": "B6874:generic:3:F3",
+      "category": "right_but_no_effect_on_conclusions",
+      "reason": "It is true that S peak = 45/45 and 'same direction' are conventions set by phase_angle's flip and rotation; the B6874 README does not mention this. But the claim that much of the 15-deg median is imposed is overstated: the best-rotation median is 12.9 deg (I recomputed it), so the anchor adds only about 2 deg, and |circ_corr| is 0.983 regardless of orientation."
+    },
+    {
+      "uid": "B6874:checklist:1:F1",
+      "category": "right_but_no_effect_on_conclusions",
+      "reason": "The insensitivity results are plausible and partly reproduced (3-state label about 0.98, per-cell noise barely moves circ_corr). But these corruptions affect per-cell precision, not whether the label means the same thing in both lines, which is what the check claims. Meaning-changing distortions do lower the score, and the real label beats a within-group null (p < 1/2000 in my rerun), so Conclusion 3 is not overturned."
+    },
+    {
+      "uid": "B6874:checklist:2:F4",
+      "category": "right_but_no_effect_on_conclusions",
+      "reason": "Several parts are correct and not acknowledged: rotation invariance, Whitfield degrees never used, and a real compression (signed RPE1-K562 offset +22 deg for S genes, -6.5 deg for G2M; within-group Spearman 0.80/0.61). But the best-rotation median is still 12.9 deg, and the Whitfield differences partly mix zero conventions. A rotation-invariant transfer score on this label still measures the readout, so the conclusions stand, with 'same ruler' slightly overstated."
+    },
+    {
+      "uid": "B6874:checklist:2:F5",
+      "category": "right_but_no_effect_on_conclusions",
+      "reason": "Cell line is confounded with experiment/batch (separate Replogle screens), so 'not across batch' in Conclusion 4 is an overstatement. The processing differences are real, and README lines 21-24 already acknowledge the normalisation and panel differences. But Conclusion 4 is a forward-looking scope remark, and the finding itself shows renormalising or using common markers leaves 0.98/15 deg unchanged. No phase-agreement result changes."
+    },
+    {
+      "uid": "B7148:checklist:3:F5",
+      "category": "right_but_no_effect_on_conclusions",
+      "reason": "The facts reproduce: a markers-only ridge gets 0.918, all genes except markers 0.839, and about 8 markers sit in an average RPE1 top-512. But taking markers out of all arms makes the input-format loss larger, not smaller (in the B7392 code: full 0.839 vs rank 0.663). So the loss is not an artifact of the marker-built label. 'Before the first layer' is wording for the input-encoding baselines and changes no result. (This finding does not touch the package's documented shared-gene selection error.)"
+    },
+    {
+      "uid": "B7392:generic:1:F6",
+      "category": "right_but_no_effect_on_conclusions",
+      "reason": "It is correct that the label is built from marker genes that are also features, and the drops reproduce (full 0.878 to 0.839, rank 0.792 to 0.663). But removing markers from every arm widens the full-minus-rank gap to 0.177 (from 0.087), and the model and rank arms see the same marker genes. So Conclusion 1 (parity) and Conclusion 2, that the tokenizer causes the loss, are not undermined."
+    },
+    {
+      "uid": "B7392:generic:2:F5",
+      "category": "factually_wrong",
+      "reason": "The specific claim that circularity inflates the tokenisation loss (about 45% of 0.087) is wrong. It takes markers out of expr_full only. Taking them out of all arms gives full 0.839, mag 0.738, rank 0.663 (my rerun), a loss of 0.177, so markers shrink the magnitude advantage rather than create it."
+    },
+    {
+      "uid": "B7392:generic:3:F6",
+      "category": "right_but_no_effect_on_conclusions",
+      "reason": "The premise is correct: the label comes from marker PCA, markers are features, and K562 and RPE1 use 87 vs 93 markers. But with markers removed from every arm the ladder persists and widens (full 0.839 > mag 0.738 > rank 0.663; decomposition 0.101 + 0.075). So the tokenisation-loss decomposition and the fair-baseline argument do not rest on circularity, and the parity conclusion is unaffected."
+    },
+    {
+      "uid": "B7392:checklist:1:F6",
+      "category": "right_but_no_effect_on_conclusions",
+      "reason": "The facts check out: 87 and 93 markers, PC1-PC2 variance 0.306 and 0.349, and a median of 9 (K562) and 7 (RPE1) markers in each cell's top-512. But the claimed inflation of the tokenisation loss does not hold. With the markers removed from all arms, expr_full scores 0.839 and expr_512_rank 0.663, so the loss grows to 0.177 from 0.087. The parity contrast also compares two arms that see the same marker genes."
+    },
+    {
+      "uid": "B7392:checklist:2:F6",
+      "category": "right_but_no_effect_on_conclusions",
+      "reason": "The descriptive points are true: 87 vs 93 markers, PC1-PC2 at 30.6% and 34.9%, and the K562 axis flipped (info flipped=True vs False). But the orientation is set from marker biology (S/G2M peaks at 45/153.8 and 45/142.1 deg) and R_diff ignores rotation. Removing the markers widens the tokenisation and value-dropping losses (non-marker arms: full 0.839, mag 0.738, rank 0.663), so the claimed bias toward arms that carry magnitudes is not borne out."
+    },
+    {
+      "uid": "B7392:checklist:3:F6",
+      "category": "right_but_no_effect_on_conclusions",
+      "reason": "The circularity is real, and I reproduced the reviewer's numbers: marker-only expr 0.918, non-marker expr 0.839 and rank 0.663. But that evidence argues against the claim. Without markers the tokenisation loss is 0.177, twice the reported 0.087, and the markers help the rank arm (+0.13) more than the full arm (+0.04). So the attribution of the gap to the tokenizer in Conclusion 2 stands."
+    },
+    {
+      "uid": "B8045:generic:1:F1",
+      "category": "right_but_no_effect_on_conclusions",
+      "reason": "There is indeed no null or random-model representation, and the SUMMARY does not mention this. But claim #3 ('adds nothing beyond it') is the conservative reading and fits STATE 0.894 < expression 0.929. A random-map baseline that also keeps phase would back 'adds nothing' rather than refute 'STATE keeps it'."
+    },
+    {
+      "uid": "B8045:generic:1:F2",
+      "category": "right_but_acknowledged",
+      "reason": "I reproduced the numbers: expression without the 87 markers scores 0.895 vs STATE 0.894. But SUMMARY lines 33-34 already say the markers are among the expression genes, that the probe favours expression, and that the expression number is an upper reference (cc_common.py says the same). 'Expression does at least as well' still holds without the markers."
+    },
+    {
+      "uid": "B8045:generic:1:F3",
+      "category": "right_but_no_effect_on_conclusions",
+      "reason": "Line structure is in phi: a cell-line one-hot alone predicts it at 0.260. Pooling is disclosed (SUMMARY line 35) but its effect is not assessed. Still, rerunning the whole pipeline within each line gives STATE 0.938/0.906/0.859/0.930 and expression 0.943/0.934/0.914/0.950, at or above the pooled headline, so 'inflated' is not borne out and the conclusions stand."
+    },
+    {
+      "uid": "B8045:generic:1:F4",
+      "category": "right_but_acknowledged",
+      "reason": "SUMMARY lines 31-32 and README lines 49-50 state that STATE-SE got log1p rather than raw counts and that this is off its training distribution. The caveat says the shift 'could weaken' the signal, not 'only' weaken it. The extraction scripts being non-runnable is stated and by design."
+    },
+    {
+      "uid": "B8045:generic:3:F1",
+      "category": "right_but_no_effect_on_conclusions",
+      "reason": "The extra baselines are real: I confirmed binary detection 0.915 and expression without markers 0.895. 0.894/0.929 = 0.96 is correct arithmetic. The 3-class value is an oracle built from the same markers, not a null (the shuffled null is about -0.02). Expression without markers matching STATE backs 'close to expression' and 'adds nothing beyond', so no conclusion changes."
+    },
+    {
+      "uid": "B8045:checklist:1:F1",
+      "category": "factually_wrong",
+      "reason": "A PCA angle from random genes is a different, line-driven target, not a null for the cell-cycle phi. The proper shuffled-phi null is about -0.02, and line alone predicts phi at only 0.26. Within each line STATE scores 0.86-0.94 against the reviewer's own within-line nulls of 0.43-0.66, so the claim that 0.894 does not show a readable cell-cycle signal is false."
+    },
+    {
+      "uid": "B8045:checklist:1:F2",
+      "category": "right_but_no_effect_on_conclusions",
+      "reason": "The facts are correct: line one-hot 0.26 and per-line differences in phi and phase mix. The pooling itself is disclosed at SUMMARY line 35. The reviewer's own full within-line rerun (STATE 0.938/0.906/0.859/0.930, expression 0.943/0.934/0.914/0.950; I reproduced it) matches or beats the pooled headline, so line identity does not prop up any stated conclusion."
+    },
+    {
+      "uid": "B8045:checklist:1:F3",
+      "category": "right_but_no_effect_on_conclusions",
+      "reason": "The baselines reproduce: expression without markers 0.895, binary detection 0.915. The SUMMARY never says STATE beats simple input maps; it says STATE 'adds nothing beyond' expression and 'expression does at least as well'. 'Do not wash out' is literally supported by the 0.894, and random mean-pools keeping the signal is consistent with it."
+    },
+    {
+      "uid": "B8045:checklist:2:F1",
+      "category": "right_but_no_effect_on_conclusions",
+      "reason": "The baselines reproduce: an untrained random-vector mean-pool scores 0.834 and expression without the markers 0.895, against STATE at 0.894. But SUMMARY.md only claims layer 11 'holds' and 'keeps' a readable phase and 'adds nothing beyond' expression; it never says the model learned it. The missing floors are not stated in the package, but they do not change any stated claim."
+    },
+    {
+      "uid": "B8045:checklist:2:F2",
+      "category": "right_but_acknowledged",
+      "reason": "Confirmed: expression without the 87 markers gives 0.895, the same as STATE's 0.894. The SUMMARY caveat (lines 33-34) already says phi is built from markers that are among the expression genes, that 'the probe favours expression', and that the expression number is 'an upper reference, not an equal rival'. 'Expression does at least as well' still holds after the correction."
+    },
+    {
+      "uid": "B8045:checklist:3:F1",
+      "category": "right_but_no_effect_on_conclusions",
+      "reason": "The cell-line confound is real (cell line alone predicts phi at about 0.26), and SUMMARY.md states the pooling only as a bare caveat, without measuring it. Within each line, decodability stays high (my check: STATE 0.79-0.89, expression 0.87-0.91 per line; the reviewer's own re-scored values are 0.86-0.95), so 'readable phase, close to expression' is unchanged."
+    },
+    {
+      "uid": "B8045:checklist:3:F4",
+      "category": "right_but_acknowledged",
+      "reason": "Confirmed: marker-free expression gives 0.895, about equal to STATE's 0.894, so the 0.035 gap comes from the marker circularity. The SUMMARY caveat explicitly says the probe favours expression and that expression is an upper reference, and 0.894/0.929 = 0.96 is correct arithmetic. The claim that the mechanism is wrong and that STATE reads the detected-gene count is interpretation or speculation, not shown to change a result."
+    },
+    {
+      "uid": "B8104:generic:3:F2",
+      "category": "real_problem_key_missed",
+      "reason": "Verified: 214 of 429 K562 TFs (3,314 edges, 233 of 836 top-decile edges) have no measured own gene, and their edges behave like noise (top-10% OR about 1.2). Restricting to TFs with a verifiable knockdown gives top-10% OR 3.4-4.05, a within-TF shuffle p of 0.006-0.021 and a TF-resampled CI of about 1.9-10. That undermines the stated K562 reading that 'edge-by-edge information is not clearly shown' and the 'fragile once edges are grouped by TF' conclusion, although in the conservative direction. The claim that 'all'-edge estimates are pulled toward 1 does not hold (restricted OR 1.07)."
+    },
+    {
+      "uid": "B8104:checklist:1:F1",
+      "category": "real_problem_key_missed",
+      "reason": "Reproduced: measured-TF top-10% OR 3.37 with within-TF p 0.010 (0.021 when the decile is re-cut) and TF CI 1.9-6.4; unmeasured-TF OR 1.18 (p 0.74). Nearly half the scored TFs have no checkable knockdown and contribute pure dilution. That is not acknowledged anywhere, and it overturns the SUMMARY's K562 conclusion that edge-level agreement is 'not clearly shown' and 'fragile once edges are grouped by TF', although it makes the result stronger, not weaker."
+    },
+    {
+      "uid": "B8104:checklist:1:F2",
+      "category": "right_but_acknowledged",
+      "reason": "Correct: without MYC, RPE1 top-10% OR is 1.64 (Fisher p 0.42, within-TF p 0.62). SUMMARY.md already says RPE1 'rests on 26 TFs and 24 inhibition edges, with MYC supplying 44% of the edges', that its TF-resampled CI (0.71-14.25) includes 1, that the result is 'fragile once edges are grouped by TF', and that the two lines are 'not an independent replication'."
+    },
+    {
+      "uid": "B8104:checklist:2:F1",
+      "category": "right_but_acknowledged",
+      "reason": "The leave-MYC-out collapse (OR 1.64, p 0.42) is correct and is listed in the key's known facts. The SUMMARY already flags MYC's 44% share, the TF-resampled CI that includes 1 (0.71-14.25), the fragility once edges are grouped by TF, and that the second line is not an independent replication. So the RPE1 claims are hedged, not overclaimed."
+    },
+    {
+      "uid": "B8104:checklist:2:F2",
+      "category": "real_problem_key_missed",
+      "reason": "Verified: 233 of the 836 K562 top-decile edges come from unmeasured TFs and 187 from TFs with own z >= -0.2; MYC's own z is -0.03. Keeping TFs with own z < -0.2 gives OR 4.05 (Fisher p 1.6e-5), a within-TF null median of 2.14 with p of about 0.009-0.017, and a TF CI of about 2.1-10. So the unacknowledged lack of a knockdown or expression filter is what makes K562 look 'not clearly shown' and 'fragile' at the edge level; the stated K562 interpretation changes, although in the conservative direction."
+    },
+    {
+      "uid": "B8104:checklist:3:F4",
+      "category": "factually_wrong",
+      "reason": "The within-TF null correctly permutes signs among each TF's edges within the stratum, as the docstring describes. TFs with a single label in the stratum rightly carry no within-TF contrast. The reviewer's alternative null (shuffle over all of a TF's edges, then stratify; I get K562 p 0.012) also breaks the link between label and response size, so it is not a cleaner test. Its own stratified (Mantel-Haenszel) test supports the summary: K562 OR 1.51, p about 0.10; RPE1 OR 4.2, p about 0.003-0.008."
+    },
+    {
+      "uid": "B8827:checklist:3:F2",
+      "category": "right_but_no_effect_on_conclusions",
+      "reason": "The protein clustering is real: CO6_PANTR supplies 64 of 146 split-B positives, and the protein-level CI is wide. But dropping that protein still gives F1 0.556, which passes, and per the key DISULFID passes with the splits swapped (0.746) with the same winning feature, so 'clear detector' survives. The caveat already notes that rare-concept F1 values are less precise."
+    },
+    {
+      "uid": "B8833:generic:1:F1",
+      "category": "right_but_no_effect_on_conclusions",
+      "reason": "The numbers reproduce on the 200 raw cells: r(PC1, log UMI) is 0.951/0.914/0.977, depth R2 is 0.70/0.58/0.12, and after residualising, PR goes 1.69->2.72 and 2.71->6.73. SUMMARY never mentions depth. But the model order survives depth control (scGPT 2.72 < Geneformer 6.73 < STATE 84.5), and PC1 tracks depth in every model, including correctly binned scGPT. So depth does not overturn the geometric conclusions; the actual error is scGPT's raw-count input."
+    },
+    {
+      "uid": "B8833:generic:2:F2",
+      "category": "right_but_no_effect_on_conclusions",
+      "reason": "I reproduced the claims: PC1-depth r is 0.951/0.914/0.977, and after depth regression scGPT goes PC1 0.757->0.574, PR 1.69->2.72, d90 3->7. SUMMARY does not mention depth. The scGPT < Geneformer < STATE order still holds after residualisation, and the depth axis also appears with correct binned input (key: binned scGPT PR 8.11, |rho| 0.69). So it does not explain or overturn any stated result."
+    },
+    {
+      "uid": "B8833:generic:3:F1",
+      "category": "right_but_no_effect_on_conclusions",
+      "reason": "The correlations and residualisation numbers are correct (I reproduced R2 0.702/0.584/0.124, scGPT PR 1.69->2.72 and Geneformer PC1 0.578->0.340), and the SUMMARY does not acknowledge depth. But the cloud geometry and the model order (Conclusions 1, 2, 4) are unchanged after depth control. The depth axis is generic to mean-pooling in all models, while the scGPT collapse comes from the unbinned input, which the finding does not identify."
+    },
+    {
+      "uid": "B8833:checklist:1:F2",
+      "category": "right_but_no_effect_on_conclusions",
+      "reason": "The depth correlations and residualised PR, PC1 and d90 numbers reproduce, and SUMMARY lines 25-42 never mention depth, so the observation is correct and unacknowledged. The finding itself states that the model order survives residualisation, so calling it a critical flaw overstates it; no stated ranking or number changes because of depth."
+    },
+    {
+      "uid": "B8833:checklist:3:F1",
+      "category": "right_but_no_effect_on_conclusions",
+      "reason": "The numbers are accurate: depth R2 0.70/0.58/0.12, PC1 cell-type eta2 0.089/0.056/0.058, between-type variance 4-7%, all reproduced. Depth is not acknowledged. But even after removing depth, scGPT stays the most compact (PR 2.72 vs 6.73 vs 84.5), so the confound does not change the stated ranking. The headline is wrong because of the raw-count scGPT input, not because of depth."
+    }
+  ],
+  "workflowProgress": [
+    {
+      "type": "workflow_phase",
+      "index": 1,
+      "title": "Classify"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 1,
+      "label": "posthoc:0-10",
+      "phaseIndex": 1,
+      "phaseTitle": "Classify",
+      "agentId": "a1f04fdc8898e6ecf",
+      "agentType": "Explore",
+      "model": "claude-opus-5-5",
+      "state": "done",
+      "startedAt": 1790933848416,
+      "queuedAt": 1790933848392,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "Post-hoc classification task. The JSON file <EVAL_ROOT>/studyB/results/false_alarms_for_posthoc.json is a list of rows; handle ONLY rows with list index 0 to 10 (0-based, inclusive). Each row is a finding from an independent review of an analysis package in <CODE_ROOT>/analysis-tasks/<item>/ (README, code, data, outputs, SUMMARY.md);…",
+      "promptFramed": true,
+      "lastProgressAt": 1790933956273,
+      "tokens": 73402,
+      "toolCalls": 10,
+      "durationMs": 107845,
+      "resultPreview": "{\"rows\":[{\"uid\":\"B1249:generic:2:F3\",\"category\":\"right_but_no_effect_on_conclusions\",\"reason\":\"The near-duplicate pairs are real: I re-ran difflib and got Q47450/A0A0H2VAQ6 0.979, B1JDQ5/A5VYT2 0.974 and P60311/P83345 0.833, and the README only claims the split is disjoint by protein. But dropping the five test proteins leaves L32H13's test AP almost unchanged (0.718 to 0.715), and only one parame…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 2,
+      "label": "posthoc:11-21",
+      "phaseIndex": 1,
+      "phaseTitle": "Classify",
+      "agentId": "aaa7b2bc9f52de2f8",
+      "agentType": "Explore",
+      "model": "claude-opus-5-5",
+      "state": "done",
+      "startedAt": 1790933848418,
+      "queuedAt": 1790933848392,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "Post-hoc classification task. The JSON file <EVAL_ROOT>/studyB/results/false_alarms_for_posthoc.json is a list of rows; handle ONLY rows with list index 11 to 21 (0-based, inclusive). Each row is a finding from an independent review of an analysis package in <CODE_ROOT>/analysis-tasks/<item>/ (README, code, data, outputs, SUMMARY.md)…",
+      "promptFramed": true,
+      "lastProgressAt": 1790933980453,
+      "tokens": 70063,
+      "toolCalls": 9,
+      "durationMs": 132024,
+      "resultPreview": "{\"rows\":[{\"uid\":\"B2101:checklist:3:F1\",\"category\":\"right_but_no_effect_on_conclusions\",\"reason\":\"The marker overlap is real: both labels are marker-PCA angles, and the markers are among the readout features. The SUMMARY does not mention it. But the reviewer's own check shows expression with the markers removed still transfers at R_diff 0.839, and the key's RPE1 refit (R_diff 0.909/0.952) confirms …"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 3,
+      "label": "posthoc:22-32",
+      "phaseIndex": 1,
+      "phaseTitle": "Classify",
+      "agentId": "ad8c716d698410917",
+      "agentType": "Explore",
+      "model": "claude-opus-5-5",
+      "state": "done",
+      "startedAt": 1790933848420,
+      "queuedAt": 1790933848392,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "Post-hoc classification task. The JSON file <EVAL_ROOT>/studyB/results/false_alarms_for_posthoc.json is a list of rows; handle ONLY rows with list index 22 to 32 (0-based, inclusive). Each row is a finding from an independent review of an analysis package in <CODE_ROOT>/analysis-tasks/<item>/ (README, code, data, outputs, SUMMARY.md)…",
+      "promptFramed": true,
+      "lastProgressAt": 1790934058376,
+      "tokens": 92184,
+      "toolCalls": 19,
+      "durationMs": 209947,
+      "resultPreview": "{\"rows\":[{\"uid\":\"B2977:generic:1:F4\",\"category\":\"right_but_no_effect_on_conclusions\",\"reason\":\"The counts check out: ACT_SITE has 1,534 residues in 928 proteins, TRANSIT 73 runs in 73 proteins, and VARIANT's top 5 proteins hold 61% of its positives. But the 1e-3 residue-prevalence floor is a design choice stated in the README with a reason, and the stated results stay true under it: 21 concepts ar…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 4,
+      "label": "posthoc:33-43",
+      "phaseIndex": 1,
+      "phaseTitle": "Classify",
+      "agentId": "a02984b448a974b66",
+      "agentType": "Explore",
+      "model": "claude-opus-5-5",
+      "state": "done",
+      "startedAt": 1790933848421,
+      "queuedAt": 1790933848393,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "Post-hoc classification task. The JSON file <EVAL_ROOT>/studyB/results/false_alarms_for_posthoc.json is a list of rows; handle ONLY rows with list index 33 to 43 (0-based, inclusive). Each row is a finding from an independent review of an analysis package in <CODE_ROOT>/analysis-tasks/<item>/ (README, code, data, outputs, SUMMARY.md)…",
+      "promptFramed": true,
+      "lastProgressAt": 1790934127748,
+      "tokens": 99710,
+      "toolCalls": 13,
+      "durationMs": 279318,
+      "resultPreview": "{\"rows\":[{\"uid\":\"B4481:generic:1:F1\",\"category\":\"right_but_no_effect_on_conclusions\",\"reason\":\"The numbers reproduce: VARIANT has 141 proteins, the top 5 hold 61% and the top 10 hold 85%, and long 'Missing' spans such as SMAD6 14..496 'Missing (in AOVD2)' supply most positives. The SUMMARY does not mention this. However, these features really do span those residues, so under the README's rule ('wh…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 5,
+      "label": "posthoc:44-54",
+      "phaseIndex": 1,
+      "phaseTitle": "Classify",
+      "agentId": "ad485a8582c80ed18",
+      "agentType": "Explore",
+      "model": "claude-opus-5-5",
+      "state": "done",
+      "startedAt": 1790933848422,
+      "queuedAt": 1790933848393,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "Post-hoc classification task. The JSON file <EVAL_ROOT>/studyB/results/false_alarms_for_posthoc.json is a list of rows; handle ONLY rows with list index 44 to 54 (0-based, inclusive). Each row is a finding from an independent review of an analysis package in <CODE_ROOT>/analysis-tasks/<item>/ (README, code, data, outputs, SUMMARY.md)…",
+      "promptFramed": true,
+      "lastProgressAt": 1790934123282,
+      "tokens": 90506,
+      "toolCalls": 12,
+      "durationMs": 274853,
+      "resultPreview": "{\"rows\":[{\"uid\":\"B6874:generic:1:F1\",\"category\":\"right_but_no_effect_on_conclusions\",\"reason\":\"The sensitivity points are correct: the S vs G2M two-block structure dominates circ_corr, and coarse or noisy labels score about 0.98. But the finding's own within-group shuffle null (and my rerun: median 0.795, 95th percentile 0.856, max 0.94, observed 0.983) shows the real label beats a null that keeps…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 6,
+      "label": "posthoc:55-65",
+      "phaseIndex": 1,
+      "phaseTitle": "Classify",
+      "agentId": "a256a1a945477f5eb",
+      "agentType": "Explore",
+      "model": "claude-opus-5-5",
+      "state": "done",
+      "startedAt": 1790933848423,
+      "queuedAt": 1790933848393,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "Post-hoc classification task. The JSON file <EVAL_ROOT>/studyB/results/false_alarms_for_posthoc.json is a list of rows; handle ONLY rows with list index 55 to 65 (0-based, inclusive). Each row is a finding from an independent review of an analysis package in <CODE_ROOT>/analysis-tasks/<item>/ (README, code, data, outputs, SUMMARY.md)…",
+      "promptFramed": true,
+      "lastProgressAt": 1790934035637,
+      "tokens": 82825,
+      "toolCalls": 10,
+      "durationMs": 187208,
+      "resultPreview": "{\"rows\":[{\"uid\":\"B7392:checklist:1:F6\",\"category\":\"right_but_no_effect_on_conclusions\",\"reason\":\"The facts check out: 87 and 93 markers, PC1-PC2 variance 0.306 and 0.349, and a median of 9 (K562) and 7 (RPE1) markers in each cell's top-512. But the claimed inflation of the tokenisation loss does not hold. With the markers removed from all arms, expr_full scores 0.839 and expr_512_rank 0.663, so th…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 7,
+      "label": "posthoc:66-76",
+      "phaseIndex": 1,
+      "phaseTitle": "Classify",
+      "agentId": "a9152117a97c18e66",
+      "agentType": "Explore",
+      "model": "claude-opus-5-5",
+      "state": "done",
+      "startedAt": 1790933848424,
+      "queuedAt": 1790933848393,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "Post-hoc classification task. The JSON file <EVAL_ROOT>/studyB/results/false_alarms_for_posthoc.json is a list of rows; handle ONLY rows with list index 66 to 76 (0-based, inclusive). Each row is a finding from an independent review of an analysis package in <CODE_ROOT>/analysis-tasks/<item>/ (README, code, data, outputs, SUMMARY.md)…",
+      "promptFramed": true,
+      "lastProgressAt": 1790934128978,
+      "tokens": 98110,
+      "toolCalls": 13,
+      "durationMs": 280549,
+      "resultPreview": "{\"rows\":[{\"uid\":\"B8045:checklist:2:F1\",\"category\":\"right_but_no_effect_on_conclusions\",\"reason\":\"The baselines reproduce: an untrained random-vector mean-pool scores 0.834 and expression without the markers 0.895, against STATE at 0.894. But SUMMARY.md only claims layer 11 'holds' and 'keeps' a readable phase and 'adds nothing beyond' expression; it never says the model learned it. The missing flo…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 8,
+      "label": "posthoc:77-81",
+      "phaseIndex": 1,
+      "phaseTitle": "Classify",
+      "agentId": "a25b576ff5358e874",
+      "agentType": "Explore",
+      "model": "claude-opus-5-5",
+      "state": "done",
+      "startedAt": 1790933848427,
+      "queuedAt": 1790933848393,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "Post-hoc classification task. The JSON file <EVAL_ROOT>/studyB/results/false_alarms_for_posthoc.json is a list of rows; handle ONLY rows with list index 77 to 81 (0-based, inclusive). Each row is a finding from an independent review of an analysis package in <CODE_ROOT>/analysis-tasks/<item>/ (README, code, data, outputs, SUMMARY.md)…",
+      "promptFramed": true,
+      "lastProgressAt": 1790933911979,
+      "tokens": 53980,
+      "toolCalls": 6,
+      "durationMs": 63549,
+      "resultPreview": "{\"rows\":[{\"uid\":\"B8833:generic:1:F1\",\"category\":\"right_but_no_effect_on_conclusions\",\"reason\":\"The numbers reproduce on the 200 raw cells: r(PC1, log UMI) is 0.951/0.914/0.977, depth R2 is 0.70/0.58/0.12, and after residualising, PR goes 1.69->2.72 and 2.71->6.73. SUMMARY never mentions depth. But the model order survives depth control (scGPT 2.72 < Geneformer 6.73 < STATE 84.5), and PC1 tracks de…"
+    }
+  ],
+  "totalTokens": 660780,
+  "totalToolCalls": 92
+}

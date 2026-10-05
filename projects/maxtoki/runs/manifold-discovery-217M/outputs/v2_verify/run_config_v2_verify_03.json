@@ -1,0 +1,15 @@
+{
+  "script": "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/v2_verify_03_size_matched_trust.py",
+  "script_sha256": "6828bc37368388e1bf0f46634141eb21b1e93cc7394c241213157e9312ea609f",
+  "written_at": "2026-10-01 06:43:48",
+  "seeds": "default_rng([31415, panel_code, size]); codes internal 1, external 2, zeroshot 3, lung_nonhema 4",
+  "inputs": {
+    "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/artifacts/anchors/centroids_internal.npy": "05f22f34619d0fb776d7e307365d6a854b0f1b350303447845efdc599778808f",
+    "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/artifacts/anchors/centroids_external.npy": "c8446e87cb644dc3c1bd1bd6315d9aa0ae8f818ba06049bf5f5867821d7da038",
+    "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/artifacts/anchors/centroids_zeroshot.npy": "515096f0164dc3873cf8d0c8bb8abf19c1fff07918f240ccf24984898d67d940",
+    "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/artifacts/anchors/centroids_lung_nonhema.npy": "deb18c0d83aab37d14ff05c7b6b61023773e1eb1332a9e72f08b5d855255f63f",
+    "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/artifacts/operators/pooled_drift_components.npz": "278bc09b5f294fed0eb0af8ee25029923ceacb4bf51f49877963b0ec29ecd130",
+    "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/artifacts/operators/operator_index.json": "76139ef1633f6b0822e21a648a2ed7da7bbfc2a760cb441b26e41f2cbb26c247",
+    "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/artifacts/heads/let_anchor_internal.pt": "81b76b70aab88be762c90a61465db3b86db8d096d423df7e8c03e0f2d219b509"
+  }
+}

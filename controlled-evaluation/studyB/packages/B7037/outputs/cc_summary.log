@@ -1,0 +1,11 @@
+Part 1. Each representation on its own cells (from cc_geometry_<model>.json)
+  representation           cells   dim   linear     kNN  kNN-lin  out-of-plane     flat null      p  flat circle rejected?
+  scGPT layer 11            3000   512    0.892   0.807   -0.085        22.7 d    25.6 +-2.3  0.905  no
+  Geneformer layer 11       2000  1152    0.844   0.663   -0.181        34.2 d    35.7 +-2.4  0.762  no
+  expression (no model)     3000  6546    0.929   0.858   -0.071        17.9 d    17.9 +-1.4  0.571  no
+
+Part 2. Same 2000 cells for all three (the Geneformer cells), Geneformer file's phase label
+  representation             linear     kNN
+  scGPT layer 11              0.896   0.797
+  Geneformer layer 11         0.844   0.663
+  expression (no model)       0.935   0.848

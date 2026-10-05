@@ -1,0 +1,55 @@
+=== panel: zeroshot  start: 2026-05-03T23:39:19+02:00 ===
+======================================================================
+PHASE 1B+C — panel=zeroshot  device=mps
+======================================================================
+  cells: 7796  anchors: 160  L_cap: 4096
+  seq_len  median: 2096  mean: 2261.1  max: 4096
+
+[1] Loading MaxToki-217M on mps...
+  n_layers=11 hidden=1232  loaded in 2.8s
+
+[2] Running forward passes (mean-pool hidden states across gene-token positions)...
+    cell 155/7796  elapsed 100.7s  eta 4961.8s
+    cell 310/7796  elapsed 158.7s  eta 3832.4s
+    cell 465/7796  elapsed 237.9s  eta 3750.4s
+    cell 620/7796  elapsed 356.9s  eta 4130.4s
+    cell 775/7796  elapsed 549.1s  eta 4974.5s
+    cell 930/7796  elapsed 765.3s  eta 5650.3s
+    cell 1085/7796  elapsed 866.2s  eta 5357.9s
+    cell 1240/7796  elapsed 1081.1s  eta 5715.7s
+    cell 1395/7796  elapsed 1214.8s  eta 5574.2s
+    cell 1550/7796  elapsed 1422.9s  eta 5733.9s
+    cell 1705/7796  elapsed 1566.1s  eta 5594.9s
+    cell 1860/7796  elapsed 1651.0s  eta 5269.1s
+    cell 2015/7796  elapsed 1756.0s  eta 5037.9s
+    cell 2170/7796  elapsed 1901.8s  eta 4930.6s
+    cell 2325/7796  elapsed 2169.7s  eta 5105.5s
+    cell 2480/7796  elapsed 2362.5s  eta 5064.2s
+    cell 2635/7796  elapsed 2434.7s  eta 4768.7s
+    cell 2790/7796  elapsed 2630.5s  eta 4719.8s
+    cell 2945/7796  elapsed 2744.1s  eta 4520.1s
+    cell 3100/7796  elapsed 2853.2s  eta 4322.1s
+    cell 3255/7796  elapsed 2918.7s  eta 4071.8s
+    cell 3410/7796  elapsed 3039.3s  eta 3909.3s
+    cell 3565/7796  elapsed 3136.4s  eta 3722.4s
+    cell 3720/7796  elapsed 3285.6s  eta 3600.0s
+    cell 3875/7796  elapsed 3464.1s  eta 3505.2s
+    cell 4030/7796  elapsed 3716.5s  eta 3473.0s
+    cell 4185/7796  elapsed 3962.3s  eta 3418.8s
+    cell 4340/7796  elapsed 4282.3s  eta 3410.0s
+    cell 4495/7796  elapsed 4446.5s  eta 3265.4s
+    cell 4650/7796  elapsed 4665.6s  eta 3156.5s
+    cell 4805/7796  elapsed 4802.7s  eta 2989.6s
+    cell 4960/7796  elapsed 4916.5s  eta 2811.1s
+    cell 5115/7796  elapsed 5096.3s  eta 2671.2s
+    cell 5270/7796  elapsed 5228.4s  eta 2506.1s
+    cell 5425/7796  elapsed 5327.0s  eta 2328.2s
+    cell 5580/7796  elapsed 5481.4s  eta 2176.9s
+    cell 5735/7796  elapsed 5655.2s  eta 2032.3s
+    cell 5890/7796  elapsed 5847.5s  eta 1892.2s
+    cell 6045/7796  elapsed 6015.2s  eta 1742.4s
+    cell 6200/7796  elapsed 6140.6s  eta 1580.7s
+    cell 6355/7796  elapsed 6285.2s  eta 1425.2s
+    cell 6510/7796  elapsed 6441.5s  eta 1272.5s
+    cell 6665/7796  elapsed 6683.1s  eta 1134.1s
+    cell 6820/7796  elapsed 8070.4s  eta 1154.9s

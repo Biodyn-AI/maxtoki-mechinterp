@@ -1,0 +1,132 @@
+{
+  "H124_string": {
+    "external_lung": {
+      "n_layers": 12,
+      "mean_delta": -0.05529637641755522,
+      "n_layers_positive_null_gap": 0,
+      "fraction_layers_positive": 0.0,
+      "mean_auc_combo": 0.3943926283187933,
+      "mean_null_combo_mean": 0.41371628011442896
+    },
+    "immune": {
+      "n_layers": 12,
+      "mean_delta": -0.018913852578068272,
+      "n_layers_positive_null_gap": 2,
+      "fraction_layers_positive": 0.16666666666666666,
+      "mean_auc_combo": 0.48215379901960786,
+      "mean_null_combo_mean": 0.4819126732869074
+    },
+    "lung": {
+      "n_layers": 12,
+      "mean_delta": -0.03707137408309284,
+      "n_layers_positive_null_gap": 0,
+      "fraction_layers_positive": 0.0,
+      "mean_auc_combo": 0.39994031335177166,
+      "mean_null_combo_mean": 0.41306319958012666
+    }
+  },
+  "H127_go_comem": {
+    "external_lung": {
+      "n_layers": 12,
+      "mean_delta": -0.05623606087114134,
+      "n_layers_positive_null_gap": 0,
+      "fraction_layers_positive": 0.0,
+      "mean_auc_combo": 0.40293834866144956,
+      "mean_null_combo_mean": 0.42258870802499776
+    },
+    "immune": {
+      "n_layers": 12,
+      "mean_delta": -0.014645770924110383,
+      "n_layers_positive_null_gap": 2,
+      "fraction_layers_positive": 0.16666666666666666,
+      "mean_auc_combo": 0.496099747769478,
+      "mean_null_combo_mean": 0.493437037199139
+    },
+    "lung": {
+      "n_layers": 12,
+      "mean_delta": -0.03330219043109668,
+      "n_layers_positive_null_gap": 0,
+      "fraction_layers_positive": 0.0,
+      "mean_auc_combo": 0.4125784757295174,
+      "mean_null_combo_mean": 0.4211430024450858
+    }
+  },
+  "H130_go_semantic": {
+    "external_lung": {
+      "n_layers": 12,
+      "mean_delta": -0.058159906927993284,
+      "n_layers_positive_null_gap": 0,
+      "fraction_layers_positive": 0.0,
+      "mean_auc_combo": 0.41565103120000635,
+      "mean_null_combo_mean": 0.43578362531621634
+    },
+    "immune": {
+      "n_layers": 12,
+      "mean_delta": -0.01648292013564683,
+      "n_layers_positive_null_gap": 2,
+      "fraction_layers_positive": 0.16666666666666666,
+      "mean_auc_combo": 0.4926524081854964,
+      "mean_null_combo_mean": 0.49135345990247953
+    },
+    "lung": {
+      "n_layers": 12,
+      "mean_delta": -0.03538597783389449,
+      "n_layers_positive_null_gap": 0,
+      "fraction_layers_positive": 0.0,
+      "mean_auc_combo": 0.41665476691518366,
+      "mean_null_combo_mean": 0.42618815260742343
+    }
+  },
+  "H138_ontology_sheaf": {
+    "external_lung": {
+      "n_layers": 12,
+      "mean_delta": -0.0591685482027882,
+      "n_layers_positive_null_gap": 0,
+      "fraction_layers_positive": 0.0,
+      "mean_auc_combo": 0.4236401714857634,
+      "mean_null_combo_mean": 0.4467436126281612
+    },
+    "immune": {
+      "n_layers": 12,
+      "mean_delta": -0.019992425789760345,
+      "n_layers_positive_null_gap": 2,
+      "fraction_layers_positive": 0.16666666666666666,
+      "mean_auc_combo": 0.42517863626932256,
+      "mean_null_combo_mean": 0.4298132780890133
+    },
+    "lung": {
+      "n_layers": 12,
+      "mean_delta": -0.0377388405383197,
+      "n_layers_positive_null_gap": 0,
+      "fraction_layers_positive": 0.0,
+      "mean_auc_combo": 0.4555168500481,
+      "mean_null_combo_mean": 0.47170757362814647
+    }
+  },
+  "H123_baseline": {
+    "external_lung": {
+      "n_layers": 12,
+      "mean_delta": -0.060066661544159884,
+      "n_layers_positive_null_gap": 0,
+      "fraction_layers_positive": 0.0,
+      "mean_auc_combo": 0.43028563885539545,
+      "mean_null_combo_mean": 0.4543680107336218
+    },
+    "immune": {
+      "n_layers": 12,
+      "mean_delta": -0.02008339533730157,
+      "n_layers_positive_null_gap": 1,
+      "fraction_layers_positive": 0.08333333333333333,
+      "mean_auc_combo": 0.4881695618062039,
+      "mean_null_combo_mean": 0.4879033439185858
+    },
+    "lung": {
+      "n_layers": 12,
+      "mean_delta": -0.04142643260481798,
+      "n_layers_positive_null_gap": 0,
+      "fraction_layers_positive": 0.0,
+      "mean_auc_combo": 0.41770131874298544,
+      "mean_null_combo_mean": 0.43183650586970895
+    }
+  }
+}

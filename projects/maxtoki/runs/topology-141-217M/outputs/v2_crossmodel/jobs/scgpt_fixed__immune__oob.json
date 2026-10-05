@@ -1,0 +1,33 @@
+{
+  "n_boot": 1000,
+  "mean_n_oob_genes": 128.547,
+  "method": "gene bootstrap with replacement (same resamples as 'boot'); fit on the resample, score on out-of-bag genes; percentile 2.5/97.5. Trains on ~63% distinct genes, so values sit a little below the 5-fold held-out values (which train on 80%).",
+  "oob_cca_mean_r": {
+    "mean": 0.4255354425258891,
+    "ci95": [
+      0.37108730177292476,
+      0.47290842214206763
+    ],
+    "sd": 0.026382735484045718
+  },
+  "oob_cca_first_r": {
+    "mean": 0.5777006603126761,
+    "ci95": [
+      0.3249864892384972,
+      0.7476741153933699
+    ],
+    "sd": 0.1110656785611678
+  },
+  "oob_top1": {
+    "mean": 0.07386392116415669,
+    "ci95": [
+      0.03251376868607396,
+      0.12031742663109385
+    ],
+    "sd": 0.02213000598029961
+  },
+  "wall_seconds": 95.97640180587769,
+  "model": "scgpt_fixed",
+  "domain": "immune",
+  "part": "oob"
+}

@@ -1,0 +1,2912 @@
+{
+ "verdict": "not supported",
+ "estimates": [
+  {
+   "name": "mean_cross_TF_specificity_percentile_union_adj (primary)",
+   "value": 0.45819904581300736,
+   "ci_low": 0.3811277964836058,
+   "ci_high": 0.5315194252981545,
+   "method_of_uncertainty": "bootstrap over TFs (n=65, 10,000 resamples); rank of the cognate set among size-matched other-regulator sets; null 0.5"
+  },
+  {
+   "name": "mean_cross_TF_specificity_percentile_trrust_adj",
+   "value": 0.4832184802643965,
+   "ci_low": 0.39953149766317525,
+   "ci_high": 0.5641729380690728,
+   "method_of_uncertainty": "bootstrap over TFs (n=58, 10,000 resamples); rank of the cognate set among size-matched other-regulator sets; null 0.5"
+  },
+  {
+   "name": "mean_cross_TF_specificity_percentile_dorothea_adj",
+   "value": 0.40155068042847913,
+   "ci_low": 0.29392459924734216,
+   "ci_high": 0.5105483369500763,
+   "method_of_uncertainty": "bootstrap over TFs (n=30, 10,000 resamples); rank of the cognate set among size-matched other-regulator sets; null 0.5"
+  },
+  {
+   "name": "mean_cross_TF_specificity_percentile_dorothea_chip_adj",
+   "value": 0.45570460970556537,
+   "ci_low": 0.3176381579809815,
+   "ci_high": 0.596270698247505,
+   "method_of_uncertainty": "bootstrap over TFs (n=20, 10,000 resamples); rank of the cognate set among size-matched other-regulator sets; null 0.5"
+  },
+  {
+   "name": "mean_cross_TF_specificity_percentile_dorothea_ABC_adj",
+   "value": 0.6005492934779247,
+   "ci_low": 0.49043616734622897,
+   "ci_high": 0.706453250501027,
+   "method_of_uncertainty": "bootstrap over TFs (n=18, 10,000 resamples); rank of the cognate set among size-matched other-regulator sets; null 0.5"
+  },
+  {
+   "name": "mean_cross_TF_specificity_percentile_union_Kge10_adj",
+   "value": 0.436937659599564,
+   "ci_low": 0.3136860187682068,
+   "ci_high": 0.5585300299803433,
+   "method_of_uncertainty": "bootstrap over TFs (n=22); null 0.5"
+  },
+  {
+   "name": "frac_TFs_specificity_percentile_gt_0.95_union_adj",
+   "value": 0.06153846153846154,
+   "ci_low": 0.017019971183020344,
+   "ci_high": 0.15013340067050895,
+   "method_of_uncertainty": "Clopper-Pearson (n=65); null 0.05"
+  },
+  {
+   "name": "mean_generic_responsiveness_percentile_cognate_sets_union_adj",
+   "value": 0.471179516828281,
+   "ci_low": 0.39782034449841414,
+   "ci_high": 0.5431414122836226,
+   "method_of_uncertainty": "bootstrap over TFs; mean Spearman of the cognate set over the other 86 knockdowns' |d| profiles, ranked among the same size-matched sets; 0.5 = cognate sets as responsive as comparison sets in general"
+  },
+  {
+   "name": "mean_z_vs_matched_random_gene_sets_union_adj",
+   "value": -0.012323018940631503,
+   "ci_low": -0.3208092027403841,
+   "ci_high": 0.28272069750045686,
+   "method_of_uncertainty": "bootstrap over TFs (n=65); 200 random sets/TF matched on detection decile x length quintile; null 0"
+  },
+  {
+   "name": "mean_swap_null_percentile_union_adj",
+   "value": 0.4449016100178891,
+   "ci_low": 0.36493738819320215,
+   "ci_high": 0.5216502683363148,
+   "method_of_uncertainty": "bootstrap over TFs (n=65); cognate KD ranked among the other 86 KDs for the same target set; KD-relabelling permutation 95% band 0.429-0.570; one-sided p(greater) = 0.933, p(less) = 0.068"
+  },
+  {
+   "name": "mean_twoway_null_percentile_union_adj",
+   "value": 0.4449016100178891,
+   "ci_low": 0.36636851520572444,
+   "ci_high": 0.51824686940966,
+   "method_of_uncertainty": "bootstrap over TFs (n=65); cognate (set, KD) residual after removing set and KD main effects, ranked within the set; KD-relabelling permutation 95% band 0.426-0.571; one-sided p(greater) = 0.926, p(less) = 0.075"
+  },
+  {
+   "name": "mean_twoway_null_percentile_trrust_adj",
+   "value": 0.4829591018444266,
+   "ci_low": 0.4011577786688052,
+   "ci_high": 0.562956094627105,
+   "method_of_uncertainty": "bootstrap over TFs (n=58); cognate (set, KD) residual after removing set and KD main effects, ranked within the set; KD-relabelling permutation 95% band 0.422-0.572; one-sided p(greater) = 0.669, p(less) = 0.333"
+  },
+  {
+   "name": "mean_twoway_null_percentile_dorothea_adj",
+   "value": 0.4333333333333334,
+   "ci_low": 0.3282848837209301,
+   "ci_high": 0.5430232558139534,
+   "method_of_uncertainty": "bootstrap over TFs (n=30); cognate (set, KD) residual after removing set and KD main effects, ranked within the set; KD-relabelling permutation 95% band 0.395-0.599; one-sided p(greater) = 0.883, p(less) = 0.118"
+  },
+  {
+   "name": "mean_twoway_null_percentile_dorothea_chip_adj",
+   "value": 0.47906976744186053,
+   "ci_low": 0.35,
+   "ci_high": 0.6063953488372091,
+   "method_of_uncertainty": "bootstrap over TFs (n=20); cognate (set, KD) residual after removing set and KD main effects, ranked within the set; KD-relabelling permutation 95% band 0.374-0.632; one-sided p(greater) = 0.622, p(less) = 0.382"
+  },
+  {
+   "name": "mean_swap_null_percentile_dorothea_ABC_adj",
+   "value": 0.560077519379845,
+   "ci_low": 0.43152454780361765,
+   "ci_high": 0.6866925064599482,
+   "method_of_uncertainty": "bootstrap over TFs (n=18); cognate KD ranked among the other 86 KDs for the same target set; KD-relabelling permutation 95% band 0.366-0.634; one-sided p(greater) = 0.190, p(less) = 0.812"
+  },
+  {
+   "name": "mean_twoway_null_percentile_dorothea_ABC_adj",
+   "value": 0.6208010335917312,
+   "ci_low": 0.5038759689922481,
+   "ci_high": 0.7286821705426356,
+   "method_of_uncertainty": "bootstrap over TFs (n=18); cognate (set, KD) residual after removing set and KD main effects, ranked within the set; KD-relabelling permutation 95% band 0.362-0.628; one-sided p(greater) = 0.037, p(less) = 0.965"
+  },
+  {
+   "name": "mean_cross_TF_specificity_percentile_union_raw",
+   "value": 0.4140880755197987,
+   "ci_low": 0.34545771667643643,
+   "ci_high": 0.483195142605852,
+   "method_of_uncertainty": "bootstrap over TFs (n=65, 10,000 resamples); rank of the cognate set among size-matched other-regulator sets; null 0.5"
+  },
+  {
+   "name": "mean_cross_TF_specificity_percentile_trrust_raw",
+   "value": 0.44305020099013015,
+   "ci_low": 0.36631290765246943,
+   "ci_high": 0.5221238277743383,
+   "method_of_uncertainty": "bootstrap over TFs (n=58, 10,000 resamples); rank of the cognate set among size-matched other-regulator sets; null 0.5"
+  },
+  {
+   "name": "mean_cross_TF_specificity_percentile_dorothea_raw",
+   "value": 0.40542504590466744,
+   "ci_low": 0.3008145481049518,
+   "ci_high": 0.5126937194279193,
+   "method_of_uncertainty": "bootstrap over TFs (n=30, 10,000 resamples); rank of the cognate set among size-matched other-regulator sets; null 0.5"
+  },
+  {
+   "name": "mean_cross_TF_specificity_percentile_dorothea_chip_raw",
+   "value": 0.4399314173819886,
+   "ci_low": 0.3095123235858026,
+   "ci_high": 0.5716713178491164,
+   "method_of_uncertainty": "bootstrap over TFs (n=20, 10,000 resamples); rank of the cognate set among size-matched other-regulator sets; null 0.5"
+  },
+  {
+   "name": "mean_cross_TF_specificity_percentile_dorothea_ABC_raw",
+   "value": 0.39413487998843755,
+   "ci_low": 0.27450985292766816,
+   "ci_high": 0.516796114975329,
+   "method_of_uncertainty": "bootstrap over TFs (n=18, 10,000 resamples); rank of the cognate set among size-matched other-regulator sets; null 0.5"
+  },
+  {
+   "name": "mean_cross_TF_specificity_percentile_union_Kge10_raw",
+   "value": 0.4259168870181304,
+   "ci_low": 0.3055482251598182,
+   "ci_high": 0.5505051317397252,
+   "method_of_uncertainty": "bootstrap over TFs (n=22); null 0.5"
+  },
+  {
+   "name": "frac_TFs_specificity_percentile_gt_0.95_union_raw",
+   "value": 0.046153846153846156,
+   "ci_low": 0.009621078840338568,
+   "ci_high": 0.1290112798982589,
+   "method_of_uncertainty": "Clopper-Pearson (n=65); null 0.05"
+  },
+  {
+   "name": "mean_generic_responsiveness_percentile_cognate_sets_union_raw",
+   "value": 0.4720425145701796,
+   "ci_low": 0.3973835050212115,
+   "ci_high": 0.5452670882533838,
+   "method_of_uncertainty": "bootstrap over TFs; mean Spearman of the cognate set over the other 86 knockdowns' |d| profiles, ranked among the same size-matched sets; 0.5 = cognate sets as responsive as comparison sets in general"
+  },
+  {
+   "name": "mean_z_vs_matched_random_gene_sets_union_raw",
+   "value": -0.08176557776704482,
+   "ci_low": -0.3611304084786265,
+   "ci_high": 0.19142059263503508,
+   "method_of_uncertainty": "bootstrap over TFs (n=65); 200 random sets/TF matched on detection decile x length quintile; null 0"
+  },
+  {
+   "name": "mean_swap_null_percentile_union_raw",
+   "value": 0.40214669051878354,
+   "ci_low": 0.3325536672629696,
+   "ci_high": 0.47156082289803214,
+   "method_of_uncertainty": "bootstrap over TFs (n=65); cognate KD ranked among the other 86 KDs for the same target set; KD-relabelling permutation 95% band 0.427-0.566; one-sided p(greater) = 0.997, p(less) = 0.004"
+  },
+  {
+   "name": "mean_twoway_null_percentile_union_raw",
+   "value": 0.398747763864043,
+   "ci_low": 0.3350581395348837,
+   "ci_high": 0.46404293381037565,
+   "method_of_uncertainty": "bootstrap over TFs (n=65); cognate (set, KD) residual after removing set and KD main effects, ranked within the set; KD-relabelling permutation 95% band 0.423-0.572; one-sided p(greater) = 0.998, p(less) = 0.003"
+  },
+  {
+   "name": "mean_twoway_null_percentile_trrust_raw",
+   "value": 0.44807538091419413,
+   "ci_low": 0.37289494787489974,
+   "ci_high": 0.5232558139534883,
+   "method_of_uncertainty": "bootstrap over TFs (n=58); cognate (set, KD) residual after removing set and KD main effects, ranked within the set; KD-relabelling permutation 95% band 0.423-0.573; one-sided p(greater) = 0.903, p(less) = 0.098"
+  },
+  {
+   "name": "mean_twoway_null_percentile_dorothea_raw",
+   "value": 0.4135658914728682,
+   "ci_low": 0.31627906976744197,
+   "ci_high": 0.5131782945736433,
+   "method_of_uncertainty": "bootstrap over TFs (n=30); cognate (set, KD) residual after removing set and KD main effects, ranked within the set; KD-relabelling permutation 95% band 0.396-0.603; one-sided p(greater) = 0.945, p(less) = 0.056"
+  },
+  {
+   "name": "mean_twoway_null_percentile_dorothea_chip_raw",
+   "value": 0.39651162790697675,
+   "ci_low": 0.2854505813953488,
+   "ci_high": 0.5180232558139535,
+   "method_of_uncertainty": "bootstrap over TFs (n=20); cognate (set, KD) residual after removing set and KD main effects, ranked within the set; KD-relabelling permutation 95% band 0.374-0.626; one-sided p(greater) = 0.943, p(less) = 0.057"
+  },
+  {
+   "name": "mean_swap_null_percentile_dorothea_ABC_raw",
+   "value": 0.39534883720930236,
+   "ci_low": 0.25515180878552973,
+   "ci_high": 0.537467700258398,
+   "method_of_uncertainty": "bootstrap over TFs (n=18); cognate KD ranked among the other 86 KDs for the same target set; KD-relabelling permutation 95% band 0.368-0.636; one-sided p(greater) = 0.936, p(less) = 0.066"
+  },
+  {
+   "name": "mean_twoway_null_percentile_dorothea_ABC_raw",
+   "value": 0.39857881136950907,
+   "ci_low": 0.2693798449612403,
+   "ci_high": 0.5277777777777779,
+   "method_of_uncertainty": "bootstrap over TFs (n=18); cognate (set, KD) residual after removing set and KD main effects, ranked within the set; KD-relabelling permutation 95% band 0.364-0.640; one-sided p(greater) = 0.927, p(less) = 0.074"
+  },
+  {
+   "name": "n_TFs_with_ge1_target_union",
+   "value": 65,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "descriptive (own gene removed); 43 with 1-5 targets, 0 with 6-9, 22 with >=10 (20 with >=90)"
+  },
+  {
+   "name": "sens_all87_removed_percentile_union_adj",
+   "value": 0.4562430724396715,
+   "ci_low": 0.3788967465659975,
+   "ci_high": 0.5340389208404424,
+   "method_of_uncertainty": "bootstrap over TFs (n=59); all 87 knocked-down genes removed from every set"
+  },
+  {
+   "name": "sens_all87_removed_percentile_dorothea_ABC_adj",
+   "value": 0.5906780571770058,
+   "ci_low": 0.4761747999582967,
+   "ci_high": 0.6995681619976364,
+   "method_of_uncertainty": "bootstrap over TFs (n=18); all 87 knocked-down genes removed from every set"
+  },
+  {
+   "name": "sens_all87_removed_percentile_union_raw",
+   "value": 0.42870948416998444,
+   "ci_low": 0.35449257917145893,
+   "ci_high": 0.5048826931109458,
+   "method_of_uncertainty": "bootstrap over TFs (n=59); all 87 knocked-down genes removed from every set"
+  },
+  {
+   "name": "sens_all87_removed_percentile_dorothea_ABC_raw",
+   "value": 0.38906954106963354,
+   "ci_low": 0.27084481261746446,
+   "ci_high": 0.5101572793745736,
+   "method_of_uncertainty": "bootstrap over TFs (n=18); all 87 knocked-down genes removed from every set"
+  },
+  {
+   "name": "sens_depth_quadratic_percentile_union",
+   "value": 0.45819904581300736,
+   "ci_low": 0.3811277964836058,
+   "ci_high": 0.5315194252981545,
+   "method_of_uncertainty": "bootstrap over TFs (n=65); |d| from depth treatment 'quadratic'"
+  },
+  {
+   "name": "sens_depth_quadratic_percentile_union_Kge10",
+   "value": 0.436937659599564,
+   "ci_low": 0.3136860187682068,
+   "ci_high": 0.5585300299803433,
+   "method_of_uncertainty": "bootstrap over TFs (n=22); |d| from depth treatment 'quadratic'"
+  },
+  {
+   "name": "sens_depth_quadratic_percentile_dorothea_ABC",
+   "value": 0.6005492934779247,
+   "ci_low": 0.49043616734622897,
+   "ci_high": 0.706453250501027,
+   "method_of_uncertainty": "bootstrap over TFs (n=18); |d| from depth treatment 'quadratic'"
+  },
+  {
+   "name": "sens_depth_quadratic_twoway_percentile_union",
+   "value": 0.4449016100178891,
+   "ci_low": 0.36636851520572444,
+   "ci_high": 0.51824686940966,
+   "method_of_uncertainty": "bootstrap over TFs; permutation band 0.425-0.576"
+  },
+  {
+   "name": "sens_depth_linear_percentile_union",
+   "value": 0.41765277294789377,
+   "ci_low": 0.34703614027056146,
+   "ci_high": 0.4865189106116031,
+   "method_of_uncertainty": "bootstrap over TFs (n=65); |d| from depth treatment 'linear'"
+  },
+  {
+   "name": "sens_depth_linear_percentile_union_Kge10",
+   "value": 0.3844084468063505,
+   "ci_low": 0.2671603153335178,
+   "ci_high": 0.5039596976610133,
+   "method_of_uncertainty": "bootstrap over TFs (n=22); |d| from depth treatment 'linear'"
+  },
+  {
+   "name": "sens_depth_linear_percentile_dorothea_ABC",
+   "value": 0.5372548118140564,
+   "ci_low": 0.42670239767119833,
+   "ci_high": 0.6388242625583919,
+   "method_of_uncertainty": "bootstrap over TFs (n=18); |d| from depth treatment 'linear'"
+  },
+  {
+   "name": "sens_depth_linear_twoway_percentile_union",
+   "value": 0.4322003577817531,
+   "ci_low": 0.35974955277280857,
+   "ci_high": 0.5030456171735241,
+   "method_of_uncertainty": "bootstrap over TFs; permutation band 0.430-0.572"
+  },
+  {
+   "name": "sens_depth_cubic_percentile_union",
+   "value": 0.47096025723275714,
+   "ci_low": 0.39488032893409736,
+   "ci_high": 0.5442207594245203,
+   "method_of_uncertainty": "bootstrap over TFs (n=65); |d| from depth treatment 'cubic'"
+  },
+  {
+   "name": "sens_depth_cubic_percentile_union_Kge10",
+   "value": 0.48655101337606993,
+   "ci_low": 0.367741899020727,
+   "ci_high": 0.6018604275067112,
+   "method_of_uncertainty": "bootstrap over TFs (n=22); |d| from depth treatment 'cubic'"
+  },
+  {
+   "name": "sens_depth_cubic_percentile_dorothea_ABC",
+   "value": 0.6116294118437136,
+   "ci_low": 0.49195394556852073,
+   "ci_high": 0.7253237467756605,
+   "method_of_uncertainty": "bootstrap over TFs (n=18); |d| from depth treatment 'cubic'"
+  },
+  {
+   "name": "sens_depth_cubic_twoway_percentile_union",
+   "value": 0.458139534883721,
+   "ci_low": 0.3815742397137746,
+   "ci_high": 0.529695885509839,
+   "method_of_uncertainty": "bootstrap over TFs; permutation band 0.429-0.573"
+  },
+  {
+   "name": "sens_depth_spline_percentile_union",
+   "value": 0.4630143305119526,
+   "ci_low": 0.3866156022942377,
+   "ci_high": 0.5376879902460585,
+   "method_of_uncertainty": "bootstrap over TFs (n=65); |d| from depth treatment 'spline'"
+  },
+  {
+   "name": "sens_depth_spline_percentile_union_Kge10",
+   "value": 0.46402716317855114,
+   "ci_low": 0.3412622206921148,
+   "ci_high": 0.5859595102482164,
+   "method_of_uncertainty": "bootstrap over TFs (n=22); |d| from depth treatment 'spline'"
+  },
+  {
+   "name": "sens_depth_spline_percentile_dorothea_ABC",
+   "value": 0.6161599738531867,
+   "ci_low": 0.5023063838888446,
+   "ci_high": 0.7216516150951806,
+   "method_of_uncertainty": "bootstrap over TFs (n=18); |d| from depth treatment 'spline'"
+  },
+  {
+   "name": "sens_depth_spline_twoway_percentile_union",
+   "value": 0.4588550983899822,
+   "ci_low": 0.3817531305903399,
+   "ci_high": 0.5318425760286226,
+   "method_of_uncertainty": "bootstrap over TFs; permutation band 0.427-0.571"
+  },
+  {
+   "name": "sens_depth_quadratic_plus_GEM_percentile_union",
+   "value": 0.47705972792896145,
+   "ci_low": 0.40151263669396814,
+   "ci_high": 0.5486260368457859,
+   "method_of_uncertainty": "bootstrap over TFs (n=65); |d| from depth treatment 'quadratic_plus_GEM'"
+  },
+  {
+   "name": "sens_depth_quadratic_plus_GEM_percentile_union_Kge10",
+   "value": 0.44489410227772197,
+   "ci_low": 0.3236037819736383,
+   "ci_high": 0.5643716495832203,
+   "method_of_uncertainty": "bootstrap over TFs (n=22); |d| from depth treatment 'quadratic_plus_GEM'"
+  },
+  {
+   "name": "sens_depth_quadratic_plus_GEM_percentile_dorothea_ABC",
+   "value": 0.5977462296741543,
+   "ci_low": 0.48169691965582984,
+   "ci_high": 0.7057061619988219,
+   "method_of_uncertainty": "bootstrap over TFs (n=18); |d| from depth treatment 'quadratic_plus_GEM'"
+  },
+  {
+   "name": "sens_depth_quadratic_plus_GEM_twoway_percentile_union",
+   "value": 0.462432915921288,
+   "ci_low": 0.3865787119856887,
+   "ci_high": 0.5348881932021465,
+   "method_of_uncertainty": "bootstrap over TFs; permutation band 0.428-0.576"
+  },
+  {
+   "name": "sens_depth_umi_matched_percentile_union",
+   "value": 0.4828184078952966,
+   "ci_low": 0.41145660830306224,
+   "ci_high": 0.5547535303415336,
+   "method_of_uncertainty": "bootstrap over TFs (n=65); |d| from depth treatment 'umi_matched'"
+  },
+  {
+   "name": "sens_depth_umi_matched_percentile_union_Kge10",
+   "value": 0.4885130907555266,
+   "ci_low": 0.37605526272445955,
+   "ci_high": 0.6047665812674562,
+   "method_of_uncertainty": "bootstrap over TFs (n=22); |d| from depth treatment 'umi_matched'"
+  },
+  {
+   "name": "sens_depth_umi_matched_percentile_dorothea_ABC",
+   "value": 0.5880519908300467,
+   "ci_low": 0.44104761080694493,
+   "ci_high": 0.728013994946306,
+   "method_of_uncertainty": "bootstrap over TFs (n=18); |d| from depth treatment 'umi_matched'"
+  },
+  {
+   "name": "sens_depth_umi_matched_twoway_percentile_union",
+   "value": 0.4658318425760286,
+   "ci_low": 0.39087656529517,
+   "ci_high": 0.5388193202146689,
+   "method_of_uncertainty": "bootstrap over TFs; permutation band 0.427-0.572"
+  },
+  {
+   "name": "sens_top20_min3pos_percentile_union_adj",
+   "value": 0.4660523270363058,
+   "ci_low": 0.3898832795848179,
+   "ci_high": 0.541257637502713,
+   "method_of_uncertainty": "bootstrap over TFs (n=65); top-20 entries with >= 3 active positions (0.773 of entries kept)"
+  },
+  {
+   "name": "sens_top20_min3pos_paper_test_n_specific_TFs_adj",
+   "value": 0,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "count of 51 evaluable TFs (none); expected under other-TF null 0.82; Poisson-binomial p = 1.000"
+  },
+  {
+   "name": "sens_top20_min3pos_percentile_union_raw",
+   "value": 0.43967601796765127,
+   "ci_low": 0.36985497122509653,
+   "ci_high": 0.5102065558570916,
+   "method_of_uncertainty": "bootstrap over TFs (n=65); top-20 entries with >= 3 active positions (0.773 of entries kept)"
+  },
+  {
+   "name": "sens_top20_min3pos_paper_test_n_specific_TFs_raw",
+   "value": 1,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "count of 52 evaluable TFs (CEBPZ); expected under other-TF null 1.30; Poisson-binomial p = 0.740"
+  },
+  {
+   "name": "sens_top20_min5pos_percentile_union_adj",
+   "value": 0.462652192233909,
+   "ci_low": 0.38956548246634387,
+   "ci_high": 0.5361180379914162,
+   "method_of_uncertainty": "bootstrap over TFs (n=65); top-20 entries with >= 5 active positions (0.718 of entries kept)"
+  },
+  {
+   "name": "sens_top20_min5pos_paper_test_n_specific_TFs_adj",
+   "value": 0,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "count of 51 evaluable TFs (none); expected under other-TF null 0.77; Poisson-binomial p = 1.000"
+  },
+  {
+   "name": "sens_top20_min5pos_percentile_union_raw",
+   "value": 0.41201864959258505,
+   "ci_low": 0.34571415884254975,
+   "ci_high": 0.47964742954806683,
+   "method_of_uncertainty": "bootstrap over TFs (n=65); top-20 entries with >= 5 active positions (0.718 of entries kept)"
+  },
+  {
+   "name": "sens_top20_min5pos_paper_test_n_specific_TFs_raw",
+   "value": 1,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "count of 52 evaluable TFs (CEBPZ); expected under other-TF null 1.15; Poisson-binomial p = 0.695"
+  },
+  {
+   "name": "frac_TFs_target_specific_paper_test_all_raw",
+   "value": 0.09615384615384616,
+   "ci_low": 0.03196423637692165,
+   "ci_high": 0.21029747193932533,
+   "method_of_uncertainty": "Clopper-Pearson; TFs with >=1 targets and >=1 responding feature (n=52); specific: CEBPZ, GATA1, GTF2B, MAX, TBP"
+  },
+  {
+   "name": "null_expected_frac_specific_other_TF_all_raw",
+   "value": 0.07457602388448341,
+   "ci_low": 0.03852359566406696,
+   "ci_high": 0.11578679240936443,
+   "method_of_uncertainty": "mean per-TF probability of a 'specific' call with size-matched other-TF target sets; bootstrap over TFs (n=52)"
+  },
+  {
+   "name": "excess_frac_specific_over_other_TF_null_all_raw",
+   "value": 0.02157782226936274,
+   "ci_low": -0.039114657431777076,
+   "ci_high": 0.09136334980163045,
+   "method_of_uncertainty": "bootstrap over TFs (n=52); one-sided Poisson-binomial p(count >= 5) = 0.337"
+  },
+  {
+   "name": "null_expected_frac_specific_matched_random_all_raw",
+   "value": 0.05028846153846153,
+   "ci_low": 0.018750000000000003,
+   "ci_high": 0.0925,
+   "method_of_uncertainty": "mean per-TF probability of a 'specific' call with 200 detection x length matched random sets; bootstrap over TFs (n=52)"
+  },
+  {
+   "name": "excess_frac_specific_over_matched_random_null_all_raw",
+   "value": 0.04586538461538462,
+   "ci_low": -0.006346153846153848,
+   "ci_high": 0.11336778846153843,
+   "method_of_uncertainty": "bootstrap over TFs (n=52); one-sided Poisson-binomial p(count >= 5) = 0.067"
+  },
+  {
+   "name": "frac_TFs_target_specific_paper_test_Kge10_raw",
+   "value": 0.3333333333333333,
+   "ci_low": 0.11824110336688094,
+   "ci_high": 0.6161962674588459,
+   "method_of_uncertainty": "Clopper-Pearson; TFs with >=10 targets and >=1 responding feature (n=15); specific: CEBPZ, GATA1, GTF2B, MAX, TBP"
+  },
+  {
+   "name": "null_expected_frac_specific_other_TF_Kge10_raw",
+   "value": 0.23302884910472724,
+   "ci_low": 0.1395356129491947,
+   "ci_high": 0.3279350306452491,
+   "method_of_uncertainty": "mean per-TF probability of a 'specific' call with size-matched other-TF target sets; bootstrap over TFs (n=15)"
+  },
+  {
+   "name": "excess_frac_specific_over_other_TF_null_Kge10_raw",
+   "value": 0.10030448422860605,
+   "ci_low": -0.11063717669675358,
+   "ci_high": 0.328845324185317,
+   "method_of_uncertainty": "bootstrap over TFs (n=15); one-sided Poisson-binomial p(count >= 5) = 0.243"
+  },
+  {
+   "name": "null_expected_frac_specific_matched_random_Kge10_raw",
+   "value": 0.14866666666666667,
+   "ci_low": 0.04866666666666667,
+   "ci_high": 0.2766666666666666,
+   "method_of_uncertainty": "mean per-TF probability of a 'specific' call with 200 detection x length matched random sets; bootstrap over TFs (n=15)"
+  },
+  {
+   "name": "excess_frac_specific_over_matched_random_null_Kge10_raw",
+   "value": 0.1846666666666667,
+   "ci_low": 0.01066666666666667,
+   "ci_high": 0.3896666666666667,
+   "method_of_uncertainty": "bootstrap over TFs (n=15); one-sided Poisson-binomial p(count >= 5) = 0.020"
+  },
+  {
+   "name": "paper_test_expected_calls_TFs_Klt10_raw",
+   "value": 0.38252050542222876,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "sum of other-TF null probabilities over the 37 evaluable TFs with <10 targets (observed calls 0); max per-TF probability 0.071"
+  },
+  {
+   "name": "trrust_only_paper_test_n_specific_TFs_raw",
+   "value": 0,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "count of 48 evaluable TFs (2 with >=10 TRRUST targets); expected 0.49 (other-TF null), 0.46 (matched random)"
+  },
+  {
+   "name": "sens_all87_removed_paper_test_n_specific_TFs_raw",
+   "value": 5,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "count of 46 evaluable TFs (CEBPZ, GATA1, GTF2B, MAX, TBP); expected under other-TF null 3.92; Poisson-binomial p = 0.344"
+  },
+  {
+   "name": "frac_TFs_target_specific_paper_test_all_adj",
+   "value": 0.0392156862745098,
+   "ci_low": 0.004784992694707292,
+   "ci_high": 0.1345864911296642,
+   "method_of_uncertainty": "Clopper-Pearson; TFs with >=1 targets and >=1 responding feature (n=51); specific: GATA1, GTF2B"
+  },
+  {
+   "name": "null_expected_frac_specific_other_TF_all_adj",
+   "value": 0.05110219046841597,
+   "ci_low": 0.021744373816276648,
+   "ci_high": 0.0886085252019935,
+   "method_of_uncertainty": "mean per-TF probability of a 'specific' call with size-matched other-TF target sets; bootstrap over TFs (n=51)"
+  },
+  {
+   "name": "excess_frac_specific_over_other_TF_null_all_adj",
+   "value": -0.011886504193906161,
+   "ci_low": -0.06032470097053795,
+   "ci_high": 0.04338927850260059,
+   "method_of_uncertainty": "bootstrap over TFs (n=51); one-sided Poisson-binomial p(count >= 2) = 0.801"
+  },
+  {
+   "name": "null_expected_frac_specific_matched_random_all_adj",
+   "value": 0.033823529411764704,
+   "ci_low": 0.013529411764705884,
+   "ci_high": 0.06696078431372549,
+   "method_of_uncertainty": "mean per-TF probability of a 'specific' call with 200 detection x length matched random sets; bootstrap over TFs (n=51)"
+  },
+  {
+   "name": "excess_frac_specific_over_matched_random_null_all_adj",
+   "value": 0.005392156862745096,
+   "ci_low": -0.02,
+   "ci_high": 0.04745098039215685,
+   "method_of_uncertainty": "bootstrap over TFs (n=51); one-sided Poisson-binomial p(count >= 2) = 0.541"
+  },
+  {
+   "name": "frac_TFs_target_specific_paper_test_Kge10_adj",
+   "value": 0.14285714285714285,
+   "ci_low": 0.017794515483191515,
+   "ci_high": 0.42812916090969894,
+   "method_of_uncertainty": "Clopper-Pearson; TFs with >=10 targets and >=1 responding feature (n=14); specific: GATA1, GTF2B"
+  },
+  {
+   "name": "null_expected_frac_specific_other_TF_Kge10_adj",
+   "value": 0.15926119046385176,
+   "ci_low": 0.06878845613960792,
+   "ci_high": 0.26998482005586955,
+   "method_of_uncertainty": "mean per-TF probability of a 'specific' call with size-matched other-TF target sets; bootstrap over TFs (n=14)"
+  },
+  {
+   "name": "excess_frac_specific_over_other_TF_null_Kge10_adj",
+   "value": -0.0164040476067089,
+   "ci_low": -0.19283912593906583,
+   "ci_high": 0.17682675765968564,
+   "method_of_uncertainty": "bootstrap over TFs (n=14); one-sided Poisson-binomial p(count >= 2) = 0.727"
+  },
+  {
+   "name": "null_expected_frac_specific_matched_random_Kge10_adj",
+   "value": 0.09535714285714288,
+   "ci_low": 0.03071428571428571,
+   "ci_high": 0.2032142857142857,
+   "method_of_uncertainty": "mean per-TF probability of a 'specific' call with 200 detection x length matched random sets; bootstrap over TFs (n=14)"
+  },
+  {
+   "name": "excess_frac_specific_over_matched_random_null_Kge10_adj",
+   "value": 0.04749999999999998,
+   "ci_low": -0.04321428571428571,
+   "ci_high": 0.19464285714285712,
+   "method_of_uncertainty": "bootstrap over TFs (n=14); one-sided Poisson-binomial p(count >= 2) = 0.372"
+  },
+  {
+   "name": "paper_test_expected_calls_TFs_Klt10_adj",
+   "value": 0.3765550473952896,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "sum of other-TF null probabilities over the 37 evaluable TFs with <10 targets (observed calls 0); max per-TF probability 0.058"
+  },
+  {
+   "name": "trrust_only_paper_test_n_specific_TFs_adj",
+   "value": 0,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "count of 47 evaluable TFs (2 with >=10 TRRUST targets); expected 0.58 (other-TF null), 0.50 (matched random)"
+  },
+  {
+   "name": "sens_all87_removed_paper_test_n_specific_TFs_adj",
+   "value": 2,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "count of 46 evaluable TFs (GATA1, GTF2B); expected under other-TF null 2.60; Poisson-binomial p = 0.799"
+  },
+  {
+   "name": "frac_TFs_with_any_responding_feature_raw",
+   "value": 0.8045977011494253,
+   "ci_low": 0.705680229197672,
+   "ci_high": 0.8818513142363641,
+   "method_of_uncertainty": "Clopper-Pearson; unit = knocked-down TF (n=87)"
+  },
+  {
+   "name": "mean_responding_features_per_TF_raw",
+   "value": 253.50574712643677,
+   "ci_low": 143.87097701149426,
+   "ci_high": 387.48678160919536,
+   "method_of_uncertainty": "bootstrap over TFs (10,000 resamples)"
+  },
+  {
+   "name": "pseudoKD_null_responding_features_raw",
+   "value": 0.1,
+   "ci_low": 0.0,
+   "ci_high": 1.0,
+   "method_of_uncertainty": "2.5-97.5 percentiles over 50 draws of 100 'pool' cells tested against 'ref'"
+  },
+  {
+   "name": "control_pool_vs_ref_responding_features_raw",
+   "value": 0,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "count of 4,928 features; whole control group vs the 400 ref cells"
+  },
+  {
+   "name": "control_catalog_vs_ref_responding_features_raw",
+   "value": 0,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "count of 4,928 features; whole control group vs the 400 ref cells"
+  },
+  {
+   "name": "frac_TFs_with_any_responding_feature_adj",
+   "value": 0.7931034482758621,
+   "ci_low": 0.6928683524764394,
+   "ci_high": 0.8725251331298656,
+   "method_of_uncertainty": "Clopper-Pearson; unit = knocked-down TF (n=87)"
+  },
+  {
+   "name": "mean_responding_features_per_TF_adj",
+   "value": 107.93103448275862,
+   "ci_low": 61.42528735632184,
+   "ci_high": 168.66839080459766,
+   "method_of_uncertainty": "bootstrap over TFs (10,000 resamples)"
+  },
+  {
+   "name": "pseudoKD_null_responding_features_adj",
+   "value": 0.04,
+   "ci_low": 0.0,
+   "ci_high": 0.0,
+   "method_of_uncertainty": "2.5-97.5 percentiles over 50 draws of 100 'pool' cells tested against 'ref'"
+  },
+  {
+   "name": "control_pool_vs_ref_responding_features_adj",
+   "value": 0,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "count of 4,928 features; whole control group vs the 400 ref cells"
+  },
+  {
+   "name": "control_catalog_vs_ref_responding_features_adj",
+   "value": 0,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "count of 4,928 features; whole control group vs the 400 ref cells"
+  },
+  {
+   "name": "spearman_TF_UMI_ratio_vs_n_responding_raw",
+   "value": -0.6241511703551771,
+   "ci_low": -0.7603855496415475,
+   "ci_high": -0.4508727382119839,
+   "method_of_uncertainty": "bootstrap over TFs (2,000 resamples)"
+  },
+  {
+   "name": "n_features_abs_r_gt_0.3_with_logUMI_in_controls",
+   "value": 1403,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "descriptive; 1,200 ref+pool control cells"
+  },
+  {
+   "name": "median_spearman_raw_vs_adj_absd_profile",
+   "value": 0.6764152678661459,
+   "ci_low": 0.2980188318595682,
+   "ci_high": 0.9072824501966605,
+   "method_of_uncertainty": "median over 87 TFs (interval = 10th-90th percentile across TFs, not a CI)"
+  },
+  {
+   "name": "dorothea_ABC_spearman_percentile_shift_vs_profile_similarity",
+   "value": -0.7440660474716203,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "descriptive (n=18); Spearman p = 0.0004"
+  },
+  {
+   "name": "dorothea_ABC_spearman_percentile_shift_vs_umi_ratio",
+   "value": -0.08152734778121776,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "descriptive (n=18); Spearman p = 0.748"
+  },
+  {
+   "name": "n_TFs_with_gt5pct_cells_below_control_UMI_p1",
+   "value": 8,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "descriptive: CDC5L 0.05, GATA1 0.56, GTF2F1 0.05, MED1 0.17, PHB2 0.08, RUVBL1 0.06, TAF1 0.11, TAF5 0.09"
+  },
+  {
+   "name": "own_gene_positive_control_mean_percentile_adj",
+   "value": 0.7855409094960452,
+   "ci_low": 0.7217881911600883,
+   "ci_high": 0.8455078728583106,
+   "method_of_uncertainty": "bootstrap over TFs (n=79); mean |d| of features listing the knocked-down gene vs genes of the same detection decile; null 0.5"
+  },
+  {
+   "name": "own_gene_positive_control_frac_above_95th_pct_adj",
+   "value": 0.5443037974683544,
+   "ci_low": 0.42832751328637203,
+   "ci_high": 0.6568588760599843,
+   "method_of_uncertainty": "Clopper-Pearson; null 0.05"
+  },
+  {
+   "name": "own_gene_positive_control_spearman_pipeline_mean_percentile_adj",
+   "value": 0.7564240842788259,
+   "ci_low": 0.6917866902666304,
+   "ci_high": 0.8175748204196926,
+   "method_of_uncertainty": "bootstrap over TFs (n=79); the knocked-down gene as a one-gene 'target set' through the Spearman pipeline, ranked among genes of the same detection decile; null 0.5"
+  },
+  {
+   "name": "own_gene_positive_control_spearman_pipeline_frac_above_95th_pct_adj",
+   "value": 0.4430379746835443,
+   "ci_low": 0.3312472893652816,
+   "ci_high": 0.5592280905480946,
+   "method_of_uncertainty": "Clopper-Pearson; null 0.05"
+  },
+  {
+   "name": "max_kd_remaining_frac",
+   "value": 0.1302,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "descriptive; 80 of 87 TFs measured"
+  },
+  {
+   "name": "n_knocked_down_TFs_listed_as_own_target",
+   "value": 1,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "descriptive: MYBL2"
+  },
+  {
+   "name": "frac_top20_entries_le2_active_positions",
+   "value": 0.2270688575739226,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "descriptive; non-<SPECIAL> entries"
+  },
+  {
+   "name": "GEM_groups_min_per_cell_group",
+   "value": 48,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "of 48 GEM groups; per group {'ref': 48, 'pool': 48, 'catalog': 48, 'kd': 48}"
+  },
+  {
+   "name": "GEM_groups_per_TF_min",
+   "value": 22,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "range 22-45 across TFs"
+  },
+  {
+   "name": "GEM_composition_chi2_p_TF_x_GEM_kd_plus_ref",
+   "value": 0.016713321867843006,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "chi-square test of TF (and ref) x GEM group; approximate (sparse cells)"
+  },
+  {
+   "name": "n_TFs_GEM_composition_differs_from_ref_p_lt_0.05",
+   "value": 8,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "per-TF permutation chi-square (1,000 permutations) of KD vs ref GEM composition; 4.35 expected by chance"
+  },
+  {
+   "name": "n_features_differing_across_GEM_groups_in_controls_raw",
+   "value": 2594,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "Kruskal-Wallis across 48 GEM groups in 1,200 control cells, BH q<0.05, of 4,928 features"
+  },
+  {
+   "name": "n_features_differing_across_GEM_groups_in_controls_adj",
+   "value": 1153,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "Kruskal-Wallis across 48 GEM groups in 1,200 control cells, BH q<0.05, of 4,928 features"
+  },
+  {
+   "name": "GATA1_UMI_median_ratio_to_ref",
+   "value": 0.31349904936272094,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "descriptive"
+  },
+  {
+   "name": "GATA1_frac_cells_below_control_UMI_p1",
+   "value": 0.5578947368421052,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "descriptive; below the control minimum: 0.021"
+  },
+  {
+   "name": "GATA1_target_median_gene_length_kb",
+   "value": 191.303,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "descriptive; universe median 35.7 kb"
+  },
+  {
+   "name": "GATA1_target_median_detection_count",
+   "value": 36.0,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "descriptive; universe median 133"
+  },
+  {
+   "name": "GATA1_target_median_n_regulating_TFs",
+   "value": 60.0,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "descriptive (TRRUST+DoRothEA in-degree); universe median 12"
+  },
+  {
+   "name": "GATA1_hit_feature_target_entries_frac_le2_positions",
+   "value": 0.5636363636363636,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "descriptive; 55 target entries in the raw+adjusted hit features; most frequent: ERC1, AAK1, SMYD3, TCF12, MAP4K4, RERE"
+  },
+  {
+   "name": "GATA1_n_responding_features_raw",
+   "value": 3314,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "count of 4,928 features (BH<0.05 & |d|>0.5)"
+  },
+  {
+   "name": "GATA1_n_target_enriched_responding_features_raw",
+   "value": 6,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "hypergeometric BH<0.05 within responding features; K=233 targets"
+  },
+  {
+   "name": "GATA1_prob_specific_call_other_TF_targets_raw",
+   "value": 0.41919191919191917,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "fraction of size-matched other-TF target sets giving >=1 enriched responding feature"
+  },
+  {
+   "name": "GATA1_prob_specific_call_matched_random_sets_raw",
+   "value": 0.715,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "fraction of 200 detection x length matched random sets"
+  },
+  {
+   "name": "GATA1_prob_random_ge_observed_hits_raw",
+   "value": 0.225,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "fraction of matched random sets with at least as many enriched features (empirical p)"
+  },
+  {
+   "name": "GATA1_cross_TF_specificity_percentile_raw",
+   "value": 0.6565656565656566,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "rank among size-matched other-TF sets (0.5 = no specificity)"
+  },
+  {
+   "name": "GATA1_z_vs_matched_random_sets_raw",
+   "value": 0.6642099588177331,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "z vs 200 matched random sets"
+  },
+  {
+   "name": "GATA1_dorothea_ABC_percentile_raw",
+   "value": 0.20625,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "rank among size-matched other-TF A-C sets; K=22"
+  },
+  {
+   "name": "GATA1_n_responding_features_adj",
+   "value": 1908,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "count of 4,928 features (BH<0.05 & |d|>0.5)"
+  },
+  {
+   "name": "GATA1_n_target_enriched_responding_features_adj",
+   "value": 2,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "hypergeometric BH<0.05 within responding features; K=233 targets"
+  },
+  {
+   "name": "GATA1_prob_specific_call_other_TF_targets_adj",
+   "value": 0.398989898989899,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "fraction of size-matched other-TF target sets giving >=1 enriched responding feature"
+  },
+  {
+   "name": "GATA1_prob_specific_call_matched_random_sets_adj",
+   "value": 0.74,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "fraction of 200 detection x length matched random sets"
+  },
+  {
+   "name": "GATA1_prob_random_ge_observed_hits_adj",
+   "value": 0.63,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "fraction of matched random sets with at least as many enriched features (empirical p)"
+  },
+  {
+   "name": "GATA1_cross_TF_specificity_percentile_adj",
+   "value": 0.09595959595959595,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "rank among size-matched other-TF sets (0.5 = no specificity)"
+  },
+  {
+   "name": "GATA1_z_vs_matched_random_sets_adj",
+   "value": -1.644213619492032,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "z vs 200 matched random sets"
+  },
+  {
+   "name": "GATA1_dorothea_ABC_percentile_adj",
+   "value": 0.86875,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "rank among size-matched other-TF A-C sets; K=22"
+  },
+  {
+   "name": "GATA1_depth_quadratic_cross_TF_percentile",
+   "value": 0.09595959595959595,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "union; z vs matched random -1.64; responding features 1908; |d|>0.5 features 1916; enriched responding features 2"
+  },
+  {
+   "name": "GATA1_depth_linear_cross_TF_percentile",
+   "value": 0.10101010101010101,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "union; z vs matched random -0.05; responding features 1574; |d|>0.5 features 1587; enriched responding features 5"
+  },
+  {
+   "name": "GATA1_depth_cubic_cross_TF_percentile",
+   "value": 0.8585858585858586,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "union; z vs matched random 1.37; responding features 1663; |d|>0.5 features 1681; enriched responding features 1"
+  },
+  {
+   "name": "GATA1_depth_spline_cross_TF_percentile",
+   "value": 0.8888888888888888,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "union; z vs matched random 1.41; responding features 1543; |d|>0.5 features 1547; enriched responding features 4"
+  },
+  {
+   "name": "GATA1_depth_quadratic_plus_GEM_cross_TF_percentile",
+   "value": 0.08585858585858586,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "union; z vs matched random -1.49; responding features 1962; |d|>0.5 features 1972; enriched responding features 2"
+  },
+  {
+   "name": "GATA1_depth_umi_matched_cross_TF_percentile",
+   "value": 0.9242424242424242,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "union; z vs matched random 3.30; responding features None; |d|>0.5 features 774; enriched responding features None"
+  },
+  {
+   "name": "GATA1_umi_matched_distinct_controls",
+   "value": 96,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "distinct ref+pool cells used as 5-nearest UMI matches for the 95 GATA1 cells"
+  }
+ ],
+ "versions": {
+  "python": "3.12.9",
+  "numpy": "1.26.4",
+  "pandas": "2.3.3",
+  "scipy": "1.17.1",
+  "statsmodels": "0.14.6"
+ },
+ "per_tf_paper_test": [
+  {
+   "lab": "raw",
+   "tf": "AATF",
+   "K": 2,
+   "n_resp": 297,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0073,
+   "p_null_matched_random": 0.0,
+   "p_random_ge_obs": 0.0,
+   "z_rand": 0.9441
+  },
+  {
+   "lab": "adj",
+   "tf": "AATF",
+   "K": 2,
+   "n_resp": 327,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0109,
+   "p_null_matched_random": 0.0,
+   "p_random_ge_obs": 0.0,
+   "z_rand": 1.4308
+  },
+  {
+   "lab": "raw",
+   "tf": "ATF4",
+   "K": 167,
+   "n_resp": 3,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0699,
+   "p_null_matched_random": 0.095,
+   "p_random_ge_obs": 0.095,
+   "z_rand": 1.6982
+  },
+  {
+   "lab": "adj",
+   "tf": "ATF4",
+   "K": 167,
+   "n_resp": 0,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0,
+   "p_null_matched_random": 0.0,
+   "p_random_ge_obs": 0.0,
+   "z_rand": 1.4109
+  },
+  {
+   "lab": "raw",
+   "tf": "ATF5",
+   "K": 2,
+   "n_resp": 384,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0,
+   "p_null_matched_random": 0.005,
+   "p_random_ge_obs": 0.005,
+   "z_rand": 1.6849
+  },
+  {
+   "lab": "adj",
+   "tf": "ATF5",
+   "K": 2,
+   "n_resp": 229,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0,
+   "p_null_matched_random": 0.0,
+   "p_random_ge_obs": 0.0,
+   "z_rand": 1.1465
+  },
+  {
+   "lab": "raw",
+   "tf": "BDP1",
+   "K": 2,
+   "n_resp": 215,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0036,
+   "p_null_matched_random": 0.005,
+   "p_random_ge_obs": 0.005,
+   "z_rand": 1.6441
+  },
+  {
+   "lab": "adj",
+   "tf": "BDP1",
+   "K": 2,
+   "n_resp": 55,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0073,
+   "p_null_matched_random": 0.005,
+   "p_random_ge_obs": 0.005,
+   "z_rand": 1.1533
+  },
+  {
+   "lab": "raw",
+   "tf": "BRCA1",
+   "K": 25,
+   "n_resp": 0,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0,
+   "p_null_matched_random": 0.0,
+   "p_random_ge_obs": 0.0,
+   "z_rand": -0.4498
+  },
+  {
+   "lab": "adj",
+   "tf": "BRCA1",
+   "K": 25,
+   "n_resp": 1,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0,
+   "p_null_matched_random": 0.01,
+   "p_random_ge_obs": 0.01,
+   "z_rand": -0.8249
+  },
+  {
+   "lab": "raw",
+   "tf": "BRCA2",
+   "K": 3,
+   "n_resp": 3,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.024,
+   "p_null_matched_random": 0.03,
+   "p_random_ge_obs": 0.03,
+   "z_rand": -1.629
+  },
+  {
+   "lab": "adj",
+   "tf": "BRCA2",
+   "K": 3,
+   "n_resp": 2,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.016,
+   "p_null_matched_random": 0.03,
+   "p_random_ge_obs": 0.03,
+   "z_rand": -1.2771
+  },
+  {
+   "lab": "raw",
+   "tf": "BRF2",
+   "K": 173,
+   "n_resp": 0,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0,
+   "p_null_matched_random": 0.0,
+   "p_random_ge_obs": 0.0,
+   "z_rand": -2.2918
+  },
+  {
+   "lab": "adj",
+   "tf": "BRF2",
+   "K": 173,
+   "n_resp": 0,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0,
+   "p_null_matched_random": 0.0,
+   "p_random_ge_obs": 0.0,
+   "z_rand": -2.3798
+  },
+  {
+   "lab": "raw",
+   "tf": "BRIP1",
+   "K": 2,
+   "n_resp": 0,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0,
+   "p_null_matched_random": 0.0,
+   "p_random_ge_obs": 0.0,
+   "z_rand": -1.3549
+  },
+  {
+   "lab": "adj",
+   "tf": "BRIP1",
+   "K": 2,
+   "n_resp": 0,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0,
+   "p_null_matched_random": 0.0,
+   "p_random_ge_obs": 0.0,
+   "z_rand": -2.2739
+  },
+  {
+   "lab": "raw",
+   "tf": "BTF3",
+   "K": 4,
+   "n_resp": 81,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0075,
+   "p_null_matched_random": 0.0,
+   "p_random_ge_obs": 0.0,
+   "z_rand": 0.5144
+  },
+  {
+   "lab": "adj",
+   "tf": "BTF3",
+   "K": 4,
+   "n_resp": 18,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0075,
+   "p_null_matched_random": 0.0,
+   "p_random_ge_obs": 0.0,
+   "z_rand": 0.1292
+  },
+  {
+   "lab": "raw",
+   "tf": "CDC5L",
+   "K": 1,
+   "n_resp": 689,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0,
+   "p_null_matched_random": 0.0,
+   "p_random_ge_obs": 0.0,
+   "z_rand": -0.0867
+  },
+  {
+   "lab": "adj",
+   "tf": "CDC5L",
+   "K": 1,
+   "n_resp": 321,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0,
+   "p_null_matched_random": 0.0,
+   "p_random_ge_obs": 0.0,
+   "z_rand": -0.5336
+  },
+  {
+   "lab": "raw",
+   "tf": "CEBPZ",
+   "K": 224,
+   "n_resp": 64,
+   "n_spec_feat": 1,
+   "p_null_otherTF": 0.0697,
+   "p_null_matched_random": 0.015,
+   "p_random_ge_obs": 0.015,
+   "z_rand": 1.8374
+  },
+  {
+   "lab": "adj",
+   "tf": "CEBPZ",
+   "K": 224,
+   "n_resp": 90,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0896,
+   "p_null_matched_random": 0.03,
+   "p_random_ge_obs": 0.03,
+   "z_rand": 1.8909
+  },
+  {
+   "lab": "raw",
+   "tf": "CHD4",
+   "K": 1,
+   "n_resp": 6,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0398,
+   "p_null_matched_random": 0.0,
+   "p_random_ge_obs": 0.0,
+   "z_rand": -0.9649
+  },
+  {
+   "lab": "adj",
+   "tf": "CHD4",
+   "K": 1,
+   "n_resp": 5,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0398,
+   "p_null_matched_random": 0.0,
+   "p_random_ge_obs": 0.0,
+   "z_rand": -0.2137
+  },
+  {
+   "lab": "raw",
+   "tf": "COPS5",
+   "K": 1,
+   "n_resp": 200,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0,
+   "p_null_matched_random": 0.0,
+   "p_random_ge_obs": 0.0,
+   "z_rand": -0.9532
+  },
+  {
+   "lab": "adj",
+   "tf": "COPS5",
+   "K": 1,
+   "n_resp": 15,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0221,
+   "p_null_matched_random": 0.005,
+   "p_random_ge_obs": 0.005,
+   "z_rand": -2.1459
+  },
+  {
+   "lab": "raw",
+   "tf": "DMAP1",
+   "K": 3,
+   "n_resp": 380,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.008,
+   "p_null_matched_random": 0.02,
+   "p_random_ge_obs": 0.02,
+   "z_rand": -0.9236
+  },
+  {
+   "lab": "adj",
+   "tf": "DMAP1",
+   "K": 3,
+   "n_resp": 452,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.008,
+   "p_null_matched_random": 0.025,
+   "p_random_ge_obs": 0.025,
+   "z_rand": -1.102
+  },
+  {
+   "lab": "raw",
+   "tf": "DNMT1",
+   "K": 16,
+   "n_resp": 2,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0294,
+   "p_null_matched_random": 0.01,
+   "p_random_ge_obs": 0.01,
+   "z_rand": -1.9804
+  },
+  {
+   "lab": "adj",
+   "tf": "DNMT1",
+   "K": 16,
+   "n_resp": 2,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0294,
+   "p_null_matched_random": 0.01,
+   "p_random_ge_obs": 0.01,
+   "z_rand": -1.6853
+  },
+  {
+   "lab": "raw",
+   "tf": "DR1",
+   "K": 2,
+   "n_resp": 2,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0582,
+   "p_null_matched_random": 0.02,
+   "p_random_ge_obs": 0.02,
+   "z_rand": -0.8673
+  },
+  {
+   "lab": "adj",
+   "tf": "DR1",
+   "K": 2,
+   "n_resp": 3,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0582,
+   "p_null_matched_random": 0.02,
+   "p_random_ge_obs": 0.02,
+   "z_rand": -1.3984
+  },
+  {
+   "lab": "raw",
+   "tf": "DRAP1",
+   "K": 1,
+   "n_resp": 1,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0177,
+   "p_null_matched_random": 0.0,
+   "p_random_ge_obs": 0.0,
+   "z_rand": -0.2133
+  },
+  {
+   "lab": "adj",
+   "tf": "DRAP1",
+   "K": 1,
+   "n_resp": 1,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0177,
+   "p_null_matched_random": 0.0,
+   "p_random_ge_obs": 0.0,
+   "z_rand": -0.6004
+  },
+  {
+   "lab": "raw",
+   "tf": "E2F6",
+   "K": 196,
+   "n_resp": 0,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0,
+   "p_null_matched_random": 0.0,
+   "p_random_ge_obs": 0.0,
+   "z_rand": -0.4724
+  },
+  {
+   "lab": "adj",
+   "tf": "E2F6",
+   "K": 196,
+   "n_resp": 0,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0,
+   "p_null_matched_random": 0.0,
+   "p_random_ge_obs": 0.0,
+   "z_rand": -0.3725
+  },
+  {
+   "lab": "raw",
+   "tf": "E4F1",
+   "K": 1,
+   "n_resp": 122,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0,
+   "p_null_matched_random": 0.0,
+   "p_random_ge_obs": 0.0,
+   "z_rand": -0.2772
+  },
+  {
+   "lab": "adj",
+   "tf": "E4F1",
+   "K": 1,
+   "n_resp": 19,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0044,
+   "p_null_matched_random": 0.0,
+   "p_random_ge_obs": 0.0,
+   "z_rand": -0.251
+  },
+  {
+   "lab": "raw",
+   "tf": "ELL",
+   "K": 3,
+   "n_resp": 4,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.008,
+   "p_null_matched_random": 0.045,
+   "p_random_ge_obs": 0.045,
+   "z_rand": 1.2073
+  },
+  {
+   "lab": "adj",
+   "tf": "ELL",
+   "K": 3,
+   "n_resp": 3,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.008,
+   "p_null_matched_random": 0.025,
+   "p_random_ge_obs": 0.025,
+   "z_rand": 0.7533
+  },
+  {
+   "lab": "raw",
+   "tf": "ENO1",
+   "K": 1,
+   "n_resp": 36,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0044,
+   "p_null_matched_random": 0.0,
+   "p_random_ge_obs": 0.0,
+   "z_rand": -0.4853
+  },
+  {
+   "lab": "adj",
+   "tf": "ENO1",
+   "K": 1,
+   "n_resp": 16,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0133,
+   "p_null_matched_random": 0.0,
+   "p_random_ge_obs": 0.0,
+   "z_rand": -1.2857
+  },
+  {
+   "lab": "raw",
+   "tf": "ERCC2",
+   "K": 5,
+   "n_resp": 379,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0263,
+   "p_null_matched_random": 0.045,
+   "p_random_ge_obs": 0.045,
+   "z_rand": 0.1421
+  },
+  {
+   "lab": "adj",
+   "tf": "ERCC2",
+   "K": 5,
+   "n_resp": 21,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0,
+   "p_null_matched_random": 0.0,
+   "p_random_ge_obs": 0.0,
+   "z_rand": -0.0872
+  },
+  {
+   "lab": "raw",
+   "tf": "FOXL2",
+   "K": 3,
+   "n_resp": 0,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0,
+   "p_null_matched_random": 0.0,
+   "p_random_ge_obs": 0.0,
+   "z_rand": 1.6332
+  },
+  {
+   "lab": "adj",
+   "tf": "FOXL2",
+   "K": 3,
+   "n_resp": 0,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0,
+   "p_null_matched_random": 0.0,
+   "p_random_ge_obs": 0.0,
+   "z_rand": 2.0369
+  },
+  {
+   "lab": "raw",
+   "tf": "GATA1",
+   "K": 233,
+   "n_resp": 3314,
+   "n_spec_feat": 6,
+   "p_null_otherTF": 0.4192,
+   "p_null_matched_random": 0.715,
+   "p_random_ge_obs": 0.225,
+   "z_rand": 0.6642
+  },
+  {
+   "lab": "adj",
+   "tf": "GATA1",
+   "K": 233,
+   "n_resp": 1908,
+   "n_spec_feat": 2,
+   "p_null_otherTF": 0.399,
+   "p_null_matched_random": 0.74,
+   "p_random_ge_obs": 0.63,
+   "z_rand": -1.6442
+  },
+  {
+   "lab": "raw",
+   "tf": "GTF2A1",
+   "K": 1,
+   "n_resp": 356,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0,
+   "p_null_matched_random": 0.0,
+   "p_random_ge_obs": 0.0,
+   "z_rand": 0.3353
+  },
+  {
+   "lab": "adj",
+   "tf": "GTF2A1",
+   "K": 1,
+   "n_resp": 100,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0133,
+   "p_null_matched_random": 0.0,
+   "p_random_ge_obs": 0.0,
+   "z_rand": 1.2907
+  },
+  {
+   "lab": "raw",
+   "tf": "GTF2B",
+   "K": 200,
+   "n_resp": 410,
+   "n_spec_feat": 5,
+   "p_null_otherTF": 0.455,
+   "p_null_matched_random": 0.68,
+   "p_random_ge_obs": 0.11,
+   "z_rand": -0.7746
+  },
+  {
+   "lab": "adj",
+   "tf": "GTF2B",
+   "K": 200,
+   "n_resp": 12,
+   "n_spec_feat": 1,
+   "p_null_otherTF": 0.1801,
+   "p_null_matched_random": 0.15,
+   "p_random_ge_obs": 0.15,
+   "z_rand": -0.461
+  },
+  {
+   "lab": "raw",
+   "tf": "GTF3A",
+   "K": 3,
+   "n_resp": 9,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0,
+   "p_null_matched_random": 0.005,
+   "p_random_ge_obs": 0.005,
+   "z_rand": -1.0332
+  },
+  {
+   "lab": "adj",
+   "tf": "GTF3A",
+   "K": 3,
+   "n_resp": 9,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0,
+   "p_null_matched_random": 0.005,
+   "p_random_ge_obs": 0.005,
+   "z_rand": -1.2419
+  },
+  {
+   "lab": "raw",
+   "tf": "HDAC3",
+   "K": 3,
+   "n_resp": 0,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0,
+   "p_null_matched_random": 0.0,
+   "p_random_ge_obs": 0.0,
+   "z_rand": -0.1212
+  },
+  {
+   "lab": "adj",
+   "tf": "HDAC3",
+   "K": 3,
+   "n_resp": 1,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.016,
+   "p_null_matched_random": 0.07,
+   "p_random_ge_obs": 0.07,
+   "z_rand": 1.2004
+  },
+  {
+   "lab": "raw",
+   "tf": "HINFP",
+   "K": 90,
+   "n_resp": 259,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.5172,
+   "p_null_matched_random": 0.055,
+   "p_random_ge_obs": 0.055,
+   "z_rand": 0.0092
+  },
+  {
+   "lab": "adj",
+   "tf": "HINFP",
+   "K": 90,
+   "n_resp": 67,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.5586,
+   "p_null_matched_random": 0.02,
+   "p_random_ge_obs": 0.02,
+   "z_rand": 0.1508
+  },
+  {
+   "lab": "raw",
+   "tf": "HMGA1",
+   "K": 4,
+   "n_resp": 11,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.015,
+   "p_null_matched_random": 0.0,
+   "p_random_ge_obs": 0.0,
+   "z_rand": -1.5447
+  },
+  {
+   "lab": "adj",
+   "tf": "HMGA1",
+   "K": 4,
+   "n_resp": 11,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.015,
+   "p_null_matched_random": 0.0,
+   "p_random_ge_obs": 0.0,
+   "z_rand": -1.7642
+  },
+  {
+   "lab": "raw",
+   "tf": "ILF2",
+   "K": 1,
+   "n_resp": 14,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.031,
+   "p_null_matched_random": 0.09,
+   "p_random_ge_obs": 0.09,
+   "z_rand": -0.6393
+  },
+  {
+   "lab": "adj",
+   "tf": "ILF2",
+   "K": 1,
+   "n_resp": 26,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0,
+   "p_null_matched_random": 0.0,
+   "p_random_ge_obs": 0.0,
+   "z_rand": -0.4211
+  },
+  {
+   "lab": "raw",
+   "tf": "ILF3",
+   "K": 1,
+   "n_resp": 5,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0,
+   "p_null_matched_random": 0.01,
+   "p_random_ge_obs": 0.01,
+   "z_rand": 0.8669
+  },
+  {
+   "lab": "adj",
+   "tf": "ILF3",
+   "K": 1,
+   "n_resp": 6,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0044,
+   "p_null_matched_random": 0.01,
+   "p_random_ge_obs": 0.01,
+   "z_rand": 0.6311
+  },
+  {
+   "lab": "raw",
+   "tf": "MAX",
+   "K": 197,
+   "n_resp": 1623,
+   "n_spec_feat": 2,
+   "p_null_otherTF": 0.4028,
+   "p_null_matched_random": 0.28,
+   "p_random_ge_obs": 0.05,
+   "z_rand": -0.6752
+  },
+  {
+   "lab": "adj",
+   "tf": "MAX",
+   "K": 197,
+   "n_resp": 355,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.1754,
+   "p_null_matched_random": 0.07,
+   "p_random_ge_obs": 0.07,
+   "z_rand": 0.3918
+  },
+  {
+   "lab": "raw",
+   "tf": "MCM2",
+   "K": 1,
+   "n_resp": 12,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0708,
+   "p_null_matched_random": 0.03,
+   "p_random_ge_obs": 0.03,
+   "z_rand": -0.1166
+  },
+  {
+   "lab": "adj",
+   "tf": "MCM2",
+   "K": 1,
+   "n_resp": 13,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0221,
+   "p_null_matched_random": 0.075,
+   "p_random_ge_obs": 0.075,
+   "z_rand": 1.2431
+  },
+  {
+   "lab": "raw",
+   "tf": "MCM5",
+   "K": 1,
+   "n_resp": 0,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0,
+   "p_null_matched_random": 0.0,
+   "p_random_ge_obs": 0.0,
+   "z_rand": -0.8574
+  },
+  {
+   "lab": "adj",
+   "tf": "MCM5",
+   "K": 1,
+   "n_resp": 1,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0,
+   "p_null_matched_random": 0.0,
+   "p_random_ge_obs": 0.0,
+   "z_rand": -0.268
+  },
+  {
+   "lab": "raw",
+   "tf": "MED1",
+   "K": 1,
+   "n_resp": 2551,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0088,
+   "p_null_matched_random": 0.0,
+   "p_random_ge_obs": 0.0,
+   "z_rand": -0.7671
+  },
+  {
+   "lab": "adj",
+   "tf": "MED1",
+   "K": 1,
+   "n_resp": 843,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0044,
+   "p_null_matched_random": 0.0,
+   "p_random_ge_obs": 0.0,
+   "z_rand": -0.1354
+  },
+  {
+   "lab": "raw",
+   "tf": "MYBL2",
+   "K": 133,
+   "n_resp": 86,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.032,
+   "p_null_matched_random": 0.02,
+   "p_random_ge_obs": 0.02,
+   "z_rand": -0.8434
+  },
+  {
+   "lab": "adj",
+   "tf": "MYBL2",
+   "K": 133,
+   "n_resp": 194,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0822,
+   "p_null_matched_random": 0.005,
+   "p_random_ge_obs": 0.005,
+   "z_rand": -0.1702
+  },
+  {
+   "lab": "raw",
+   "tf": "MZF1",
+   "K": 1,
+   "n_resp": 0,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0,
+   "p_null_matched_random": 0.0,
+   "p_random_ge_obs": 0.0,
+   "z_rand": -0.9379
+  },
+  {
+   "lab": "adj",
+   "tf": "MZF1",
+   "K": 1,
+   "n_resp": 0,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0,
+   "p_null_matched_random": 0.0,
+   "p_random_ge_obs": 0.0,
+   "z_rand": -0.6519
+  },
+  {
+   "lab": "raw",
+   "tf": "NELFCD",
+   "K": 1,
+   "n_resp": 19,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0,
+   "p_null_matched_random": 0.005,
+   "p_random_ge_obs": 0.005,
+   "z_rand": -1.2477
+  },
+  {
+   "lab": "adj",
+   "tf": "NELFCD",
+   "K": 1,
+   "n_resp": 15,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0265,
+   "p_null_matched_random": 0.01,
+   "p_random_ge_obs": 0.01,
+   "z_rand": -1.3674
+  },
+  {
+   "lab": "raw",
+   "tf": "NFRKB",
+   "K": 1,
+   "n_resp": 47,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0,
+   "p_null_matched_random": 0.005,
+   "p_random_ge_obs": 0.005,
+   "z_rand": -0.3735
+  },
+  {
+   "lab": "adj",
+   "tf": "NFRKB",
+   "K": 1,
+   "n_resp": 5,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0133,
+   "p_null_matched_random": 0.01,
+   "p_random_ge_obs": 0.01,
+   "z_rand": 0.2196
+  },
+  {
+   "lab": "raw",
+   "tf": "PHB2",
+   "K": 1,
+   "n_resp": 2192,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0088,
+   "p_null_matched_random": 0.0,
+   "p_random_ge_obs": 0.0,
+   "z_rand": -1.2581
+  },
+  {
+   "lab": "adj",
+   "tf": "PHB2",
+   "K": 1,
+   "n_resp": 753,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0,
+   "p_null_matched_random": 0.0,
+   "p_random_ge_obs": 0.0,
+   "z_rand": -1.3315
+  },
+  {
+   "lab": "raw",
+   "tf": "POLR1A",
+   "K": 1,
+   "n_resp": 153,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0,
+   "p_null_matched_random": 0.0,
+   "p_random_ge_obs": 0.0,
+   "z_rand": -1.2644
+  },
+  {
+   "lab": "adj",
+   "tf": "POLR1A",
+   "K": 1,
+   "n_resp": 229,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0,
+   "p_null_matched_random": 0.0,
+   "p_random_ge_obs": 0.0,
+   "z_rand": -1.9163
+  },
+  {
+   "lab": "raw",
+   "tf": "RAD51",
+   "K": 1,
+   "n_resp": 188,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0044,
+   "p_null_matched_random": 0.0,
+   "p_random_ge_obs": 0.0,
+   "z_rand": -0.6426
+  },
+  {
+   "lab": "adj",
+   "tf": "RAD51",
+   "K": 1,
+   "n_resp": 12,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0219,
+   "p_null_matched_random": 0.07,
+   "p_random_ge_obs": 0.07,
+   "z_rand": 0.2712
+  },
+  {
+   "lab": "raw",
+   "tf": "RBMX",
+   "K": 2,
+   "n_resp": 16,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0073,
+   "p_null_matched_random": 0.0,
+   "p_random_ge_obs": 0.0,
+   "z_rand": 2.0776
+  },
+  {
+   "lab": "adj",
+   "tf": "RBMX",
+   "K": 2,
+   "n_resp": 37,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0,
+   "p_null_matched_random": 0.0,
+   "p_random_ge_obs": 0.0,
+   "z_rand": 1.2908
+  },
+  {
+   "lab": "raw",
+   "tf": "SETDB1",
+   "K": 154,
+   "n_resp": 5,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.094,
+   "p_null_matched_random": 0.025,
+   "p_random_ge_obs": 0.025,
+   "z_rand": 2.2901
+  },
+  {
+   "lab": "adj",
+   "tf": "SETDB1",
+   "K": 154,
+   "n_resp": 6,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0897,
+   "p_null_matched_random": 0.025,
+   "p_random_ge_obs": 0.025,
+   "z_rand": 2.5861
+  },
+  {
+   "lab": "raw",
+   "tf": "SMG6",
+   "K": 1,
+   "n_resp": 2,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0,
+   "p_null_matched_random": 0.005,
+   "p_random_ge_obs": 0.005,
+   "z_rand": -0.7617
+  },
+  {
+   "lab": "adj",
+   "tf": "SMG6",
+   "K": 1,
+   "n_resp": 0,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0,
+   "p_null_matched_random": 0.0,
+   "p_random_ge_obs": 0.0,
+   "z_rand": -0.0509
+  },
+  {
+   "lab": "raw",
+   "tf": "SNIP1",
+   "K": 1,
+   "n_resp": 1,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0,
+   "p_null_matched_random": 0.0,
+   "p_random_ge_obs": 0.0,
+   "z_rand": 0.3276
+  },
+  {
+   "lab": "adj",
+   "tf": "SNIP1",
+   "K": 1,
+   "n_resp": 0,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0,
+   "p_null_matched_random": 0.0,
+   "p_random_ge_obs": 0.0,
+   "z_rand": -0.8922
+  },
+  {
+   "lab": "raw",
+   "tf": "SP2",
+   "K": 161,
+   "n_resp": 3,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0087,
+   "p_null_matched_random": 0.05,
+   "p_random_ge_obs": 0.05,
+   "z_rand": 0.5876
+  },
+  {
+   "lab": "adj",
+   "tf": "SP2",
+   "K": 161,
+   "n_resp": 3,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0087,
+   "p_null_matched_random": 0.05,
+   "p_random_ge_obs": 0.05,
+   "z_rand": 0.9268
+  },
+  {
+   "lab": "raw",
+   "tf": "SRF",
+   "K": 283,
+   "n_resp": 0,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0,
+   "p_null_matched_random": 0.0,
+   "p_random_ge_obs": 0.0,
+   "z_rand": -1.333
+  },
+  {
+   "lab": "adj",
+   "tf": "SRF",
+   "K": 283,
+   "n_resp": 0,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0,
+   "p_null_matched_random": 0.0,
+   "p_random_ge_obs": 0.0,
+   "z_rand": -0.7062
+  },
+  {
+   "lab": "raw",
+   "tf": "SRSF1",
+   "K": 2,
+   "n_resp": 180,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0,
+   "p_null_matched_random": 0.01,
+   "p_random_ge_obs": 0.01,
+   "z_rand": 1.2041
+  },
+  {
+   "lab": "adj",
+   "tf": "SRSF1",
+   "K": 2,
+   "n_resp": 187,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0036,
+   "p_null_matched_random": 0.01,
+   "p_random_ge_obs": 0.01,
+   "z_rand": 1.6652
+  },
+  {
+   "lab": "raw",
+   "tf": "STAT5A",
+   "K": 205,
+   "n_resp": 0,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0,
+   "p_null_matched_random": 0.0,
+   "p_random_ge_obs": 0.0,
+   "z_rand": 1.0134
+  },
+  {
+   "lab": "adj",
+   "tf": "STAT5A",
+   "K": 205,
+   "n_resp": 0,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0,
+   "p_null_matched_random": 0.0,
+   "p_random_ge_obs": 0.0,
+   "z_rand": 0.0498
+  },
+  {
+   "lab": "raw",
+   "tf": "TAF1",
+   "K": 2,
+   "n_resp": 1968,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0145,
+   "p_null_matched_random": 0.01,
+   "p_random_ge_obs": 0.01,
+   "z_rand": -0.1055
+  },
+  {
+   "lab": "adj",
+   "tf": "TAF1",
+   "K": 2,
+   "n_resp": 397,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0145,
+   "p_null_matched_random": 0.0,
+   "p_random_ge_obs": 0.0,
+   "z_rand": 0.603
+  },
+  {
+   "lab": "raw",
+   "tf": "TBP",
+   "K": 298,
+   "n_resp": 8,
+   "n_spec_feat": 1,
+   "p_null_otherTF": 0.3484,
+   "p_null_matched_random": 0.03,
+   "p_random_ge_obs": 0.03,
+   "z_rand": 0.1663
+  },
+  {
+   "lab": "adj",
+   "tf": "TBP",
+   "K": 298,
+   "n_resp": 3,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0,
+   "p_null_matched_random": 0.02,
+   "p_random_ge_obs": 0.02,
+   "z_rand": 0.0096
+  },
+  {
+   "lab": "raw",
+   "tf": "TERF1",
+   "K": 175,
+   "n_resp": 0,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0,
+   "p_null_matched_random": 0.0,
+   "p_random_ge_obs": 0.0,
+   "z_rand": 1.5823
+  },
+  {
+   "lab": "adj",
+   "tf": "TERF1",
+   "K": 175,
+   "n_resp": 0,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0,
+   "p_null_matched_random": 0.0,
+   "p_random_ge_obs": 0.0,
+   "z_rand": 1.0191
+  },
+  {
+   "lab": "raw",
+   "tf": "TERF2",
+   "K": 158,
+   "n_resp": 130,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.4545,
+   "p_null_matched_random": 0.145,
+   "p_random_ge_obs": 0.145,
+   "z_rand": 1.5799
+  },
+  {
+   "lab": "adj",
+   "tf": "TERF2",
+   "K": 158,
+   "n_resp": 70,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.5671,
+   "p_null_matched_random": 0.11,
+   "p_random_ge_obs": 0.11,
+   "z_rand": 1.9019
+  },
+  {
+   "lab": "raw",
+   "tf": "TFDP1",
+   "K": 226,
+   "n_resp": 61,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.2587,
+   "p_null_matched_random": 0.09,
+   "p_random_ge_obs": 0.09,
+   "z_rand": 1.2253
+  },
+  {
+   "lab": "adj",
+   "tf": "TFDP1",
+   "K": 226,
+   "n_resp": 6,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0348,
+   "p_null_matched_random": 0.045,
+   "p_random_ge_obs": 0.045,
+   "z_rand": 2.6459
+  },
+  {
+   "lab": "raw",
+   "tf": "THAP1",
+   "K": 228,
+   "n_resp": 234,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.3317,
+   "p_null_matched_random": 0.02,
+   "p_random_ge_obs": 0.02,
+   "z_rand": -0.1329
+  },
+  {
+   "lab": "adj",
+   "tf": "THAP1",
+   "K": 228,
+   "n_resp": 9,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0151,
+   "p_null_matched_random": 0.05,
+   "p_random_ge_obs": 0.05,
+   "z_rand": 0.8768
+  },
+  {
+   "lab": "raw",
+   "tf": "THAP11",
+   "K": 197,
+   "n_resp": 0,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0,
+   "p_null_matched_random": 0.0,
+   "p_random_ge_obs": 0.0,
+   "z_rand": -2.3069
+  },
+  {
+   "lab": "adj",
+   "tf": "THAP11",
+   "K": 197,
+   "n_resp": 0,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0,
+   "p_null_matched_random": 0.0,
+   "p_random_ge_obs": 0.0,
+   "z_rand": -2.1346
+  },
+  {
+   "lab": "raw",
+   "tf": "TSG101",
+   "K": 1,
+   "n_resp": 323,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0,
+   "p_null_matched_random": 0.0,
+   "p_random_ge_obs": 0.0,
+   "z_rand": -0.1397
+  },
+  {
+   "lab": "adj",
+   "tf": "TSG101",
+   "K": 1,
+   "n_resp": 290,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0,
+   "p_null_matched_random": 0.0,
+   "p_random_ge_obs": 0.0,
+   "z_rand": 0.1686
+  },
+  {
+   "lab": "raw",
+   "tf": "TTF2",
+   "K": 1,
+   "n_resp": 31,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0133,
+   "p_null_matched_random": 0.03,
+   "p_random_ge_obs": 0.03,
+   "z_rand": -1.6622
+  },
+  {
+   "lab": "adj",
+   "tf": "TTF2",
+   "K": 1,
+   "n_resp": 3,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0044,
+   "p_null_matched_random": 0.005,
+   "p_random_ge_obs": 0.005,
+   "z_rand": -0.016
+  },
+  {
+   "lab": "raw",
+   "tf": "UPF1",
+   "K": 2,
+   "n_resp": 65,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0037,
+   "p_null_matched_random": 0.005,
+   "p_random_ge_obs": 0.005,
+   "z_rand": -0.9367
+  },
+  {
+   "lab": "adj",
+   "tf": "UPF1",
+   "K": 2,
+   "n_resp": 79,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0037,
+   "p_null_matched_random": 0.005,
+   "p_random_ge_obs": 0.005,
+   "z_rand": -0.9172
+  },
+  {
+   "lab": "raw",
+   "tf": "UPF2",
+   "K": 1,
+   "n_resp": 21,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0,
+   "p_null_matched_random": 0.01,
+   "p_random_ge_obs": 0.01,
+   "z_rand": -0.1254
+  },
+  {
+   "lab": "adj",
+   "tf": "UPF2",
+   "K": 1,
+   "n_resp": 41,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0,
+   "p_null_matched_random": 0.01,
+   "p_random_ge_obs": 0.01,
+   "z_rand": -0.0371
+  },
+  {
+   "lab": "raw",
+   "tf": "VHL",
+   "K": 4,
+   "n_resp": 0,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0,
+   "p_null_matched_random": 0.0,
+   "p_random_ge_obs": 0.0,
+   "z_rand": 1.466
+  },
+  {
+   "lab": "adj",
+   "tf": "VHL",
+   "K": 4,
+   "n_resp": 0,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0,
+   "p_null_matched_random": 0.0,
+   "p_random_ge_obs": 0.0,
+   "z_rand": 0.9898
+  },
+  {
+   "lab": "raw",
+   "tf": "WDR5",
+   "K": 1,
+   "n_resp": 86,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0,
+   "p_null_matched_random": 0.0,
+   "p_random_ge_obs": 0.0,
+   "z_rand": 1.6217
+  },
+  {
+   "lab": "adj",
+   "tf": "WDR5",
+   "K": 1,
+   "n_resp": 83,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0,
+   "p_null_matched_random": 0.0,
+   "p_random_ge_obs": 0.0,
+   "z_rand": 2.3259
+  },
+  {
+   "lab": "raw",
+   "tf": "ZNF24",
+   "K": 146,
+   "n_resp": 1,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0043,
+   "p_null_matched_random": 0.0,
+   "p_random_ge_obs": 0.0,
+   "z_rand": -0.0872
+  },
+  {
+   "lab": "adj",
+   "tf": "ZNF24",
+   "K": 146,
+   "n_resp": 0,
+   "n_spec_feat": 0,
+   "p_null_otherTF": 0.0,
+   "p_null_matched_random": 0.0,
+   "p_random_ge_obs": 0.0,
+   "z_rand": -0.6524
+  }
+ ],
+ "raw_paper_test_calls": [
+  {
+   "tf": "CEBPZ",
+   "K": 224,
+   "n_resp": 64,
+   "n_spec_feat": 1,
+   "p_null_otherTF": 0.06965174129353234,
+   "p_null_matched_random": 0.015
+  },
+  {
+   "tf": "GATA1",
+   "K": 233,
+   "n_resp": 3314,
+   "n_spec_feat": 6,
+   "p_null_otherTF": 0.41919191919191917,
+   "p_null_matched_random": 0.715
+  },
+  {
+   "tf": "GTF2B",
+   "K": 200,
+   "n_resp": 410,
+   "n_spec_feat": 5,
+   "p_null_otherTF": 0.4549763033175355,
+   "p_null_matched_random": 0.68
+  },
+  {
+   "tf": "MAX",
+   "K": 197,
+   "n_resp": 1623,
+   "n_spec_feat": 2,
+   "p_null_otherTF": 0.4028436018957346,
+   "p_null_matched_random": 0.28
+  },
+  {
+   "tf": "TBP",
+   "K": 298,
+   "n_resp": 8,
+   "n_spec_feat": 1,
+   "p_null_otherTF": 0.34838709677419355,
+   "p_null_matched_random": 0.03
+  }
+ ],
+ "dorothea_ABC_per_tf": [
+  {
+   "tf": "ATF4",
+   "K_adj": 51,
+   "rho_adj": 0.011,
+   "pct_adj": 0.566,
+   "generic_pct_adj": 0.829,
+   "K_raw": 51,
+   "rho_raw": 0.02,
+   "pct_raw": 0.75,
+   "generic_pct_raw": 0.645,
+   "shift": -0.184,
+   "prof_sim": 0.827,
+   "umi_ratio": 1.022
+  },
+  {
+   "tf": "CEBPZ",
+   "K_adj": 1,
+   "rho_adj": 0.007,
+   "pct_adj": 0.559,
+   "generic_pct_adj": 0.265,
+   "K_raw": 1,
+   "rho_raw": 0.011,
+   "pct_raw": 0.735,
+   "generic_pct_raw": 0.461,
+   "shift": -0.176,
+   "prof_sim": 0.956,
+   "umi_ratio": 1.008
+  },
+  {
+   "tf": "E2F6",
+   "K_adj": 33,
+   "rho_adj": -0.005,
+   "pct_adj": 0.476,
+   "generic_pct_adj": 0.169,
+   "K_raw": 33,
+   "rho_raw": 0.001,
+   "pct_raw": 0.677,
+   "generic_pct_raw": 0.218,
+   "shift": -0.202,
+   "prof_sim": 0.777,
+   "umi_ratio": 0.965
+  },
+  {
+   "tf": "E4F1",
+   "K_adj": 1,
+   "rho_adj": -0.004,
+   "pct_adj": 0.402,
+   "generic_pct_adj": 0.088,
+   "K_raw": 1,
+   "rho_raw": -0.001,
+   "pct_raw": 0.363,
+   "generic_pct_raw": 0.167,
+   "shift": 0.039,
+   "prof_sim": 0.55,
+   "umi_ratio": 0.837
+  },
+  {
+   "tf": "FOXL2",
+   "K_adj": 3,
+   "rho_adj": 0.03,
+   "pct_adj": 0.929,
+   "generic_pct_adj": 0.952,
+   "K_raw": 3,
+   "rho_raw": 0.022,
+   "pct_raw": 0.833,
+   "generic_pct_raw": 0.595,
+   "shift": 0.095,
+   "prof_sim": 0.827,
+   "umi_ratio": 0.991
+  },
+  {
+   "tf": "GATA1",
+   "K_adj": 22,
+   "rho_adj": 0.013,
+   "pct_adj": 0.869,
+   "generic_pct_adj": 0.494,
+   "K_raw": 22,
+   "rho_raw": -0.008,
+   "pct_raw": 0.206,
+   "generic_pct_raw": 0.588,
+   "shift": 0.663,
+   "prof_sim": 0.13,
+   "umi_ratio": 0.313
+  },
+  {
+   "tf": "HINFP",
+   "K_adj": 10,
+   "rho_adj": 0.022,
+   "pct_adj": 0.786,
+   "generic_pct_adj": 0.032,
+   "K_raw": 10,
+   "rho_raw": 0.012,
+   "pct_raw": 0.532,
+   "generic_pct_raw": 0.0,
+   "shift": 0.254,
+   "prof_sim": 0.629,
+   "umi_ratio": 0.852
+  },
+  {
+   "tf": "HMGA1",
+   "K_adj": 1,
+   "rho_adj": 0.003,
+   "pct_adj": 0.569,
+   "generic_pct_adj": 0.627,
+   "K_raw": 1,
+   "rho_raw": 0.008,
+   "pct_raw": 0.667,
+   "generic_pct_raw": 0.333,
+   "shift": -0.098,
+   "prof_sim": 0.953,
+   "umi_ratio": 1.022
+  },
+  {
+   "tf": "MAX",
+   "K_adj": 25,
+   "rho_adj": 0.013,
+   "pct_adj": 0.432,
+   "generic_pct_adj": 0.041,
+   "K_raw": 25,
+   "rho_raw": -0.006,
+   "pct_raw": 0.209,
+   "generic_pct_raw": 0.027,
+   "shift": 0.223,
+   "prof_sim": 0.292,
+   "umi_ratio": 0.626
+  },
+  {
+   "tf": "MYBL2",
+   "K_adj": 14,
+   "rho_adj": 0.009,
+   "pct_adj": 0.752,
+   "generic_pct_adj": 0.866,
+   "K_raw": 14,
+   "rho_raw": -0.028,
+   "pct_raw": 0.07,
+   "generic_pct_raw": 0.949,
+   "shift": 0.682,
+   "prof_sim": 0.147,
+   "umi_ratio": 1.122
+  },
+  {
+   "tf": "SP2",
+   "K_adj": 14,
+   "rho_adj": -0.001,
+   "pct_adj": 0.382,
+   "generic_pct_adj": 0.325,
+   "K_raw": 14,
+   "rho_raw": 0.008,
+   "pct_raw": 0.592,
+   "generic_pct_raw": 0.503,
+   "shift": -0.21,
+   "prof_sim": 0.658,
+   "umi_ratio": 0.903
+  },
+  {
+   "tf": "SRF",
+   "K_adj": 51,
+   "rho_adj": 0.003,
+   "pct_adj": 0.605,
+   "generic_pct_adj": 0.895,
+   "K_raw": 51,
+   "rho_raw": -0.006,
+   "pct_raw": 0.526,
+   "generic_pct_raw": 0.934,
+   "shift": 0.079,
+   "prof_sim": 0.92,
+   "umi_ratio": 1.009
+  },
+  {
+   "tf": "STAT5A",
+   "K_adj": 26,
+   "rho_adj": -0.025,
+   "pct_adj": 0.079,
+   "generic_pct_adj": 0.371,
+   "K_raw": 26,
+   "rho_raw": -0.017,
+   "pct_raw": 0.126,
+   "generic_pct_raw": 0.583,
+   "shift": -0.046,
+   "prof_sim": 0.703,
+   "umi_ratio": 1.027
+  },
+  {
+   "tf": "TBP",
+   "K_adj": 31,
+   "rho_adj": 0.016,
+   "pct_adj": 0.845,
+   "generic_pct_adj": 0.372,
+   "K_raw": 31,
+   "rho_raw": -0.009,
+   "pct_raw": 0.163,
+   "generic_pct_raw": 0.426,
+   "shift": 0.682,
+   "prof_sim": 0.384,
+   "umi_ratio": 0.889
+  },
+  {
+   "tf": "TFDP1",
+   "K_adj": 57,
+   "rho_adj": 0.052,
+   "pct_adj": 0.984,
+   "generic_pct_adj": 0.918,
+   "K_raw": 57,
+   "rho_raw": -0.008,
+   "pct_raw": 0.148,
+   "generic_pct_raw": 0.869,
+   "shift": 0.836,
+   "prof_sim": 0.181,
+   "umi_ratio": 1.22
+  },
+  {
+   "tf": "THAP1",
+   "K_adj": 32,
+   "rho_adj": 0.022,
+   "pct_adj": 0.783,
+   "generic_pct_adj": 0.721,
+   "K_raw": 32,
+   "rho_raw": -0.003,
+   "pct_raw": 0.132,
+   "generic_pct_raw": 0.333,
+   "shift": 0.651,
+   "prof_sim": 0.447,
+   "umi_ratio": 0.846
+  },
+  {
+   "tf": "THAP11",
+   "K_adj": 83,
+   "rho_adj": -0.012,
+   "pct_adj": 0.286,
+   "generic_pct_adj": 0.057,
+   "K_raw": 83,
+   "rho_raw": -0.025,
+   "pct_raw": 0.057,
+   "generic_pct_raw": 0.114,
+   "shift": 0.229,
+   "prof_sim": 0.676,
+   "umi_ratio": 0.933
+  },
+  {
+   "tf": "ZNF24",
+   "K_adj": 5,
+   "rho_adj": -0.008,
+   "pct_adj": 0.508,
+   "generic_pct_adj": 0.277,
+   "K_raw": 5,
+   "rho_raw": -0.014,
+   "pct_raw": 0.308,
+   "generic_pct_raw": 0.677,
+   "shift": 0.2,
+   "prof_sim": 0.763,
+   "umi_ratio": 1.057
+  }
+ ],
+ "GATA1_hit_features": {
+  "raw": [
+   {
+    "feature": 42,
+    "targets": {
+     "MAP4K4": 74,
+     "MYH9": 10,
+     "BAZ2B": 7,
+     "CAST": 4,
+     "LRBA": 10,
+     "PIP4K2A": 3
+    }
+   },
+   {
+    "feature": 1912,
+    "targets": {
+     "UBR5": 9,
+     "FUT8": 3,
+     "ADD3": 6,
+     "FRYL": 3,
+     "CUX1": 7,
+     "CPEB4": 7,
+     "FOXN3": 1
+    }
+   },
+   {
+    "feature": 2610,
+    "targets": {
+     "MBD5": 1,
+     "IMMP2L": 1,
+     "ARID1B": 5,
+     "RABGAP1L": 1,
+     "STAG1": 2,
+     "NFIA": 6,
+     "EVL": 1,
+     "STXBP5": 4
+    }
+   },
+   {
+    "feature": 3290,
+    "targets": {
+     "ERC1": 1,
+     "EIF4G3": 3,
+     "FOXP1": 2,
+     "SMYD3": 1,
+     "TCF12": 2,
+     "EXOC4": 1,
+     "RERE": 1
+    }
+   },
+   {
+    "feature": 3401,
+    "targets": {
+     "AKAP13": 4,
+     "ATP2B1": 4,
+     "TBCA": 4,
+     "PIK3R1": 2,
+     "VPS13B": 1,
+     "ASAP1": 4,
+     "AAK1": 4
+    }
+   },
+   {
+    "feature": 4600,
+    "targets": {
+     "ERC1": 1,
+     "SMYD3": 1,
+     "AAK1": 1,
+     "TCF12": 2,
+     "SPTBN1": 3,
+     "EIF3H": 10
+    }
+   }
+  ],
+  "adj": [
+   {
+    "feature": 186,
+    "targets": {
+     "DYM": 1,
+     "PHF21A": 1,
+     "USP24": 1,
+     "TBC1D1": 1,
+     "BACH1": 1,
+     "TJP2": 2,
+     "USP6NL": 1
+    }
+   },
+   {
+    "feature": 3290,
+    "targets": {
+     "ERC1": 1,
+     "EIF4G3": 3,
+     "FOXP1": 2,
+     "SMYD3": 1,
+     "TCF12": 2,
+     "EXOC4": 1,
+     "RERE": 1
+    }
+   }
+  ]
+ }
+}

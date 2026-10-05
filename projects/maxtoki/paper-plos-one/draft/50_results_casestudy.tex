@@ -1,0 +1,469 @@
+\subsection*{The MaxToki-217M case study}
+This part reports what the corrected analyses show about MaxToki-217M.
+Every result concerns MaxToki-217M given one cell at a time, with the
+input encoding and the intervention code checked as described in
+Materials and methods. Table~\ref{tab:scope} lists, for each analysis,
+the cells it used, the reference it was judged against, and what its
+conclusion depends on. Four deployed analyses used incorrectly encoded
+inputs and were not re-run, so we do not report them: the topology
+screen of gene--gene representations, the ageing probe, the
+feature-patching specificity ratio, and the edge census from 1,000
+layer-5 features in 20 cells, which also used the intervention code that
+deleted a transformer block. The MaxToki-1B attention run and the
+Adamson attention run are not reported for the same reason. The
+gene-set annotation of the sparse-autoencoder features was redone only
+to choose the source features for circuit tracing, and its rates are not
+reported. S3~Appendix lists smaller follow-up analyses that were not
+re-run either, such as value-weighted attention, head ablation and the
+later uses of the circuit edge list.
+
+% TABLE: scope (tab:scope) is inserted here.
+
+\subsubsection*{Attention scores do not beat gene-level baselines}
+MaxToki is a causal decoder: genes enter in order of falling normalised
+expression, and a gene can attend only to genes placed before it. The
+attention from a regulator $P$ to a target $T$ is therefore zero in every
+cell in which $T$ comes after $P$, and the average over cells partly
+measures how often $T$ is ranked above $P$ (the order share), which
+needs no model. We read five attention scores at layer~8: regulator to target, target to
+regulator, the mean and the larger of the two directions, and regulator
+to target averaged only over the cells in which the target comes before
+the regulator. A gene counted as responding to a knockdown when its mean
+$\log(1+x)$ value in the knocked-down cells differed from that in 5,000
+control cells by at least 0.5 (natural log), with BH $q < 0.05$ over the
+1,500 genes tested (Welch $t$-test). Here $x$ is the count scaled so that
+each cell sums to 10,000 over those 1,500 genes. A knockdown was kept
+when it had at least 3 responding and 3 non-responding genes. The
+deployed RPE1 pipeline used this rule. We kept it for K562 and chose it
+before seeing the K562 results. On the RPE1 screen, which was encoded
+correctly from raw counts, the order share alone predicted knockdown responses better than
+the regulator-to-target score (mean AUROC over 325 knockdowns 0.648
+against 0.603), and the variance of the target gene predicted them far
+better (0.766, 95\% bootstrap interval over knockdowns 0.757--0.776)
+(Fig~\ref{fig:caseReg}A). AUROC is the probability that a randomly chosen
+responding gene is scored above a randomly chosen non-responding one;
+0.5 is chance.
+
+\begin{figure}[H]
+\caption{\textbf{MaxToki-217M: regulatory probes after correction.}
+(A)~Prediction of which genes respond to a CRISPR-interference knockdown,
+in RPE1 cells (325 knockdowns) and K562 cells (194 knockdowns): mean
+AUROC over knockdowns (line, 95\% bootstrap interval over knockdowns) for
+layer-8 attention read from regulator to target and in both directions,
+and for three scores that use no model: the share of cells in which the
+target is ranked above the regulator, co-expression, and the variance of
+the target gene. Dashed line, chance. (B)~Recovery of TRRUST
+regulator--target pairs (RPE1: 16 factors, 138 pairs; K562: 16 factors,
+107 pairs): pooled AUROC with 95\% bootstrap interval over factors; the
+target-gene model uses each target's mean, variance and dropout rate.
+(C)~Power of the count-matched test for GATA1 in K562 cells, counting
+every overlapping target (the deployed analysis stopped at 5): share of
+200 simulations in which GATA1 ChIP-seq targets planted among the top 20
+genes of one responding feature were detected at $p<0.05$ (band, Wilson
+95\% interval). (D)~Prediction of the direction of change of 796,304
+knockdown--target records in K562 cells (248 silenced genes) by the
+traced circuit (line, 95\% bootstrap interval over silenced genes), by
+always predicting ``down'', and by predicting each target's usual
+direction from other silenced genes.}
+\label{fig:caseReg}
+\end{figure}
+
+On TRRUST regulator--target pairs in RPE1 (16 transcription factors, 138
+pairs), a symmetric attention score (the mean of both directions) reached
+an AUROC of 0.638 and beat a degree-preserving network null ($z = +3.2$;
+empirical $p = 0.003$ from 1,000 rewired networks)
+(Fig~\ref{fig:caseReg}B). After Benjamini--Hochberg (BH) adjustment the
+$q$ value was 0.018. The adjusted family had 12 tests: six scores (the
+five attention scores and the order share) in each of the two cell
+lines. Co-expression computed from the same cells beat the null about as
+strongly (AUROC 0.596, $z = +3.0$). Attention scored 0.042 higher, but
+the 95\% interval of this gap ($-0.040$ to $+0.127$) includes zero. A
+three-number model of each target gene knows nothing about the
+regulator. It uses the gene's mean, its variance and its dropout rate
+(the share of control cells in which the gene has zero counts). It scored
+0.749 (0.691--0.801). The symmetric attention score was 0.11 below this
+gene model (0.00 to 0.20). We also removed the mean, variance and
+dropout rate of both genes from the symmetric score with the planned
+linear model. What remained had an AUROC of 0.538 (0.456--0.614), which
+does not differ from 0.5. It still beat the rewired networks
+($z = +2.75$, $p = 0.003$, not adjusted). This is because the rewired
+networks were scored after the same removal, and their mean AUROC fell
+too, from about 0.58 to about 0.48. Co-expression treated the same way
+also beat them ($z = +2.94$), and the symmetric score still beat them
+after co-expression was removed
+(0.611, $z = +2.53$). So in RPE1, symmetric attention carries a
+pair-level signal about as large as that of co-expression, not a larger
+one (S3~Appendix).
+
+In K562 cells (2,000 control cells of the same screen, 1,500 genes,
+layer~8), attention predicted knockdown responses at chance under this
+rule. Over 194 knockdowns the mean AUROC was 0.505 (95\%
+bootstrap interval over knockdowns 0.491--0.520) from regulator to target
+and 0.502 (0.488--0.517) for the symmetric score; all five attention
+scores lay between 0.499 and 0.509 (Fig~\ref{fig:caseReg}A). Target
+variance scored 0.690 (0.674--0.708) and co-expression 0.556
+(0.540--0.573). A second label rule ran the same test on the stored
+$\log(1+\text{CP10k})$ values. These are scaled over all 6,546 genes in
+the file, not over the 1,500 genes. Under this rule only 67 knockdowns
+had at least 3 responding and 3 non-responding genes. With it
+the regulator-to-target score was 0.550 (0.517--0.580). That is above
+chance, but below the order share (0.611, 0.568--0.651), which needs no
+model, and below target variance (0.695, 0.659--0.730) (S3~Appendix).
+On the 107 TRRUST pairs of 16 factors in this gene set, the symmetric
+score had a pooled AUROC of 0.571 (0.521--0.617) and $z = +1.76$ against
+the rewired networks (empirical $p = 0.041$; BH $q = 0.069$ over the 12
+tests), so the RPE1 result did not replicate in K562
+(Fig~\ref{fig:caseReg}B). The regulator-to-target score had a pooled
+AUROC of 0.548 (0.499--0.594) and $z = +1.72$ ($q = 0.069$), and it
+rested on one factor. MYC holds 27 of the 107 pairs, and without MYC
+this $z$ fell to $+0.12$ (and the symmetric score's $z$ to $+1.11$).
+Co-expression from the same cells did as well as attention (0.588,
+$z = +1.55$), and the target-gene model did better (0.723,
+0.644--0.814). After the same gene-level features were removed, no K562
+score beat the rewired networks (lowest BH $q = 0.18$ over the six
+scores with the planned linear model, and 0.17 with a boosted-tree
+model). Which genes enter the test matters. Our gene set is the 1,500
+genes with the highest variance of log-normalised expression. The
+deployed analysis used the same rule on values that had been logged a
+second time, and only 627 of its 1,500 genes are in our set. On the
+deployed gene set (8 factors, 45 pairs), the symmetric score did beat
+the null ($z = +2.38$, $p = 0.010$). This check was not planned and is
+not adjusted. Single heads, other layers as a primary endpoint and
+references other than TRRUST were not tested (S3~Appendix).
+
+\subsubsection*{No sparse-autoencoder feature is specific to a knocked-down transcription factor}
+A sparse autoencoder (SAE) rewrites a hidden state as the sum of a few
+learned directions, called features, out of a much larger set. We
+trained twelve SAEs on 500 K562 control cells, one for each hidden state
+the model exposes. Layer~0 is the token embedding. Layers 1--10 are the
+outputs of the first ten of the 11 transformer blocks; this hidden state,
+passed from one block to the next, is called the residual stream.
+Layer~11 is the output of the last block after the final normalisation.
+Each SAE has 4,928 features and keeps only the 32 most active features
+for each token (a TopK SAE). The SAEs explained 70\% of the held-out
+variance at layer~0 and 84--93\% at layers 1--11. For 87 transcription
+factors knocked down in K562 (34 to 100 cells each; 20 with ChIP-seq
+target sets in DoRothEA~\cite{garcia-alonso2019dorothea}), we called a
+layer-5 feature responsive when its activation differed from control
+cells (Mann--Whitney test, BH $q < 0.05$, and a minimum effect size),
+and asked whether the 20 genes on which a responsive feature is most
+active overlap the factor's targets more than expected. No factor passed
+after BH correction across factors, at any of seven effect cut-offs and
+under any of four nulls. In the count-matched null, each top gene is
+swapped for a random gene seen in a similar number of cells. The second
+null also matches gene length. The third uses random groups of control
+cells that keep as many responding features as the knockdown. The fourth
+uses the responding features of other knockdowns. The smallest $q$ was
+0.18 (GATA1 at the 0.5 cut-off, under the other-knockdown null, where
+the smallest possible $p$ is 0.059). We also ran a fifth null. It uses
+random groups of control cells of the knockdown's size and runs the
+feature selection again on each group. Unlike the third null, it does
+not keep as many responding features as the knockdown. Every factor
+with at least 2 targets among a responding feature's top 20 genes passed
+that null (49 tests, 16 factors). This happens because random control
+groups rarely select any feature, and never at cut-offs of 0.25 or
+above. So that null shows only that the knockdown changed something, not
+that the features know the factor's targets (S3~Appendix).
+
+GATA1 is the factor the deployment singled out. At the cut-off the
+deployment used (a difference of more than 0.5 between knockdown and
+control cells in a feature's mean activation), seven features responded
+to the knockdown. The best had 4 of its 20 top genes among the
+221 GATA1 ChIP-seq targets in the gene set, where 3.1 are expected by
+chance ($p = 0.32$ under the count-matched null, $0.43$ when gene length
+is also matched, $0.19$ against random control groups with the same
+number of features); GATA1 ranked 82nd of 291 factors for these
+features. The test detects strong but not weak specificity. We planted
+GATA1 targets among the top 20 genes of one responding feature, with 200
+simulations for each number of planted targets. With 6 or more planted
+targets, the count-matched test gave $p < 0.05$ in all 200 simulations.
+With 5 it did so in 80\% of simulations, and with 4 in 29\%
+(Fig~\ref{fig:caseReg}C). These power values count every overlapping
+target. The deployed statistic stopped counting at 5. For GATA1 that
+version gives the same $p$ here (0.32), but its smallest possible $p$ is
+0.099, so it could not detect any planted signal at this cut-off
+(S3~Appendix). The data thus exclude a GATA1 feature as specific as the
+one the deployment reported (8 of 20), but not a weaker one.
+
+\subsubsection*{Traced circuits do not predict the direction of knockdown responses}
+Ablating 120 source features (30 at each of layers 0, 3, 6 and 9) in 200
+K562 control cells and reading the change in every later feature gave
+318,387 edges between features. A source--target pair counted as an
+edge when the target's change had a Cohen's $d$ (its mean change over the
+200 cells divided by the standard deviation of that change) above 0.5 in
+absolute value, and went the same way in more than 70\% of cells. In
+57.9\% of edges, removing the source lowered the target; in the rest it
+raised it. We turned these edges into predictions about genes. Each
+feature has 10 top genes, the genes on which it is most active. Each edge
+pairs every top gene of its source feature with every top gene of its
+target feature. We kept a gene pair if at least 2 edges linked it, or one
+edge with $|d| > 2$. We predicted that silencing the first gene lowers the
+second if more than half of the edges linking them were ones in which
+removing the source lowered the target, and that it raises the second
+otherwise. We checked these predictions in K562 cells in which the first
+gene was silenced by CRISPR interference. The observed direction is the
+sign of the second gene's mean $\log(1+\text{CP10k})$ value in the
+silenced cells minus its mean in 3,000 control cells. This gave 796,304
+records from 248 silenced genes; each record is one pair of a silenced
+gene and a measured target gene. The prediction was right
+50.3\% of the time (95\% interval over silenced genes 49.9--50.7\%),
+below the 52.5\% obtained by always predicting ``down''
+(Fig~\ref{fig:caseReg}D). Balanced accuracy, which is 50\% for any
+constant rule, was 50.2\% ($+0.19$ points, $-0.18$ to $+0.57$), and the
+Matthews correlation was $+0.004$ ($-0.004$ to $+0.011$). A rule that
+uses no model, predicting for each target the direction in which it
+usually moves when other genes are silenced (fitted on other silenced
+genes), was right 58.5\% of the time, 8.3 points more than the circuit
+(7.3--9.2). An exploratory split by the size of the observed change found
+a balanced accuracy of 51.8\% for changes of 0.1 to 0.25 log-fold, but the
+no-model rule reached 68.4\% on the same records.
+
+\subsubsection*{Removing three features at once had an additive effect in the 512 triplets tested}
+In 512 triplets of features (eight each at layers 0, 5 and 9) ablated
+together and separately in 20 K562 control cells, no triplet had a
+three-way interaction at any of the 4,928 last-layer features after BH
+correction (2,523,136 tests). The 24 features were drawn at random before
+any ablation: at each layer, one from each eighth of activation
+frequency, among the features active in at least 1\% of tokens (1,750,
+460 and 618 candidates at layers 0, 5 and 9). No annotation was used to
+choose them. After subtracting the part expected from cell-to-cell
+noise, the share of the joint effect's energy (its squared size) that
+was not explained by the three single effects and their pairwise
+interactions was 0.0003\% (median over the 512 triplets). Its 95\% basic
+bootstrap interval, resampling the 20 cells (1,000 resamples), was
+$-0.09\%$ to $+0.06\%$. The interval can go below zero because of the
+noise subtraction. The test detected a planted interaction of 5\% of each
+cell's joint effect (about 0.2\% of its energy) in 64 of 64 triplets.
+Among the 192 feature pairs in these triplets, removing both features
+changed the last-layer features by less energy than the two single
+changes added together in 5 pairs, and by more in 12 (95\% interval
+excluding equality). About 5 per side would be expected by chance, so
+these are weak signs. The two clearest pairs both link a layer-5 feature to a layer-9 feature,
+with many targets significant after BH correction. In both, removing the
+two features together changed the last-layer features by 3--4\% less
+energy than the two single removals added together. This fits the
+layer-5 feature driving the layer-9 one. Removing all three features together moved the
+last-layer residual stream by about 2\% of its norm (median 2.2\%, range
+1.6--4.1\%, over 16 cell--triplet pairs), so this describes the model's
+response to small edits. The change from single removals was not
+recorded. The result covers 8 of the 4,928 features at each of three of
+the twelve layers, one read-out layer (layer~11), one cell type and one
+SAE training seed. It does not show that three-way interactions are
+absent elsewhere in the model.
+
+\subsubsection*{Features that track erythroid maturity move the model's output no further than random features, apart from one feature that marks erythroid cells}
+Steering here means scaling one sparse-autoencoder feature up or down
+inside the model while it reads a cell, and measuring how far the model's
+output moves along a maturity score. The deployment's steering effects
+came from the hook that deleted a block, not from the features (see
+above). We fixed the cells, score, features, null and tests before any
+forward pass. The maturity axis is the erythroid branch of blood
+development in Tabula Sapiens bone marrow: hematopoietic stem cells
+(HSCs), common myeloid progenitors, erythroid progenitors and
+erythrocytes, as labelled in the cell-type annotation. For each cell,
+the model's output here is its next-gene scores (logits: one score for
+each of the 20,275 tokens in the vocabulary), averaged over all
+positions of the cell's sequence. The maturity score is the cosine
+similarity of this output with the mean output of erythrocytes, minus
+its cosine similarity with the mean output of HSCs. The two means came
+from 90 erythrocytes and 76 HSCs of three donors. In cells of two other
+donors the score separated erythroid progenitors from HSCs with an AUROC
+of 0.991, and its Spearman correlation with stage was 0.84 (95\% bootstrap interval over
+cells 0.78--0.88). We give each effect as a share of the span, the mean
+score of erythrocytes minus that of HSCs (0.198). The score describes the
+model's output; no change in a cell's real state was measured.
+
+We steered 50 HSCs from the two held-out donors (47 of them from one
+donor). At each of layers 0, 3, 6, 9 and 11, the three features whose
+activity tracked stage most closely were the candidates. Each was
+multiplied by 0, 2 or 5 and compared with 20 random features of the same
+layer with similar activity. Fourteen of the 15 candidates moved cells no
+further in their predicted direction than the random features
+(directional $p$ 0.19--1.00; 0.0004\% to 1.5\% of the span at five-fold
+strength). The exception, feature 2903 at layer~9, beat all 20 random
+features at every strength ($p = 1/21$, the smallest possible; about 0.7
+of 15 candidates would reach this by chance) and moved HSCs by 3.5\% of
+the span at five-fold strength (95\% bootstrap interval over cells
+1.9--5.2\%). It is active at 99\% of gene positions in erythroid
+progenitors and at 11\% in HSCs, so it marks the erythroid state. Per
+unit of edit it moved cells 37\% as far as a size-matched edit along the
+mean difference between erythrocyte and HSC hidden states, and the genes
+it raised most (AHSP, ALAS2, HBM, GYPA, HBG1, SLC4A1) are among the ten
+that this mean-difference edit raised most. These three checks (where
+the feature is active, the comparison per unit of edit and the
+most-raised genes) were not planned. Two tests fixed in advance looked at
+each layer's three candidates as a group. Neither found them stronger
+than random features. First, at no layer did the three candidates push
+cells further in their predicted direction than the 1,771 possible sets
+of three of that layer's 23 tested features (directional $p$ 0.09--0.64
+over the five layers and three strengths). Second, summed over the five
+layers, the candidates ranked no higher among the 23 tested features of
+their layer than chance (one-sided permutation $p$ 0.24--0.36 over the
+three strengths; 100,000 permutations within layers). A third test, also
+pooled over layers, found a weak trend. Within each layer, features whose activity rose
+more with stage pushed cells a little further toward erythrocytes when
+amplified, and a little further back when removed. The mean of the five
+within-layer Spearman correlations, each over 23 features, was
+0.18--0.19 in size and had the predicted sign (one-sided permutation $p$
+0.022--0.031; two-sided 0.045--0.063). Twenty of each layer's 23
+features are random features, so this trend does not single out the
+candidates. These sparse autoencoders were trained on K562 cells and explained only
+34--59\% of the hidden-state variance of the steered HSCs. So single
+features of these autoencoders are not maturity switches. This does not
+show that the model lacks a maturity direction: adding the full mean
+difference moved all cells toward erythrocytes. Other lineages, feature
+combinations, autoencoders trained on bone-marrow cells and MaxToki-1B
+were not tested (S3~Appendix).
+
+\subsubsection*{Hidden states show no blood developmental order beyond cell-type identity}
+The deployed analysis fitted a small read-out head that maps the hidden
+states of cell groups (anchors: cells that share donor, tissue, cell type
+and stage label) onto a curated tree of 34 blood developmental stages,
+and reported a developmental manifold that transfers to new donors. It
+judged the head with four pass marks. The first is trustworthiness, at
+least 0.80. It checks that anchors that are near neighbours in the
+head's output were also close in the head's input, and it does not use
+the stage tree. The other three are Spearman correlations between
+output distances and stage-tree distances, each at least 0.20. They use
+anchors the head was not fitted on, held out at random, by donor or by
+lineage branch. The last of these is the branch mark. MaxToki passed
+all four on the fitting panel (290 anchors from 11
+donors) and on the external test panel (600 anchors from 13 other
+donors). The deployment also built a second test panel, which it called
+zero-shot: 160 other anchors whose 12 donors are all external-panel
+donors, so the two test panels are not independent. On this panel
+MaxToki failed the branch mark ($0.147 \pm 0.048$, mean $\pm$ SD over 20
+head seeds; 3 of 20 seeds pass). This failure depends on the anchor
+set. Some anchors hold only Smart-seq2 cells (Smart-seq2 is a
+plate-based sequencing method). When these anchors are dropped (43
+fitting-panel, 13 external and 8 zero-shot anchors) and the head is
+fitted again, the zero-shot branch mark is $0.34 \pm 0.01$ (mean $\pm$
+SD over 10 head seeds; 10 of 10 seeds pass). A random 64-number code for
+each cell-type label, which knows nothing about development, passed the three
+correlation marks on all three panels. The branch mark can be high just
+because anchors with the same label sit together, and only the T lineage
+has graded stages. Against a structured null that shuffles stages
+between cell-type classes within each branch, MaxToki was not above
+the null on the branch mark on any of the three panels. This held both
+over all anchor pairs and over only pairs of anchors with different
+cell types. MaxToki was also not above the null on cross-lineage
+(global) order, the Spearman correlation over all anchor pairs of a test
+panel. Across these numbers the one-sided $p$ ran from 0.15 to 0.76 (20
+to 2,000 null draws). On pairs of anchors with different cell types, the
+branch mark was 0.067, 0.006 and 0.016 on the fitting, external and
+zero-shot panels. That is close to zero and well below the
+0.20 pass mark. Held-out order within the T lineage was 0.038.
+
+MaxToki was ahead of simple features only in global order
+(Fig~\ref{fig:caseGeom}D): 0.865 on the external panel and 0.867 on the
+zero-shot panel. That is above the cell-type label code by 0.064 (95\%
+donor bootstrap interval 0.050--0.091) and 0.091 (0.027--0.163), and
+above expression of highly variable genes by 0.102 (0.073--0.140) and
+0.110 (0.038--0.151). A bag of input tokens uses no model. It describes
+each cell group by the genes in its cells' model input, and genes nearer
+the front of the input get more weight. MaxToki's lead over this bag was
+small: 0.016 (0.002--0.046) on the external panel and 0.048
+(0.009--0.149) on the zero-shot panel. Over 10 head seeds the lead was
+$0.004 \pm 0.005$ on the external panel, a tie, and $0.053 \pm 0.005$ on
+the zero-shot panel (above 0 in 10 of 10 seeds). A second bag, built the
+same way from the gene order that the deployed analysis fed the model,
+also uses no model, and it matched MaxToki on both panels: MaxToki minus
+this bag was $-0.010$ ($-0.023$ to 0.016) and $-0.012$ ($-0.031$ to
+0.022) (donor bootstrap, 1,000 replicates). So whether MaxToki leads
+depends on which gene order the bag uses. Most of global order
+reflects lineage and cell-type grouping, which the structured null keeps
+(null means 0.843 and 0.831, $p = 0.29$ and 0.15). S3~Appendix gives the
+remaining checks, including a negative control that could not fail and
+the single attention head singled out by the deployment, which beat
+random projections only in trustworthiness.
+
+\begin{figure}[H]
+\caption{\textbf{MaxToki-217M: representation geometry after correction.}
+(A)~Input gene-embedding tables: Pearson correlation between MaxToki's
+gene--gene cosine-similarity matrix and that of Geneformer~V2-316M or
+scGPT, on three gene panels from three tissue datasets (350--382 genes;
+line, 95\% gene bootstrap interval). Dashed line, chance (genes
+shuffled). (B)~Effective rank of the per-gene mean vectors at each layer,
+for the trained model and three randomly initialised copies of the same
+architecture, on the same 2,000 Tabula Sapiens immune cells and 1,500
+genes (band, 95\% jackknife interval over 10 blocks of 200 cells).
+(C)~Similarity (linear CKA) of the per-gene mean vectors between three
+disjoint 2,000-cell samples, from layer~1, for the trained model and one
+randomly initialised copy (band, 95\% jackknife interval over 30 groups
+of 50 genes). (D)~Cross-lineage developmental order of cell-group
+centroids on the external and zero-shot panels, for MaxToki-217M and for
+three representations that use no model: the bag of each cell's input
+tokens, a lookup of cell-type labels, and highly variable gene
+expression (line, 95\% donor bootstrap interval, 2,000 replicates).}
+\label{fig:caseGeom}
+\end{figure}
+
+\subsubsection*{Effective rank falls with depth in randomly initialised copies too}
+We passed three disjoint samples of 2,000 Tabula Sapiens immune
+cells~\cite{tabulasapiens2022} through MaxToki-217M and, at each layer,
+averaged the hidden state of each of 1,500 genes over the cells that
+contain it. Effective rank~\cite{roy2007effective} counts how many
+directions these gene vectors use (at most 1,232, the hidden size). In the
+trained model it was 561 at the token embedding (layer~0), 328 after the
+first block and 227 at layer~11 (95\% jackknife interval over ten
+200-cell blocks 224.8--229.5; 225.6 and 226.3 in the other two samples)
+(Fig~\ref{fig:caseGeom}B). The deployed analysis, whose inputs were
+encoded on the wrong scale, reported 94 at layer~11 for the same cells
+and genes. Three randomly initialised copies of the architecture fell
+from 816--817 at layer~0 to 390--421 at layer~11. From layer~1 to
+layer~11 every random copy lost more of its effective rank than the
+trained model (34.6--39.6\% against 30.8--31.3\%; the cell-block
+jackknife intervals do not overlap), so the fall with depth does not need
+training. Training lowers the effective rank at every layer, starting at
+the embedding table, and adds two drops of its own: in the first block
+(41.5\% against 21.0--21.3\% with random weights) and in the last step,
+from layer~10 to layer~11, which runs the last block and then the final
+normalisation (14.6--15.1\%, against a rise of 1.0--2.1\%; these two
+parts were not measured separately). A feature-shuffle null cannot
+separate these cases, because it stays far above the real effective rank
+in every model.
+
+Linear centred kernel alignment (CKA)~\cite{kornblith2019cka} measures how alike two sets of gene
+vectors are, up to rotation and scale (1 means the same geometry).
+Between the three samples it was 0.9997 at layer~1 and 0.9962 at
+layer~11 in the trained model (95\% jackknife interval over 30 groups of
+50 genes 0.9959--0.9964), against 0.9938 and 0.9647 (0.9598--0.9697) in a
+randomly initialised copy (Fig~\ref{fig:caseGeom}C). In the trained model
+most of the gap from 1 is sampling noise in the per-gene averages: with
+1,000 instead of 2,000 cells per sample, $1-\mathrm{CKA}$ at layer~11
+rose from 0.0038 to 0.0073. The trained model's gene averages are
+therefore more stable across cell samples than a random model's, but
+these values mainly measure how far a gene's average moves between random
+sets of cells, and they should not be compared with CKA values reported
+for other models. Other tissues, other initialisation schemes and
+MaxToki-1B were not tested (S3~Appendix).
+
+\subsubsection*{Cross-model alignment of gene embeddings}
+This analysis compares the input gene-embedding tables of the three
+models, which do not depend on how cells are encoded. We used three
+overlapping panels of 350 to 382 genes, taken from three tissue
+datasets: Tabula Sapiens lung, Tabula Sapiens immune cells, and an
+external lung dataset. For each model we computed the cosine similarity
+of every gene pair. We then took the Pearson correlation between two
+models' similarity matrices. Between MaxToki-217M and scGPT this
+correlation was 0.26--0.28. When genes were shuffled it was 0.00 (mean;
+SD 0.004). We also report a held-out canonical correlation. Canonical
+correlation measures how well linear projections of the two tables line
+up. The held-out version is fitted on 80\% of the genes and scored on
+the other 20\%, averaged over 10 random splits. Between MaxToki-217M and
+scGPT it was 0.481--0.495, with chance about 0.00. MaxToki-217M agreed
+more with Geneformer~V2-316M, which shares its gene vocabulary and token
+identifiers: Pearson 0.39--0.40 and held-out canonical correlation
+0.558--0.604 (Fig~\ref{fig:caseGeom}A).
+The Geneformer-minus-scGPT difference in Pearson correlation was 0.10 to
+0.14, with gene-bootstrap intervals that exclude zero on every panel. The
+in-sample canonical correlation (fitted and scored on the same genes),
+often used for such comparisons, is high even for unrelated tables. In
+the deployed setting (each table reduced to 30 principal components, mean
+of 10 canonical correlations) it was 0.41--0.43 for shuffled genes,
+against 0.77--0.78 for Geneformer and 0.72--0.74 for scGPT. Its chance
+level depends on the number of genes and of components. In the setting
+the Study~A executors used (20 components, mean of all 20), chance was
+about 0.20. So we report the held-out value. These are input tables only; they say nothing
+about the models' internal representations.
+

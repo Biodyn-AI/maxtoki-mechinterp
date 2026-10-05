@@ -1,0 +1,88 @@
+{
+  "per_doc": {
+    "projects/maxtoki/summaries/attention-grn-217M-FINAL_SUMMARY.md": {
+      "n": 102,
+      "mean_sampled": 0.9514,
+      "mean_exact": 0.9507,
+      "max_abs_diff_per_number": 0.1092
+    },
+    "projects/maxtoki/runs/attention-grn-217M/outputs/FINAL_SUMMARY.md": {
+      "n": 93,
+      "mean_sampled": 0.9497,
+      "mean_exact": 0.9486,
+      "max_abs_diff_per_number": 0.1092
+    },
+    "projects/maxtoki/summaries/spectral-geometry-217M-FINAL_SUMMARY.md": {
+      "n": 199,
+      "mean_sampled": 0.912,
+      "mean_exact": 0.9149,
+      "max_abs_diff_per_number": 0.1092
+    },
+    "projects/maxtoki/runs/spectral-geometry-217M/outputs/FINAL_SUMMARY.md": {
+      "n": 115,
+      "mean_sampled": 0.9696,
+      "mean_exact": 0.9712,
+      "max_abs_diff_per_number": 0.1009
+    },
+    "projects/maxtoki/summaries/topology-141-217M-FINAL_SUMMARY.md": {
+      "n": 55,
+      "mean_sampled": 0.9295,
+      "mean_exact": 0.9234,
+      "max_abs_diff_per_number": 0.1315
+    },
+    "projects/maxtoki/runs/topology-141-217M/FINAL_SUMMARY.md": {
+      "n": 95,
+      "mean_sampled": 0.8836,
+      "mean_exact": 0.8812,
+      "max_abs_diff_per_number": 0.1315
+    },
+    "projects/maxtoki/summaries/manifold-discovery-217M-FINAL_SUMMARY.md": {
+      "n": 215,
+      "mean_sampled": 0.7352,
+      "mean_exact": 0.7298,
+      "max_abs_diff_per_number": 0.1998
+    },
+    "projects/maxtoki/runs/manifold-discovery-217M/FINAL_SUMMARY.md": {
+      "n": 263,
+      "mean_sampled": 0.7259,
+      "mean_exact": 0.7252,
+      "max_abs_diff_per_number": 0.2034
+    },
+    "projects/maxtoki/runs/longevity-mechinterp-217M/FINAL_SUMMARY.md": {
+      "n": 35,
+      "mean_sampled": 0.2303,
+      "mean_exact": 0.2089,
+      "max_abs_diff_per_number": 0.1572
+    },
+    "projects/maxtoki/summaries/sae-atlas-217M-FINAL_SUMMARY.md": {
+      "n": 141,
+      "mean_sampled": 0.9604,
+      "mean_exact": 0.9585,
+      "max_abs_diff_per_number": 0.1357
+    },
+    "projects/maxtoki/summaries/sae-atlas-217M-FINAL_SUMMARY_12layer.md": {
+      "n": 71,
+      "mean_sampled": 0.9651,
+      "mean_exact": 0.9673,
+      "max_abs_diff_per_number": 0.1357
+    },
+    "projects/maxtoki/summaries/circuit-tracing-217M-FINAL_SUMMARY.md": {
+      "n": 103,
+      "mean_sampled": 0.6297,
+      "mean_exact": 0.6338,
+      "max_abs_diff_per_number": 0.1289
+    },
+    "projects/maxtoki/summaries/exhaustive-mapping-217M-FINAL_SUMMARY.md": {
+      "n": 146,
+      "mean_sampled": 0.5399,
+      "mean_exact": 0.5436,
+      "max_abs_diff_per_number": 0.1364
+    }
+  },
+  "n_numbers": 1633,
+  "mean_sampled": 0.8071402327005511,
+  "mean_exact": 0.8064144657898239,
+  "corr": 0.9889968215403918,
+  "mean_abs_diff": 0.02217124520241479,
+  "note": "sampled = 50 random grid points (number_trace.py); exact = all grid points in [0.5x,1.5x]"
+}

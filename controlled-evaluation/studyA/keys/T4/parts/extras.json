@@ -1,0 +1,56 @@
+{
+ "lookup_checks": {
+  "scgpt_vocab_size": 60697,
+  "scgpt_vocab_key_position_equals_value": 1,
+  "maxtoki_vs_geneformer_gene_ids_identical": true
+ },
+ "scgpt_sanity_pairs_cosine": {
+  "RPL3-RPL5": {
+   "value_lookup": 0.4687577079981972,
+   "positional_lookup": 0.09838143905265395
+  },
+  "CD3D-CD3E": {
+   "value_lookup": 0.6245484658679668,
+   "positional_lookup": 0.2724919557820231
+  },
+  "CD79A-CD79B": {
+   "value_lookup": 0.4867281448487114,
+   "positional_lookup": -0.026772524719785525
+  },
+  "HBA1-HBB": {
+   "value_lookup": 0.5728061524162188,
+   "positional_lookup": -0.054645193350275754
+  },
+  "RPS3-RPS6": {
+   "value_lookup": 0.5990650921836926,
+   "positional_lookup": 0.1360160379481658
+  },
+  "random_pairs_mean_sd": [
+   0.08787387358284772,
+   0.10005048424967472
+  ]
+ },
+ "panel_overlap": {
+  "lung&immune": 75,
+  "lung&external_lung": 168,
+  "immune&external_lung": 77,
+  "all_three": 36,
+  "union": 828
+ },
+ "union_of_panels": {
+  "n_genes": 828,
+  "pearson_geneformer": 0.37275872691241774,
+  "pearson_scgpt": 0.23823086346375688,
+  "pearson_diff_ci95_gene_bootstrap": [
+   0.12765794392603383,
+   0.14188489387024714
+  ]
+ },
+ "random_2000_shared_genes": {
+  "n_genes": 2000,
+  "pearson_geneformer": 0.4269325467033192,
+  "pearson_scgpt": 0.21803869826292174,
+  "n_shared_genes_all_three_vocabularies": 19153
+ },
+ "wall_seconds": 37.874078035354614
+}

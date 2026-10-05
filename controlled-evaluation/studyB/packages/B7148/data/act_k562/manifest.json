@@ -1,0 +1,13 @@
+{
+  "model": "vandijklab/C2S-Scale-Gemma-2-2B",
+  "unit": "cell-summary",
+  "layers": [
+    21
+  ],
+  "max_genes": 512,
+  "prompt": true,
+  "store_dtype": "float32",
+  "n_cells": 3000,
+  "n_rows": 3000,
+  "d_model": 2304
+}

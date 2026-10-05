@@ -1,0 +1,638 @@
+{
+  "features": {
+    "0": [
+      763,
+      3035,
+      2518,
+      3778,
+      859,
+      293,
+      1910,
+      3275
+    ],
+    "5": [
+      3812,
+      4369,
+      1812,
+      1550,
+      3142,
+      4903,
+      4821,
+      1053
+    ],
+    "9": [
+      1154,
+      4302,
+      1535,
+      235,
+      494,
+      110,
+      2772,
+      1628
+    ]
+  },
+  "null_features": {
+    "0": [
+      1581,
+      3049
+    ],
+    "5": [
+      3437,
+      4481
+    ],
+    "9": [
+      1995,
+      3537
+    ]
+  },
+  "details": {
+    "0": {
+      "n_candidates": 1750,
+      "n_alive_20cells": 2496,
+      "n_zero_20cells": 2432,
+      "log10_freq_bin_edges": [
+        -1.998518126091705,
+        -1.9287503519085107,
+        -1.884006165946546,
+        -1.84372184672016,
+        -1.8089028323193606,
+        -1.773510857230519,
+        -1.7349886020980003,
+        -1.6839640957110604,
+        -1.505149978319906
+      ],
+      "candidates_per_bin": {
+        "0": 219,
+        "1": 216,
+        "2": 218,
+        "3": 218,
+        "4": 221,
+        "5": 217,
+        "6": 220,
+        "7": 221
+      },
+      "chosen": [
+        {
+          "feature": 763,
+          "freq_bin_target": 0,
+          "freq_bin_used": 0,
+          "freq_20cells": 0.0113037109375,
+          "n_cells_active_of_20": 20,
+          "active_at_bos_cells": 0,
+          "posthoc_v3_annotated": true,
+          "posthoc_v3_top_terms": [
+            "GO_BP:Negative Regulation Of Programmed Cell Death (GO:0043069)",
+            "GO_BP:Negative Regulation Of Apoptotic Process (GO:0043066)"
+          ],
+          "posthoc_v3_n_terms": 2,
+          "freq_v3_sae_training_500cells": 0.010923572249302939,
+          "best_abs_cos_to_deployed_decoder": 0.8620613813400269,
+          "best_deployed_match_id": 763,
+          "best_abs_cos_to_v2_chosen_features_same_layer": 0.05589849874377251
+        },
+        {
+          "feature": 3035,
+          "freq_bin_target": 1,
+          "freq_bin_used": 1,
+          "freq_20cells": 0.0119140625,
+          "n_cells_active_of_20": 20,
+          "active_at_bos_cells": 0,
+          "posthoc_v3_annotated": true,
+          "posthoc_v3_top_terms": [
+            "Reactome:Transcriptional Regulation By TP53 R-HSA-3700989",
+            "Reactome:mRNA Splicing - Minor Pathway R-HSA-72165",
+            "Reactome:Signaling By Nuclear Receptors R-HSA-9006931"
+          ],
+          "posthoc_v3_n_terms": 10,
+          "freq_v3_sae_training_500cells": 0.012083380719140075,
+          "best_abs_cos_to_deployed_decoder": 0.871727705001831,
+          "best_deployed_match_id": 3035,
+          "best_abs_cos_to_v2_chosen_features_same_layer": 0.06877898424863815
+        },
+        {
+          "feature": 2518,
+          "freq_bin_target": 2,
+          "freq_bin_used": 2,
+          "freq_20cells": 0.013720703125,
+          "n_cells_active_of_20": 20,
+          "active_at_bos_cells": 0,
+          "posthoc_v3_annotated": true,
+          "posthoc_v3_top_terms": [
+            "GO_BP:Histone H3-K4 Methylation (GO:0051568)",
+            "GO_BP:Histone Lysine Methylation (GO:0034968)",
+            "GO_BP:Transcription Initiation-Coupled Chromatin Remodeling (GO:0045815)"
+          ],
+          "posthoc_v3_n_terms": 11,
+          "freq_v3_sae_training_500cells": 0.013152012360832788,
+          "best_abs_cos_to_deployed_decoder": 0.9516696333885193,
+          "best_deployed_match_id": 2518,
+          "best_abs_cos_to_v2_chosen_features_same_layer": 0.11016138643026352
+        },
+        {
+          "feature": 3778,
+          "freq_bin_target": 3,
+          "freq_bin_used": 3,
+          "freq_20cells": 0.0146728515625,
+          "n_cells_active_of_20": 20,
+          "active_at_bos_cells": 0,
+          "posthoc_v3_annotated": false,
+          "posthoc_v3_top_terms": [],
+          "posthoc_v3_n_terms": 0,
+          "freq_v3_sae_training_500cells": 0.013733387189753685,
+          "best_abs_cos_to_deployed_decoder": 0.9456694722175598,
+          "best_deployed_match_id": 3778,
+          "best_abs_cos_to_v2_chosen_features_same_layer": 0.13471171259880066
+        },
+        {
+          "feature": 859,
+          "freq_bin_target": 4,
+          "freq_bin_used": 4,
+          "freq_20cells": 0.0157958984375,
+          "n_cells_active_of_20": 20,
+          "active_at_bos_cells": 0,
+          "posthoc_v3_annotated": true,
+          "posthoc_v3_top_terms": [
+            "TRRUST_TF:TRRUST_TF:E2F6",
+            "Reactome:Regulation Of TP53 Activity R-HSA-5633007",
+            "Reactome:Mitochondrial Translation Termination R-HSA-5419276"
+          ],
+          "posthoc_v3_n_terms": 18,
+          "freq_v3_sae_training_500cells": 0.015905944729195015,
+          "best_abs_cos_to_deployed_decoder": 0.9321870803833008,
+          "best_deployed_match_id": 859,
+          "best_abs_cos_to_v2_chosen_features_same_layer": 0.12072033435106277
+        },
+        {
+          "feature": 293,
+          "freq_bin_target": 5,
+          "freq_bin_used": 5,
+          "freq_20cells": 0.0172119140625,
+          "n_cells_active_of_20": 20,
+          "active_at_bos_cells": 0,
+          "posthoc_v3_annotated": true,
+          "posthoc_v3_top_terms": [
+            "Reactome:Synthesis Of Active Ubiquitin: Roles Of E1 And E2 Enzymes R-HSA-8866652",
+            "Reactome:Protein Ubiquitination R-HSA-8852135",
+            "KEGG:Ubiquitin mediated proteolysis"
+          ],
+          "posthoc_v3_n_terms": 7,
+          "freq_v3_sae_training_500cells": 0.017311832595421944,
+          "best_abs_cos_to_deployed_decoder": 0.9177464246749878,
+          "best_deployed_match_id": 293,
+          "best_abs_cos_to_v2_chosen_features_same_layer": 0.06481385976076126
+        },
+        {
+          "feature": 1910,
+          "freq_bin_target": 6,
+          "freq_bin_used": 6,
+          "freq_20cells": 0.0195068359375,
+          "n_cells_active_of_20": 20,
+          "active_at_bos_cells": 0,
+          "posthoc_v3_annotated": true,
+          "posthoc_v3_top_terms": [
+            "GO_BP:tRNA Modification (GO:0006400)",
+            "GO_BP:RNA Methylation (GO:0001510)"
+          ],
+          "posthoc_v3_n_terms": 2,
+          "freq_v3_sae_training_500cells": 0.019109878862270047,
+          "best_abs_cos_to_deployed_decoder": 0.9312601685523987,
+          "best_deployed_match_id": 1910,
+          "best_abs_cos_to_v2_chosen_features_same_layer": 0.09490525722503662
+        },
+        {
+          "feature": 3275,
+          "freq_bin_target": 7,
+          "freq_bin_used": 7,
+          "freq_20cells": 0.02080078125,
+          "n_cells_active_of_20": 20,
+          "active_at_bos_cells": 0,
+          "posthoc_v3_annotated": true,
+          "posthoc_v3_top_terms": [
+            "KEGG:Cushing syndrome",
+            "GO_BP:Mitochondrion Organization (GO:0007005)",
+            "GO_BP:Positive Regulation Of Multicellular Organismal Process (GO:0051240)"
+          ],
+          "posthoc_v3_n_terms": 5,
+          "freq_v3_sae_training_500cells": 0.020664786920733022,
+          "best_abs_cos_to_deployed_decoder": 0.9116823077201843,
+          "best_deployed_match_id": 3275,
+          "best_abs_cos_to_v2_chosen_features_same_layer": 0.06235022842884064
+        }
+      ],
+      "null_kind": "exact: zero activations in the 20 clean cells",
+      "null": [
+        {
+          "feature": 1581,
+          "active_positions_20cells": 0,
+          "n_cells_active_of_20": 0,
+          "posthoc_v3_annotated": false,
+          "posthoc_v3_top_terms": [],
+          "posthoc_v3_n_terms": 0,
+          "freq_v3_sae_training_500cells": 0.0,
+          "best_abs_cos_to_deployed_decoder": 1.0000008344650269,
+          "best_deployed_match_id": 1581,
+          "best_abs_cos_to_v2_chosen_features_same_layer": 0.03664508834481239
+        },
+        {
+          "feature": 3049,
+          "active_positions_20cells": 0,
+          "n_cells_active_of_20": 0,
+          "posthoc_v3_annotated": false,
+          "posthoc_v3_top_terms": [],
+          "posthoc_v3_n_terms": 0,
+          "freq_v3_sae_training_500cells": 0.0,
+          "best_abs_cos_to_deployed_decoder": 0.9999997615814209,
+          "best_deployed_match_id": 3049,
+          "best_abs_cos_to_v2_chosen_features_same_layer": 0.049185290932655334
+        }
+      ]
+    },
+    "5": {
+      "n_candidates": 460,
+      "n_alive_20cells": 4928,
+      "n_zero_20cells": 0,
+      "log10_freq_bin_edges": [
+        -1.999576091248039,
+        -1.9761239576412628,
+        -1.9572215131563921,
+        -1.9247196291546305,
+        -1.9013968289724987,
+        -1.8645610753895918,
+        -1.8125150006252773,
+        -1.70825398704662,
+        -0.540625184088014
+      ],
+      "candidates_per_bin": {
+        "0": 58,
+        "1": 56,
+        "2": 59,
+        "3": 55,
+        "4": 59,
+        "5": 58,
+        "6": 57,
+        "7": 58
+      },
+      "chosen": [
+        {
+          "feature": 3812,
+          "freq_bin_target": 0,
+          "freq_bin_used": 0,
+          "freq_20cells": 0.0103515625,
+          "n_cells_active_of_20": 20,
+          "active_at_bos_cells": 0,
+          "posthoc_v3_annotated": true,
+          "posthoc_v3_top_terms": [
+            "Reactome:Metabolism Of Lipids R-HSA-556833",
+            "Reactome:Transcriptional Regulation By TP53 R-HSA-3700989"
+          ],
+          "posthoc_v3_n_terms": 2,
+          "freq_v3_sae_training_500cells": 0.009781410907493755,
+          "best_abs_cos_to_deployed_decoder": 0.31972068548202515,
+          "best_deployed_match_id": 3060,
+          "best_abs_cos_to_v2_chosen_features_same_layer": 0.025766536593437195
+        },
+        {
+          "feature": 4369,
+          "freq_bin_target": 1,
+          "freq_bin_used": 1,
+          "freq_20cells": 0.0107666015625,
+          "n_cells_active_of_20": 20,
+          "active_at_bos_cells": 0,
+          "posthoc_v3_annotated": false,
+          "posthoc_v3_top_terms": [],
+          "posthoc_v3_n_terms": 0,
+          "freq_v3_sae_training_500cells": 0.009445135078961093,
+          "best_abs_cos_to_deployed_decoder": 0.5049690008163452,
+          "best_deployed_match_id": 2229,
+          "best_abs_cos_to_v2_chosen_features_same_layer": 0.037267398089170456
+        },
+        {
+          "feature": 1812,
+          "freq_bin_target": 2,
+          "freq_bin_used": 2,
+          "freq_20cells": 0.0112548828125,
+          "n_cells_active_of_20": 20,
+          "active_at_bos_cells": 0,
+          "posthoc_v3_annotated": true,
+          "posthoc_v3_top_terms": [
+            "GO_BP:Regulation Of Endopeptidase Activity (GO:0052548)",
+            "GO_BP:Positive Regulation Of DNA-templated Transcription (GO:0045893)",
+            "Reactome:Estrogen-dependent Gene Expression R-HSA-9018519"
+          ],
+          "posthoc_v3_n_terms": 16,
+          "freq_v3_sae_training_500cells": 0.012578480699924314,
+          "best_abs_cos_to_deployed_decoder": 0.1458444893360138,
+          "best_deployed_match_id": 2907,
+          "best_abs_cos_to_v2_chosen_features_same_layer": 0.08038368076086044
+        },
+        {
+          "feature": 1550,
+          "freq_bin_target": 3,
+          "freq_bin_used": 3,
+          "freq_20cells": 0.0121826171875,
+          "n_cells_active_of_20": 20,
+          "active_at_bos_cells": 0,
+          "posthoc_v3_annotated": true,
+          "posthoc_v3_top_terms": [
+            "GO_BP:Intracellular Protein Transport (GO:0006886)"
+          ],
+          "posthoc_v3_n_terms": 1,
+          "freq_v3_sae_training_500cells": 0.012669657528068737,
+          "best_abs_cos_to_deployed_decoder": 0.47045642137527466,
+          "best_deployed_match_id": 1471,
+          "best_abs_cos_to_v2_chosen_features_same_layer": 0.03287467360496521
+        },
+        {
+          "feature": 3142,
+          "freq_bin_target": 4,
+          "freq_bin_used": 4,
+          "freq_20cells": 0.0133544921875,
+          "n_cells_active_of_20": 20,
+          "active_at_bos_cells": 0,
+          "posthoc_v3_annotated": false,
+          "posthoc_v3_top_terms": [],
+          "posthoc_v3_n_terms": 0,
+          "freq_v3_sae_training_500cells": 0.014940254667665364,
+          "best_abs_cos_to_deployed_decoder": 0.31569018959999084,
+          "best_deployed_match_id": 3143,
+          "best_abs_cos_to_v2_chosen_features_same_layer": 0.06895976513624191
+        },
+        {
+          "feature": 4903,
+          "freq_bin_target": 5,
+          "freq_bin_used": 5,
+          "freq_20cells": 0.0145263671875,
+          "n_cells_active_of_20": 20,
+          "active_at_bos_cells": 0,
+          "posthoc_v3_annotated": false,
+          "posthoc_v3_top_terms": [],
+          "posthoc_v3_n_terms": 0,
+          "freq_v3_sae_training_500cells": 0.016275554021780478,
+          "best_abs_cos_to_deployed_decoder": 0.16443149745464325,
+          "best_deployed_match_id": 440,
+          "best_abs_cos_to_v2_chosen_features_same_layer": 0.1254480481147766
+        },
+        {
+          "feature": 4821,
+          "freq_bin_target": 6,
+          "freq_bin_used": 6,
+          "freq_20cells": 0.016796875,
+          "n_cells_active_of_20": 20,
+          "active_at_bos_cells": 0,
+          "posthoc_v3_annotated": true,
+          "posthoc_v3_top_terms": [
+            "Reactome:Transport Of Small Molecules R-HSA-382551",
+            "GO_BP:Regulation Of DNA-templated Transcription (GO:0006355)"
+          ],
+          "posthoc_v3_n_terms": 2,
+          "freq_v3_sae_training_500cells": 0.019896156455515512,
+          "best_abs_cos_to_deployed_decoder": 0.19319936633110046,
+          "best_deployed_match_id": 1718,
+          "best_abs_cos_to_v2_chosen_features_same_layer": 0.0873904749751091
+        },
+        {
+          "feature": 1053,
+          "freq_bin_target": 7,
+          "freq_bin_used": 7,
+          "freq_20cells": 0.021337890625,
+          "n_cells_active_of_20": 20,
+          "active_at_bos_cells": 0,
+          "posthoc_v3_annotated": false,
+          "posthoc_v3_top_terms": [],
+          "posthoc_v3_n_terms": 0,
+          "freq_v3_sae_training_500cells": 0.02141282906991792,
+          "best_abs_cos_to_deployed_decoder": 0.29754942655563354,
+          "best_deployed_match_id": 1046,
+          "best_abs_cos_to_v2_chosen_features_same_layer": 0.039568036794662476
+        }
+      ],
+      "null_kind": "near-null: no feature has zero activations at L5; the 2 rarest features are used (active positions [4, 40] of 40960)",
+      "null": [
+        {
+          "feature": 3437,
+          "active_positions_20cells": 4,
+          "n_cells_active_of_20": 3,
+          "posthoc_v3_annotated": true,
+          "posthoc_v3_top_terms": [
+            "GO_BP:Establishment Of Mitotic Spindle Orientation (GO:0000132)",
+            "GO_BP:Establishment Of Mitotic Spindle Localization (GO:0040001)",
+            "GO_BP:Establishment Of Spindle Orientation (GO:0051294)"
+          ],
+          "posthoc_v3_n_terms": 20,
+          "freq_v3_sae_training_500cells": 6.274534409938863e-05,
+          "best_abs_cos_to_deployed_decoder": 0.29928719997406006,
+          "best_deployed_match_id": 3437,
+          "best_abs_cos_to_v2_chosen_features_same_layer": 0.08119525015354156
+        },
+        {
+          "feature": 4481,
+          "active_positions_20cells": 40,
+          "n_cells_active_of_20": 20,
+          "posthoc_v3_annotated": true,
+          "posthoc_v3_top_terms": [
+            "GO_BP:Intracellular Monoatomic Cation Homeostasis (GO:0030003)"
+          ],
+          "posthoc_v3_n_terms": 1,
+          "freq_v3_sae_training_500cells": 0.0009754940215451826,
+          "best_abs_cos_to_deployed_decoder": 0.224513441324234,
+          "best_deployed_match_id": 4481,
+          "best_abs_cos_to_v2_chosen_features_same_layer": 0.04955414682626724
+        }
+      ]
+    },
+    "9": {
+      "n_candidates": 618,
+      "n_alive_20cells": 4905,
+      "n_zero_20cells": 23,
+      "log10_freq_bin_edges": [
+        -1.999576091248039,
+        -1.9829503488650555,
+        -1.9639999369868428,
+        -1.9426947027111576,
+        -1.9181938740391664,
+        -1.8950017373540389,
+        -1.8515611269285681,
+        -1.7969484687175503,
+        -0.5135778236530824
+      ],
+      "candidates_per_bin": {
+        "0": 76,
+        "1": 75,
+        "2": 81,
+        "3": 77,
+        "4": 77,
+        "5": 77,
+        "6": 77,
+        "7": 78
+      },
+      "chosen": [
+        {
+          "feature": 1154,
+          "freq_bin_target": 0,
+          "freq_bin_used": 0,
+          "freq_20cells": 0.01015625,
+          "n_cells_active_of_20": 20,
+          "active_at_bos_cells": 0,
+          "posthoc_v3_annotated": false,
+          "posthoc_v3_top_terms": [],
+          "posthoc_v3_n_terms": 0,
+          "freq_v3_sae_training_500cells": 0.010277491284279546,
+          "best_abs_cos_to_deployed_decoder": 0.49167102575302124,
+          "best_deployed_match_id": 1154,
+          "best_abs_cos_to_v2_chosen_features_same_layer": 0.04430219903588295
+        },
+        {
+          "feature": 4302,
+          "freq_bin_target": 1,
+          "freq_bin_used": 1,
+          "freq_20cells": 0.0105712890625,
+          "n_cells_active_of_20": 20,
+          "active_at_bos_cells": 0,
+          "posthoc_v3_annotated": true,
+          "posthoc_v3_top_terms": [
+            "GO_BP:Negative Regulation Of Programmed Cell Death (GO:0043069)",
+            "GO_BP:Negative Regulation Of Apoptotic Process (GO:0043066)"
+          ],
+          "posthoc_v3_n_terms": 2,
+          "freq_v3_sae_training_500cells": 0.01192847815089471,
+          "best_abs_cos_to_deployed_decoder": 0.23756352066993713,
+          "best_deployed_match_id": 125,
+          "best_abs_cos_to_v2_chosen_features_same_layer": 0.042795851826667786
+        },
+        {
+          "feature": 1535,
+          "freq_bin_target": 2,
+          "freq_bin_used": 2,
+          "freq_20cells": 0.0114013671875,
+          "n_cells_active_of_20": 20,
+          "active_at_bos_cells": 0,
+          "posthoc_v3_annotated": false,
+          "posthoc_v3_top_terms": [],
+          "posthoc_v3_n_terms": 0,
+          "freq_v3_sae_training_500cells": 0.013461817497323518,
+          "best_abs_cos_to_deployed_decoder": 0.6426228880882263,
+          "best_deployed_match_id": 2537,
+          "best_abs_cos_to_v2_chosen_features_same_layer": 0.046089209616184235
+        },
+        {
+          "feature": 235,
+          "freq_bin_target": 3,
+          "freq_bin_used": 3,
+          "freq_20cells": 0.0117431640625,
+          "n_cells_active_of_20": 20,
+          "active_at_bos_cells": 0,
+          "posthoc_v3_annotated": true,
+          "posthoc_v3_top_terms": [
+            "GO_BP:Hemopoiesis (GO:0030097)",
+            "GO_BP:Positive Regulation Of DNA-templated Transcription (GO:0045893)",
+            "GO_BP:Positive Regulation Of Transcription By RNA Polymerase II (GO:0045944)"
+          ],
+          "posthoc_v3_n_terms": 6,
+          "freq_v3_sae_training_500cells": 0.011403966290063882,
+          "best_abs_cos_to_deployed_decoder": 0.5939227342605591,
+          "best_deployed_match_id": 1595,
+          "best_abs_cos_to_v2_chosen_features_same_layer": 0.06029091775417328
+        },
+        {
+          "feature": 494,
+          "freq_bin_target": 4,
+          "freq_bin_used": 4,
+          "freq_20cells": 0.0125244140625,
+          "n_cells_active_of_20": 20,
+          "active_at_bos_cells": 0,
+          "posthoc_v3_annotated": false,
+          "posthoc_v3_top_terms": [],
+          "posthoc_v3_n_terms": 0,
+          "freq_v3_sae_training_500cells": 0.013080443452719422,
+          "best_abs_cos_to_deployed_decoder": 0.432172030210495,
+          "best_deployed_match_id": 167,
+          "best_abs_cos_to_v2_chosen_features_same_layer": 0.022500168532133102
+        },
+        {
+          "feature": 110,
+          "freq_bin_target": 5,
+          "freq_bin_used": 5,
+          "freq_20cells": 0.0137939453125,
+          "n_cells_active_of_20": 20,
+          "active_at_bos_cells": 0,
+          "posthoc_v3_annotated": true,
+          "posthoc_v3_top_terms": [
+            "KEGG:Ribosome biogenesis in eukaryotes",
+            "Reactome:Mitotic Prometaphase R-HSA-68877"
+          ],
+          "posthoc_v3_n_terms": 2,
+          "freq_v3_sae_training_500cells": 0.014191232122478912,
+          "best_abs_cos_to_deployed_decoder": 0.4154813885688782,
+          "best_deployed_match_id": 1431,
+          "best_abs_cos_to_v2_chosen_features_same_layer": 0.17972011864185333
+        },
+        {
+          "feature": 2772,
+          "freq_bin_target": 6,
+          "freq_bin_used": 6,
+          "freq_20cells": 0.015380859375,
+          "n_cells_active_of_20": 20,
+          "active_at_bos_cells": 0,
+          "posthoc_v3_annotated": false,
+          "posthoc_v3_top_terms": [],
+          "posthoc_v3_n_terms": 0,
+          "freq_v3_sae_training_500cells": 0.01563045345275864,
+          "best_abs_cos_to_deployed_decoder": 0.5636184811592102,
+          "best_deployed_match_id": 830,
+          "best_abs_cos_to_v2_chosen_features_same_layer": 0.056020498275756836
+        },
+        {
+          "feature": 1628,
+          "freq_bin_target": 7,
+          "freq_bin_used": 7,
+          "freq_20cells": 0.0166259765625,
+          "n_cells_active_of_20": 20,
+          "active_at_bos_cells": 0,
+          "posthoc_v3_annotated": true,
+          "posthoc_v3_top_terms": [
+            "GO_BP:NADH Dehydrogenase Complex Assembly (GO:0010257)",
+            "GO_BP:Mitochondrial Respiratory Chain Complex I Assembly (GO:0032981)",
+            "GO_BP:Mitochondrial Respiratory Chain Complex Assembly (GO:0033108)"
+          ],
+          "posthoc_v3_n_terms": 3,
+          "freq_v3_sae_training_500cells": 0.014119663214365547,
+          "best_abs_cos_to_deployed_decoder": 0.20924167335033417,
+          "best_deployed_match_id": 3082,
+          "best_abs_cos_to_v2_chosen_features_same_layer": 0.04868709295988083
+        }
+      ],
+      "null_kind": "exact: zero activations in the 20 clean cells",
+      "null": [
+        {
+          "feature": 1995,
+          "active_positions_20cells": 0,
+          "n_cells_active_of_20": 0,
+          "posthoc_v3_annotated": false,
+          "posthoc_v3_top_terms": [],
+          "posthoc_v3_n_terms": 0,
+          "freq_v3_sae_training_500cells": 1.2745148020188314e-05,
+          "best_abs_cos_to_deployed_decoder": 0.17843756079673767,
+          "best_deployed_match_id": 1995,
+          "best_abs_cos_to_v2_chosen_features_same_layer": 0.050734348595142365
+        },
+        {
+          "feature": 3537,
+          "active_positions_20cells": 0,
+          "n_cells_active_of_20": 0,
+          "posthoc_v3_annotated": false,
+          "posthoc_v3_top_terms": [],
+          "posthoc_v3_n_terms": 0,
+          "freq_v3_sae_training_500cells": 1.9607920031058946e-06,
+          "best_abs_cos_to_deployed_decoder": 0.2865445613861084,
+          "best_deployed_match_id": 3537,
+          "best_abs_cos_to_v2_chosen_features_same_layer": 0.07719574123620987
+        }
+      ]
+    }
+  },
+  "rule": "Per layer: candidates = v3 SAE features active (z>0) in >= 1% of all tokens of the 20 clean cells (all positions incl. <bos>/<eos>). Candidate log10(frequency) cut into 8 equal-count bins (octiles, numpy quantile); one feature drawn at random from each bin with numpy default_rng(20261001 + layer), bins in order 0 (rarest) .. 7 (commonest). If a bin had no unused candidate the nearest bin would be used (logged). Null features: 2 drawn with the same generator from features with zero activations in the 20 clean cells; if a layer has fewer than 2 such features (v3 L5: none), its 2 rarest features (fewest active positions, rarest first) are used as near-null features instead. No annotation is used for the choice; the v3 annotation label (item V3-3, circuit-tracing-217M/outputs/v3_circuit/annotation) is recorded afterwards for description only.",
+  "rule_amendment": "The first select call (2026-10-02 13:38) stopped before choosing because L5 had no feature with zero activations. The near-null fallback was added before any ablation was run. The octile rule for the 24 real features was not changed.",
+  "selected_at": "2026-10-02T13:40:16",
+  "seed_base": 20261001,
+  "posthoc_note": "posthoc_* fields, freq_v3_sae_training_500cells and the cosine matches were added after the selection was written; they were not used to choose."
+}

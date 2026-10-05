@@ -1,0 +1,939 @@
+{
+  "cells": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    166,
+    167,
+    168,
+    169,
+    170,
+    171,
+    172,
+    173,
+    242,
+    243,
+    244,
+    245,
+    246,
+    247,
+    248,
+    249
+  ],
+  "encoding_checks_all_pass": true,
+  "features": {
+    "L0_F1976": {
+      "rho": 0.7286529004019647,
+      "top_genes_by_summed_code": [
+        {
+          "gene": "RPLP0",
+          "share_of_code": 0.03295374249962394
+        },
+        {
+          "gene": "GNAS",
+          "share_of_code": 0.025262421522246753
+        },
+        {
+          "gene": "PDCD10",
+          "share_of_code": 0.023198347649788446
+        },
+        {
+          "gene": "RBM5",
+          "share_of_code": 0.021588229000794414
+        },
+        {
+          "gene": "TOP2B",
+          "share_of_code": 0.020805163480474526
+        },
+        {
+          "gene": "GNAI3",
+          "share_of_code": 0.020714848790784886
+        },
+        {
+          "gene": "EZH2",
+          "share_of_code": 0.019499503733676853
+        },
+        {
+          "gene": "BRD4",
+          "share_of_code": 0.01904023859763364
+        },
+        {
+          "gene": "TRIM58",
+          "share_of_code": 0.018992432184694697
+        },
+        {
+          "gene": "HELZ",
+          "share_of_code": 0.018244102988130822
+        },
+        {
+          "gene": "CLSPN",
+          "share_of_code": 0.016485647837398854
+        },
+        {
+          "gene": "WNK1",
+          "share_of_code": 0.015834813364934863
+        }
+      ],
+      "n_distinct_genes_where_active": 164,
+      "share_of_gene_positions_active_by_stage": {
+        "HSC": 0.0145405669599218,
+        "CMP": 0.01900048875855327,
+        "EryP": 0.021781138731116395,
+        "Ery": 0.022939888502806205
+      }
+    },
+    "L0_F1883": {
+      "rho": 0.7249161380729449,
+      "top_genes_by_summed_code": [
+        {
+          "gene": "MT-ND1",
+          "share_of_code": 0.0372160973718851
+        },
+        {
+          "gene": "MT-ND3",
+          "share_of_code": 0.03631403912146729
+        },
+        {
+          "gene": "YWHAZ",
+          "share_of_code": 0.029173808028633366
+        },
+        {
+          "gene": "NCL",
+          "share_of_code": 0.02879095660523444
+        },
+        {
+          "gene": "GSPT1",
+          "share_of_code": 0.02871551552124621
+        },
+        {
+          "gene": "UQCRH",
+          "share_of_code": 0.02684664531730317
+        },
+        {
+          "gene": "NAP1L4",
+          "share_of_code": 0.026453230308858423
+        },
+        {
+          "gene": "NUP50",
+          "share_of_code": 0.021963241165950102
+        },
+        {
+          "gene": "CAT",
+          "share_of_code": 0.021763555140461723
+        },
+        {
+          "gene": "LRBA",
+          "share_of_code": 0.021040884068428876
+        },
+        {
+          "gene": "AHCTF1",
+          "share_of_code": 0.020163526022963674
+        },
+        {
+          "gene": "ELMO1",
+          "share_of_code": 0.018675319040940778
+        }
+      ],
+      "n_distinct_genes_where_active": 155,
+      "share_of_gene_positions_active_by_stage": {
+        "HSC": 0.012280058651026392,
+        "CMP": 0.015640273704789834,
+        "EryP": 0.019839497794584673,
+        "Ery": 0.028755517217226502
+      }
+    },
+    "L0_F2449": {
+      "rho": -0.6765960068431046,
+      "top_genes_by_summed_code": [
+        {
+          "gene": "SLC25A5",
+          "share_of_code": 0.08493472087696925
+        },
+        {
+          "gene": "HINT1",
+          "share_of_code": 0.06196959504582535
+        },
+        {
+          "gene": "MLLT10",
+          "share_of_code": 0.038607023335313725
+        },
+        {
+          "gene": "IQGAP2",
+          "share_of_code": 0.030945210851676962
+        },
+        {
+          "gene": "TAOK3",
+          "share_of_code": 0.02665347649825024
+        },
+        {
+          "gene": "SESN3",
+          "share_of_code": 0.025511307406028194
+        },
+        {
+          "gene": "LDHB",
+          "share_of_code": 0.025466532774451444
+        },
+        {
+          "gene": "SERPINB1",
+          "share_of_code": 0.025038835737091186
+        },
+        {
+          "gene": "MEF2C",
+          "share_of_code": 0.024602383696726942
+        },
+        {
+          "gene": "CLPTM1L",
+          "share_of_code": 0.022642413966565557
+        },
+        {
+          "gene": "TMEM131",
+          "share_of_code": 0.022637287432493977
+        },
+        {
+          "gene": "FBXW11",
+          "share_of_code": 0.022575761665279814
+        }
+      ],
+      "n_distinct_genes_where_active": 104,
+      "share_of_gene_positions_active_by_stage": {
+        "HSC": 0.01307429130009775,
+        "CMP": 0.009164222873900292,
+        "EryP": 0.007461775264783735,
+        "Ery": 0.007802335207825627
+      }
+    },
+    "L3_F1133": {
+      "rho": -0.8119836116843239,
+      "top_genes_by_summed_code": [
+        {
+          "gene": "RPS24",
+          "share_of_code": 0.06511666785228272
+        },
+        {
+          "gene": "STON2",
+          "share_of_code": 0.02384750112387867
+        },
+        {
+          "gene": "RTN4",
+          "share_of_code": 0.023233699469899786
+        },
+        {
+          "gene": "GSTCD",
+          "share_of_code": 0.021743064679706374
+        },
+        {
+          "gene": "MED25",
+          "share_of_code": 0.021013302107725954
+        },
+        {
+          "gene": "ADIPOR2",
+          "share_of_code": 0.02064805631181652
+        },
+        {
+          "gene": "GUF1",
+          "share_of_code": 0.020427307843074092
+        },
+        {
+          "gene": "AZIN1",
+          "share_of_code": 0.020265885626444664
+        },
+        {
+          "gene": "ERLIN1",
+          "share_of_code": 0.017378006422093327
+        },
+        {
+          "gene": "MRPL35",
+          "share_of_code": 0.015420079652174087
+        },
+        {
+          "gene": "PAIP1",
+          "share_of_code": 0.015320838741084431
+        },
+        {
+          "gene": "NUCB2",
+          "share_of_code": 0.01521517906813462
+        }
+      ],
+      "n_distinct_genes_where_active": 251,
+      "share_of_gene_positions_active_by_stage": {
+        "HSC": 0.021994134897360705,
+        "CMP": 0.009897360703812317,
+        "EryP": 0.00490136231800925,
+        "Ery": 0.0035378026030833225
+      }
+    },
+    "L3_F980": {
+      "rho": -0.724083092450241,
+      "top_genes_by_summed_code": [
+        {
+          "gene": "RANBP2",
+          "share_of_code": 0.06364079207292479
+        },
+        {
+          "gene": "GNB1",
+          "share_of_code": 0.05575304633228184
+        },
+        {
+          "gene": "ARIH1",
+          "share_of_code": 0.04910050492352318
+        },
+        {
+          "gene": "PICALM",
+          "share_of_code": 0.04736909194100265
+        },
+        {
+          "gene": "USP47",
+          "share_of_code": 0.045713383422117566
+        },
+        {
+          "gene": "UBE2B",
+          "share_of_code": 0.03647696000184294
+        },
+        {
+          "gene": "BIRC6",
+          "share_of_code": 0.03642892860956105
+        },
+        {
+          "gene": "PIAS1",
+          "share_of_code": 0.0308237514299983
+        },
+        {
+          "gene": "SIK3",
+          "share_of_code": 0.03013619315413584
+        },
+        {
+          "gene": "ACTB",
+          "share_of_code": 0.02756403886200328
+        },
+        {
+          "gene": "ARF4",
+          "share_of_code": 0.021933405898735197
+        },
+        {
+          "gene": "LRRFIP2",
+          "share_of_code": 0.020231013117631064
+        }
+      ],
+      "n_distinct_genes_where_active": 183,
+      "share_of_gene_positions_active_by_stage": {
+        "HSC": 0.014601661779081133,
+        "CMP": 0.011241446725317693,
+        "EryP": 0.007483193961220846,
+        "Ery": 0.005742660863706553
+      }
+    },
+    "L3_F1029": {
+      "rho": -0.7159991488659069,
+      "top_genes_by_summed_code": [
+        {
+          "gene": "CSDE1",
+          "share_of_code": 0.08378154836475567
+        },
+        {
+          "gene": "ZNF146",
+          "share_of_code": 0.04058481947279526
+        },
+        {
+          "gene": "PHF14",
+          "share_of_code": 0.039165531210443624
+        },
+        {
+          "gene": "ITPR1",
+          "share_of_code": 0.029669317425383465
+        },
+        {
+          "gene": "MED12L",
+          "share_of_code": 0.02864301401934285
+        },
+        {
+          "gene": "TM7SF3",
+          "share_of_code": 0.028509756992199205
+        },
+        {
+          "gene": "SLC22A23",
+          "share_of_code": 0.019538360405007647
+        },
+        {
+          "gene": "DNAJB14",
+          "share_of_code": 0.01922126370192643
+        },
+        {
+          "gene": "MTBP",
+          "share_of_code": 0.018526134436771043
+        },
+        {
+          "gene": "DIP2B",
+          "share_of_code": 0.018104894330963916
+        },
+        {
+          "gene": "ZC3H8",
+          "share_of_code": 0.017267905877670277
+        },
+        {
+          "gene": "ZSWIM7",
+          "share_of_code": 0.016788083056921053
+        }
+      ],
+      "n_distinct_genes_where_active": 198,
+      "share_of_gene_positions_active_by_stage": {
+        "HSC": 0.015029325513196481,
+        "CMP": 0.012035679374389052,
+        "EryP": 0.0055928219712418955,
+        "Ery": 0.0019564036833457973
+      }
+    },
+    "L6_F3965": {
+      "rho": 0.7718589230119149,
+      "top_genes_by_summed_code": [
+        {
+          "gene": "PRDX2",
+          "share_of_code": 0.031712636563078406
+        },
+        {
+          "gene": "SOD1",
+          "share_of_code": 0.016987538012349642
+        },
+        {
+          "gene": "MBNL1",
+          "share_of_code": 0.012859072060506242
+        },
+        {
+          "gene": "YBX1",
+          "share_of_code": 0.01246976756928983
+        },
+        {
+          "gene": "GLUL",
+          "share_of_code": 0.0121088649255588
+        },
+        {
+          "gene": "RNF115",
+          "share_of_code": 0.01029148018990026
+        },
+        {
+          "gene": "INTS2",
+          "share_of_code": 0.009956906762416801
+        },
+        {
+          "gene": "CHCHD2",
+          "share_of_code": 0.009921873101446285
+        },
+        {
+          "gene": "KEL",
+          "share_of_code": 0.00977778948333199
+        },
+        {
+          "gene": "PCBP2",
+          "share_of_code": 0.009433057585260873
+        },
+        {
+          "gene": "EIF4A2",
+          "share_of_code": 0.008439655964665107
+        },
+        {
+          "gene": "CHMP5",
+          "share_of_code": 0.008423195743413936
+        }
+      ],
+      "n_distinct_genes_where_active": 527,
+      "share_of_gene_positions_active_by_stage": {
+        "HSC": 0.0017106549364613879,
+        "CMP": 0.002565982404692082,
+        "EryP": 0.02405501291025442,
+        "Ery": 0.03254338116666699
+      }
+    },
+    "L6_F1976": {
+      "rho": 0.6954837752756857,
+      "top_genes_by_summed_code": [
+        {
+          "gene": "CACYBP",
+          "share_of_code": 0.020870230969852722
+        },
+        {
+          "gene": "HNRNPAB",
+          "share_of_code": 0.017777365181575057
+        },
+        {
+          "gene": "CCT6A",
+          "share_of_code": 0.008893563621309664
+        },
+        {
+          "gene": "PCBP2",
+          "share_of_code": 0.008415723454421145
+        },
+        {
+          "gene": "RAB13",
+          "share_of_code": 0.007436972465943956
+        },
+        {
+          "gene": "IMPDH2",
+          "share_of_code": 0.007101813233642785
+        },
+        {
+          "gene": "HNRNPK",
+          "share_of_code": 0.006372426046882581
+        },
+        {
+          "gene": "MRPL51",
+          "share_of_code": 0.006094274150565468
+        },
+        {
+          "gene": "BICD2",
+          "share_of_code": 0.006015375540875986
+        },
+        {
+          "gene": "ATP11B",
+          "share_of_code": 0.005986290344035014
+        },
+        {
+          "gene": "SOD1",
+          "share_of_code": 0.005944798620869782
+        },
+        {
+          "gene": "DNAJC1",
+          "share_of_code": 0.005330662390632362
+        }
+      ],
+      "n_distinct_genes_where_active": 503,
+      "share_of_gene_positions_active_by_stage": {
+        "HSC": 0.0008553274682306939,
+        "CMP": 0.005926197458455523,
+        "EryP": 0.009643205212856014,
+        "Ery": 0.04682108036516852
+      }
+    },
+    "L6_F646": {
+      "rho": 0.6854034728189481,
+      "top_genes_by_summed_code": [
+        {
+          "gene": "TUBB",
+          "share_of_code": 0.08826150891004197
+        },
+        {
+          "gene": "SMYD3",
+          "share_of_code": 0.02060731893817159
+        },
+        {
+          "gene": "TPR",
+          "share_of_code": 0.011591808129305353
+        },
+        {
+          "gene": "TERF2IP",
+          "share_of_code": 0.011532049773417282
+        },
+        {
+          "gene": "DDI2",
+          "share_of_code": 0.010946467333086178
+        },
+        {
+          "gene": "MKLN1",
+          "share_of_code": 0.010613713092327096
+        },
+        {
+          "gene": "BNIP3L",
+          "share_of_code": 0.009615708346710678
+        },
+        {
+          "gene": "SIK2",
+          "share_of_code": 0.008693164653096235
+        },
+        {
+          "gene": "LIMS1",
+          "share_of_code": 0.008209618736018377
+        },
+        {
+          "gene": "TMEM50A",
+          "share_of_code": 0.00819997417336967
+        },
+        {
+          "gene": "TMEM165",
+          "share_of_code": 0.007953764569862468
+        },
+        {
+          "gene": "OTUD5",
+          "share_of_code": 0.007553121279615328
+        }
+      ],
+      "n_distinct_genes_where_active": 362,
+      "share_of_gene_positions_active_by_stage": {
+        "HSC": 0.0014051808406647117,
+        "CMP": 0.0030547409579667643,
+        "EryP": 0.014371816545700182,
+        "Ery": 0.024649971615759974
+      }
+    },
+    "L9_F2903": {
+      "rho": 0.8363731601999493,
+      "top_genes_by_summed_code": [
+        {
+          "gene": "ANK1",
+          "share_of_code": 0.0008635052560174313
+        },
+        {
+          "gene": "TFRC",
+          "share_of_code": 0.0008282821619161868
+        },
+        {
+          "gene": "BLVRB",
+          "share_of_code": 0.0007974657332514794
+        },
+        {
+          "gene": "USP15",
+          "share_of_code": 0.0007692625868366871
+        },
+        {
+          "gene": "EIF2AK1",
+          "share_of_code": 0.0007672748010556059
+        },
+        {
+          "gene": "SPTA1",
+          "share_of_code": 0.000762386561579762
+        },
+        {
+          "gene": "PRDX2",
+          "share_of_code": 0.0007529906514432367
+        },
+        {
+          "gene": "CA2",
+          "share_of_code": 0.0007381507089125028
+        },
+        {
+          "gene": "CAT",
+          "share_of_code": 0.000727723453695344
+        },
+        {
+          "gene": "GLRX5",
+          "share_of_code": 0.0007187806589410938
+        },
+        {
+          "gene": "FECH",
+          "share_of_code": 0.0007091167195902127
+        },
+        {
+          "gene": "ANP32B",
+          "share_of_code": 0.0007025828612716561
+        }
+      ],
+      "n_distinct_genes_where_active": 7657,
+      "share_of_gene_positions_active_by_stage": {
+        "HSC": 0.10813782991202345,
+        "CMP": 0.32545210166177907,
+        "EryP": 0.9933268392101328,
+        "Ery": 0.972943111697667
+      }
+    },
+    "L9_F878": {
+      "rho": -0.726878480385278,
+      "top_genes_by_summed_code": [
+        {
+          "gene": "RUNX1",
+          "share_of_code": 0.006531126397846578
+        },
+        {
+          "gene": "ETV6",
+          "share_of_code": 0.006183258902346911
+        },
+        {
+          "gene": "FKBP5",
+          "share_of_code": 0.0060051092216342975
+        },
+        {
+          "gene": "RNF220",
+          "share_of_code": 0.00568648250472934
+        },
+        {
+          "gene": "CDK6",
+          "share_of_code": 0.0056452938301893825
+        },
+        {
+          "gene": "LRBA",
+          "share_of_code": 0.0049734715376451065
+        },
+        {
+          "gene": "PDZD8",
+          "share_of_code": 0.004783203803931261
+        },
+        {
+          "gene": "MEIS1",
+          "share_of_code": 0.004749158904549732
+        },
+        {
+          "gene": "NRIP1",
+          "share_of_code": 0.004274066751318443
+        },
+        {
+          "gene": "ELMO1",
+          "share_of_code": 0.004250718394400264
+        },
+        {
+          "gene": "MBNL1",
+          "share_of_code": 0.004200046310922919
+        },
+        {
+          "gene": "FLT3",
+          "share_of_code": 0.004162122456681491
+        }
+      ],
+      "n_distinct_genes_where_active": 1785,
+      "share_of_gene_positions_active_by_stage": {
+        "HSC": 0.13935728250244378,
+        "CMP": 0.06964809384164222,
+        "EryP": 0.026458189305690744,
+        "Ery": 0.0
+      }
+    },
+    "L9_F3003": {
+      "rho": 0.7018003169062704,
+      "top_genes_by_summed_code": [
+        {
+          "gene": "ISCA1",
+          "share_of_code": 0.007986705356946223
+        },
+        {
+          "gene": "IMMT",
+          "share_of_code": 0.0037264889244557273
+        },
+        {
+          "gene": "TARS1",
+          "share_of_code": 0.0035342192723635305
+        },
+        {
+          "gene": "HDLBP",
+          "share_of_code": 0.0034569867126627318
+        },
+        {
+          "gene": "PPP2R2A",
+          "share_of_code": 0.0034132442473637794
+        },
+        {
+          "gene": "RSRC1",
+          "share_of_code": 0.0031430395499486567
+        },
+        {
+          "gene": "SON",
+          "share_of_code": 0.0030593800538161963
+        },
+        {
+          "gene": "HYCC2",
+          "share_of_code": 0.0029620193438089893
+        },
+        {
+          "gene": "DHX9",
+          "share_of_code": 0.002955739417505785
+        },
+        {
+          "gene": "TAF1",
+          "share_of_code": 0.002885193216700609
+        },
+        {
+          "gene": "STAG2",
+          "share_of_code": 0.0028778165688196225
+        },
+        {
+          "gene": "CTDSPL2",
+          "share_of_code": 0.0028511590303327387
+        }
+      ],
+      "n_distinct_genes_where_active": 1202,
+      "share_of_gene_positions_active_by_stage": {
+        "HSC": 0.0006720430107526882,
+        "CMP": 0.02065004887585533,
+        "EryP": 0.038146438149177245,
+        "Ery": 0.052462572251593856
+      }
+    },
+    "L11_F2767": {
+      "rho": -0.7488002799643666,
+      "top_genes_by_summed_code": [
+        {
+          "gene": "VPS13B",
+          "share_of_code": 0.03319995973741404
+        },
+        {
+          "gene": "SRFBP1",
+          "share_of_code": 0.024976853954797044
+        },
+        {
+          "gene": "DERA",
+          "share_of_code": 0.02107092069745594
+        },
+        {
+          "gene": "MADD",
+          "share_of_code": 0.020682863222372352
+        },
+        {
+          "gene": "ZNHIT1",
+          "share_of_code": 0.019116482014603482
+        },
+        {
+          "gene": "DARS1",
+          "share_of_code": 0.015715797350668838
+        },
+        {
+          "gene": "CCM2",
+          "share_of_code": 0.015058459479187415
+        },
+        {
+          "gene": "PAAF1",
+          "share_of_code": 0.014904360640225298
+        },
+        {
+          "gene": "MAGED1",
+          "share_of_code": 0.01370249098767815
+        },
+        {
+          "gene": "DOCK8",
+          "share_of_code": 0.010554571806501474
+        },
+        {
+          "gene": "MALRD1",
+          "share_of_code": 0.010449607663151452
+        },
+        {
+          "gene": "HP1BP3",
+          "share_of_code": 0.010307712670573559
+        }
+      ],
+      "n_distinct_genes_where_active": 377,
+      "share_of_gene_positions_active_by_stage": {
+        "HSC": 0.015640273704789834,
+        "CMP": 0.013807429130009775,
+        "EryP": 0.007331086837307606,
+        "Ery": 0.002216733081831965
+      }
+    },
+    "L11_F4372": {
+      "rho": 0.7485691948939452,
+      "top_genes_by_summed_code": [
+        {
+          "gene": "TCEA1",
+          "share_of_code": 0.004773534913933918
+        },
+        {
+          "gene": "RBM41",
+          "share_of_code": 0.003175540780669309
+        },
+        {
+          "gene": "CR1L",
+          "share_of_code": 0.002877687702114383
+        },
+        {
+          "gene": "ARIH1",
+          "share_of_code": 0.002776133370760199
+        },
+        {
+          "gene": "STAM",
+          "share_of_code": 0.0025051261700743733
+        },
+        {
+          "gene": "GRB2",
+          "share_of_code": 0.002468618832871293
+        },
+        {
+          "gene": "PPP1CB",
+          "share_of_code": 0.002403108771648767
+        },
+        {
+          "gene": "MED13L",
+          "share_of_code": 0.0023935109894972313
+        },
+        {
+          "gene": "UBE2D3",
+          "share_of_code": 0.0023738792219340815
+        },
+        {
+          "gene": "USP15",
+          "share_of_code": 0.002343955387086109
+        },
+        {
+          "gene": "SUCO",
+          "share_of_code": 0.002279431302968282
+        },
+        {
+          "gene": "BSDC1",
+          "share_of_code": 0.0022577949660535063
+        }
+      ],
+      "n_distinct_genes_where_active": 1881,
+      "share_of_gene_positions_active_by_stage": {
+        "HSC": 0.0005498533724340175,
+        "CMP": 0.005681818181818182,
+        "EryP": 0.07226469260280366,
+        "Ery": 0.15261741142904173
+      }
+    },
+    "L11_F2835": {
+      "rho": -0.7466578831077969,
+      "top_genes_by_summed_code": [
+        {
+          "gene": "RUNX1",
+          "share_of_code": 0.008888382544856929
+        },
+        {
+          "gene": "FLT3",
+          "share_of_code": 0.00853901390467988
+        },
+        {
+          "gene": "RNF220",
+          "share_of_code": 0.008525582098934921
+        },
+        {
+          "gene": "ATP8B4",
+          "share_of_code": 0.0074478137584909395
+        },
+        {
+          "gene": "ETV6",
+          "share_of_code": 0.007401492181390979
+        },
+        {
+          "gene": "LRBA",
+          "share_of_code": 0.007117492572908484
+        },
+        {
+          "gene": "MSI2",
+          "share_of_code": 0.007116585766826022
+        },
+        {
+          "gene": "FKBP5",
+          "share_of_code": 0.006820211676871773
+        },
+        {
+          "gene": "MBNL1",
+          "share_of_code": 0.006620401985191314
+        },
+        {
+          "gene": "INPP4B",
+          "share_of_code": 0.006499944276505938
+        },
+        {
+          "gene": "MAN1A1",
+          "share_of_code": 0.006065245553662957
+        },
+        {
+          "gene": "ELMO1",
+          "share_of_code": 0.005976418695765816
+        }
+      ],
+      "n_distinct_genes_where_active": 685,
+      "share_of_gene_positions_active_by_stage": {
+        "HSC": 0.06225562072336266,
+        "CMP": 0.001893939393939394,
+        "EryP": 0.0,
+        "Ery": 0.0
+      }
+    }
+  }
+}

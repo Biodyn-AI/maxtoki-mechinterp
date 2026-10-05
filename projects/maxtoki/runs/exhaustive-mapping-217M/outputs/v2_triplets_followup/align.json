@@ -1,0 +1,108 @@
+{
+  "cos_percell_I_vs_additive_part(cells x targets)": {
+    "median": -0.22485326818376986,
+    "p05": -0.336456764925115,
+    "p95": -0.12834111037599766,
+    "min": -0.3753561617723961,
+    "max": -0.055429945258500216,
+    "mean": -0.22852624117496306,
+    "n_negative": 512,
+    "n": 512
+  },
+  "cos_cellmean_I_vs_additive_part": {
+    "median": -0.11650394403350889,
+    "p05": -0.18711232290909918,
+    "p95": -0.04640896626462004,
+    "min": -0.27653885575230075,
+    "max": 0.04591391434720548,
+    "mean": -0.1164462189774873,
+    "n_negative": 507,
+    "n": 512
+  },
+  "targets_with_BH_significant_effect_per_triplet(t-test, q<0.05 within triplet)": {
+    "A": {
+      "median": 7.5,
+      "p05": 0.0,
+      "p95": 228.0,
+      "min": 0.0,
+      "max": 228.0,
+      "mean": 38.375,
+      "n_negative": 0,
+      "n": 512
+    },
+    "B": {
+      "median": 1.5,
+      "p05": 0.0,
+      "p95": 7.0,
+      "min": 0.0,
+      "max": 7.0,
+      "mean": 2.625,
+      "n_negative": 0,
+      "n": 512
+    },
+    "C": {
+      "median": 2.0,
+      "p05": 0.0,
+      "p95": 13.0,
+      "min": 0.0,
+      "max": 13.0,
+      "mean": 3.625,
+      "n_negative": 0,
+      "n": 512
+    },
+    "ABC": {
+      "median": 17.0,
+      "p05": 0.0,
+      "p95": 173.45,
+      "min": 0.0,
+      "max": 217.0,
+      "mean": 36.291015625,
+      "n_negative": 0,
+      "n": 512
+    },
+    "I": {
+      "median": 0.0,
+      "p05": 0.0,
+      "p95": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "mean": 0.0,
+      "n_negative": 0,
+      "n": 512
+    }
+  },
+  "note": "additive part = AB + AC + BC - A - B - C (= ABC - I). A negative cosine means that within a cell the three-way term tends to shrink the joint effect (saturation / redundancy-like); its size is given by the energy shares in v2_triplets/summary.json.",
+  "aggregate_signflip_power_proportional_plant": {
+    "0.05": {
+      "detected_p05": 47,
+      "detected_BH05_within_64": 46,
+      "n_triplets": 64
+    },
+    "0.1": {
+      "detected_p05": 64,
+      "detected_BH05_within_64": 64,
+      "n_triplets": 64
+    },
+    "0.2": {
+      "detected_p05": 64,
+      "detected_BH05_within_64": 64,
+      "n_triplets": 64
+    },
+    "0.3": {
+      "detected_p05": 64,
+      "detected_BH05_within_64": 64,
+      "n_triplets": 64
+    },
+    "0.5": {
+      "detected_p05": 64,
+      "detected_BH05_within_64": 64,
+      "n_triplets": 64
+    },
+    "1.0": {
+      "detected_p05": 64,
+      "detected_BH05_within_64": 64,
+      "n_triplets": 64
+    }
+  },
+  "wall_seconds": 163.5
+}

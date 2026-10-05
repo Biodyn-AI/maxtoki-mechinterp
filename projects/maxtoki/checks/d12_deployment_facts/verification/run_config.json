@@ -1,0 +1,65 @@
+{
+ "item": "Verification of D11 + D12 deployment facts ledger",
+ "created": "2026-10-01T01:45:42",
+ "python": "3.12.9",
+ "platform": "macOS-26.3-arm64-arm-64bit",
+ "seeds": {
+  "adamson_bootstrap": [
+   42,
+   2026
+  ]
+ },
+ "run_order": [
+  "v1_timing.py",
+  "v2_hashes.py",
+  "v3_adamson.py",
+  "v4_facts.py",
+  "v5_patch_json.py"
+ ],
+ "scripts": {
+  "v1_timing.py": "6f94dc29213b929e8bd0b9d7f02440cd887c25f45efab4f9b420cd7508637c4b",
+  "v2_hashes.py": "642333158cebc858f24374ea31952c953a5a96339a110ce5f8bd66ff2de837d6",
+  "v3_adamson.py": "adf0dfb3cfccb1dfd4344905b3b8cf730818a132707f8c9149ebe595cf8cd71a",
+  "v4_facts.py": "77c9acf8b7fa26ed9ea79f46e7514d521ad0a594966cb1fe5a53d8de1f03d516",
+  "v5_patch_json.py": "db48cea92e5e3620997e5011cbff3a57bcad20e87f28588d4da3a81c73c4c6fc"
+ },
+ "outputs": {
+  "v1_timing.json": "22cabcb2d68b88d3bdf51cbb5dc1eff6e42b4d6d751ca69af190faeb9b65ce86",
+  "v2_hashes.json": "64a581400fb3d37cd713a090ecc07d5064a3a7da3d487b1af3ee9db0f8d29cbe",
+  "v3_adamson.json": "6739ce94625c7c661b8f0ab4f403d6a3dc10971ec25a53b7ea7e11eb7cce837b",
+  "v4_facts.json": "96e3c6b04f5deec24b23cdd2ee8d91bfcb57237e2757ac9f767da0db51cde5ca"
+ },
+ "inputs_sha256": {
+  "~/.claude/history.jsonl (read only; it grows as new prompts are typed, so this hash is a snapshot)": "1aa095fd1389c86b6573ce4cf66c86b6102c2bd88b0b4302a8adb922e2bc2ccb",
+  "checks/d12_deployment_facts/out/provenance.json": "84693ee5460f2c95c3531520565fee485fb2c76283b4a4d5834bbf6eaea7e6b5",
+  "runs/topology-141-217M/outputs/phase12/h141_strict_margins.csv": "7b084c4f59407113634b0b80f56796bb64592659f441489d765240c33494d455",
+  "runs/topology-141-217M/outputs/groupkfold_h123/summary.json": "2b7f5b8f06e9f2a750c062785755ade08752b3714088a75837846c6b6b7e72ec",
+  "runs/spectral-geometry-217M/autoloop/runtime/driver.log": "6fd0d88f24c0123175b3ef9e5206a0abeab99cfb93a1a072f84dd8206c3ec7cf",
+  "runs/attention-grn-217M/outputs/phase1_adamson/per_perturbation_auroc.csv": "5b8e59283e34b21312248b70bedf6f37eef8e401f55f3fced4015332ce04e724",
+  "verification/inputs/hf_geneformer_tree_05fcbeb8_V2-316M.json": "5c54e26c7af397b470592de609c38f9c0b388056cc90171dd57219b6b4bdefc7",
+  "verification/inputs/hf_maxtoki_commits_main.json": "28ed3e723f7fb88ced093cd0acdd410f2378d0078a2f89bee69857a77fc66adc",
+  "verification/inputs/hf_maxtoki_tree_1523f7c2_MaxToki-1B-HF.json": "4ba64b901c1e7ac6f9e786ed2bc87deaf4d327f44c86d1f7b6e4a3bf29f98530",
+  "verification/inputs/hf_maxtoki_tree_1523f7c2_MaxToki-217M-HF.json": "ad385b73c8709fc73a4d6c0cd6f1afafdfc23f0bd7d15c8e095a16ff360131ee",
+  "verification/inputs/hf_maxtoki_tree_21aa7b7f_MaxToki-1B-HF.json": "e90d5b08df54f2917c8f9bc26d6e800061a5d7f521851c10d31052a263605807",
+  "verification/inputs/hf_maxtoki_tree_21aa7b7f_MaxToki-217M-HF.json": "ad385b73c8709fc73a4d6c0cd6f1afafdfc23f0bd7d15c8e095a16ff360131ee",
+  "verification/inputs/hf_maxtoki_tree_e7041eb7_MaxToki-1B-HF.json": "e90d5b08df54f2917c8f9bc26d6e800061a5d7f521851c10d31052a263605807",
+  "verification/inputs/hf_maxtoki_tree_e7041eb7_MaxToki-217M-HF.json": "ad385b73c8709fc73a4d6c0cd6f1afafdfc23f0bd7d15c8e095a16ff360131ee",
+  "verification/inputs/hf_maxtoki_tree_main_MaxToki-1B-HF.json": "e90d5b08df54f2917c8f9bc26d6e800061a5d7f521851c10d31052a263605807",
+  "verification/inputs/hf_maxtoki_tree_main_MaxToki-217M-HF.json": "ad385b73c8709fc73a4d6c0cd6f1afafdfc23f0bd7d15c8e095a16ff360131ee",
+  "verification/inputs/hf_state_replogle_tree_main.json": "9f1291ed1565e0fbe34fef525fd9a1dbe1bfe55e846d92050bb296c9fbee06e4",
+  "verification/inputs/zenodo_record_13350497.json": "2bd71db2619789f318acaf012a280d36aaafe889dd42df520b808143d0a5d8ee",
+  "weights/data: MaxToki-217M-HF/model.safetensors": "9da1fbf8cc489486d158d4653a14e3f44ac49c75a8e1480566eab0e9f99cf898",
+  "weights/data: MaxToki-1B-HF/model.safetensors": "96c6c8f9d61732c9bedfc37a9cfd937359e6ce0bfa860526646d101815a242e6",
+  "weights/data: MaxToki-217M-HF/config.json": "a4effbdf27969b7cc4d6cce34fc24b3f2134886946a19e7999c3ebd08babf9bd",
+  "weights/data: MaxToki-1B-HF/config.json": "23358e6663b32e796dec2818a1d9cff97eb9e150d259850ba26b1bf2144eba9e",
+  "weights/data: MaxToki-217M-HF/generation_config.json": "3ecb636c810f6805b0534c7e8f6df2c53788726ec81b4b6372de0fed944d458e",
+  "weights/data: MaxToki-1B-HF/generation_config.json": "b10a73d1785bb92ee3ff879dc114a6cb3adcf84caa3a4d31973b301cf059ddec",
+  "weights/data: Geneformer-V2-316M/model.safetensors": "965ceccea81953d362081ef3843560a0e4fef88d396c28017881f1e94b1246f3",
+  "weights/data: replogle_concat.h5ad": "a7992a6109d589f2d49c2eaccff45a9f860418af23125d41b80d8e3929a33d56",
+  "weights/data: ReplogleWeissman2022_rpe1.h5ad": "12d6a0cf9378c4f09411e27f0ce07b59f1d97731bd576d6fadf112f6f088d1a4",
+  "weights/data: adamson perturb_processed_symbols.h5ad": "3b816440acd5f02e55e63df83e697d9e80f3787f5e9056bf965c66acad5d7fc2"
+ },
+ "network_reads": "public Hugging Face model/dataset tree and commit APIs and Zenodo record 13350497, fetched 2026-10-01 into verification/inputs/",
+ "no_model_forward_pass": true,
+ "device": "CPU only"
+}

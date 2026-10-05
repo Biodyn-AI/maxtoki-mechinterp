@@ -1,0 +1,154 @@
+{
+  "sources": {
+    "maxtoki_st": {
+      "path": "<REPO_ROOT>/projects/maxtoki/setup/MaxToki-217M-HF/model.safetensors",
+      "sha256": "9da1fbf8cc489486d158d4653a14e3f44ac49c75a8e1480566eab0e9f99cf898",
+      "bytes": 867797760
+    },
+    "maxtoki_cfg": {
+      "path": "<REPO_ROOT>/projects/maxtoki/setup/MaxToki-217M-HF/config.json",
+      "sha256": "a4effbdf27969b7cc4d6cce34fc24b3f2134886946a19e7999c3ebd08babf9bd",
+      "bytes": 676
+    },
+    "maxtoki_tok": {
+      "path": "<REPO_ROOT>/projects/maxtoki/setup/token_dictionary.json",
+      "sha256": "3d06ba6f896c3c0f8721a78e39b68e660d9d12ea525af8c2ffdf631ac0a32d87",
+      "bytes": 560316
+    },
+    "gf_st": {
+      "path": "<HF_CACHE>/hub/models--ctheodoris--Geneformer/snapshots/05fcbeb8a27d49e0a7a4349152202ee2c1cbfd28/Geneformer-V2-316M/model.safetensors",
+      "sha256": "965ceccea81953d362081ef3843560a0e4fef88d396c28017881f1e94b1246f3",
+      "bytes": 1265455076
+    },
+    "gf_cfg": {
+      "path": "<HF_CACHE>/hub/models--ctheodoris--Geneformer/snapshots/05fcbeb8a27d49e0a7a4349152202ee2c1cbfd28/Geneformer-V2-316M/config.json",
+      "sha256": "2cc4af3442644e84af71814a607b61c958d7b4e5ebde6791ab77b5f534ac6f6e",
+      "bytes": 591
+    },
+    "gf_tok": {
+      "path": "<HF_CACHE>/hub/models--ctheodoris--Geneformer/snapshots/05fcbeb8a27d49e0a7a4349152202ee2c1cbfd28/geneformer/token_dictionary_gc104M.pkl",
+      "sha256": "67c445f4385127adfc48dcc072320cd65d6822829bf27dd38070e6e787bc597f",
+      "bytes": 425590
+    },
+    "gf_names": {
+      "path": "<HF_CACHE>/hub/models--ctheodoris--Geneformer/snapshots/05fcbeb8a27d49e0a7a4349152202ee2c1cbfd28/geneformer/gene_name_id_dict_gc104M.pkl",
+      "sha256": "fabfa0c2f49c598c59ae432a32c3499a5908c033756c663b5e0cddf58deea8e1",
+      "bytes": 1660882
+    },
+    "scgpt_ckpt": {
+      "path": "<DATA_ROOT>/biodyn-work/single_cell_mechinterp/external/scGPT_checkpoints/whole-human/best_model.pt",
+      "sha256": "6cb5d451ab5c4b33eb673adbe4fddc61d2389df1b89b7651a9fe2e557572b922",
+      "bytes": 205385258
+    },
+    "scgpt_vocab": {
+      "path": "<DATA_ROOT>/biodyn-work/single_cell_mechinterp/external/scGPT_checkpoints/whole-human/vocab.json",
+      "sha256": "acca93d114ca62c3f0f50debbd23e8c87f0714f4737764454f6b2b13f2e8580f",
+      "bytes": 1317639
+    },
+    "scgpt_args": {
+      "path": "<DATA_ROOT>/biodyn-work/single_cell_mechinterp/external/scGPT_checkpoints/whole-human/args.json",
+      "sha256": "c18e075e018140cb8b2d9029387b9de26607a5ce6a8ccabd6ead70cd76b95d60",
+      "bytes": 1300
+    },
+    "scgpt_pt_deployed": {
+      "path": "<DATA_ROOT>/biodyn-work/subproject_53_scgpt_gpl_replication/embeddings/scgpt_whole_human_gene_embeddings.pt",
+      "sha256": "b41289b862126ccd8db166e2688e08bcbe4149c87a9a177f8409b4723bf33f4b",
+      "bytes": 249944756
+    }
+  },
+  "outputs": {
+    "gene_ids/ensembl_symbol.csv": {
+      "sha256": "1e10842e5ffd5b8f6cd4d8b45eabd2e88b392b35ec835d85669f2f213ebe0b32",
+      "bytes": 1699646
+    },
+    "geneformer_v2_316m/config.json": {
+      "sha256": "2cc4af3442644e84af71814a607b61c958d7b4e5ebde6791ab77b5f534ac6f6e",
+      "bytes": 591
+    },
+    "geneformer_v2_316m/token_dictionary.json": {
+      "sha256": "7698923ecd71ac8b5b56fa34c2d682d4b194e802ff2b9859ce56e7b74dd15832",
+      "bytes": 516003
+    },
+    "geneformer_v2_316m/word_embeddings.npy": {
+      "sha256": "250496e71385d9a7f916bbfe75755fa0be791be8639e38deb103d01b2e49adc9",
+      "bytes": 93427328
+    },
+    "maxtoki_217m/config.json": {
+      "sha256": "a4effbdf27969b7cc4d6cce34fc24b3f2134886946a19e7999c3ebd08babf9bd",
+      "bytes": 676
+    },
+    "maxtoki_217m/embed_tokens.npy": {
+      "sha256": "44a7a7144b1484842ecb80ebcee12890bdd399ddf2148fec7c776e7c4b4a4256",
+      "bytes": 99915328
+    },
+    "maxtoki_217m/token_dictionary.json": {
+      "sha256": "3d06ba6f896c3c0f8721a78e39b68e660d9d12ea525af8c2ffdf631ac0a32d87",
+      "bytes": 560316
+    },
+    "panels/external_lung.csv": {
+      "sha256": "fcdd03bdae23e1319e68f7227540f580c5fe0bc36d5b48a23d7a5fdb23592d81",
+      "bytes": 6091
+    },
+    "panels/immune.csv": {
+      "sha256": "25595e35bf7d9c7bf3d6fcbbb8aff050607ab90a34112162831a5835f7787522",
+      "bytes": 5611
+    },
+    "panels/lung.csv": {
+      "sha256": "c9b6de38c7af84889af102031e19e0e9ba117c33420ee7d1aeccb86f8747e9dd",
+      "bytes": 6123
+    },
+    "scgpt_whole_human/args.json": {
+      "sha256": "c18e075e018140cb8b2d9029387b9de26607a5ce6a8ccabd6ead70cd76b95d60",
+      "bytes": 1300
+    },
+    "scgpt_whole_human/encoder_embedding_weight.npy": {
+      "sha256": "2764e9f10db256a0bb1c2b2f57486de91296b63a52941b28da3880c80030987c",
+      "bytes": 124307584
+    },
+    "scgpt_whole_human/encoder_enc_norm.npz": {
+      "sha256": "13935be3125ca234c4967778309557c20d3acda4ea3663e43cf06e363099b2c5",
+      "bytes": 4848
+    },
+    "scgpt_whole_human/vocab.json": {
+      "sha256": "acca93d114ca62c3f0f50debbd23e8c87f0714f4737764454f6b2b13f2e8580f",
+      "bytes": 1317639
+    }
+  },
+  "checks": {
+    "maxtoki_dtype_in_checkpoint": "torch.float32",
+    "geneformer_dtype_in_checkpoint": "torch.float32",
+    "scgpt_ckpt_keys_used": [
+      "encoder.embedding.weight",
+      "encoder.enc_norm.weight",
+      "encoder.enc_norm.bias"
+    ],
+    "scgpt_raw_vs_deployed_extract_max_abs_diff": 0.0,
+    "scgpt_layernorm_vs_deployed_normed_max_abs_diff": 1.430511474609375e-06,
+    "scgpt_vocab_json_equals_deployed_pt_vocab": true,
+    "scgpt_vocab_json_key_position_equals_id": 1,
+    "ensembl_symbol_rows": 63675,
+    "ensembl_symbol_unique_symbols": 63675,
+    "ensembl_symbol_unique_ensembl": 63675,
+    "panel_lung": {
+      "n": 382,
+      "symbol_from_table_equals_deployed_symbol": 382,
+      "maxtoki_token_equals_deployed": 382,
+      "in_geneformer_dict": 382,
+      "symbol_in_scgpt_vocab_exact_case": 382
+    },
+    "panel_immune": {
+      "n": 350,
+      "symbol_from_table_equals_deployed_symbol": 350,
+      "maxtoki_token_equals_deployed": 350,
+      "in_geneformer_dict": 350,
+      "symbol_in_scgpt_vocab_exact_case": 350
+    },
+    "panel_external_lung": {
+      "n": 380,
+      "symbol_from_table_equals_deployed_symbol": 380,
+      "maxtoki_token_equals_deployed": 380,
+      "in_geneformer_dict": 380,
+      "symbol_in_scgpt_vocab_exact_case": 380
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "script": "<REPO_ROOT>/projects/maxtoki/runs/circuit-tracing-217M/scripts/v3_circuit_annotate.py",
+  "script_sha256": "2f60c2591bad55e570fe97a98a24d320909e645ec11f988015fe5802ead43c12",
+  "device": "cpu",
+  "inputs": {
+    "v3_sae_codes": {
+      "0": "a4458321581671a745e4b666ad2721faace17159f1287737ae6f7bd990f3c1f7",
+      "1": "c14b4ce6937c0d8917c5841e99979cde324615effb6fc42e34b4b263ac22a717",
+      "2": "15a21f4b125335223b31bb489a7e11a5039794cb0810075bd1c6981e6161a5aa",
+      "3": "34b487a1b834c70e02401bcefd6546fc07963283ae0d28bd896250f3633418f9",
+      "4": "99a62df631f12314af2f3c91ac516a923f847d83fa14feb20e5893fb04c03890",
+      "5": "614f9e01da44585a199e04bac01c4610f2c9f9c81b4430daaa32f75173cc156c",
+      "6": "0c1ec2f4dc3be6941f12ff779ea84a188c0a377ed453e52c7b4b3a2ff4dd0d42",
+      "7": "b27fe5e15def06ebf25ea448cc82a39c956f12fa0f70e69214c3b21ce75d5c1d",
+      "8": "e4fb22ff33a6673b550779c25300401071cc8ae04d9f82c8ef67162a864fe56e",
+      "9": "10bffa92cea87053c3abe7d94676061d71bcc6f6e7df2494c0779e3208fa79a7",
+      "10": "7fad87c7dcf348c15c4f6183203cfc68741d920355dfed53f50191962fc045e6",
+      "11": "ff44c5ef77f9ef197c6d1705267f31713662358c31d5d62753fc568da8871136"
+    },
+    "gene_names_v3_sha256": "55f14c20030d95b718b775111b5f48bc5d3281c30782156a6a0b6645f55a413f",
+    "v3_sae_cells_sha256": "04cded211a3be521a441e61dc11d8f0bc727cf0531e773ca3ad1abd8cdeb33a3",
+    "databases": {
+      "<DATA_ROOT>/biodyn-nmi-paper/results/biological_impact/reference_edge_sets/go_bp_gene_sets.json": "36ebdf5c7c7f05237acc37b6007ab3da1a71d5862aadc170a6fe8110397aaef6",
+      "<DATA_ROOT>/biodyn-nmi-paper/results/biological_impact/reference_edge_sets/kegg_gene_sets.json": "6deba1a07e93b17e0884f49c730c69620e558b08b6588e99cd73c21db7bee677",
+      "<DATA_ROOT>/biodyn-nmi-paper/results/biological_impact/reference_edge_sets/reactome_gene_sets.json": "ce41f0f52b0390b4133e8d0d2a50c179aa00fc66f32639123091ef5dd3879e11",
+      "<DATA_ROOT>/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv": "9b909319ccc8e36588b5a1bd3640e0dfba03936c6fc154cc4304d742bec11bed"
+    }
+  },
+  "input_encoding": "v3 SAE training cells (500 K562 controls) encoded by inputs_v3 (counts / median); encoding check passed on 500/500 cells before every forward pass in V3-1 (outputs/v3_sae/run_config.json)",
+  "numpy": "1.26.4",
+  "pandas": "2.3.3",
+  "scipy": "1.17.1",
+  "timestamp": "2026-10-02T05:16:55",
+  "wall_seconds": 69.0
+}

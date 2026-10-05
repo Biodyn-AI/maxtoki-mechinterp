@@ -1,0 +1,31 @@
+{
+  "n_simulated": 200000,
+  "noise_model": {
+    "cohens_d_distribution": "N(0, sqrt(1/20 + 1/200)) \u2248 N(0, 0.235)",
+    "consistency_distribution": "Binomial(20, 0.5) / 20"
+  },
+  "null_pass_rate_per_threshold": {
+    "d>=0.5_c>=0.7": 0.001985,
+    "d>=0.5_c>=0.8": 0.000195,
+    "d>=0.5_c>=0.9": 1e-05,
+    "d>=0.75_c>=0.7": 7.5e-05,
+    "d>=0.75_c>=0.8": 5e-06,
+    "d>=0.75_c>=0.9": 0.0,
+    "d>=1.0_c>=0.7": 0.0,
+    "d>=1.0_c>=0.8": 0.0,
+    "d>=1.0_c>=0.9": 0.0,
+    "d>=1.5_c>=0.7": 0.0,
+    "d>=1.5_c>=0.8": 0.0,
+    "d>=1.5_c>=0.9": 0.0,
+    "d>=2.0_c>=0.7": 0.0,
+    "d>=2.0_c>=0.8": 0.0,
+    "d>=2.0_c>=0.9": 0.0
+  },
+  "observed_n_edges": 2144011,
+  "estimated_total_pairs": 3252480,
+  "observed_pass_rate": 0.659192677587564,
+  "headline_gate": "d>=0.5_c>=0.7",
+  "headline_observed_pass_rate": 0.659192677587564,
+  "headline_null_pass_rate": 0.001985,
+  "headline_z_score_of_observed_vs_null": 26629.386171580267
+}

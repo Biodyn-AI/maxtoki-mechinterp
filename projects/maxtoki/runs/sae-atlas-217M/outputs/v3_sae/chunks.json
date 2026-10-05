@@ -1,0 +1,299 @@
+{
+  "extract": [
+    {
+      "step": "extract",
+      "cells": [
+        0,
+        274
+      ],
+      "wall_seconds": 442.2681152820587,
+      "encoding_checks": [
+        {
+          "cells": [
+            0,
+            24
+          ],
+          "all_pass": true,
+          "n_checked": 25,
+          "mem_gb": 4.83
+        },
+        {
+          "cells": [
+            25,
+            49
+          ],
+          "all_pass": true,
+          "n_checked": 25,
+          "mem_gb": 7.32
+        },
+        {
+          "cells": [
+            50,
+            74
+          ],
+          "all_pass": true,
+          "n_checked": 25,
+          "mem_gb": 4.62
+        },
+        {
+          "cells": [
+            75,
+            99
+          ],
+          "all_pass": true,
+          "n_checked": 25,
+          "mem_gb": 7.26
+        },
+        {
+          "cells": [
+            100,
+            124
+          ],
+          "all_pass": true,
+          "n_checked": 25,
+          "mem_gb": 5.6
+        },
+        {
+          "cells": [
+            125,
+            149
+          ],
+          "all_pass": true,
+          "n_checked": 25,
+          "mem_gb": 4.6
+        },
+        {
+          "cells": [
+            150,
+            174
+          ],
+          "all_pass": true,
+          "n_checked": 25,
+          "mem_gb": 4.99
+        },
+        {
+          "cells": [
+            175,
+            199
+          ],
+          "all_pass": true,
+          "n_checked": 25,
+          "mem_gb": 5.34
+        },
+        {
+          "cells": [
+            200,
+            224
+          ],
+          "all_pass": true,
+          "n_checked": 25,
+          "mem_gb": 4.75
+        },
+        {
+          "cells": [
+            225,
+            249
+          ],
+          "all_pass": true,
+          "n_checked": 25,
+          "mem_gb": 7.05
+        },
+        {
+          "cells": [
+            250,
+            274
+          ],
+          "all_pass": true,
+          "n_checked": 25,
+          "mem_gb": 6.68
+        }
+      ],
+      "timestamp": "2026-10-01T17:39:07"
+    },
+    {
+      "step": "extract",
+      "cells": [
+        275,
+        449
+      ],
+      "wall_seconds": 493.998575925827,
+      "encoding_checks": [
+        {
+          "cells": [
+            275,
+            299
+          ],
+          "all_pass": true,
+          "n_checked": 25,
+          "mem_gb": 7.39
+        },
+        {
+          "cells": [
+            300,
+            324
+          ],
+          "all_pass": true,
+          "n_checked": 25,
+          "mem_gb": 5.31
+        },
+        {
+          "cells": [
+            325,
+            349
+          ],
+          "all_pass": true,
+          "n_checked": 25,
+          "mem_gb": 6.42
+        },
+        {
+          "cells": [
+            350,
+            374
+          ],
+          "all_pass": true,
+          "n_checked": 25,
+          "mem_gb": 7.27
+        },
+        {
+          "cells": [
+            375,
+            399
+          ],
+          "all_pass": true,
+          "n_checked": 25,
+          "mem_gb": 7.57
+        },
+        {
+          "cells": [
+            400,
+            424
+          ],
+          "all_pass": true,
+          "n_checked": 25,
+          "mem_gb": 5.75
+        },
+        {
+          "cells": [
+            425,
+            449
+          ],
+          "all_pass": true,
+          "n_checked": 25,
+          "mem_gb": 6.64
+        }
+      ],
+      "timestamp": "2026-10-01T17:47:48"
+    },
+    {
+      "step": "extract",
+      "cells": [
+        450,
+        499
+      ],
+      "wall_seconds": 113.30856013298035,
+      "encoding_checks": [
+        {
+          "cells": [
+            450,
+            474
+          ],
+          "all_pass": true,
+          "n_checked": 25,
+          "mem_gb": 7.01
+        },
+        {
+          "cells": [
+            475,
+            499
+          ],
+          "all_pass": true,
+          "n_checked": 25,
+          "mem_gb": 8.39
+        }
+      ],
+      "timestamp": "2026-10-01T17:50:08"
+    }
+  ],
+  "train": [
+    {
+      "layer": 0,
+      "wall_seconds": 24.465412855148315,
+      "resumed_from_epoch": 4,
+      "timestamp": "2026-10-01T18:04:33"
+    },
+    {
+      "layer": 1,
+      "wall_seconds": 243.28255605697632,
+      "resumed_from_epoch": 0,
+      "timestamp": "2026-10-01T18:08:36"
+    },
+    {
+      "layer": 2,
+      "wall_seconds": 233.71876788139343,
+      "resumed_from_epoch": 0,
+      "timestamp": "2026-10-01T18:13:01"
+    },
+    {
+      "layer": 3,
+      "wall_seconds": 280.11573791503906,
+      "resumed_from_epoch": 1,
+      "timestamp": "2026-10-01T18:20:11"
+    },
+    {
+      "layer": 4,
+      "wall_seconds": 373.92416310310364,
+      "train_rows_source": "memmap copy on internal SSD",
+      "resumed_from_epoch": 1,
+      "timestamp": "2026-10-01T18:34:21"
+    },
+    {
+      "layer": 5,
+      "wall_seconds": 160.32125806808472,
+      "train_rows_source": "pread of a sha256-checked copy on the internal SSD",
+      "resumed_from_epoch": 2,
+      "timestamp": "2026-10-01T18:46:30"
+    },
+    {
+      "layer": 6,
+      "wall_seconds": 183.57178020477295,
+      "train_rows_source": "pread of a sha256-checked copy on the internal SSD",
+      "resumed_from_epoch": 2,
+      "timestamp": "2026-10-01T18:56:51"
+    },
+    {
+      "layer": 7,
+      "wall_seconds": 195.98527598381042,
+      "train_rows_source": "pread of a sha256-checked copy on the internal SSD",
+      "resumed_from_epoch": 0,
+      "timestamp": "2026-10-01T19:02:25"
+    },
+    {
+      "layer": 8,
+      "wall_seconds": 69.07033109664917,
+      "train_rows_source": "pread of a sha256-checked copy on the internal SSD",
+      "resumed_from_epoch": 3,
+      "timestamp": "2026-10-02T03:01:05"
+    },
+    {
+      "layer": 9,
+      "wall_seconds": 284.9061918258667,
+      "train_rows_source": "pread of a sha256-checked copy on the internal SSD",
+      "resumed_from_epoch": 0,
+      "timestamp": "2026-10-02T03:05:50"
+    },
+    {
+      "layer": 10,
+      "wall_seconds": 263.61136388778687,
+      "train_rows_source": "pread of a sha256-checked copy on the internal SSD",
+      "resumed_from_epoch": 0,
+      "timestamp": "2026-10-02T03:10:50"
+    },
+    {
+      "layer": 11,
+      "wall_seconds": 183.5963499546051,
+      "train_rows_source": "pread of a sha256-checked copy on the internal SSD",
+      "resumed_from_epoch": 1,
+      "timestamp": "2026-10-02T03:15:52"
+    }
+  ]
+}

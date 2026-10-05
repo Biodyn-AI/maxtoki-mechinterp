@@ -1,0 +1,253 @@
+{
+  "tool": "summarize_results.py",
+  "tool_sha256": "25acc5b15b66985e06b387daf7dd7248d4d28803931c5953b082c84a8cb3081a",
+  "common_sha256": "05576048f477b020b37d44cf36f0a15ba056fa4a72a1d193852f8a9c7dc231aa",
+  "started_utc": "2026-10-01T00:16:06Z",
+  "python": "3.12.9",
+  "platform": "macOS-26.3-arm64-arm-64bit",
+  "seed": 20261001,
+  "n_inputs": 40,
+  "inputs": [
+    {
+      "path": "projects/maxtoki/checks/results/crosscheck_manual_audit.csv",
+      "bytes": 10517,
+      "mtime": 1790813445,
+      "sha256": "d32d0196c28fb3fb5c9b66c134cf636826cb59a6d66c70313ba7304c5df6f0ae"
+    },
+    {
+      "path": "projects/maxtoki/checks/results/crosscheck_manual_audit.json",
+      "bytes": 996,
+      "mtime": 1790813445,
+      "sha256": "4143f5d599e0dab42da47b8757164ad03d87028733ee57610f4928135bd0809d"
+    },
+    {
+      "path": "projects/maxtoki/checks/results/number_trace.json",
+      "bytes": 31980,
+      "mtime": 1790813349,
+      "sha256": "701dabffdfa22646b1b5a0ff1f08856fccac45f47126dbe521cffb5743f37d5f"
+    },
+    {
+      "path": "projects/maxtoki/checks/results/number_trace_numbers.csv",
+      "bytes": 623214,
+      "mtime": 1790813349,
+      "sha256": "585ca4fc7e3cc6866dc2ee1de7d7ecdf9f6df76883933a913c4436a748aeabb1"
+    },
+    {
+      "path": "projects/maxtoki/checks/results/number_trace_paper_numbers.csv",
+      "bytes": 85384,
+      "mtime": 1790813349,
+      "sha256": "dd39487dc6f118b7accd2ecd6a9642db4ef66864ec3037521b15a32a2ef434ea"
+    },
+    {
+      "path": "projects/maxtoki/checks/results/number_trace_run_config.json",
+      "bytes": 394117,
+      "mtime": 1790813355,
+      "sha256": "bfb00a51ced2c4870c49fa396162fbaeea5924e887080825097aeba4586245e1"
+    },
+    {
+      "path": "projects/maxtoki/checks/results/number_trace_summary.csv",
+      "bytes": 8544,
+      "mtime": 1790813349,
+      "sha256": "6cd601c026126f8c66993195c5d5e4a7ccbcd0bb2921429bd02c2e37592cdd05"
+    },
+    {
+      "path": "projects/maxtoki/checks/results/run_manifest.json",
+      "bytes": 12887,
+      "mtime": 1790813764,
+      "sha256": "d65a3b87f66f5500c3cae5c64b8df983e023bd49e18f9d997585f60fbb6eccc7"
+    },
+    {
+      "path": "projects/maxtoki/checks/results/run_manifest_ci_scope.csv",
+      "bytes": 1401,
+      "mtime": 1790813764,
+      "sha256": "010b5a549882dc7a8ddf45374b6d9075729562d3c7726ee1b99251e473278be6"
+    },
+    {
+      "path": "projects/maxtoki/checks/results/run_manifest_gates.csv",
+      "bytes": 6385,
+      "mtime": 1790813764,
+      "sha256": "460191e16004e622f15aad269023f1a884c9273907aca71dc4dccedcca8e0d83"
+    },
+    {
+      "path": "projects/maxtoki/checks/results/run_manifest_params.csv",
+      "bytes": 69212,
+      "mtime": 1790813764,
+      "sha256": "dd23e14f288cf52fc2c97c55bc92bb2e71fd5a6c1975cb37399e9b5488b42bcf"
+    },
+    {
+      "path": "projects/maxtoki/checks/results/run_manifest_phases.csv",
+      "bytes": 879,
+      "mtime": 1790813764,
+      "sha256": "ac84a41239113fd9262a3f2495de0f9cf7c476026955541cdbf261409e79922a"
+    },
+    {
+      "path": "projects/maxtoki/checks/results/run_manifest_repro.csv",
+      "bytes": 1049,
+      "mtime": 1790813764,
+      "sha256": "50cd2f73a28eb2f510cba7914d73dc29bcbeb458b344ba8815765659043acab6"
+    },
+    {
+      "path": "projects/maxtoki/checks/results/run_manifest_run_config.json",
+      "bytes": 28500,
+      "mtime": 1790813765,
+      "sha256": "b5a0cc693858643c97ad15e3b1ab09cc2216619f8c48a6a2d4121bd257dc1cd5"
+    },
+    {
+      "path": "projects/maxtoki/checks/results/run_manifest_stdout.txt",
+      "bytes": 2298,
+      "mtime": 1790813765,
+      "sha256": "ee51186a1eb5832c4eba5f168586d8fc781edc0bdc245ac1045605a16cd60206"
+    },
+    {
+      "path": "projects/maxtoki/checks/results/run_manifest_wording.csv",
+      "bytes": 4349,
+      "mtime": 1790813764,
+      "sha256": "f5a6566e04a0503d202e87545cc888054f7dc20a1c5b1be09d609a6835db5af2"
+    },
+    {
+      "path": "projects/maxtoki/checks/results/spec_lint.json",
+      "bytes": 41716,
+      "mtime": 1790813317,
+      "sha256": "f8f09e894fc750edceb8e16eb7d3029272bad0d04d0cb8587165c1a9ab5ed4bd"
+    },
+    {
+      "path": "projects/maxtoki/checks/results/spec_lint_coderefs.csv",
+      "bytes": 53705,
+      "mtime": 1790813317,
+      "sha256": "58a267a0881c56542a04271e9608bb18371999c0309717b18b33a8068dbb3e4a"
+    },
+    {
+      "path": "projects/maxtoki/checks/results/spec_lint_params.csv",
+      "bytes": 41215,
+      "mtime": 1790813317,
+      "sha256": "e2ef7a840e7bb0c547a55715ae345b51cce1cb7286b7a16359f9379b1f61a241"
+    },
+    {
+      "path": "projects/maxtoki/checks/results/spec_lint_run_config.json",
+      "bytes": 4312,
+      "mtime": 1790813317,
+      "sha256": "7c1e4b29f268ae7ff6c4ffdd1ed9e72cb4e8431e1bcf37fb1fb2d8db86ea4b46"
+    },
+    {
+      "path": "projects/maxtoki/checks/results/spec_lint_summary.csv",
+      "bytes": 2782,
+      "mtime": 1790813317,
+      "sha256": "435b4257480380746e6e0d0ea9641e8498e85fa4fd1a1d7884e293b876b576e3"
+    },
+    {
+      "path": "projects/maxtoki/checks/results/spec_lint_validation_items.csv",
+      "bytes": 34479,
+      "mtime": 1790813317,
+      "sha256": "34cb17892ad400d1ad2294cc4301ace89fc81362721ba6c943f728c1de559e42"
+    },
+    {
+      "path": "projects/maxtoki/checks/results/verify_chance_rate.json",
+      "bytes": 2813,
+      "mtime": 1790813444,
+      "sha256": "37b27b19981eeb340cf37b0a4fe2751e1b760ae8ef9f0c3e5e4bd41cbfbeff5a"
+    },
+    {
+      "path": "projects/maxtoki/checks/results/verify_manifest_deviations.json",
+      "bytes": 11895,
+      "mtime": 1790813445,
+      "sha256": "4ad4dbb5320ac7f6ad7c50904554bdbd9d518029b9e8441f93be0a5218343946"
+    },
+    {
+      "path": "projects/maxtoki/checks/results/verify_number_trace.json",
+      "bytes": 1306,
+      "mtime": 1790813605,
+      "sha256": "39f8e52623e69702712621daebb78e7d85c434e5e4241e26988a75b5e3e5686f"
+    },
+    {
+      "path": "projects/maxtoki/checks/results/verify_spec_lint.json",
+      "bytes": 4732,
+      "mtime": 1790813442,
+      "sha256": "c6a8fc4066c923f1f552211b1377426430b0064a33d5f3f2894d30cb7a29208a"
+    },
+    {
+      "path": "projects/maxtoki/checks/verify/._crosscheck_manual_audit.py",
+      "bytes": 4096,
+      "mtime": 1790810612,
+      "sha256": "1ab597c9db9c3308e5823d0fad4785e0db351c0824cbb840765e7b9394b69030"
+    },
+    {
+      "path": "projects/maxtoki/checks/verify/._verify_chance_rate.py",
+      "bytes": 4096,
+      "mtime": 1790810592,
+      "sha256": "1ab597c9db9c3308e5823d0fad4785e0db351c0824cbb840765e7b9394b69030"
+    },
+    {
+      "path": "projects/maxtoki/checks/verify/._verify_manifest_deviations.py",
+      "bytes": 4096,
+      "mtime": 1790810647,
+      "sha256": "1ab597c9db9c3308e5823d0fad4785e0db351c0824cbb840765e7b9394b69030"
+    },
+    {
+      "path": "projects/maxtoki/checks/verify/._verify_number_trace.py",
+      "bytes": 4096,
+      "mtime": 1790810330,
+      "sha256": "1ab597c9db9c3308e5823d0fad4785e0db351c0824cbb840765e7b9394b69030"
+    },
+    {
+      "path": "projects/maxtoki/checks/verify/._verify_spec_lint.py",
+      "bytes": 4096,
+      "mtime": 1790810632,
+      "sha256": "1ab597c9db9c3308e5823d0fad4785e0db351c0824cbb840765e7b9394b69030"
+    },
+    {
+      "path": "projects/maxtoki/checks/verify/crosscheck_manual_audit.py",
+      "bytes": 6620,
+      "mtime": 1790812906,
+      "sha256": "1d5b8ae2b5c66a2006e6c5b643f1d542d2f51270f48ad459e7a5d7ea9fc3a796"
+    },
+    {
+      "path": "projects/maxtoki/checks/verify/verify_chance_rate.py",
+      "bytes": 3576,
+      "mtime": 1790810592,
+      "sha256": "861ca11d0807e13ac9eb3f4c37d7082668c8385f6c3fa8deaf9440fe89cac69e"
+    },
+    {
+      "path": "projects/maxtoki/checks/verify/verify_manifest_deviations.py",
+      "bytes": 2720,
+      "mtime": 1790810647,
+      "sha256": "f577ee80b5b826842100a037c9bfdf2a4ea1dc06c984a614023b8c70ab48373b"
+    },
+    {
+      "path": "projects/maxtoki/checks/verify/verify_number_trace.py",
+      "bytes": 3885,
+      "mtime": 1790810330,
+      "sha256": "576c873d4cc088f24eef3ea803da9b9d727cc6181415c8d34d5f58081672f223"
+    },
+    {
+      "path": "projects/maxtoki/checks/verify/verify_spec_lint.py",
+      "bytes": 3396,
+      "mtime": 1790810632,
+      "sha256": "0d54953d81c768b77a0d839cdd8f902b185d1ad43370be5fca44e6a790fc19be"
+    },
+    {
+      "path": "projects/maxtoki/verification/contract/spec_lint_summary.csv",
+      "bytes": 1829,
+      "mtime": 1790807968,
+      "sha256": "579e11bf8c102c424c4e48107500038c77b1362517ffc6eab3b2a47800a9e2cf"
+    },
+    {
+      "path": "projects/maxtoki/verification/numbers_A.md",
+      "bytes": 37345,
+      "mtime": 1790807969,
+      "sha256": "856c83bf821566a144bf952ad2da5d588e0b568793aa02a0d8a7eb5f73b75af3"
+    },
+    {
+      "path": "projects/maxtoki/verification/numbers_B.md",
+      "bytes": 30815,
+      "mtime": 1790807969,
+      "sha256": "42b2803b6c33a70d28fdda3d8bd09d1c74292b624967207d05ee59da75c77f8c"
+    },
+    {
+      "path": "projects/maxtoki/verification/numbers_C.md",
+      "bytes": 37777,
+      "mtime": 1790807969,
+      "sha256": "12c557881d3df6ec46956f616e8096767b760bd39efb3a00d84d855ad8194f81"
+    }
+  ],
+  "note": "inputs = all result files of the three checks and the verify scripts, the manual audits used by verify/crosscheck_manual_audit.py, and the prototype linter output used by verify/verify_spec_lint.py"
+}

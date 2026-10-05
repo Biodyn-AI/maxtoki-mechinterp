@@ -1,0 +1,67 @@
+{
+  "external_lung": {
+    "n_genes": 380,
+    "cca_mean_r": 0.40574059184960853,
+    "pairwise_pearson": -0.004658742560532193,
+    "pairwise_spearman": -0.0029686328076906727,
+    "pairwise_pearson_z": -0.8302501635549948,
+    "top1_retrieval": 0.07631578947368421,
+    "top1_retrieval_z": 30.75516559417176
+  },
+  "immune": {
+    "n_genes": 350,
+    "cca_mean_r": 0.4381780902651185,
+    "pairwise_pearson": -0.018784154343424845,
+    "pairwise_spearman": -0.01844233148105162,
+    "pairwise_pearson_z": -2.9524416395038533,
+    "top1_retrieval": 0.06571428571428571,
+    "top1_retrieval_z": 21.990474775586147
+  },
+  "lung": {
+    "n_genes": 382,
+    "cca_mean_r": 0.40108044687701455,
+    "pairwise_pearson": -0.00839948602027915,
+    "pairwise_spearman": -0.0071241409764198895,
+    "pairwise_pearson_z": -1.4600290157506601,
+    "top1_retrieval": 0.049738219895287955,
+    "top1_retrieval_z": 19.47598319519623
+  },
+  "triangulation_vs_phase14": {
+    "external_lung": {
+      "geneformer": {
+        "cca_mean_r": 0.7661705028380451,
+        "pairwise_pearson": 0.3873742039695625,
+        "top1_retrieval": 0.3815789473684211
+      },
+      "scgpt": {
+        "cca_mean_r": 0.40574059184960853,
+        "pairwise_pearson": -0.004658742560532193,
+        "top1_retrieval": 0.07631578947368421
+      }
+    },
+    "immune": {
+      "geneformer": {
+        "cca_mean_r": 0.7757347694928558,
+        "pairwise_pearson": 0.4003279636874686,
+        "top1_retrieval": 0.4657142857142857
+      },
+      "scgpt": {
+        "cca_mean_r": 0.4381780902651185,
+        "pairwise_pearson": -0.018784154343424845,
+        "top1_retrieval": 0.06571428571428571
+      }
+    },
+    "lung": {
+      "geneformer": {
+        "cca_mean_r": 0.7831083136328606,
+        "pairwise_pearson": 0.3979362101701208,
+        "top1_retrieval": 0.450261780104712
+      },
+      "scgpt": {
+        "cca_mean_r": 0.40108044687701455,
+        "pairwise_pearson": -0.00839948602027915,
+        "top1_retrieval": 0.049738219895287955
+      }
+    }
+  }
+}

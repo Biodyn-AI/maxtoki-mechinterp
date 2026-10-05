@@ -1,0 +1,27 @@
+{
+ "217M_K562": {
+  "max_z_over_layers": 1.8779926986447681,
+  "argmax_layer": 0,
+  "p_max_over_layers": 0.16183816183816183,
+  "p_bh_across_4_runs": 0.16183816183816183
+ },
+ "217M_RPE1": {
+  "max_z_over_layers": 3.3509900226792846,
+  "argmax_layer": 0,
+  "p_max_over_layers": 0.002997002997002997,
+  "p_bh_across_4_runs": 0.011988011988011988
+ },
+ "217M_Adamson": {
+  "max_z_over_layers": 2.504993859188354,
+  "argmax_layer": 1,
+  "p_max_over_layers": 0.026973026973026972,
+  "p_bh_across_4_runs": 0.053946053946053944
+ },
+ "1B_K562": {
+  "max_z_over_layers": 2.054037262262222,
+  "argmax_layer": 13,
+  "p_max_over_layers": 0.14185814185814186,
+  "p_bh_across_4_runs": 0.16183816183816183
+ },
+ "_method": "same 1,000 Curveball networks as v2_06; per-layer z; family-wise test uses the max over layers of z computed identically on every null network; Phipson-Smyth p; BH across runs"
+}

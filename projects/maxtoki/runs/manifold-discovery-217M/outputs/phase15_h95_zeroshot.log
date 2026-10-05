@@ -1,0 +1,29 @@
+======================================================================
+PHASE 15 — frozen-head transfer for H95_effector_modality
+======================================================================
+  internal anchors kept: 208/290
+[1] Training anchor LET head on internal panel...
+  [H95_effector_modality_internal] trained 1500 epochs in 8.2s
+
+[3] Zero-shot panel...
+{
+  "panel": "zeroshot",
+  "n_anchors_kept": 104,
+  "n_donors": 12,
+  "n_categories": 4,
+  "ruler_max": 3.0,
+  "trustworthiness": 0.818755935422602,
+  "random_holdout": 0.8056371691576729,
+  "donor_holdout": 0.7941371480874526,
+  "category_holdout": -0.003737694633670863,
+  "global_correlation": 0.8004988285577089,
+  "pass_trust": true,
+  "pass_random": true,
+  "pass_donor": true,
+  "pass_category": false,
+  "n_gates_passing": 3,
+  "verdict": "POSITIVE_3GATE_FALLBACK_zeroshot"
+}
+  → <REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/reports/zeroshot_H95.json
+
+Total time: 9.0s

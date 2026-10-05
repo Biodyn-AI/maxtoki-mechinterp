@@ -1,0 +1,46 @@
+{
+  "edges_all": 2144011,
+  "edges_both_labelled": 1416229,
+  "corrected_check": {
+    "per_pair_rows": 1503408,
+    "found_in_rebuilt": 1503408,
+    "pred_sign_matches": 1503408,
+    "rebuilt_pairs_for_248_sources": 1503656,
+    "rebuilt_pairs_not_in_per_pair_target_absent_from_replogle": 248,
+    "n_ties_frac_inhib_eq_half": 43786
+  },
+  "original_records_rebuilt": {
+    "n_pairs": 1458016,
+    "n_decrease": 796159,
+    "frac_decrease": 0.5460564218774006,
+    "n_sources": 248,
+    "matches_logged_n_1458016": true,
+    "matches_logged_correct_796159": true,
+    "n_orig_pairs_missing_from_corrected": 0,
+    "corrected_sign_rule_all_edges": {
+      "accuracy": 0.5350297939117267,
+      "balanced_acc": 0.49808803496805654,
+      "frac_pred_dec": 0.9008728299277923
+    },
+    "corrected_sign_rule_labelled_edges_only": {
+      "accuracy": 0.5323610989179817,
+      "balanced_acc": 0.4980921978714533,
+      "frac_pred_dec": 0.8718560015802296
+    },
+    "always_decrease": {
+      "accuracy": 0.5460564218774006,
+      "balanced_acc": 0.5,
+      "frac_pred_dec": 1.0
+    },
+    "always_increase": {
+      "accuracy": 0.4539435781225995,
+      "balanced_acc": 0.5,
+      "frac_pred_dec": 0.0
+    }
+  },
+  "pairs_only_in_corrected": {
+    "n": 45392,
+    "frac_decrease": 0.5461535072259429,
+    "n_sources": 248
+  }
+}

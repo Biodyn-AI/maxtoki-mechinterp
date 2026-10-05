@@ -1,0 +1,115 @@
+{
+ "217M_K562": {
+  "n_pairs": 260826,
+  "n_perturbations": 174,
+  "positive_rate": 0.03734673690506315,
+  "pair_table_rows_identical_to_deployed": true,
+  "labels_identical_to_deployed": true,
+  "attention_max_abs_diff_vs_deployed": 9.999054535747565e-17,
+  "fold_mean_auroc_gene_only": 0.5905025929843829,
+  "fold_mean_auroc_gene_plus_attn": 0.5912172100345103,
+  "fold_mean_delta": 0.0007146170501274307,
+  "deployed_gene_only": 0.5905025929843829,
+  "deployed_gene_plus_attn": 0.5912172100345103,
+  "deployed_delta": 0.0007146170501274,
+  "per_fold_delta": [
+   0.001768827190666955,
+   0.0004669102524473834,
+   0.000550159611085066,
+   6.175683318576652e-05,
+   0.0007254313632516496
+  ],
+  "pooled_oof_auroc_gene_only": 0.5885390670070376,
+  "pooled_oof_auroc_gene_plus_attn": 0.5891646359920621,
+  "pooled_oof_delta": 0.0006255689850245272,
+  "pooled_oof_delta_ci95": [
+   4.605586565803456e-05,
+   0.0012007128264402143
+  ]
+ },
+ "217M_RPE1": {
+  "n_pairs": 487175,
+  "n_perturbations": 325,
+  "positive_rate": 0.09903012264586647,
+  "pair_table_rows_identical_to_deployed": true,
+  "labels_identical_to_deployed": true,
+  "attention_max_abs_diff_vs_deployed": 9.999054535747565e-17,
+  "fold_mean_auroc_gene_only": 0.7474802505178196,
+  "fold_mean_auroc_gene_plus_attn": 0.7471860859238797,
+  "fold_mean_delta": -0.00029416459393993843,
+  "deployed_gene_only": 0.7474802505178196,
+  "deployed_gene_plus_attn": 0.7471860859238797,
+  "deployed_delta": -0.0002941645939399,
+  "per_fold_delta": [
+   -0.00020411304647438566,
+   -4.2278642708670766e-05,
+   0.00013054908818033173,
+   -0.00032661777319353824,
+   -0.0010283625955040954
+  ],
+  "pooled_oof_auroc_gene_only": 0.7477347258631944,
+  "pooled_oof_auroc_gene_plus_attn": 0.747456279462632,
+  "pooled_oof_delta": -0.00027844640056240433,
+  "pooled_oof_delta_ci95": [
+   -0.0004812310781127288,
+   -9.131463098961124e-05
+  ]
+ },
+ "217M_Adamson": {
+  "n_pairs": 85443,
+  "n_perturbations": 57,
+  "positive_rate": 0.05194106012195265,
+  "pair_table_rows_identical_to_deployed": true,
+  "labels_identical_to_deployed": true,
+  "attention_max_abs_diff_vs_deployed": 9.997699283031958e-17,
+  "fold_mean_auroc_gene_only": 0.8022367915370439,
+  "fold_mean_auroc_gene_plus_attn": 0.8021513096426964,
+  "fold_mean_delta": -8.548189434742781e-05,
+  "deployed_gene_only": 0.8022367915370439,
+  "deployed_gene_plus_attn": 0.8021513096426964,
+  "deployed_delta": -8.548189434742781e-05,
+  "per_fold_delta": [
+   2.9464809072843323e-05,
+   -0.00011285560955076601,
+   -0.0002640508150338894,
+   -7.4756706538448014e-06,
+   -7.24921855725924e-05
+  ],
+  "pooled_oof_auroc_gene_only": 0.797997799389202,
+  "pooled_oof_auroc_gene_plus_attn": 0.7979083543738879,
+  "pooled_oof_delta": -8.944501531416016e-05,
+  "pooled_oof_delta_ci95": [
+   -0.00017440535300453086,
+   -1.6672106369455862e-05
+  ]
+ },
+ "1B_K562": {
+  "n_pairs": 232345,
+  "n_perturbations": 155,
+  "positive_rate": 0.03695797198132088,
+  "pair_table_rows_identical_to_deployed": true,
+  "labels_identical_to_deployed": true,
+  "attention_max_abs_diff_vs_deployed": 9.999054535747565e-17,
+  "fold_mean_auroc_gene_only": 0.5970367915281811,
+  "fold_mean_auroc_gene_plus_attn": 0.5990721443163558,
+  "fold_mean_delta": 0.0020353527881746825,
+  "deployed_gene_only": 0.5970367915281811,
+  "deployed_gene_plus_attn": 0.5990721443163558,
+  "deployed_delta": 0.0020353527881746,
+  "per_fold_delta": [
+   0.0011990289126605491,
+   0.0028458761233421948,
+   0.0018563022854847233,
+   0.0017902482351713767,
+   0.0024853083842144574
+  ],
+  "pooled_oof_auroc_gene_only": 0.5972467824417101,
+  "pooled_oof_auroc_gene_plus_attn": 0.5993264807425953,
+  "pooled_oof_delta": 0.002079698300885169,
+  "pooled_oof_delta_ci95": [
+   0.0010017510884737096,
+   0.003097305467757684
+  ]
+ },
+ "_method": "cross-perturbation 5-fold GroupKFold logistic regression; CI = percentile bootstrap over perturbations (2000 reps) of the pooled out-of-fold AUROC difference, fold models held fixed"
+}

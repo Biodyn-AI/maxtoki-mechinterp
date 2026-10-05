@@ -1,0 +1,84 @@
+{
+  "device": "mps",
+  "torch": "2.11.0",
+  "transformers": "5.5.4",
+  "python": "3.12.9",
+  "platform": "macOS-26.3-arm64-arm-64bit",
+  "hooks_v2_sha256": "1ba6fda5ad761b1f82041a7b1397fa9332fa7438e13db955a00d751c4b440f54",
+  "model_dir": "<REPO_ROOT>/projects/maxtoki/setup/MaxToki-217M-HF",
+  "model_dtype": "float32",
+  "timestamp": "2026-10-01T03:02:38",
+  "script": "<REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/scripts/v2_tf_specificity_extract.py",
+  "script_sha256": "cdc12b48e407c4e28c11a983844138523f0bbf018f4832decc3ac4c5e56d1e9f",
+  "sae_path": "<REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/outputs/phase1/layer_05/sae_final.pt",
+  "sae_sha256": "9405f2f266771a74a13fbcba7a041a706c543271ab4c66101f043e3df65613a6",
+  "layer_site": "input of model.model.layers[5] = hidden_states[5] (hooks_v2.site_module)",
+  "max_len": 2048,
+  "seeds": {
+    "catalog": 42,
+    "ctrl": 20261001,
+    "kd": 20261002
+  },
+  "n_ref": 400,
+  "n_pool": 800,
+  "n_kd_max": 100,
+  "memory_guard": {
+    "before_model_load_min_gb": 3.0,
+    "in_run_floor_gb": 1.5
+  },
+  "cell_ids": "cell_manifest.csv (dataset row index + barcode) in this folder",
+  "dataset_path": "<DATA_ROOT>/biodyn-nmi-paper/src/02_cssi_method/crispri_validation/data/replogle_concat.h5ad",
+  "chunks": [
+    {
+      "start": "2026-10-01T01:45:59",
+      "wall_s": 420.4,
+      "n_cells": 1262,
+      "s_per_cell": 0.32,
+      "stop_reason": "max_minutes"
+    },
+    {
+      "start": "2026-10-01T01:54:31",
+      "wall_s": 450.6,
+      "n_cells": 1001,
+      "s_per_cell": 0.434,
+      "stop_reason": "max_minutes"
+    },
+    {
+      "start": "2026-10-01T02:05:22",
+      "wall_s": 450.8,
+      "n_cells": 1238,
+      "s_per_cell": 0.344,
+      "stop_reason": "max_minutes"
+    },
+    {
+      "start": "2026-10-01T02:17:28",
+      "wall_s": 450.2,
+      "n_cells": 1459,
+      "s_per_cell": 0.295,
+      "stop_reason": "max_minutes"
+    },
+    {
+      "start": "2026-10-01T02:27:46",
+      "wall_s": 450.4,
+      "n_cells": 1392,
+      "s_per_cell": 0.308,
+      "stop_reason": "max_minutes"
+    },
+    {
+      "start": "2026-10-01T02:46:57",
+      "wall_s": 450.4,
+      "n_cells": 1387,
+      "s_per_cell": 0.306,
+      "stop_reason": "max_minutes"
+    },
+    {
+      "start": "2026-10-01T02:55:11",
+      "wall_s": 445.3,
+      "n_cells": 1461,
+      "s_per_cell": 0.29,
+      "stop_reason": "finished"
+    }
+  ],
+  "n_done": 9200,
+  "n_failed": 0
+}

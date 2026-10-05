@@ -1,0 +1,43 @@
+{
+ "n_rows": 205,
+ "columns": [
+  "run",
+  "input_scale",
+  "endpoint",
+  "score",
+  "score_label",
+  "score_kind",
+  "measure",
+  "value",
+  "ci_low",
+  "ci_high",
+  "ci_method",
+  "n_units"
+ ],
+ "endpoints": [
+  "knockdown",
+  "trrust"
+ ],
+ "measures": [
+  "Curveball null mean",
+  "Curveball null z",
+  "mean per-perturbation AUROC",
+  "pooled AUROC",
+  "pooled AUROC after residualising (hgb_gene6)",
+  "pooled AUROC after residualising (hgb_gene6_F)",
+  "pooled AUROC after residualising (ols_gene6)",
+  "pooled AUROC after residualising (ols_gene6_F)"
+ ],
+ "every_variant_and_F_in_knockdown_all_runs": true,
+ "every_variant_and_F_in_trrust_all_runs": true,
+ "rows_with_ci_but_no_ci_method": 0,
+ "ci_methods": [
+  "none",
+  "none (z = (obs - null mean)/null SD, 1,000 draws)",
+  "percentile bootstrap over TFs, 2,000 reps",
+  "percentile bootstrap over TFs, 2,000 reps, fitted models held fixed",
+  "percentile bootstrap over perturbations, 2,000 reps"
+ ],
+ "n_values_compared_with_own_recomputation": 70,
+ "max_abs_diff_vs_own": 1.1102230246251565e-16
+}

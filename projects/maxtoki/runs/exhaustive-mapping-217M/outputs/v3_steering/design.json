@@ -1,0 +1,63 @@
+{
+  "written": "2026-10-03T08:53:02",
+  "note": "Written before any forward pass of this item. Later stages read these values; they are not changed.",
+  "differentiation_series": {
+    "tissue": "bone marrow",
+    "assay": "10x 3' v3",
+    "dataset": "ts_immune",
+    "stages": {
+      "0": "hematopoietic stem cell",
+      "1": "common myeloid progenitor",
+      "2": "erythroid progenitor cell",
+      "3": "erythrocyte"
+    },
+    "why": "Erythroid branch of haematopoiesis: hematopoietic stem cell -> common myeloid progenitor (upstream of the megakaryocyte-erythroid progenitor) -> erythroid progenitor cell -> erythrocyte. All four labels exist in bone marrow 10x 3' v3 cells of several donors. Stage numbers are ordinal labels from the cell-type annotation, not measured time. 'hematopoietic precursor cell' is left out because its free annotations mix granulocyte, monocyte and other cells. Smart-seq2 cells are left out (read counts; MaxToki-217M handles them badly, checks/V3_INPUTS_REPORT.md). 10x 5' v2 cells are left out so that one assay covers every stage.",
+    "early": "hematopoietic stem cell",
+    "late": "erythrocyte"
+  },
+  "cells": {
+    "selection": "donors ['TSP14', 'TSP21', 'TSP25']; up to 30 random cells per (stage, donor); used for the signatures, the axis and the feature choice",
+    "steered": "50 random HSCs from donors ['TSP2', 'TSP27'] (donor-disjoint from selection)",
+    "axis_validation": "30 random CMP and 30 random EryP cells from donors ['TSP2', 'TSP27'], plus the 50 steered HSCs (clean passes only)",
+    "sampling": "numpy default_rng(20261003); groups drawn in a fixed order; row indices sorted"
+  },
+  "input_encoding": "raw/X integer counts -> counts / total * 1e4 / Geneformer gene median, ranked, first 2046 genes, <bos>/<eos> (inputs_v3.tokenize_counts); assert_encoding_batch on every cell right before its forward passes",
+  "readout": {
+    "m": "logits averaged over all positions of the sequence (as deployed)",
+    "signatures": "g_early = mean m of selection HSCs; g_late = mean m of selection erythrocytes (also g_cmp, g_eryp, g_all for re-scoring)",
+    "score": "s(m) = cos(m, g_late) - cos(m, g_early)",
+    "delta_s": "s(m_steered) - s(m_clean) for the same cell (clean = same computation path, no edit)",
+    "gap_share": "(m_steered - m_clean) . (g_late - g_early) / |g_late - g_early|^2 (share of the early-to-late distance moved along that line)",
+    "natural_span": "S = mean s over selection erythrocytes - mean s over selection HSCs; delta_s is also given as a percentage of S"
+  },
+  "axis_check": "on steering-donor cells (never used to build g): AUROC of s for EryP vs HSC >= 0.8 and Spearman(s, stage) > 0 over HSC/CMP/EryP; steering is not run if it fails",
+  "features": {
+    "layers": [
+      0,
+      3,
+      6,
+      9,
+      11
+    ],
+    "sae_dir": "<REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/outputs/v3_sae",
+    "per_cell_activation": "a_f(cell) = mean over gene positions (not <bos>/<eos>) of the v3 SAE code z_f",
+    "alive": "z_f > 0 at >= 1 gene position in >= 50% of selection HSC cells",
+    "maturity_correlation": "rho_f = mean over the 3 selection donors of the within-donor Spearman correlation between a_f and the stage number (0-3); constant -> 0",
+    "candidates": "the 3 alive features with the largest |rho_f| (ties: lower feature id)",
+    "null": "20 alive features per layer, not candidates, drawn at random (rng(NULL_SEED + layer)) without replacement, [7, 7, 6] from the 50 alive features nearest to each candidate in log10(mean a_f over selection HSCs) (= mean edit size per gene position)",
+    "predicted_sign": "amplify (alpha 2, 5): sign(delta_s) = sign(rho_f); remove (alpha 0): -sign(rho_f)"
+  },
+  "edit": "hooks_v2.Steer(layer, f, alpha, mode='scale', positions=gene positions): delta = (alpha - 1) z_f(x) W_dec[:, f] at every gene position (alpha 0 removes the feature; alpha 1 adds nothing)",
+  "alphas": [
+    0.0,
+    2.0,
+    5.0
+  ],
+  "positive_control": "hooks_v2.AddVector(layer, v, positions=gene positions) with v = mean gene-position residual at the site over selection erythrocytes minus over selection HSCs; two sizes: full v, and v rescaled to the mean alpha = 5 edit size of the 3 candidates (4 x mean over candidates of mean a_f over selection HSCs)",
+  "statistics": {
+    "ci": "per-cell percentile bootstrap of the mean over the 50 steered cells, 10000 resamples, seed 20261003 (same resamples for every unit)",
+    "empirical_p": "per candidate and alpha: directional p = (1 + #null features with predicted-sign delta_s >= the candidate's) / (1 + 20); size p uses |delta_s|; the smallest possible p is 1/21 = 0.048",
+    "layer_test": "3 candidates vs all C(23,3) = 1,771 subsets of the 23 features (directional stat uses each feature's own sign of rho)",
+    "pooled": "Spearman(rho_f, delta_s_f) over 23 features per layer and over all 115; stratified permutation (labels permuted within layer, 100,000 draws) for the sum over layers of the candidates' mean directional rank"
+  }
+}

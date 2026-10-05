@@ -20,8 +20,8 @@ Stage 3 is Geneformer-only in the source paper; replication in scGPT, scBERT, or
 
 ## 2. Source
 
-- **Paper:** Anonymous, (2026). *Exhaustive Circuit Mapping of a Single-Cell Foundation Model Reveals Massive Redundancy, Heavy-Tailed Hub Architecture, and Layer-Dependent Differentiation Control.* arXiv:2603.11940 [cs.LG], 12 Mar 2026. 18 pages.
-- **Local PDF:** `../../references/2603.11940_anon_exhaustive_circuit_mapping.pdf`
+- **Paper:** Kendiukhov, I. (2026). *Exhaustive Circuit Mapping of a Single-Cell Foundation Model Reveals Massive Redundancy, Heavy-Tailed Hub Architecture, and Layer-Dependent Differentiation Control.* arXiv:2603.11940 [cs.LG], 12 Mar 2026. 18 pages.
+- **Local PDF:** `../../references/2603.11940_Kendiukhov_exhaustive_circuit_mapping.pdf`
 - **GitHub repo:** https://github.com/Biodyn-AI/sae-biological-map — pinned commit `6406f07cd4e13ffede2bc9981cda5579e615f2b9` (2026-03-12, "Fix figure readability issues"). Local clone at `../../repos/sae-biological-map/`.
 - **Companion Stage 1 repo:** https://github.com/Biodyn-AI/bio-sae — provides trained SAE atlases, feature annotations, and the 14 switch features. See `01-sae-atlas.md`.
 - **Companion Stage 2 repo:** https://github.com/Biodyn-AI/bio-sae-circuits — provides the selective-tracing baseline (30 features, pairwise redundancy ratio 0.74) that Experiments 1 and 2 extend. See `02-causal-circuit-tracing.md`.
@@ -35,7 +35,7 @@ Stage 3 is Geneformer-only in the source paper; replication in scGPT, scBERT, or
   - **Effect size & statistics:** Cohen 1988; Welford 1962 (online variance).
   - **Redundancy and neural network design:** Frankle & Carbin 2019 (lottery ticket hypothesis); Hinton 1986 (distributed representations); He et al. 2016 (ResNet skip connections); Sharma et al. 2024 (layer-selective rank reduction).
   - **Biological pathway references:** Ciccia & Elledge 2010 (DDR); Jackson & Bartek 2009; Malumbres & Barbacid 2009 (CDKs / cell cycle); Musacchio & Salmon 2007 (spindle assembly); Chandel 2021 (mitochondria); Simons & Ikonen 2000 (cholesterol).
-  - **Related  2025 papers:** `01-sae-atlas.md` (bio-sae, SAE atlas + switch feature identification); `02-causal-circuit-tracing.md` (bio-sae-circuits, selective tracing + pairwise ablation); `../attention-grn-extraction-and-evaluation.md` (attention-based interpretability, companion study).
+  - **Related Kendiukhov 2025 papers:** `01-sae-atlas.md` (bio-sae, SAE atlas + switch feature identification); `02-causal-circuit-tracing.md` (bio-sae-circuits, selective tracing + pairwise ablation); `../attention-grn-extraction-and-evaluation.md` (attention-based interpretability, companion study).
 
 ## 3. Inputs
 

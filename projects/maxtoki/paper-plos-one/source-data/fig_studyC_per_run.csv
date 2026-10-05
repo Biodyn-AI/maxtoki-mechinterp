@@ -1,0 +1,10 @@
+arm,rep,n_findings,yes,partial,yes_or_partial,yes_critical,n_critical,yes_major,n_major,yes_minor,n_minor,yes_in_checklist,n_in_checklist,yes_outside_checklist,n_outside_checklist,unmatched_real,unmatched_trivial,unmatched_false,unmatched_undecided,kappa_graders,agree_graders,output_tokens,input_tokens_incl_cache,tool_calls,wall_minutes
+deployed,1,38,27,19,46,4,6,15,25,8,37,17,45,10,23,14,1,0,0,0.955,66,3782,20138535,93,23.9
+deployed,2,43,31,21,52,4,6,13,25,14,37,19,45,12,23,13,0,1,0,0.931,65,27284,17103617,90,28.6
+deployed,3,38,29,22,51,4,6,13,25,12,37,17,45,12,23,13,1,0,0,0.933,65,3292,19254171,100,26.5
+checklist,1,49,27,16,43,4,6,12,25,11,37,16,45,11,23,19,1,0,1,0.955,66,3294,17092992,88,24.2
+checklist,2,43,35,16,51,5,6,16,25,14,37,19,45,16,23,10,1,1,0,1.0,68,2762,25515919,99,27.6
+checklist,3,41,30,20,50,4,6,14,25,12,37,18,45,12,23,16,1,0,0,0.865,62,3473,19332632,84,24.2
+generic,1,37,27,10,37,5,6,14,25,8,37,16,45,11,23,12,1,0,0,0.976,67,2478,17796343,90,24.0
+generic,2,36,26,15,41,5,6,13,25,8,37,13,45,13,23,13,0,0,0,0.955,66,3913,18741157,90,22.4
+generic,3,36,30,16,46,5,6,13,25,12,37,17,45,13,23,13,0,0,0,0.884,63,4533,24739783,105,21.4

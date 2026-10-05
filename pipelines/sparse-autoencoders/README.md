@@ -2,7 +2,7 @@
 
 This subfolder hosts the **sparse-autoencoder (SAE) mechanistic-interpretability mega-pipeline** — a three-stage workflow for dissecting single-cell foundation models (Geneformer, scGPT, and any other transformer-based biological foundation model) through their residual-stream activations, decomposed into interpretable features via sparse autoencoders.
 
-The mega-pipeline is divided into three tightly-coupled subpipelines, each corresponding to one paper in 's SAE trilogy. The subpipelines are **sequentially composed**: stage 2 consumes artefacts produced by stage 1, and stage 3 consumes artefacts from stages 1 and 2. They can also be run independently once their inputs are available.
+The mega-pipeline is divided into three tightly-coupled subpipelines, each corresponding to one paper in Kendiukhov's SAE trilogy. The subpipelines are **sequentially composed**: stage 2 consumes artefacts produced by stage 1, and stage 3 consumes artefacts from stages 1 and 2. They can also be run independently once their inputs are available.
 
 ## Scope and central premise
 
@@ -20,20 +20,21 @@ Across the three stages, the mega-pipeline answers four questions:
 ```
 pipelines/sparse-autoencoders/
 ├── README.md                                      ← this guide
-├── 01-sae-atlas.md                                ← stage 1 spec (stub)
-├── 02-causal-circuit-tracing.md                   ← stage 2 spec (stub)
-└── 03-exhaustive-mapping-and-steering.md          ← stage 3 spec (stub)
+├── 01-sae-atlas.md                                ← stage 1 spec
+├── 02-causal-circuit-tracing.md                   ← stage 2 spec
+├── 03-exhaustive-mapping-and-steering.md          ← stage 3 spec
+└── 04-atlas-deployment.md                         ← guide to deploying the interactive web atlas
 ```
 
-Each subpipeline file, once filled in, will follow the standard template from the top-level `../../README.md` (overview, source, inputs, outputs, dependencies, methodology, code references, parameters, validation, known pitfalls, quick-start).
+Each stage file (01–03) follows the standard template from the top-level `../../README.md` (overview, source, inputs, outputs, dependencies, methodology, parameters, validation, known pitfalls, quick-start). The code references sit inside the methodology steps, not in a separate section. `04-atlas-deployment.md` is a deployment guide for the web atlas, not an analysis stage, and has its own sections.
 
 ## The three subpipelines at a glance
 
 ### Stage 1 — [SAE Atlas](01-sae-atlas.md)
 
-**Paper:** the prior work, arXiv:2603.02952 — *Sparse autoencoders reveal organized biological knowledge but minimal regulatory logic in single-cell foundation models: a comparative atlas of Geneformer and scGPT.* 28 pages. [PDF](../../references/2603.02952_anon_SAE_atlas.pdf).
+**Paper:** Kendiukhov 2026, arXiv:2603.02952 — *Sparse autoencoders reveal organized biological knowledge but minimal regulatory logic in single-cell foundation models: a comparative atlas of Geneformer and scGPT.* 28 pages. [arXiv page](https://arxiv.org/abs/2603.02952).
 
-**Code:** https://github.com/Biodyn-AI/bio-sae (pinned `9277f5d`) — see `../../repos/bio-sae/`. Interactive atlases at https://biodyn-ai.github.io/geneformer-atlas/ and https://biodyn-ai.github.io/scgpt-atlas/ (source: `../../repos/` if we clone those too in stage-1 authoring).
+**Code:** https://github.com/Biodyn-AI/bio-sae (pinned `9277f5d`) — see `../../repos/bio-sae/`. Interactive atlases at https://biodyn-ai.github.io/geneformer-atlas/ and https://biodyn-ai.github.io/scgpt-atlas/.
 
 **What it produces:**
 - Per-layer TopK SAEs for every transformer layer of the target model (Geneformer V2-316M: 18 layers, `d=1152 → d_SAE=4608`, `k=32`, trained on ~4M K562 token positions; scGPT whole-human: 12 layers, `d=512 → d_SAE=2048`, trained on ~3.56M Tabula Sapiens positions; 4× overcomplete in both cases).
@@ -50,7 +51,7 @@ Each subpipeline file, once filled in, will follow the standard template from th
 
 ### Stage 2 — [Causal Circuit Tracing](02-causal-circuit-tracing.md)
 
-**Paper:** the prior work, arXiv:2603.01752 — *Causal Circuit Tracing Reveals Distinct Computational Architectures in Single-Cell Foundation Models: Inhibitory Dominance, Biological Coherence, and Cross-Model Convergence.* 33 pages. [PDF](../../references/2603.01752_anon_causal_circuit_tracing.pdf).
+**Paper:** Kendiukhov 2026, arXiv:2603.01752 — *Causal Circuit Tracing Reveals Distinct Computational Architectures in Single-Cell Foundation Models: Inhibitory Dominance, Biological Coherence, and Cross-Model Convergence.* 33 pages. [arXiv page](https://arxiv.org/abs/2603.01752).
 
 **Code:** https://github.com/Biodyn-AI/bio-sae-circuits (pinned `4f6bfb4`) — see `../../repos/bio-sae-circuits/`. Companion atlases at https://github.com/Biodyn-AI/bio-sae.
 
@@ -73,7 +74,7 @@ Each subpipeline file, once filled in, will follow the standard template from th
 
 ### Stage 3 — [Exhaustive Mapping and Steering](03-exhaustive-mapping-and-steering.md)
 
-**Paper:** the prior work, arXiv:2603.11940 — *Exhaustive Circuit Mapping of a Single-Cell Foundation Model Reveals Massive Redundancy, Heavy-Tailed Hub Architecture, and Layer-Dependent Differentiation Control.* 18 pages. [PDF](../../references/2603.11940_anon_exhaustive_circuit_mapping.pdf).
+**Paper:** Kendiukhov 2026, arXiv:2603.11940 — *Exhaustive Circuit Mapping of a Single-Cell Foundation Model Reveals Massive Redundancy, Heavy-Tailed Hub Architecture, and Layer-Dependent Differentiation Control.* 18 pages. [arXiv page](https://arxiv.org/abs/2603.11940).
 
 **Code:** https://github.com/Biodyn-AI/sae-biological-map (pinned `6406f07`) — see `../../repos/sae-biological-map/`.
 
@@ -211,4 +212,4 @@ All three stages share the same foundational components. A general-purpose imple
 
 ## Current status
 
-All three subpipeline specifications in this subfolder are **stubs** awaiting full authoring. The papers have been read in full, the GitHub repositories have been cloned and pinned (see `../../repos/bio-sae/`, `../../repos/bio-sae-circuits/`, `../../repos/sae-biological-map/`), and this guide establishes the composition structure. Filling in each stub to the full template (overview, source, inputs, outputs, dependencies, step-by-step methodology with exact parameters, code references, validation signatures, pitfalls, quick-start) is the next step and should happen stage by stage, in order.
+All three stage specifications in this subfolder are written in full: overview, source, inputs, outputs, dependencies, step-by-step methodology with exact parameters and code references, parameters, validation, known pitfalls and quick-start. The papers have been read in full, and the GitHub repositories have been cloned and pinned (see `../../repos/bio-sae/`, `../../repos/bio-sae-circuits/`, `../../repos/sae-biological-map/`). This guide sets out how the stages fit together. `04-atlas-deployment.md` describes how to build and deploy the interactive web atlas from the stage outputs.

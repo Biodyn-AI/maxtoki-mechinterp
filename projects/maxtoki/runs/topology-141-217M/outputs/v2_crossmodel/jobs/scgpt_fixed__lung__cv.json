@@ -1,0 +1,22 @@
+{
+  "seed_base": 20262005,
+  "n_repeats": 10,
+  "n_folds": 5,
+  "method": "5-fold split of genes; PCA-30 of each model, CCA(10, max_iter=200) and Procrustes fitted on training genes only; canonical r = correlation of held-out canonical scores (mean of 10, averaged over folds); top-1 = held-out gene's nearest neighbour among ALL n genes of the other model; values are means over repeats, range = min-max over repeats",
+  "cv_cca_mean_r": 0.494671060964087,
+  "cv_cca_mean_r_range": [
+    0.47494839466869915,
+    0.5092939365994572
+  ],
+  "cv_cca_first_r": 0.8541420787972929,
+  "cv_top1": 0.05890052356020943,
+  "cv_top1_range": [
+    0.03926701570680628,
+    0.08115183246073299
+  ],
+  "top1_uniform_chance_1_over_n": 0.002617801047120419,
+  "wall_seconds": 2.3944849967956543,
+  "model": "scgpt_fixed",
+  "domain": "lung",
+  "part": "cv"
+}

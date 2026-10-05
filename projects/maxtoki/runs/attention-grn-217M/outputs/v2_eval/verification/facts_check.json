@@ -1,0 +1,42 @@
+{
+ "MaxToki-217M-HF": {
+  "params": 216946576,
+  "has_lm_head_tensor": true,
+  "layers": 11,
+  "heads": 8,
+  "tie_word_embeddings": false
+ },
+ "MaxToki-1B-HF": {
+  "params": 1049036544,
+  "has_lm_head_tensor": true,
+  "layers": 20,
+  "heads": 16,
+  "tie_word_embeddings": false
+ },
+ "ratio": 4.83546024713476,
+ "217M_K562": {
+  "n_ctrl": 2000,
+  "stored_layers": 11,
+  "primary_layer": 8,
+  "control_cells_rows": 2000
+ },
+ "217M_RPE1": {
+  "n_ctrl": 2000,
+  "stored_layers": 11,
+  "primary_layer": 8,
+  "control_cells_rows": 2000
+ },
+ "217M_Adamson": {
+  "n_ctrl": 2000,
+  "stored_layers": 11,
+  "primary_layer": 8,
+  "control_cells_rows": 2000
+ },
+ "1B_K562": {
+  "n_ctrl": 200,
+  "stored_layers": 20,
+  "primary_layer": 8,
+  "control_cells_rows": 200
+ },
+ "gene_overlap_217M_K562_vs_1B_K562": 1259
+}

@@ -1,0 +1,47 @@
+scope,run,doc,n_numbers,n_traced,traced_share,traced_ci_lo,traced_ci_hi,mean_chance,chance_ci_lo,chance_ci_hi,excess,excess_ci_lo,excess_ci_hi,n_weak,n_strong_traced,n_untraced,corpus_files,corpus_values
+run_summary,attention-grn-217M,projects/maxtoki/summaries/attention-grn-217M-FINAL_SUMMARY.md,102,100,0.9804,0.9313,0.9946,0.9514,0.9216,0.9751,0.029,0.0059,0.0528,98,2,2,103,4051173
+run_summary_excluding_spec_numbers,attention-grn-217M,projects/maxtoki/summaries/attention-grn-217M-FINAL_SUMMARY.md,62,60,0.9677,0.8898,0.9911,0.9219,0.8761,0.9587,0.0458,0.0058,0.0852,58,2,2,103,4051173
+run_summary,attention-grn-217M,projects/maxtoki/runs/attention-grn-217M/outputs/FINAL_SUMMARY.md,93,92,0.9892,0.9416,0.9981,0.9497,0.9168,0.9742,0.0396,0.0221,0.0622,90,2,1,103,4051173
+run_summary_excluding_spec_numbers,attention-grn-217M,projects/maxtoki/runs/attention-grn-217M/outputs/FINAL_SUMMARY.md,56,55,0.9821,0.9055,0.9968,0.9186,0.8675,0.9586,0.0636,0.0353,0.0972,53,2,1,103,4051173
+run_union_of_summaries,attention-grn-217M,(all FINAL_SUMMARY files),102,100,0.9804,0.9313,0.9946,0.9514,0.9216,0.9749,0.029,0.0055,0.0529,98,2,2,103,4051173
+run_summary,spectral-geometry-217M,projects/maxtoki/summaries/spectral-geometry-217M-FINAL_SUMMARY.md,200,199,0.995,0.9722,0.9991,0.9074,0.874,0.9364,0.0876,0.0589,0.1179,185,14,1,75,23189
+run_summary_excluding_spec_numbers,spectral-geometry-217M,projects/maxtoki/summaries/spectral-geometry-217M-FINAL_SUMMARY.md,109,108,0.9908,0.9499,0.9984,0.8817,0.8297,0.9288,0.1092,0.0646,0.1585,97,11,1,75,23189
+run_summary,spectral-geometry-217M,projects/maxtoki/runs/spectral-geometry-217M/outputs/FINAL_SUMMARY.md,116,116,1.0,0.9679,1.0,0.9612,0.9348,0.9819,0.0388,0.0183,0.064,114,2,0,75,23189
+run_summary_excluding_spec_numbers,spectral-geometry-217M,projects/maxtoki/runs/spectral-geometry-217M/outputs/FINAL_SUMMARY.md,67,67,1.0,0.9458,1.0,0.963,0.923,0.9934,0.037,0.006,0.0773,65,2,0,75,23189
+run_union_of_summaries,spectral-geometry-217M,(all FINAL_SUMMARY files),200,199,0.995,0.9722,0.9991,0.9074,0.8751,0.9371,0.0876,0.0596,0.1181,185,14,1,75,23189
+run_summary,topology-141-217M,projects/maxtoki/summaries/topology-141-217M-FINAL_SUMMARY.md,55,55,1.0,0.9347,1.0,0.9295,0.8676,0.9782,0.0705,0.0247,0.1342,52,3,0,102,8283
+run_summary_excluding_spec_numbers,topology-141-217M,projects/maxtoki/summaries/topology-141-217M-FINAL_SUMMARY.md,30,30,1.0,0.8865,1.0,0.878,0.7746,0.9607,0.122,0.0373,0.2253,27,3,0,102,8283
+run_summary,topology-141-217M,projects/maxtoki/runs/topology-141-217M/FINAL_SUMMARY.md,95,93,0.9789,0.9265,0.9942,0.8836,0.8383,0.9259,0.0954,0.06,0.1341,89,4,2,102,8283
+run_summary_excluding_spec_numbers,topology-141-217M,projects/maxtoki/runs/topology-141-217M/FINAL_SUMMARY.md,70,68,0.9714,0.9017,0.9921,0.842,0.7777,0.8966,0.1294,0.0811,0.1823,64,4,2,102,8283
+run_union_of_summaries,topology-141-217M,(all FINAL_SUMMARY files),123,121,0.9837,0.9426,0.9955,0.8883,0.8475,0.9267,0.0954,0.0627,0.1328,115,6,2,102,8283
+run_summary,manifold-discovery-217M,projects/maxtoki/summaries/manifold-discovery-217M-FINAL_SUMMARY.md,215,211,0.9814,0.9531,0.9927,0.7352,0.709,0.7619,0.2462,0.217,0.2744,194,17,4,96,56941
+run_summary_excluding_spec_numbers,manifold-discovery-217M,projects/maxtoki/summaries/manifold-discovery-217M-FINAL_SUMMARY.md,170,170,1.0,0.9779,1.0,0.7244,0.6987,0.7505,0.2756,0.2499,0.3017,157,13,0,96,56941
+run_summary,manifold-discovery-217M,projects/maxtoki/runs/manifold-discovery-217M/FINAL_SUMMARY.md,263,259,0.9848,0.9616,0.9941,0.7259,0.7041,0.7468,0.2589,0.2351,0.2833,239,20,4,96,56941
+run_summary_excluding_spec_numbers,manifold-discovery-217M,projects/maxtoki/runs/manifold-discovery-217M/FINAL_SUMMARY.md,212,212,1.0,0.9822,1.0,0.7162,0.6946,0.7368,0.2838,0.2621,0.3062,196,16,0,96,56941
+run_union_of_summaries,manifold-discovery-217M,(all FINAL_SUMMARY files),276,272,0.9855,0.9633,0.9943,0.7312,0.7093,0.7536,0.2543,0.2299,0.2777,251,21,4,96,56941
+run_summary,longevity-mechinterp-217M,projects/maxtoki/runs/longevity-mechinterp-217M/FINAL_SUMMARY.md,35,22,0.6286,0.4634,0.7683,0.2303,0.1668,0.2937,0.3983,0.2068,0.5829,3,19,13,6,3116
+run_summary_excluding_spec_numbers,longevity-mechinterp-217M,projects/maxtoki/runs/longevity-mechinterp-217M/FINAL_SUMMARY.md,25,17,0.68,0.4841,0.8279,0.1568,0.0936,0.2224,0.5232,0.3023,0.7224,0,17,8,6,3116
+run_union_of_summaries,longevity-mechinterp-217M,(all FINAL_SUMMARY files),35,22,0.6286,0.4634,0.7683,0.2303,0.164,0.296,0.3983,0.2126,0.5823,3,19,13,6,3116
+run_summary,sae-atlas-217M,projects/maxtoki/summaries/sae-atlas-217M-FINAL_SUMMARY.md,141,139,0.9858,0.9498,0.9961,0.9604,0.9333,0.9836,0.0254,0.0038,0.0498,134,5,2,169,408970
+run_summary_excluding_spec_numbers,sae-atlas-217M,projects/maxtoki/summaries/sae-atlas-217M-FINAL_SUMMARY.md,89,88,0.9888,0.9391,0.998,0.9506,0.9114,0.9827,0.0382,0.0045,0.0778,83,5,1,169,408970
+run_summary,sae-atlas-217M,projects/maxtoki/summaries/sae-atlas-217M-FINAL_SUMMARY_12layer.md,71,70,0.9859,0.9244,0.9975,0.9651,0.9231,0.9997,0.0208,-0.0054,0.058,68,2,1,169,408970
+run_summary_excluding_spec_numbers,sae-atlas-217M,projects/maxtoki/summaries/sae-atlas-217M-FINAL_SUMMARY_12layer.md,57,57,1.0,0.9369,1.0,0.9705,0.9239,1.0,0.0295,0.0,0.0814,55,2,0,169,408970
+run_union_of_summaries,sae-atlas-217M,(all FINAL_SUMMARY files),189,187,0.9894,0.9622,0.9971,0.9616,0.9385,0.9822,0.0278,0.007,0.0526,180,7,2,169,408970
+run_summary,circuit-tracing-217M,projects/maxtoki/summaries/circuit-tracing-217M-FINAL_SUMMARY.md,112,96,0.8571,0.7805,0.9101,0.5791,0.5016,0.6582,0.278,0.2014,0.3555,68,28,16,13,58394
+run_summary_excluding_spec_numbers,circuit-tracing-217M,projects/maxtoki/summaries/circuit-tracing-217M-FINAL_SUMMARY.md,77,67,0.8701,0.7772,0.9279,0.4782,0.3784,0.5743,0.3919,0.2909,0.4959,39,28,10,13,58394
+run_union_of_summaries,circuit-tracing-217M,(all FINAL_SUMMARY files),112,96,0.8571,0.7805,0.9101,0.5791,0.4978,0.6584,0.278,0.2032,0.357,68,28,16,13,58394
+run_summary,exhaustive-mapping-217M,projects/maxtoki/summaries/exhaustive-mapping-217M-FINAL_SUMMARY.md,149,135,0.906,0.8485,0.9432,0.529,0.4691,0.5894,0.377,0.3126,0.4422,80,55,14,1025,18708
+run_summary_excluding_spec_numbers,exhaustive-mapping-217M,projects/maxtoki/summaries/exhaustive-mapping-217M-FINAL_SUMMARY.md,90,82,0.9111,0.8343,0.9543,0.3691,0.3002,0.4369,0.542,0.4551,0.622,32,50,8,1025,18708
+run_union_of_summaries,exhaustive-mapping-217M,(all FINAL_SUMMARY files),149,135,0.906,0.8485,0.9432,0.529,0.4682,0.5891,0.377,0.3117,0.4448,80,55,14,1025,18708
+paper_vs_union_of_8_runs (found in any run),(paper),projects/maxtoki/paper-plos-one/main.tex,124,123,0.9919,0.9557,0.9986,0.9744,0.9458,0.9973,0.0176,-0.0005,0.0413,121,2,1,,4554686
+paper_chain (written in run R's FINAL_SUMMARY and found in run R's outputs),(paper),projects/maxtoki/paper-plos-one/main.tex,124,119,0.9597,0.9091,0.9827,0.5,0.4339,0.5634,0.4597,0.3937,0.5253,0,119,5,,4554686
+paper_vs_numbers_written_in_FINAL_SUMMARY_files (transcription check),(paper),projects/maxtoki/paper-plos-one/main.tex,124,120,0.9677,0.92,0.9874,0.5016,0.4387,0.5692,0.4661,0.401,0.5334,0,120,4,,822
+paper_vs_extended_corpus (runs + audits + summaries + setup json/csv/log/txt),(paper),projects/maxtoki/paper-plos-one/main.tex,124,123,0.9919,0.9557,0.9986,0.9758,0.9463,0.9987,0.0161,-0.0005,0.0398,0,123,1,,4559098
+paper_vs_union_excluding_spec_numbers,(paper),projects/maxtoki/paper-plos-one/main.tex,48,47,0.9792,0.891,0.9963,0.9408,0.8637,1.0,0.0383,-0.0025,0.0988,45,2,1,,4554686
+paper_class:decimal_1dp,(paper),projects/maxtoki/paper-plos-one/main.tex,13,13,1.0,0.7719,1.0,1.0,1.0,1.0,0.0,0.0,0.0,13,0,0,,4554686
+paper_class:decimal_2+dp,(paper),projects/maxtoki/paper-plos-one/main.tex,63,63,1.0,0.9425,1.0,0.9857,0.9571,1.0,0.0143,0.0,0.0429,62,1,0,,4554686
+paper_class:integer>=10,(paper),projects/maxtoki/paper-plos-one/main.tex,48,47,0.9792,0.891,0.9963,0.9525,0.8887,1.0,0.0267,-0.0025,0.0767,46,1,1,,4554686
+run_summaries_class:decimal_1dp,(all runs),(all FINAL_SUMMARY files),203,193,0.9507,0.9117,0.973,0.89,0.8571,0.9202,0.0608,0.0318,0.0903,182,11,10,,
+run_summaries_class:decimal_2+dp,(all runs),(all FINAL_SUMMARY files),900,881,0.9789,0.9673,0.9864,0.761,0.7432,0.7786,0.2179,0.2004,0.2351,783,98,19,,
+run_summaries_class:integer>=10,(all runs),(all FINAL_SUMMARY files),525,497,0.9467,0.924,0.9628,0.8455,0.8183,0.8705,0.1012,0.0771,0.1243,442,55,28,,
+run_summaries_class:sci,(all runs),(all FINAL_SUMMARY files),19,16,0.8421,0.6243,0.9448,0.4526,0.2853,0.6221,0.3895,0.2263,0.5495,7,9,3,,

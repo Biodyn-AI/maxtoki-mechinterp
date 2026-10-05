@@ -1,7 +1,7 @@
 # topology-geometry-141-hypotheses on MaxToki-217M — Final Summary
 
 **Run folder:** `projects/maxtoki/runs/topology-141-217M/`
-**Pipeline spec:** `pipelines/topology-geometry-141-hypotheses.md` (arxiv 2602.22289, the prior work)
+**Pipeline spec:** `pipelines/topology-geometry-141-hypotheses.md` (arxiv 2602.22289, Kendiukhov 2026)
 **Target:** MaxToki-217M-HF (LlamaForCausalLM, 11 layers, hidden=1232, vocab=20,275)
 **Run date:** 2026-05-03
 **Domains:** Tabula Sapiens lung (1500 cells × 382 genes), Tabula Sapiens immune (1500 cells × 350 genes — embeddings reused from spectral-geometry-217M phase0), Krasnow lung SMART-seq2 held-out (1500 cells × 380 genes, "external_lung")

@@ -1,0 +1,65 @@
+[
+  {
+    "label": "full_drift_reference",
+    "feature_dim": 2464,
+    "trustworthiness": 0.810936329588015,
+    "random_holdout": 0.8339392558547665,
+    "donor_holdout": 0.715887968347085,
+    "branch_holdout": 0.37040378877968805,
+    "mb_size": 18.213888
+  },
+  {
+    "label": "compact_top1_L10H6",
+    "feature_dim": 154,
+    "trustworthiness": 0.8817943088380903,
+    "random_holdout": 0.8169864563117182,
+    "donor_holdout": 0.7185592654448592,
+    "branch_holdout": 0.4674029250589304,
+    "mb_size": 0.758912
+  },
+  {
+    "label": "rank8_svd",
+    "feature_dim": 154,
+    "trustworthiness": 0.9556287399371475,
+    "random_holdout": 0.7944017032762821,
+    "donor_holdout": 0.7390379317140486,
+    "branch_holdout": 0.3518239892505212,
+    "mb_size": 0.044384
+  },
+  {
+    "label": "rank16_svd",
+    "feature_dim": 154,
+    "trustworthiness": 0.9317706315381635,
+    "random_holdout": 0.8231149211701888,
+    "donor_holdout": 0.7647244135906798,
+    "branch_holdout": 0.21576547485940045,
+    "mb_size": 0.088768
+  },
+  {
+    "label": "rank32_svd",
+    "feature_dim": 154,
+    "trustworthiness": 0.9261586809591459,
+    "random_holdout": 0.8319958642404955,
+    "donor_holdout": 0.7935765097575677,
+    "branch_holdout": 0.41956894117043536,
+    "mb_size": 0.177536
+  },
+  {
+    "label": "rank64_svd",
+    "feature_dim": 154,
+    "trustworthiness": 0.9120263463773731,
+    "random_holdout": 0.8216685828804995,
+    "donor_holdout": 0.7739104153001253,
+    "branch_holdout": 0.5136653225202011,
+    "mb_size": 0.355072
+  },
+  {
+    "label": "hard_sparse_16f_60g",
+    "feature_dim": 154,
+    "trustworthiness": 0.9094278703344957,
+    "random_holdout": 0.8330181643104959,
+    "donor_holdout": 0.7462894950214012,
+    "branch_holdout": 0.4333237136281909,
+    "mb_size": 0.007744
+  }
+]

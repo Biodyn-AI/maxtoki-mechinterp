@@ -1,0 +1,291 @@
+======================================================================
+PHASE 3a — autonomous manifold-hypothesis sweep
+======================================================================
+
+--- H92_naive_memory_effector_terminal: Immune-state axis: naive / memory / effector / terminal / progenitor ---
+  [H92_naive_memory_effector_terminal] trained 1500 epochs in 3.3s
+  [rand-holdout] trained 1500 epochs in 3.6s
+  [rand-holdout] trained 1500 epochs in 3.1s
+  [rand-holdout] trained 1500 epochs in 2.7s
+  [rand-holdout] trained 1500 epochs in 2.8s
+  [rand-holdout] trained 1500 epochs in 2.6s
+  [H92_naive_memory_effector_terminal-donor] groups: 11
+  [H92_naive_memory_effector_terminal-donor-TSP2] trained 1500 epochs in 2.0s
+  [H92_naive_memory_effector_terminal-donor-TSP20] trained 1500 epochs in 3.2s
+  [H92_naive_memory_effector_terminal-donor-TSP4] trained 1500 epochs in 2.9s
+  [H92_naive_memory_effector_terminal-donor-TSP17] trained 1500 epochs in 3.1s
+  [H92_naive_memory_effector_terminal-donor-TSP15] trained 1500 epochs in 3.7s
+  [H92_naive_memory_effector_terminal-cat] groups: 5
+  [H92_naive_memory_effector_terminal-cat-terminal] trained 1500 epochs in 2.1s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [H92_naive_memory_effector_terminal-cat-naive] trained 1500 epochs in 3.2s
+  [H92_naive_memory_effector_terminal-cat-effector] trained 1500 epochs in 2.8s
+  [H92_naive_memory_effector_terminal-cat-progenitor] trained 1500 epochs in 3.0s
+  [H92_naive_memory_effector_terminal-cat-memory] trained 1500 epochs in 3.5s
+  [H92_naive_memory_effector_terminal_null] trained 1500 epochs in 3.6s
+  [rand-holdout] trained 1500 epochs in 3.1s
+  [rand-holdout] trained 1500 epochs in 3.1s
+  [rand-holdout] trained 1500 epochs in 2.7s
+  [rand-holdout] trained 1500 epochs in 3.0s
+  [rand-holdout] trained 1500 epochs in 4.6s
+  [H92_naive_memory_effector_terminal-donor-null] groups: 11
+  [H92_naive_memory_effector_terminal-donor-null-TSP2] trained 1500 epochs in 4.9s
+  [H92_naive_memory_effector_terminal-donor-null-TSP20] trained 1500 epochs in 15.3s
+  [H92_naive_memory_effector_terminal-donor-null-TSP4] trained 1500 epochs in 12.4s
+  [H92_naive_memory_effector_terminal-donor-null-TSP17] trained 1500 epochs in 18.5s
+  [H92_naive_memory_effector_terminal-donor-null-TSP15] trained 1500 epochs in 14.5s
+  [H92_naive_memory_effector_terminal-cat-null] groups: 5
+  [H92_naive_memory_effector_terminal-cat-null-terminal] trained 1500 epochs in 9.7s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [H92_naive_memory_effector_terminal-cat-null-effector] trained 1500 epochs in 11.6s
+  [H92_naive_memory_effector_terminal-cat-null-progenitor] trained 1500 epochs in 13.2s
+  [H92_naive_memory_effector_terminal-cat-null-naive] trained 1500 epochs in 13.7s
+  [H92_naive_memory_effector_terminal-cat-null-memory] trained 1500 epochs in 15.5s
+  POS trust=0.770 rand=0.856 donor=0.688 cat=nan
+  NULL trust=0.574 rand=-0.033 donor=0.123 cat=nan
+  VERDICT: INCONCLUSIVE  (198.1s)
+
+--- H93_lymphoid_myeloid: Binary lymphoid vs myeloid lineage axis ---
+  [H93_lymphoid_myeloid] trained 1500 epochs in 36.4s
+  [rand-holdout] trained 1500 epochs in 29.3s
+  [rand-holdout] trained 1500 epochs in 34.9s
+  [rand-holdout] trained 1500 epochs in 36.5s
+  [rand-holdout] trained 1500 epochs in 32.5s
+  [rand-holdout] trained 1500 epochs in 31.8s
+  [H93_lymphoid_myeloid-donor] groups: 11
+  [H93_lymphoid_myeloid-donor-TSP2] trained 1500 epochs in 14.8s
+  [H93_lymphoid_myeloid-donor-TSP20] trained 1500 epochs in 48.0s
+  [H93_lymphoid_myeloid-donor-TSP9] trained 1500 epochs in 50.4s
+  [H93_lymphoid_myeloid-donor-TSP4] trained 1500 epochs in 62.4s
+  [H93_lymphoid_myeloid-donor-TSP17] trained 1500 epochs in 74.5s
+  [H93_lymphoid_myeloid-donor-TSP5] trained 1500 epochs in 63.2s
+  [H93_lymphoid_myeloid-donor-TSP15] trained 1500 epochs in 66.0s
+  [H93_lymphoid_myeloid-donor-TSP28] trained 1500 epochs in 71.8s
+  [H93_lymphoid_myeloid-donor-TSP3] trained 1500 epochs in 80.8s
+  [H93_lymphoid_myeloid-cat] groups: 2
+  [H93_lymphoid_myeloid-cat-myeloid] trained 1500 epochs in 57.9s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [H93_lymphoid_myeloid-cat-lymphoid] trained 1500 epochs in 37.9s
+  [H93_lymphoid_myeloid_null] trained 1500 epochs in 92.8s
+  [rand-holdout] trained 1500 epochs in 67.2s
+  [rand-holdout] trained 1500 epochs in 63.4s
+  [rand-holdout] trained 1500 epochs in 56.9s
+  [rand-holdout] trained 1500 epochs in 58.0s
+  [rand-holdout] trained 1500 epochs in 67.8s
+  [H93_lymphoid_myeloid-donor-null] groups: 11
+  [H93_lymphoid_myeloid-donor-null-TSP2] trained 1500 epochs in 27.2s
+  [H93_lymphoid_myeloid-donor-null-TSP20] trained 1500 epochs in 73.8s
+  [H93_lymphoid_myeloid-donor-null-TSP9] trained 1500 epochs in 75.5s
+  [H93_lymphoid_myeloid-donor-null-TSP4] trained 1500 epochs in 72.9s
+  [H93_lymphoid_myeloid-donor-null-TSP17] trained 1500 epochs in 78.4s
+  [H93_lymphoid_myeloid-donor-null-TSP5] trained 1500 epochs in 79.5s
+  [H93_lymphoid_myeloid-donor-null-TSP15] trained 1500 epochs in 77.7s
+  [H93_lymphoid_myeloid-donor-null-TSP28] trained 1500 epochs in 76.0s
+  [H93_lymphoid_myeloid-donor-null-TSP3] trained 1500 epochs in 75.2s
+  [H93_lymphoid_myeloid-cat-null] groups: 2
+  [H93_lymphoid_myeloid-cat-null-lymphoid] trained 1500 epochs in 30.0s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [H93_lymphoid_myeloid-cat-null-myeloid] trained 1500 epochs in 45.0s
+  POS trust=0.720 rand=0.811 donor=0.703 cat=nan
+  NULL trust=0.713 rand=-0.015 donor=-0.060 cat=nan
+  VERDICT: INCONCLUSIVE  (1950.9s)
+
+--- H94_adaptive_innate: Adaptive vs innate immunity ---
+  [H94_adaptive_innate] trained 1500 epochs in 82.0s
+  [rand-holdout] trained 1500 epochs in 74.0s
+  [rand-holdout] trained 1500 epochs in 71.9s
+  [rand-holdout] trained 1500 epochs in 68.0s
+  [rand-holdout] trained 1500 epochs in 75.5s
+  [rand-holdout] trained 1500 epochs in 77.2s
+  [H94_adaptive_innate-donor] groups: 11
+  [H94_adaptive_innate-donor-TSP2] trained 1500 epochs in 26.8s
+  [H94_adaptive_innate-donor-TSP20] trained 1500 epochs in 83.5s
+  [H94_adaptive_innate-donor-TSP9] trained 1500 epochs in 81.2s
+  [H94_adaptive_innate-donor-TSP4] trained 1500 epochs in 73.9s
+  [H94_adaptive_innate-donor-TSP17] trained 1500 epochs in 62.0s
+  [H94_adaptive_innate-donor-TSP5] trained 1500 epochs in 76.5s
+  [H94_adaptive_innate-donor-TSP15] trained 1500 epochs in 80.2s
+  [H94_adaptive_innate-donor-TSP28] trained 1500 epochs in 67.2s
+  [H94_adaptive_innate-donor-TSP3] trained 1500 epochs in 65.4s
+  [H94_adaptive_innate-cat] groups: 2
+  [H94_adaptive_innate-cat-innate] trained 1500 epochs in 30.7s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [H94_adaptive_innate-cat-adaptive] trained 1500 epochs in 29.2s
+  [H94_adaptive_innate_null] trained 1500 epochs in 68.1s
+  [rand-holdout] trained 1500 epochs in 52.1s
+  [rand-holdout] trained 1500 epochs in 47.0s
+  [rand-holdout] trained 1500 epochs in 49.4s
+  [rand-holdout] trained 1500 epochs in 50.2s
+  [rand-holdout] trained 1500 epochs in 49.5s
+  [H94_adaptive_innate-donor-null] groups: 11
+  [H94_adaptive_innate-donor-null-TSP2] trained 1500 epochs in 22.1s
+  [H94_adaptive_innate-donor-null-TSP20] trained 1500 epochs in 52.2s
+  [H94_adaptive_innate-donor-null-TSP9] trained 1500 epochs in 61.1s
+  [H94_adaptive_innate-donor-null-TSP4] trained 1500 epochs in 59.4s
+  [H94_adaptive_innate-donor-null-TSP17] trained 1500 epochs in 65.3s
+  [H94_adaptive_innate-donor-null-TSP5] trained 1500 epochs in 61.8s
+  [H94_adaptive_innate-donor-null-TSP15] trained 1500 epochs in 68.6s
+  [H94_adaptive_innate-donor-null-TSP28] trained 1500 epochs in 76.5s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [H94_adaptive_innate-donor-null-TSP3] trained 1500 epochs in 63.2s
+  [H94_adaptive_innate-cat-null] groups: 2
+  [H94_adaptive_innate-cat-null-adaptive] trained 1500 epochs in 17.4s
+  [H94_adaptive_innate-cat-null-innate] trained 1500 epochs in 17.7s
+  POS trust=0.694 rand=0.761 donor=0.715 cat=nan
+  NULL trust=0.650 rand=-0.015 donor=-0.096 cat=nan
+  VERDICT: INCONCLUSIVE  (2014.6s)
+
+--- H95_effector_modality: Phagocytic / cytotoxic / humoral / regulatory effector axes (multi-label) ---
+  [H95_effector_modality] trained 1500 epochs in 29.5s
+  [rand-holdout] trained 1500 epochs in 22.5s
+  [rand-holdout] trained 1500 epochs in 17.8s
+  [rand-holdout] trained 1500 epochs in 11.0s
+  [rand-holdout] trained 1500 epochs in 15.7s
+  [rand-holdout] trained 1500 epochs in 15.4s
+  [H95_effector_modality-donor] groups: 11
+  [H95_effector_modality-donor-TSP2] trained 1500 epochs in 7.7s
+  [H95_effector_modality-donor-TSP9] trained 1500 epochs in 19.4s
+  [H95_effector_modality-donor-TSP20] trained 1500 epochs in 18.8s
+  [H95_effector_modality-donor-TSP4] trained 1500 epochs in 18.8s
+  [H95_effector_modality-donor-TSP17] trained 1500 epochs in 19.4s
+  [H95_effector_modality-donor-TSP5] trained 1500 epochs in 19.6s
+  [H95_effector_modality-donor-TSP15] trained 1500 epochs in 19.1s
+  [H95_effector_modality-donor-TSP28] trained 1500 epochs in 19.4s
+  [H95_effector_modality-donor-TSP3] trained 1500 epochs in 19.1s
+  [H95_effector_modality-cat] groups: 4
+  [H95_effector_modality-cat-phagocytic] trained 1500 epochs in 11.0s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [H95_effector_modality-cat-humoral] trained 1500 epochs in 16.0s
+  [H95_effector_modality-cat-cytotoxic] trained 1500 epochs in 12.4s
+  [H95_effector_modality-cat-regulatory] trained 1500 epochs in 19.5s
+  [H95_effector_modality_null] trained 1500 epochs in 20.2s
+  [rand-holdout] trained 1500 epochs in 15.9s
+  [rand-holdout] trained 1500 epochs in 15.5s
+  [rand-holdout] trained 1500 epochs in 15.3s
+  [rand-holdout] trained 1500 epochs in 15.6s
+  [rand-holdout] trained 1500 epochs in 15.4s
+  [H95_effector_modality-donor-null] groups: 11
+  [H95_effector_modality-donor-null-TSP2] trained 1500 epochs in 7.0s
+  [H95_effector_modality-donor-null-TSP9] trained 1500 epochs in 19.3s
+  [H95_effector_modality-donor-null-TSP20] trained 1500 epochs in 19.2s
+  [H95_effector_modality-donor-null-TSP4] trained 1500 epochs in 18.5s
+  [H95_effector_modality-donor-null-TSP17] trained 1500 epochs in 19.5s
+  [H95_effector_modality-donor-null-TSP5] trained 1500 epochs in 19.8s
+  [H95_effector_modality-donor-null-TSP15] trained 1500 epochs in 19.6s
+  [H95_effector_modality-donor-null-TSP28] trained 1500 epochs in 19.6s
+  [H95_effector_modality-donor-null-TSP3] trained 1500 epochs in 19.3s
+  [H95_effector_modality-cat-null] groups: 4
+  [H95_effector_modality-cat-null-humoral] trained 1500 epochs in 15.9s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [H95_effector_modality-cat-null-phagocytic] trained 1500 epochs in 10.8s
+  [H95_effector_modality-cat-null-cytotoxic] trained 1500 epochs in 11.9s
+  [H95_effector_modality-cat-null-regulatory] trained 1500 epochs in 18.8s
+  POS trust=0.800 rand=0.785 donor=0.658 cat=nan
+  NULL trust=0.666 rand=-0.011 donor=0.070 cat=nan
+  VERDICT: INCONCLUSIVE  (649.6s)
+
+--- H96_resident_circulating: Tissue-resident vs circulating ---
+  [H96_resident_circulating] trained 1500 epochs in 7.8s
+  [rand-holdout] trained 1500 epochs in 6.2s
+  [rand-holdout] trained 1500 epochs in 6.1s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:162: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [rand-holdout] trained 1500 epochs in 6.5s
+  [rand-holdout] trained 1500 epochs in 6.7s
+  [rand-holdout] trained 1500 epochs in 5.8s
+  [H96_resident_circulating-donor] groups: 8
+  [H96_resident_circulating-donor-TSP2] trained 1500 epochs in 4.4s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [H96_resident_circulating-donor-TSP9] trained 1500 epochs in 7.3s
+  [H96_resident_circulating-donor-TSP17] trained 1500 epochs in 7.5s
+  [H96_resident_circulating-donor-TSP4] trained 1500 epochs in 7.8s
+  [H96_resident_circulating-donor-TSP15] trained 1500 epochs in 7.5s
+  [H96_resident_circulating-cat] groups: 2
+  [H96_resident_circulating-cat-circulating] trained 1500 epochs in 2.8s
+  [H96_resident_circulating-cat-resident] trained 1500 epochs in 7.4s
+  [H96_resident_circulating_null] trained 1500 epochs in 8.0s
+  [rand-holdout] trained 1500 epochs in 6.2s
+  [rand-holdout] trained 1500 epochs in 6.2s
+  [rand-holdout] trained 1500 epochs in 6.3s
+  [rand-holdout] trained 1500 epochs in 6.5s
+  [rand-holdout] trained 1500 epochs in 5.9s
+  [H96_resident_circulating-donor-null] groups: 8
+  [H96_resident_circulating-donor-null-TSP2] trained 1500 epochs in 4.6s
+  [H96_resident_circulating-donor-null-TSP9] trained 1500 epochs in 7.4s
+  [H96_resident_circulating-donor-null-TSP17] trained 1500 epochs in 6.9s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [H96_resident_circulating-donor-null-TSP4] trained 1500 epochs in 7.0s
+  [H96_resident_circulating-donor-null-TSP15] trained 1500 epochs in 7.2s
+  [H96_resident_circulating-cat-null] groups: 2
+  [H96_resident_circulating-cat-null-circulating] trained 1500 epochs in 2.7s
+  [H96_resident_circulating-cat-null-resident] trained 1500 epochs in 7.4s
+  POS trust=0.713 rand=nan donor=0.853 cat=nan
+  NULL trust=0.674 rand=-0.022 donor=-0.453 cat=nan
+  VERDICT: INCONCLUSIVE  (166.4s)
+
+--- H97_myeloid_subbranches: Myeloid sub-branches: granulocyte / mono-macro / dendritic ---
+  [H97_myeloid_subbranches] trained 1500 epochs in 10.0s
+  [rand-holdout] trained 1500 epochs in 7.9s
+  [rand-holdout] trained 1500 epochs in 7.6s
+  [rand-holdout] trained 1500 epochs in 7.3s
+  [rand-holdout] trained 1500 epochs in 7.7s
+  [rand-holdout] trained 1500 epochs in 7.6s
+  [H97_myeloid_subbranches-donor] groups: 11
+  [H97_myeloid_subbranches-donor-TSP2] trained 1500 epochs in 4.3s
+  [H97_myeloid_subbranches-donor-TSP9] trained 1500 epochs in 9.9s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [H97_myeloid_subbranches-donor-TSP4] trained 1500 epochs in 9.1s
+  [H97_myeloid_subbranches-donor-TSP17] trained 1500 epochs in 9.3s
+  [H97_myeloid_subbranches-donor-TSP5] trained 1500 epochs in 9.6s
+  [H97_myeloid_subbranches-donor-TSP15] trained 1500 epochs in 9.6s
+  [H97_myeloid_subbranches-donor-TSP3] trained 1500 epochs in 9.3s
+  [H97_myeloid_subbranches-cat] groups: 3
+  [H97_myeloid_subbranches-cat-mono_macro] trained 1500 epochs in 4.0s
+  [H97_myeloid_subbranches-cat-granulocyte] trained 1500 epochs in 7.7s
+  [H97_myeloid_subbranches-cat-dendritic] trained 1500 epochs in 9.6s
+  [H97_myeloid_subbranches_null] trained 1500 epochs in 10.0s
+  [rand-holdout] trained 1500 epochs in 7.7s
+  [rand-holdout] trained 1500 epochs in 7.7s
+  [rand-holdout] trained 1500 epochs in 7.9s
+  [rand-holdout] trained 1500 epochs in 7.5s
+  [rand-holdout] trained 1500 epochs in 7.7s
+  [H97_myeloid_subbranches-donor-null] groups: 11
+  [H97_myeloid_subbranches-donor-null-TSP2] trained 1500 epochs in 4.5s
+  [H97_myeloid_subbranches-donor-null-TSP9] trained 1500 epochs in 9.9s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [H97_myeloid_subbranches-donor-null-TSP4] trained 1500 epochs in 9.2s
+  [H97_myeloid_subbranches-donor-null-TSP17] trained 1500 epochs in 9.3s
+  [H97_myeloid_subbranches-donor-null-TSP5] trained 1500 epochs in 9.3s
+  [H97_myeloid_subbranches-donor-null-TSP15] trained 1500 epochs in 9.2s
+  [H97_myeloid_subbranches-donor-null-TSP3] trained 1500 epochs in 9.7s
+  [H97_myeloid_subbranches-cat-null] groups: 3
+  [H97_myeloid_subbranches-cat-null-mono_macro] trained 1500 epochs in 3.9s
+  [H97_myeloid_subbranches-cat-null-granulocyte] trained 1500 epochs in 7.7s
+  [H97_myeloid_subbranches-cat-null-dendritic] trained 1500 epochs in 9.7s
+  POS trust=0.698 rand=0.715 donor=0.757 cat=nan
+  NULL trust=0.588 rand=-0.054 donor=-0.019 cat=nan
+  VERDICT: INCONCLUSIVE  (261.7s)
+
+======================================================================
+REGISTRY SUMMARY
+======================================================================
+H92_naive_memory_effector_terminal       INCONCLUSIVE       trust=0.770/0.574  cat=nan/nan
+H93_lymphoid_myeloid                     INCONCLUSIVE       trust=0.720/0.713  cat=nan/nan
+H94_adaptive_innate                      INCONCLUSIVE       trust=0.694/0.650  cat=nan/nan
+H95_effector_modality                    INCONCLUSIVE       trust=0.800/0.666  cat=nan/nan
+H96_resident_circulating                 INCONCLUSIVE       trust=0.713/0.674  cat=nan/nan
+H97_myeloid_subbranches                  INCONCLUSIVE       trust=0.698/0.588  cat=nan/nan
+
+Total time: 5241.6s

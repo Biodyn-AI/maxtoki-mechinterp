@@ -1,0 +1,29 @@
+[lung] missing PCA embeddings — skip
+
+[immune] PCA emb shape: (12, 350, 20)
+  L00  obs=2.71  null=6.43±0.61  z=-6.09  sig=0
+  L01  obs=46.50  null=78.45±9.04  z=-3.54  sig=0
+  L02  obs=76.15  null=96.73±5.93  z=-3.47  sig=0
+  L03  obs=130.17  null=128.71±10.95  z=0.13  sig=0
+  L04  obs=198.36  null=161.88±9.95  z=3.67  sig=1
+  L05  obs=210.48  null=189.94±14.94  z=1.37  sig=0
+  L06  obs=141.86  null=173.34±10.60  z=-2.97  sig=0
+  L07  obs=109.87  null=160.29±11.90  z=-4.24  sig=0
+  L08  obs=129.20  null=180.09±16.64  z=-3.06  sig=0
+  L09  obs=129.24  null=205.13±21.17  z=-3.59  sig=0
+  L10  obs=131.30  null=238.35±19.01  z=-5.63  sig=0
+  L11  obs=231.04  null=368.92±34.57  z=-3.99  sig=0
+[external_lung] missing PCA embeddings — skip
+
+[phase 5] summary:
+{
+  "immune": {
+    "n_layers": 12,
+    "n_layers_significant": 1,
+    "top_z": 3.665770315221771,
+    "top_layer": 4,
+    "mean_delta": -37.61458326832702,
+    "rewire_n_significant": 0,
+    "rewire_n_total": 12
+  }
+}

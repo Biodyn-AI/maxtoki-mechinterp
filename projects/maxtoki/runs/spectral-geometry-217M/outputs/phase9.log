@@ -1,0 +1,12 @@
+  sv shape: (12, 1500, 7)
+
+[Phase 9d] GO BP terms on SV2 — expect 0 significant after BH
+  GO BP terms available: 1276
+  GO BP terms tested on SV2@L3: 675  BH-significant: 0/675
+
+[Phase 9e] ER ↔ classifier AUROC partial correlation
+  raw     ER ~ AUROC: ρ=-0.503  p=9.52e-02
+  partial ER ~ AUROC | layer: ρ=+0.189  p=5.57e-01
+
+[Final] Building run report...
+  wrote: runs/spectral-geometry-217M/outputs/run_report.md

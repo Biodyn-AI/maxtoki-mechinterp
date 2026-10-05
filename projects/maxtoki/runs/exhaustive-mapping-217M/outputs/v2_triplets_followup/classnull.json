@@ -1,0 +1,156 @@
+{
+  "classification_signflip_null": {
+    "spec_included(|d|>0.5 any condition)": {
+      "observed": 583779,
+      "signflip_null_mean": 587200.525,
+      "signflip_null_2.5_97.5": [
+        585710.7,
+        588284.475
+      ],
+      "p_one_sided_ge": 1.0
+    },
+    "spec_superadditive_strict(|d_ABC|>sum|d|)": {
+      "observed": 10347,
+      "signflip_null_mean": 12617.525,
+      "signflip_null_2.5_97.5": [
+        11637.5,
+        13246.875
+      ],
+      "p_one_sided_ge": 1.0
+    },
+    "spec_superadditive_band(>1.1x)": {
+      "observed": 6060,
+      "signflip_null_mean": 8067.0,
+      "signflip_null_2.5_97.5": [
+        7239.175,
+        8674.5
+      ],
+      "p_one_sided_ge": 1.0
+    },
+    "spec_additive(0.9-1.1x)": {
+      "observed": 12840,
+      "signflip_null_mean": 12788.425,
+      "signflip_null_2.5_97.5": [
+        12623.9,
+        12939.35
+      ],
+      "p_one_sided_ge": 0.36585365853658536
+    },
+    "spec_subadditive(<0.9x)": {
+      "observed": 564879,
+      "signflip_null_mean": 566345.1,
+      "signflip_null_2.5_97.5": [
+        565664.725,
+        566897.925
+      ],
+      "p_one_sided_ge": 1.0
+    },
+    "deployed_targets(|e_ABC|>0.01)": {
+      "observed": 2049,
+      "signflip_null_mean": 2048.2,
+      "signflip_null_2.5_97.5": [
+        2026.925,
+        2069.075
+      ],
+      "p_one_sided_ge": 0.4146341463414634
+    },
+    "deployed_superadditive(>1.1x)": {
+      "observed": 7,
+      "signflip_null_mean": 28.925,
+      "signflip_null_2.5_97.5": [
+        14.95,
+        45.22499999999999
+      ],
+      "p_one_sided_ge": 1.0
+    },
+    "triplets_with_any_spec_strict": {
+      "observed": 512,
+      "signflip_null_mean": 512.0
+    },
+    "triplets_with_any_deployed_super": {
+      "observed": 7,
+      "signflip_null_mean": 28.225,
+      "signflip_null_2.5_97.5": [
+        14.95,
+        44.22499999999999
+      ]
+    }
+  },
+  "n_signflip_draws": 40,
+  "per_target_power": {
+    "constant_kappa0.05": {
+      "triplets_any_target_BH_within": 64,
+      "triplets_any_target_BH_across_64": 64,
+      "targets_BH_across_64_total": 119631,
+      "n_triplets": 64
+    },
+    "constant_kappa0.1": {
+      "triplets_any_target_BH_within": 64,
+      "triplets_any_target_BH_across_64": 64,
+      "targets_BH_across_64_total": 122968,
+      "n_triplets": 64
+    },
+    "constant_kappa0.2": {
+      "triplets_any_target_BH_within": 64,
+      "triplets_any_target_BH_across_64": 64,
+      "targets_BH_across_64_total": 131529,
+      "n_triplets": 64
+    },
+    "constant_kappa0.3": {
+      "triplets_any_target_BH_within": 64,
+      "triplets_any_target_BH_across_64": 64,
+      "targets_BH_across_64_total": 142803,
+      "n_triplets": 64
+    },
+    "constant_kappa0.5": {
+      "triplets_any_target_BH_within": 64,
+      "triplets_any_target_BH_across_64": 64,
+      "targets_BH_across_64_total": 166337,
+      "n_triplets": 64
+    },
+    "constant_kappa1.0": {
+      "triplets_any_target_BH_within": 64,
+      "triplets_any_target_BH_across_64": 64,
+      "targets_BH_across_64_total": 208712,
+      "n_triplets": 64
+    },
+    "proportional_kappa0.05": {
+      "triplets_any_target_BH_within": 27,
+      "triplets_any_target_BH_across_64": 20,
+      "targets_BH_across_64_total": 21,
+      "n_triplets": 64
+    },
+    "proportional_kappa0.1": {
+      "triplets_any_target_BH_within": 39,
+      "triplets_any_target_BH_across_64": 38,
+      "targets_BH_across_64_total": 49,
+      "n_triplets": 64
+    },
+    "proportional_kappa0.2": {
+      "triplets_any_target_BH_within": 48,
+      "triplets_any_target_BH_across_64": 50,
+      "targets_BH_across_64_total": 125,
+      "n_triplets": 64
+    },
+    "proportional_kappa0.3": {
+      "triplets_any_target_BH_within": 50,
+      "triplets_any_target_BH_across_64": 53,
+      "targets_BH_across_64_total": 193,
+      "n_triplets": 64
+    },
+    "proportional_kappa0.5": {
+      "triplets_any_target_BH_within": 56,
+      "triplets_any_target_BH_across_64": 59,
+      "targets_BH_across_64_total": 415,
+      "n_triplets": 64
+    },
+    "proportional_kappa1.0": {
+      "triplets_any_target_BH_within": 56,
+      "triplets_any_target_BH_across_64": 63,
+      "targets_BH_across_64_total": 853,
+      "n_triplets": 64
+    }
+  },
+  "per_target_power_note": "constant: kappa x (cell-mean joint effect) added to every cell (no added cell-to-cell spread); proportional: kappa x (that cell's own joint effect d_ABC,c) added to each cell. t-test over 20 cells, BH at q<0.05.",
+  "wall_seconds": 67.4
+}

@@ -1,0 +1,79 @@
+{
+  "chunks": [
+    {
+      "start": "2026-10-02T13:12:45",
+      "cells": 40,
+      "wall_seconds": 90.4,
+      "encoding_check": {
+        "label": "v3 spotcheck chunk",
+        "n_checked": 40,
+        "n_cells": 40,
+        "all_pass": true,
+        "max_order_violations": 0,
+        "n_positions_tie_reordered": 6,
+        "check": "inputs_v3.check_encoding (token order == counts/median order; counts count-like)"
+      },
+      "free_memory_gb": 12.77
+    },
+    {
+      "start": "2026-10-02T13:14:42",
+      "cells": 40,
+      "wall_seconds": 82.9,
+      "encoding_check": {
+        "label": "v3 spotcheck chunk",
+        "n_checked": 40,
+        "n_cells": 40,
+        "all_pass": true,
+        "max_order_violations": 0,
+        "n_positions_tie_reordered": 2,
+        "check": "inputs_v3.check_encoding (token order == counts/median order; counts count-like)"
+      },
+      "free_memory_gb": 11.87
+    },
+    {
+      "start": "2026-10-02T13:16:15",
+      "cells": 40,
+      "wall_seconds": 84.7,
+      "encoding_check": {
+        "label": "v3 spotcheck chunk",
+        "n_checked": 40,
+        "n_cells": 40,
+        "all_pass": true,
+        "max_order_violations": 0,
+        "n_positions_tie_reordered": 6,
+        "check": "inputs_v3.check_encoding (token order == counts/median order; counts count-like)"
+      },
+      "free_memory_gb": 11.29
+    },
+    {
+      "start": "2026-10-02T13:17:48",
+      "cells": 40,
+      "wall_seconds": 101.0,
+      "encoding_check": {
+        "label": "v3 spotcheck chunk",
+        "n_checked": 40,
+        "n_cells": 40,
+        "all_pass": true,
+        "max_order_violations": 0,
+        "n_positions_tie_reordered": 4,
+        "check": "inputs_v3.check_encoding (token order == counts/median order; counts count-like)"
+      },
+      "free_memory_gb": 12.47
+    },
+    {
+      "start": "2026-10-02T13:19:47",
+      "cells": 40,
+      "wall_seconds": 94.5,
+      "encoding_check": {
+        "label": "v3 spotcheck chunk",
+        "n_checked": 40,
+        "n_cells": 40,
+        "all_pass": true,
+        "max_order_violations": 0,
+        "n_positions_tie_reordered": 2,
+        "check": "inputs_v3.check_encoding (token order == counts/median order; counts count-like)"
+      },
+      "free_memory_gb": 13.18
+    }
+  ]
+}

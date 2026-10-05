@@ -1,0 +1,56 @@
+\subsection*{What deterministic checks catch}
+Run on the eight deployed specifications, the specification linter
+rejected seven: all except the ageing-probe specification lacked the
+code-references section (so their later sections were also numbered out
+of template order), and only 5 of 230 code pointers used the required
+\texttt{repos/<name>/path:LINE} form. Six of the seven pinned reference
+repositories (the manifold specification names none) had been copied
+without their version-control history, so their pins could be matched
+only as text. The run-manifest check found 10 parameters that the runs
+set differently from their specifications (for example, 50 instead of
+200 draws of the degree-preserving null, and 50 instead of 200 cells per
+ablation condition); a written reason existed for one of them. One of
+the 10, the number of control cells, differed only in the attention run
+on MaxToki-1B. The check could compare only values that a run had
+recorded: 66 of the 258 parameter entries in the specifications. The
+other 192 could not be checked, so further differences may have been
+missed. The check also found two manifold quality-gate verdicts recorded
+as passed although one of the gates they required had never been
+computed. The run-manifest check also found that all 75 deployment
+scripts that use random numbers set a seed in the same script. No run
+wrote a run manifest, and 3 of the 8 runs (the ageing probe, circuit
+tracing and exhaustive mapping) recorded no device. No run recorded its
+package versions or which MaxToki revision it loaded (see Materials and
+methods). The package list with pinned versions was saved during the
+in-session audit, after most runs. Some manifold and topology steps used
+a second Python environment whose packages were not recorded (S1~Table,
+L082, L088 and L089).
+
+The number tracer found 1,132 of 1,186 distinct numbers in the run
+summaries (95.4\%) in their run's outputs. Numbers of the same format
+drawn at random were also found 78\% of the time, so tracing exceeded
+chance by 18 percentage points (95\% interval over runs 8--27); the
+excess was smallest in runs with many numeric outputs. A traced number
+can still be described wrongly. For example, the manifold intervals were
+traced correctly to their outputs, and the run summary said how they were
+made: 200 repeats of 80\% subsampling of cell groups, without
+replacement. But the summary called them bootstrap intervals. It presented them as the
+fix the audit had asked for, which was resampling at the unit of inference
+(here the donor). It then used them to call the gate passes robust to
+resampling of cell groups. Cell groups
+from the same donor are not independent, so these intervals are too
+narrow. Resampling donors widens the interval for one gate from
+0.270--0.480 to 0.142--0.540, so its lower end falls below the 0.20 pass
+mark (S1~Table). The checks
+can establish that a document has the required structure, that a
+parameter differs from its default and that a number appears in an
+output. They cannot establish that a null randomises, that an
+intervention edits the right tensor, that the model input is encoded as
+the model expects, that a lookup reads the right rows or that a number
+means what the text says. Twelve of the 13 critical errors in the ledger
+were of this second kind. The thirteenth was an audit summary that,
+after repair, called 60 of the 80 entries in its pipeline-by-pattern
+verdict matrix (75\%) ``clean'', with no new matrix behind that count
+(S1~Table, L090). A number tracer looks for this kind of problem. But we
+ran the tracer only on the run summaries, not on the audit reports, so we
+did not test whether it would have flagged it.

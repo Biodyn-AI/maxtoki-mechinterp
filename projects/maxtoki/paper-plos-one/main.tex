@@ -1,0 +1,2407 @@
+% Template for PLoS
+% Version 3.8 Apr 2026
+%
+% % % % % % % % % % % % % % % % % % % % % %
+%
+% -- IMPORTANT NOTE
+%
+% This template contains comments intended 
+% to minimize problems and delays during our production 
+% process. Please follow the template instructions
+% whenever possible.
+%
+% % % % % % % % % % % % % % % % % % % % % % % 
+%
+% Once your paper is accepted for publication, 
+% PLEASE REMOVE ALL TRACKED CHANGES in this file 
+% and leave only the final text of your manuscript. 
+% PLOS recommends the use of latexdiff to track changes during review, as this will help to maintain a clean tex file.
+% Visit https://www.ctan.org/pkg/latexdiff?lang=en for info.
+%
+%
+% IMPORTANT
+% Below are a few tips to help format manuscript according to our specifications. For more tips to help reduce the possibility of formatting errors during conversion, please see our LaTeX guidelines at http://journals.plos.org/plosone/s/latex
+%
+% There are no restrictions on package use within the LaTeX files except that no packages listed in the template may be deleted.
+%
+% Please do not include colors or graphics in the text.
+%
+% The manuscript LaTeX source should be contained within a single file (do not use \input, \externaldocument, or similar commands).
+%
+% % % % % % % % % % % % % % % % % % % % % % %
+%
+% -- FIGURES AND TABLES
+%
+% Please include tables/figure captions directly after the paragraph where they are first cited in the text.
+%
+% DO NOT INCLUDE GRAPHICS IN YOUR MANUSCRIPT
+% - Figures should be uploaded separately from your manuscript file. 
+% - Figures generated using LaTeX should be extracted and removed from the PDF before submission. 
+% - Figures containing multiple panels/subfigures must be combined into one image file before submission.
+% For figure citations, please use "Fig" instead of "Figure".
+% See http://journals.plos.org/plosone/s/figures for PLOS figure guidelines.
+%
+% Tables should be cell-based and may not contain:
+% - spacing/line breaks within cells to alter layout or alignment
+% - do not nest tabular environments (no tabular environments within tabular environments)
+% - no graphics or colored text (cell background color/shading OK)
+% See http://journals.plos.org/plosone/s/tables for table guidelines.
+%
+% For tables that exceed the width of the text column, use the adjustwidth environment as illustrated in the example table in text below.
+%
+% % % % % % % % % % % % % % % % % % % % % % % %
+%
+% -- EQUATIONS, MATH SYMBOLS, OTHER SPECIAL FORMATTING
+%
+% - For bold symbols, use the \boldsymbol command and not \mathbf. 
+% - For inline equations, please be sure to include all portions of an equation in the math environment.  For example, x$^2$ is incorrect; this should be formatted as $x^2$ (or $\mathrm{x}^2$ if the romanized font is desired).
+% - Do not include text that is not math in the math environment. For example, CO2 should be written as CO\textsubscript{2} instead of CO$_2$.
+% - Avoid capturing simple text as equations, for example $<$.
+% - For inline equations, please do not include punctuation (commas, etc) within the math environment unless this is part of the equation.
+% - When adding superscript or subscripts outside of brackets/braces, please group using {}.  For example, change "[U(D,E,\gamma)]^2" to "{[U(D,E,\gamma)]}^2". 
+% - Do not use \cal for caligraphic font.  Instead, use \mathcal{}.
+% - Avoid splitting for fragmenting a single equation into multiple objects/environments, for example $f(x)$ = $g(x)$ + $h(x)$.
+% - Use math environment for all equations, do not mimic using text.
+% - Avoid using single letters in math mode where possible.
+% - Always use matching parentheses and delimiters, avoid mixing math and text brackets.
+% - Insert spaces around inline equations to ensure proper display after conversion.
+% - Do not use forced numbers for display equation labeling or suppress numbering with \nonumber. 
+%
+% % % % % % % % % % % % % % % % % % % % % % % % 
+%
+% Please contact customercare@plos.org with any questions.
+%
+% % % % % % % % % % % % % % % % % % % % % % % %
+
+\documentclass[10pt,letterpaper]{article}
+\usepackage[top=0.85in,left=2.75in,footskip=0.75in]{geometry}
+
+% amsmath and amssymb packages, useful for mathematical formulas and symbols
+\usepackage{amsmath,amssymb}
+
+% Use adjustwidth environment to exceed column width (see example table in text)
+\usepackage{changepage}
+
+% textcomp package and marvosym package for additional characters
+\usepackage{textcomp,marvosym}
+
+% cite package, to clean up citations in the main text. Do not remove.
+\usepackage{cite}
+
+% Use nameref to cite supporting information files (see Supporting Information section for more info)
+\usepackage{nameref,hyperref}
+
+% line numbers
+\usepackage[right]{lineno}
+
+% ligatures disabled
+\usepackage[nopatch=eqnum]{microtype}
+\DisableLigatures[f]{encoding = *, family = * }
+
+% color can be used to apply background shading to table cells only
+\usepackage[table]{xcolor}
+
+% array package and thick rules for tables
+\usepackage{array}
+
+% create "+" rule type for thick vertical lines
+\newcolumntype{+}{!{\vrule width 2pt}}
+
+% create \thickcline for thick horizontal lines of variable length
+\newlength\savedwidth
+\newcommand\thickcline[1]{%
+  \noalign{\global\savedwidth\arrayrulewidth\global\arrayrulewidth 2pt}%
+  \cline{#1}%
+  \noalign{\vskip\arrayrulewidth}%
+  \noalign{\global\arrayrulewidth\savedwidth}%
+}
+
+% \thickhline command for thick horizontal lines that span the table
+\newcommand\thickhline{\noalign{\global\savedwidth\arrayrulewidth\global\arrayrulewidth 2pt}%
+\hline
+\noalign{\global\arrayrulewidth\savedwidth}}
+
+
+% Remove comment for double spacing
+%\usepackage{setspace} 
+%\doublespacing
+
+% Text layout
+\raggedright
+\setlength{\parindent}{0.5cm}
+\textwidth 5.25in
+\textheight 8.75in
+
+% Bold the 'Figure #' in the caption and separate it from the title/caption with a period
+% Captions will be left justified
+\usepackage[aboveskip=1pt,labelfont=bf,labelsep=period,justification=raggedright,singlelinecheck=off]{caption}
+\renewcommand{\figurename}{Fig}
+
+% Please use the included `plos2025.bst` as your BibTeX style
+\bibliographystyle{plos2025}
+
+% Remove brackets from numbering in List of References
+\makeatletter
+\renewcommand{\@biblabel}[1]{\quad#1.}
+\makeatother
+
+
+
+% Header and Footer with logo
+\usepackage{lastpage,fancyhdr,graphicx}
+\usepackage{epstopdf}
+%\pagestyle{myheadings}
+\pagestyle{fancy}
+\fancyhf{}
+%\setlength{\headheight}{27.023pt}
+%\lhead{\includegraphics[width=2.0in]{PLOS-submission.eps}}
+\rfoot{\thepage/\pageref{LastPage}}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrule}{\hrule height 2pt \vspace{2mm}}
+\fancyheadoffset[L]{2.25in}
+\fancyfootoffset[L]{2.25in}
+\lfoot{\today}
+
+
+
+%% ---- packages added for this manuscript (permitted: the template forbids
+%% only the REMOVAL of its own packages) ----
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{xspace}
+\usepackage{etoolbox}
+
+%% PLOS requires double spacing; keep tables single-spaced so they stay legible
+\usepackage{setspace}
+\doublespacing
+\AtBeginEnvironment{tabular}{\singlespacing}
+\AtBeginEnvironment{longtable}{\singlespacing}
+
+%% Macros
+\newcommand{\maxtoki}{MaxToki-217M\xspace}
+\newcommand{\maxtokibig}{MaxToki-1B\xspace}
+\newcommand{\geneformer}{Geneformer V2-316M\xspace}
+\newcommand{\scfm}{SCFM\xspace}
+
+\newcommand{\PENDING}[1]{\textcolor{red}{\textbf{[PENDING: #1]}}}
+
+%% END MACROS SECTION
+
+
+
+\begin{document}
+\vspace*{0.2in}
+
+\begin{flushleft}
+{\Large
+\textbf{Checking agent-run interpretability of a single-cell foundation model: a controlled evaluation of method specifications and a reviewer-derived audit checklist, with a MaxToki-217M case study}
+}
+\newline
+\\
+Ihor Kendiukhov\textsuperscript{1*}
+\\
+\bigskip
+\textbf{1} Institute of Medical Genetics and Applied Genomics, University of T\"ubingen, T\"ubingen, Germany
+\\
+\bigskip
+
+* ihor.kendiukhov@student.uni-tuebingen.de
+
+\end{flushleft}
+
+\section*{Abstract}
+We evaluated one way to check interpretability analyses that
+large-language-model agents run on biological foundation models. Each
+method was written as an agent specification; outputs were audited with
+a ten-item checklist of peer reviewers' objections to earlier studies.
+An agent used both to run eight interpretability pipelines on the
+single-cell foundation model MaxToki-217M and to audit them. We confirmed 149 errors in the deployment's code and outputs, 13
+of them critical, including intervention code that deleted a transformer
+block and model inputs encoded on the wrong scale. The agent's own audit report found 10\% of a fixed set of 68
+errors that predated it, and no critical one; fresh agents in a blind re-audit found 41--45\%, with or
+without the checklist. In a controlled study of four known-answer tasks,
+all 40 Claude Opus~5.5 runs reached the correct conclusion, with or
+without the specification. Executors handled 94.5\% of pitfalls; review and repair added 2.0--2.8 points; generic reviews
+turned 3 of 40 correct conclusions wrong. In 11 held-out analyses from
+other projects, each in a flawed and a corrected version, every review
+of a flawed version found its error, but about 80\% of
+reviews of corrected versions claimed a serious error that was not one.
+With Opus~5.5, no study showed the checklist finding more errors or
+raising fewer false alarms than an equal-budget generic review. Of the 13 critical errors, author-directed agent checks found 8 first and
+blind re-audits 3. After correction, MaxToki-217M's attention scores,
+sparse-autoencoder features and traced circuits did not beat gene-level
+baselines; attention matched co-expression and beat rewired TRRUST
+networks in RPE1 cells, not K562. Its gene embeddings aligned with
+scGPT's and more with Geneformer's. Hidden states showed no
+developmental order beyond cell type; 14 of 15 features steered a maturity score no more than random features.
+
+\clearpage
+\newgeometry{top=0.85in,left=1in,right=1in,footskip=0.75in}
+\fancyheadoffset[L]{0pt}
+\fancyfootoffset[L]{0pt}
+\linenumbers
+
+\section*{Introduction}
+
+Single-cell foundation models (\scfm{}s) such as
+scGPT~\cite{cui2024scgpt}, Geneformer~\cite{theodoris2023geneformer},
+scFoundation~\cite{hao2024scfoundation} and
+MaxToki~\cite{maxtoki2026} are trained on millions of single-cell
+transcriptomes and are reused for cell-type annotation, gene-network
+inference and in-silico perturbation. Whether their internal
+representations reflect regulatory biology, or mainly re-organise the
+co-expression already present in the training data, cannot be settled by
+benchmark accuracy
+alone~\cite{kedzierska2023assessing,liu2023evaluating,wenteler2024perteval}.
+Mechanistic interpretability asks this question directly: it studies what
+a trained model's internal components represent and how they combine,
+using probes, sparse autoencoders and causal
+interventions~\cite{bricken2023monosemanticity,conmy2023acdc,wang2023ioi,sharkey2025open}.
+
+Such analyses are long chains of code, statistics and interpretation, and
+each link can fail. A null model can fail to randomise; an intervention
+can edit the wrong tensor; a summary can describe a number as something
+it is not. Large-language-model (LLM) agents can now carry out chains of
+this length with little human
+input~\cite{lu2024aiscientist,boiko2023autonomous,mbran2024chemcrow,yang2024sweagent,chan2024mlebench},
+which makes the question of how to check their work practical. Agent
+benchmarks for data-driven science and for reproducing published
+analyses~\cite{chen2024scienceagentbench,siegel2024corebench,starace2025paperbench}
+show that agents often produce plausible results that do not hold up on
+inspection. For interpretability of biological models, a wrong result can
+be confidently stated, internally consistent and hard for a reader to
+detect.
+
+This paper evaluates one answer to that problem. The framework has two
+parts. First, each interpretability method is written as a markdown
+\emph{specification} that an agent follows when running the analysis.
+Each specification is written to a ten-section template, with methods,
+parameters, validation criteria and known pitfalls. Seven of the eight
+deployed specifications lacked the template's code-references section.
+Second, the agent's outputs are checked with an \emph{audit checklist}
+of ten methodological objections that peer reviewers raised repeatedly
+on the author's earlier interpretability studies. We
+deployed the framework on MaxToki-217M, a recently released
+trajectory-aware \scfm{}~\cite{maxtoki2026}. An agent ran eight
+interpretability pipelines over several working sessions. On the last
+day, one of these sessions audited the outputs of all eight with the
+checklist.
+
+We then asked how reliable the resulting outputs were, and what the two
+parts of the framework contribute. We did this in four ways.
+(1)~\emph{Independent verification}: every number in the run summaries was searched for in
+the stored run outputs by code, key statistics were re-derived, and the
+intervention code was unit-tested; every error found was recorded in an
+error ledger with the evidence that confirms it and with who or what found
+it first. (2)~A \emph{blind re-audit} (Study~C): fresh agents audited a
+copy of the project as it stood before its audit, under three
+instructions (the checklist as deployed, a generic version of the
+checklist, or a generic critical review of equal budget), and their
+findings were scored against the ledger. (3)~A \emph{controlled
+execution study} (Study~A): agents performed four analysis tasks built
+from the deployment's data, with or without the specification. Each
+output was kept as it was, and was also given a generic review and,
+separately, a checklist review. After each review, a fresh agent repaired
+the output, with the same repair instruction in both review arms. Graders
+compared the final conclusions with fixed answer keys. They did not know
+the review arm, but they could tell whether the agent had the
+specification. (4)~A \emph{held-out benchmark} (Study~B): reviewers with or
+without the checklist examined analyses from other projects and other
+model families, each in a version with one documented error and in a
+corrected version, so that missed errors and false alarms could both be
+measured. Finally, we re-ran the main MaxToki-217M analyses with corrected code
+and inputs and report what holds for that model. Some deployed analyses,
+such as the topology screen and the ageing probe, were not re-run and are
+not reported (Results).
+
+\subsubsection*{What this study adds, and what it inherits}
+The interpretability methods were developed in the author's earlier
+studies of scGPT and
+Geneformer~\cite{anon2026attention,anon2026spectral,anon2026topology,anon2026sae,anon2026circuits,anon2026manifold,anon2026exhaustive,anon2026ageing};
+MaxToki-217M, the datasets and the agent models are third-party
+resources. What was developed for this study is the framework itself (the
+specifications and the checklist), its deployment on MaxToki-217M, the
+verification and error ledger, the deterministic checks, the three
+controlled studies and the corrected MaxToki-217M analyses
+(Table~\ref{tab:inherited}). The three studies evaluate the framework;
+the MaxToki-217M results are a case study and are stated for that model
+only.
+
+{\footnotesize
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.15}
+\begin{longtable}{@{}p{0.30\linewidth}p{0.17\linewidth}p{0.48\linewidth}@{}}
+\caption{\textbf{What this study developed and what it inherited.}}
+\label{tab:inherited}\\
+\toprule
+\textbf{Component} & \textbf{Origin} & \textbf{Role in this paper} \\
+\midrule
+\endfirsthead
+\multicolumn{3}{@{}l}{\footnotesize\emph{Table \thetable\ continued from previous page.}}\\
+\toprule
+\textbf{Component} & \textbf{Origin} & \textbf{Role in this paper} \\
+\midrule
+\endhead
+\midrule
+\multicolumn{3}{r@{}}{\footnotesize\emph{continued on next page}}\\
+\endfoot
+\bottomrule
+\endlastfoot
+Eight interpretability methods (attention analysis, residual-stream
+spectral geometry, topological screening, sparse-autoencoder atlas,
+circuit tracing, exhaustive mapping and steering, manifold discovery,
+donor-aware ageing probe) & Author's earlier studies of scGPT and
+Geneformer & Inherited. The source papers of four of them (attention
+analysis, topological screening, sparse-autoencoder atlas, circuit
+tracing) are given to agents in Study~A as the source method. \\
+MaxToki-217M and MaxToki-1B & Third party~\cite{maxtoki2026} & Deployment
+target. \\
+Perturb-seq screens, Tabula Sapiens, the Human Lung Cell Atlas, TRRUST, DoRothEA, STRING, GO, KEGG,
+Reactome & Third party & Data and reference sets. \\
+Claude Code and Claude models & Third party (Anthropic) & Agents in the
+deployment and subjects in Studies~A--C. \\
+\addlinespace
+Pipeline specifications (eight markdown files) & This study (written
+at the start of the deployment by Claude Opus~4.7) & First part of the framework; the treatment in
+Study~A's contract arm, where the executor also received the deployed
+specification. \\
+Ten-pattern audit checklist & This study, distilled from six earlier
+peer-review comment sets & Second part of the framework; the treatment in
+the checklist arms of Studies~A--C. \\
+Deployment runs on MaxToki-217M and the in-session audit & This study &
+Source of the error ledger and of the Study~C snapshot. \\
+Independent verification, error ledger, deterministic checker & This
+study & Evaluation of the deployment. \\
+Studies~A, B and C (tasks, items, keys, protocol) & This study &
+Controlled evaluation of the framework. \\
+Corrected MaxToki-217M analyses (fixed intervention hooks, corrected
+input encoding, retrained sparse autoencoders) & This study & Case study
+of MaxToki-217M. \\
+\end{longtable}
+}
+
+\section*{Materials and methods}
+
+\subsection*{Study overview}
+Fig~\ref{fig:overview} shows how the parts of the study fit together. An
+agent ran eight interpretability pipelines on MaxToki-217M by following
+the specifications, over several working sessions. Then, in a single
+session on the last day, it audited its outputs with the checklist (the
+\emph{deployment} and the \emph{in-session audit}). Everything after that was done separately and is the evaluation:
+the independent verification that built the error ledger, the three
+controlled studies, and the corrected MaxToki-217M analyses. The
+controlled studies used fresh agents that had no access to the ledger,
+the answer keys, this manuscript or the project's working notes.
+
+\begin{figure}[H]
+\caption{\textbf{Study overview.} Left: what was deployed. Each
+interpretability method is written as a markdown specification; an agent
+follows the specification to run the analysis on MaxToki-217M over
+several working sessions and writes run summaries. Then, in one session
+on the last day, the agent applies the ten-pattern checklist to the
+outputs of all eight pipelines and repairs what it finds. Right: how the deployment was
+evaluated. Independent verification (number tracing by code,
+re-derivation of statistics from stored per-record outputs, unit tests of
+intervention code, an input-encoding audit) and blind re-audits produced
+an error ledger of confirmed errors in the deployment's outputs.
+Study~C scores blind re-audits of the pre-audit project against that
+ledger; Study~A tests the specification and the checklist on four
+analysis tasks with known answers; Study~B tests the checklist on held-out
+analyses from other projects. The corrected MaxToki-217M analyses re-run
+most of the affected pipelines with corrected code and inputs.}
+\label{fig:overview}
+\end{figure}
+
+\subsection*{The framework}
+
+\subsubsection*{Pipeline specifications}
+Each method is described in one markdown file. The template asks for
+ten sections, in this order: overview; source (citation and pinned code
+commit); inputs; outputs; dependencies; methodology (numbered steps with
+equations and hyperparameters); code references (pointers into the pinned
+reference code); a parameter table with defaults and ranges; validation
+criteria; and known pitfalls. Only one of the eight deployed
+specifications (the ageing-probe one) has all ten. The other seven have
+no separate code-references section. Their code pointers are mostly inside
+the methodology section, and they end with a quick-start section on
+applying the method to a new model (see \emph{What deterministic checks
+catch} in Results). The manifold specification names no pinned commit,
+because its source paper links no code. The specifications for the eight
+pipelines were written on 15 April 2026, at the start of the deployment,
+by Claude Opus~4.7 under the author's direction, from the source papers
+and their code; they are 48,000--96,000 characters long. During the deployment the ten-section
+structure was an instruction to the agent; no code read or checked the
+specifications. A specification therefore worked as a long, structured
+prompt that the agent was asked to follow. The executing agent chose, for
+example, the number of null-model draws and the number of cells where
+compute was limited, and recorded some but not all of these choices.
+
+\subsubsection*{Per-model project folders}
+Model-specific code (loading the checkpoint, mapping genes to tokens,
+encoding cells as model input) lives in a project folder separate from the
+specifications, so that a specification can be pointed at a new model
+without being rewritten. Each pipeline run writes its scripts, logs,
+outputs and an agent-written run summary into its own folder.
+
+\subsubsection*{The ten-pattern audit checklist}
+The checklist (Table~\ref{tab:checklist}) was distilled from six
+peer-review comment sets on the author's earlier interpretability papers.
+For each pattern it gives the objection as a reviewer would state it, a
+diagnostic signature to search for in run outputs and code, and a
+prescription. The deployed version is a full audit specification.
+Besides the ten patterns, it has the other template sections and a
+step-by-step audit workflow: list the runs, check each pattern in each
+run, compare runs, grade severity, propose actions and write a report.
+For each pattern it also lists examples from the MaxToki project and cites
+the review documents that raised it. Studies~A and B, and one arm of
+Study~C, used a shorter \emph{generic} version, about 40\% of the length
+of the deployed file. It keeps the ten pattern entries, without the
+project-specific examples and the citations, and with a few
+project-specific phrases made general. It adds a short opening
+instruction and leaves out the workflow and the other sections. Another
+arm of Study~C received the deployed file. Both versions are in the code
+repository.
+
+{\footnotesize
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.15}
+\begin{longtable}{@{}p{0.17\linewidth}p{0.26\linewidth}p{0.28\linewidth}p{0.24\linewidth}@{}}
+\caption{\textbf{The ten-pattern audit checklist.}}
+\label{tab:checklist}\\
+\toprule
+\textbf{Pattern} & \textbf{Objection} & \textbf{Signature searched for} &
+\textbf{Prescribed repair} \\
+\midrule
+\endfirsthead
+\multicolumn{4}{@{}l}{\footnotesize\emph{Table \thetable\ continued from previous page.}}\\
+\toprule
+\textbf{Pattern} & \textbf{Objection} & \textbf{Signature searched for} &
+\textbf{Prescribed repair} \\
+\midrule
+\endhead
+\midrule
+\multicolumn{4}{r@{}}{\footnotesize\emph{continued on next page}}\\
+\endfoot
+\bottomrule
+\endlastfoot
+\textbf{P1} Weak null or no chance anchor & ``What would chance alone give?''
+& A number without its chance value; a null that only shuffles labels; a
+$p$-value without a named null. & Report the null mean and spread next to
+every load-bearing number; prefer the strictest null. \\
+\textbf{P2} No trivial baseline & ``What does a simpler method give?'' &
+A performance figure without a comparison to expression-only or
+gene-level baselines. & State every capability as a gain over the
+simplest comparator. \\
+\textbf{P3} Endpoint does not match the claim & ``The metric measures
+something else.'' & A regulatory claim resting on a ranking score; the
+same database used to select and to evaluate. & State what the endpoint
+literally measures; weaken the claim to match. \\
+\textbf{P4} Wrong unit of inference & ``Your unit is donors, not
+cells.'' & $p$-values over cells for donor-level claims; random
+cross-validation splits when rows share a factor. & Name the unit;
+group resampling and splits by the shared factor. \\
+\textbf{P5} Selection-driven inflation & ``You selected on one property
+and tested another.'' & Hand-picked subsets; ranking and testing on the
+same data. & Separate selection from evaluation; control the selected
+property. \\
+\textbf{P6} No positive control & ``Could the pipeline detect a signal at
+all?'' & A negative result with no planted or known-true signal. & Run a
+synthetic and a real positive control first. \\
+\textbf{P7} Generalisation from one condition & ``One cell line, one
+architecture.'' & Conclusions from one dataset, tissue or model without
+a scope statement. & Replicate on a held-out condition or state the
+scope. \\
+\textbf{P8} Unknown stability & ``What is the interval? Another seed?'' &
+Point estimates without intervals, threshold sweeps or seed checks. &
+Bootstrap at the unit of inference; report threshold and seed
+sensitivity. \\
+\textbf{P9} Causal overreach & ``Say `is consistent with', not
+`confirms'.'' & Causal verbs on correlational evidence. & Weaken the verb
+or run the intervention. \\
+\textbf{P10} Missing reproducibility scaffolding & ``Provide code,
+environment and compute.'' & Cited scripts absent; no pinned environment,
+seeds or compute record. & Freeze environment and seeds; publish every
+script; report compute. \\
+\end{longtable}
+\begin{flushleft}
+Each row is an
+objection that reviewers raised repeatedly on the author's earlier
+interpretability papers, rewritten so that an agent can search for it.
+AUROC is the area under the receiver-operating-characteristic curve (0.5
+is chance); a null model is a randomised version of the data that keeps
+some structure and destroys the effect under test.
+\end{flushleft}
+}
+
+
+\subsubsection*{What was checked by code, by agent judgment, or by a person}
+Table~\ref{tab:checks} lists each requirement the framework imposes and
+how it was checked during the deployment. Apart from pass/fail flags that
+two pipelines computed from their own numbers, every check was an agent
+judgment; the author's role was to start runs, answer questions, and ask
+whether issues had been addressed. To make the distinction testable we
+wrote a deterministic checker (see \emph{Deterministic checks} below) and
+report what it can and cannot detect.
+
+{\footnotesize
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.15}
+\begin{longtable}{@{}p{0.22\linewidth}p{0.36\linewidth}p{0.36\linewidth}@{}}
+\caption{\textbf{How the framework's requirements were checked.}}
+\label{tab:checks}\\
+\toprule
+\textbf{Requirement} & \textbf{During the deployment} & \textbf{Deterministic checker} \\
+\midrule
+\endfirsthead
+\multicolumn{3}{@{}l}{\footnotesize\emph{Table \thetable\ continued from previous page.}}\\
+\toprule
+\textbf{Requirement} & \textbf{During the deployment} & \textbf{Deterministic checker} \\
+\midrule
+\endhead
+\midrule
+\multicolumn{3}{r@{}}{\footnotesize\emph{continued on next page}}\\
+\endfoot
+\bottomrule
+\endlastfoot
+Specification has the ten sections, in order & Instruction to the agent;
+not checked & Detects missing or misordered sections. \\
+Pinned code and code references resolve & Agent wrote commit hashes; not
+checked & Detects unresolvable pins, malformed references, missing paths
+and lines. \\
+Parameters used equal the specification, or the deviation is justified &
+Agent's choice; partly noted in code comments & Detects deviations from
+machine-readable defaults and ranges where the run records the value;
+cannot judge whether a deviation is acceptable. \\
+Null models actually randomise & Agent judgment (audit pattern P1) &
+Checks null size only; cannot tell whether a null randomises. \\
+Trivial baselines and positive controls exist & Agent judgment (P2, P6) &
+Detects whether the specification has a labelled slot; cannot judge
+adequacy. \\
+Intervals name their method and resampling unit & Agent judgment (P4, P8)
+& Points to interval statements without a method; cannot judge
+correctness. \\
+Wording matches the evidence & Agent judgment (P3, P9) & Lists causal
+words for a reader; cannot judge context. \\
+Every reported number comes from the run's outputs & Not checked & Searches the stored outputs for
+each number and gives the rate of chance matches; cannot judge
+meaning. \\
+Pre-registered quality gates are computed and not loosened & Two
+pipelines computed their own pass/fail flags & Recomputes stored gate
+flags and detects uncomputed gates. \\
+Seeds, environment, device and checkpoint are recorded & Agent judgment
+(P10) & Detects scripts that use random numbers without a seed, and runs
+with no device, package-version, checkpoint or run-manifest record;
+cannot tell whether every random call uses the seed. \\
+Hypothesis retirement in automated loops & Described in the
+specifications (retire after two negatives in a row); not coded in any
+pipeline. A scripted batch of six hypotheses in the topological screen
+coded its own promote, inconclusive or retire label, with a stop after
+three retires in a row that was never reached; a manual review later
+changed 4 of the 6 labels & Detects whether a decision log exists. \\
+Go/no-go decisions on expensive runs & Author's prompts; not logged &
+Not checkable from files. \\
+\end{longtable}
+\begin{flushleft}
+``During
+the deployment'' describes what was in place when the eight runs and the
+in-session audit were carried out. ``Deterministic checker'' describes
+what the checker written afterwards can detect by reading files; what it
+cannot detect remains a matter of judgment.
+\end{flushleft}
+}
+
+
+\subsection*{The MaxToki-217M deployment}
+
+\subsubsection*{Model and data}
+MaxToki-217M~\cite{maxtoki2026} is a Llama-architecture autoregressive
+transformer with 11 transformer blocks, hidden size 1,232, 8 attention
+heads per block and a vocabulary of 20,275 tokens, 20,271 of them genes (Hugging Face
+\texttt{theodoris-lab/MaxToki}). The downloaded weight files match
+revision \texttt{21aa7b7f} byte for byte. That was the \texttt{main}
+branch on the download day. The same bytes are also at earlier and later
+revisions, so the hashes confirm the weights but not the exact revision.
+The model exposes 12 hidden states, called layers 0--11 below. Layer~0
+is the token embedding. For $l$ from 0 to 10, layer~$l$ is the input of
+transformer block~$l$ (blocks counted from 0). Layer~11 is the output of
+the last block after the final normalisation. Layer-8 attention is the
+attention inside block~8. One attention run also used MaxToki-1B. Every pipeline gave
+the model one cell per sequence (about 1,000--2,900 tokens per cell); no
+multi-cell trajectory inputs were used. Cells came from the Replogle
+essential-gene Perturb-seq screens in K562 and
+RPE1~\cite{replogle2022perturbseq} (the K562 cells from the filtered public
+copy in the Hugging Face dataset \texttt{arcinstitute/State-Replogle-Filtered},
+and the RPE1 cells from the scPerturb copy~\cite{peidli2024scperturb}),
+the Adamson CRISPR-interference
+screen~\cite{adamson2016perturbseq} (in the processed form distributed with
+GEARS~\cite{roohani2024gears}), Tabula
+Sapiens~\cite{tabulasapiens2022} and, for the external-lung panel of the
+topological hypothesis screen only, 1,500 cells from the Krasnow Lab Human
+Lung Cell Atlas~\cite{travaglini2020lung} (Smart-seq2 data; CELLxGENE dataset
+version \texttt{c88e0403-da93-40f4-99b5-f5fdeb81a82c}). Reference sets were
+TRRUST~v2~\cite{han2018trrust}, ChIP-seq target sets from
+DoRothEA~\cite{garcia-alonso2019dorothea}, the STRING protein-interaction
+network~\cite{szklarczyk2023string}, and GO
+biological-process~\cite{ashburner2000go}, KEGG~\cite{kanehisa2000kegg}
+and Reactome~\cite{gillespie2022reactome} gene sets. In the
+deployment, DoRothEA was used only in the audit's repairs of the
+transcription-factor test; the corrected analyses use it for the same
+test. STRING was used by the spectral-geometry, topology and SAE-atlas
+runs. The gene sets were used mainly to annotate SAE features. The GO,
+KEGG and Reactome sets are the Enrichr libraries
+GO\_Biological\_Process\_2023, KEGG\_2021\_Human and Reactome\_2022, as
+named in the script of an earlier project that built them. The
+spectral-geometry and SAE-atlas runs also read GO terms, including
+cellular-component terms, from a gene-to-GO table that appears to be the
+one distributed with GEARS~\cite{roohani2024gears}. No file records which
+release of DoRothEA or STRING, or which version of that gene-to-GO table,
+was used.
+
+\subsubsection*{Pipelines, compute and supervision}
+Table~\ref{tab:pipelines} lists the eight pipelines and what was run.
+All model computation of the deployment and of the corrected analyses ran
+on one Apple-silicon MacBook Pro laptop with
+32~GB unified memory. It used the PyTorch Metal (MPS) backend in 32-bit
+floating point; some analysis ran on the same machine's CPU. The run
+files do not name the chip. The machine that holds the files today has
+an Apple M2 Pro and is probably the same one, but no file proves it.
+From the first to the last run file the deployment spanned 21.9 days (15 April to 7 May 2026), with
+files written on 11 of those days. Log files cover 47.8~hours of
+computation when overlapping runs are counted once. The agent was Claude
+Opus~4.7, run through Claude Code (Anthropic). The run files do not
+record the model, and the session transcripts were not kept; the model is
+known from the author, and a usage note that the agent wrote on 8 May
+2026 also names it. The one automated hypothesis loop, in the
+spectral-geometry pipeline, called Claude Sonnet (version not recorded).
+The author typed 73
+prompts during the deployment. Supervision time was not logged.
+
+{\footnotesize
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.15}
+\begin{longtable}{@{}p{0.20\linewidth}p{0.28\linewidth}p{0.36\linewidth}r@{}}
+\caption{\textbf{The eight pipelines as run on MaxToki-217M.}}
+\label{tab:pipelines}\\
+\toprule
+\textbf{Pipeline} & \textbf{Question} & \textbf{What was run} & \textbf{Log h} \\
+\midrule
+\endfirsthead
+\multicolumn{4}{@{}l}{\footnotesize\emph{Table \thetable\ continued from previous page.}}\\
+\toprule
+\textbf{Pipeline} & \textbf{Question} & \textbf{What was run} & \textbf{Log h} \\
+\midrule
+\endhead
+\midrule
+\multicolumn{4}{r@{}}{\footnotesize\emph{continued on next page}}\\
+\endfoot
+\bottomrule
+\endlastfoot
+Residual-stream spectral geometry & How does each layer's representation
+of genes change with depth? & Per-layer singular-value geometry,
+effective rank and stability across cell samples; 2,000 TS immune cells;
+a later cross-model comparison with Geneformer V2-316M. & 3.6 \\
+Attention-derived regulatory networks & Do attention maps recover
+regulator--target pairs? & Layer-8 attention against TRRUST and against
+knockdown responses; four runs (K562, RPE1, Adamson with MaxToki-217M;
+K562 with MaxToki-1B). & 8.8 \\
+Topological hypothesis screen & Does higher-order geometry of gene pairs
+carry regulatory information? & A subset of the catalogue (21 of 141
+hypotheses had code); the strictest null at 3 of 12 layer states; a
+cross-model comparison with scGPT. & 2.6 \\
+SAE atlas & What do sparse features of the residual stream represent? &
+TopK SAEs (4,928 features, $k=32$) at all 12 layer states, trained on 500
+K562 cells; annotation; a transcription-factor specificity test;
+feature patching. & 10.1 \\
+SAE circuit tracing & Which feature-to-feature edges carry causal
+influence? & Ablation-based edges from 30 features at each of four layers
+(200 K562 cells); a CRISPRi direction-of-change test. & 4.2 \\
+Exhaustive mapping and steering & Is the computation built from
+combinatorial logic, and can features steer cell state? & Edges from
+1,000 layer-5 features (20 cells); four feature triplets (50 cells);
+steering at five layers (50 TS immune cells). & 7.7 \\
+Manifold discovery & Is there a recoverable developmental ordering of
+cells? & A pre-set hematopoietic ordering and 18 candidate orderings,
+scored with quality gates on cell-group centroids from TS donors. & 15.2 \\
+Donor-aware ageing probe & Is donor age encoded? & First stage only; its
+gate failed. & 1.5 \\
+\end{longtable}
+\begin{flushleft}
+``Log
+hours'' is the span covered by each pipeline's log files, with
+overlapping runs counted once; it is laptop wall-clock time, not GPU
+time, and can include idle time. Model computation ran on one laptop;
+the runs that recorded a device used the Apple-silicon MPS backend (one
+also used the CPU). The 12 layer states are the hidden states the model
+exposes: the token embedding (layer~0) and the outputs of its 11
+transformer blocks (layers 1--11; layer~11 is taken after the final
+normalisation). TS, Tabula Sapiens; SAE, sparse autoencoder.
+\end{flushleft}
+}
+
+
+\subsubsection*{The in-session audit}
+On the last day of the deployment the agent wrote the audit specification
+and applied the checklist to all eight pipelines in one working session.
+Earlier that day the same session had extended the topological hypothesis
+screen, so for that pipeline it graded its own same-day work. All other
+runs, including the first run of that screen, had been made in other
+sessions. The agent wrote an 8~$\times$~10
+matrix of free-text verdicts (pipeline $\times$ pattern) and a list of
+proposed repairs, and then carried out two rounds of repair, each started
+by a prompt from the author. From the audit request to the last repair
+took 3.7~hours. The audit sweep read mainly the run summaries, plus
+selected output tables and scripts, and re-ran no model. Three repair
+steps did run MaxToki-217M again: a re-extraction of the lung cells with a
+new sampling seed, a targeted re-run of the transcription-factor test for
+GATA1, and a small cell-level benchmark.
+
+\subsection*{Independent verification and the error ledger}
+After the deployment, each claim in the run summaries and each number
+they report was checked in four ways. (i)~A deterministic number tracer
+searched each run's stored outputs for every number in its summary,
+together with a chance rate for such matches. (ii)~Key statistics were
+re-derived from stored per-record outputs with new code (for example,
+direction-of-change predictions were rescored against constant-sign
+baselines on the identical records; null models were re-sampled and
+checked for actual randomisation). (iii)~Intervention code was read
+against the transformer library source and unit-tested: an edit of zero
+must leave the output unchanged, an edit at layer~$l$ must leave earlier
+layers unchanged, and combined edits must differ from single edits.
+(iv)~The model-input encoding of every run was compared with the
+encoding the model expects. Claude Opus~5.5 agents ran checks (i)--(iv)
+in working sessions that the author started and directed. Some of these
+checks followed up points raised by a human reader from outside the
+project (not the author). So an error credited to independent verification was found
+by an agent doing a directed check, not by an agent working on its own.
+Further errors came from the blind re-audits
+of Study~C: every finding that matched no ledger entry was checked against
+the full project by a separate agent, which confirmed or rejected it with
+code. This agent's confirming code was not kept; the ledger rows give
+the recomputed values. Four errors were first pointed out by the human reader.
+Independent verification then confirmed each of them from the stored
+files and code.
+
+Each confirmed error is one row of the ledger (S1~Table), with its
+location, the deterministic evidence that confirms it, its type (code
+bug, wrong statistic, missing baseline or null, wrong description,
+unsupported claim, reproducibility), the checklist pattern it falls
+under (or ``outside the checklist''), whether it was present before the
+in-session audit (from file timestamps), who or what first found it, and
+whether the in-session audit report caught it. The full ledger in the code
+release also records who or what confirmed each error. Severity was graded as \emph{critical} (a headline result or claim cannot
+stand), \emph{major} (it stands only with material qualification) or
+\emph{minor}. The ledger covers the deployment's code, logs, outputs, run
+summaries and audit reports.
+
+\subsection*{Subject agents and context control}
+All agents in the pre-registered parts of the three controlled studies
+(executors, reviewers, repairers and graders) were Claude Opus~5.5
+(\texttt{claude-opus-5-5}). In the exploratory arm of Study~A (described
+below), the executors, reviewers and repairers were Claude Haiku~4.5 and
+the graders were Opus~5.5. All agents were run as Claude Code workflow
+subagents of the built-in read-only type with the model set explicitly.
+We used this agent type because it starts
+without project instruction files and without the author's memory notes,
+both of which contain descriptions of earlier errors; we checked this with
+a probe agent before the studies. The agents can read files and run
+shell commands. They were asked to run all analyses as inline Python
+(\texttt{numpy}, \texttt{pandas}, \texttt{scipy}, \texttt{scikit-learn};
+CPU only, at most 9~minutes per command) without writing files, and to
+read only inside their task folder. Deliverables were returned as
+structured output and written to disk by the harness. Study~A task folders and Study~B item folders were placed
+at a neutral path under opaque names, so that folder names revealed
+neither the study, the arm nor the status of an item. After each study we
+scanned every tool call of the subject agents in its pre-registered part:
+341 executors, reviewers, repairers and re-auditors in all (200 in
+Study~A, 132 in Study~B and 9 in Study~C). Graders were meant to read the
+keys and were not scanned. We looked for any access to the project
+repository, the answer keys, the protocol files other than the checklist
+given to a reviewer, the author's notes, this manuscript, or the folder
+of another task or item. No subject agent accessed any of them. The
+subject agents of the exploratory Haiku arm were checked in a separate
+scan (see below and S2~Appendix). We also checked whether any agent
+read a file that another agent had written. Twenty-five agents used a
+scratch folder that the session shares between agents. Three of them
+wrote temporary files there. The other 22 only ran a command to make sure
+the folder existed. Six of these 22 also listed the folder and so saw the
+names of other agents' files; none opened such a file.
+
+In Study~A task T1 (whether layer-8 attention encodes TRRUST
+regulator--target pairs in RPE1 cells), a Claude
+Haiku~4.5 executor from the first run of the exploratory arm left a
+script in the task folder. That run was set aside (see \emph{Study A}
+below). All ten Opus~5.5 repair agents of T1 in the contract arm (the
+agents that revised a deliverable after its review) opened this script. The contract arm is the Study~A arm in which the
+executor also received the deployed specification. All ten of their
+deliverables reached the correct verdict. Leaving out the T1
+contract-arm runs does not change any Study~A result. For example, a
+checklist review followed by repair still raised the share of pitfalls
+handled by 2.9 percentage points over no review (95\% bootstrap interval
+over the remaining 35 executor runs, 0.7 to 5.1). Graders of these
+deliverables also opened that script.
+Every task and item folder was afterwards checked to be identical to its
+source.
+Reasoning effort was the same session default for all agents.
+
+The design, outcomes and analyses were written down before the studies
+were run, and the answer keys were frozen by hash before the studies that
+used them (S2~Appendix). We call this protocol pre-registered in that
+sense: it was frozen by file hash and logged before the studies, but it
+was not lodged in a public registry. The protocol has three amendments, all given in
+S2~Appendix. Amendment~1 was logged on 1 October 2026, after Study~C had run
+and before Studies~A and B started. It replaced one Study~A task, split
+Study~A into two batches with the same protocol, and excluded one Study~B
+pair that failed its own verification. Amendment~2 added the exploratory
+Haiku arm described below, after the results of Study~A task T2 were
+known. Amendment~3, logged before that arm was re-run, set aside the
+arm's first run and gave every agent its own folder.
+
+\subsection*{Study C: blind re-audit of the deployment}
+We used file timestamps to rebuild a snapshot of the project as it stood
+before the in-session audit started. The snapshot held all run code, logs
+and configuration files, the specifications and the run summaries. It
+also held most outputs smaller than 5~MB, and nine outputs of 5--20~MB
+chosen because they hold the per-gene-pair or per-cell-group data behind
+headline numbers. Every other output was replaced by a listing of its
+name, size and shape. Where the audit had edited a summary in place, we
+removed its dated audit additions. The audit files, all manuscript folders and
+every later file were excluded. The reference set was the 68 ledger
+errors that had been logged when the study started and were present in
+this snapshot (6 critical, 25 major, 37 minor). When the set was frozen,
+60 of them had been confirmed. The other 8 (3 critical, 3 major, 2 minor)
+were confirmed later: 6 by new analyses, 1 by reading the code and 1 by
+a literature check. All 68 are in S1~Table. Three arms received
+the same project description, output format and budget instruction
+(``Work as a careful expert would in about one working day. You may use
+up to roughly 150 tool calls''): the checklist as deployed (the full
+audit specification, with its project-specific examples and its step-by-step audit workflow, which
+the prompt asked the agent to follow), the generic checklist (the ten
+pattern entries only), or an instruction to review the project critically
+before publication. Each arm was run three times.
+
+Two graders, given the ledger and the audit's findings, judged for every
+ledger error whether the audit detected it (\emph{yes}: a finding
+identifies the same problem clearly enough that acting on it would lead
+to the fix; \emph{partial}: it points at the same result or code with a
+related but wrong or incomplete concern; \emph{no}), and matched every
+finding to ledger rows. A third agent resolved disagreements. Findings
+that matched no ledger row were checked by a fourth agent against the
+snapshot and classified as real error, real but trivial, false alarm, or
+undecidable; real errors were then verified against the full repository
+and added to the ledger. The in-session audit was scored on the same 68
+errors from its written sweep report, made before the repair rounds. The
+Study~C graders did not score it. Its score is the ledger's record of
+whether that report caught each error (yes, partly or no). The
+independent verification made this record when it built the ledger,
+before Study~C ran. The record was not blinded, and no second grader
+checked it. ``Partly'' means that the report flagged
+the area but not the actual error.
+
+\subsection*{Study A: controlled execution study}
+Four analysis tasks were built from the deployment's data
+(Table~\ref{tab:tasks}). Each task asks a question about MaxToki-217M
+that the deployment had answered, gives the data needed to answer it,
+and asks for a report with a verdict, estimates with uncertainty, and a
+complete analysis script. Each task has known pitfalls into which the
+deployment fell (for example, a 50\% baseline for a direction-of-change
+score whose classes are unbalanced). The pitfalls are not mentioned in
+the task brief.
+
+{\footnotesize
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.15}
+\begin{longtable}{@{}p{0.06\linewidth}p{0.30\linewidth}p{0.22\linewidth}p{0.36\linewidth}@{}}
+\caption{\textbf{Study A tasks.}}
+\label{tab:tasks}\\
+\toprule
+& \textbf{Question} & \textbf{Key verdict} & \textbf{Main pitfalls (not stated in the brief)} \\
+\midrule
+\endfirsthead
+\toprule
+& \textbf{Question} & \textbf{Key verdict} & \textbf{Main pitfalls} \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+T1 & Do layer-8 attention scores encode TRRUST regulator--target pairs
+(RPE1 cells)? & Not supported (``inconclusive'' accepted under stated
+conditions) & Gene-level properties of targets; a degree-preserving null
+that actually rewires; few transcription factors as the resampling unit;
+model-free pair signals. \\
+T2 & Do SAE-circuit predictions get the direction of change after a
+CRISPRi knockdown right (K562)? & Not supported (``inconclusive''
+accepted under stated conditions) & Unbalanced classes (50\% is not
+chance); constant-sign predictors; records clustered by silenced gene; a
+model-free target-direction baseline. \\
+T3 & Are SAE features that respond to a transcription factor's knockdown
+specific to its target genes? & Not supported & Rare and long genes
+dominate feature gene lists; specificity requires comparison with other
+factors' targets; threshold search; one factor is not the question. \\
+T4 & Is MaxToki-217M's gene-embedding geometry aligned with scGPT's, and
+how does that compare with Geneformer V2-316M? & Aligned with scGPT, but
+clearly less than with Geneformer & scGPT rows must be looked up by
+token id; in-sample canonical correlation has a high chance level; genes
+are the resampling unit. \\
+\end{longtable}
+\begin{flushleft}
+Each task's data are a fixed snapshot of
+the deployment's outputs, except T2. The deployed circuit edges were made
+by an intervention hook that deleted a transformer block, so T2's circuit edges come from a re-run
+of the deployed circuit tracing with corrected hooks (S2~Appendix,
+Amendment~1). The re-run used the same cells, input encoding, sparse
+autoencoders and source features as the deployment. Each answer key
+refers to its task's data. T2 and T3 use sparse-autoencoder features trained on the deployment's incorrectly
+encoded inputs (see \emph{Errors in the deployment's outputs} in
+Results); this does not affect the tasks as analysis exercises, because
+their keys were computed on the same data.
+\end{flushleft}
+}
+
+
+In the \emph{paper} arm the agent received the brief, the data and the
+source paper of the method. In the \emph{contract} arm it also received
+the deployed specification and one sentence asking it to follow it (the
+arm names are those of the pre-registration, S2~Appendix). Both arms
+therefore had the same task information and the same access to the
+source method. Each executor output was then (a)~left as is,
+(b)~reviewed by a fresh agent instructed to review it critically, or
+(c)~reviewed by a fresh agent instructed to apply the generic checklist;
+in (b) and (c) a fresh agent then revised the deliverable given the
+review points, with the same repair instruction in both arms. Review
+prompts had the same budget sentence (``Spend about the effort of a
+careful two-hour expert review; you may use up to roughly 60 tool
+calls.''). Each task--arm cell had five
+independent executor runs, giving 40 executor runs and 120 final
+deliverables.
+
+Each answer key states the correct verdict and any conditions under which
+a hedged verdict also counts as correct, key numbers with tolerances,
+six pitfalls, each with what correct and incorrect handling looks like,
+and tempting false statements. Each key was written by one agent. Its key numbers were computed by a
+script that reads only the task's data. A second agent re-derived the key
+numbers with its own code, and the keys were then frozen by hash. Two graders scored each deliverable against the key;
+a third grader decided when the first two disagreed on the primary
+outcome. Before grading, words that could reveal the arm (such as
+``specification'', ``review'' and ``repair'') were replaced by a
+placeholder in the deliverable. Graders also read the task brief, which in
+the contract arm points to the specification file, so they could tell the
+executor arm. Only the review arm was hidden from them.
+
+The primary outcome was a correct verdict. Secondary outcomes were the
+share of pitfalls handled (yes~=~1, partly~=~0.5, no~=~0), the number of
+materially false statements, key numbers within tolerance, the share of
+review points that a grader judged invalid, verdict changes caused by
+repair, and whether the returned analysis script reproduced the reported
+estimates. For this last outcome, the harness ran each script on the
+task data with the same Python interpreter that the subjects used, with a
+20-minute limit. Scripts that stopped while other scripts shared the
+machine were run again, alone or two at a time, with a 60-minute limit;
+none of these needed more than 10~minutes. A reported estimate counted as
+reproduced when the script printed a number of the same name that agreed
+with it within 0.005 or within 1\% of its value, whichever was larger.
+
+There were four primary contrasts. The first compared the contract and
+paper arms without review. It used a Fisher exact test, the risk
+difference with a Newcombe interval~\cite{newcombe1998interval}, and a
+Mantel--Haenszel test stratified by task. The other three compared review
+arms on the same executor outputs: checklist versus generic, checklist
+versus none, and generic versus none. These used exact McNemar
+tests~\cite{mcnemar1947note}. We applied Holm
+correction~\cite{holm1979simple} across all four contrasts.
+
+Because every Opus~5.5 deliverable reached the correct verdict on the
+first task to finish (T2), we added an exploratory arm after that task's
+results were known, while the other tasks were still running
+(Amendment~2): the same design with Claude Haiku~4.5 as executor, reviewer
+and repairer, and the same Opus~5.5 graders and keys. A first run of this
+arm was set aside and not analysed. Its Haiku agents did not keep to the
+instruction not to write files: they wrote scripts into the shared
+temporary folder and into shared task folders, where other agents could
+read them, and some did. The arm was then run again with one folder per agent, each holding
+links to the task files (Amendment~3, S2~Appendix). Only the re-run is
+reported. S2~Appendix describes the checks of which files its agents
+read. Five reviewers opened the folder of the executor whose deliverable
+they were reviewing, because the deliverable named it. Every read of a
+file in the shared temporary folder was of a file that the reading agent
+had written itself. The arm is reported separately and does not enter the
+pre-registered contrasts.
+
+\subsection*{Study B: held-out audit benchmark}
+Study~B used analyses that played no part in building the checklist.
+They came from three other projects by the author. One studied
+Cell2Sentence (C2S-Scale-Gemma-2-2B)~\cite{rizvi2025c2sscale} cell
+embeddings. One studied the ESM-2 (650M)~\cite{lin2023esm2} protein
+language model. One studied frozen scGPT, Geneformer V2-316M and
+STATE-SE~\cite{adduri2025state} cell embeddings, together with
+gene-regulatory-network and perturbation benchmarks, including the
+Perturb-seq data of Norman et al.~\cite{norman2019exploring} as
+distributed by scPerturb~\cite{peidli2024scperturb}. One pair used the
+fetal human gut atlas of Elmentaite et al.~\cite{elmentaite2020gut}, and
+three used proteins and residue annotations from
+UniProtKB/Swiss-Prot~\cite{uniprot2025}. Four of the 11 pairs
+in the study use no model at all (two label-building steps and two
+benchmarks). Each analysis was rebuilt as a self-contained package (data,
+code, outputs and a results summary written as the original analyst would
+have written it) in a \emph{flawed} version with exactly one documented
+error and a \emph{clean} version that differs only in that error. Of
+twelve planned pairs, nine had a natural error that had been found and
+fixed after the fact. The other three had a planted overclaim of causal
+or mechanistic meaning in the summary (the checklist's pattern P9, for
+which the pool had no natural example). Every package was checked by
+code: the flawed version reproduces its wrong result, the clean version
+the correct one, and comments or names that hinted at the error were
+removed. One natural pair failed this check and was dropped, leaving 22
+items (11 flawed, 11 clean; 6 errors inside the checklist's patterns and
+5 outside, such as a circular statistic that breaks on evenly spread
+angles or a row-index join that matched the wrong cells).
+
+Each item was reviewed three times with the generic checklist and three
+times with a generic critical review, with the same budget sentence in
+both arms (``Spend about the effort of a careful one-hour expert review;
+you may use up to roughly 50 tool calls.''). Two graders with the item's key judged
+whether a review detected the documented error under a pre-written
+detection rule, and classified every finding as the documented error,
+another real problem, a false alarm, a minor or style point, or disputed;
+a third grader resolved disagreements, and a verifier agent resolved
+disputed findings by running code on the package. There were three
+outcomes. The first was sensitivity: the share of reviews of flawed items
+that found the documented error. The second was the share of reviews of
+clean items with at least one false alarm. A finding counted as a false
+alarm in one of two ways. In the first, the graders judged that it
+claimed a problem that does not exist, checked against the item's key and
+the data, and that it said a headline result or claim was wrong. In the
+second, a grader marked the finding as disputed and the verifier agent,
+after running code on the package, ruled it a false alarm. These findings
+counted at any severity, whether or not they concerned a headline result.
+The third was the number of other real problems found per review.
+
+After the results were known, we also sorted the false alarms about a
+main result that the graders had marked into four groups: correct but
+changing no stated conclusion; correct and already stated in the
+analysis's own summary or README; factually wrong; or a real problem that
+the key had missed. This step was not pre-registered. Each claim was
+labelled by one agent, with no second rater. False alarms that the
+verifier agent ruled after a grader dispute were not sorted.
+
+\subsection*{Corrected MaxToki-217M analyses}
+The verification found that the intervention code of two pipelines (SAE
+circuit tracing, and exhaustive mapping and steering) edited the wrong
+tensor and that every run except the RPE1 attention run encoded the model
+input incorrectly (Results). We therefore re-ran the main affected
+analyses (those not re-run are listed in Results) with three changes.
+First, the model input follows MaxToki's rank-value encoding. Each gene's count is divided by that gene's median in the
+Geneformer gene-median table (gc104M) that the MaxToki tokenizer uses,
+and genes are ranked from high to low. The K562 and Adamson files store
+only $\log(1+\text{CP10k})$ values, where CP10k means counts scaled so
+that each cell sums to 10,000. For these files we undid the log with
+$\exp(x)-1$, divided by the smallest non-zero value in the cell and
+rounded. This gives whole-number counts up to one factor per cell, so the
+gene ranking is the same as from the raw counts. For the RPE1, Tabula
+Sapiens and lung files we used the stored raw counts. Second, the
+intervention hooks edit the input of transformer block~$l$, which is the
+tensor that the layer-$l$ sparse autoencoder reads. They add each edit to
+the live activations, so edits at several layers add up instead of
+overwriting each other. Third, we retrained all twelve sparse
+autoencoders (one per layer state) on correctly encoded cells. Every
+model input was checked against the expected token order before each
+forward pass. Each re-run that edits the model had sanity checks (zero
+edit gives zero effect; edits change only later layers; combined edits
+differ from single ones; a feature that never fires changes nothing). The
+key numbers of each corrected analysis were computed a second way with
+separate code. Other agents also re-derived them with their own code:
+three for the RPE1 attention analysis and one for the cross-model
+comparison (S3~Appendix). Methods
+specific to each analysis are given with its result and in S3~Appendix.
+
+\subsection*{Deterministic checks}
+The checker has three parts: a specification linter (presence and order
+of the ten sections, a resolvable pinned commit, code references in the
+required form, a machine-readable parameter table), a run-manifest check
+(parameters used versus the specification's defaults and ranges, gate
+flags recomputed from stored values) and the number tracer described
+above. It reads files only and runs no model. Its code and outputs are in
+the repository.
+
+\subsection*{Statistics}
+Proportions are reported with Wilson 95\% intervals~\cite{wilson1927probable}
+unless stated otherwise. Bootstrap intervals are percentile intervals.
+The one exception is the feature-triplet analysis, which uses basic
+bootstrap intervals over cells, as stated with its result. The resampling
+unit is the item in Study~B, the reference error in Study~C, the executor run in Study~A, the
+deployed pipeline run (eight in all) for the number tracer, and the knockdown
+(silenced gene), transcription factor, gene, donor or cell in the
+MaxToki-217M analyses. The spectral-geometry analysis uses jackknife
+intervals instead, over blocks of cells or groups of genes. In Study~A
+the main intervals resample executor runs pooled over all four tasks. The
+pre-registered plan resamples runs within each task. Results report
+intervals of that kind as well, for the main study and for the Haiku~4.5
+arm. Study~A bootstrap intervals use 4,000 draws; those of Studies~B and
+C use 2,000. In the MaxToki-217M analyses, multiple testing within a
+family of tests was controlled with the Benjamini--Hochberg (BH)
+procedure~\cite{benjamini1995fdr}. A BH-adjusted $p$-value is called a
+$q$ value, and a test passes when $q < 0.05$. Study~A used Holm
+correction instead, as described above. Empirical $p$-values use the
+$(b+1)/(m+1)$ form~\cite{phipson2010permp}. Degree-preserving network
+nulls used the Curveball algorithm~\cite{strona2014curveball} and were
+checked to change the network in every draw. The corrected analyses ran
+in Python 3.12.9 with PyTorch 2.11.0, transformers 5.5.4, NumPy 1.26.4,
+SciPy 1.17.1, pandas 2.3.3 and scikit-learn 1.8.0, as recorded in their
+run configuration files; the deployment's runs did not record package
+versions. All code is at
+\url{https://github.com/Biodyn-AI/maxtoki-mechinterp}.
+
+\subsection*{Declaration of generative AI and AI-assisted technologies}
+Generative AI was the object of this study and also a tool in it. The
+deployment (specifications, pipeline execution, run summaries and the
+in-session audit) was carried out by Claude Opus~4.7 through Claude Code,
+except for one automated loop that called Claude Sonnet, as described
+above. The controlled studies used Claude Opus~5.5 as subjects
+and graders. Opus~5.5 agents also wrote the Study~A answer keys (a
+second agent re-derived their key numbers before the keys were frozen),
+classified review findings that matched no ledger entry, checked disputed
+Study~B findings by running code, and did the post-hoc labelling of false
+alarms, as described above. The protocol, the Study~A tasks, the Study~B
+packages, the deterministic checker and the supporting files were drafted
+by Opus~5.5 agents under the author's direction and checked by separate
+agents and by code. The exploratory arm of Study~A used Claude Haiku~4.5 as
+executor, reviewer and repairer, with Opus~5.5 graders, as described
+above. Claude Opus~5.5 also carried out the independent verification, the
+corrected analyses (the key numbers of each were computed a second way
+with separate code; other agents also re-derived them, three for the RPE1
+attention analysis and one for the cross-model comparison), the statistical
+analysis code and the figure code, and
+drafted this manuscript under the author's direction. The author reviewed
+and edited all content and takes full responsibility for it. AI tools were
+not used to create or alter any image of primary data; all figures are
+plotted by code from the stored outputs.
+
+\section*{Results}
+
+The results come in two parts. The first part evaluates the framework:
+the errors in the deployment's outputs, the blind re-audit (Study~C), the
+controlled execution study (Study~A), the held-out benchmark (Study~B)
+and what deterministic checks can and cannot catch. The second part
+reports the MaxToki-217M case study after correction.
+
+\subsection*{Errors in the deployment's outputs}
+The ledger holds 149 confirmed errors in the deployment's code, logs,
+outputs, run summaries and audit reports: 13 critical, 57 major and 79
+minor (Fig~\ref{fig:ledger}; S1~Table). Of these, 129 were present before
+the in-session audit. Two more (L002 and L085) were partly present: an earlier form of each error was in the files before the audit. The audit's repairs then rewrote that
+text, and the error is in the rewritten version. The other 18 were introduced
+by the audit itself. Sixteen are in files written during its two repair rounds;
+one of these (L093) also appears in its sweep report. The other 2 are in
+its sweep report (L091) and in the checklist that the agent wrote that
+day (L092), both written before the repairs began. Two of the 18 are
+critical. One is a transcription-factor ``positive'' for GATA1 that does
+not survive a null matched for how often each gene is detected; it was
+found by trying four thresholds after the original test failed. The
+other is an audit summary that, after repair, called 60 of the 80
+entries in its pipeline-by-pattern verdict matrix (75\%) ``clean'', with
+no new matrix behind that count.
+
+\begin{figure}[H]
+\caption{\textbf{Errors in the deployment's outputs.} (A)~The 149
+confirmed errors in the deployment's code, logs, outputs, run summaries
+and audit reports, by type and severity (critical: a headline result or
+claim cannot stand; major: it stands only with material qualification;
+minor). (B)~Who or what found each error first. ``In-session audit''
+covers errors first flagged, fully or only partly, in the audit's sweep
+report. ``Deployment agent, outside the audit sweep'' covers errors the
+executing agent found while running the analyses or during the audit's
+two repair rounds. ``Human reader'' is a person from outside the
+project, not the author.
+Source data: S1~Table; the type used for each error in panel A is listed
+in the figure's source data.}
+\label{fig:ledger}
+\end{figure}
+
+Ten of the 13 critical errors were of four kinds. The other three are
+the two critical errors that the audit introduced (above) and the
+comparison of the direction-of-change accuracy with 50\% (below).
+(i)~\emph{Intervention code that
+edited the wrong tensor.} A hook is a short piece of code that changes a
+layer's activations while the model runs. Here hooks were used to ablate
+a sparse-autoencoder feature (set it to zero) or to boost it. In the
+circuit-tracing, exhaustive-mapping and steering scripts, the hook
+replaced the output of transformer block~$l$ with the input of that block
+plus the feature edit. This deleted the whole block. At the last layer,
+the steering hook instead applied the final normalisation twice.
+Combined edits also overwrote each other, so ablating three features gave
+exactly the effect of ablating the last one. With the feature edit set to
+exactly zero, the deployed steering code still gave 98.5\% to 101.9\% of
+the effect that the deployment reported for one steered feature at each
+of the five layers. It gave 93\% to 101\% of the deployment's mean over
+the three steered features of each layer. With a zero edit, the deployed
+circuit code gave a set of 71,474 edges, and this set held more than 99\% of the edges of
+each of the 120 traced features. So the deployed steering effects and
+circuit edges came from the hook bug, not from the features.
+(ii)~\emph{Wrong model input.} Every run except the RPE1 attention run
+ranked genes by $\log(1+\text{CP10k})$ values ($\log(1+\text{CPM})$,
+counts per million, in one external lung dataset) divided by the gene
+median, instead of by counts divided by the gene median. On average,
+30\% to 51\% of the 200 highest-ranked genes differed from the correct
+encoding (dataset means over 35 to 55 cells each), and the position of
+nearly every gene changed. (iii)~\emph{Metrics that could not measure
+what they claimed.} The CRISPR-interference direction-of-change accuracy
+counted every target that went down as correct, whatever the prediction.
+The annotation of sparse-autoencoder features applied a false-discovery
+correction only to tests that had already passed $p<0.1$. In the
+developmental orderings, each cell group's place in the ordering was
+looked up from its cell-type label, so a random code for each label
+passed the same quality gates. The scGPT cross-model comparison read
+another gene's embedding row for every gene. (iv)~\emph{A mislabelled
+steering axis.} The steering runs pushed cells along a ``pseudotime''
+axis, which should order cells from immature to mature. In fact, the
+axis was the first principal component of the expression of 200 randomly
+drawn Tabula Sapiens immune cells. Cell type explained 94.5\% of its
+variance. The 50 ``earliest'' cells were 49 lymphoid cells (T, B and
+plasma cells) and one stem cell. The 50 ``latest'' were all myeloid cells
+(neutrophils, monocytes and macrophages). So the axis separated two
+blood-cell lineages, not immature from mature cells.
+
+Fig~\ref{fig:ledger}B shows who or what found each error first. The
+sweep report of the in-session audit was the first to flag 10 errors (4
+major, 6 minor). For 3 of them (1 major, 2 minor) it flagged only the
+area, not the error itself. It flagged none of the critical errors. The
+deployment agent found 4 more (1 critical, 1 major, 2 minor): one while
+running an analysis and three during the audit's two repair rounds. The
+critical one was the direction-of-change metric, found in the second
+repair round. Independent verification found 71, the blind re-audits of
+Study~C 60, and a human reader 4. Of the 13 critical errors, independent
+verification first found 8, the blind re-audits 3, the deployment agent 1
+and the human reader 1. The one the human reader found was that the
+direction-of-change accuracy was compared with 50\%, both before and after
+its repair, instead of with the accuracy of always predicting a decrease.
+The repair rounds repaired 8 errors that were present before the audit,
+3 of them only partly.
+
+The audit's sweep of all eight pipelines took about 8~minutes (3.7~hours
+with the two repair rounds). The sweep rated as
+clean, or as exemplary, several analyses that later proved to be
+artefacts. For example, it called the nulls of the developmental-order
+analysis the project's ``gold standard'', although a random code for each
+cell-type label passed the same quality gates (S1~Table, R58). It also
+rated the degree-preserving null of the attention analysis ``clean ---
+exemplary'', although in the MaxToki-217M K562 run 49 of that null's 50
+draws were identical to the real reference network (L033).
+
+\subsection*{Study C: blind re-audits find four times more errors than the in-session audit, with or without the checklist}
+Nine blind re-audits of the pre-audit snapshot (three per arm) each took
+21 to 29~minutes and 84 to 105 tool calls, and returned 36 to 49
+findings. Scored against the 68 reference errors, fresh agents fully
+detected 43\% of them with the checklist as deployed (95\% bootstrap
+interval over errors 32--53\%), 45\% with the generic checklist
+(35--55\%) and 41\% with a generic critical review (31--51\%); the sweep
+report of the in-session audit had detected 10\% (4--18\%)
+(Fig~\ref{fig:studyC}A).
+Counting partial detections, the three arms reached 73\%, 71\% and 61\%.
+The arms did not differ clearly: the generic checklist detected 4.4
+percentage points more than the generic review ($-0.5$ to $+9.3$;
+Wilcoxon signed-rank $p=0.10$ over the 20 errors on which they differed),
+and the checklist as deployed 2.0 points more ($-5.9$ to $+9.8$;
+$p=0.42$). Each fresh arm detected 30 to 35 points more than the in-session
+audit.
+
+\begin{figure}[H]
+\caption{\textbf{Study C: blind re-audits of the pre-audit snapshot.}
+(A)~Share of the 68 reference errors fully detected by each arm (filled
+marker; line, 95\% bootstrap interval over errors), detected fully or
+partly (open marker), and by each single run (ticks). The in-session
+audit is scored from its written report. (B)~Detection of each reference
+error (rows, grouped by severity) by the in-session audit (A) and by each
+of the nine re-audits (G, generic review; C, generic checklist; D,
+checklist as deployed; 1--3, runs).}
+\label{fig:studyC}
+\end{figure}
+
+The arms differed in what they found. Averaged over its three runs, the
+generic review fully detected 81\% of the 12 code bugs, against 69\% for
+the generic checklist and 58\% for the checklist as deployed. It also
+fully detected five of the six critical errors in every run
+(Fig~\ref{fig:studyC}B). The checklist arms did better on two other
+types. They fully detected 51\% (generic checklist) and 55\% (as
+deployed) of the 17 missing baselines and nulls, against 39\% for the
+generic review. They fully detected 22\% and 37\% of the 9 wrong
+statistics, against 15\%. Fig~\ref{fig:studyC} does not show error
+types; the type of each error is in the figure's source data. Together
+the nine audits fully
+detected 44 of the 68 errors; 6 (2 major, 4 minor) were never detected,
+even partly. One critical error, the scGPT row lookup, was detected only
+partly: reviewers saw that the cross-model correlation sat at chance, but
+none traced it to the lookup. Only part of the wrong input encoding was
+in the reference set: three attention runs fed $\log(1+\text{CP10k})$
+values in as if they were counts (S1~Table, L118, major). The full error,
+that every run except the RPE1 attention run was encoded on the wrong
+scale (L124, critical), was found after the set was frozen. Three audits
+were graded as fully detecting L118 and two as detecting it partly. All
+five suspected that the Adamson input was log-normalised and noted that
+no code checked whether the stored values were raw counts. None found
+that the K562 inputs were log-transformed, and none traced the error to
+all the runs it affected.
+
+Beyond the reference set, the nine audits raised 132 findings that
+matched no ledger entry. The checking agent judged 123 of them real
+errors, 6 real but trivial, 2 false alarms and 1 undecidable. After
+de-duplication across audits the real errors formed 62 candidate errors,
+of which 60 were confirmed against the full project and added to the
+ledger. The graders
+agreed closely on detection ($\kappa = 0.94$, range 0.86--1.00 across the
+nine audits).
+
+\subsection*{Study A: with Claude Opus 5.5 every executor reached the correct verdict with or without the specification, and generic reviews turned three correct verdicts wrong}
+All 40 executor runs and all 120 final deliverables were completed and
+graded. Every executor run reached the key's verdict, in both arms (20 of
+20 with the specification and 20 of 20 without it; risk difference 0,
+Newcombe 95\% interval $-16$ to $+16$ percentage points; Fisher
+$p = 1$; Mantel--Haenszel $p = 1$) (Fig~\ref{fig:studyA}A). After review
+and repair, 40 of 40 deliverables were correct in the checklist arm and 37
+of 40 in the generic-review arm (exact McNemar $p = 0.25$ against the
+checklist; $p = 0.25$ against no review). None of the four primary
+contrasts was significant (Holm-adjusted $p = 1$ for each). The two
+graders agreed on the verdict of all 120 deliverables.
+
+\begin{figure}[H]
+\caption{\textbf{Study A: controlled execution study with Claude Opus~5.5
+as executor, reviewer and repairer.} (A)~Number of the five executor runs
+per task whose final deliverable reached the key's verdict, by executor
+arm (paper: brief, data and source paper; contract: the same plus the
+deployed specification) and by what followed the executor (no review, a
+generic critical review then repair, or a generic-checklist review then
+repair). (B)~Share of each task's known pitfalls handled correctly (mean
+over deliverables; line, 95\% bootstrap interval over executor runs
+pooled over tasks).
+(C)~Review points judged valid or invalid (or unclear) by a grader with
+the key, over the 40 reviews of each style.}
+\label{fig:studyA}
+\end{figure}
+
+The three verdicts that became wrong were all on the cross-model
+alignment task (T4) in the contract arm (where the executor also received
+the deployed specification), after a generic review. In each,
+the reviewer argued that the executor's decision rule was too lenient, or
+that metrics named in the specification (the mean in-sample canonical
+correlation, or the Spearman correlation of pairwise distances) gave a
+weaker result than the executor's chosen metric. The repairing agent
+accepted these points, rewrote its decision rule, and changed the verdict
+from ``aligned with scGPT but clearly less than with Geneformer'' to
+``inconclusive''. The key does not accept ``inconclusive'': every estimate
+is far above chance, and the Geneformer-minus-scGPT difference has an
+interval that excludes zero on every panel. Canonical correlation finds
+pairs of directions, one in each embedding table, along which the genes'
+positions correlate as strongly as possible. When it is fitted and scored
+on the same genes (in-sample), as the reviewers used it, it is high even
+for shuffled genes.
+In the setting these executors used (20 principal components, mean of all
+20 canonical correlations), their own permutation tests put chance at
+about 0.20. The observed values were 0.40 for scGPT and 0.44 for
+Geneformer. This chance level depends on the number of components as well
+as on the number of genes, and the specification does not state it.
+Graders with the key judged 17 of the 22 points in these three reviews
+invalid. The checklist reviews of the same three executor outputs
+did not change the verdict.
+
+The secondary outcomes moved little (Fig~\ref{fig:studyA}B). Executors
+handled most of each task's pitfalls without help (94.5\% on average
+without review). Review and repair raised this slightly: by 2.8
+percentage points with the checklist (95\% bootstrap interval 0.9 to 4.7)
+and 2.0 points with a generic review (0.3 to 3.7); the checklist and the
+generic review did not differ ($+0.8$; $-0.9$ to $+2.5$). Without review,
+executors with the specification handled 2.3 points fewer pitfalls than
+those without it ($-5.4$ to $+0.8$) and reported 9.2 points more key
+numbers within tolerance ($-0.6$ to $+21.3$). These intervals resample
+executor runs pooled over tasks. The pre-registered bootstrap resamples
+runs within each task. It gives the same conclusions for the effects of
+review on pitfalls handled, in percentage points: 1.1 to 4.4 for the
+checklist against no review, 0.5 to 3.4 for a generic review against no
+review, and $-0.9$ to $+2.4$ for the checklist against a generic review.
+It also gives the same conclusions for the effects of review on pitfalls
+handled in the Haiku arm below. But for the two differences between the
+executor arms, its intervals just exclude zero: $-4.4$ to $-0.2$ points
+for pitfalls handled and $+0.6$ to $+18.9$ points for key numbers within
+tolerance. Both
+differences are small, and whether their intervals exclude zero depends on
+how the runs are resampled. Materially false statements were rare (0.13
+per deliverable) and did not differ between conditions.
+
+Most review points were judged invalid by a grader with the key, meaning
+the point was wrong, already handled in the deliverable, or did not
+matter for its results: 61\% of the 281 generic-review points and 70\% of
+the 297 checklist points (208 invalid and 1 unclear)
+(Fig~\ref{fig:studyA}C). Only in the three T4 cases above did acting on
+such points turn a correct verdict into a wrong one. Three other repairs,
+all on T1 in the paper arm (two after a generic review and one after a
+checklist review), changed ``not supported'' to ``inconclusive''. The T1
+key accepts that answer under stated conditions, so all three stayed
+correct.
+
+An executor run took a median of 27~minutes and 27 tool calls; a review
+took a median of about 14~minutes and 16 (checklist) or 18.5 (generic)
+tool calls, and a repair 21 to 25 tool calls.
+All 120 returned analysis scripts ran on the task data and printed their
+results. Six of them were stopped at least once because the shared
+machine was busy: five ran past the 20-minute limit, and two were stopped
+without output (one script had both). Run again with fewer scripts at a
+time, or on their own, all six finished in under 10~minutes. Of the
+11,045 estimates that the deliverables reported, 10,363 (94\%) could be matched by name to a number
+the script printed, and all 10,363 agreed within tolerance. Of the 682
+unmatched estimates, 681 were in T3, whose scripts printed their results
+under other names. For these, the only check left was to look for each
+value among all the numbers a script printed, within the same tolerance,
+and that check says little. In the 21 T3 scripts concerned, 98--100\% of
+the deliverable's own estimates were found this way, but so were
+61--97\% (median 89\%) of the same number of estimates drawn at random
+from deliverables of other tasks (mean of 50 draws per script).
+
+In the exploratory arm with Claude Haiku~4.5 as executor, reviewer and
+repairer (S2~Appendix), executors without review reached the key's verdict
+in 15 of 20 runs with the specification and in 10 of 20 without it
+(difference $+25$ points, Newcombe 95\% interval $-5$ to $+49$; Fisher
+$p = 0.19$); most of the difference came from T1 (3 of 5 against 0 of 5).
+Haiku executors handled far fewer pitfalls than Opus executors (30--36\%
+against 93--96\% without review). A checklist review followed by repair
+raised the share of pitfalls handled by 9.2 percentage points (95\%
+bootstrap interval over executor runs pooled over tasks, 4.9 to 13.6;
+pre-registered interval resampling runs within each task, 5.0 to 13.3).
+It raised it by 6.4 points more than a generic review followed by repair
+(over the 28 runs with both reviews valid: 1.3 to 11.7 pooled over tasks,
+2.1 to 10.4 within tasks). But it did not
+raise the share of correct verdicts. Of the 33 executor runs with a valid
+checklist review, repairs turned 3 of 12 wrong verdicts right and 3 of 21
+right verdicts wrong. Of the 35 executor runs with a valid generic review,
+repairs turned 2 of 13 wrong verdicts right and none of 22 right verdicts
+wrong. Twelve reviews (7 checklist, 5 generic) returned no valid output,
+so 12 of the 120 deliverables are missing.
+
+\subsection*{Study B: on held-out analyses both review styles find every documented error, and both over-call errors in correct analyses}
+In 132 reviews of the 22 held-out items, every review of a flawed item
+found its documented error, in both arms. This held for all 11 flawed
+items and for 33 of 33 reviews per arm (Wilson 95\% interval over items
+74--100\%; items are the unit because the three reviews of an item are
+not independent). It held whether the error fell inside the
+checklist's patterns (6 items) or outside them (5 items: a circular
+correlation that fails on evenly spread angles, span-filled residue
+labels, an arbitrary sign flip of singular vectors, raw counts fed to an
+encoder that expects binned values, and a row-index join that matched the
+wrong cells). Both graders judged all 66 reviews of flawed items to have
+found the documented error, so they agreed on all 66. Cohen's $\kappa$
+is not defined when every judgment is the same, so we report this raw
+agreement instead.
+
+On the 11 correct (clean) items, most reviews still claimed at least
+one error in a main result that the item's key does not count as an
+error (Fig~\ref{fig:studyB}A). This happened in 79\% of checklist
+reviews (26 of 33; 95\% bootstrap interval over items 58--94\%) and in
+82\% of generic reviews (27 of 33; 61--100\%). The paired difference,
+checklist minus generic, was $-3$ percentage points (95\% bootstrap
+interval over items $-21$ to $+15$; Wilcoxon $p=0.88$). Checklist
+reviews made 45 such claims in all (1.4 per review of a clean item), and
+generic reviews made 43 (1.3 per review). Checklist reviews were longer
+(9.2 against 7.8 findings per review); both arms found about two real
+problems per review beyond the documented error (2.1 in each).
+
+\begin{figure}[H]
+\caption{\textbf{Study B: held-out analyses from other projects.} Every
+review detected the documented error in every flawed item, in both arms
+(33 of 33 each; not plotted). (A)~For each of the 11 correct (clean)
+items, the number of its three reviews per arm that claimed at least one
+error in a main result that the item's key does not count as an error.
+(B)~Post-hoc classification of the 82 such claims that the graders
+marked as false alarms, on clean and flawed items, by arm. The 23
+further claims that the verifier ruled false alarms after a grader
+dispute are not included.}
+\label{fig:studyB}
+\end{figure}
+
+Across clean and flawed items, the reviews made 105 such claims (88 on
+clean items, 17 on flawed items). The graders marked 82 of them as false
+alarms (73 on clean items, 9 on flawed items). The other 23 (15 on clean
+items, 8 on flawed items) were findings that a grader marked as disputed
+and the verifier agent then ruled false alarms. After the results were
+known, we classified the 82 claims that the graders marked. This step was
+not pre-registered. One agent labelled each claim, with no second rater.
+Most of the 82 were accurate observations whose severity was overstated
+(Fig~\ref{fig:studyB}B): 59 were correct but did not change any stated
+conclusion (for example, that an input-label overlap weakened, but did
+not overturn, an interpretation), 17 were correct and already stated in
+the analysis's own summary or README (for example, that a replication in
+a second cell line rested mostly on one transcription factor), 3 were
+factually wrong and 3 were real problems that the key had missed. The
+pattern was the same in both arms. The 23 claims ruled by the verifier
+were not classified.
+
+\subsection*{What deterministic checks catch}
+Run on the eight deployed specifications, the specification linter
+rejected seven: all except the ageing-probe specification lacked the
+code-references section (so their later sections were also numbered out
+of template order), and only 5 of 230 code pointers used the required
+\texttt{repos/<name>/path:LINE} form. Six of the seven pinned reference
+repositories (the manifold specification names none) had been copied
+without their version-control history, so their pins could be matched
+only as text. The run-manifest check found 10 parameters that the runs
+set differently from their specifications (for example, 50 instead of
+200 draws of the degree-preserving null, and 50 instead of 200 cells per
+ablation condition); a written reason existed for one of them. One of
+the 10, the number of control cells, differed only in the attention run
+on MaxToki-1B. The check could compare only values that a run had
+recorded: 66 of the 258 parameter entries in the specifications. The
+other 192 could not be checked, so further differences may have been
+missed. The check also found two manifold quality-gate verdicts recorded
+as passed although one of the gates they required had never been
+computed. The run-manifest check also found that all 75 deployment
+scripts that use random numbers set a seed in the same script. No run
+wrote a run manifest, and 3 of the 8 runs (the ageing probe, circuit
+tracing and exhaustive mapping) recorded no device. No run recorded its
+package versions or which MaxToki revision it loaded (see Materials and
+methods). The package list with pinned versions was saved during the
+in-session audit, after most runs. Some manifold and topology steps used
+a second Python environment whose packages were not recorded (S1~Table,
+L082, L088 and L089).
+
+The number tracer found 1,132 of 1,186 distinct numbers in the run
+summaries (95.4\%) in their run's outputs. Numbers of the same format
+drawn at random were also found 78\% of the time, so tracing exceeded
+chance by 18 percentage points (95\% interval over runs 8--27); the
+excess was smallest in runs with many numeric outputs. A traced number
+can still be described wrongly. For example, the manifold intervals were
+traced correctly to their outputs, and the run summary said how they were
+made: 200 repeats of 80\% subsampling of cell groups, without
+replacement. But the summary called them bootstrap intervals. It presented them as the
+fix the audit had asked for, which was resampling at the unit of inference
+(here the donor). It then used them to call the gate passes robust to
+resampling of cell groups. Cell groups
+from the same donor are not independent, so these intervals are too
+narrow. Resampling donors widens the interval for one gate from
+0.270--0.480 to 0.142--0.540, so its lower end falls below the 0.20 pass
+mark (S1~Table). The checks
+can establish that a document has the required structure, that a
+parameter differs from its default and that a number appears in an
+output. They cannot establish that a null randomises, that an
+intervention edits the right tensor, that the model input is encoded as
+the model expects, that a lookup reads the right rows or that a number
+means what the text says. Twelve of the 13 critical errors in the ledger
+were of this second kind. The thirteenth was an audit summary that,
+after repair, called 60 of the 80 entries in its pipeline-by-pattern
+verdict matrix (75\%) ``clean'', with no new matrix behind that count
+(S1~Table, L090). A number tracer looks for this kind of problem. But we
+ran the tracer only on the run summaries, not on the audit reports, so we
+did not test whether it would have flagged it.
+
+\subsection*{The MaxToki-217M case study}
+This part reports what the corrected analyses show about MaxToki-217M.
+Every result concerns MaxToki-217M given one cell at a time, with the
+input encoding and the intervention code checked as described in
+Materials and methods. Table~\ref{tab:scope} lists, for each analysis,
+the cells it used, the reference it was judged against, and what its
+conclusion depends on. Four deployed analyses used incorrectly encoded
+inputs and were not re-run, so we do not report them: the topology
+screen of gene--gene representations, the ageing probe, the
+feature-patching specificity ratio, and the edge census from 1,000
+layer-5 features in 20 cells, which also used the intervention code that
+deleted a transformer block. The MaxToki-1B attention run and the
+Adamson attention run are not reported for the same reason. The
+gene-set annotation of the sparse-autoencoder features was redone only
+to choose the source features for circuit tracing, and its rates are not
+reported. S3~Appendix lists smaller follow-up analyses that were not
+re-run either, such as value-weighted attention, head ablation and the
+later uses of the circuit edge list.
+
+{\footnotesize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.15}
+\begin{longtable}{@{}p{0.15\linewidth}p{0.20\linewidth}p{0.18\linewidth}p{0.20\linewidth}p{0.24\linewidth}@{}}
+\caption{\textbf{Scope of the MaxToki-217M results.}}
+\label{tab:scope}\\
+\toprule
+\textbf{Analysis} & \textbf{Cells} & \textbf{Judged against} &
+\textbf{Conclusion depends on} & \textbf{Result} \\
+\midrule
+\endfirsthead
+\multicolumn{5}{@{}l}{\footnotesize\emph{Table \thetable\ continued from previous page.}}\\
+\toprule
+\textbf{Analysis} & \textbf{Cells} & \textbf{Judged against} &
+\textbf{Conclusion depends on} & \textbf{Result} \\
+\midrule
+\endhead
+\midrule
+\multicolumn{5}{r@{}}{\footnotesize\emph{continued on next page}}\\
+\endfoot
+\bottomrule
+\endlastfoot
+Attention, RPE1 & 2,000 RPE1 control cells; layer~8; 1,500 genes &
+RPE1 knockdown responses (325 knockdowns); TRRUST (16 factors) &
+Causal attention mask; few TRRUST factors per cell line &
+Below the target-variance baseline; symmetric score beats the network
+null but not co-expression \\
+Attention, K562 & 2,000 K562 control cells; layer~8; 1,500 genes & K562 knockdown responses (194 knockdowns); TRRUST (16 factors) & Causal attention mask; one factor (MYC) carries the regulator-to-target signal; which genes enter the test & At chance on knockdowns; ties co-expression on TRRUST; no score beats the network null after correction \\
+Factor-specific SAE features & 9,200 K562 cells (87 knocked-down
+factors); layer-5 SAE & DoRothEA ChIP-seq targets (20 factors); TRRUST &
+SAE dictionary; top-20-gene summary of a feature; target-set coverage &
+No factor passes after Benjamini--Hochberg correction under four nulls;
+16 factors pass a fifth null that does not match the number of
+responding features. GATA1: a feature
+with 8 of 20 top genes among its targets, as the deployment reported, is
+ruled out; one with 4 of 20 is not \\
+Circuits and knockdown direction & 200 K562 control cells; 120 source
+features; 248 silenced genes & K562 CRISPR-interference fold-changes &
+SAE features at four layers; edge thresholds; noisy fold-changes &
+No skill beyond constant rules; below a no-model rule by 8.3 points \\
+Feature triplets & 20 K562 control cells; 512 triplets & Additive
+model; planted interaction & Small edits (about 2\% of the residual
+norm) & Additive; no three-way interaction \\
+Steering & 50 Tabula Sapiens bone-marrow HSCs from two held-out donors; layers 0, 3, 6, 9 and 11 & Erythroid maturity score checked on held-out donors; 20 random features per layer & Sparse autoencoders trained on K562 cells; a score built from the model's output; one lineage; 47 of 50 cells from one donor & 14 of 15 candidates no better than random; one feature that marks erythroid cells moves the score 3.5\% of the span \\
+Developmental order & Tabula Sapiens immune cells: 290 cell groups (11 donors) to fit, 600 and 160 groups from other donors to test & Curated 34-stage blood tree; structured null that keeps cell-type classes; cell-type label code, gene expression and input-token features & Deployed read-out head and pass marks; only the T lineage has graded stages; one head seed for most numbers & No order beyond cell type; in cross-lineage order, a small lead over one bag of input tokens on the zero-shot panel (a tie on the external panel over head seeds) and a tie with a second bag built from the deployed gene order \\
+Spectral geometry & Three disjoint samples of 2,000 Tabula Sapiens immune cells; 1,500 genes; all layers & Three randomly initialised copies of the model; split halves of each sample & Per-gene averages over cells; one atlas and gene panel; default random initialisation & Effective rank falls with depth with random weights too; gap of cross-sample CKA from 1 is mostly sampling noise \\
+Cross-model alignment & None (input embedding tables); three panels of
+350--382 genes & scGPT and Geneformer~V2-316M tables; shuffled genes &
+Input tables only, not internal layers & Aligned with both; more with
+Geneformer \\
+\end{longtable}
+\begin{flushleft}
+Every analysis gave
+the model one cell per sequence, ranked by counts divided by each gene's
+median (rank-value encoding). HSC, hematopoietic stem cell; SAE, sparse
+autoencoder; CKA, centred kernel alignment, a similarity of two sets of
+gene vectors (1 means the same geometry). The span is the mean maturity
+score of erythrocytes minus that of HSCs. A bag of input tokens describes
+each cell group by the genes in its cells' model input and uses no model.
+\end{flushleft}
+}
+
+
+\subsubsection*{Attention scores do not beat gene-level baselines}
+MaxToki is a causal decoder: genes enter in order of falling normalised
+expression, and a gene can attend only to genes placed before it. The
+attention from a regulator $P$ to a target $T$ is therefore zero in every
+cell in which $T$ comes after $P$, and the average over cells partly
+measures how often $T$ is ranked above $P$ (the order share), which
+needs no model. We read five attention scores at layer~8: regulator to target, target to
+regulator, the mean and the larger of the two directions, and regulator
+to target averaged only over the cells in which the target comes before
+the regulator. A gene counted as responding to a knockdown when its mean
+$\log(1+x)$ value in the knocked-down cells differed from that in 5,000
+control cells by at least 0.5 (natural log), with BH $q < 0.05$ over the
+1,500 genes tested (Welch $t$-test). Here $x$ is the count scaled so that
+each cell sums to 10,000 over those 1,500 genes. A knockdown was kept
+when it had at least 3 responding and 3 non-responding genes. The
+deployed RPE1 pipeline used this rule. We kept it for K562 and chose it
+before seeing the K562 results. On the RPE1 screen, which was encoded
+correctly from raw counts, the order share alone predicted knockdown responses better than
+the regulator-to-target score (mean AUROC over 325 knockdowns 0.648
+against 0.603), and the variance of the target gene predicted them far
+better (0.766, 95\% bootstrap interval over knockdowns 0.757--0.776)
+(Fig~\ref{fig:caseReg}A). AUROC is the probability that a randomly chosen
+responding gene is scored above a randomly chosen non-responding one;
+0.5 is chance.
+
+\begin{figure}[H]
+\caption{\textbf{MaxToki-217M: regulatory probes after correction.}
+(A)~Prediction of which genes respond to a CRISPR-interference knockdown,
+in RPE1 cells (325 knockdowns) and K562 cells (194 knockdowns): mean
+AUROC over knockdowns (line, 95\% bootstrap interval over knockdowns) for
+layer-8 attention read from regulator to target and in both directions,
+and for three scores that use no model: the share of cells in which the
+target is ranked above the regulator, co-expression, and the variance of
+the target gene. Dashed line, chance. (B)~Recovery of TRRUST
+regulator--target pairs (RPE1: 16 factors, 138 pairs; K562: 16 factors,
+107 pairs): pooled AUROC with 95\% bootstrap interval over factors; the
+target-gene model uses each target's mean, variance and dropout rate.
+(C)~Power of the count-matched test for GATA1 in K562 cells, counting
+every overlapping target (the deployed analysis stopped at 5): share of
+200 simulations in which GATA1 ChIP-seq targets planted among the top 20
+genes of one responding feature were detected at $p<0.05$ (band, Wilson
+95\% interval). (D)~Prediction of the direction of change of 796,304
+knockdown--target records in K562 cells (248 silenced genes) by the
+traced circuit (line, 95\% bootstrap interval over silenced genes), by
+always predicting ``down'', and by predicting each target's usual
+direction from other silenced genes.}
+\label{fig:caseReg}
+\end{figure}
+
+On TRRUST regulator--target pairs in RPE1 (16 transcription factors, 138
+pairs), a symmetric attention score (the mean of both directions) reached
+an AUROC of 0.638 and beat a degree-preserving network null ($z = +3.2$;
+empirical $p = 0.003$ from 1,000 rewired networks)
+(Fig~\ref{fig:caseReg}B). After Benjamini--Hochberg (BH) adjustment the
+$q$ value was 0.018. The adjusted family had 12 tests: six scores (the
+five attention scores and the order share) in each of the two cell
+lines. Co-expression computed from the same cells beat the null about as
+strongly (AUROC 0.596, $z = +3.0$). Attention scored 0.042 higher, but
+the 95\% interval of this gap ($-0.040$ to $+0.127$) includes zero. A
+three-number model of each target gene knows nothing about the
+regulator. It uses the gene's mean, its variance and its dropout rate
+(the share of control cells in which the gene has zero counts). It scored
+0.749 (0.691--0.801). The symmetric attention score was 0.11 below this
+gene model (0.00 to 0.20). We also removed the mean, variance and
+dropout rate of both genes from the symmetric score with the planned
+linear model. What remained had an AUROC of 0.538 (0.456--0.614), which
+does not differ from 0.5. It still beat the rewired networks
+($z = +2.75$, $p = 0.003$, not adjusted). This is because the rewired
+networks were scored after the same removal, and their mean AUROC fell
+too, from about 0.58 to about 0.48. Co-expression treated the same way
+also beat them ($z = +2.94$), and the symmetric score still beat them
+after co-expression was removed
+(0.611, $z = +2.53$). So in RPE1, symmetric attention carries a
+pair-level signal about as large as that of co-expression, not a larger
+one (S3~Appendix).
+
+In K562 cells (2,000 control cells of the same screen, 1,500 genes,
+layer~8), attention predicted knockdown responses at chance under this
+rule. Over 194 knockdowns the mean AUROC was 0.505 (95\%
+bootstrap interval over knockdowns 0.491--0.520) from regulator to target
+and 0.502 (0.488--0.517) for the symmetric score; all five attention
+scores lay between 0.499 and 0.509 (Fig~\ref{fig:caseReg}A). Target
+variance scored 0.690 (0.674--0.708) and co-expression 0.556
+(0.540--0.573). A second label rule ran the same test on the stored
+$\log(1+\text{CP10k})$ values. These are scaled over all 6,546 genes in
+the file, not over the 1,500 genes. Under this rule only 67 knockdowns
+had at least 3 responding and 3 non-responding genes. With it
+the regulator-to-target score was 0.550 (0.517--0.580). That is above
+chance, but below the order share (0.611, 0.568--0.651), which needs no
+model, and below target variance (0.695, 0.659--0.730) (S3~Appendix).
+On the 107 TRRUST pairs of 16 factors in this gene set, the symmetric
+score had a pooled AUROC of 0.571 (0.521--0.617) and $z = +1.76$ against
+the rewired networks (empirical $p = 0.041$; BH $q = 0.069$ over the 12
+tests), so the RPE1 result did not replicate in K562
+(Fig~\ref{fig:caseReg}B). The regulator-to-target score had a pooled
+AUROC of 0.548 (0.499--0.594) and $z = +1.72$ ($q = 0.069$), and it
+rested on one factor. MYC holds 27 of the 107 pairs, and without MYC
+this $z$ fell to $+0.12$ (and the symmetric score's $z$ to $+1.11$).
+Co-expression from the same cells did as well as attention (0.588,
+$z = +1.55$), and the target-gene model did better (0.723,
+0.644--0.814). After the same gene-level features were removed, no K562
+score beat the rewired networks (lowest BH $q = 0.18$ over the six
+scores with the planned linear model, and 0.17 with a boosted-tree
+model). Which genes enter the test matters. Our gene set is the 1,500
+genes with the highest variance of log-normalised expression. The
+deployed analysis used the same rule on values that had been logged a
+second time, and only 627 of its 1,500 genes are in our set. On the
+deployed gene set (8 factors, 45 pairs), the symmetric score did beat
+the null ($z = +2.38$, $p = 0.010$). This check was not planned and is
+not adjusted. Single heads, other layers as a primary endpoint and
+references other than TRRUST were not tested (S3~Appendix).
+
+\subsubsection*{No sparse-autoencoder feature is specific to a knocked-down transcription factor}
+A sparse autoencoder (SAE) rewrites a hidden state as the sum of a few
+learned directions, called features, out of a much larger set. We
+trained twelve SAEs on 500 K562 control cells, one for each hidden state
+the model exposes. Layer~0 is the token embedding. Layers 1--10 are the
+outputs of the first ten of the 11 transformer blocks; this hidden state,
+passed from one block to the next, is called the residual stream.
+Layer~11 is the output of the last block after the final normalisation.
+Each SAE has 4,928 features and keeps only the 32 most active features
+for each token (a TopK SAE). The SAEs explained 70\% of the held-out
+variance at layer~0 and 84--93\% at layers 1--11. For 87 transcription
+factors knocked down in K562 (34 to 100 cells each; 20 with ChIP-seq
+target sets in DoRothEA~\cite{garcia-alonso2019dorothea}), we called a
+layer-5 feature responsive when its activation differed from control
+cells (Mann--Whitney test, BH $q < 0.05$, and a minimum effect size),
+and asked whether the 20 genes on which a responsive feature is most
+active overlap the factor's targets more than expected. No factor passed
+after BH correction across factors, at any of seven effect cut-offs and
+under any of four nulls. In the count-matched null, each top gene is
+swapped for a random gene seen in a similar number of cells. The second
+null also matches gene length. The third uses random groups of control
+cells that keep as many responding features as the knockdown. The fourth
+uses the responding features of other knockdowns. The smallest $q$ was
+0.18 (GATA1 at the 0.5 cut-off, under the other-knockdown null, where
+the smallest possible $p$ is 0.059). We also ran a fifth null. It uses
+random groups of control cells of the knockdown's size and runs the
+feature selection again on each group. Unlike the third null, it does
+not keep as many responding features as the knockdown. Every factor
+with at least 2 targets among a responding feature's top 20 genes passed
+that null (49 tests, 16 factors). This happens because random control
+groups rarely select any feature, and never at cut-offs of 0.25 or
+above. So that null shows only that the knockdown changed something, not
+that the features know the factor's targets (S3~Appendix).
+
+GATA1 is the factor the deployment singled out. At the cut-off the
+deployment used (a difference of more than 0.5 between knockdown and
+control cells in a feature's mean activation), seven features responded
+to the knockdown. The best had 4 of its 20 top genes among the
+221 GATA1 ChIP-seq targets in the gene set, where 3.1 are expected by
+chance ($p = 0.32$ under the count-matched null, $0.43$ when gene length
+is also matched, $0.19$ against random control groups with the same
+number of features); GATA1 ranked 82nd of 291 factors for these
+features. The test detects strong but not weak specificity. We planted
+GATA1 targets among the top 20 genes of one responding feature, with 200
+simulations for each number of planted targets. With 6 or more planted
+targets, the count-matched test gave $p < 0.05$ in all 200 simulations.
+With 5 it did so in 80\% of simulations, and with 4 in 29\%
+(Fig~\ref{fig:caseReg}C). These power values count every overlapping
+target. The deployed statistic stopped counting at 5. For GATA1 that
+version gives the same $p$ here (0.32), but its smallest possible $p$ is
+0.099, so it could not detect any planted signal at this cut-off
+(S3~Appendix). The data thus exclude a GATA1 feature as specific as the
+one the deployment reported (8 of 20), but not a weaker one.
+
+\subsubsection*{Traced circuits do not predict the direction of knockdown responses}
+Ablating 120 source features (30 at each of layers 0, 3, 6 and 9) in 200
+K562 control cells and reading the change in every later feature gave
+318,387 edges between features. A source--target pair counted as an
+edge when the target's change had a Cohen's $d$ (its mean change over the
+200 cells divided by the standard deviation of that change) above 0.5 in
+absolute value, and went the same way in more than 70\% of cells. In
+57.9\% of edges, removing the source lowered the target; in the rest it
+raised it. We turned these edges into predictions about genes. Each
+feature has 10 top genes, the genes on which it is most active. Each edge
+pairs every top gene of its source feature with every top gene of its
+target feature. We kept a gene pair if at least 2 edges linked it, or one
+edge with $|d| > 2$. We predicted that silencing the first gene lowers the
+second if more than half of the edges linking them were ones in which
+removing the source lowered the target, and that it raises the second
+otherwise. We checked these predictions in K562 cells in which the first
+gene was silenced by CRISPR interference. The observed direction is the
+sign of the second gene's mean $\log(1+\text{CP10k})$ value in the
+silenced cells minus its mean in 3,000 control cells. This gave 796,304
+records from 248 silenced genes; each record is one pair of a silenced
+gene and a measured target gene. The prediction was right
+50.3\% of the time (95\% interval over silenced genes 49.9--50.7\%),
+below the 52.5\% obtained by always predicting ``down''
+(Fig~\ref{fig:caseReg}D). Balanced accuracy, which is 50\% for any
+constant rule, was 50.2\% ($+0.19$ points, $-0.18$ to $+0.57$), and the
+Matthews correlation was $+0.004$ ($-0.004$ to $+0.011$). A rule that
+uses no model, predicting for each target the direction in which it
+usually moves when other genes are silenced (fitted on other silenced
+genes), was right 58.5\% of the time, 8.3 points more than the circuit
+(7.3--9.2). An exploratory split by the size of the observed change found
+a balanced accuracy of 51.8\% for changes of 0.1 to 0.25 log-fold, but the
+no-model rule reached 68.4\% on the same records.
+
+\subsubsection*{Removing three features at once had an additive effect in the 512 triplets tested}
+In 512 triplets of features (eight each at layers 0, 5 and 9) ablated
+together and separately in 20 K562 control cells, no triplet had a
+three-way interaction at any of the 4,928 last-layer features after BH
+correction (2,523,136 tests). The 24 features were drawn at random before
+any ablation: at each layer, one from each eighth of activation
+frequency, among the features active in at least 1\% of tokens (1,750,
+460 and 618 candidates at layers 0, 5 and 9). No annotation was used to
+choose them. After subtracting the part expected from cell-to-cell
+noise, the share of the joint effect's energy (its squared size) that
+was not explained by the three single effects and their pairwise
+interactions was 0.0003\% (median over the 512 triplets). Its 95\% basic
+bootstrap interval, resampling the 20 cells (1,000 resamples), was
+$-0.09\%$ to $+0.06\%$. The interval can go below zero because of the
+noise subtraction. The test detected a planted interaction of 5\% of each
+cell's joint effect (about 0.2\% of its energy) in 64 of 64 triplets.
+Among the 192 feature pairs in these triplets, removing both features
+changed the last-layer features by less energy than the two single
+changes added together in 5 pairs, and by more in 12 (95\% interval
+excluding equality). About 5 per side would be expected by chance, so
+these are weak signs. The two clearest pairs both link a layer-5 feature to a layer-9 feature,
+with many targets significant after BH correction. In both, removing the
+two features together changed the last-layer features by 3--4\% less
+energy than the two single removals added together. This fits the
+layer-5 feature driving the layer-9 one. Removing all three features together moved the
+last-layer residual stream by about 2\% of its norm (median 2.2\%, range
+1.6--4.1\%, over 16 cell--triplet pairs), so this describes the model's
+response to small edits. The change from single removals was not
+recorded. The result covers 8 of the 4,928 features at each of three of
+the twelve layers, one read-out layer (layer~11), one cell type and one
+SAE training seed. It does not show that three-way interactions are
+absent elsewhere in the model.
+
+\subsubsection*{Features that track erythroid maturity move the model's output no further than random features, apart from one feature that marks erythroid cells}
+Steering here means scaling one sparse-autoencoder feature up or down
+inside the model while it reads a cell, and measuring how far the model's
+output moves along a maturity score. The deployment's steering effects
+came from the hook that deleted a block, not from the features (see
+above). We fixed the cells, score, features, null and tests before any
+forward pass. The maturity axis is the erythroid branch of blood
+development in Tabula Sapiens bone marrow: hematopoietic stem cells
+(HSCs), common myeloid progenitors, erythroid progenitors and
+erythrocytes, as labelled in the cell-type annotation. For each cell,
+the model's output here is its next-gene scores (logits: one score for
+each of the 20,275 tokens in the vocabulary), averaged over all
+positions of the cell's sequence. The maturity score is the cosine
+similarity of this output with the mean output of erythrocytes, minus
+its cosine similarity with the mean output of HSCs. The two means came
+from 90 erythrocytes and 76 HSCs of three donors. In cells of two other
+donors the score separated erythroid progenitors from HSCs with an AUROC
+of 0.991, and its Spearman correlation with stage was 0.84 (95\% bootstrap interval over
+cells 0.78--0.88). We give each effect as a share of the span, the mean
+score of erythrocytes minus that of HSCs (0.198). The score describes the
+model's output; no change in a cell's real state was measured.
+
+We steered 50 HSCs from the two held-out donors (47 of them from one
+donor). At each of layers 0, 3, 6, 9 and 11, the three features whose
+activity tracked stage most closely were the candidates. Each was
+multiplied by 0, 2 or 5 and compared with 20 random features of the same
+layer with similar activity. Fourteen of the 15 candidates moved cells no
+further in their predicted direction than the random features
+(directional $p$ 0.19--1.00; 0.0004\% to 1.5\% of the span at five-fold
+strength). The exception, feature 2903 at layer~9, beat all 20 random
+features at every strength ($p = 1/21$, the smallest possible; about 0.7
+of 15 candidates would reach this by chance) and moved HSCs by 3.5\% of
+the span at five-fold strength (95\% bootstrap interval over cells
+1.9--5.2\%). It is active at 99\% of gene positions in erythroid
+progenitors and at 11\% in HSCs, so it marks the erythroid state. Per
+unit of edit it moved cells 37\% as far as a size-matched edit along the
+mean difference between erythrocyte and HSC hidden states, and the genes
+it raised most (AHSP, ALAS2, HBM, GYPA, HBG1, SLC4A1) are among the ten
+that this mean-difference edit raised most. These three checks (where
+the feature is active, the comparison per unit of edit and the
+most-raised genes) were not planned. Two tests fixed in advance looked at
+each layer's three candidates as a group. Neither found them stronger
+than random features. First, at no layer did the three candidates push
+cells further in their predicted direction than the 1,771 possible sets
+of three of that layer's 23 tested features (directional $p$ 0.09--0.64
+over the five layers and three strengths). Second, summed over the five
+layers, the candidates ranked no higher among the 23 tested features of
+their layer than chance (one-sided permutation $p$ 0.24--0.36 over the
+three strengths; 100,000 permutations within layers). A third test, also
+pooled over layers, found a weak trend. Within each layer, features whose activity rose
+more with stage pushed cells a little further toward erythrocytes when
+amplified, and a little further back when removed. The mean of the five
+within-layer Spearman correlations, each over 23 features, was
+0.18--0.19 in size and had the predicted sign (one-sided permutation $p$
+0.022--0.031; two-sided 0.045--0.063). Twenty of each layer's 23
+features are random features, so this trend does not single out the
+candidates. These sparse autoencoders were trained on K562 cells and explained only
+34--59\% of the hidden-state variance of the steered HSCs. So single
+features of these autoencoders are not maturity switches. This does not
+show that the model lacks a maturity direction: adding the full mean
+difference moved all cells toward erythrocytes. Other lineages, feature
+combinations, autoencoders trained on bone-marrow cells and MaxToki-1B
+were not tested (S3~Appendix).
+
+\subsubsection*{Hidden states show no blood developmental order beyond cell-type identity}
+The deployed analysis fitted a small read-out head that maps the hidden
+states of cell groups (anchors: cells that share donor, tissue, cell type
+and stage label) onto a curated tree of 34 blood developmental stages,
+and reported a developmental manifold that transfers to new donors. It
+judged the head with four pass marks. The first is trustworthiness, at
+least 0.80. It checks that anchors that are near neighbours in the
+head's output were also close in the head's input, and it does not use
+the stage tree. The other three are Spearman correlations between
+output distances and stage-tree distances, each at least 0.20. They use
+anchors the head was not fitted on, held out at random, by donor or by
+lineage branch. The last of these is the branch mark. MaxToki passed
+all four on the fitting panel (290 anchors from 11
+donors) and on the external test panel (600 anchors from 13 other
+donors). The deployment also built a second test panel, which it called
+zero-shot: 160 other anchors whose 12 donors are all external-panel
+donors, so the two test panels are not independent. On this panel
+MaxToki failed the branch mark ($0.147 \pm 0.048$, mean $\pm$ SD over 20
+head seeds; 3 of 20 seeds pass). This failure depends on the anchor
+set. Some anchors hold only Smart-seq2 cells (Smart-seq2 is a
+plate-based sequencing method). When these anchors are dropped (43
+fitting-panel, 13 external and 8 zero-shot anchors) and the head is
+fitted again, the zero-shot branch mark is $0.34 \pm 0.01$ (mean $\pm$
+SD over 10 head seeds; 10 of 10 seeds pass). A random 64-number code for
+each cell-type label, which knows nothing about development, passed the three
+correlation marks on all three panels. The branch mark can be high just
+because anchors with the same label sit together, and only the T lineage
+has graded stages. Against a structured null that shuffles stages
+between cell-type classes within each branch, MaxToki was not above
+the null on the branch mark on any of the three panels. This held both
+over all anchor pairs and over only pairs of anchors with different
+cell types. MaxToki was also not above the null on cross-lineage
+(global) order, the Spearman correlation over all anchor pairs of a test
+panel. Across these numbers the one-sided $p$ ran from 0.15 to 0.76 (20
+to 2,000 null draws). On pairs of anchors with different cell types, the
+branch mark was 0.067, 0.006 and 0.016 on the fitting, external and
+zero-shot panels. That is close to zero and well below the
+0.20 pass mark. Held-out order within the T lineage was 0.038.
+
+MaxToki was ahead of simple features only in global order
+(Fig~\ref{fig:caseGeom}D): 0.865 on the external panel and 0.867 on the
+zero-shot panel. That is above the cell-type label code by 0.064 (95\%
+donor bootstrap interval 0.050--0.091) and 0.091 (0.027--0.163), and
+above expression of highly variable genes by 0.102 (0.073--0.140) and
+0.110 (0.038--0.151). A bag of input tokens uses no model. It describes
+each cell group by the genes in its cells' model input, and genes nearer
+the front of the input get more weight. MaxToki's lead over this bag was
+small: 0.016 (0.002--0.046) on the external panel and 0.048
+(0.009--0.149) on the zero-shot panel. Over 10 head seeds the lead was
+$0.004 \pm 0.005$ on the external panel, a tie, and $0.053 \pm 0.005$ on
+the zero-shot panel (above 0 in 10 of 10 seeds). A second bag, built the
+same way from the gene order that the deployed analysis fed the model,
+also uses no model, and it matched MaxToki on both panels: MaxToki minus
+this bag was $-0.010$ ($-0.023$ to 0.016) and $-0.012$ ($-0.031$ to
+0.022) (donor bootstrap, 1,000 replicates). So whether MaxToki leads
+depends on which gene order the bag uses. Most of global order
+reflects lineage and cell-type grouping, which the structured null keeps
+(null means 0.843 and 0.831, $p = 0.29$ and 0.15). S3~Appendix gives the
+remaining checks, including a negative control that could not fail and
+the single attention head singled out by the deployment, which beat
+random projections only in trustworthiness.
+
+\begin{figure}[H]
+\caption{\textbf{MaxToki-217M: representation geometry after correction.}
+(A)~Input gene-embedding tables: Pearson correlation between MaxToki's
+gene--gene cosine-similarity matrix and that of Geneformer~V2-316M or
+scGPT, on three gene panels from three tissue datasets (350--382 genes;
+line, 95\% gene bootstrap interval). Dashed line, chance (genes
+shuffled). (B)~Effective rank of the per-gene mean vectors at each layer,
+for the trained model and three randomly initialised copies of the same
+architecture, on the same 2,000 Tabula Sapiens immune cells and 1,500
+genes (band, 95\% jackknife interval over 10 blocks of 200 cells).
+(C)~Similarity (linear CKA) of the per-gene mean vectors between three
+disjoint 2,000-cell samples, from layer~1, for the trained model and one
+randomly initialised copy (band, 95\% jackknife interval over 30 groups
+of 50 genes). (D)~Cross-lineage developmental order of cell-group
+centroids on the external and zero-shot panels, for MaxToki-217M and for
+three representations that use no model: the bag of each cell's input
+tokens, a lookup of cell-type labels, and highly variable gene
+expression (line, 95\% donor bootstrap interval, 2,000 replicates).}
+\label{fig:caseGeom}
+\end{figure}
+
+\subsubsection*{Effective rank falls with depth in randomly initialised copies too}
+We passed three disjoint samples of 2,000 Tabula Sapiens immune
+cells~\cite{tabulasapiens2022} through MaxToki-217M and, at each layer,
+averaged the hidden state of each of 1,500 genes over the cells that
+contain it. Effective rank~\cite{roy2007effective} counts how many
+directions these gene vectors use (at most 1,232, the hidden size). In the
+trained model it was 561 at the token embedding (layer~0), 328 after the
+first block and 227 at layer~11 (95\% jackknife interval over ten
+200-cell blocks 224.8--229.5; 225.6 and 226.3 in the other two samples)
+(Fig~\ref{fig:caseGeom}B). The deployed analysis, whose inputs were
+encoded on the wrong scale, reported 94 at layer~11 for the same cells
+and genes. Three randomly initialised copies of the architecture fell
+from 816--817 at layer~0 to 390--421 at layer~11. From layer~1 to
+layer~11 every random copy lost more of its effective rank than the
+trained model (34.6--39.6\% against 30.8--31.3\%; the cell-block
+jackknife intervals do not overlap), so the fall with depth does not need
+training. Training lowers the effective rank at every layer, starting at
+the embedding table, and adds two drops of its own: in the first block
+(41.5\% against 21.0--21.3\% with random weights) and in the last step,
+from layer~10 to layer~11, which runs the last block and then the final
+normalisation (14.6--15.1\%, against a rise of 1.0--2.1\%; these two
+parts were not measured separately). A feature-shuffle null cannot
+separate these cases, because it stays far above the real effective rank
+in every model.
+
+Linear centred kernel alignment (CKA)~\cite{kornblith2019cka} measures how alike two sets of gene
+vectors are, up to rotation and scale (1 means the same geometry).
+Between the three samples it was 0.9997 at layer~1 and 0.9962 at
+layer~11 in the trained model (95\% jackknife interval over 30 groups of
+50 genes 0.9959--0.9964), against 0.9938 and 0.9647 (0.9598--0.9697) in a
+randomly initialised copy (Fig~\ref{fig:caseGeom}C). In the trained model
+most of the gap from 1 is sampling noise in the per-gene averages: with
+1,000 instead of 2,000 cells per sample, $1-\mathrm{CKA}$ at layer~11
+rose from 0.0038 to 0.0073. The trained model's gene averages are
+therefore more stable across cell samples than a random model's, but
+these values mainly measure how far a gene's average moves between random
+sets of cells, and they should not be compared with CKA values reported
+for other models. Other tissues, other initialisation schemes and
+MaxToki-1B were not tested (S3~Appendix).
+
+\subsubsection*{Cross-model alignment of gene embeddings}
+This analysis compares the input gene-embedding tables of the three
+models, which do not depend on how cells are encoded. We used three
+overlapping panels of 350 to 382 genes, taken from three tissue
+datasets: Tabula Sapiens lung, Tabula Sapiens immune cells, and an
+external lung dataset. For each model we computed the cosine similarity
+of every gene pair. We then took the Pearson correlation between two
+models' similarity matrices. Between MaxToki-217M and scGPT this
+correlation was 0.26--0.28. When genes were shuffled it was 0.00 (mean;
+SD 0.004). We also report a held-out canonical correlation. Canonical
+correlation measures how well linear projections of the two tables line
+up. The held-out version is fitted on 80\% of the genes and scored on
+the other 20\%, averaged over 10 random splits. Between MaxToki-217M and
+scGPT it was 0.481--0.495, with chance about 0.00. MaxToki-217M agreed
+more with Geneformer~V2-316M, which shares its gene vocabulary and token
+identifiers: Pearson 0.39--0.40 and held-out canonical correlation
+0.558--0.604 (Fig~\ref{fig:caseGeom}A).
+The Geneformer-minus-scGPT difference in Pearson correlation was 0.10 to
+0.14, with gene-bootstrap intervals that exclude zero on every panel. The
+in-sample canonical correlation (fitted and scored on the same genes),
+often used for such comparisons, is high even for unrelated tables. In
+the deployed setting (each table reduced to 30 principal components, mean
+of 10 canonical correlations) it was 0.41--0.43 for shuffled genes,
+against 0.77--0.78 for Geneformer and 0.72--0.74 for scGPT. Its chance
+level depends on the number of genes and of components. In the setting
+the Study~A executors used (20 components, mean of all 20), chance was
+about 0.20. So we report the held-out value. These are input tables only; they say nothing
+about the models' internal representations.
+
+\section*{Discussion}
+
+\subsection*{What the evaluation supports}
+The deployment produced many serious errors, and its own audit caught few
+of them. The written sweep report of the in-session audit fully detected
+10\% of the 68 reference errors and none of the 6 critical errors among
+them. Across the full ledger, the report flagged none of the 11 critical
+errors that were already present when the audit ran (one of them only
+partly present). Later, during the audit's second repair round, the
+deployment agent found one of these 11: the direction-of-change metric.
+The other 2 of the 13 critical errors were made during the
+audit's repair rounds. Fresh agents that audited the same snapshot found four times as
+many reference errors, whether they used the checklist or a generic
+instruction to review critically.
+
+In the pre-registered comparisons with Claude Opus~5.5, the checklist did
+not clearly help reviewers find more problems than a generic review of
+the same budget in any of the three studies, and in none did it reduce
+false alarms. There were two partial exceptions. In the exploratory arm
+with Claude Haiku~4.5, a checklist review followed by repair raised the
+share of pitfalls handled by 6.4 percentage points more than a generic
+review followed by repair (95\% bootstrap interval over the 28 paired
+executor runs, pooled over tasks, 1.3 to 11.7), but it did not raise the
+share of correct verdicts. In Study~C the two checklist arms (generic and
+as deployed) fully detected more of the 17 missing baselines and nulls
+(51\% and 55\% against 39\% for the generic review) and of the 9 wrong
+statistics (22\% and 37\% against 15\%), but fewer of the 12 code bugs
+(69\% and 58\% against 81\%); these splits by error type were not tested
+for significance. The specifications did not change whether a current
+agent reached the correct conclusion on focused analysis tasks: with
+Claude Opus~5.5 every executor run reached the correct verdict with or
+without them. With a smaller model, Claude Haiku~4.5, they may help:
+correct verdicts rose from 10 to 15 of 20 runs, a difference that 20 runs
+per arm cannot confirm. The framework as deployed therefore did not make
+the agent's work reliable, and the checklist added little over a generic
+review of the same budget.
+
+What did catch errors was independent review in a fresh context. The
+blind re-audits of Study~C and the verification that built the ledger
+were carried out by agents that had not produced the work and had no
+stake in it. The in-session audit, by contrast, was written and applied
+by the deployment agent itself, in one working session on the last day of
+the deployment. Apart from a same-day extension of the topological
+hypothesis screen, the work it audited had been done in other sessions.
+The audit's sweep of all eight pipelines took about
+8~minutes from request to report (3.7~hours counting the two repair
+rounds), against 21 to 29~minutes for each blind re-audit, and it graded
+run summaries more than code. We cannot separate the effects of
+independence, more time and a different model: the deployment and its
+in-session audit ran on Claude Opus~4.7, and the re-audits on Claude
+Opus~5.5. Whatever the cause, an
+audit by the agent that did the work was weak evidence that the work was
+correct.
+
+\subsection*{Most of the errors that mattered were in code}
+Seven of the 13 critical errors were code bugs: an intervention hook that
+edited the wrong tensor and deleted a transformer block (three ledger
+entries), combined edits that overwrote each other, a model input encoded
+on the wrong scale, a metric that ignored the prediction, and a lookup
+that read the wrong embedding rows. None of these is a methodological
+pattern of the kind the checklist describes, and the checklist did not
+help fresh reviewers find them (the generic review found more of the code
+bugs). Each of the seven, however, would have been caught by a short
+deterministic test written for the analysis: an edit of zero must change
+nothing; an edit at layer~$l$ must leave earlier layers unchanged;
+combined edits must differ from single edits; the token order must match
+the model's reference encoder on a few cells; a direction-of-change
+accuracy must be compared with the constant-sign predictor on the same
+records; and for a few named genes, the embedding row read must be the
+row that the model's own vocabulary file gives them. Such tests are cheap
+and do not depend on an agent's judgment. The other six critical errors
+were not code bugs: three were missing or wrong nulls or baselines, two
+were wrong statistics (one of them in the audit's own summary) and one
+was an invalid proxy axis. The ledger places five of these six under a
+checklist pattern (P1, P3 or P5 in Table~\ref{tab:checklist}; S1~Table).
+The generic deterministic checks we built (structure of the
+specification, parameter deviations, number tracing) catch a different
+class of problem. By design they do not test whether a null randomises,
+an edit lands on the right tensor, an input is encoded as the model
+expects, a lookup reads the right rows or a number means what the text
+says, so they would not have caught 12 of the 13 critical errors. The thirteenth, the audit's percentage with
+no cell-by-cell record behind it, is the kind of problem the number
+tracer looks for. We ran the tracer only on the run summaries, not on the
+audit reports, so we did not test whether it would have flagged it. For
+agent-run interpretability we would therefore recommend
+analysis-specific tests of interventions, inputs, lookups and baselines,
+run before results are summarised, together with independent
+fresh-context review, rather than a longer checklist.
+
+The held-out benchmark adds a second observation. Every review of a
+flawed, single-analysis package found its documented error. This
+included a raw-count input fed to an encoder that expects binned values,
+the same kind of error as MaxToki's input encoding. Only part of
+the MaxToki input-encoding error was in the Study~C reference set: three attention runs
+fed $\log(1+\text{CP10k})$ values in as if they were counts (S1~Table,
+L118). Of the nine blind audits of the whole MaxToki project, three were
+graded as fully detecting this part and two as detecting it partly. These
+five suspected that the Adamson input was log-normalised and noted that
+no code checked for raw counts. None found that every run except the RPE1
+attention run was encoded on the wrong scale.
+Reviewing one analysis at a time, with its code, outputs and summary
+together, appears far more effective than reviewing a large project in
+one pass. This comparison is across studies, with different budgets per
+analysis, and should be tested directly.
+
+Reviews also over-called errors. Most reviews of correct analyses (53 of
+66) claimed at least one error in a main result that was not one. On
+correct and flawed analyses together, the reviews made 105 such claims.
+The graders marked 82 of them as false alarms (73 on correct and 9 on
+flawed analyses); the verifier agent ruled the other 23 false alarms
+after a grader dispute. A post-hoc check of the 82, which was not
+pre-registered, found that 76 were accurate observations whose severity
+was overstated. A review step
+is therefore only as good as the step that checks its points against the
+data before acting on them. In Study~A a repair step was meant to do
+this, and it did not always succeed. With Opus~5.5, repairs after generic
+reviews turned 3 of 40 correct verdicts into wrong ones, and repairs
+after checklist reviews turned none. In all three cases the reviewer
+leaned on metrics named in the specification, one of which has a high
+chance level that the specification does not state. A specification can
+thus mislead a reviewer even when the executor that followed it was not
+misled. In the exploratory Haiku~4.5 arm the pattern was reversed:
+repairs after checklist reviews turned 3 of 21 correct verdicts wrong
+(and 3 wrong verdicts right), and repairs after generic reviews turned
+none wrong. So each review style, with one of the two models, led
+repairs to turn correct verdicts wrong.
+
+\subsection*{Specifications and prompts}
+During the deployment a specification was, in practice, a long and
+structured prompt: nothing checked that it was complete, that its
+parameters were used or that its validation criteria were met, and the
+executing agent changed parameters (for example, the number of null
+draws) without recording why in most cases. What can be checked by code
+is narrow (Table~\ref{tab:checks}): document structure, resolvable code
+references, deviations from machine-readable parameters, and whether a
+stored gate flag matches the stored numbers. Whether a null randomises,
+an intervention edits the intended tensor or a number means what the text
+says remains a matter of judgment unless an analysis-specific test is
+written for it. The specifications also carry expectations from earlier
+studies; one stated that a negative verdict was the expected outcome. For
+a strong agent on a focused task this made no difference to the verdict,
+but a contract that states the expected answer is a source of bias that a
+pre-registered analysis plan would avoid.
+
+\subsection*{Transfer to other models and settings}
+The held-out items came from other projects by the author: a text-model
+cell embedding (Cell2Sentence), a protein language model (ESM-2), published
+single-cell transformers (scGPT, Geneformer and STATE), and
+gene-regulatory-network benchmarks that used no model. Every documented
+error was found in each of these four groups. In three groups most
+reviews of correct analyses raised a false alarm: 18 of 18 reviews for
+Cell2Sentence, 12 of 18 for ESM-2 and 17 of 18 for single-cell
+transformers. In the gene-regulatory-network group half did (6 of 12).
+Each group had only two or three correct items, too few to compare the
+groups. Because the checklist's patterns concern study
+design rather than any model's internals, we expect the review findings
+to transfer to other foundation models in biology. The code-level tests do not transfer
+unchanged: each architecture and tokenizer needs its own tests of where an
+edit lands and how inputs are encoded. We tested one agent model family
+(Claude) as executor, reviewer and grader, one deployment, and analyses
+from one author's projects; other agent families, other research groups'
+analyses and human reviewers were not tested.
+
+\subsection*{No human or non-agent baseline}
+We did not compare the agent workflow with human analysts or human
+reviewers, and we make no claim about efficiency. The deployment's
+supervision time was not logged, and the controlled studies measured
+agent effort (tool calls, time), not human effort. Whether a human
+reviewer with the same budget would find more of the code-level errors,
+or raise fewer false alarms, is an open question that a study with human
+reviewers could answer on the same items, which are released for this
+purpose.
+
+\subsection*{What the case study says about MaxToki-217M, and what it does not}
+The corrected analyses describe MaxToki-217M given one cell at a time,
+with rank-value inputs from K562, RPE1 and Tabula Sapiens cells, and
+judged against TRRUST, DoRothEA and CRISPR-interference screens. They do
+not test MaxToki's multi-cell trajectory mode, the larger MaxToki-1B
+(except for one attention run, whose inputs were encoded incorrectly and
+which we do not report), or other single-cell foundation models. Negative
+results here mean that these probes, with these references, found no
+signal beyond simple baselines in this model; they are not evidence that
+\scfm{}s in general lack regulatory information. The references themselves
+are limited: TRRUST covers few transcription factors per cell line, and
+the knockdown fold-changes are noisy, so modest signals could be missed.
+
+\subsection*{Limitations}
+The executor, reviewer, repairer and grader agents all came from one model
+family, so shared blind spots cannot be excluded; graders agreed closely
+with each other, but no human graded the deliverables. Study~A showed a
+ceiling for Opus~5.5, which leaves it without power to detect benefits of
+the specification for that model; the exploratory Haiku arm was added
+after that ceiling was seen and has 20 runs per arm (S2~Appendix). The Study~A tasks were built from the
+deployment's data and so are not independent of it. The Study~B items
+came from the author's own projects. Each flawed item held one documented
+error, and every review found it, in both arms (33 of 33 per arm). So
+Study~B could not show whether the checklist finds more of the documented
+errors. It could compare only false alarms and the number of other real
+problems found per review (2.1 in each arm). The error ledger is a lower bound:
+blind re-audits added 60 errors to it and the full input-encoding error was
+found last, so detection rates are relative to the errors known when
+each study's key was frozen. The deployment ran on Claude Opus~4.7 (its
+one automated loop called Claude Sonnet), while the evaluation used
+Opus~5.5 and, in the exploratory arm, Haiku~4.5. So a difference in
+model may explain part of the gap between the in-session audit and the
+blind re-audits. Finally, this manuscript
+was drafted by an agent under the author's direction. The source data of
+every figure, the error ledger with the file location of each error
+(S1~Table), and a results map that lists every number in the paper with
+its source file (RESULTS\_MAP.csv) are released with the code.
+
+\section*{Conclusion}
+An agent following written method specifications ran eight
+interpretability analyses of MaxToki-217M. The report of its own
+checklist audit, written before any repair, caught 10\% of a fixed set of
+68 errors in these analyses. It caught none of the 11 critical errors
+present when the audit ran. Fresh agents auditing the same work caught
+41--45\% of the 68, with or without the checklist. In the pre-registered
+tests with Claude Opus~5.5, every executor run reached the correct
+conclusion with or without the specifications (20 of 20 in each arm), so
+these tests could not show a benefit. The checklist did not clearly find
+more errors than a generic review of the same budget, and it did not
+raise fewer false alarms. There were two exceptions in our data. In an
+exploratory arm with the smaller Claude Haiku~4.5, a checklist review
+followed by repair raised the share of pitfalls handled by 6.4
+percentage points more than a generic review followed by repair (95\%
+bootstrap interval over 28 paired executor runs pooled over tasks, 1.3
+to 11.7), but it did not raise the number of correct verdicts. In the
+blind re-audits, the two checklist arms (generic and as deployed) fully
+detected more of the 17 missing baselines and nulls than the generic
+review (51\% and 55\% against 39\%) and more of the 9 wrong statistics
+(22\% and 37\% against 15\%). They fully detected fewer of the 12 code
+bugs (69\% and 58\% against 81\%). These splits by error type were not
+tested for significance. For agent-run interpretability we therefore
+recommend independent review in a fresh context, short code tests of
+interventions, inputs and baselines, and a check of every review point
+against the data before it is acted on. After correction, the attention
+scores, sparse-autoencoder features and traced circuits of MaxToki-217M
+did not beat gene-level baselines with the references used here. One
+pair-level signal remained. In RPE1 cells, symmetric attention beat
+rewired TRRUST networks that keep every gene's number of links, even
+after the gene-level features of both genes were removed ($p = 0.003$,
+not adjusted for multiple tests). Co-expression from the same cells
+carried a signal of about the same size. This signal did not replicate
+in K562 cells.
+
+\section*{Supporting information}
+
+\paragraph*{S1 Table.}
+\label{S1_Table}
+{\bf Error ledger.} The 149 confirmed errors in the deployment's code,
+logs, outputs, run summaries and audit reports, with location,
+confirming evidence, one primary type (with a note when more than one
+type applies), checklist pattern, severity, presence before the
+in-session audit, and who or what first found each one (CSV). For the errors
+found in the blind re-audits, the confirming code was not kept; their
+rows give the recomputed values.
+
+\paragraph*{S2 Appendix.}
+\label{S2_Appendix}
+{\bf Protocol of the controlled studies.} The pre-registered design,
+outcomes and analyses; the three amendments (the first logged after
+Study~C and before Studies~A and~B, the other two for the exploratory
+arm); the freeze log with file hashes; the generic and deployed
+checklists; the prompts sent to the agents; the Study~A task briefs,
+answer keys and grading rubrics; the Study~B items and detection rules;
+the Study~C reference set; and the exploratory arm with Claude Haiku~4.5
+as executor, reviewer and repairer.
+
+\paragraph*{S3 Appendix.}
+\label{S3_Appendix}
+{\bf Corrected MaxToki-217M analyses.} Methods, checks and full results
+of each corrected analysis. The key numbers of each corrected analysis
+were computed a second way with separate code. Other agents also
+re-derived them with their own code: three for the RPE1 attention
+analysis and one for the cross-model comparison.
+
+\section*{Acknowledgments}
+The author thanks the developers and maintainers of the public data
+resources and model releases on which this study depends.
+
+\nolinenumbers
+
+\bibliography{references}
+
+\end{document}

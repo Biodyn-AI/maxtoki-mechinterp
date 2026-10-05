@@ -1,0 +1,82 @@
+
+[lung] running H91 on layers [3, 6, 9]
+  L03 seed=42 source_disjoint  AUC=0.412  selected=2/6
+  L03 seed=42 target_disjoint  AUC=0.465  selected=1/6
+  L03 seed=43 source_disjoint  AUC=0.454  selected=6/6
+  L03 seed=43 target_disjoint  AUC=0.454  selected=2/6
+  L03 seed=44 source_disjoint  AUC=0.498  selected=2/6
+  L03 seed=44 target_disjoint  AUC=0.494  selected=1/6
+  L06 seed=42 source_disjoint  AUC=0.530  selected=3/6
+  L06 seed=42 target_disjoint  AUC=0.548  selected=2/6
+  L06 seed=43 source_disjoint  AUC=0.524  selected=3/6
+  L06 seed=43 target_disjoint  AUC=0.514  selected=2/6
+  L06 seed=44 source_disjoint  AUC=0.524  selected=2/6
+  L06 seed=44 target_disjoint  AUC=0.525  selected=1/6
+  L09 seed=42 source_disjoint  AUC=0.511  selected=2/6
+  L09 seed=42 target_disjoint  AUC=0.497  selected=2/6
+  L09 seed=43 source_disjoint  AUC=0.552  selected=2/6
+  L09 seed=43 target_disjoint  AUC=0.478  selected=2/6
+  L09 seed=44 source_disjoint  AUC=0.484  selected=1/6
+  L09 seed=44 target_disjoint  AUC=0.540  selected=2/6
+
+[immune] running H91 on layers [3, 6, 9]
+  L03 seed=42 source_disjoint  AUC=0.545  selected=6/6
+  L03 seed=42 target_disjoint  AUC=0.511  selected=3/6
+  L03 seed=43 source_disjoint  AUC=0.496  selected=2/6
+  L03 seed=43 target_disjoint  AUC=0.514  selected=3/6
+  L03 seed=44 source_disjoint  AUC=0.522  selected=2/6
+  L03 seed=44 target_disjoint  AUC=0.507  selected=4/6
+  L06 seed=42 source_disjoint  AUC=0.509  selected=1/6
+  L06 seed=42 target_disjoint  AUC=0.523  selected=5/6
+  L06 seed=43 source_disjoint  AUC=0.535  selected=2/6
+  L06 seed=43 target_disjoint  AUC=0.521  selected=4/6
+  L06 seed=44 source_disjoint  AUC=0.546  selected=3/6
+  L06 seed=44 target_disjoint  AUC=0.529  selected=3/6
+  L09 seed=42 source_disjoint  AUC=0.480  selected=6/6
+  L09 seed=42 target_disjoint  AUC=0.512  selected=1/6
+  L09 seed=43 source_disjoint  AUC=0.488  selected=2/6
+  L09 seed=43 target_disjoint  AUC=0.498  selected=4/6
+  L09 seed=44 source_disjoint  AUC=0.511  selected=2/6
+  L09 seed=44 target_disjoint  AUC=0.504  selected=3/6
+
+[external_lung] running H91 on layers [3, 6, 9]
+  L03 seed=42 source_disjoint  AUC=0.537  selected=1/6
+  L03 seed=42 target_disjoint  AUC=0.543  selected=5/6
+  L03 seed=43 source_disjoint  AUC=0.520  selected=2/6
+  L03 seed=43 target_disjoint  AUC=0.525  selected=3/6
+  L03 seed=44 source_disjoint  AUC=0.467  selected=3/6
+  L03 seed=44 target_disjoint  AUC=0.495  selected=1/6
+  L06 seed=42 source_disjoint  AUC=0.480  selected=1/6
+  L06 seed=42 target_disjoint  AUC=0.575  selected=6/6
+  L06 seed=43 source_disjoint  AUC=0.500  selected=2/6
+  L06 seed=43 target_disjoint  AUC=0.453  selected=6/6
+  L06 seed=44 source_disjoint  AUC=0.569  selected=3/6
+  L06 seed=44 target_disjoint  AUC=0.464  selected=1/6
+  L09 seed=42 source_disjoint  AUC=0.690  selected=6/6
+  L09 seed=42 target_disjoint  AUC=0.560  selected=1/6
+  L09 seed=43 source_disjoint  AUC=0.621  selected=1/6
+  L09 seed=43 target_disjoint  AUC=0.592  selected=6/6
+  L09 seed=44 source_disjoint  AUC=0.685  selected=1/6
+  L09 seed=44 target_disjoint  AUC=0.539  selected=2/6
+
+[phase 9]
+{
+  "external_lung": {
+    "n_rows": 18,
+    "mean_auc": 0.5452770355596184,
+    "median_auc": 0.5380377750197994,
+    "fraction_above_chance": 0.6666666666666666
+  },
+  "immune": {
+    "n_rows": 18,
+    "mean_auc": 0.514018195208799,
+    "median_auc": 0.5116813150207553,
+    "fraction_above_chance": 0.7777777777777778
+  },
+  "lung": {
+    "n_rows": 18,
+    "mean_auc": 0.5002590335847067,
+    "median_auc": 0.5045381950601338,
+    "fraction_above_chance": 0.5
+  }
+}

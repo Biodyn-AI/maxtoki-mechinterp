@@ -1,0 +1,38 @@
+{
+ "n_shared_genes": 6544,
+ "n_source": 3000,
+ "n_target": 3000,
+ "target_phase_R": 0.0427472529124999,
+ "source_phase_R": 0.07907296262121907,
+ "chance_floor": {
+  "constant": {
+   "R_diff": 0.04274725291249991,
+   "median_err_deg": 86.04333622357898
+  },
+  "random": {
+   "R_diff": 0.017380287359093284,
+   "median_err_deg": 88.0427750698338
+  }
+ },
+ "model": {
+  "within": 0.8857698507098622,
+  "within_median_err_deg": 12.546987138466138,
+  "transfer": 0.7894431304153313,
+  "transfer_median_err_deg": 23.284331068495842,
+  "transfer_offset_deg": 356.2293818347822,
+  "retention": 0.8912508478153492,
+  "pred_R": 0.341047670354172
+ },
+ "expression": {
+  "within": 0.9128371416537603,
+  "within_median_err_deg": 10.761229518468852,
+  "transfer": 0.8783972320291659,
+  "transfer_median_err_deg": 15.955806766521802,
+  "transfer_offset_deg": 357.54118223195303,
+  "retention": 0.9622715728205768,
+  "pred_R": 0.21522881090641022
+ },
+ "model_valid": true,
+ "expression_valid": true,
+ "verdict": "VALID TRANSFER: MODEL, EXPRESSION"
+}

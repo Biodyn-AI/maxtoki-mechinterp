@@ -1,0 +1,339 @@
+number,unit,v2b,v3,change
+H65 internal trust | maxtoki,trustworthiness k=15,0.810936329588015,0.8452115889620733,0.03427525937405829
+H65 internal random holdout | maxtoki,Spearman,0.8341080550865552,0.8486992249520233,0.014591169865468157
+H65 internal donor holdout | maxtoki,Spearman,0.715887968347085,0.7833232491235216,0.06743528077643657
+H65 internal branch holdout | maxtoki,"Spearman, plain mean over branches",0.37040378877968805,0.41359109068175415,0.0431873019020661
+"H65 internal branch holdout, diff cell type | maxtoki",Spearman,0.047157808453755244,0.0673459277389464,0.02018811928519116
+H65 external frozen trust | maxtoki,Spearman (trust: trustworthiness),0.895688041594454,0.9053119584055459,0.00962391681109187
+H65 external frozen random | maxtoki,Spearman (trust: trustworthiness),0.8857749063129917,0.8693751141232017,-0.01639979218979004
+H65 external frozen donor | maxtoki,Spearman (trust: trustworthiness),0.8869530363318562,0.8839187313875426,-0.0030343049443135595
+H65 external frozen branch | maxtoki,Spearman (trust: trustworthiness),0.34644275347273074,0.41730581046311804,0.07086305699038731
+H65 external frozen branch_diff_ct | maxtoki,Spearman (trust: trustworthiness),0.049637687844402055,0.0055711767890459785,-0.04406651105535608
+H65 external frozen global | maxtoki,Spearman (trust: trustworthiness),0.8821200321268053,0.8654526975109337,-0.016667334615871665
+H65 external frozen global_diff_ct | maxtoki,Spearman (trust: trustworthiness),0.8556065185936799,0.8353858929247671,-0.020220625668912806
+H65 zeroshot frozen trust | maxtoki,Spearman (trust: trustworthiness),0.8267244525547446,0.8225091240875912,-0.004215328467153334
+H65 zeroshot frozen random | maxtoki,Spearman (trust: trustworthiness),0.8925656989707351,0.8619305501032037,-0.03063514886753138
+H65 zeroshot frozen donor | maxtoki,Spearman (trust: trustworthiness),0.8703093321429258,0.8800055253771326,0.009696193234206785
+H65 zeroshot frozen branch | maxtoki,Spearman (trust: trustworthiness),0.31683028161845,0.17950200266901395,-0.13732827894943606
+H65 zeroshot frozen branch_diff_ct | maxtoki,Spearman (trust: trustworthiness),0.09440591255235017,0.015536716819319812,-0.07886919573303036
+H65 zeroshot frozen global | maxtoki,Spearman (trust: trustworthiness),0.8989748601586247,0.8670749659188554,-0.031899894239769355
+H65 zeroshot frozen global_diff_ct | maxtoki,Spearman (trust: trustworthiness),0.8861197677423556,0.8508986564048886,-0.03522111133746697
+H65 lung_nonhema frozen trust | maxtoki,Spearman (trust: trustworthiness),0.7995555555555556,0.7194567901234568,-0.08009876543209882
+H65 lung_nonhema frozen random | maxtoki,Spearman (trust: trustworthiness),-0.01642006280037764,-0.020637671784559948,-0.00421760898418231
+H65 lung_nonhema frozen donor | maxtoki,Spearman (trust: trustworthiness),0.01339727102198118,-0.0642394765200935,-0.07763674754207468
+H65 lung_nonhema frozen branch | maxtoki,Spearman (trust: trustworthiness),-0.14687071442603894,-0.04511674891450955,0.10175396551152939
+H65 lung_nonhema frozen branch_diff_ct | maxtoki,Spearman (trust: trustworthiness),-0.10272734073766239,0.014941391550447608,0.11766873228810999
+H65 lung_nonhema frozen global | maxtoki,Spearman (trust: trustworthiness),-0.017499871255280627,-0.0411983052822393,-0.023698434026958672
+H65 lung_nonhema frozen global_diff_ct | maxtoki,Spearman (trust: trustworthiness),-0.021011281155371552,-0.04379767640581547,-0.02278639525044392
+H65 internal trust | maxtoki_pca64,trustworthiness k=15,0.6962322958371001,0.6856429463171037,-0.01058934951999646
+H65 internal random holdout | maxtoki_pca64,Spearman,0.7817336822611379,0.7960147155772107,0.014281033316072778
+H65 internal donor holdout | maxtoki_pca64,Spearman,0.6704698330760561,0.5754090643782955,-0.09506076869776059
+H65 internal branch holdout | maxtoki_pca64,"Spearman, plain mean over branches",0.48997823677099256,0.4874188484223609,-0.002559388348631675
+"H65 internal branch holdout, diff cell type | maxtoki_pca64",Spearman,0.06523906942968678,0.07536804278818732,0.010128973358500534
+H65 external frozen trust | maxtoki_pca64,Spearman (trust: trustworthiness),0.842522819179665,0.8202193337184671,-0.02230348546119787
+H65 external frozen random | maxtoki_pca64,Spearman (trust: trustworthiness),0.8791076150704134,0.8684156801526395,-0.010691934917773871
+H65 external frozen donor | maxtoki_pca64,Spearman (trust: trustworthiness),0.8958497752426945,0.8678889528079347,-0.027960822434759836
+H65 external frozen branch | maxtoki_pca64,Spearman (trust: trustworthiness),0.4000621822976061,0.38060967439512217,-0.01945250790248393
+H65 external frozen branch_diff_ct | maxtoki_pca64,Spearman (trust: trustworthiness),-0.037268359447955625,-0.014087995304972121,0.023180364142983502
+H65 external frozen global | maxtoki_pca64,Spearman (trust: trustworthiness),0.8792007009732972,0.8632044989802184,-0.015996201993078718
+H65 external frozen global_diff_ct | maxtoki_pca64,Spearman (trust: trustworthiness),0.8534879588954368,0.8331504360482214,-0.02033752284721546
+H65 zeroshot frozen trust | maxtoki_pca64,Spearman (trust: trustworthiness),0.7494343065693431,0.73470498783455,-0.014729318734793106
+H65 zeroshot frozen random | maxtoki_pca64,Spearman (trust: trustworthiness),0.8815975722102374,0.8505823692071791,-0.031015203003058267
+H65 zeroshot frozen donor | maxtoki_pca64,Spearman (trust: trustworthiness),0.7994577428180875,0.806592954979815,0.007135212161727522
+H65 zeroshot frozen branch | maxtoki_pca64,Spearman (trust: trustworthiness),0.47502014916252894,0.4572999139824396,-0.01772023518008936
+H65 zeroshot frozen branch_diff_ct | maxtoki_pca64,Spearman (trust: trustworthiness),0.1718377143183501,0.16031932372063737,-0.01151839059771273
+H65 zeroshot frozen global | maxtoki_pca64,Spearman (trust: trustworthiness),0.8764713573128032,0.8551502525082528,-0.021321104804550406
+H65 zeroshot frozen global_diff_ct | maxtoki_pca64,Spearman (trust: trustworthiness),0.8613483056559548,0.8353267373586744,-0.026021568297280417
+H65 lung_nonhema frozen trust | maxtoki_pca64,Spearman (trust: trustworthiness),0.7801975308641975,0.8110617283950617,0.030864197530864224
+H65 lung_nonhema frozen random | maxtoki_pca64,Spearman (trust: trustworthiness),-0.021170377733442956,-0.008859961822710035,0.012310415910732921
+H65 lung_nonhema frozen donor | maxtoki_pca64,Spearman (trust: trustworthiness),-0.09034394224664807,-0.0741057715265393,0.016238170720108774
+H65 lung_nonhema frozen branch | maxtoki_pca64,Spearman (trust: trustworthiness),-0.06776160440454312,-0.15707103334391775,-0.08930942893937463
+H65 lung_nonhema frozen branch_diff_ct | maxtoki_pca64,Spearman (trust: trustworthiness),-0.022111159756576303,-0.10985871851550529,-0.08774755875892898
+H65 lung_nonhema frozen global | maxtoki_pca64,Spearman (trust: trustworthiness),-0.0373371534120383,-0.006753621376002232,0.030583532036036067
+H65 lung_nonhema frozen global_diff_ct | maxtoki_pca64,Spearman (trust: trustworthiness),-0.03471811496957785,-0.004738519131653031,0.029979595837924818
+H65 internal trust | tokenbag_pca64,trustworthiness k=15,0.7080339231133497,0.705028197511731,-0.003005725601618714
+H65 internal random holdout | tokenbag_pca64,Spearman,0.6523259638141151,0.6742666014005633,0.021940637586448153
+H65 internal donor holdout | tokenbag_pca64,Spearman,0.5633823558316513,0.5557275136409737,-0.00765484219067758
+H65 internal branch holdout | tokenbag_pca64,"Spearman, plain mean over branches",0.4165644670160747,0.4294707541298854,0.0129062871138107
+"H65 internal branch holdout, diff cell type | tokenbag_pca64",Spearman,0.0064020171259901795,-0.07828389880561494,-0.08468591593160513
+H65 external frozen trust | tokenbag_pca64,Spearman (trust: trustworthiness),0.8747194300019256,0.8593219718852301,-0.015397458116695573
+H65 external frozen random | tokenbag_pca64,Spearman (trust: trustworthiness),0.8785969974697327,0.8524920129114785,-0.026104984558254274
+H65 external frozen donor | tokenbag_pca64,Spearman (trust: trustworthiness),0.8650107255431748,0.7322910130330609,-0.13271971251011394
+H65 external frozen branch | tokenbag_pca64,Spearman (trust: trustworthiness),0.421739615216641,0.3863289948626312,-0.03541062035400977
+H65 external frozen branch_diff_ct | tokenbag_pca64,Spearman (trust: trustworthiness),0.009363909822010416,-0.03891515854378093,-0.04827906836579134
+H65 external frozen global | tokenbag_pca64,Spearman (trust: trustworthiness),0.8755705686470237,0.8492829911668001,-0.02628757748022359
+H65 external frozen global_diff_ct | tokenbag_pca64,Spearman (trust: trustworthiness),0.8501351142047123,0.8200170640312754,-0.03011805017343694
+H65 zeroshot frozen trust | tokenbag_pca64,Spearman (trust: trustworthiness),0.7594221411192215,0.7497506082725061,-0.009671532846715403
+H65 zeroshot frozen random | tokenbag_pca64,Spearman (trust: trustworthiness),0.8754877200251515,0.8212302014876555,-0.05425751853749605
+H65 zeroshot frozen donor | tokenbag_pca64,Spearman (trust: trustworthiness),0.8230587720634426,0.8018009124995871,-0.021257859563855508
+H65 zeroshot frozen branch | tokenbag_pca64,Spearman (trust: trustworthiness),0.2702755048464485,0.13279270672489488,-0.13748279812155365
+H65 zeroshot frozen branch_diff_ct | tokenbag_pca64,Spearman (trust: trustworthiness),0.0279279252240075,-0.08481594918401662,-0.11274387440802412
+H65 zeroshot frozen global | tokenbag_pca64,Spearman (trust: trustworthiness),0.879379594802474,0.819213769281586,-0.060165825520888006
+H65 zeroshot frozen global_diff_ct | tokenbag_pca64,Spearman (trust: trustworthiness),0.8661427484759263,0.8069592229481876,-0.059183525527738756
+H65 lung_nonhema frozen trust | tokenbag_pca64,Spearman (trust: trustworthiness),0.9275555555555556,0.8915061728395062,-0.036049382716049405
+H65 lung_nonhema frozen random | tokenbag_pca64,Spearman (trust: trustworthiness),-0.01830525144076753,-0.07335071856110553,-0.055045467120338004
+H65 lung_nonhema frozen donor | tokenbag_pca64,Spearman (trust: trustworthiness),0.01878886879097616,-0.05274650839721872,-0.07153537718819489
+H65 lung_nonhema frozen branch | tokenbag_pca64,Spearman (trust: trustworthiness),-0.05495099206565538,-0.05975536616731293,-0.004804374101657551
+H65 lung_nonhema frozen branch_diff_ct | tokenbag_pca64,Spearman (trust: trustworthiness),0.02833507326683411,0.04550794047539482,0.01717286720856071
+H65 lung_nonhema frozen global | tokenbag_pca64,Spearman (trust: trustworthiness),-0.014953229534936878,-0.03576562813778587,-0.02081239860284899
+H65 lung_nonhema frozen global_diff_ct | tokenbag_pca64,Spearman (trust: trustworthiness),-0.0220455488136889,-0.046246378097868523,-0.024200829284179624
+H65 internal trust | hvg_pca64,trustworthiness k=15,0.7171595850015067,0.7171595850015067,0.0
+H65 internal random holdout | hvg_pca64,Spearman,0.7263266799620789,0.7263266799620789,0.0
+H65 internal donor holdout | hvg_pca64,Spearman,0.6763634877628603,0.6763634877628603,0.0
+H65 internal branch holdout | hvg_pca64,"Spearman, plain mean over branches",0.35362596470590796,0.35362596470590796,0.0
+"H65 internal branch holdout, diff cell type | hvg_pca64",Spearman,0.0879186823994107,0.0879186823994107,0.0
+H65 external frozen trust | hvg_pca64,Spearman (trust: trustworthiness),0.8594860388985173,0.8594860388985173,0.0
+H65 external frozen random | hvg_pca64,Spearman (trust: trustworthiness),0.7720778859248721,0.7720778859248721,0.0
+H65 external frozen donor | hvg_pca64,Spearman (trust: trustworthiness),0.7899680944469102,0.7899680944469102,0.0
+H65 external frozen branch | hvg_pca64,Spearman (trust: trustworthiness),0.36724595129541643,0.36724595129541643,0.0
+H65 external frozen branch_diff_ct | hvg_pca64,Spearman (trust: trustworthiness),-0.011295646183048694,-0.011295646183048694,0.0
+H65 external frozen global | hvg_pca64,Spearman (trust: trustworthiness),0.7632826651838377,0.7632826651838377,0.0
+H65 external frozen global_diff_ct | hvg_pca64,Spearman (trust: trustworthiness),0.7199948156799508,0.7199948156799508,0.0
+H65 zeroshot frozen trust | hvg_pca64,Spearman (trust: trustworthiness),0.7679744525547445,0.7679744525547445,0.0
+H65 zeroshot frozen random | hvg_pca64,Spearman (trust: trustworthiness),0.7796456133578051,0.7796456133578051,0.0
+H65 zeroshot frozen donor | hvg_pca64,Spearman (trust: trustworthiness),0.6700332322253728,0.6700332322253728,0.0
+H65 zeroshot frozen branch | hvg_pca64,Spearman (trust: trustworthiness),0.030034047570847988,0.030034047570847988,0.0
+H65 zeroshot frozen branch_diff_ct | hvg_pca64,Spearman (trust: trustworthiness),-0.060456179096196654,-0.060456179096196654,0.0
+H65 zeroshot frozen global | hvg_pca64,Spearman (trust: trustworthiness),0.7570619110136941,0.7570619110136941,0.0
+H65 zeroshot frozen global_diff_ct | hvg_pca64,Spearman (trust: trustworthiness),0.746184198619881,0.746184198619881,0.0
+H65 lung_nonhema frozen trust | hvg_pca64,Spearman (trust: trustworthiness),0.7549135802469136,0.7549135802469136,0.0
+H65 lung_nonhema frozen random | hvg_pca64,Spearman (trust: trustworthiness),0.10045613982813664,0.10045613982813664,0.0
+H65 lung_nonhema frozen donor | hvg_pca64,Spearman (trust: trustworthiness),0.04315093120894688,0.04315093120894688,0.0
+H65 lung_nonhema frozen branch | hvg_pca64,Spearman (trust: trustworthiness),-0.14404065060231797,-0.14404065060231797,0.0
+H65 lung_nonhema frozen branch_diff_ct | hvg_pca64,Spearman (trust: trustworthiness),-0.11119446432020297,-0.11119446432020297,0.0
+H65 lung_nonhema frozen global | hvg_pca64,Spearman (trust: trustworthiness),0.06828591729409013,0.06828591729409013,0.0
+H65 lung_nonhema frozen global_diff_ct | hvg_pca64,Spearman (trust: trustworthiness),0.06389764541981635,0.06389764541981635,0.0
+H38 internal trust | maxtoki,,0.813508064516129,0.8005320340501793,-0.01297603046594975
+H38 internal random | maxtoki,,0.7614337028842301,0.7580765484785408,-0.003357154405689289
+H38 internal donor | maxtoki,,0.6728153864579443,0.5994991606159367,-0.07331622584200759
+H38 internal cat | maxtoki,,0.2877468817186868,0.22947426469041363,-0.05827261702827316
+H38 external frozen trust | maxtoki,,0.8827922573722116,0.8781462679791163,-0.00464598939309524
+H38 external frozen random | maxtoki,,0.8027689124567582,0.802945726036949,0.0001768135801908377
+H38 external frozen donor | maxtoki,,0.7588308836487697,0.7698927437031022,0.011061860054332517
+H38 external frozen category | maxtoki,,0.5939387887806408,0.6082341015562895,0.014295312775648772
+H38 zeroshot frozen trust | maxtoki,,0.7865437361620568,0.7827104193516408,-0.0038333168104159876
+H38 zeroshot frozen random | maxtoki,,0.7468825111989683,0.7368162042376027,-0.010066306961365568
+H38 zeroshot frozen donor | maxtoki,,0.5907064673942526,0.680244918639445,0.08953845124519244
+H38 zeroshot frozen category | maxtoki,,0.5852414322226771,0.5556634766004213,-0.029577955622255847
+H95 internal trust | maxtoki,,0.799440401940402,0.8018121968121968,0.002371794871794841
+H95 internal random | maxtoki,,0.7848074682583253,0.7899593316328978,0.005151863374572518
+H95 internal donor | maxtoki,,0.6572888958724519,0.7237184782170881,0.06642958234463625
+H95 internal cat | maxtoki,,,,
+H95 external frozen trust | maxtoki,,0.8884614132734433,0.8324624693045746,-0.05599894396886873
+H95 external frozen random | maxtoki,,0.8064219507951194,0.8066876159100215,0.00026566511490211386
+H95 external frozen donor | maxtoki,,0.8123776085753512,0.8123401425123187,-3.746606303256517e-05
+H95 external frozen category | maxtoki,,0.1550557045216732,0.20570179517250362,0.05064609065083042
+H95 zeroshot frozen trust | maxtoki,,0.817426400759734,0.7770180436847103,-0.04040835707502377
+H95 zeroshot frozen random | maxtoki,,0.8059730137177137,0.8061345522374479,0.00016153851973421673
+H95 zeroshot frozen donor | maxtoki,,0.7943032488685585,0.7947141297481365,0.00041088087957796837
+H95 zeroshot frozen category | maxtoki,,0.04237767314039376,-0.006080179089743564,-0.04845785223013732
+H103 internal trust | maxtoki,,0.8601346801346801,0.8620875420875421,0.0019528619528620395
+H103 internal random | maxtoki,,0.8609543262117892,0.8609543262117892,0.0
+H103 internal donor | maxtoki,,0.8607226240279782,0.8607226240279782,0.0
+H103 internal cat | maxtoki,,,,
+H103 external frozen trust | maxtoki,,0.8772069409714329,0.8433734939759037,-0.03383344699552926
+H103 external frozen random | maxtoki,,0.8584149027136343,0.8584148750970977,-2.7616536613095377e-08
+H103 external frozen donor | maxtoki,,0.8589515692314038,0.8589517171222291,1.478908252527944e-07
+H103 external frozen category | maxtoki,,,,
+H103 zeroshot frozen trust | maxtoki,,,,
+H103 zeroshot frozen random | maxtoki,,0.8643569005306648,0.8643569005306648,0.0
+H103 zeroshot frozen donor | maxtoki,,0.8574713802163146,0.8574713802163146,0.0
+H103 zeroshot frozen category | maxtoki,,,,
+H65 run null internal trust | maxtoki,,0.7985001506737268,0.7986327435533169,0.0001325928795901099
+H65 run null internal branch | maxtoki,,-0.0034553064794525155,-0.008110061855022352,-0.004654755375569836
+structured null p | maxtoki | internal_branch,"one-sided p, refit null",0.5238095238095238,0.38095238095238093,-0.1428571428571429
+structured null mean | maxtoki | internal_branch,,0.38143240653963373,0.3839533244736192,0.002520917933985456
+structured null p | maxtoki | external_branch,"one-sided p, refit null",0.1951219512195122,0.14634146341463414,-0.048780487804878064
+structured null mean | maxtoki | external_branch,,0.2561713118945774,0.3317058355830168,0.07553452368843938
+structured null p | maxtoki | external_global,"one-sided p, refit null",0.21951219512195122,0.2926829268292683,0.07317073170731705
+structured null mean | maxtoki | external_global,,0.8626835865637237,0.842604349650719,-0.020079236913004728
+structured null p | maxtoki | zeroshot_branch,"one-sided p, refit null",0.24390243902439024,0.2682926829268293,0.024390243902439046
+structured null mean | maxtoki | zeroshot_branch,,0.19311437535591955,0.12362485564284129,-0.06948951971307826
+structured null p | maxtoki | zeroshot_global,"one-sided p, refit null",0.04878048780487805,0.14634146341463414,0.09756097560975609
+structured null mean | maxtoki | zeroshot_global,,0.8603438026741426,0.8309630355310826,-0.029380767143059927
+structured null p | maxtoki | trust,"one-sided p, refit null",0.36585365853658536,0.024390243902439025,-0.3414634146341463
+structured null mean | maxtoki | trust,,0.807831051702613,0.8045222566619312,-0.0033087950406818223
+structured null p | maxtoki | external_branch_diff_ct,"one-sided p, refit null",0.7560975609756098,0.7073170731707317,-0.04878048780487809
+structured null mean | maxtoki | external_branch_diff_ct,,0.12127612341439742,0.09871083386075791,-0.02256528955363951
+structured null p | lookup_ct_s0 | internal_branch,"one-sided p, refit null",0.6666666666666666,0.6666666666666666,0.0
+structured null mean | lookup_ct_s0 | internal_branch,,0.3877381386104334,0.3877381386104334,0.0
+structured null p | lookup_ct_s0 | external_branch,"one-sided p, refit null",0.8536585365853658,0.8536585365853658,0.0
+structured null mean | lookup_ct_s0 | external_branch,,0.3693160910777099,0.3693160910777099,0.0
+structured null p | lookup_ct_s0 | external_global,"one-sided p, refit null",0.8292682926829268,0.8292682926829268,0.0
+structured null mean | lookup_ct_s0 | external_global,,0.8393477145624291,0.8393477145624291,0.0
+structured null p | lookup_ct_s0 | zeroshot_branch,"one-sided p, refit null",0.6097560975609756,0.6097560975609756,0.0
+structured null mean | lookup_ct_s0 | zeroshot_branch,,0.3354543688256998,0.3354543688256998,0.0
+structured null p | lookup_ct_s0 | zeroshot_global,"one-sided p, refit null",0.2682926829268293,0.2682926829268293,0.0
+structured null mean | lookup_ct_s0 | zeroshot_global,,0.7977180362511682,0.7977180362511682,0.0
+structured null p | lookup_ct_s0 | trust,"one-sided p, refit null",0.975609756097561,0.975609756097561,0.0
+structured null mean | lookup_ct_s0 | trust,,0.8101397821688405,0.8101397821688405,0.0
+structured null p | lookup_ct_s0 | external_branch_diff_ct,"one-sided p, refit null",0.7317073170731707,0.7317073170731707,0.0
+structured null mean | lookup_ct_s0 | external_branch_diff_ct,,0.15356438641975334,0.15356438641975334,0.0
+structured null p | tokenbag_pca64 | internal_branch,"one-sided p, refit null",0.42857142857142855,0.6190476190476191,0.19047619047619052
+structured null mean | tokenbag_pca64 | internal_branch,,0.4046419341962554,0.43743881607242113,0.03279688187616575
+structured null p | tokenbag_pca64 | external_branch,"one-sided p, refit null",0.14634146341463414,0.12195121951219512,-0.02439024390243902
+structured null mean | tokenbag_pca64 | external_branch,,0.34605887518460954,0.317224297801541,-0.02883457738306855
+structured null p | tokenbag_pca64 | external_global,"one-sided p, refit null",0.3902439024390244,0.4634146341463415,0.07317073170731708
+structured null mean | tokenbag_pca64 | external_global,,0.8660917787466922,0.8414181765969394,-0.024673602149752782
+structured null p | tokenbag_pca64 | zeroshot_branch,"one-sided p, refit null",0.3170731707317073,0.5609756097560976,0.2439024390243903
+structured null mean | tokenbag_pca64 | zeroshot_branch,,0.23824780689986694,0.1436308524621045,-0.09461695443776244
+structured null p | tokenbag_pca64 | zeroshot_global,"one-sided p, refit null",0.07317073170731707,0.14634146341463414,0.07317073170731707
+structured null mean | tokenbag_pca64 | zeroshot_global,,0.8460989786382704,0.7836431948821467,-0.062455783756123706
+structured null p | tokenbag_pca64 | trust,"one-sided p, refit null",0.8048780487804879,0.7804878048780488,-0.024390243902439046
+structured null mean | tokenbag_pca64 | trust,,0.7134185070386154,0.7091998148865641,-0.004218692152051284
+structured null p | tokenbag_pca64 | external_branch_diff_ct,"one-sided p, refit null",0.5609756097560976,0.7317073170731707,0.1707317073170731
+structured null mean | tokenbag_pca64 | external_branch_diff_ct,,0.025852806456355258,0.028893326856148115,0.0030405203997928565
+structured null p | hvg_pca64 | internal_branch,"one-sided p, refit null",0.42857142857142855,0.42857142857142855,0.0
+structured null mean | hvg_pca64 | internal_branch,,0.33643297127665284,0.33643297127665284,0.0
+structured null p | hvg_pca64 | external_branch,"one-sided p, refit null",0.14634146341463414,0.14634146341463414,0.0
+structured null mean | hvg_pca64 | external_branch,,0.2943062466251331,0.2943062466251331,0.0
+structured null p | hvg_pca64 | external_global,"one-sided p, refit null",0.5365853658536586,0.5365853658536586,0.0
+structured null mean | hvg_pca64 | external_global,,0.7621095441318853,0.7621095441318853,0.0
+structured null p | hvg_pca64 | zeroshot_branch,"one-sided p, refit null",0.34146341463414637,0.34146341463414637,0.0
+structured null mean | hvg_pca64 | zeroshot_branch,,-0.004809992977034499,-0.004809992977034499,0.0
+structured null p | hvg_pca64 | zeroshot_global,"one-sided p, refit null",0.36585365853658536,0.36585365853658536,0.0
+structured null mean | hvg_pca64 | zeroshot_global,,0.7440168206255883,0.7440168206255883,0.0
+structured null p | hvg_pca64 | trust,"one-sided p, refit null",0.8780487804878049,0.8780487804878049,0.0
+structured null mean | hvg_pca64 | trust,,0.7259158164363512,0.7259158164363512,0.0
+structured null p | hvg_pca64 | external_branch_diff_ct,"one-sided p, refit null",0.6341463414634146,0.6341463414634146,0.0
+structured null mean | hvg_pca64 | external_branch_diff_ct,,0.03560279079654173,0.03560279079654173,0.0
+boot_external_global | global|maxtoki_minus_lookup | observed,donor bootstrap 95% percentile,0.081079194982009,0.06441186036613722,-0.016667334615871776
+boot_external_global | global|maxtoki_minus_lookup | lo,donor bootstrap 95% percentile,0.062217236816776676,0.05003194111988006,-0.012185295696896616
+boot_external_global | global|maxtoki_minus_lookup | hi,donor bootstrap 95% percentile,0.10426206615902545,0.09130314627227756,-0.012958919886747883
+boot_external_global | global|maxtoki_minus_tokenbag | observed,donor bootstrap 95% percentile,0.006549463479781692,0.016169706344133394,0.009620242864351702
+boot_external_global | global|maxtoki_minus_tokenbag | lo,donor bootstrap 95% percentile,-0.010708305497557125,0.001771266118120607,0.012479571615677733
+boot_external_global | global|maxtoki_minus_tokenbag | hi,donor bootstrap 95% percentile,0.032864635463638,0.046140834623574926,0.013276199159936927
+boot_external_global | global|maxtoki_minus_hvg | observed,donor bootstrap 95% percentile,0.11883736694296754,0.10217003232709576,-0.016667334615871776
+boot_external_global | global|maxtoki_minus_hvg | lo,donor bootstrap 95% percentile,0.08366501615346732,0.07337373692013686,-0.010291279233330453
+boot_external_global | global|maxtoki_minus_hvg | hi,donor bootstrap 95% percentile,0.15970018820277745,0.13957032886986864,-0.02012985933290881
+boot_external_global | global|maxtoki | observed,donor bootstrap 95% percentile,0.8821200321268053,0.8654526975109336,-0.016667334615871776
+boot_external_global | global|maxtoki | lo,donor bootstrap 95% percentile,0.8606717077707529,0.8391945582251923,-0.02147714954556057
+boot_external_global | global|maxtoki | hi,donor bootstrap 95% percentile,0.9000843173545877,0.8961192834180264,-0.003965033936561335
+boot_external_global | global_diff_ct|maxtoki_minus_tokenbag | observed,donor bootstrap 95% percentile,0.005471404388967427,0.015368828893491782,0.009897424504524355
+boot_external_global | global_diff_ct|maxtoki_minus_tokenbag | lo,donor bootstrap 95% percentile,-0.015323074056870495,-0.00048194552226081544,0.01484112853460968
+boot_external_global | global_diff_ct|maxtoki_minus_tokenbag | hi,donor bootstrap 95% percentile,0.03492106633841043,0.04674163290953187,0.01182056657112144
+boot_zeroshot_global | global|maxtoki_minus_lookup | observed,donor bootstrap 95% percentile,0.12256789486339359,0.09066800062362412,-0.031899894239769466
+boot_zeroshot_global | global|maxtoki_minus_lookup | lo,donor bootstrap 95% percentile,0.05004413458430295,0.02657705144301143,-0.02346708314129152
+boot_zeroshot_global | global|maxtoki_minus_lookup | hi,donor bootstrap 95% percentile,0.18767157450097863,0.16293114485501373,-0.0247404296459649
+boot_zeroshot_global | global|maxtoki_minus_tokenbag | observed,donor bootstrap 95% percentile,0.01959526535615086,0.04786119663726929,0.028265931281118428
+boot_zeroshot_global | global|maxtoki_minus_tokenbag | lo,donor bootstrap 95% percentile,0.0013691397230063383,0.009396330450388141,0.008027190727381802
+boot_zeroshot_global | global|maxtoki_minus_tokenbag | hi,donor bootstrap 95% percentile,0.04153321239906749,0.14899667789599186,0.10746346549692437
+boot_zeroshot_global | global|maxtoki_minus_hvg | observed,donor bootstrap 95% percentile,0.14191294914493058,0.11001305490516111,-0.031899894239769466
+boot_zeroshot_global | global|maxtoki_minus_hvg | lo,donor bootstrap 95% percentile,0.06474038222793693,0.037708162223048944,-0.02703222000488799
+boot_zeroshot_global | global|maxtoki_minus_hvg | hi,donor bootstrap 95% percentile,0.18361316115909415,0.1505196472722769,-0.03309351388681725
+boot_zeroshot_global | global|maxtoki | observed,donor bootstrap 95% percentile,0.8989748601586248,0.8670749659188554,-0.031899894239769466
+boot_zeroshot_global | global|maxtoki | lo,donor bootstrap 95% percentile,0.8424772161903457,0.827752075025887,-0.014725141164458666
+boot_zeroshot_global | global|maxtoki | hi,donor bootstrap 95% percentile,0.9172409890454928,0.8876642393370244,-0.029576749708468353
+boot_zeroshot_global | global_diff_ct|maxtoki_minus_tokenbag | observed,donor bootstrap 95% percentile,0.019977019266429252,0.043939433456700816,0.023962414190271564
+boot_zeroshot_global | global_diff_ct|maxtoki_minus_tokenbag | lo,donor bootstrap 95% percentile,-0.0007003205832240594,0.008063951973042934,0.008764272556266994
+boot_zeroshot_global | global_diff_ct|maxtoki_minus_tokenbag | hi,donor bootstrap 95% percentile,0.04554014973568116,0.14037764944837874,0.09483749971269759
+boot_external | branch|maxtoki_minus_lookup | observed,donor bootstrap 95% percentile,0.004549636690996117,0.07541269368138342,0.07086305699038731
+boot_external | branch|maxtoki_minus_lookup | lo,donor bootstrap 95% percentile,-0.20255742990372308,-0.037716963349513445,0.16484046655420964
+boot_external | branch|maxtoki_minus_lookup | hi,donor bootstrap 95% percentile,0.15762849688910646,0.13816476549444492,-0.019463731394661538
+boot_external | branch|maxtoki_minus_tokenbag | observed,donor bootstrap 95% percentile,-0.07529686174391026,0.030976815600486818,0.10627367734439708
+boot_external | branch|maxtoki_minus_tokenbag | lo,donor bootstrap 95% percentile,-0.29250128047150015,-0.067353614404283,0.22514766606721714
+boot_external | branch|maxtoki_minus_tokenbag | hi,donor bootstrap 95% percentile,0.062129484185047844,0.09440710377142075,0.03227761958637291
+boot_external | branch|maxtoki_minus_hvg | observed,donor bootstrap 95% percentile,-0.020803197822685693,0.050059859167701615,0.07086305699038731
+boot_external | branch|maxtoki_minus_hvg | lo,donor bootstrap 95% percentile,-0.23974616669546697,-0.061833974206701434,0.17791219248876555
+boot_external | branch|maxtoki_minus_hvg | hi,donor bootstrap 95% percentile,0.1145943377052474,0.11093442547194142,-0.003659912233305987
+boot_external | branch|maxtoki | observed,donor bootstrap 95% percentile,0.34644275347273074,0.41730581046311804,0.07086305699038731
+boot_external | branch|maxtoki | lo,donor bootstrap 95% percentile,0.1456527586891262,0.2971378924988999,0.1514851338097737
+boot_external | branch|maxtoki | hi,donor bootstrap 95% percentile,0.539667789141952,0.5316444194709176,-0.008023369671034453
+boot_external | branch_diff_ct|maxtoki | observed,donor bootstrap 95% percentile,0.049637687844402034,0.0055711767890459785,-0.044066511055356056
+boot_external | branch_diff_ct|maxtoki | lo,donor bootstrap 95% percentile,-0.028210308174934164,-0.09445508413634092,-0.06624477596140675
+boot_external | branch_diff_ct|maxtoki | hi,donor bootstrap 95% percentile,0.32527649052298674,0.2453492368288622,-0.07992725369412454
+boot_zeroshot | branch|maxtoki_minus_lookup | observed,donor bootstrap 95% percentile,-0.05971771367889711,-0.1970459926283331,-0.137328278949436
+boot_zeroshot | branch|maxtoki_minus_lookup | lo,donor bootstrap 95% percentile,-0.36531209456786573,-0.5674692275061863,-0.2021571329383206
+boot_zeroshot | branch|maxtoki_minus_lookup | hi,donor bootstrap 95% percentile,0.08845217566973931,0.0049577391263770755,-0.08349443654336224
+boot_zeroshot | branch|maxtoki_minus_tokenbag | observed,donor bootstrap 95% percentile,0.04655477677200143,0.04670929594411907,0.00015451917211764532
+boot_zeroshot | branch|maxtoki_minus_tokenbag | lo,donor bootstrap 95% percentile,-0.3462749829571981,-0.3324633098797475,0.013811673077450626
+boot_zeroshot | branch|maxtoki_minus_tokenbag | hi,donor bootstrap 95% percentile,0.37347241290716154,0.36261642078021905,-0.010855992126942493
+boot_zeroshot | branch|maxtoki_minus_hvg | observed,donor bootstrap 95% percentile,0.28679623404760196,0.14946795509816596,-0.137328278949436
+boot_zeroshot | branch|maxtoki_minus_hvg | lo,donor bootstrap 95% percentile,-0.044300188399832116,-0.17710466621677795,-0.13280447781694582
+boot_zeroshot | branch|maxtoki_minus_hvg | hi,donor bootstrap 95% percentile,0.5097713294284674,0.2981872458728204,-0.21158408355564695
+boot_zeroshot | branch|maxtoki | observed,donor bootstrap 95% percentile,0.31683028161844995,0.17950200266901395,-0.137328278949436
+boot_zeroshot | branch|maxtoki | lo,donor bootstrap 95% percentile,-0.025729337802390385,-0.10289792248190958,-0.0771685846795192
+boot_zeroshot | branch|maxtoki | hi,donor bootstrap 95% percentile,0.46737337288472525,0.3685316908305374,-0.09884168205418786
+boot_internal_branch | branch|maxtoki_minus_lookup | observed,donor bootstrap 95% percentile,-0.021714636303432566,0.0214727217554595,0.04318735805889207
+boot_internal_branch | branch|maxtoki_minus_lookup | lo,donor bootstrap 95% percentile,-0.2134786787642992,-0.39265193931374404,-0.17917326054944482
+boot_internal_branch | branch|maxtoki_minus_lookup | hi,donor bootstrap 95% percentile,0.045336576615924606,0.06329133598670415,0.017954759370779547
+boot_internal_branch | branch|maxtoki_minus_tokenbag | observed,donor bootstrap 95% percentile,-0.04616072924894393,-0.01587965830386262,0.030281070945081312
+boot_internal_branch | branch|maxtoki_minus_tokenbag | lo,donor bootstrap 95% percentile,-0.27923538710626833,-0.35797773155412255,-0.07874234444785422
+boot_internal_branch | branch|maxtoki_minus_tokenbag | hi,donor bootstrap 95% percentile,0.0203026125006636,0.06297349477149765,0.04267088227083405
+boot_internal_branch | branch|maxtoki_minus_hvg | observed,donor bootstrap 95% percentile,0.016777791652101248,0.059965149710993315,0.04318735805889207
+boot_internal_branch | branch|maxtoki_minus_hvg | lo,donor bootstrap 95% percentile,-0.23555229853027876,-0.347058758026944,-0.11150645949666527
+boot_internal_branch | branch|maxtoki_minus_hvg | hi,donor bootstrap 95% percentile,0.02824459442696702,0.08253999732812387,0.05429540290115685
+boot_internal_branch | branch|maxtoki | observed,donor bootstrap 95% percentile,0.3704037377671307,0.41359109582602277,0.04318735805889207
+boot_internal_branch | branch|maxtoki | lo,donor bootstrap 95% percentile,0.20249062547156127,0.06304917951263295,-0.13944144595892832
+boot_internal_branch | branch|maxtoki | hi,donor bootstrap 95% percentile,0.48452989977340866,0.4635204540066944,-0.021009445766714263
+evalnull | maxtoki | branch_all_pairs | observed,,0.3704037377671307,0.41359109582602277,0.04318735805889207
+evalnull | maxtoki | branch_all_pairs | null_mean,,0.3703464015413151,0.40168654725911934,0.031340145717804246
+evalnull | maxtoki | branch_all_pairs | p_one_sided,,0.5497251374312844,0.39080459770114945,-0.15892053973013492
+evalnull | maxtoki | branch_diff_ct | observed,,0.04715746246036318,0.06734615043299122,0.020188687972628037
+evalnull | maxtoki | branch_diff_ct | null_mean,,0.009511930674667931,0.007358913655989229,-0.002153017018678702
+evalnull | maxtoki | branch_diff_ct | p_one_sided,,0.3778110944527736,0.2683658170914543,-0.10944527736131932
+evalnull | tokenbag_pca64 | branch_all_pairs | observed,,0.4165644670160747,0.4294707541298854,0.0129062871138107
+evalnull | tokenbag_pca64 | branch_all_pairs | null_mean,,0.41984427887926606,0.45569171377308065,0.03584743489381459
+evalnull | tokenbag_pca64 | branch_all_pairs | p_one_sided,,0.5057471264367817,0.7271364317841079,0.22138930534732626
+evalnull | tokenbag_pca64 | branch_diff_ct | observed,,0.0064020171259901795,-0.07828389880561494,-0.08468591593160513
+evalnull | tokenbag_pca64 | branch_diff_ct | null_mean,,0.005809319170485998,0.0021716473610101923,-0.0036376718094758057
+evalnull | tokenbag_pca64 | branch_diff_ct | p_one_sided,,0.47926036981509246,0.7866066966516742,0.3073463268365817
+evalnull | hvg_pca64 | branch_all_pairs | observed,,0.35362594611502945,0.35362594611502945,0.0
+evalnull | hvg_pca64 | branch_all_pairs | null_mean,,0.34305860702945506,0.34305860702945506,0.0
+evalnull | hvg_pca64 | branch_all_pairs | p_one_sided,,0.5372313843078461,0.5372313843078461,0.0
+evalnull | hvg_pca64 | branch_diff_ct | observed,,0.0879186823994107,0.0879186823994107,0.0
+evalnull | hvg_pca64 | branch_diff_ct | null_mean,,0.011999053461848066,0.011999053461848066,0.0
+evalnull | hvg_pca64 | branch_diff_ct | p_one_sided,,0.29235382308845576,0.29235382308845576,0.0
+evalnull | lookup_ct_s0 | branch_all_pairs | observed,,0.3643998493167195,0.3643998493167195,0.0
+evalnull | lookup_ct_s0 | branch_all_pairs | null_mean,,0.37471569710405916,0.37471569710405916,0.0
+evalnull | lookup_ct_s0 | branch_all_pairs | p_one_sided,,0.6086956521739131,0.6086956521739131,0.0
+evalnull | lookup_ct_s0 | branch_diff_ct | observed,,0.055771939877888844,0.055771939877888844,0.0
+evalnull | lookup_ct_s0 | branch_diff_ct | null_mean,,0.004987283031640633,0.004987283031640633,0.0
+evalnull | lookup_ct_s0 | branch_diff_ct | p_one_sided,,0.30484757621189407,0.30484757621189407,0.0
+lung 6161 pass rate | maxtoki | branch,"share of 2,000 label draws",0.119,0.1175,-0.0015000000000000013
+lung 6161 pass rate | maxtoki | random,"share of 2,000 label draws",0.0005,0.0,-0.0005
+lung 6161 pass rate | maxtoki | donor,"share of 2,000 label draws",0.0035,0.003,-0.0005
+lung 6161 pass rate | maxtoki | random_donor_branch,"share of 2,000 label draws",0.0,0.0,0.0
+lung 6161 pass rate | lookup_ct_s0 | branch,"share of 2,000 label draws",0.109,0.109,0.0
+lung 6161 pass rate | lookup_ct_s0 | random,"share of 2,000 label draws",0.0,0.0,0.0
+lung 6161 pass rate | lookup_ct_s0 | donor,"share of 2,000 label draws",0.0025,0.0025,0.0
+lung 6161 pass rate | lookup_ct_s0 | random_donor_branch,"share of 2,000 label draws",0.0,0.0,0.0
+lung 6161 pass rate | tokenbag_pca64 | branch,"share of 2,000 label draws",0.1155,0.1185,0.002999999999999989
+lung 6161 pass rate | tokenbag_pca64 | random,"share of 2,000 label draws",0.002,0.001,-0.001
+lung 6161 pass rate | tokenbag_pca64 | donor,"share of 2,000 label draws",0.0045,0.0055,0.001
+lung 6161 pass rate | tokenbag_pca64 | random_donor_branch,"share of 2,000 label draws",0.0,0.0,0.0
+lung 6161 pass rate | hvg_pca64 | branch,"share of 2,000 label draws",0.103,0.103,0.0
+lung 6161 pass rate | hvg_pca64 | random,"share of 2,000 label draws",0.001,0.001,0.0
+lung 6161 pass rate | hvg_pca64 | donor,"share of 2,000 label draws",0.0085,0.0085,0.0
+lung 6161 pass rate | hvg_pca64 | random_donor_branch,"share of 2,000 label draws",0.0,0.0,0.0
+lung 6262 pass rate | maxtoki | branch,"share of 2,000 label draws",0.9645,0.93,-0.034499999999999975
+lung 6262 pass rate | maxtoki | random,"share of 2,000 label draws",0.1495,0.155,0.005500000000000005
+lung 6262 pass rate | maxtoki | donor,"share of 2,000 label draws",0.032,0.058,0.026000000000000002
+lung 6262 pass rate | maxtoki | random_donor_branch,"share of 2,000 label draws",0.031,0.052,0.020999999999999998
+lung 6262 pass rate | lookup_ct_s0 | branch,"share of 2,000 label draws",0.9645,0.9645,0.0
+lung 6262 pass rate | lookup_ct_s0 | random,"share of 2,000 label draws",0.1455,0.1455,0.0
+lung 6262 pass rate | lookup_ct_s0 | donor,"share of 2,000 label draws",0.0305,0.0305,0.0
+lung 6262 pass rate | lookup_ct_s0 | random_donor_branch,"share of 2,000 label draws",0.0265,0.0265,0.0
+lung 6262 pass rate | tokenbag_pca64 | branch,"share of 2,000 label draws",0.974,0.9715,-0.0024999999999999467
+lung 6262 pass rate | tokenbag_pca64 | random,"share of 2,000 label draws",0.2025,0.1895,-0.013000000000000012
+lung 6262 pass rate | tokenbag_pca64 | donor,"share of 2,000 label draws",0.0495,0.0525,0.0029999999999999957
+lung 6262 pass rate | tokenbag_pca64 | random_donor_branch,"share of 2,000 label draws",0.0485,0.0515,0.0029999999999999957
+lung 6262 pass rate | hvg_pca64 | branch,"share of 2,000 label draws",0.8985,0.8985,0.0
+lung 6262 pass rate | hvg_pca64 | random,"share of 2,000 label draws",0.1205,0.1205,0.0
+lung 6262 pass rate | hvg_pca64 | donor,"share of 2,000 label draws",0.048,0.048,0.0
+lung 6262 pass rate | hvg_pca64 | random_donor_branch,"share of 2,000 label draws",0.042,0.042,0.0
+N60 L10H6 trust,,0.8817943088380903,0.8746833699255241,-0.0071109389125662
+N60 random-proj (index 11) mean trust,,0.8159485126350684,0.8085641224331656,-0.007384390201902846
+N60 share random >= L10H6 trust,,0.0,0.0,0.0
+N60 L10H6 random,,0.7932634326574881,0.7885552661842624,-0.0047081664732256945
+N60 random-proj (index 11) mean random,,0.7895320633382246,0.7758446950286869,-0.01368736830953765
+N60 share random >= L10H6 random,,0.4,0.16666666666666663,-0.2333333333333334
+N60 L10H6 branch,,0.4665434715973677,0.4193653201467984,-0.047178151450569306
+N60 random-proj (index 11) mean branch,,0.4175722087587564,0.40251175430888986,-0.015060454449866534
+N60 share random >= L10H6 branch,,0.23333333333333328,0.5,0.2666666666666667
+N60 L10H6 branch_diff_ct,,-0.013657155999330595,0.06615454072960651,0.0798116967289371
+N60 random-proj (index 11) mean branch_diff_ct,,0.04719300032257844,0.04942264938600107,0.0022296490634226285
+N60 share random >= L10H6 branch_diff_ct,,0.8333333333333334,0.43333333333333335,-0.4
+N60 L10H6 composite,,0.7558488804827591,0.7393218315455272,-0.016527048937231892
+N60 random-proj (index 11) mean composite,,0.7097503243417793,0.6988711735509768,-0.010879150790802483
+N60 share random >= L10H6 composite,,0.0,0.0,0.0

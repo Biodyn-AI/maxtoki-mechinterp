@@ -1,0 +1,136 @@
+{
+  "n_boot": 1000,
+  "seed": 20263027,
+  "features": [
+    892,
+    1725,
+    2665,
+    3763,
+    3843,
+    4264,
+    4905,
+    1455,
+    2464,
+    3347
+  ],
+  "resampling": "cells, knockdown and reference resampled separately with replacement; scipy.stats.mannwhitneyu (asymptotic, exact tie correction incl. duplicated cells), BH",
+  "delta": {
+    "892": {
+      "obs": 0.5056362101980976,
+      "ci95": [
+        0.4341075462759595,
+        0.5786147179230465
+      ],
+      "frac_boot_selected_cut0.5": 0.556,
+      "frac_boot_selected_cut0.25": 1.0
+    },
+    "1725": {
+      "obs": 0.7383570410335386,
+      "ci95": [
+        0.687266451060433,
+        0.7807563484932489
+      ],
+      "frac_boot_selected_cut0.5": 1.0,
+      "frac_boot_selected_cut0.25": 1.0
+    },
+    "2665": {
+      "obs": 0.7557905465454372,
+      "ci95": [
+        0.5875781863526699,
+        0.9166055564232898
+      ],
+      "frac_boot_selected_cut0.5": 1.0,
+      "frac_boot_selected_cut0.25": 1.0
+    },
+    "3763": {
+      "obs": 0.5972869651832337,
+      "ci95": [
+        0.46041349585474284,
+        0.7411134562189041
+      ],
+      "frac_boot_selected_cut0.5": 0.921,
+      "frac_boot_selected_cut0.25": 1.0
+    },
+    "3843": {
+      "obs": 0.5609229739226315,
+      "ci95": [
+        0.49604909801748903,
+        0.6256122651400652
+      ],
+      "frac_boot_selected_cut0.5": 0.965,
+      "frac_boot_selected_cut0.25": 1.0
+    },
+    "4264": {
+      "obs": 0.702234389845,
+      "ci95": [
+        0.63403995888908,
+        0.7666250150015574
+      ],
+      "frac_boot_selected_cut0.5": 1.0,
+      "frac_boot_selected_cut0.25": 1.0
+    },
+    "4905": {
+      "obs": 1.6945205301387498,
+      "ci95": [
+        1.567888454618428,
+        1.80360180915745
+      ],
+      "frac_boot_selected_cut0.5": 1.0,
+      "frac_boot_selected_cut0.25": 1.0
+    },
+    "1455": {
+      "obs": -0.0034710863170115975,
+      "ci95": [
+        -0.004272794633803545,
+        -0.0026354888223087108
+      ],
+      "frac_boot_selected_cut0.5": 0.0,
+      "frac_boot_selected_cut0.25": 0.0
+    },
+    "2464": {
+      "obs": 0.043798793150406135,
+      "ci95": [
+        0.03896108892337284,
+        0.04875736429372888
+      ],
+      "frac_boot_selected_cut0.5": 0.0,
+      "frac_boot_selected_cut0.25": 0.0
+    },
+    "3347": {
+      "obs": 0.29909601201498986,
+      "ci95": [
+        0.2581997636215478,
+        0.34021389307546324
+      ],
+      "frac_boot_selected_cut0.5": 0.0,
+      "frac_boot_selected_cut0.25": 0.995
+    }
+  },
+  "K_cut0.5_quantiles_2.5_50_97.5": [
+    5.0,
+    7.0,
+    7.0
+  ],
+  "M_chip_cut0.5_counts": {
+    "2": 35,
+    "4": 965
+  },
+  "T_chip_cut0.5_counts": {
+    "2": 35,
+    "4": 965
+  },
+  "M_chip_cut0.25_counts": {
+    "4": 1000
+  },
+  "features_selected_in_ge_50pct_cut0.5": [
+    892,
+    1725,
+    2665,
+    3763,
+    3843,
+    4264,
+    4905
+  ],
+  "features_selected_in_any_boot_cut0.5": 8,
+  "wall_s": 262.5
+}

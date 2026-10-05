@@ -1,0 +1,248 @@
+{
+ "internal_anchors_kept": 247,
+ "internal_anchors_total": 290,
+ "internal_cells_10x": 9501,
+ "internal_cells_total": 11804,
+ "internal_anchors_mixed": 97,
+ "external_anchors_kept": 587,
+ "external_anchors_total": 600,
+ "external_cells_10x": 11327,
+ "external_cells_total": 12000,
+ "external_anchors_mixed": 107,
+ "zeroshot_anchors_kept": 152,
+ "zeroshot_anchors_total": 160,
+ "zeroshot_cells_10x": 4650,
+ "zeroshot_cells_total": 5120,
+ "zeroshot_anchors_mixed": 25,
+ "per_seed_mean": {
+  "tenx_internal_trust": 0.8691006362058994,
+  "tenx_external_trust": 0.9122690202616985,
+  "tenx_external_random": 0.8650378394552112,
+  "tenx_external_global": 0.8707571106063735,
+  "tenx_external_global_diff_ct": 0.8439543588690299,
+  "tenx_external_branch": 0.4574584871592715,
+  "tenx_external_branch_diff_ct": 0.013450019948373162,
+  "tenx_external_donor": 0.8881919751057804,
+  "tenx_zeroshot_trust": 0.8558210934312527,
+  "tenx_zeroshot_random": 0.8670291472105836,
+  "tenx_zeroshot_global": 0.866574929130761,
+  "tenx_zeroshot_global_diff_ct": 0.8549325745207538,
+  "tenx_zeroshot_branch": 0.32713819346830203,
+  "tenx_zeroshot_branch_diff_ct": 0.07155763601186013,
+  "tenx_zeroshot_donor": 0.8027417827266969,
+  "all_internal_trust": 0.8589288124156547,
+  "all_external_trust": 0.9105093414847302,
+  "all_external_random": 0.8644469505166693,
+  "all_external_global": 0.8675502101817179,
+  "all_external_global_diff_ct": 0.8386608237297516,
+  "all_external_branch": 0.4587363854837624,
+  "all_external_branch_diff_ct": 0.01625728013393763,
+  "all_external_donor": 0.8903892240576969,
+  "all_zeroshot_trust": 0.8471460628314974,
+  "all_zeroshot_random": 0.8729928889963521,
+  "all_zeroshot_global": 0.8713628610713693,
+  "all_zeroshot_global_diff_ct": 0.8577494364472205,
+  "all_zeroshot_branch": 0.3429426677416973,
+  "all_zeroshot_branch_diff_ct": 0.07002995452197044,
+  "all_zeroshot_donor": 0.8804723513494288
+ },
+ "per_seed_sd": {
+  "tenx_internal_trust": 0.0026859141083677017,
+  "tenx_external_trust": 0.002728429403129619,
+  "tenx_external_random": 0.005814079178415825,
+  "tenx_external_global": 0.004499823180522659,
+  "tenx_external_global_diff_ct": 0.004747716168987716,
+  "tenx_external_branch": 0.013463855669776512,
+  "tenx_external_branch_diff_ct": 0.010578713859560412,
+  "tenx_external_donor": 0.0046121726752430155,
+  "tenx_zeroshot_trust": 0.005145818977551076,
+  "tenx_zeroshot_random": 0.003722446046524962,
+  "tenx_zeroshot_global": 0.004608000909977951,
+  "tenx_zeroshot_global_diff_ct": 0.004617618845939827,
+  "tenx_zeroshot_branch": 0.030714876837929415,
+  "tenx_zeroshot_branch_diff_ct": 0.011317214604730577,
+  "tenx_zeroshot_donor": 0.02674875258830579,
+  "all_internal_trust": 0.003401440306274701,
+  "all_external_trust": 0.0025289642964690254,
+  "all_external_random": 0.003918484799399853,
+  "all_external_global": 0.0038119193176280545,
+  "all_external_global_diff_ct": 0.004927895174889345,
+  "all_external_branch": 0.012897652360805664,
+  "all_external_branch_diff_ct": 0.016913386052217184,
+  "all_external_donor": 0.004822896725607629,
+  "all_zeroshot_trust": 0.00517268916395297,
+  "all_zeroshot_random": 0.004220121901250481,
+  "all_zeroshot_global": 0.003725309259943272,
+  "all_zeroshot_global_diff_ct": 0.003980121099056104,
+  "all_zeroshot_branch": 0.014123686545841329,
+  "all_zeroshot_branch_diff_ct": 0.011565037082847502,
+  "all_zeroshot_donor": 0.0014719317854699964
+ },
+ "paired_diff_tenx_minus_all": {
+  "internal_trust": {
+   "mean": 0.010171823790244849,
+   "sd": 0.0029391000866185674,
+   "min": 0.006254819741661755,
+   "max": 0.014978552149604751
+  },
+  "external_trust": {
+   "mean": 0.0017596787769682876,
+   "sd": 0.00253675355245708,
+   "min": -0.0023274171267936294,
+   "max": 0.005910970958634909
+  },
+  "external_random": {
+   "mean": 0.000590888938541867,
+   "sd": 0.005295261468889258,
+   "min": -0.00629962212553048,
+   "max": 0.008268741284160441
+  },
+  "external_global": {
+   "mean": 0.003206900424655579,
+   "sd": 0.004824029075962056,
+   "min": -0.0038088615610023524,
+   "max": 0.009600797168140995
+  },
+  "external_global_diff_ct": {
+   "mean": 0.005293535139278294,
+   "sd": 0.005901236287527275,
+   "min": -0.0026767054204732688,
+   "max": 0.014911850979399732
+  },
+  "external_branch": {
+   "mean": -0.001277898324490745,
+   "sd": 0.012534843681580901,
+   "min": -0.029159846572886672,
+   "max": 0.015613496508904534
+  },
+  "external_branch_diff_ct": {
+   "mean": -0.002807260185564474,
+   "sd": 0.012165088245391722,
+   "min": -0.024170986914898867,
+   "max": 0.0118049921515611
+  },
+  "external_donor": {
+   "mean": -0.002197248951916464,
+   "sd": 0.005219455159372659,
+   "min": -0.00897575601885281,
+   "max": 0.00593127962328599
+  },
+  "zeroshot_trust": {
+   "mean": 0.008675030599755195,
+   "sd": 0.0019271493517511902,
+   "min": 0.0057017543859649855,
+   "max": 0.011522507819937466
+  },
+  "zeroshot_random": {
+   "mean": -0.005963741785768506,
+   "sd": 0.00343714885158031,
+   "min": -0.010302860509570633,
+   "max": -0.0002474352665309265
+  },
+  "zeroshot_global": {
+   "mean": -0.004787931940608392,
+   "sd": 0.0034072948948285528,
+   "min": -0.009573122986497262,
+   "max": 0.0010695310767782074
+  },
+  "zeroshot_global_diff_ct": {
+   "mean": -0.0028168619264667405,
+   "sd": 0.003441506446148175,
+   "min": -0.008481524852782085,
+   "max": 0.0024633990477919143
+  },
+  "zeroshot_branch": {
+   "mean": -0.0158044742733953,
+   "sd": 0.03544027562569763,
+   "min": -0.08777264127492695,
+   "max": 0.024476793595669954
+  },
+  "zeroshot_branch_diff_ct": {
+   "mean": 0.0015276814898896832,
+   "sd": 0.015807595833648515,
+   "min": -0.03420525296848256,
+   "max": 0.02044565434659558
+  },
+  "zeroshot_donor": {
+   "mean": -0.07773056862273173,
+   "sd": 0.026560375618526075,
+   "min": -0.09058693599924994,
+   "max": -0.003080115809755646
+  }
+ },
+ "internal_trust": 0.864780942741469,
+ "external": {
+  "trust": 0.9094409607693887,
+  "random": 0.8618856900674636,
+  "global": 0.8676689304883758,
+  "global_diff_ct": 0.8404789731040564,
+  "branch": 0.45765091551856374,
+  "branch_diff_ct": -0.0018697109663412352,
+  "donor": 0.889289020527774
+ },
+ "zeroshot": {
+  "trust": 0.8521861825105399,
+  "random": 0.8709153292046651,
+  "global": 0.8707522766631723,
+  "global_diff_ct": 0.8592601019535536,
+  "branch": 0.3288033839813922,
+  "branch_diff_ct": 0.04725604943019343,
+  "donor": 0.7917838190393085
+ },
+ "internal_branch_holdout": 0.387881787671543,
+ "internal_branch_holdout_diff_ct": 0.016320243395209617,
+ "internal_branch_per_group": {
+  "monocyte": {
+   "n": 33,
+   "rho": 0.008219784850564632,
+   "rho_diff_ct": -0.019805685629647962
+  },
+  "T_lineage": {
+   "n": 80,
+   "rho": 0.10114711911554049,
+   "rho_diff_ct": 0.052446172420067196
+  },
+  "B_lineage": {
+   "n": 40,
+   "rho": 0.2603333111790152,
+   "rho_diff_ct": NaN
+  },
+  "erythroid": {
+   "n": 7,
+   "rho": 0.7833494518006402,
+   "rho_diff_ct": NaN
+  },
+  "granulocyte": {
+   "n": 22,
+   "rho": 0.34616238787267223,
+   "rho_diff_ct": NaN
+  },
+  "stem": {
+   "n": 4,
+   "rho": 0.8280786712108251,
+   "rho_diff_ct": NaN
+  }
+ },
+ "ref_all_cells_same_anchors": {
+  "internal_trust": 0.8585261229998072,
+  "external": {
+   "trust": 0.9112162254682824,
+   "random": 0.8643874205005838,
+   "global": 0.8676638277492611,
+   "global_diff_ct": 0.8397697489690673,
+   "branch": 0.4420374190096592,
+   "branch_diff_ct": -0.002695774417196021,
+   "donor": 0.8877845512405328
+  },
+  "zeroshot": {
+   "trust": 0.8463620291037672,
+   "random": 0.8781569442693004,
+   "global": 0.8741504369404522,
+   "global_diff_ct": 0.8611795926070007,
+   "branch": 0.34687909891206126,
+   "branch_diff_ct": 0.061648867093435936,
+   "donor": 0.8823707550385584
+  }
+ },
+ "seconds": 122.34821510314941
+}

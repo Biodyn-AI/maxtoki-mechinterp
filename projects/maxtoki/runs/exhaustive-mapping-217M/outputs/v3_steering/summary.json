@@ -1,0 +1,3017 @@
+{
+  "n_steered_cells": 50,
+  "steered_cells": [
+    332,
+    333,
+    334,
+    335,
+    336,
+    337,
+    338,
+    339,
+    340,
+    341,
+    342,
+    343,
+    344,
+    345,
+    346,
+    347,
+    348,
+    349,
+    350,
+    351,
+    352,
+    353,
+    354,
+    355,
+    356,
+    357,
+    358,
+    359,
+    360,
+    361,
+    362,
+    363,
+    364,
+    365,
+    366,
+    367,
+    368,
+    369,
+    370,
+    371,
+    372,
+    373,
+    374,
+    375,
+    376,
+    377,
+    378,
+    379,
+    380,
+    381
+  ],
+  "natural_span_S": 0.1982225405946605,
+  "units": {
+    "delta_s": "difference of two cosine differences (no unit; range -4..4); S = mean s(Ery) - mean s(HSC) on selection cells",
+    "gap_share": "fraction of the line from g_early to g_late moved by the cell's mean logits",
+    "ci": "cell-level percentile bootstrap, 10000 resamples, seed 20261003, n = 50 cells"
+  },
+  "checks": {
+    "silent_rows_exactly_zero": {
+      "n_cell_feature_alpha_rows_silent": 807,
+      "max_abs_delta_s": 0.0,
+      "max_abs_logit_change": 0.0,
+      "pass": true
+    },
+    "shortcut_clean_ref_vs_full_pass": {
+      "max_abs_mean_logit_diff": 1.9073486328125e-06,
+      "pass": true
+    },
+    "verify_stage": {
+      "V1_shortcut_equals_full": {
+        "pass": true,
+        "n": 75,
+        "max_abs_ds_diff": 2.2311211766989913e-09,
+        "max_logit_diff": 1.9073486328125e-06,
+        "tolerance": {
+          "ds": 1e-05,
+          "logit": 0.001
+        }
+      },
+      "V2_zero_edit_exact": {
+        "pass": true,
+        "n": 18
+      },
+      "V3_silent_feature_exact": {
+        "pass": true,
+        "n": 15
+      },
+      "V4_cpu_vs_mps": {
+        "pass": true,
+        "absdiff": 7.04591385236597e-10,
+        "tolerance": 1e-05
+      },
+      "all_pass": true,
+      "wall_seconds": 101.9,
+      "pass": true
+    },
+    "axis_check": {
+      "auroc_EryP_vs_HSC_steering_donors": 0.9913333333333333,
+      "spearman_s_stage_steering_donors": 0.8438251592142827,
+      "pass": true
+    },
+    "edit_nonzero_when_active": {
+      "pass": true
+    },
+    "encoding": {
+      "prep_all_cells": true,
+      "deployed_path_fails": "442 of 442",
+      "steer_chunks_checks_passed": 50,
+      "pass": true
+    },
+    "all_pass": true
+  },
+  "axis": {
+    "cos_g_early_g_late": 0.8940897772423181,
+    "norm_g_late_minus_g_early": 188.97415308193962,
+    "selection_mean_s_by_stage": {
+      "HSC": -0.10392290093261869,
+      "CMP": -0.009288309670701598,
+      "EryP": 0.06304854633173587,
+      "Ery": 0.09429963966204181
+    },
+    "selection_sd_s_by_stage": {
+      "HSC": 0.032922636146688375,
+      "CMP": 0.04818274290484854,
+      "EryP": 0.047994650076281196,
+      "Ery": 0.03828873629468916
+    },
+    "natural_span_S": 0.1982225405946605,
+    "steering_donors": {
+      "mean_s": {
+        "HSC": -0.07698383869378253,
+        "CMP": 0.0013233860791797595,
+        "EryP": 0.07896834081749697
+      },
+      "auroc_EryP_vs_HSC": 0.9913333333333333,
+      "auroc_CMP_vs_HSC": 0.9173333333333333,
+      "auroc_EryP_vs_CMP": 0.8866666666666667,
+      "spearman_s_stage": 0.8438251592142827,
+      "spearman_ci95_cell_bootstrap_2000": [
+        0.7824697395891853,
+        0.8848113262556636
+      ],
+      "n": {
+        "HSC": 50,
+        "CMP": 30,
+        "EryP": 30
+      }
+    },
+    "selection_within_donor_spearman_s_stage": {
+      "TSP14": 0.862199064001328,
+      "TSP21": 0.7343700472588165,
+      "TSP25": 0.8931078261549904
+    },
+    "within_stage_spearman_s_vs_n_tokens": {
+      "HSC": -0.4222680204419054,
+      "CMP": -0.4061674340777831,
+      "EryP": 0.05065512405858329,
+      "Ery": 0.26736577457001615
+    },
+    "spearman_s_vs_n_tokens_steering_donor_cells": -0.07194470682012638,
+    "check_pass": true
+  },
+  "sae_fit_on_these_cells": {
+    "L0": {
+      "fve_all_selection": 0.5022256671332301,
+      "fve_all_steered": 0.4558722445081378,
+      "fve_gene_selection": 0.4994306256711216,
+      "fve_gene_steered": 0.4530039639922109
+    },
+    "L3": {
+      "fve_all_selection": 0.6234367781000965,
+      "fve_all_steered": 0.5887096904979513,
+      "fve_gene_selection": 0.5063464311328953,
+      "fve_gene_steered": 0.48277472094310747
+    },
+    "L6": {
+      "fve_all_selection": 0.3904233893058291,
+      "fve_all_steered": 0.37406341089395034,
+      "fve_gene_selection": 0.30460868343775693,
+      "fve_gene_steered": 0.3024648483067164
+    },
+    "L9": {
+      "fve_all_selection": 0.373102546695825,
+      "fve_all_steered": 0.33786150732904663,
+      "fve_gene_selection": 0.35200390201860954,
+      "fve_gene_steered": 0.3161854047763072
+    },
+    "L11": {
+      "fve_all_selection": 0.42357755082544113,
+      "fve_all_steered": 0.43137036323447653,
+      "fve_gene_selection": 0.4234314884623879,
+      "fve_gene_steered": 0.43120111784599424
+    }
+  },
+  "per_layer": {
+    "L0": {
+      "null": {
+        "alpha0": {
+          "mean": -2.1631456224261996e-05,
+          "sd": 7.242510734306963e-05,
+          "p2.5": -0.0001312113867188708,
+          "p97.5": 0.00012422184321582297,
+          "min": -0.000159824618377018,
+          "max": 0.00014104431725777688,
+          "mean_abs": 5.851084073669822e-05,
+          "mean_abs_pct_of_span": 0.029517753410468757
+        },
+        "alpha2": {
+          "mean": 2.3449898446470828e-05,
+          "sd": 7.420372115016463e-05,
+          "p2.5": -0.0001255426955778201,
+          "p97.5": 0.00014494947703989875,
+          "min": -0.000140153472055371,
+          "max": 0.0001606984401427658,
+          "mean_abs": 5.8516445061311136e-05,
+          "mean_abs_pct_of_span": 0.029520580699734702
+        },
+        "alpha5": {
+          "mean": 0.00010384910375490087,
+          "sd": 0.0002966091618906541,
+          "p2.5": -0.0004458894893277997,
+          "p97.5": 0.000630645484107467,
+          "min": -0.0004915662443273927,
+          "max": 0.0006850714482063092,
+          "mean_abs": 0.00023693391581995805,
+          "mean_abs_pct_of_span": 0.11952924985683508
+        },
+        "edit_norm_gene_alpha5_mean": 0.00457735982060419
+      },
+      "candidates": [
+        {
+          "feature": 1976,
+          "rho": 0.7286529004019647,
+          "rho_by_donor": [
+            0.8118485321879237,
+            0.5824602618821209,
+            0.7916499071358496
+          ],
+          "mean_a_by_stage_sel": [
+            0.0012767202531808596,
+            0.0015808861288759443,
+            0.0019031837996168945,
+            0.002020335434159885
+          ],
+          "frac_cells_active": 1.0,
+          "mean_active_gene_positions": 30.72,
+          "alpha0": {
+            "mean_delta_s": -4.668158487636465e-05,
+            "ci95": [
+              -7.653533389013689e-05,
+              -1.921945561020766e-05
+            ],
+            "pct_of_span": -0.02355008907479521,
+            "ci95_pct_of_span": [
+              -0.03861081270602911,
+              -0.009695898131741215
+            ],
+            "predicted_sign": -1,
+            "frac_cells_predicted_sign": 0.66,
+            "gap_share_mean": -0.0007738282228873848,
+            "gap_share_ci95": [
+              -0.0009461135955844363,
+              -0.0006077300491640767
+            ],
+            "edit_norm_gene_mean": 0.0012834877787013298,
+            "z_vs_null": -0.34587630686473125,
+            "p_directional_vs_null": 0.38095238095238093,
+            "p_size_vs_null": 0.5238095238095238,
+            "n_null_bigger_in_predicted_direction": 7,
+            "gap_z_vs_null": -0.8574518927295147,
+            "gap_p_directional_vs_null": 0.14285714285714285,
+            "ds_per_unit_edit": -0.036370883814412655,
+            "gap_per_unit_edit": -0.6029104723306105,
+            "ds_per_unit_edit_p_dir_vs_null": 0.42857142857142855,
+            "gap_per_unit_edit_p_dir_vs_null": 0.19047619047619047,
+            "gap_per_unit_edit_z_vs_null": -0.735710923517575,
+            "edit_size_ratio_to_null_mean": 1.121596578817276,
+            "readouts_agree_in_sign": true
+          },
+          "alpha2": {
+            "mean_delta_s": 5.1168792789964e-05,
+            "ci95": [
+              2.581714308908839e-05,
+              7.841520587759847e-05
+            ],
+            "pct_of_span": 0.025813811404323376,
+            "ci95_pct_of_span": [
+              0.013024322567775535,
+              0.039559177095781176
+            ],
+            "predicted_sign": 1,
+            "frac_cells_predicted_sign": 0.7,
+            "gap_share_mean": 0.0008619901250698131,
+            "gap_share_ci95": [
+              0.0007045265805454952,
+              0.001024914182369786
+            ],
+            "edit_norm_gene_mean": 0.0012834877787013298,
+            "z_vs_null": 0.3735512709315344,
+            "p_directional_vs_null": 0.38095238095238093,
+            "p_size_vs_null": 0.5238095238095238,
+            "n_null_bigger_in_predicted_direction": 7,
+            "gap_z_vs_null": 0.8416087090009865,
+            "gap_p_directional_vs_null": 0.09523809523809523,
+            "ds_per_unit_edit": 0.03986698871549683,
+            "gap_per_unit_edit": 0.6715997918904999,
+            "ds_per_unit_edit_p_dir_vs_null": 0.38095238095238093,
+            "gap_per_unit_edit_p_dir_vs_null": 0.19047619047619047,
+            "gap_per_unit_edit_z_vs_null": 0.6981334510372433,
+            "edit_size_ratio_to_null_mean": 1.121596578817276,
+            "readouts_agree_in_sign": true
+          },
+          "alpha5": {
+            "mean_delta_s": 0.00018562502801172664,
+            "ci95": [
+              0.00010880342505926111,
+              0.0002654221766568704
+            ],
+            "pct_of_span": 0.09364476282811139,
+            "ci95_pct_of_span": [
+              0.054889532105105075,
+              0.13390110724068688
+            ],
+            "predicted_sign": 1,
+            "frac_cells_predicted_sign": 0.8,
+            "gap_share_mean": 0.003737779511009303,
+            "gap_share_ci95": [
+              0.0031655065710970444,
+              0.004331515857211405
+            ],
+            "edit_norm_gene_mean": 0.005133951114805319,
+            "z_vs_null": 0.275702624071244,
+            "p_directional_vs_null": 0.42857142857142855,
+            "p_size_vs_null": 0.5714285714285714,
+            "n_null_bigger_in_predicted_direction": 8,
+            "gap_z_vs_null": 0.7478425464721884,
+            "gap_p_directional_vs_null": 0.19047619047619047,
+            "ds_per_unit_edit": 0.03615636843062647,
+            "gap_per_unit_edit": 0.7280512469684941,
+            "ds_per_unit_edit_p_dir_vs_null": 0.42857142857142855,
+            "gap_per_unit_edit_p_dir_vs_null": 0.23809523809523808,
+            "gap_per_unit_edit_z_vs_null": 0.5879827807922037,
+            "edit_size_ratio_to_null_mean": 1.121596578817276,
+            "readouts_agree_in_sign": true
+          },
+          "ratio_a5_over_a2": 3.6276999688789653,
+          "ratio_a0_over_a2": -0.9123057694165602,
+          "top_up_genes_a5": [
+            "RPLP0",
+            "LGALS4",
+            "ERC2",
+            "HBA2",
+            "XAGE3",
+            "LALBA",
+            "LIM2",
+            "KRT5",
+            "JUNB",
+            "CBLN1"
+          ],
+          "top_down_genes_a5": [
+            "RHEX",
+            "ANGPT1",
+            "TMEM35B",
+            "OPCML",
+            "OR52P1"
+          ]
+        },
+        {
+          "feature": 1883,
+          "rho": 0.7249161380729449,
+          "rho_by_donor": [
+            0.9078157851314207,
+            0.5581178898861856,
+            0.7088147392012281
+          ],
+          "mean_a_by_stage_sel": [
+            0.0011460376852865967,
+            0.0014706719867212492,
+            0.0017788230294459744,
+            0.002074502511984772
+          ],
+          "frac_cells_active": 1.0,
+          "mean_active_gene_positions": 25.48,
+          "alpha0": {
+            "mean_delta_s": 1.598672289065073e-05,
+            "ci95": [
+              -1.4017707446236039e-05,
+              4.649768481870581e-05
+            ],
+            "pct_of_span": 0.00806503783207053,
+            "ci95_pct_of_span": [
+              -0.007071702039628501,
+              0.023457314531038918
+            ],
+            "predicted_sign": -1,
+            "frac_cells_predicted_sign": 0.4,
+            "gap_share_mean": -0.0002798047939810758,
+            "gap_share_ci95": [
+              -0.00041743439250910394,
+              -0.00014610068631891235
+            ],
+            "edit_norm_gene_mean": 0.0011011959467050276,
+            "z_vs_null": 0.5194079856412173,
+            "p_directional_vs_null": 0.8095238095238095,
+            "p_size_vs_null": 0.8095238095238095,
+            "n_null_bigger_in_predicted_direction": 16,
+            "gap_z_vs_null": -0.027716567189126583,
+            "gap_p_directional_vs_null": 0.6190476190476191,
+            "ds_per_unit_edit": 0.014517600558271053,
+            "gap_per_unit_edit": -0.2540917398200575,
+            "ds_per_unit_edit_p_dir_vs_null": 0.8095238095238095,
+            "gap_per_unit_edit_p_dir_vs_null": 0.6190476190476191,
+            "gap_per_unit_edit_z_vs_null": -0.03182064290945004,
+            "edit_size_ratio_to_null_mean": 0.9622979095924995,
+            "readouts_agree_in_sign": false
+          },
+          "alpha2": {
+            "mean_delta_s": 1.583412575981491e-05,
+            "ci95": [
+              -1.608066101596922e-05,
+              4.869480076112686e-05
+            ],
+            "pct_of_span": 0.00798805509823106,
+            "ci95_pct_of_span": [
+              -0.00811242806581321,
+              0.024565723259849365
+            ],
+            "predicted_sign": 1,
+            "frac_cells_predicted_sign": 0.48,
+            "gap_share_mean": 0.0005670653914031301,
+            "gap_share_ci95": [
+              0.00040382047894537765,
+              0.0007374480756472077
+            ],
+            "edit_norm_gene_mean": 0.0011011959467050276,
+            "z_vs_null": -0.10263329882397712,
+            "p_directional_vs_null": 0.6190476190476191,
+            "p_size_vs_null": 0.8095238095238095,
+            "n_null_bigger_in_predicted_direction": 12,
+            "gap_z_vs_null": 0.3525202542703828,
+            "gap_p_directional_vs_null": 0.3333333333333333,
+            "ds_per_unit_edit": 0.014379026554895525,
+            "gap_per_unit_edit": 0.5149541215620069,
+            "ds_per_unit_edit_p_dir_vs_null": 0.5714285714285714,
+            "gap_per_unit_edit_p_dir_vs_null": 0.38095238095238093,
+            "gap_per_unit_edit_z_vs_null": 0.38855289500064955,
+            "edit_size_ratio_to_null_mean": 0.9622979095924995,
+            "readouts_agree_in_sign": true
+          },
+          "alpha5": {
+            "mean_delta_s": 0.0002745345208446248,
+            "ci95": [
+              0.00013029730778799992,
+              0.00042844021540566535
+            ],
+            "pct_of_span": 0.13849813448108936,
+            "ci95_pct_of_span": [
+              0.0657328411779572,
+              0.21614101712164524
+            ],
+            "predicted_sign": 1,
+            "frac_cells_predicted_sign": 0.64,
+            "gap_share_mean": 0.005163584954980625,
+            "gap_share_ci95": [
+              0.0043479395868049175,
+              0.006020654249952727
+            ],
+            "edit_norm_gene_mean": 0.004404783786820111,
+            "z_vs_null": 0.5754556467566151,
+            "p_directional_vs_null": 0.2857142857142857,
+            "p_size_vs_null": 0.38095238095238093,
+            "n_null_bigger_in_predicted_direction": 5,
+            "gap_z_vs_null": 1.3131556950723131,
+            "gap_p_directional_vs_null": 0.09523809523809523,
+            "ds_per_unit_edit": 0.06232644645716334,
+            "gap_per_unit_edit": 1.1722675175183357,
+            "ds_per_unit_edit_p_dir_vs_null": 0.2857142857142857,
+            "gap_per_unit_edit_p_dir_vs_null": 0.14285714285714285,
+            "gap_per_unit_edit_z_vs_null": 1.4174048911473984,
+            "edit_size_ratio_to_null_mean": 0.9622979095924995,
+            "readouts_agree_in_sign": true
+          },
+          "ratio_a5_over_a2": 17.33815462937399,
+          "ratio_a0_over_a2": 1.0096372312024382,
+          "top_up_genes_a5": [
+            "FGF14",
+            "IL2",
+            "HBA1",
+            "RGS6",
+            "HBG2",
+            "AHSP",
+            "HBZ",
+            "ALB",
+            "MAPK10",
+            "HBA2"
+          ],
+          "top_down_genes_a5": [
+            "RIMS2",
+            "RPS11",
+            "SYT1",
+            "TYMP",
+            "ID2"
+          ]
+        },
+        {
+          "feature": 2449,
+          "rho": -0.6765960068431046,
+          "rho_by_donor": [
+            -0.7376137737450842,
+            -0.6135888020160981,
+            -0.6785854447681314
+          ],
+          "mean_a_by_stage_sel": [
+            0.0010206405392014666,
+            0.0008092858812435426,
+            0.0005936027844559009,
+            0.0005986124073388055
+          ],
+          "frac_cells_active": 1.0,
+          "mean_active_gene_positions": 22.98,
+          "alpha0": {
+            "mean_delta_s": -1.0924918131460793e-06,
+            "ci95": [
+              -3.220308268692823e-05,
+              3.0046539727051067e-05
+            ],
+            "pct_of_span": -0.0005511440877856994,
+            "ci95_pct_of_span": [
+              -0.01624592369279505,
+              0.015157983364007204
+            ],
+            "predicted_sign": 1,
+            "frac_cells_predicted_sign": 0.42,
+            "gap_share_mean": 0.0003895095866763245,
+            "gap_share_ci95": [
+              0.00022579433886217752,
+              0.000548748409557322
+            ],
+            "edit_norm_gene_mean": 0.0009623610955069927,
+            "z_vs_null": 0.2835890089030195,
+            "p_directional_vs_null": 0.38095238095238093,
+            "p_size_vs_null": 1.0,
+            "n_null_bigger_in_predicted_direction": 7,
+            "gap_z_vs_null": 1.0964280644796551,
+            "gap_p_directional_vs_null": 0.19047619047619047,
+            "ds_per_unit_edit": -0.0011352202600942954,
+            "gap_per_unit_edit": 0.404743695993989,
+            "ds_per_unit_edit_p_dir_vs_null": 0.38095238095238093,
+            "gap_per_unit_edit_p_dir_vs_null": 0.19047619047619047,
+            "gap_per_unit_edit_z_vs_null": 1.2976603068434294,
+            "edit_size_ratio_to_null_mean": 0.8409748267331674,
+            "readouts_agree_in_sign": false
+          },
+          "alpha2": {
+            "mean_delta_s": 2.8293471836748908e-06,
+            "ci95": [
+              -2.9638538926153036e-05,
+              3.487117801725895e-05
+            ],
+            "pct_of_span": 0.0014273589548327607,
+            "ci95_pct_of_span": [
+              -0.01495215369414522,
+              0.017591933749131997
+            ],
+            "predicted_sign": -1,
+            "frac_cells_predicted_sign": 0.44,
+            "gap_share_mean": -0.00018447194723314564,
+            "gap_share_ci95": [
+              -0.00035792897745588466,
+              1.803456997721926e-06
+            ],
+            "edit_norm_gene_mean": 0.0009623610955069927,
+            "z_vs_null": -0.27789106722918283,
+            "p_directional_vs_null": 0.3333333333333333,
+            "p_size_vs_null": 1.0,
+            "n_null_bigger_in_predicted_direction": 6,
+            "gap_z_vs_null": -0.8937917489859585,
+            "gap_p_directional_vs_null": 0.19047619047619047,
+            "ds_per_unit_edit": 0.0029400057804542996,
+            "gap_per_unit_edit": -0.19168682950131294,
+            "ds_per_unit_edit_p_dir_vs_null": 0.3333333333333333,
+            "gap_per_unit_edit_p_dir_vs_null": 0.19047619047619047,
+            "gap_per_unit_edit_z_vs_null": -1.007989365565223,
+            "edit_size_ratio_to_null_mean": 0.8409748267331674,
+            "readouts_agree_in_sign": false
+          },
+          "alpha5": {
+            "mean_delta_s": 0.00010309222580937804,
+            "ci95": [
+              -1.0491899758204193e-05,
+              0.0002187549278552652
+            ],
+            "pct_of_span": 0.05200832634881234,
+            "ci95_pct_of_span": [
+              -0.0052929902556635945,
+              0.11035825047898605
+            ],
+            "predicted_sign": -1,
+            "frac_cells_predicted_sign": 0.36,
+            "gap_share_mean": 0.0007807545428390303,
+            "gap_share_ci95": [
+              7.354799686346984e-05,
+              0.0015800507268137818
+            ],
+            "edit_norm_gene_mean": 0.003849444382027971,
+            "z_vs_null": -0.0025517685991164924,
+            "p_directional_vs_null": 0.6190476190476191,
+            "p_size_vs_null": 0.6190476190476191,
+            "n_null_bigger_in_predicted_direction": 12,
+            "gap_z_vs_null": -0.42457905025664516,
+            "gap_p_directional_vs_null": 0.38095238095238093,
+            "ds_per_unit_edit": 0.02678106645485986,
+            "gap_per_unit_edit": 0.20282265837744404,
+            "ds_per_unit_edit_p_dir_vs_null": 0.6190476190476191,
+            "gap_per_unit_edit_p_dir_vs_null": 0.42857142857142855,
+            "gap_per_unit_edit_z_vs_null": -0.3927021541131472,
+            "edit_size_ratio_to_null_mean": 0.8409748267331674,
+            "readouts_agree_in_sign": true
+          },
+          "ratio_a5_over_a2": 36.43675346886095,
+          "ratio_a0_over_a2": -0.3861285809849249,
+          "top_up_genes_a5": [
+            "RPS4Y1",
+            "WDR83OS",
+            "TMSB4Y",
+            "LAT",
+            "RPL36A",
+            "CNTN1",
+            "MT-CO1",
+            "PTPRCAP",
+            "EEF1G",
+            "NLGN4Y"
+          ],
+          "top_down_genes_a5": [
+            "COL1A1",
+            "GBA3",
+            "LMNA",
+            "PPP1R2C",
+            "C1QB"
+          ]
+        }
+      ],
+      "controls": {
+        "pc_full": {
+          "mean_delta_s": 0.04698643174411976,
+          "ci95": [
+            0.042896118869690435,
+            0.05119053008217252
+          ],
+          "pct_of_span": 23.703879287977117,
+          "frac_cells_toward_late": 1.0,
+          "gap_share_mean": 0.2562898478764906,
+          "gap_share_ci95": [
+            0.23953258548981818,
+            0.27387275917603277
+          ],
+          "edit_norm_gene_mean": 0.0258547914813197,
+          "top_up_genes": [
+            "LCN2",
+            "HBG2",
+            "AHSP",
+            "ALAS2",
+            "MYL4",
+            "HBM",
+            "HBA1",
+            "KLF1",
+            "RNASE1",
+            "HBZ"
+          ]
+        },
+        "pc_matched": {
+          "mean_delta_s": 0.005769462555975673,
+          "ci95": [
+            0.005125184924116853,
+            0.0064703145149372495
+          ],
+          "pct_of_span": 2.910598632560905,
+          "frac_cells_toward_late": 1.0,
+          "gap_share_mean": 0.0339006644801962,
+          "gap_share_ci95": [
+            0.03106489935138931,
+            0.03698651586971937
+          ],
+          "edit_norm_gene_mean": 0.00459119794641801,
+          "top_up_genes": [
+            "LCN2",
+            "HBG2",
+            "RNASE1",
+            "CRISP3",
+            "CCL13",
+            "S100A6",
+            "LUM",
+            "MYF5",
+            "LGALS3",
+            "DCN"
+          ]
+        }
+      },
+      "layer_test": {
+        "alpha0": {
+          "n_subsets": 1771,
+          "candidates_mean_directional": 9.867456724189278e-06,
+          "p_directional": 0.6374929418407679,
+          "candidates_mean_abs": 2.1253599860053822e-05,
+          "p_size": 0.9023150762281197
+        },
+        "alpha2": {
+          "n_subsets": 1771,
+          "candidates_mean_directional": 2.139119045536801e-05,
+          "p_directional": 0.554488989271598,
+          "candidates_mean_abs": 2.3277421911151267e-05,
+          "p_size": 0.8746470920383964
+        },
+        "alpha5": {
+          "n_subsets": 1771,
+          "candidates_mean_directional": 0.0001190224410156578,
+          "p_directional": 0.46922642574816487,
+          "candidates_mean_abs": 0.00018775059155524317,
+          "p_size": 0.6245059288537549
+        }
+      },
+      "rho_vs_ds": {
+        "alpha0": {
+          "spearman": -0.14031620553359686,
+          "p": 0.5230979940664661,
+          "n": 23
+        },
+        "alpha2": {
+          "spearman": 0.3092885375494071,
+          "p": 0.15098292895587023,
+          "n": 23
+        },
+        "alpha5": {
+          "spearman": 0.3290513833992095,
+          "p": 0.12524375783915412,
+          "n": 23
+        }
+      },
+      "candidates_vs_matched_control_alpha5": {
+        "mean_abs_ds_candidates": 0.00018775059155524317,
+        "matched_control_ds": 0.005769462555975673,
+        "candidate_edit_norm_mean": 0.004462726427884467,
+        "matched_control_edit_norm": 0.00459119794641801
+      },
+      "readouts": {
+        "sign_agreement_candidate_units": 0.6666666666666666,
+        "sign_agreement_null_units": 0.8166666666666667,
+        "spearman_ds_vs_gap_null_alpha5": 0.8225563909774435,
+        "null_gap_alpha5_mean": 0.001851607260047463,
+        "null_gap_alpha5_sd": 0.0025221515676789393
+      }
+    },
+    "L3": {
+      "null": {
+        "alpha0": {
+          "mean": -1.684369716160761e-05,
+          "sd": 7.109212492149382e-05,
+          "p2.5": -0.00018976393917176514,
+          "p97.5": 6.668156274037476e-05,
+          "min": -0.0002442270875179653,
+          "max": 7.615030567057035e-05,
+          "mean_abs": 4.2530756957569584e-05,
+          "mean_abs_pct_of_span": 0.02145606490058035
+        },
+        "alpha2": {
+          "mean": 3.852842976641501e-05,
+          "sd": 0.00010845740059042484,
+          "p2.5": -5.526834786932644e-05,
+          "p97.5": 0.00031641248260835917,
+          "min": -6.892745307844228e-05,
+          "max": 0.0003914066631913604,
+          "mean_abs": 5.919217318106873e-05,
+          "mean_abs_pct_of_span": 0.029861474383031484
+        },
+        "alpha5": {
+          "mean": 0.00028407651177390165,
+          "sd": 0.0007178739833611996,
+          "p2.5": -0.00017050417660886602,
+          "p97.5": 0.002225504123137601,
+          "min": -0.0002184522575991732,
+          "max": 0.002449002118138037,
+          "mean_abs": 0.00034980848311793824,
+          "mean_abs_pct_of_span": 0.17647260602579573
+        },
+        "edit_norm_gene_alpha5_mean": 0.104933891924576
+      },
+      "candidates": [
+        {
+          "feature": 1133,
+          "rho": -0.8119836116843239,
+          "rho_by_donor": [
+            -0.9030819744481092,
+            -0.741218953469013,
+            -0.7916499071358496
+          ],
+          "mean_a_by_stage_sel": [
+            0.028330997373957775,
+            0.017149422095260686,
+            0.008598370848248075,
+            0.006777388928458095
+          ],
+          "frac_cells_active": 1.0,
+          "mean_active_gene_positions": 36.26,
+          "alpha0": {
+            "mean_delta_s": 1.2810419961852838e-05,
+            "ci95": [
+              2.622617495314117e-06,
+              2.2991201629181054e-05
+            ],
+            "pct_of_span": 0.006462645430445013,
+            "ci95_pct_of_span": [
+              0.0013230672391981045,
+              0.011598681744370884
+            ],
+            "predicted_sign": 1,
+            "frac_cells_predicted_sign": 0.66,
+            "gap_share_mean": -0.00015432873662703345,
+            "gap_share_ci95": [
+              -0.00021071205083555004,
+              -9.775793792757714e-05
+            ],
+            "edit_norm_gene_mean": 0.02394292339133583,
+            "z_vs_null": 0.4171223909287721,
+            "p_directional_vs_null": 0.38095238095238093,
+            "p_size_vs_null": 0.7142857142857143,
+            "n_null_bigger_in_predicted_direction": 7,
+            "gap_z_vs_null": 0.06200308304010513,
+            "gap_p_directional_vs_null": 0.6666666666666666,
+            "ds_per_unit_edit": 0.0005350399260972665,
+            "gap_per_unit_edit": -0.0064456931221222565,
+            "ds_per_unit_edit_p_dir_vs_null": 0.38095238095238093,
+            "gap_per_unit_edit_p_dir_vs_null": 0.7142857142857143,
+            "gap_per_unit_edit_z_vs_null": -0.05154328676734744,
+            "edit_size_ratio_to_null_mean": 0.9126859950470697,
+            "readouts_agree_in_sign": false
+          },
+          "alpha2": {
+            "mean_delta_s": 6.136967363210566e-06,
+            "ci95": [
+              -6.951630542304465e-06,
+              1.9122535630296357e-05
+            ],
+            "pct_of_span": 0.0030959987420198956,
+            "ci95_pct_of_span": [
+              -0.0035069828695817452,
+              0.009647003601572978
+            ],
+            "predicted_sign": -1,
+            "frac_cells_predicted_sign": 0.44,
+            "gap_share_mean": 0.00019278825130603612,
+            "gap_share_ci95": [
+              0.00012378861477665683,
+              0.0002599842618582352
+            ],
+            "edit_norm_gene_mean": 0.02394292339133583,
+            "z_vs_null": -0.2986560827280616,
+            "p_directional_vs_null": 0.5238095238095238,
+            "p_size_vs_null": 0.9047619047619048,
+            "n_null_bigger_in_predicted_direction": 10,
+            "gap_z_vs_null": -0.1259271125408591,
+            "gap_p_directional_vs_null": 0.6666666666666666,
+            "ds_per_unit_edit": 0.0002563165434272465,
+            "gap_per_unit_edit": 0.008051992989953764,
+            "ds_per_unit_edit_p_dir_vs_null": 0.5238095238095238,
+            "gap_per_unit_edit_p_dir_vs_null": 0.7619047619047619,
+            "gap_per_unit_edit_z_vs_null": -0.07488074932081579,
+            "edit_size_ratio_to_null_mean": 0.9126859950470697,
+            "readouts_agree_in_sign": true
+          },
+          "alpha5": {
+            "mean_delta_s": 0.00015353787559258648,
+            "ci95": [
+              8.486458625796445e-05,
+              0.00022190068226170042
+            ],
+            "pct_of_span": 0.07745732404194718,
+            "ci95_pct_of_span": [
+              0.04281278304847357,
+              0.11194523165529326
+            ],
+            "predicted_sign": -1,
+            "frac_cells_predicted_sign": 0.26,
+            "gap_share_mean": 0.0011172637679263075,
+            "gap_share_ci95": [
+              0.0007596534060244922,
+              0.0014717357968238177
+            ],
+            "edit_norm_gene_mean": 0.09577169356534332,
+            "z_vs_null": -0.1818406004492775,
+            "p_directional_vs_null": 0.8095238095238095,
+            "p_size_vs_null": 0.2857142857142857,
+            "n_null_bigger_in_predicted_direction": 16,
+            "gap_z_vs_null": -0.12461649025690867,
+            "gap_p_directional_vs_null": 0.7619047619047619,
+            "ds_per_unit_edit": 0.0016031655061819526,
+            "gap_per_unit_edit": 0.011665908018677965,
+            "ds_per_unit_edit_p_dir_vs_null": 0.8571428571428571,
+            "gap_per_unit_edit_p_dir_vs_null": 0.7619047619047619,
+            "gap_per_unit_edit_z_vs_null": -0.1026159543285189,
+            "edit_size_ratio_to_null_mean": 0.9126859950470697,
+            "readouts_agree_in_sign": true
+          },
+          "ratio_a5_over_a2": 25.018525683060314,
+          "ratio_a0_over_a2": 2.087418622860501,
+          "top_up_genes_a5": [
+            "RYR2",
+            "GRM5",
+            "PLCB1",
+            "RGS7",
+            "DOCK4",
+            "FAU",
+            "ENSG00000277154",
+            "OR6K6",
+            "ENSG00000274894",
+            "MMP8"
+          ],
+          "top_down_genes_a5": [
+            "RPS24",
+            "AGBL4",
+            "MAGI2",
+            "SYT1",
+            "MDGA2"
+          ]
+        },
+        {
+          "feature": 980,
+          "rho": -0.724083092450241,
+          "rho_by_donor": [
+            -0.7812939359592768,
+            -0.6900978810084771,
+            -0.7008574603829691
+          ],
+          "mean_a_by_stage_sel": [
+            0.02355414420660389,
+            0.01866003434277243,
+            0.012235341850962294,
+            0.01083794546365324
+          ],
+          "frac_cells_active": 1.0,
+          "mean_active_gene_positions": 25.08,
+          "alpha0": {
+            "mean_delta_s": 1.0041500122595082e-05,
+            "ci95": [
+              7.5534519233521615e-06,
+              1.2454193858642216e-05
+            ],
+            "pct_of_span": 0.005065771073496961,
+            "ci95_pct_of_span": [
+              0.0038105918230550762,
+              0.0062829352410074465
+            ],
+            "predicted_sign": 1,
+            "frac_cells_predicted_sign": 0.94,
+            "gap_share_mean": -4.469143108681892e-06,
+            "gap_share_ci95": [
+              -2.989006012246013e-05,
+              1.8029698847499346e-05
+            ],
+            "edit_norm_gene_mean": 0.020529973231205517,
+            "z_vs_null": 0.3781740567452681,
+            "p_directional_vs_null": 0.38095238095238093,
+            "p_size_vs_null": 0.7142857142857143,
+            "n_null_bigger_in_predicted_direction": 7,
+            "gap_z_vs_null": 0.4932302868432712,
+            "gap_p_directional_vs_null": 0.2857142857142857,
+            "ds_per_unit_edit": 0.0004891141361710118,
+            "gap_per_unit_edit": -0.00021768869634417273,
+            "ds_per_unit_edit_p_dir_vs_null": 0.38095238095238093,
+            "gap_per_unit_edit_p_dir_vs_null": 0.2857142857142857,
+            "gap_per_unit_edit_z_vs_null": 0.4502772048981305,
+            "edit_size_ratio_to_null_mean": 0.7825869356284613,
+            "readouts_agree_in_sign": false
+          },
+          "alpha2": {
+            "mean_delta_s": -1.2475939733191943e-05,
+            "ci95": [
+              -1.53982181342055e-05,
+              -9.407015960650023e-06
+            ],
+            "pct_of_span": -0.006293905675794778,
+            "ci95_pct_of_span": [
+              -0.007768146895913754,
+              -0.004745684286171145
+            ],
+            "predicted_sign": -1,
+            "frac_cells_predicted_sign": 0.94,
+            "gap_share_mean": 1.2411600904102344e-05,
+            "gap_share_ci95": [
+              -1.6737014219806118e-05,
+              4.5519967299237436e-05
+            ],
+            "edit_norm_gene_mean": 0.020529973231205517,
+            "z_vs_null": -0.4702709932374119,
+            "p_directional_vs_null": 0.3333333333333333,
+            "p_size_vs_null": 0.8095238095238095,
+            "n_null_bigger_in_predicted_direction": 6,
+            "gap_z_vs_null": -0.5292562591052765,
+            "gap_p_directional_vs_null": 0.2857142857142857,
+            "ds_per_unit_edit": -0.0006076939113699642,
+            "gap_per_unit_edit": 0.0006045600140012232,
+            "ds_per_unit_edit_p_dir_vs_null": 0.2857142857142857,
+            "gap_per_unit_edit_p_dir_vs_null": 0.2857142857142857,
+            "gap_per_unit_edit_z_vs_null": -0.5082183570673078,
+            "edit_size_ratio_to_null_mean": 0.7825869356284613,
+            "readouts_agree_in_sign": false
+          },
+          "alpha5": {
+            "mean_delta_s": -8.187395148517629e-05,
+            "ci95": [
+              -9.831176146711667e-05,
+              -6.486223037948269e-05
+            ],
+            "pct_of_span": -0.04130405716703932,
+            "ci95_pct_of_span": [
+              -0.04959666099132063,
+              -0.03272192465342152
+            ],
+            "predicted_sign": -1,
+            "frac_cells_predicted_sign": 0.92,
+            "gap_share_mean": -3.1945934965614864e-05,
+            "gap_share_ci95": [
+              -0.00016689435646219232,
+              0.00012094975293278246
+            ],
+            "edit_norm_gene_mean": 0.08211989292482207,
+            "z_vs_null": -0.5097697809657901,
+            "p_directional_vs_null": 0.19047619047619047,
+            "p_size_vs_null": 0.5714285714285714,
+            "n_null_bigger_in_predicted_direction": 3,
+            "gap_z_vs_null": -0.5435748930591473,
+            "gap_p_directional_vs_null": 0.23809523809523808,
+            "ds_per_unit_edit": -0.000997005093030614,
+            "gap_per_unit_edit": -0.00038901578932720076,
+            "ds_per_unit_edit_p_dir_vs_null": 0.14285714285714285,
+            "gap_per_unit_edit_p_dir_vs_null": 0.23809523809523808,
+            "gap_per_unit_edit_z_vs_null": -0.5095188988732191,
+            "edit_size_ratio_to_null_mean": 0.7825869356284613,
+            "readouts_agree_in_sign": true
+          },
+          "ratio_a5_over_a2": 6.562547850992946,
+          "ratio_a0_over_a2": -0.8048692392990572,
+          "top_up_genes_a5": [
+            "RPL32",
+            "POTEE",
+            "RPS2",
+            "MYL6",
+            "RHO",
+            "RPL12",
+            "AGBL4",
+            "GRIA4",
+            "NCAM2",
+            "MYL7"
+          ],
+          "top_down_genes_a5": [
+            "ACTB",
+            "RPS27A",
+            "CSMD1",
+            "BPIFA1",
+            "UNC5C"
+          ]
+        },
+        {
+          "feature": 1029,
+          "rho": -0.7159991488659069,
+          "rho_by_donor": [
+            -0.8996392030420645,
+            -0.5736560190897765,
+            -0.6747022244658798
+          ],
+          "mean_a_by_stage_sel": [
+            0.023476153256763752,
+            0.016594718714865547,
+            0.00868466528558393,
+            0.007654198950492881
+          ],
+          "frac_cells_active": 1.0,
+          "mean_active_gene_positions": 36.44,
+          "alpha0": {
+            "mean_delta_s": 1.3677937044667132e-05,
+            "ci95": [
+              1.1352501230217805e-05,
+              1.6176046452008373e-05
+            ],
+            "pct_of_span": 0.006900293480062264,
+            "ci95_pct_of_span": [
+              0.005727149493776394,
+              0.008160548443926113
+            ],
+            "predicted_sign": 1,
+            "frac_cells_predicted_sign": 0.98,
+            "gap_share_mean": -3.135583918667636e-05,
+            "gap_share_ci95": [
+              -4.892747711166001e-05,
+              -1.4597899496827743e-05
+            ],
+            "edit_norm_gene_mean": 0.025881369512486985,
+            "z_vs_null": 0.4293251079494306,
+            "p_directional_vs_null": 0.38095238095238093,
+            "p_size_vs_null": 0.7142857142857143,
+            "n_null_bigger_in_predicted_direction": 7,
+            "gap_z_vs_null": 0.41586270231289346,
+            "gap_p_directional_vs_null": 0.42857142857142855,
+            "ds_per_unit_edit": 0.0005284858298579577,
+            "gap_per_unit_edit": -0.0012115216380473263,
+            "ds_per_unit_edit_p_dir_vs_null": 0.38095238095238093,
+            "gap_per_unit_edit_p_dir_vs_null": 0.42857142857142855,
+            "gap_per_unit_edit_z_vs_null": 0.3701992696008194,
+            "edit_size_ratio_to_null_mean": 0.9865780840794469,
+            "readouts_agree_in_sign": false
+          },
+          "alpha2": {
+            "mean_delta_s": -9.512541480640734e-06,
+            "ci95": [
+              -1.1798666362808131e-05,
+              -7.395322232351344e-06
+            ],
+            "pct_of_span": -0.004798920169272098,
+            "ci95_pct_of_span": [
+              -0.0059522324390619535,
+              -0.0037308180039291408
+            ],
+            "predicted_sign": -1,
+            "frac_cells_predicted_sign": 0.92,
+            "gap_share_mean": 3.9598781946755836e-05,
+            "gap_share_ci95": [
+              2.2084514593080703e-05,
+              5.7895470219316806e-05
+            ],
+            "edit_norm_gene_mean": 0.025881369512486985,
+            "z_vs_null": -0.44294783929476766,
+            "p_directional_vs_null": 0.38095238095238093,
+            "p_size_vs_null": 0.8571428571428571,
+            "n_null_bigger_in_predicted_direction": 7,
+            "gap_z_vs_null": -0.46846467381421164,
+            "gap_p_directional_vs_null": 0.47619047619047616,
+            "ds_per_unit_edit": -0.0003675439769928411,
+            "gap_per_unit_edit": 0.0015300110733186129,
+            "ds_per_unit_edit_p_dir_vs_null": 0.38095238095238093,
+            "gap_per_unit_edit_p_dir_vs_null": 0.47619047619047616,
+            "gap_per_unit_edit_z_vs_null": -0.4543699035899857,
+            "edit_size_ratio_to_null_mean": 0.9865780840794469,
+            "readouts_agree_in_sign": false
+          },
+          "alpha5": {
+            "mean_delta_s": -1.8841398610591754e-05,
+            "ci95": [
+              -2.7354626154776354e-05,
+              -1.0413798738899638e-05
+            ],
+            "pct_of_span": -0.009505174615393503,
+            "ci95_pct_of_span": [
+              -0.013799957397737643,
+              -0.005253589580508159
+            ],
+            "predicted_sign": -1,
+            "frac_cells_predicted_sign": 0.7,
+            "gap_share_mean": 0.00019797865005741745,
+            "gap_share_ci95": [
+              0.00012462750335786172,
+              0.0002718059740711687
+            ],
+            "edit_norm_gene_mean": 0.10352547804994794,
+            "z_vs_null": -0.42196529948917194,
+            "p_directional_vs_null": 0.38095238095238093,
+            "p_size_vs_null": 0.9047619047619048,
+            "n_null_bigger_in_predicted_direction": 7,
+            "gap_z_vs_null": -0.45975308345920135,
+            "gap_p_directional_vs_null": 0.42857142857142855,
+            "ds_per_unit_edit": -0.00018199769723836816,
+            "gap_per_unit_edit": 0.0019123664414464109,
+            "ds_per_unit_edit_p_dir_vs_null": 0.38095238095238093,
+            "gap_per_unit_edit_p_dir_vs_null": 0.42857142857142855,
+            "gap_per_unit_edit_z_vs_null": -0.4318378433029812,
+            "edit_size_ratio_to_null_mean": 0.9865780840794469,
+            "readouts_agree_in_sign": false
+          },
+          "ratio_a5_over_a2": 1.9806902970080564,
+          "ratio_a0_over_a2": -1.4378846150109854,
+          "top_up_genes_a5": [
+            "GLIS3",
+            "FXYD3",
+            "CD3E",
+            "VSIG4",
+            "MT1E",
+            "GUCA2B",
+            "GSN",
+            "FOSB",
+            "PNRC1",
+            "CNTNAP4"
+          ],
+          "top_down_genes_a5": [
+            "PRDX1",
+            "HBD",
+            "RPL18",
+            "GINS2",
+            "EEF2"
+          ]
+        }
+      ],
+      "controls": {
+        "pc_full": {
+          "mean_delta_s": 0.1454907482989296,
+          "ci95": [
+            0.13935729824584017,
+            0.15118997808612777
+          ],
+          "pct_of_span": 73.39768114285216,
+          "frac_cells_toward_late": 1.0,
+          "gap_share_mean": 0.7092715257886237,
+          "gap_share_ci95": [
+            0.6658036322539246,
+            0.7549843173508196
+          ],
+          "edit_norm_gene_mean": 5.1201400999510795,
+          "top_up_genes": [
+            "HBM",
+            "AHSP",
+            "ALAS2",
+            "SLC4A1",
+            "GYPA",
+            "CTSE",
+            "HBG2",
+            "HBZ",
+            "MYL4",
+            "LGALS3"
+          ]
+        },
+        "pc_matched": {
+          "mean_delta_s": 0.0012528062175496913,
+          "ci95": [
+            0.0011212811146600764,
+            0.0013935930125021524
+          ],
+          "pct_of_span": 0.6320200587639113,
+          "frac_cells_toward_late": 1.0,
+          "gap_share_mean": 0.007883630497520984,
+          "gap_share_ci95": [
+            0.007142461380997505,
+            0.0086739669972634
+          ],
+          "edit_norm_gene_mean": 0.10048172161214076,
+          "top_up_genes": [
+            "HBG2",
+            "HBM",
+            "AHSP",
+            "ALAS2",
+            "HBZ",
+            "HBD",
+            "HBE1",
+            "KLF1",
+            "LCN2",
+            "GCG"
+          ]
+        }
+      },
+      "layer_test": {
+        "alpha0": {
+          "n_subsets": 1771,
+          "candidates_mean_directional": 1.2176619043038352e-05,
+          "p_directional": 0.269339356295878,
+          "candidates_mean_abs": 1.2176619043038352e-05,
+          "p_size": 0.862789384528515
+        },
+        "alpha2": {
+          "n_subsets": 1771,
+          "candidates_mean_directional": 5.2838379502073705e-06,
+          "p_directional": 0.3297571993224167,
+          "candidates_mean_abs": 9.375149525681082e-06,
+          "p_size": 0.9621682665160926
+        },
+        "alpha5": {
+          "n_subsets": 1771,
+          "candidates_mean_directional": -1.760750849893948e-05,
+          "p_directional": 0.4472049689440994,
+          "candidates_mean_abs": 8.475107522945151e-05,
+          "p_size": 0.6533032185206098
+        }
+      },
+      "rho_vs_ds": {
+        "alpha0": {
+          "spearman": -0.4950592885375494,
+          "p": 0.016315588708037888,
+          "n": 23
+        },
+        "alpha2": {
+          "spearman": 0.39624505928853754,
+          "p": 0.061233333061790074,
+          "n": 23
+        },
+        "alpha5": {
+          "spearman": 0.33992094861660077,
+          "p": 0.11251980895696766,
+          "n": 23
+        }
+      },
+      "candidates_vs_matched_control_alpha5": {
+        "mean_abs_ds_candidates": 8.475107522945151e-05,
+        "matched_control_ds": 0.0012528062175496913,
+        "candidate_edit_norm_mean": 0.09380568818003777,
+        "matched_control_edit_norm": 0.10048172161214076
+      },
+      "readouts": {
+        "sign_agreement_candidate_units": 0.3333333333333333,
+        "sign_agreement_null_units": 0.7166666666666667,
+        "spearman_ds_vs_gap_null_alpha5": 0.8842105263157894,
+        "null_gap_alpha5_mean": 0.0014590888245087767,
+        "null_gap_alpha5_sd": 0.002743016240288621
+      }
+    },
+    "L6": {
+      "null": {
+        "alpha0": {
+          "mean": -9.264421077764818e-07,
+          "sd": 3.732015235771898e-06,
+          "p2.5": -8.031311294726783e-06,
+          "p97.5": 5.369560302453165e-06,
+          "min": -1.0420924867942106e-05,
+          "max": 6.771045981714963e-06,
+          "mean_abs": 2.708851729346651e-06,
+          "mean_abs_pct_of_span": 0.0013665709869423494
+        },
+        "alpha2": {
+          "mean": 1.6108405745108857e-06,
+          "sd": 4.8351263392547e-06,
+          "p2.5": -5.017810698536185e-06,
+          "p97.5": 1.206122671783037e-05,
+          "min": -6.600840382180451e-06,
+          "max": 1.7673873001653462e-05,
+          "mean_abs": 3.132077226343788e-06,
+          "mean_abs_pct_of_span": 0.0015800812646975812
+        },
+        "alpha5": {
+          "mean": 9.915330109277364e-06,
+          "sd": 2.6027763205292513e-05,
+          "p2.5": -1.7498384782881736e-05,
+          "p97.5": 6.891416192854754e-05,
+          "min": -2.462736954054634e-05,
+          "max": 0.00010805404208454439,
+          "mean_abs": 1.5057723627563303e-05,
+          "mean_abs_pct_of_span": 0.007596373037289641
+        },
+        "edit_norm_gene_alpha5_mean": 0.03146751294942464
+      },
+      "candidates": [
+        {
+          "feature": 3965,
+          "rho": 0.7718589230119149,
+          "rho_by_donor": [
+            0.78511547470563,
+            0.7784095670690964,
+            0.7520517272610185
+          ],
+          "mean_a_by_stage_sel": [
+            0.007513822437766449,
+            0.010645328636100102,
+            0.05884486821014434,
+            0.10810301759176784
+          ],
+          "frac_cells_active": 1.0,
+          "mean_active_gene_positions": 11.02,
+          "alpha0": {
+            "mean_delta_s": -3.442805216620215e-06,
+            "ci95": [
+              -4.330651489694804e-06,
+              -2.7194182323312943e-06
+            ],
+            "pct_of_span": -0.001736838407121573,
+            "ci95_pct_of_span": [
+              -0.002184742197684988,
+              -0.0013719016132944
+            ],
+            "predicted_sign": -1,
+            "frac_cells_predicted_sign": 1.0,
+            "gap_share_mean": -3.445786560302734e-05,
+            "gap_share_ci95": [
+              -4.579539606933846e-05,
+              -2.5893666972133367e-05
+            ],
+            "edit_norm_gene_mean": 0.012631784628793228,
+            "z_vs_null": -0.6742638895800945,
+            "p_directional_vs_null": 0.3333333333333333,
+            "p_size_vs_null": 0.42857142857142855,
+            "n_null_bigger_in_predicted_direction": 6,
+            "gap_z_vs_null": -1.5985915592252982,
+            "gap_p_directional_vs_null": 0.09523809523809523,
+            "ds_per_unit_edit": -0.00027255097500416474,
+            "gap_per_unit_edit": -0.002727869942025702,
+            "ds_per_unit_edit_p_dir_vs_null": 0.38095238095238093,
+            "gap_per_unit_edit_p_dir_vs_null": 0.38095238095238093,
+            "gap_per_unit_edit_z_vs_null": -0.4860974922160752,
+            "edit_size_ratio_to_null_mean": 1.6056921497539818,
+            "readouts_agree_in_sign": true
+          },
+          "alpha2": {
+            "mean_delta_s": 2.889903608187527e-06,
+            "ci95": [
+              2.1458484427816505e-06,
+              3.852446556156519e-06
+            ],
+            "pct_of_span": 0.001457908671495139,
+            "ci95_pct_of_span": [
+              0.001082545121429774,
+              0.0019434957016489232
+            ],
+            "predicted_sign": 1,
+            "frac_cells_predicted_sign": 1.0,
+            "gap_share_mean": 3.914120377293108e-05,
+            "gap_share_ci95": [
+              2.9026283853017425e-05,
+              5.2786498538723154e-05
+            ],
+            "edit_norm_gene_mean": 0.012631784628793228,
+            "z_vs_null": 0.2645355971967839,
+            "p_directional_vs_null": 0.38095238095238093,
+            "p_size_vs_null": 0.47619047619047616,
+            "n_null_bigger_in_predicted_direction": 7,
+            "gap_z_vs_null": 1.8489031000230012,
+            "gap_p_directional_vs_null": 0.047619047619047616,
+            "ds_per_unit_edit": 0.00022878031039257933,
+            "gap_per_unit_edit": 0.003098628176711593,
+            "ds_per_unit_edit_p_dir_vs_null": 0.47619047619047616,
+            "gap_per_unit_edit_p_dir_vs_null": 0.2857142857142857,
+            "gap_per_unit_edit_z_vs_null": 0.6292876873474023,
+            "edit_size_ratio_to_null_mean": 1.6056921497539818,
+            "readouts_agree_in_sign": true
+          },
+          "alpha5": {
+            "mean_delta_s": 1.418351186061262e-05,
+            "ci95": [
+              9.945133828800523e-06,
+              1.9851899483789515e-05
+            ],
+            "pct_of_span": 0.007155347630023606,
+            "ci95_pct_of_span": [
+              0.005017155868835845,
+              0.010014955627263443
+            ],
+            "predicted_sign": 1,
+            "frac_cells_predicted_sign": 0.98,
+            "gap_share_mean": 0.00019313165052482924,
+            "gap_share_ci95": [
+              0.0001416312037541966,
+              0.000262223269896639
+            ],
+            "edit_norm_gene_mean": 0.05052713851517291,
+            "z_vs_null": 0.16398573007100967,
+            "p_directional_vs_null": 0.38095238095238093,
+            "p_size_vs_null": 0.42857142857142855,
+            "n_null_bigger_in_predicted_direction": 7,
+            "gap_z_vs_null": 1.7872274822818988,
+            "gap_p_directional_vs_null": 0.047619047619047616,
+            "ds_per_unit_edit": 0.0002807107680628583,
+            "gap_per_unit_edit": 0.003822335010458455,
+            "ds_per_unit_edit_p_dir_vs_null": 0.47619047619047616,
+            "gap_per_unit_edit_p_dir_vs_null": 0.19047619047619047,
+            "gap_per_unit_edit_z_vs_null": 0.8572209175888083,
+            "edit_size_ratio_to_null_mean": 1.6056921497539818,
+            "readouts_agree_in_sign": true
+          },
+          "ratio_a5_over_a2": 4.907953268900949,
+          "ratio_a0_over_a2": -1.1913218167091233,
+          "top_up_genes_a5": [
+            "MRTFA",
+            "LMNA",
+            "TNFAIP6",
+            "DEFA4",
+            "C1S",
+            "C6orf132",
+            "GUCY1A2",
+            "HSPH1",
+            "LELP1",
+            "AKAP13"
+          ],
+          "top_down_genes_a5": [
+            "PRDX2",
+            "S100A12",
+            "NCOA1",
+            "SCAI",
+            "GPNMB"
+          ]
+        },
+        {
+          "feature": 1976,
+          "rho": 0.6954837752756857,
+          "rho_by_donor": [
+            0.7330944745015832,
+            0.5592633371713528,
+            0.7940935141541211
+          ],
+          "mean_a_by_stage_sel": [
+            0.00497708595618238,
+            0.02142950244403134,
+            0.02780213027634952,
+            0.06593868390191346
+          ],
+          "frac_cells_active": 0.82,
+          "mean_active_gene_positions": 6.3,
+          "alpha0": {
+            "mean_delta_s": 2.009992228348967e-06,
+            "ci95": [
+              1.3243235767234074e-06,
+              2.7790312203860854e-06
+            ],
+            "pct_of_span": 0.0010140079036012062,
+            "ci95_pct_of_span": [
+              0.0006680993860488743,
+              0.0014019753818355328
+            ],
+            "predicted_sign": -1,
+            "frac_cells_predicted_sign": 0.06,
+            "gap_share_mean": 4.796267885143804e-07,
+            "gap_share_ci95": [
+              -4.959969767228238e-06,
+              5.021121779565905e-06
+            ],
+            "edit_norm_gene_mean": 0.00762308730298827,
+            "z_vs_null": 0.7868227085407655,
+            "p_directional_vs_null": 0.8095238095238095,
+            "p_size_vs_null": 0.5714285714285714,
+            "n_null_bigger_in_predicted_direction": 16,
+            "gap_z_vs_null": 1.0381345099017198,
+            "gap_p_directional_vs_null": 0.8571428571428571,
+            "ds_per_unit_edit": 0.0002636716790008485,
+            "gap_per_unit_edit": 6.291765651514518e-05,
+            "ds_per_unit_edit_p_dir_vs_null": 0.8095238095238095,
+            "gap_per_unit_edit_p_dir_vs_null": 0.8571428571428571,
+            "gap_per_unit_edit_z_vs_null": 0.9920101058660605,
+            "edit_size_ratio_to_null_mean": 0.9690104604377578,
+            "readouts_agree_in_sign": true
+          },
+          "alpha2": {
+            "mean_delta_s": -1.3222647669186571e-06,
+            "ci95": [
+              -2.1477686668948116e-06,
+              -4.1668545239670346e-07
+            ],
+            "pct_of_span": -0.0006670607504837292,
+            "ci95_pct_of_span": [
+              -0.001083513842800916,
+              -0.00021021093319995902
+            ],
+            "predicted_sign": 1,
+            "frac_cells_predicted_sign": 0.08,
+            "gap_share_mean": 3.98475236680267e-06,
+            "gap_share_ci95": [
+              -2.4034026197605988e-06,
+              1.2858515631317793e-05
+            ],
+            "edit_norm_gene_mean": 0.00762308730298827,
+            "z_vs_null": -0.6066243435288725,
+            "p_directional_vs_null": 0.8095238095238095,
+            "p_size_vs_null": 0.6190476190476191,
+            "n_null_bigger_in_predicted_direction": 16,
+            "gap_z_vs_null": -0.7647735118006055,
+            "gap_p_directional_vs_null": 0.6666666666666666,
+            "ds_per_unit_edit": -0.0001734552831895715,
+            "gap_per_unit_edit": 0.0005227215967001502,
+            "ds_per_unit_edit_p_dir_vs_null": 0.7619047619047619,
+            "gap_per_unit_edit_p_dir_vs_null": 0.7619047619047619,
+            "gap_per_unit_edit_z_vs_null": -0.7832187131243407,
+            "edit_size_ratio_to_null_mean": 0.9690104604377578,
+            "readouts_agree_in_sign": false
+          },
+          "alpha5": {
+            "mean_delta_s": -8.253105798172733e-07,
+            "ci95": [
+              -5.042789204098452e-06,
+              5.152862607639029e-06
+            ],
+            "pct_of_span": -0.00041635556548784577,
+            "ci95_pct_of_span": [
+              -0.002544003920528042,
+              0.0025995341358155473
+            ],
+            "predicted_sign": 1,
+            "frac_cells_predicted_sign": 0.1,
+            "gap_share_mean": 3.984318869083958e-05,
+            "gap_share_ci95": [
+              3.6718216919530236e-06,
+              9.280113313703974e-05
+            ],
+            "edit_norm_gene_mean": 0.03049234921195308,
+            "z_vs_null": -0.41266091920302334,
+            "p_directional_vs_null": 0.7619047619047619,
+            "p_size_vs_null": 1.0,
+            "n_null_bigger_in_predicted_direction": 15,
+            "gap_z_vs_null": -0.2035687501927246,
+            "gap_p_directional_vs_null": 0.5714285714285714,
+            "ds_per_unit_edit": -2.7066152695566974e-05,
+            "gap_per_unit_edit": 0.0013066618256890798,
+            "ds_per_unit_edit_p_dir_vs_null": 0.7619047619047619,
+            "gap_per_unit_edit_p_dir_vs_null": 0.6190476190476191,
+            "gap_per_unit_edit_z_vs_null": -0.34674386795323064,
+            "edit_size_ratio_to_null_mean": 0.9690104604377578,
+            "readouts_agree_in_sign": false
+          },
+          "ratio_a5_over_a2": 0.6241643886046648,
+          "ratio_a0_over_a2": -1.5201132773377584,
+          "top_up_genes_a5": [
+            "CPNE4",
+            "GABARAP",
+            "COL6A2",
+            "NELL1",
+            "FOXN3",
+            "FCGRT",
+            "SFTPB",
+            "PPFIBP1",
+            "ENSG00000284511",
+            "CRCT1"
+          ],
+          "top_down_genes_a5": [
+            "CCT6A",
+            "HNRNPAB",
+            "CACYBP",
+            "CAP1",
+            "SLC25A12"
+          ]
+        },
+        {
+          "feature": 646,
+          "rho": 0.6854034728189481,
+          "rho_by_donor": [
+            0.7996114257498176,
+            0.6942632109702671,
+            0.5623357817367597
+          ],
+          "mean_a_by_stage_sel": [
+            0.003032085118129065,
+            0.0070031390654750995,
+            0.020781903521549936,
+            0.03945754158646903
+          ],
+          "frac_cells_active": 0.72,
+          "mean_active_gene_positions": 2.22,
+          "alpha0": {
+            "mean_delta_s": -1.2259984572193794e-06,
+            "ci95": [
+              -1.948867025190426e-06,
+              -5.890012444920716e-07
+            ],
+            "pct_of_span": -0.0006184959861484108,
+            "ci95_pct_of_span": [
+              -0.000983171247499853,
+              -0.0002971414061817032
+            ],
+            "predicted_sign": -1,
+            "frac_cells_predicted_sign": 0.62,
+            "gap_share_mean": -1.8699227158953823e-05,
+            "gap_share_ci95": [
+              -2.6461679984864385e-05,
+              -1.184458813563003e-05
+            ],
+            "edit_norm_gene_mean": 0.0026472243034311345,
+            "z_vs_null": -0.08026664697710967,
+            "p_directional_vs_null": 0.42857142857142855,
+            "p_size_vs_null": 0.6190476190476191,
+            "n_null_bigger_in_predicted_direction": 8,
+            "gap_z_vs_null": -0.40929003942030745,
+            "gap_p_directional_vs_null": 0.42857142857142855,
+            "ds_per_unit_edit": -0.00046312602057571465,
+            "gap_per_unit_edit": -0.0070637108970015424,
+            "ds_per_unit_edit_p_dir_vs_null": 0.23809523809523808,
+            "gap_per_unit_edit_p_dir_vs_null": 0.047619047619047616,
+            "gap_per_unit_edit_z_vs_null": -2.7825243012560503,
+            "edit_size_ratio_to_null_mean": 0.3365025139019812,
+            "readouts_agree_in_sign": true
+          },
+          "alpha2": {
+            "mean_delta_s": 1.397448296078796e-06,
+            "ci95": [
+              6.461142288636813e-07,
+              2.2113240790604393e-06
+            ],
+            "pct_of_span": 0.0007049896000154681,
+            "ci95_pct_of_span": [
+              0.0003259539641280764,
+              0.0011155764992349239
+            ],
+            "predicted_sign": 1,
+            "frac_cells_predicted_sign": 0.64,
+            "gap_share_mean": 2.6136672023373783e-05,
+            "gap_share_ci95": [
+              1.715918208116456e-05,
+              3.6076002194962716e-05
+            ],
+            "edit_norm_gene_mean": 0.0026472243034311345,
+            "z_vs_null": -0.04413375441705267,
+            "p_directional_vs_null": 0.42857142857142855,
+            "p_size_vs_null": 0.6190476190476191,
+            "n_null_bigger_in_predicted_direction": 8,
+            "gap_z_vs_null": 0.8820921984082146,
+            "gap_p_directional_vs_null": 0.23809523809523808,
+            "ds_per_unit_edit": 0.0005278919108847436,
+            "gap_per_unit_edit": 0.009873236653764994,
+            "ds_per_unit_edit_p_dir_vs_null": 0.23809523809523808,
+            "gap_per_unit_edit_p_dir_vs_null": 0.047619047619047616,
+            "gap_per_unit_edit_z_vs_null": 4.344165357517237,
+            "edit_size_ratio_to_null_mean": 0.3365025139019812,
+            "readouts_agree_in_sign": true
+          },
+          "alpha5": {
+            "mean_delta_s": 7.033930059998639e-06,
+            "ci95": [
+              4.066028857242943e-06,
+              1.0539459639562543e-05
+            ],
+            "pct_of_span": 0.00354850161787711,
+            "ci95_pct_of_span": [
+              0.0020512444472989815,
+              0.0053169834308169715
+            ],
+            "predicted_sign": 1,
+            "frac_cells_predicted_sign": 0.64,
+            "gap_share_mean": 0.00015906628318996887,
+            "gap_share_ci95": [
+              9.761340419543163e-05,
+              0.0002292675391635802
+            ],
+            "edit_norm_gene_mean": 0.010588897213724538,
+            "z_vs_null": -0.11070486643634511,
+            "p_directional_vs_null": 0.42857142857142855,
+            "p_size_vs_null": 0.5714285714285714,
+            "n_null_bigger_in_predicted_direction": 8,
+            "gap_z_vs_null": 1.34481189446323,
+            "gap_p_directional_vs_null": 0.14285714285714285,
+            "ds_per_unit_edit": 0.0006642740899290045,
+            "gap_per_unit_edit": 0.015021987651726285,
+            "ds_per_unit_edit_p_dir_vs_null": 0.19047619047619047,
+            "gap_per_unit_edit_p_dir_vs_null": 0.047619047619047616,
+            "gap_per_unit_edit_z_vs_null": 6.217212617633701,
+            "edit_size_ratio_to_null_mean": 0.3365025139019812,
+            "readouts_agree_in_sign": true
+          },
+          "ratio_a5_over_a2": 5.0334098798042595,
+          "ratio_a0_over_a2": -0.8773122130239092,
+          "top_up_genes_a5": [
+            "MARCHF1",
+            "ANXA1",
+            "TXNIP",
+            "PTPRC",
+            "YBX1",
+            "MYH2",
+            "FLRT2",
+            "SERPINB3",
+            "SPRR1B",
+            "ST6GALNAC5"
+          ],
+          "top_down_genes_a5": [
+            "TUBB",
+            "SMYD3",
+            "HLA-DPA1",
+            "TMEM132D",
+            "JCHAIN"
+          ]
+        }
+      ],
+      "controls": {
+        "pc_full": {
+          "mean_delta_s": 0.14493816337804033,
+          "ci95": [
+            0.13937196241975194,
+            0.15048172112348696
+          ],
+          "pct_of_span": 73.11891117086435,
+          "frac_cells_toward_late": 1.0,
+          "gap_share_mean": 0.7113537126873432,
+          "gap_share_ci95": [
+            0.6644859400871305,
+            0.7624229542198655
+          ],
+          "edit_norm_gene_mean": 8.745925721658711,
+          "top_up_genes": [
+            "AHSP",
+            "HBM",
+            "ALAS2",
+            "SLC4A1",
+            "GYPA",
+            "HBZ",
+            "CTSE",
+            "LGALS3",
+            "HBG2",
+            "SELENBP1"
+          ]
+        },
+        "pc_matched": {
+          "mean_delta_s": 0.0001854426735330539,
+          "ci95": [
+            0.00016980278134543782,
+            0.00020217939044877528
+          ],
+          "pct_of_span": 0.09355276800344327,
+          "frac_cells_toward_late": 1.0,
+          "gap_share_mean": 0.0012254594396169886,
+          "gap_share_ci95": [
+            0.0011173519025575566,
+            0.0013417320602798028
+          ],
+          "edit_norm_gene_mean": 0.020697324409356215,
+          "top_up_genes": [
+            "AHSP",
+            "HBM",
+            "HBG2",
+            "ALAS2",
+            "HBZ",
+            "HBG1",
+            "HBD",
+            "ORM1",
+            "HBE1",
+            "LELP1"
+          ]
+        }
+      },
+      "layer_test": {
+        "alpha0": {
+          "n_subsets": 1771,
+          "candidates_mean_directional": 8.862704818302091e-07,
+          "p_directional": 0.26651609260304915,
+          "candidates_mean_abs": 2.2262653007295203e-06,
+          "p_size": 0.5832862789384529
+        },
+        "alpha2": {
+          "n_subsets": 1771,
+          "candidates_mean_directional": 9.883623791158887e-07,
+          "p_directional": 0.24280067758328627,
+          "candidates_mean_abs": 1.8698722237283268e-06,
+          "p_size": 0.6832298136645962
+        },
+        "alpha5": {
+          "n_subsets": 1771,
+          "candidates_mean_directional": 6.797377113597995e-06,
+          "p_directional": 0.15866741953698477,
+          "candidates_mean_abs": 7.347584166809511e-06,
+          "p_size": 0.7391304347826086
+        }
+      },
+      "rho_vs_ds": {
+        "alpha0": {
+          "spearman": 0.14525691699604742,
+          "p": 0.5084195727681444,
+          "n": 23
+        },
+        "alpha2": {
+          "spearman": -0.14525691699604742,
+          "p": 0.5084195727681444,
+          "n": 23
+        },
+        "alpha5": {
+          "spearman": -0.15415019762845852,
+          "p": 0.4825129524075379,
+          "n": 23
+        }
+      },
+      "candidates_vs_matched_control_alpha5": {
+        "mean_abs_ds_candidates": 7.347584166809511e-06,
+        "matched_control_ds": 0.0001854426735330539,
+        "candidate_edit_norm_mean": 0.03053612831361684,
+        "matched_control_edit_norm": 0.020697324409356215
+      },
+      "readouts": {
+        "sign_agreement_candidate_units": 0.7777777777777778,
+        "sign_agreement_null_units": 0.6333333333333333,
+        "spearman_ds_vs_gap_null_alpha5": 0.3759398496240601,
+        "null_gap_alpha5_mean": 5.551769122680327e-05,
+        "null_gap_alpha5_sd": 7.699856938318956e-05
+      }
+    },
+    "L9": {
+      "null": {
+        "alpha0": {
+          "mean": 3.756294307770268e-05,
+          "sd": 0.0002524382175318315,
+          "p2.5": -0.00033692920126990404,
+          "p97.5": 0.0005968210906861945,
+          "min": -0.0004161573900223536,
+          "max": 0.0006786950993835705,
+          "mean_abs": 0.0001518799190190443,
+          "mean_abs_pct_of_span": 0.07662091231572857
+        },
+        "alpha2": {
+          "mean": -2.2084819013307607e-05,
+          "sd": 0.00025617181049459963,
+          "p2.5": -0.0005966102484561635,
+          "p97.5": 0.00036412108356854365,
+          "min": -0.0006983529893585838,
+          "max": 0.0004448630955446098,
+          "mean_abs": 0.00015616940219014317,
+          "mean_abs_pct_of_span": 0.07878488577617893
+        },
+        "alpha5": {
+          "mean": -7.219153251058246e-07,
+          "sd": 0.0010670308517645988,
+          "p2.5": -0.0023910890960210144,
+          "p97.5": 0.00161097110602745,
+          "min": -0.002914570639371279,
+          "max": 0.0019293463536947475,
+          "mean_abs": 0.0006546915410116695,
+          "mean_abs_pct_of_span": 0.3302810765353014
+        },
+        "edit_norm_gene_alpha5_mean": 1.2381121907469004
+      },
+      "candidates": [
+        {
+          "feature": 2903,
+          "rho": 0.8363731601999493,
+          "rho_by_donor": [
+            0.8708120402632565,
+            0.8023958232957616,
+            0.8359116170408298
+          ],
+          "mean_a_by_stage_sel": [
+            0.3619350755608665,
+            2.7356293492821147,
+            8.333133945339604,
+            9.235688083701664
+          ],
+          "frac_cells_active": 0.84,
+          "mean_active_gene_positions": 382.44,
+          "alpha0": {
+            "mean_delta_s": -0.0017115946574473928,
+            "ci95": [
+              -0.0025942119619715718,
+              -0.0009237629037856525
+            ],
+            "pct_of_span": -0.8634712542340899,
+            "ci95_pct_of_span": [
+              -1.3087371164697161,
+              -0.46602313794102174
+            ],
+            "predicted_sign": -1,
+            "frac_cells_predicted_sign": 0.84,
+            "gap_share_mean": -0.006422411205347641,
+            "gap_share_ci95": [
+              -0.009820322780172886,
+              -0.0033753033118670015
+            ],
+            "edit_norm_gene_mean": 0.8588781524582779,
+            "z_vs_null": -6.929052255348513,
+            "p_directional_vs_null": 0.047619047619047616,
+            "p_size_vs_null": 0.047619047619047616,
+            "n_null_bigger_in_predicted_direction": 0,
+            "gap_z_vs_null": -4.176216272638736,
+            "gap_p_directional_vs_null": 0.047619047619047616,
+            "ds_per_unit_edit": -0.001992825935260401,
+            "gap_per_unit_edit": -0.007477674437247518,
+            "ds_per_unit_edit_p_dir_vs_null": 0.047619047619047616,
+            "gap_per_unit_edit_p_dir_vs_null": 0.047619047619047616,
+            "gap_per_unit_edit_z_vs_null": -1.7897663501312688,
+            "edit_size_ratio_to_null_mean": 2.7747991139321657,
+            "readouts_agree_in_sign": true
+          },
+          "alpha2": {
+            "mean_delta_s": 0.0017097169540673974,
+            "ci95": [
+              0.0009312163844531158,
+              0.0025785209961988794
+            ],
+            "pct_of_span": 0.8625239838710108,
+            "ci95_pct_of_span": [
+              0.4697832959155403,
+              1.300821283222084
+            ],
+            "predicted_sign": 1,
+            "frac_cells_predicted_sign": 0.84,
+            "gap_share_mean": 0.0066003704640025555,
+            "gap_share_ci95": [
+              0.0034473506638389015,
+              0.01011294440618384
+            ],
+            "edit_norm_gene_mean": 0.8588781524582779,
+            "z_vs_null": 6.760313594759144,
+            "p_directional_vs_null": 0.047619047619047616,
+            "p_size_vs_null": 0.047619047619047616,
+            "n_null_bigger_in_predicted_direction": 0,
+            "gap_z_vs_null": 4.47462760231106,
+            "gap_p_directional_vs_null": 0.047619047619047616,
+            "ds_per_unit_edit": 0.001990639707359946,
+            "gap_per_unit_edit": 0.007684874094318268,
+            "ds_per_unit_edit_p_dir_vs_null": 0.047619047619047616,
+            "gap_per_unit_edit_p_dir_vs_null": 0.047619047619047616,
+            "gap_per_unit_edit_z_vs_null": 1.8410496222523167,
+            "edit_size_ratio_to_null_mean": 2.7747991139321657,
+            "readouts_agree_in_sign": true
+          },
+          "alpha5": {
+            "mean_delta_s": 0.006874518434368875,
+            "ci95": [
+              0.003837260311545422,
+              0.010263163074116727
+            ],
+            "pct_of_span": 3.468081083889636,
+            "ci95_pct_of_span": [
+              1.9358344918967234,
+              5.177596373917723
+            ],
+            "predicted_sign": 1,
+            "frac_cells_predicted_sign": 0.84,
+            "gap_share_mean": 0.025513641902476483,
+            "gap_share_ci95": [
+              0.013575817110281505,
+              0.03891141177318551
+            ],
+            "edit_norm_gene_mean": 3.4355126098331117,
+            "z_vs_null": 6.443337920664688,
+            "p_directional_vs_null": 0.047619047619047616,
+            "p_size_vs_null": 0.047619047619047616,
+            "n_null_bigger_in_predicted_direction": 0,
+            "gap_z_vs_null": 4.799910020354027,
+            "gap_p_directional_vs_null": 0.047619047619047616,
+            "ds_per_unit_edit": 0.0020010167957738396,
+            "gap_per_unit_edit": 0.007426443969220613,
+            "ds_per_unit_edit_p_dir_vs_null": 0.047619047619047616,
+            "gap_per_unit_edit_p_dir_vs_null": 0.047619047619047616,
+            "gap_per_unit_edit_z_vs_null": 1.8012849039721703,
+            "edit_size_ratio_to_null_mean": 2.7747991139321657,
+            "readouts_agree_in_sign": true
+          },
+          "ratio_a5_over_a2": 4.020851766144374,
+          "ratio_a0_over_a2": -1.0010982539393602,
+          "top_up_genes_a5": [
+            "AHSP",
+            "ALAS2",
+            "HBM",
+            "GYPA",
+            "HBG1",
+            "SLC4A1",
+            "HBG2",
+            "GYPB",
+            "ENSG00000284931",
+            "HBA1"
+          ],
+          "top_down_genes_a5": [
+            "TENM2",
+            "IL2",
+            "HLA-DRA",
+            "CYBA",
+            "GAGE12F"
+          ]
+        },
+        {
+          "feature": 878,
+          "rho": -0.726878480385278,
+          "rho_by_donor": [
+            -0.8775501224639961,
+            -0.6208793370277024,
+            -0.6822059816641357
+          ],
+          "mean_a_by_stage_sel": [
+            0.7065229802147338,
+            0.5233869538332026,
+            0.13803266650862306,
+            0.06290924358699057
+          ],
+          "frac_cells_active": 1.0,
+          "mean_active_gene_positions": 504.46,
+          "alpha0": {
+            "mean_delta_s": -9.403198406928048e-05,
+            "ci95": [
+              -0.00032704064726249654,
+              0.0001785374850948773
+            ],
+            "pct_of_span": -0.04743758393328423,
+            "ci95_pct_of_span": [
+              -0.1649866086275488,
+              0.09006921440885142
+            ],
+            "predicted_sign": 1,
+            "frac_cells_predicted_sign": 0.34,
+            "gap_share_mean": 0.013555890821971235,
+            "gap_share_ci95": [
+              0.011854852180333377,
+              0.015401761210675644
+            ],
+            "edit_norm_gene_mean": 1.2308295791909347,
+            "z_vs_null": -0.5212955804934313,
+            "p_directional_vs_null": 0.8095238095238095,
+            "p_size_vs_null": 0.42857142857142855,
+            "n_null_bigger_in_predicted_direction": 16,
+            "gap_z_vs_null": 7.13651862880506,
+            "gap_p_directional_vs_null": 0.047619047619047616,
+            "ds_per_unit_edit": -7.639724106329231e-05,
+            "gap_per_unit_edit": 0.0110136212609401,
+            "ds_per_unit_edit_p_dir_vs_null": 0.6666666666666666,
+            "gap_per_unit_edit_p_dir_vs_null": 0.09523809523809523,
+            "gap_per_unit_edit_z_vs_null": 1.9768806963367975,
+            "edit_size_ratio_to_null_mean": 3.9764718848246785,
+            "readouts_agree_in_sign": false
+          },
+          "alpha2": {
+            "mean_delta_s": 0.00040385136959067094,
+            "ci95": [
+              0.00013320707320215976,
+              0.0006382486029549937
+            ],
+            "pct_of_span": 0.2037363502551886,
+            "ci95_pct_of_span": [
+              0.06720076980273955,
+              0.3219858856819567
+            ],
+            "predicted_sign": -1,
+            "frac_cells_predicted_sign": 0.28,
+            "gap_share_mean": -0.010716744024866371,
+            "gap_share_ci95": [
+              -0.012215937626841518,
+              -0.009351752542080961
+            ],
+            "edit_norm_gene_mean": 1.2308295791909347,
+            "z_vs_null": 1.6626973427779155,
+            "p_directional_vs_null": 0.9523809523809523,
+            "p_size_vs_null": 0.19047619047619047,
+            "n_null_bigger_in_predicted_direction": 19,
+            "gap_z_vs_null": -5.881099074085151,
+            "gap_p_directional_vs_null": 0.047619047619047616,
+            "ds_per_unit_edit": 0.0003281131493899715,
+            "gap_per_unit_edit": -0.008706927592616716,
+            "ds_per_unit_edit_p_dir_vs_null": 0.7619047619047619,
+            "gap_per_unit_edit_p_dir_vs_null": 0.14285714285714285,
+            "gap_per_unit_edit_z_vs_null": -1.5869451589803274,
+            "edit_size_ratio_to_null_mean": 3.9764718848246785,
+            "readouts_agree_in_sign": false
+          },
+          "alpha5": {
+            "mean_delta_s": 0.002919117686537822,
+            "ci95": [
+              0.0018880732452320706,
+              0.003856629187038578
+            ],
+            "pct_of_span": 1.472646691834629,
+            "ci95_pct_of_span": [
+              0.9525017889327414,
+              1.9456057698931863
+            ],
+            "predicted_sign": -1,
+            "frac_cells_predicted_sign": 0.14,
+            "gap_share_mean": -0.033110690405185876,
+            "gap_share_ci95": [
+              -0.03786062659064976,
+              -0.02885677049729419
+            ],
+            "edit_norm_gene_mean": 4.923318316763739,
+            "z_vs_null": 2.736415350159981,
+            "p_directional_vs_null": 1.0,
+            "p_size_vs_null": 0.047619047619047616,
+            "n_null_bigger_in_predicted_direction": 20,
+            "gap_z_vs_null": -5.10918770189014,
+            "gap_p_directional_vs_null": 0.047619047619047616,
+            "ds_per_unit_edit": 0.0005929167075381499,
+            "gap_per_unit_edit": -0.0067252792273140355,
+            "ds_per_unit_edit_p_dir_vs_null": 0.9047619047619048,
+            "gap_per_unit_edit_p_dir_vs_null": 0.14285714285714285,
+            "gap_per_unit_edit_z_vs_null": -1.2786876192592955,
+            "edit_size_ratio_to_null_mean": 3.9764718848246785,
+            "readouts_agree_in_sign": false
+          },
+          "ratio_a5_over_a2": 7.228198060827511,
+          "ratio_a0_over_a2": -0.2328380962644447,
+          "top_up_genes_a5": [
+            "HBG2",
+            "IGLL1",
+            "EIF4A1",
+            "CYTL1",
+            "GP1BB",
+            "HPGDS",
+            "CBFA2T3",
+            "LYL1",
+            "SPN",
+            "MIF"
+          ],
+          "top_down_genes_a5": [
+            "SLPI",
+            "PAGE4",
+            "SERPINB3",
+            "MAGEA3",
+            "CSAG1"
+          ]
+        },
+        {
+          "feature": 3003,
+          "rho": 0.7018003169062704,
+          "rho_by_donor": [
+            0.8548171343727913,
+            0.6334561311609752,
+            0.6171276851850446
+          ],
+          "mean_a_by_stage_sel": [
+            0.004339196281139984,
+            0.02921633749243079,
+            0.08184775380160365,
+            0.11716741024930444
+          ],
+          "frac_cells_active": 0.84,
+          "mean_active_gene_positions": 3.98,
+          "alpha0": {
+            "mean_delta_s": 1.930763433792837e-06,
+            "ci95": [
+              1.3780453066730702e-06,
+              2.572272771846795e-06
+            ],
+            "pct_of_span": 0.0009740382844456619,
+            "ci95_pct_of_span": [
+              0.0006952011121131754,
+              0.0012976691571655115
+            ],
+            "predicted_sign": -1,
+            "frac_cells_predicted_sign": 0.02,
+            "gap_share_mean": -7.927839226045674e-06,
+            "gap_share_ci95": [
+              -1.0765137796928193e-05,
+              -5.471639165223224e-06
+            ],
+            "edit_norm_gene_mean": 0.007886812149005855,
+            "z_vs_null": -0.14115208066471457,
+            "p_directional_vs_null": 0.5714285714285714,
+            "p_size_vs_null": 0.8571428571428571,
+            "n_null_bigger_in_predicted_direction": 11,
+            "gap_z_vs_null": -0.5440082025321465,
+            "gap_p_directional_vs_null": 0.38095238095238093,
+            "ds_per_unit_edit": 0.00024480910630491086,
+            "gap_per_unit_edit": -0.0010052019848152452,
+            "ds_per_unit_edit_p_dir_vs_null": 0.6190476190476191,
+            "gap_per_unit_edit_p_dir_vs_null": 0.38095238095238093,
+            "gap_per_unit_edit_z_vs_null": -0.4713341729480633,
+            "edit_size_ratio_to_null_mean": 0.025480121132635248,
+            "readouts_agree_in_sign": false
+          },
+          "alpha2": {
+            "mean_delta_s": -1.6013420202343198e-06,
+            "ci95": [
+              -2.127158627531989e-06,
+              -1.1333472395020362e-06
+            ],
+            "pct_of_span": -0.0008078506185171229,
+            "ci95_pct_of_span": [
+              -0.0010731164181180352,
+              -0.0005717549760496638
+            ],
+            "predicted_sign": 1,
+            "frac_cells_predicted_sign": 0.02,
+            "gap_share_mean": 8.251753034148133e-06,
+            "gap_share_ci95": [
+              5.62539531335528e-06,
+              1.1424049976049233e-05
+            ],
+            "edit_norm_gene_mean": 0.007886812149005855,
+            "z_vs_null": 0.07995991812496911,
+            "p_directional_vs_null": 0.5714285714285714,
+            "p_size_vs_null": 0.8571428571428571,
+            "n_null_bigger_in_predicted_direction": 11,
+            "gap_z_vs_null": 0.5325055107220601,
+            "gap_p_directional_vs_null": 0.38095238095238093,
+            "ds_per_unit_edit": -0.00020304046679191814,
+            "gap_per_unit_edit": 0.00104627229332301,
+            "ds_per_unit_edit_p_dir_vs_null": 0.6666666666666666,
+            "gap_per_unit_edit_p_dir_vs_null": 0.3333333333333333,
+            "gap_per_unit_edit_z_vs_null": 0.45272802325250555,
+            "edit_size_ratio_to_null_mean": 0.025480121132635248,
+            "readouts_agree_in_sign": false
+          },
+          "alpha5": {
+            "mean_delta_s": -4.826553260091071e-06,
+            "ci95": [
+              -6.5813444959163526e-06,
+              -3.245136171301955e-06
+            ],
+            "pct_of_span": -0.0024349164558236337,
+            "ci95_pct_of_span": [
+              -0.0033201796708752476,
+              -0.0016371176363528905
+            ],
+            "predicted_sign": 1,
+            "frac_cells_predicted_sign": 0.02,
+            "gap_share_mean": 3.402223223780767e-05,
+            "gap_share_ci95": [
+              2.3081165320900536e-05,
+              4.757272493050052e-05
+            ],
+            "edit_norm_gene_mean": 0.03154724859602342,
+            "z_vs_null": -0.003846784681246297,
+            "p_directional_vs_null": 0.5714285714285714,
+            "p_size_vs_null": 0.8571428571428571,
+            "n_null_bigger_in_predicted_direction": 11,
+            "gap_z_vs_null": 0.4931651705707241,
+            "gap_p_directional_vs_null": 0.38095238095238093,
+            "ds_per_unit_edit": -0.00015299442819553734,
+            "gap_per_unit_edit": 0.001078453232910341,
+            "ds_per_unit_edit_p_dir_vs_null": 0.5714285714285714,
+            "gap_per_unit_edit_p_dir_vs_null": 0.3333333333333333,
+            "gap_per_unit_edit_z_vs_null": 0.41971201888697063,
+            "edit_size_ratio_to_null_mean": 0.025480121132635248,
+            "readouts_agree_in_sign": false
+          },
+          "ratio_a5_over_a2": 3.0140677001561573,
+          "ratio_a0_over_a2": -1.2057158367144538,
+          "top_up_genes_a5": [
+            "NALF1",
+            "GPR182",
+            "RPL10",
+            "HSDL2",
+            "EZH2",
+            "KCNIP4",
+            "CCL21",
+            "TRIAP1",
+            "DYDC2",
+            "PPP6C"
+          ],
+          "top_down_genes_a5": [
+            "PTMA",
+            "CXCL2",
+            "COX4I1",
+            "TSC22D3",
+            "TPM3"
+          ]
+        }
+      ],
+      "controls": {
+        "pc_full": {
+          "mean_delta_s": 0.17697600132833283,
+          "ci95": [
+            0.17328337943346594,
+            0.1805425716990522
+          ],
+          "pct_of_span": 89.28147162144688,
+          "frac_cells_toward_late": 1.0,
+          "gap_share_mean": 0.8472731217913282,
+          "gap_share_ci95": [
+            0.8070882531192293,
+            0.8896452491846196
+          ],
+          "edit_norm_gene_mean": 24.854563918902645,
+          "top_up_genes": [
+            "AHSP",
+            "HBM",
+            "ALAS2",
+            "LGALS3",
+            "SLC4A1",
+            "GYPA",
+            "SELENBP1",
+            "HBZ",
+            "MYL4",
+            "CTSE"
+          ]
+        },
+        "pc_matched": {
+          "mean_delta_s": 0.007728226858435168,
+          "ci95": [
+            0.007476713268500719,
+            0.00799209138404826
+          ],
+          "pct_of_span": 3.898762893085098,
+          "frac_cells_toward_late": 1.0,
+          "gap_share_mean": 0.04427794641265332,
+          "gap_share_ci95": [
+            0.0418865560174964,
+            0.046839423212373534
+          ],
+          "edit_norm_gene_mean": 1.430396524210157,
+          "top_up_genes": [
+            "AHSP",
+            "HBM",
+            "ALAS2",
+            "GYPA",
+            "SLC4A1",
+            "KLF1",
+            "HBG2",
+            "HBZ",
+            "HBG1",
+            "MYL4"
+          ]
+        }
+      },
+      "layer_test": {
+        "alpha0": {
+          "n_subsets": 1771,
+          "candidates_mean_directional": 0.0005385439699814398,
+          "p_directional": 0.09203839638622248,
+          "candidates_mean_abs": 0.0006025191349834887,
+          "p_size": 0.08469791078486731
+        },
+        "alpha2": {
+          "n_subsets": 1771,
+          "candidates_mean_directional": 0.00043475474748549736,
+          "p_directional": 0.11575381140598531,
+          "candidates_mean_abs": 0.0007050565552261008,
+          "p_size": 0.048560135516657256
+        },
+        "alpha5": {
+          "n_subsets": 1771,
+          "candidates_mean_directional": 0.0013168580648569874,
+          "p_directional": 0.14003387916431395,
+          "candidates_mean_abs": 0.0032661542247222623,
+          "p_size": 0.0220214568040655
+        }
+      },
+      "rho_vs_ds": {
+        "alpha0": {
+          "spearman": -0.13636363636363635,
+          "p": 0.5349839119305689,
+          "n": 23
+        },
+        "alpha2": {
+          "spearman": 0.1007905138339921,
+          "p": 0.647249508462432,
+          "n": 23
+        },
+        "alpha5": {
+          "spearman": 0.08102766798418974,
+          "p": 0.7132239277979074,
+          "n": 23
+        }
+      },
+      "candidates_vs_matched_control_alpha5": {
+        "mean_abs_ds_candidates": 0.0032661542247222623,
+        "matched_control_ds": 0.007728226858435168,
+        "candidate_edit_norm_mean": 2.796792725064291,
+        "matched_control_edit_norm": 1.430396524210157
+      },
+      "readouts": {
+        "sign_agreement_candidate_units": 0.3333333333333333,
+        "sign_agreement_null_units": 0.6333333333333333,
+        "spearman_ds_vs_gap_null_alpha5": 0.21353383458646616,
+        "null_gap_alpha5_mean": -0.0028836479383976053,
+        "null_gap_alpha5_sd": 0.00591621295408775
+      }
+    },
+    "L11": {
+      "null": {
+        "alpha0": {
+          "mean": 1.996347515535779e-05,
+          "sd": 6.601054519594675e-05,
+          "p2.5": -6.766823407470724e-05,
+          "p97.5": 0.00016615278063584148,
+          "min": -9.029359549978633e-05,
+          "max": 0.00018498676847624517,
+          "mean_abs": 3.9160013260412514e-05,
+          "mean_abs_pct_of_span": 0.019755580340628208
+        },
+        "alpha2": {
+          "mean": -1.8922543583400842e-05,
+          "sd": 6.41593110214482e-05,
+          "p2.5": -0.0001571600735361825,
+          "p97.5": 6.79090446425935e-05,
+          "min": -0.00018243340176688606,
+          "max": 9.059073796133355e-05,
+          "mean_abs": 3.8270235218822e-05,
+          "mean_abs_pct_of_span": 0.019306702004732997
+        },
+        "alpha5": {
+          "mean": -6.947607457249184e-05,
+          "sd": 0.00024667601491918674,
+          "p2.5": -0.000618657202254734,
+          "p97.5": 0.000273071402380632,
+          "min": -0.000713634854501386,
+          "max": 0.0003641298918532243,
+          "mean_abs": 0.0001477706290242025,
+          "mean_abs_pct_of_span": 0.07454784333855066
+        },
+        "edit_norm_gene_alpha5_mean": 0.7373301129743531
+      },
+      "candidates": [
+        {
+          "feature": 2767,
+          "rho": -0.7488002799643666,
+          "rho_by_donor": [
+            -0.8725334379213011,
+            -0.5615475711639634,
+            -0.8123198308078353
+          ],
+          "mean_a_by_stage_sel": [
+            0.1517821035200828,
+            0.09923665047519736,
+            0.06358508064754699,
+            0.0424339295623617
+          ],
+          "frac_cells_active": 1.0,
+          "mean_active_gene_positions": 32.52,
+          "alpha0": {
+            "mean_delta_s": -8.00690104158175e-06,
+            "ci95": [
+              -9.742706072604078e-06,
+              -6.273685450831513e-06
+            ],
+            "pct_of_span": -0.004039349418870999,
+            "ci95_pct_of_span": [
+              -0.004915034406973249,
+              -0.003164970760646434
+            ],
+            "predicted_sign": 1,
+            "frac_cells_predicted_sign": 0.1,
+            "gap_share_mean": 6.927035535803033e-05,
+            "gap_share_ci95": [
+              6.377052865533256e-05,
+              7.495491435339293e-05
+            ],
+            "edit_norm_gene_mean": 0.14144400972328086,
+            "z_vs_null": -0.42372587764442526,
+            "p_directional_vs_null": 0.7619047619047619,
+            "p_size_vs_null": 0.5714285714285714,
+            "n_null_bigger_in_predicted_direction": 15,
+            "gap_z_vs_null": 0.041766477449186504,
+            "gap_p_directional_vs_null": 0.3333333333333333,
+            "ds_per_unit_edit": -5.660827246941275e-05,
+            "gap_per_unit_edit": 0.0004897369319036551,
+            "ds_per_unit_edit_p_dir_vs_null": 0.7619047619047619,
+            "gap_per_unit_edit_p_dir_vs_null": 0.42857142857142855,
+            "gap_per_unit_edit_z_vs_null": 0.30989422240128484,
+            "edit_size_ratio_to_null_mean": 0.7673307097289312,
+            "readouts_agree_in_sign": false
+          },
+          "alpha2": {
+            "mean_delta_s": 8.145246126585181e-06,
+            "ci95": [
+              6.3805728439270126e-06,
+              9.918115435959828e-06
+            ],
+            "pct_of_span": 0.0041091422308228605,
+            "ci95_pct_of_span": [
+              0.0032188936862505768,
+              0.005003525535595417
+            ],
+            "predicted_sign": -1,
+            "frac_cells_predicted_sign": 0.1,
+            "gap_share_mean": -6.9270243653989e-05,
+            "gap_share_ci95": [
+              -7.49548819909628e-05,
+              -6.377067798850387e-05
+            ],
+            "edit_norm_gene_mean": 0.14144400972328086,
+            "z_vs_null": 0.42188404580805694,
+            "p_directional_vs_null": 0.7619047619047619,
+            "p_size_vs_null": 0.5714285714285714,
+            "n_null_bigger_in_predicted_direction": 15,
+            "gap_z_vs_null": -0.0417664062936718,
+            "gap_p_directional_vs_null": 0.3333333333333333,
+            "ds_per_unit_edit": 5.758636327208505e-05,
+            "gap_per_unit_edit": -0.000489736142163308,
+            "ds_per_unit_edit_p_dir_vs_null": 0.7619047619047619,
+            "gap_per_unit_edit_p_dir_vs_null": 0.42857142857142855,
+            "gap_per_unit_edit_z_vs_null": -0.30989470468718977,
+            "edit_size_ratio_to_null_mean": 0.7673307097289312,
+            "readouts_agree_in_sign": false
+          },
+          "alpha5": {
+            "mean_delta_s": 3.340912887857428e-05,
+            "ci95": [
+              2.6132585837752577e-05,
+              4.072371885619108e-05
+            ],
+            "pct_of_span": 0.016854354090280597,
+            "ci95_pct_of_span": [
+              0.013183458227987473,
+              0.020544444004209305
+            ],
+            "predicted_sign": -1,
+            "frac_cells_predicted_sign": 0.1,
+            "gap_share_mean": -0.00027708105663188997,
+            "gap_share_ci95": [
+              -0.0002998196194963888,
+              -0.00025508229088180357
+            ],
+            "edit_norm_gene_mean": 0.5657760388931234,
+            "z_vs_null": 0.41708636927985165,
+            "p_directional_vs_null": 0.7619047619047619,
+            "p_size_vs_null": 0.5714285714285714,
+            "n_null_bigger_in_predicted_direction": 15,
+            "gap_z_vs_null": -0.041766420996083325,
+            "gap_p_directional_vs_null": 0.3333333333333333,
+            "ds_per_unit_edit": 5.905009505870105e-05,
+            "gap_per_unit_edit": -0.0004897362871251451,
+            "ds_per_unit_edit_p_dir_vs_null": 0.7619047619047619,
+            "gap_per_unit_edit_p_dir_vs_null": 0.42857142857142855,
+            "gap_per_unit_edit_z_vs_null": -0.3098945995021455,
+            "edit_size_ratio_to_null_mean": 0.7673307097289312,
+            "readouts_agree_in_sign": false
+          },
+          "ratio_a5_over_a2": 4.101672111482375,
+          "ratio_a0_over_a2": -0.9830152357763765,
+          "top_up_genes_a5": [
+            "CNBP",
+            "DARS1",
+            "MAGED1",
+            "ATP5MF",
+            "MIER3",
+            "ASH1L",
+            "DERA",
+            "FAM32A",
+            "CUL9",
+            "CDON"
+          ],
+          "top_down_genes_a5": [
+            "GPR141",
+            "SYBU",
+            "SIVA1",
+            "TMEM132A",
+            "ARMC3"
+          ]
+        },
+        {
+          "feature": 4372,
+          "rho": 0.7485691948939452,
+          "rho_by_donor": [
+            0.8688199352130713,
+            0.7164862140746423,
+            0.6604014353941219
+          ],
+          "mean_a_by_stage_sel": [
+            0.023654573771636933,
+            0.03741619038499064,
+            0.3532347494344178,
+            0.49369944946633443
+          ],
+          "frac_cells_active": 0.78,
+          "mean_active_gene_positions": 9.6,
+          "alpha0": {
+            "mean_delta_s": -5.504009747152594e-06,
+            "ci95": [
+              -7.025399963296097e-06,
+              -4.132747085792032e-06
+            ],
+            "pct_of_span": -0.00277668207189796,
+            "ci95_pct_of_span": [
+              -0.003544198324882806,
+              -0.0020849026923950927
+            ],
+            "predicted_sign": -1,
+            "frac_cells_predicted_sign": 0.78,
+            "gap_share_mean": -5.711644699015134e-05,
+            "gap_share_ci95": [
+              -7.027953820031921e-05,
+              -4.4524043886161255e-05
+            ],
+            "edit_norm_gene_mean": 0.05351224326935796,
+            "z_vs_null": -0.3858093404154184,
+            "p_directional_vs_null": 0.3333333333333333,
+            "p_size_vs_null": 0.6666666666666666,
+            "n_null_bigger_in_predicted_direction": 6,
+            "gap_z_vs_null": -0.30269853220704385,
+            "gap_p_directional_vs_null": 0.2857142857142857,
+            "ds_per_unit_edit": -0.00010285514885720154,
+            "gap_per_unit_edit": -0.0010673528803988154,
+            "ds_per_unit_edit_p_dir_vs_null": 0.2857142857142857,
+            "gap_per_unit_edit_p_dir_vs_null": 0.19047619047619047,
+            "gap_per_unit_edit_z_vs_null": -1.1656653672034247,
+            "edit_size_ratio_to_null_mean": 0.29030276847634623,
+            "readouts_agree_in_sign": true
+          },
+          "alpha2": {
+            "mean_delta_s": 5.539684893505203e-06,
+            "ci95": [
+              4.1626948379488994e-06,
+              7.070525815416229e-06
+            ],
+            "pct_of_span": 0.0027946795944025072,
+            "ci95_pct_of_span": [
+              0.002100010839060464,
+              0.0035669635724599764
+            ],
+            "predicted_sign": 1,
+            "frac_cells_predicted_sign": 0.78,
+            "gap_share_mean": 5.711637381490421e-05,
+            "gap_share_ci95": [
+              4.452405169838785e-05,
+              7.027951866525758e-05
+            ],
+            "edit_norm_gene_mean": 0.05351224326935796,
+            "z_vs_null": 0.3812732413652076,
+            "p_directional_vs_null": 0.3333333333333333,
+            "p_size_vs_null": 0.6666666666666666,
+            "n_null_bigger_in_predicted_direction": 6,
+            "gap_z_vs_null": 0.3026980772895527,
+            "gap_p_directional_vs_null": 0.2857142857142857,
+            "ds_per_unit_edit": 0.0001035218214572089,
+            "gap_per_unit_edit": 0.001067351512950122,
+            "ds_per_unit_edit_p_dir_vs_null": 0.2857142857142857,
+            "gap_per_unit_edit_p_dir_vs_null": 0.19047619047619047,
+            "gap_per_unit_edit_z_vs_null": 1.1656631445250043,
+            "edit_size_ratio_to_null_mean": 0.29030276847634623,
+            "readouts_agree_in_sign": true
+          },
+          "alpha5": {
+            "mean_delta_s": 2.2372970249961986e-05,
+            "ci95": [
+              1.681485299099117e-05,
+              2.8546414958998062e-05
+            ],
+            "pct_of_span": 0.011286794217672664,
+            "ci95_pct_of_span": [
+              0.008482815799125173,
+              0.014401195178590611
+            ],
+            "predicted_sign": 1,
+            "frac_cells_predicted_sign": 0.78,
+            "gap_share_mean": 0.00022846569911514651,
+            "gap_share_ci95": [
+              0.00017809623413079227,
+              0.00028111809373465536
+            ],
+            "edit_norm_gene_mean": 0.21404897307743184,
+            "z_vs_null": 0.37234688120182413,
+            "p_directional_vs_null": 0.3333333333333333,
+            "p_size_vs_null": 0.6666666666666666,
+            "n_null_bigger_in_predicted_direction": 6,
+            "gap_z_vs_null": 0.3026982876801525,
+            "gap_p_directional_vs_null": 0.2857142857142857,
+            "ds_per_unit_edit": 0.00010452267034174746,
+            "gap_per_unit_edit": 0.0010673524653281071,
+            "ds_per_unit_edit_p_dir_vs_null": 0.2857142857142857,
+            "gap_per_unit_edit_p_dir_vs_null": 0.19047619047619047,
+            "gap_per_unit_edit_z_vs_null": 1.165664178019571,
+            "edit_size_ratio_to_null_mean": 0.29030276847634623,
+            "readouts_agree_in_sign": true
+          },
+          "ratio_a5_over_a2": 4.038671996703701,
+          "ratio_a0_over_a2": -0.9935600766039174,
+          "top_up_genes_a5": [
+            "PLEKHH1",
+            "ABCA13",
+            "INAVA",
+            "AKAP12",
+            "LCOR",
+            "ELF3",
+            "NDUFS8",
+            "NIM1K",
+            "SNX11",
+            "TMEM63A"
+          ],
+          "top_down_genes_a5": [
+            "RPL30",
+            "CCNDBP1",
+            "CLU",
+            "MS4A7",
+            "DGKB"
+          ]
+        },
+        {
+          "feature": 2835,
+          "rho": -0.7466578831077969,
+          "rho_by_donor": [
+            -0.8442797020767092,
+            -0.5901887899485901,
+            -0.8055051572980911
+          ],
+          "mean_a_by_stage_sel": [
+            0.29623609379326044,
+            0.024280610592621897,
+            0.00020040914808448993,
+            5.4364328065680135e-05
+          ],
+          "frac_cells_active": 0.84,
+          "mean_active_gene_positions": 50.22,
+          "alpha0": {
+            "mean_delta_s": 4.4377960982813215e-05,
+            "ci95": [
+              3.351025632331506e-05,
+              5.588171020791205e-05
+            ],
+            "pct_of_span": 0.022387948842589208,
+            "ci95_pct_of_span": [
+              0.01690537121700968,
+              0.028191400453383822
+            ],
+            "predicted_sign": 1,
+            "frac_cells_predicted_sign": 0.84,
+            "gap_share_mean": 0.00040560675772258545,
+            "gap_share_ci95": [
+              0.0003016876975328169,
+              0.0005159908987604841
+            ],
+            "edit_norm_gene_mean": 0.13993467537844195,
+            "z_vs_null": 0.36985735771433303,
+            "p_directional_vs_null": 0.23809523809523808,
+            "p_size_vs_null": 0.2857142857142857,
+            "n_null_bigger_in_predicted_direction": 4,
+            "gap_z_vs_null": 0.9584454339202699,
+            "gap_p_directional_vs_null": 0.09523809523809523,
+            "ds_per_unit_edit": 0.0003171334114492825,
+            "gap_per_unit_edit": 0.0028985435999022754,
+            "ds_per_unit_edit_p_dir_vs_null": 0.2857142857142857,
+            "gap_per_unit_edit_p_dir_vs_null": 0.047619047619047616,
+            "gap_per_unit_edit_z_vs_null": 2.592574226076428,
+            "edit_size_ratio_to_null_mean": 0.7591426033799292,
+            "readouts_agree_in_sign": true
+          },
+          "alpha2": {
+            "mean_delta_s": -4.4106382397162134e-05,
+            "ci95": [
+              -5.551091288301008e-05,
+              -3.331107730626082e-05
+            ],
+            "pct_of_span": -0.022250941928624552,
+            "ci95_pct_of_span": [
+              -0.02800433932310591,
+              -0.01680488869042279
+            ],
+            "predicted_sign": -1,
+            "frac_cells_predicted_sign": 0.84,
+            "gap_share_mean": -0.00040560648496880945,
+            "gap_share_ci95": [
+              -0.0005159904334852862,
+              -0.00030168725861718114
+            ],
+            "edit_norm_gene_mean": 0.13993467537844195,
+            "z_vs_null": -0.39252040604585725,
+            "p_directional_vs_null": 0.23809523809523808,
+            "p_size_vs_null": 0.2857142857142857,
+            "n_null_bigger_in_predicted_direction": 4,
+            "gap_z_vs_null": -0.9584448647811563,
+            "gap_p_directional_vs_null": 0.09523809523809523,
+            "ds_per_unit_edit": -0.0003151926588451362,
+            "gap_per_unit_edit": -0.002898541650751536,
+            "ds_per_unit_edit_p_dir_vs_null": 0.2857142857142857,
+            "gap_per_unit_edit_p_dir_vs_null": 0.047619047619047616,
+            "gap_per_unit_edit_z_vs_null": -2.5925740797054235,
+            "edit_size_ratio_to_null_mean": 0.7591426033799292,
+            "readouts_agree_in_sign": true
+          },
+          "alpha5": {
+            "mean_delta_s": -0.0001747978137387518,
+            "ci95": [
+              -0.00021975532295165178,
+              -0.00013205588683854084
+            ],
+            "pct_of_span": -0.08818261193422537,
+            "ci95_pct_of_span": [
+              -0.11086293329325399,
+              -0.0666200152830137
+            ],
+            "predicted_sign": -1,
+            "frac_cells_predicted_sign": 0.84,
+            "gap_share_mean": -0.0016224262621595891,
+            "gap_share_ci95": [
+              -0.0020639624167446296,
+              -0.0012067497099910345
+            ],
+            "edit_norm_gene_mean": 0.5597387015137678,
+            "z_vs_null": -0.42696384243423224,
+            "p_directional_vs_null": 0.23809523809523808,
+            "p_size_vs_null": 0.2857142857142857,
+            "n_null_bigger_in_predicted_direction": 4,
+            "gap_z_vs_null": -0.9584451238517214,
+            "gap_p_directional_vs_null": 0.09523809523809523,
+            "ds_per_unit_edit": -0.000312284666516761,
+            "gap_per_unit_edit": -0.002898542226527966,
+            "ds_per_unit_edit_p_dir_vs_null": 0.2857142857142857,
+            "gap_per_unit_edit_p_dir_vs_null": 0.047619047619047616,
+            "gap_per_unit_edit_z_vs_null": -2.5925742101744897,
+            "edit_size_ratio_to_null_mean": 0.7591426033799292,
+            "readouts_agree_in_sign": true
+          },
+          "ratio_a5_over_a2": 3.9630956845374503,
+          "ratio_a0_over_a2": -1.006157353446166,
+          "top_up_genes_a5": [
+            "HLA-E",
+            "ASIC2",
+            "KMT2C",
+            "INTS7",
+            "PPA2",
+            "EGFL7",
+            "ZNF570",
+            "INAFM2",
+            "MT-CO3",
+            "EPHA7"
+          ],
+          "top_down_genes_a5": [
+            "UGT2B17",
+            "S100A12",
+            "SLC25A5",
+            "KIR2DL1",
+            "UTS2"
+          ]
+        }
+      ],
+      "controls": {
+        "pc_full": {
+          "mean_delta_s": 0.21696591970222776,
+          "ci95": [
+            0.2046923745424528,
+            0.22908120496015927
+          ],
+          "pct_of_span": 109.45572539396267,
+          "frac_cells_toward_late": 1.0,
+          "gap_share_mean": 0.9997987907310708,
+          "gap_share_ci95": [
+            0.9997665827226649,
+            0.999820431192008
+          ],
+          "edit_norm_gene_mean": 45.01612937357817,
+          "top_up_genes": [
+            "AHSP",
+            "ALAS2",
+            "HBM",
+            "LGALS3",
+            "SELENBP1",
+            "SLC4A1",
+            "MYL4",
+            "GYPA",
+            "KLF1",
+            "CTSE"
+          ]
+        },
+        "pc_matched": {
+          "mean_delta_s": 0.0026944491281758686,
+          "ci95": [
+            0.0025759000412046667,
+            0.0028133225612729015
+          ],
+          "pct_of_span": 1.3593051123714883,
+          "frac_cells_toward_late": 1.0,
+          "gap_share_mean": 0.013967673235401035,
+          "gap_share_ci95": [
+            0.013967223414457363,
+            0.013967975558192595
+          ],
+          "edit_norm_gene_mean": 0.6288970577175961,
+          "top_up_genes": [
+            "AHSP",
+            "ALAS2",
+            "HBM",
+            "LGALS3",
+            "SELENBP1",
+            "SLC4A1",
+            "MYL4",
+            "GYPA",
+            "KLF1",
+            "CTSE"
+          ]
+        }
+      },
+      "layer_test": {
+        "alpha0": {
+          "n_subsets": 1771,
+          "candidates_mean_directional": 1.3958356562794687e-05,
+          "p_directional": 0.4652738565782044,
+          "candidates_mean_abs": 1.9296290590515853e-05,
+          "p_size": 0.6103896103896104
+        },
+        "alpha2": {
+          "n_subsets": 1771,
+          "candidates_mean_directional": 1.3833607054694052e-05,
+          "p_directional": 0.4601919819311124,
+          "candidates_mean_abs": 1.9263771139084173e-05,
+          "p_size": 0.611518915866742
+        },
+        "alpha5": {
+          "n_subsets": 1771,
+          "candidates_mean_directional": 5.45872183700465e-05,
+          "p_directional": 0.45736871823828346,
+          "candidates_mean_abs": 7.68599709557627e-05,
+          "p_size": 0.6120835686053078
+        }
+      },
+      "rho_vs_ds": {
+        "alpha0": {
+          "spearman": -0.291501976284585,
+          "p": 0.17715708176914347,
+          "n": 23
+        },
+        "alpha2": {
+          "spearman": 0.291501976284585,
+          "p": 0.17715708176914347,
+          "n": 23
+        },
+        "alpha5": {
+          "spearman": 0.2875494071146245,
+          "p": 0.1833737659091204,
+          "n": 23
+        }
+      },
+      "candidates_vs_matched_control_alpha5": {
+        "mean_abs_ds_candidates": 7.68599709557627e-05,
+        "matched_control_ds": 0.0026944491281758686,
+        "candidate_edit_norm_mean": 0.44652123782810776,
+        "matched_control_edit_norm": 0.6288970577175961
+      },
+      "readouts": {
+        "sign_agreement_candidate_units": 0.6666666666666666,
+        "sign_agreement_null_units": 0.7,
+        "spearman_ds_vs_gap_null_alpha5": 0.37293233082706767,
+        "null_gap_alpha5_mean": -0.0002157834023239103,
+        "null_gap_alpha5_sd": 0.0014676300445692464
+      }
+    }
+  },
+  "pooled": {
+    "alpha0": {
+      "mean_within_layer_spearman_rho_vs_ds": -0.18359683794466403,
+      "p_two_sided": 0.054999450005499946,
+      "p_in_predicted_direction": 0.027119728802711972,
+      "predicted_direction": "negative",
+      "candidate_rank_sum_over_layers": 64.66666666666666,
+      "candidate_rank_expected": 60.0,
+      "candidate_rank_p_one_sided": 0.2911970880291197,
+      "n_permutations": 100000
+    },
+    "alpha2": {
+      "mean_within_layer_spearman_rho_vs_ds": 0.19051383399209487,
+      "p_two_sided": 0.044699553004469955,
+      "p_in_predicted_direction": 0.022259777402225976,
+      "predicted_direction": "positive",
+      "candidate_rank_sum_over_layers": 63.0,
+      "candidate_rank_expected": 60.0,
+      "candidate_rank_p_one_sided": 0.36317636823631766,
+      "n_permutations": 100000
+    },
+    "alpha5": {
+      "mean_within_layer_spearman_rho_vs_ds": 0.1766798418972332,
+      "p_two_sided": 0.06269937300626993,
+      "p_in_predicted_direction": 0.03100968990310097,
+      "predicted_direction": "positive",
+      "candidate_rank_sum_over_layers": 66.0,
+      "candidate_rank_expected": 60.0,
+      "candidate_rank_p_one_sided": 0.23697763022369775,
+      "n_permutations": 100000
+    }
+  }
+}

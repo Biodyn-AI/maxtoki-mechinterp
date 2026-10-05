@@ -1,0 +1,745 @@
+{
+ "217M_K562": {
+  "n_trrust_edges_in_gene_set": 66,
+  "n_tfs_evaluated": 8,
+  "tfs": [
+   "NFE2L2",
+   "PTTG1",
+   "E2F3",
+   "ATM",
+   "STAT3",
+   "BRCA1",
+   "CEBPB",
+   "EP300"
+  ],
+  "n_positive_pairs": 45,
+  "n_negative_pairs": 11947,
+  "n_candidate_genes_with_any_positive": 35,
+  "attention_exact_zero_fraction": 0.011174116077384923,
+  "pooled_auroc": {
+   "attention": 0.48289389246951814,
+   "variance": 0.7252141402304623,
+   "mean_expr": 0.5386475451763809,
+   "one_minus_dropout": 0.5042474633334263,
+   "spearman_abs": 0.5432130799921877,
+   "gene3_logreg_oof": 0.7448955107279372
+  },
+  "pooled_auroc_sklearn_check": {
+   "attention": 0.48289389246951814,
+   "variance": 0.7252141402304624,
+   "mean_expr": 0.5386475451763809,
+   "one_minus_dropout": 0.5042474633334263,
+   "spearman_abs": 0.5432130799921877,
+   "gene3_logreg_oof": 0.7448955107279374
+  },
+  "pooled_ci95": {
+   "attention": [
+    0.39858300400668895,
+    0.559688255799725
+   ],
+   "variance": [
+    0.6186903460834479,
+    0.8356304263937553
+   ],
+   "mean_expr": [
+    0.42898327169089406,
+    0.6329085124965493
+   ],
+   "one_minus_dropout": [
+    0.4041801001214233,
+    0.5810737196185906
+   ],
+   "spearman_abs": [
+    0.4697514487630718,
+    0.6082828403980843
+   ],
+   "gene3_logreg_oof": [
+    0.6724110195506586,
+    0.8405329633893691
+   ]
+  },
+  "gene3_fold_mean_auroc": 0.763141469649282,
+  "gene3_n_valid_folds": 5,
+  "gaps": {
+   "variance_minus_attention": {
+    "point": 0.24232024776094413,
+    "ci95": [
+     0.1147826572216798,
+     0.34952990221055674
+    ],
+    "frac_boot_gt0": 0.999
+   },
+   "variance_minus_attention_per_tf_mean": {
+    "point": 0.24185829516788393,
+    "ci95": [
+     0.07361416764253792,
+     0.3763979042835375
+    ]
+   },
+   "gene3_logreg_oof_minus_attention": {
+    "point": 0.2620016182584191,
+    "ci95": [
+     0.16640811733303573,
+     0.371378632788288
+    ],
+    "frac_boot_gt0": 1.0
+   },
+   "gene3_logreg_oof_minus_attention_per_tf_mean": {
+    "point": 0.28862673159206387,
+    "ci95": [
+     0.16147474990897506,
+     0.414348418769505
+    ]
+   },
+   "mean_expr_minus_attention": {
+    "point": 0.05575365270686278,
+    "ci95": [
+     -0.08276150970938324,
+     0.16909374031202326
+    ],
+    "frac_boot_gt0": 0.8295
+   },
+   "mean_expr_minus_attention_per_tf_mean": {
+    "point": 0.05734170754289469,
+    "ci95": [
+     -0.12319177005511699,
+     0.1957618560875356
+    ]
+   },
+   "one_minus_dropout_minus_attention": {
+    "point": 0.021353570863908156,
+    "ci95": [
+     -0.11624946234675662,
+     0.12853527471924456
+    ],
+    "frac_boot_gt0": 0.645
+   },
+   "one_minus_dropout_minus_attention_per_tf_mean": {
+    "point": 0.020459066095000367,
+    "ci95": [
+     -0.15445641279977496,
+     0.15312061149996423
+    ]
+   },
+   "spearman_abs_minus_attention": {
+    "point": 0.06031918752266957,
+    "ci95": [
+     -0.0390771627516526,
+     0.14456633979874517
+    ],
+    "frac_boot_gt0": 0.899
+   },
+   "spearman_abs_minus_attention_per_tf_mean": {
+    "point": 0.04656678221305244,
+    "ci95": [
+     -0.10109046163763329,
+     0.17082352532146527
+    ]
+   }
+  },
+  "per_tf_mean_auroc": {
+   "attention": 0.4881295566772196,
+   "variance": 0.7299878518451035,
+   "mean_expr": 0.5454712642201143,
+   "one_minus_dropout": 0.50858862277222,
+   "spearman_abs": 0.534696338890272,
+   "gene3_logreg_oof": 0.7767562882692834
+  },
+  "per_tf_mean_ci95": {
+   "attention": [
+    0.3894155519023319,
+    0.5819482362265755
+   ],
+   "variance": [
+    0.5937108592736972,
+    0.8509183602388567
+   ],
+   "mean_expr": [
+    0.40505755516463643,
+    0.6607398290433306
+   ],
+   "one_minus_dropout": [
+    0.37620214407764685,
+    0.6089548181639285
+   ],
+   "spearman_abs": [
+    0.43559031597028003,
+    0.6220592295531372
+   ],
+   "gene3_logreg_oof": [
+    0.6815495639866072,
+    0.8726266332294716
+   ]
+  },
+  "n_tfs_variance_gt_attention": 7,
+  "n_tfs_gene3_gt_attention": 7
+ },
+ "217M_RPE1": {
+  "n_trrust_edges_in_gene_set": 173,
+  "n_tfs_evaluated": 16,
+  "tfs": [
+   "JUN",
+   "PARP1",
+   "PTTG1",
+   "HDAC2",
+   "HIPK2",
+   "KLF6",
+   "FOXM1",
+   "TFDP1",
+   "HIF1A",
+   "YY1",
+   "BRCA1",
+   "NFIC",
+   "DNMT1",
+   "JUND",
+   "CEBPB",
+   "ATF4"
+  ],
+  "n_positive_pairs": 138,
+  "n_negative_pairs": 23846,
+  "n_candidate_genes_with_any_positive": 87,
+  "attention_exact_zero_fraction": 0.0019179452968645764,
+  "pooled_auroc": {
+   "attention": 0.6045142320226283,
+   "variance": 0.6863779906574432,
+   "mean_expr": 0.4694555766652445,
+   "one_minus_dropout": 0.4323352927662647,
+   "spearman_abs": 0.5962717291023196,
+   "gene3_logreg_oof": 0.7494059101456568
+  },
+  "pooled_auroc_sklearn_check": {
+   "attention": 0.6045142320226282,
+   "variance": 0.6863779906574431,
+   "mean_expr": 0.4694555766652445,
+   "one_minus_dropout": 0.43233529276626476,
+   "spearman_abs": 0.5962717291023196,
+   "gene3_logreg_oof": 0.7494059101456568
+  },
+  "pooled_ci95": {
+   "attention": [
+    0.548686772291897,
+    0.6546781554476183
+   ],
+   "variance": [
+    0.6334862507124791,
+    0.7310880602891738
+   ],
+   "mean_expr": [
+    0.41395511806739044,
+    0.5160525943082128
+   ],
+   "one_minus_dropout": [
+    0.379515389154021,
+    0.4854844221114717
+   ],
+   "spearman_abs": [
+    0.5419170345342701,
+    0.6498290265293041
+   ],
+   "gene3_logreg_oof": [
+    0.6908937440401329,
+    0.8011295470429389
+   ]
+  },
+  "gene3_fold_mean_auroc": 0.7530585420724664,
+  "gene3_n_valid_folds": 5,
+  "gaps": {
+   "variance_minus_attention": {
+    "point": 0.08186375863481488,
+    "ci95": [
+     0.02809919799912908,
+     0.1450571705462711
+    ],
+    "frac_boot_gt0": 0.9995
+   },
+   "variance_minus_attention_per_tf_mean": {
+    "point": 0.09514842443505522,
+    "ci95": [
+     0.02481825640143851,
+     0.16255662650425962
+    ]
+   },
+   "gene3_logreg_oof_minus_attention": {
+    "point": 0.1448916781230285,
+    "ci95": [
+     0.05541467974500244,
+     0.23765289672911966
+    ],
+    "frac_boot_gt0": 1.0
+   },
+   "gene3_logreg_oof_minus_attention_per_tf_mean": {
+    "point": 0.17897405486518025,
+    "ci95": [
+     0.11003046012643206,
+     0.2427764807853908
+    ]
+   },
+   "mean_expr_minus_attention": {
+    "point": -0.13505865535738382,
+    "ci95": [
+     -0.1898125280744487,
+     -0.08601406277614666
+    ],
+    "frac_boot_gt0": 0.0
+   },
+   "mean_expr_minus_attention_per_tf_mean": {
+    "point": -0.14943362985749797,
+    "ci95": [
+     -0.19950090373839932,
+     -0.10037905020006006
+    ]
+   },
+   "one_minus_dropout_minus_attention": {
+    "point": -0.17217893925636363,
+    "ci95": [
+     -0.2289771484388156,
+     -0.12083746512084315
+    ],
+    "frac_boot_gt0": 0.0
+   },
+   "one_minus_dropout_minus_attention_per_tf_mean": {
+    "point": -0.1828037869428102,
+    "ci95": [
+     -0.2345842499026136,
+     -0.13275263302128104
+    ]
+   },
+   "spearman_abs_minus_attention": {
+    "point": -0.008242502920308703,
+    "ci95": [
+     -0.08470025948318516,
+     0.08589234103428094
+    ],
+    "frac_boot_gt0": 0.4205
+   },
+   "spearman_abs_minus_attention_per_tf_mean": {
+    "point": 0.01583923258649056,
+    "ci95": [
+     -0.07798750349371326,
+     0.11305850417272424
+    ]
+   }
+  },
+  "per_tf_mean_auroc": {
+   "attention": 0.5866704658777739,
+   "variance": 0.6818188903128292,
+   "mean_expr": 0.43723683602027597,
+   "one_minus_dropout": 0.40386667893496375,
+   "spearman_abs": 0.6025096984642645,
+   "gene3_logreg_oof": 0.7656445207429542
+  },
+  "per_tf_mean_ci95": {
+   "attention": [
+    0.5412666711679323,
+    0.6377435970782801
+   ],
+   "variance": [
+    0.6236597947640807,
+    0.7335479558516433
+   ],
+   "mean_expr": [
+    0.37913919515926964,
+    0.4932836756502836
+   ],
+   "one_minus_dropout": [
+    0.34981700796619664,
+    0.45825578668942735
+   ],
+   "spearman_abs": [
+    0.5469792443400985,
+    0.6620263634509399
+   ],
+   "gene3_logreg_oof": [
+    0.7207097633398697,
+    0.8099021419855305
+   ]
+  },
+  "n_tfs_variance_gt_attention": 13,
+  "n_tfs_gene3_gt_attention": 15
+ },
+ "217M_Adamson": {
+  "n_trrust_edges_in_gene_set": 281,
+  "n_tfs_evaluated": 32,
+  "tfs": [
+   "JUN",
+   "ATF6",
+   "POU2F1",
+   "ATF3",
+   "CREB1",
+   "CTNNB1",
+   "REST",
+   "APC",
+   "EGR1",
+   "NR3C1",
+   "PTTG1",
+   "SOX4",
+   "MYB",
+   "GATA1",
+   "MYC",
+   "ABL1",
+   "KLF6",
+   "CREM",
+   "SPI1",
+   "ATM",
+   "DDIT3",
+   "CHD8",
+   "YY1",
+   "CREBBP",
+   "STAT3",
+   "BRCA1",
+   "TCF4",
+   "CEBPB",
+   "JUND",
+   "ATF5",
+   "XBP1",
+   "RUNX1"
+  ],
+  "n_positive_pairs": 236,
+  "n_negative_pairs": 47732,
+  "n_candidate_genes_with_any_positive": 130,
+  "attention_exact_zero_fraction": 0.013592394929953303,
+  "pooled_auroc": {
+   "attention": 0.5195066877637431,
+   "variance": 0.5242268094317567,
+   "mean_expr": 0.5893520780572888,
+   "one_minus_dropout": 0.5823862345127527,
+   "spearman_abs": 0.5389432896525373,
+   "gene3_logreg_oof": 0.6521059673572929
+  },
+  "pooled_auroc_sklearn_check": {
+   "attention": 0.5195066877637431,
+   "variance": 0.5242268094317567,
+   "mean_expr": 0.5893520780572887,
+   "one_minus_dropout": 0.5823862345127527,
+   "spearman_abs": 0.5389432896525375,
+   "gene3_logreg_oof": 0.6521059673572929
+  },
+  "pooled_ci95": {
+   "attention": [
+    0.4783996611003761,
+    0.5609634537716687
+   ],
+   "variance": [
+    0.4762650930397033,
+    0.5668272602064914
+   ],
+   "mean_expr": [
+    0.5545728165610888,
+    0.6252526852206891
+   ],
+   "one_minus_dropout": [
+    0.5479905874211215,
+    0.6179652478431931
+   ],
+   "spearman_abs": [
+    0.4948097719582072,
+    0.585215711154113
+   ],
+   "gene3_logreg_oof": [
+    0.6107278127671759,
+    0.6990384762428823
+   ]
+  },
+  "gene3_fold_mean_auroc": 0.6672278470721967,
+  "gene3_n_valid_folds": 5,
+  "gaps": {
+   "variance_minus_attention": {
+    "point": 0.0047201216680136104,
+    "ci95": [
+     -0.05696915317789791,
+     0.060187520599011265
+    ],
+    "frac_boot_gt0": 0.569
+   },
+   "variance_minus_attention_per_tf_mean": {
+    "point": -0.0202129099772691,
+    "ci95": [
+     -0.08966658696464666,
+     0.043560697097444735
+    ]
+   },
+   "gene3_logreg_oof_minus_attention": {
+    "point": 0.13259927959354978,
+    "ci95": [
+     0.06736737437492359,
+     0.1988204652307264
+    ],
+    "frac_boot_gt0": 1.0
+   },
+   "gene3_logreg_oof_minus_attention_per_tf_mean": {
+    "point": 0.1570341654192423,
+    "ci95": [
+     0.09171879536549757,
+     0.2210530173053522
+    ]
+   },
+   "mean_expr_minus_attention": {
+    "point": 0.06984539029354575,
+    "ci95": [
+     0.024052147929820113,
+     0.11291518894007034
+    ],
+    "frac_boot_gt0": 0.9995
+   },
+   "mean_expr_minus_attention_per_tf_mean": {
+    "point": 0.06870441232590019,
+    "ci95": [
+     0.011471040692278894,
+     0.12427445055702235
+    ]
+   },
+   "one_minus_dropout_minus_attention": {
+    "point": 0.06287954674900964,
+    "ci95": [
+     0.018487613349411996,
+     0.10508673682879718
+    ],
+    "frac_boot_gt0": 0.9965
+   },
+   "one_minus_dropout_minus_attention_per_tf_mean": {
+    "point": 0.06126377032074093,
+    "ci95": [
+     0.0061375845793201905,
+     0.11508838745483416
+    ]
+   },
+   "spearman_abs_minus_attention": {
+    "point": 0.019436601888794258,
+    "ci95": [
+     -0.047686914144650976,
+     0.08239085810877048
+    ],
+    "frac_boot_gt0": 0.7415
+   },
+   "spearman_abs_minus_attention_per_tf_mean": {
+    "point": 0.06070751625834869,
+    "ci95": [
+     0.005596303562561503,
+     0.11590816117020203
+    ]
+   }
+  },
+  "per_tf_mean_auroc": {
+   "attention": 0.5226099572765862,
+   "variance": 0.5023970472993171,
+   "mean_expr": 0.5913143696024864,
+   "one_minus_dropout": 0.5838737275973271,
+   "spearman_abs": 0.5833174735349349,
+   "gene3_logreg_oof": 0.6796441226958285
+  },
+  "per_tf_mean_ci95": {
+   "attention": [
+    0.4800031306891506,
+    0.5634300945091761
+   ],
+   "variance": [
+    0.45163904432486024,
+    0.5514972835248837
+   ],
+   "mean_expr": [
+    0.5469244239343665,
+    0.6370145788150539
+   ],
+   "one_minus_dropout": [
+    0.5399592091099163,
+    0.6277813402632901
+   ],
+   "spearman_abs": [
+    0.5337009268028566,
+    0.627918947788823
+   ],
+   "gene3_logreg_oof": [
+    0.6258663763881511,
+    0.728661767727009
+   ]
+  },
+  "n_tfs_variance_gt_attention": 13,
+  "n_tfs_gene3_gt_attention": 26
+ },
+ "1B_K562": {
+  "n_trrust_edges_in_gene_set": 96,
+  "n_tfs_evaluated": 12,
+  "tfs": [
+   "NFE2L2",
+   "PTTG1",
+   "E2F3",
+   "MYC",
+   "ATM",
+   "TFDP1",
+   "CTCF",
+   "STAT3",
+   "BRCA1",
+   "CEBPB",
+   "ATF4",
+   "EP300"
+  ],
+  "n_positive_pairs": 73,
+  "n_negative_pairs": 17915,
+  "n_candidate_genes_with_any_positive": 50,
+  "attention_exact_zero_fraction": 0.044251723371136316,
+  "pooled_auroc": {
+   "attention": 0.5553997377264785,
+   "variance": 0.6292415860283913,
+   "mean_expr": 0.6097255303774675,
+   "one_minus_dropout": 0.587584445574421,
+   "spearman_abs": 0.5800110109000264,
+   "gene3_logreg_oof": 0.6793602972943007
+  },
+  "pooled_auroc_sklearn_check": {
+   "attention": 0.5553997377264785,
+   "variance": 0.6292415860283912,
+   "mean_expr": 0.6097255303774672,
+   "one_minus_dropout": 0.587584445574421,
+   "spearman_abs": 0.5800110109000264,
+   "gene3_logreg_oof": 0.6793602972943007
+  },
+  "pooled_ci95": {
+   "attention": [
+    0.4623459075345027,
+    0.6498339894404982
+   ],
+   "variance": [
+    0.5535517998848342,
+    0.7206705885265228
+   ],
+   "mean_expr": [
+    0.5178025539365665,
+    0.6989143489349016
+   ],
+   "one_minus_dropout": [
+    0.49563173789484916,
+    0.6732780182573367
+   ],
+   "spearman_abs": [
+    0.506841081185924,
+    0.63998855028484
+   ],
+   "gene3_logreg_oof": [
+    0.6109789536357125,
+    0.7684083186379242
+   ]
+  },
+  "gene3_fold_mean_auroc": 0.6834491070140737,
+  "gene3_n_valid_folds": 5,
+  "gaps": {
+   "variance_minus_attention": {
+    "point": 0.07384184830191276,
+    "ci95": [
+     -0.03573716940434603,
+     0.18391257545660128
+    ],
+    "frac_boot_gt0": 0.8995
+   },
+   "variance_minus_attention_per_tf_mean": {
+    "point": 0.06720918491384453,
+    "ci95": [
+     -0.039730704881783874,
+     0.1749786388211316
+    ]
+   },
+   "gene3_logreg_oof_minus_attention": {
+    "point": 0.12396055956782215,
+    "ci95": [
+     0.040813799408217215,
+     0.21314594803335266
+    ],
+    "frac_boot_gt0": 0.999
+   },
+   "gene3_logreg_oof_minus_attention_per_tf_mean": {
+    "point": 0.1368167638697223,
+    "ci95": [
+     0.06436980205278445,
+     0.21925281737126232
+    ]
+   },
+   "mean_expr_minus_attention": {
+    "point": 0.05432579265098891,
+    "ci95": [
+     -0.013365293355496318,
+     0.12200007427830976
+    ],
+    "frac_boot_gt0": 0.9405
+   },
+   "mean_expr_minus_attention_per_tf_mean": {
+    "point": 0.04429401271397593,
+    "ci95": [
+     -0.04469364012731916,
+     0.13218231526668794
+    ]
+   },
+   "one_minus_dropout_minus_attention": {
+    "point": 0.03218470784794247,
+    "ci95": [
+     -0.044825343992950184,
+     0.10120221874446522
+    ],
+    "frac_boot_gt0": 0.7895
+   },
+   "one_minus_dropout_minus_attention_per_tf_mean": {
+    "point": 0.019949069771031946,
+    "ci95": [
+     -0.0673188132897317,
+     0.10716153667196485
+    ]
+   },
+   "spearman_abs_minus_attention": {
+    "point": 0.024611273173547832,
+    "ci95": [
+     -0.09570948304262987,
+     0.1326101400725236
+    ],
+    "frac_boot_gt0": 0.67
+   },
+   "spearman_abs_minus_attention_per_tf_mean": {
+    "point": 0.00197998272946176,
+    "ci95": [
+     -0.10661289200767235,
+     0.1086412222889402
+    ]
+   }
+  },
+  "per_tf_mean_auroc": {
+   "attention": 0.5594896398448767,
+   "variance": 0.6266988247587212,
+   "mean_expr": 0.6037836525588526,
+   "one_minus_dropout": 0.5794387096159086,
+   "spearman_abs": 0.5614696225743384,
+   "gene3_logreg_oof": 0.696306403714599
+  },
+  "per_tf_mean_ci95": {
+   "attention": [
+    0.4706510322805788,
+    0.6536998863193335
+   ],
+   "variance": [
+    0.5282914622729934,
+    0.7266184031299329
+   ],
+   "mean_expr": [
+    0.48117752979656403,
+    0.7198009040064907
+   ],
+   "one_minus_dropout": [
+    0.4659148196555481,
+    0.6914832651553917
+   ],
+   "spearman_abs": [
+    0.5078958629601242,
+    0.6171893418828267
+   ],
+   "gene3_logreg_oof": [
+    0.5981739605190148,
+    0.7905597444830148
+   ]
+  },
+  "n_tfs_variance_gt_attention": 7,
+  "n_tfs_gene3_gt_attention": 10
+ },
+ "_method": {
+  "bootstrap_unit": "TF (evaluated TF row)",
+  "n_reps": 2000,
+  "ci": "percentile",
+  "seed_base": 20261501,
+  "gene3": "logistic regression, StandardScaler, class_weight=balanced; GroupKFold(5) by TF; pooled out-of-fold predictions"
+ }
+}

@@ -1,0 +1,6 @@
+select: 4419 candidate cysteine pairs in 113 proteins, 313 bonded (base rate 0.0708)
+test: 7463 candidate cysteine pairs in 123 proteins, 366 bonded (base rate 0.0490)
+sequence_separation  chosen abs_separation:- test AP 0.1133 (base 0.0490, x2.31) CI [0.098, 0.134]  test max 0.1133 (null max 0.0665)  P@1 0.207
+attention_esm2       chosen L32H13           test AP 0.7179 (base 0.0490, x14.64) CI [0.664, 0.782]  test max 0.7447 (null max 0.0869)  P@1 0.805
+mean_all_heads       no selection           test AP 0.1410 (select AP 0.1680)
+heads with test AP >= 2x base rate: 192 of 661 candidates, in 33 of 33 layers

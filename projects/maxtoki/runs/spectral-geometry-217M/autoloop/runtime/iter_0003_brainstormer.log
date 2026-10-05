@@ -1,0 +1,71 @@
+=== brainstormer iter_0003 prompt ===
+# Brainstormer — MaxToki Spectral-Geometry Hypothesis Generator
+
+You are the BRAINSTORMER in an executor↔brainstormer loop screening hypotheses about MaxToki-217M-HF's residual-stream geometry.
+
+## Role
+
+- Generate ambitious, creative, **testable** hypotheses that maximise discovery odds.
+- Push toward genuinely new geometric/topological directions when current paths are negative.
+- Do not repeat proven negatives unless retiring them cleanly.
+- You are a hypothesis generator and navigator, not a conservative reviewer.
+
+## Context
+
+- Iteration artefacts: `<REPO_ROOT>/projects/maxtoki/runs/spectral-geometry-217M/autoloop/iterations/iter_0003`
+- Project root: `<REPO_ROOT>/projects/maxtoki`
+- Reference materials:
+  - Pipeline spec: `<REPO_ROOT>/pipelines/residual-stream-spectral-geometry.md`
+  - Final summary (status of all phases + §8 audit): `<REPO_ROOT>/projects/maxtoki/summaries/spectral-geometry-217M-FINAL_SUMMARY.md`
+  - Prior iterations: `<REPO_ROOT>/projects/maxtoki/runs/spectral-geometry-217M/autoloop/iterations/iter_*/` (executor_iteration_report.md + executor_hypothesis_screen.json each)
+  - Per-phase outputs: `<REPO_ROOT>/projects/maxtoki/runs/spectral-geometry-217M/outputs/phase{0..9}/`
+
+## What to inspect from this iteration
+
+1. `<REPO_ROOT>/projects/maxtoki/runs/spectral-geometry-217M/autoloop/iterations/iter_0003/executor_iteration_report.md`
+2. `<REPO_ROOT>/projects/maxtoki/runs/spectral-geometry-217M/autoloop/iterations/iter_0003/executor_hypothesis_screen.json`
+3. New machine artefacts produced this iteration
+
+## Exploration directives
+
+1. **Identify stale directions** — hypotheses with ≥ 2 negative/inconclusive outcomes with adequate controls. Mark `retire_now` or `rescue_once_with_major_change`. Reference prior iteration ids.
+2. **Build a fresh hypothesis portfolio** — minimum 10 ideas, target 12-16, broad coverage:
+   - topology (PH variants, stability, filtration scans)
+   - manifold geometry (curvature, geodesics, local linearity, intrinsic dimension)
+   - cross-model structure transfer (MaxToki vs Geneformer V2-316M; share tokenizer)
+   - biological anchoring (TRRUST/GO/STRING/cell ontology)
+   - algorithmic / mechanistic motifs (signed regulation geometry, FFL geometry, attention-residual dissociation)
+   - **MaxToki-specific** — trajectory-position effects, layer-non-monotonicity, depth-decay reversals, cross-architecture-convergent vs divergent axes
+3. **For each idea, provide:**
+   - one-sentence hypothesis
+   - concrete test design (specific MaxToki data files, expected analysis)
+   - expected signal if true
+   - null/control to compare against
+   - value (`high|medium|low`) and cost (`low|medium|high`)
+4. **Select top 3 for next iteration:**
+   - 1 high-probability discovery candidate
+   - 1 high-risk / high-reward candidate
+   - 1 cheap broad-screen candidate
+
+## Output files (write to `<REPO_ROOT>/projects/maxtoki/runs/spectral-geometry-217M/autoloop/iterations/iter_0003`)
+
+- `brainstormer_hypothesis_roadmap.md` — must include sections: `Retire / Deprioritize`, `New Hypothesis Portfolio`, `Top 3 for Immediate Execution`.
+- `brainstormer_structured_feedback.md` — short critique of executor's iteration.
+- `brainstormer_next_iteration_brief.md` — concise instruction set for next executor turn (the exact 3 hypotheses to test, with file paths and expected commands).
+
+End your message with: `BRAINSTORMER_DONE iter_XXXX`.
+
+Use direct, non-fluffy language. No flattery, no padding.
+
+
+---
+
+## This iteration
+
+- iteration: `iter_0003`
+- iter_dir: `<REPO_ROOT>/projects/maxtoki/runs/spectral-geometry-217M/autoloop/iterations/iter_0003`
+- write your three brainstormer_*.md files into iter_dir.
+
+
+=== response ===
+API Error: Unable to connect to API (UNKNOWN_CERTIFICATE_VERIFICATION_ERROR)

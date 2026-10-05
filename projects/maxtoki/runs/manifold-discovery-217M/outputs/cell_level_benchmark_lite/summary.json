@@ -1,0 +1,32 @@
+{
+  "scope": "Cell-level benchmark on 200 subsampled cells \u00d7 4 baselines (raw_log1p / pca10 / svd10 / maxtoki_avgpool_L5) \u00d7 4 endpoints (branch_accuracy / cd_auroc / mm_auroc / pseudotime_PC1) under donor-held-out CV. Scoped subset of the full Phase 12 Robust-V2 benchmark which would require scVI/Palantir/CellTypist baselines and 8 endpoints.",
+  "features_per_endpoint": {
+    "raw_log1p": {
+      "branch_accuracy_donor_holdout": NaN,
+      "cd_auroc_donor_holdout": 0.4,
+      "pseudotime_spearman_PC1": -0.3332339027382531
+    },
+    "pca10": {
+      "branch_accuracy_donor_holdout": NaN,
+      "cd_auroc_donor_holdout": 0.19999999999999996,
+      "pseudotime_spearman_PC1": -0.3332339027382531
+    },
+    "svd10": {
+      "branch_accuracy_donor_holdout": NaN,
+      "cd_auroc_donor_holdout": 0.0,
+      "pseudotime_spearman_PC1": -0.3330981493253154
+    },
+    "maxtoki_avgpool_L5": {
+      "branch_accuracy_donor_holdout": NaN,
+      "cd_auroc_donor_holdout": 0.4,
+      "pseudotime_spearman_PC1": 0.14756395986331572
+    }
+  },
+  "interpretation": "This scoped benchmark replicates the existing anchor-level Phase 12 LITE pattern at per-cell granularity. The full Phase 12 (scVI/Palantir/CellTypist + all 8 endpoints) remains deferred \u2014 see manifold-discovery-217M-FINAL_SUMMARY \u00a7Phase 12 'Phase 12 \u2014 full cell-level Robust-V2 (deferred)'.",
+  "deferred_to_full_benchmark": [
+    "scVI baseline (would require training scVI on internal panel)",
+    "Palantir baseline (Python package + pseudotime computation)",
+    "CellTypist baseline (pretrained model wrapping)",
+    "Branch / stage / cd_auroc / mm_auroc / pseudotime / cell_type / fold / regression endpoints"
+  ]
+}

@@ -1,0 +1,42 @@
+======================================================================
+EXPERIMENT 3 RERUN — steering with L11 fix + per-feature persistence
+======================================================================
+  SAEs loaded for layers [0, 3, 6, 9, 11]
+  5767 switch features loaded from cache
+  selected 15 features to steer (top 3 per layer)
+
+  Loading Tabula Sapiens immune cells...
+  200 cells, pseudotime range [0.00, 1.00]
+  early: 50 cells   late: 50 cells
+  model: n_layers=11, hidden_size=1232, vocab=20275
+
+  Computing clean-logit signatures (one forward per cell)...
+  signatures computed in 82.2s
+  cached to <REPO_ROOT>/projects/maxtoki/runs/exhaustive-mapping-217M/outputs/experiment3/state_signatures.npz
+  cos(g_early, g_late) = 0.8810 (should be < 1.0)
+
+  Steering 15 features over α ∈ [2, 5]...
+  L0_F  40 (negative): α=5 frac_dir=0.04 frac_mat=0.98 Δ_logit=+0.4241 Δs=+0.0958  ↑SOD3
+  L0_F1657 (positive): α=5 frac_dir=0.96 frac_mat=0.98 Δ_logit=+0.4134 Δs=+0.0962  ↑SOD3
+  L0_F4797 (negative): α=5 frac_dir=0.02 frac_mat=0.98 Δ_logit=+0.4262 Δs=+0.0968  ↑KITLG
+  L3_F4071 (positive): α=5 frac_dir=0.20 frac_mat=1.00 Δ_logit=-0.1204 Δs=+0.0179  ↑C1QTNF3-AMACR
+  L3_F2080 (positive): α=5 frac_dir=0.20 frac_mat=1.00 Δ_logit=-0.1178 Δs=+0.0179  ↑C1QTNF3-AMACR
+  L3_F2546 (negative): α=5 frac_dir=0.80 frac_mat=1.00 Δ_logit=-0.1151 Δs=+0.0177  ↑C1QTNF3-AMACR
+  L6_F4138 (negative): α=5 frac_dir=0.26 frac_mat=0.00 Δ_logit=+0.0442 Δs=-0.0079  ↑C1QB
+  L6_F4888 (negative): α=5 frac_dir=0.26 frac_mat=0.00 Δ_logit=+0.0428 Δs=-0.0079  ↑C1QB
+  L6_F  42 (negative): α=5 frac_dir=0.26 frac_mat=0.00 Δ_logit=+0.0426 Δs=-0.0079  ↑C1QB
+  L9_F1014 (negative): α=5 frac_dir=0.64 frac_mat=1.00 Δ_logit=-0.0389 Δs=+0.0139  ↑PAQR3
+  L9_F1228 (negative): α=5 frac_dir=0.64 frac_mat=1.00 Δ_logit=-0.0358 Δs=+0.0141  ↑PAQR3
+  L9_F1765 (negative): α=5 frac_dir=0.64 frac_mat=1.00 Δ_logit=-0.0392 Δs=+0.0142  ↑PAQR3
+  L11_F3924 (negative): α=5 frac_dir=1.00 frac_mat=0.78 Δ_logit=-1.0838 Δs=+0.0044  ↑FTL
+  L11_F 284 (negative): α=5 frac_dir=1.00 frac_mat=0.78 Δ_logit=-1.0802 Δs=+0.0043  ↑FTL
+  L11_F1949 (positive): α=5 frac_dir=0.00 frac_mat=0.82 Δ_logit=-1.0600 Δs=+0.0057  ↑FTL
+
+  Per-layer summary (α=5):
+    L0: {'n_features': 3, 'mean_frac_positive_direction': 0.34, 'mean_frac_positive_maturity': 0.98, 'mean_delta_s': 0.096226}
+    L3: {'n_features': 3, 'mean_frac_positive_direction': 0.4, 'mean_frac_positive_maturity': 1.0, 'mean_delta_s': 0.017829}
+    L6: {'n_features': 3, 'mean_frac_positive_direction': 0.26, 'mean_frac_positive_maturity': 0.0, 'mean_delta_s': -0.007897}
+    L9: {'n_features': 3, 'mean_frac_positive_direction': 0.64, 'mean_frac_positive_maturity': 1.0, 'mean_delta_s': 0.014076}
+    L11: {'n_features': 3, 'mean_frac_positive_direction': 0.6667, 'mean_frac_positive_maturity': 0.7933, 'mean_delta_s': 0.004817}
+
+EXPERIMENT 3 RERUN COMPLETE

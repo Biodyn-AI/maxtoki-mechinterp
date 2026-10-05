@@ -1,0 +1,64 @@
+{
+ "script": "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/v3_devorder_features.py",
+ "script_sha256": "ee3098c583aa9b58748c90f0c41539e98a133e96ca0496c8d8f23275089ed8b8",
+ "imports": {
+  "v2b_devorder_01_features.py": "150210f84a4768a744e3e65f96e36be6e27553a27df234790a9703032ff51cf9",
+  "v2b_devorder_common.py": "98202441b03c093ef6c010bebd64a06e65377d9ab5f9568cc0030ee620f2e951",
+  "v3_devorder_common.py": "f58d70d87624211bfbdfc8b0c043d698f8a06a281848bd82440c7ebaa57d9b91"
+ },
+ "written_at": "2026-10-03 07:42:30",
+ "python": "3.12.9",
+ "numpy": "1.26.4",
+ "torch": "2.11.0",
+ "torch_threads": 4,
+ "inputs_sha256": {
+  "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/outputs/v3_devorder/artifacts/anchors/anchor_meta_internal.csv": "9b8c5686d7d87497e5b973693dbbd2bf2bb865872d3c27b8e50622a3e7a784ca",
+  "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/outputs/v3_devorder/artifacts/anchors/anchor_meta_external.csv": "85436fada49d034ae1f048b56b7dba394b0650ccb09e0c58e62b710365806011",
+  "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/outputs/v3_devorder/artifacts/anchors/anchor_meta_zeroshot.csv": "6b6bae3162bacf37a21aa213794c3693ec4db9544905af59e302db9027c9ade2",
+  "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/outputs/v3_devorder/artifacts/anchors/anchor_meta_lung_nonhema.csv": "6c1d4598c712892fa97184f6756b0d9b4bc2884f151dbf645cfb95cc767328c0"
+ },
+ "seeds": {
+  "pca": "sklearn PCA random_state 42",
+  "lookup_ct": "default_rng([7001,k]) / ([7001,k,panel])",
+  "lookup_cls": "default_rng([7002,k]) / ([7002,k,panel])"
+ },
+ "info": {
+  "lookup_ct_n_labels": 45,
+  "lookup_cls_n_labels": 64,
+  "identical_to_v2b": {
+   "lookup_cls_s0__external.npy": true,
+   "lookup_cls_s0__internal.npy": true,
+   "lookup_cls_s0__lung_nonhema.npy": true,
+   "lookup_cls_s0__zeroshot.npy": true,
+   "lookup_cls_s1__external.npy": true,
+   "lookup_cls_s1__internal.npy": true,
+   "lookup_cls_s1__lung_nonhema.npy": true,
+   "lookup_cls_s1__zeroshot.npy": true,
+   "lookup_cls_s2__external.npy": true,
+   "lookup_cls_s2__internal.npy": true,
+   "lookup_cls_s2__lung_nonhema.npy": true,
+   "lookup_cls_s2__zeroshot.npy": true,
+   "lookup_ct_s0__external.npy": true,
+   "lookup_ct_s0__internal.npy": true,
+   "lookup_ct_s0__lung_nonhema.npy": true,
+   "lookup_ct_s0__zeroshot.npy": true,
+   "lookup_ct_s1__external.npy": true,
+   "lookup_ct_s1__internal.npy": true,
+   "lookup_ct_s1__lung_nonhema.npy": true,
+   "lookup_ct_s1__zeroshot.npy": true,
+   "lookup_ct_s2__external.npy": true,
+   "lookup_ct_s2__internal.npy": true,
+   "lookup_ct_s2__lung_nonhema.npy": true,
+   "lookup_ct_s2__zeroshot.npy": true,
+   "lookup_ct_s3__external.npy": true,
+   "lookup_ct_s3__internal.npy": true,
+   "lookup_ct_s3__lung_nonhema.npy": true,
+   "lookup_ct_s3__zeroshot.npy": true,
+   "lookup_ct_s4__external.npy": true,
+   "lookup_ct_s4__internal.npy": true,
+   "lookup_ct_s4__lung_nonhema.npy": true,
+   "lookup_ct_s4__zeroshot.npy": true
+  }
+ },
+ "seconds": 0.14888811111450195
+}

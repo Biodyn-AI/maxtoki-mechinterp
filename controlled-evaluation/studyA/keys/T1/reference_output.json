@@ -1,0 +1,860 @@
+{
+ "main": {
+  "trrust_file": {
+   "rows": 192,
+   "unique_pairs": 175,
+   "self_rows": 3,
+   "unique_self_pairs": 2,
+   "unique_non_self_edges": 173,
+   "tfs_with_any_target": 42,
+   "tfs_with_ge3_targets": 16,
+   "mode_counts_rows": {
+    "Unknown": 81,
+    "Activation": 71,
+    "Repression": 40
+   }
+  },
+  "design": {
+   "rule": "TFs with >=3 unique non-self TRRUST targets in the gene set; candidates = the other 1,499 genes; positives = TRRUST targets; all pairs pooled",
+   "n_tfs": 16,
+   "tfs": [
+    "JUN",
+    "PARP1",
+    "PTTG1",
+    "HDAC2",
+    "HIPK2",
+    "KLF6",
+    "FOXM1",
+    "TFDP1",
+    "HIF1A",
+    "YY1",
+    "BRCA1",
+    "NFIC",
+    "DNMT1",
+    "JUND",
+    "CEBPB",
+    "ATF4"
+   ],
+   "n_positive_pairs": 138,
+   "n_negative_pairs": 23846,
+   "n_distinct_target_genes": 87,
+   "targets_per_tf": [
+    21,
+    5,
+    8,
+    4,
+    4,
+    4,
+    4,
+    7,
+    19,
+    15,
+    16,
+    5,
+    6,
+    10,
+    4,
+    6
+   ]
+  },
+  "data_facts": {
+   "diag_mean_attention": 0.02629,
+   "offdiag_mean_attention": 0.00016,
+   "pairs_never_co_observed": 6,
+   "frac_offdiag_attention_exact_zero": 0.00177
+  },
+  "pooled_auroc": {
+   "attention_tf_query": {
+    "value": 0.60451,
+    "ci95_tf_bootstrap": [
+     0.54869,
+     0.65468
+    ]
+   },
+   "attention_tf_key": {
+    "value": 0.54629,
+    "ci95_tf_bootstrap": [
+     0.45334,
+     0.65576
+    ]
+   },
+   "attention_sym_mean": {
+    "value": 0.63825,
+    "ci95_tf_bootstrap": [
+     0.57793,
+     0.70128
+    ]
+   },
+   "attention_sym_max": {
+    "value": 0.64731,
+    "ci95_tf_bootstrap": [
+     0.57875,
+     0.71126
+    ]
+   },
+   "variance": {
+    "value": 0.68638,
+    "ci95_tf_bootstrap": [
+     0.63349,
+     0.73109
+    ]
+   },
+   "mean": {
+    "value": 0.46946,
+    "ci95_tf_bootstrap": [
+     0.41396,
+     0.51605
+    ]
+   },
+   "one_minus_dropout": {
+    "value": 0.43234,
+    "ci95_tf_bootstrap": [
+     0.37952,
+     0.48548
+    ]
+   },
+   "expr_proximity": {
+    "value": 0.46016,
+    "ci95_tf_bootstrap": [
+     0.4181,
+     0.50182
+    ]
+   },
+   "co_detection_lift": {
+    "value": 0.56265,
+    "ci95_tf_bootstrap": [
+     0.51174,
+     0.62751
+    ]
+   },
+   "pair_cell_count": {
+    "value": 0.4835,
+    "ci95_tf_bootstrap": [
+     0.37222,
+     0.5974
+    ]
+   },
+   "gene3_logreg_oof": {
+    "value": 0.74941,
+    "ci95_tf_bootstrap": [
+     0.69089,
+     0.80113
+    ]
+   }
+  },
+  "per_tf_mean_auroc": {
+   "attention_tf_query": {
+    "value": 0.58667,
+    "ci95_tf_bootstrap": [
+     0.54127,
+     0.63774
+    ]
+   },
+   "attention_tf_key": {
+    "value": 0.55251,
+    "ci95_tf_bootstrap": [
+     0.48751,
+     0.6215
+    ]
+   },
+   "attention_sym_mean": {
+    "value": 0.64263,
+    "ci95_tf_bootstrap": [
+     0.5883,
+     0.69504
+    ]
+   },
+   "attention_sym_max": {
+    "value": 0.64017,
+    "ci95_tf_bootstrap": [
+     0.5823,
+     0.69751
+    ]
+   },
+   "variance": {
+    "value": 0.68182,
+    "ci95_tf_bootstrap": [
+     0.62366,
+     0.73355
+    ]
+   },
+   "mean": {
+    "value": 0.43724,
+    "ci95_tf_bootstrap": [
+     0.37914,
+     0.49328
+    ]
+   },
+   "one_minus_dropout": {
+    "value": 0.40387,
+    "ci95_tf_bootstrap": [
+     0.34982,
+     0.45826
+    ]
+   },
+   "expr_proximity": {
+    "value": 0.46938,
+    "ci95_tf_bootstrap": [
+     0.41278,
+     0.52091
+    ]
+   },
+   "co_detection_lift": {
+    "value": 0.58148,
+    "ci95_tf_bootstrap": [
+     0.51056,
+     0.65789
+    ]
+   },
+   "pair_cell_count": {
+    "value": 0.44859,
+    "ci95_tf_bootstrap": [
+     0.39253,
+     0.50005
+    ]
+   },
+   "gene3_logreg_oof": {
+    "value": 0.76564,
+    "ci95_tf_bootstrap": [
+     0.72071,
+     0.8099
+    ]
+   }
+  },
+  "gene3_mean_of_fold_aurocs": 0.75306,
+  "gaps": {
+   "variance_minus_attention_tf_query": {
+    "value": 0.08186,
+    "ci95_tf_bootstrap": [
+     0.0281,
+     0.14506
+    ],
+    "frac_boot_gt0": 0.9995
+   },
+   "variance_minus_attention_tf_query_per_tf_mean": {
+    "value": 0.09515,
+    "ci95_tf_bootstrap": [
+     0.02482,
+     0.16256
+    ]
+   },
+   "variance_minus_attention_sym_mean": {
+    "value": 0.04813,
+    "ci95_tf_bootstrap": [
+     -0.02116,
+     0.10993
+    ],
+    "frac_boot_gt0": 0.9285
+   },
+   "variance_minus_attention_sym_mean_per_tf_mean": {
+    "value": 0.03919,
+    "ci95_tf_bootstrap": [
+     -0.03287,
+     0.10778
+    ]
+   },
+   "gene3_logreg_oof_minus_attention_tf_query": {
+    "value": 0.14489,
+    "ci95_tf_bootstrap": [
+     0.05541,
+     0.23765
+    ],
+    "frac_boot_gt0": 1.0
+   },
+   "gene3_logreg_oof_minus_attention_tf_query_per_tf_mean": {
+    "value": 0.17897,
+    "ci95_tf_bootstrap": [
+     0.11003,
+     0.24278
+    ]
+   },
+   "gene3_logreg_oof_minus_attention_sym_mean": {
+    "value": 0.11116,
+    "ci95_tf_bootstrap": [
+     0.00241,
+     0.2018
+    ],
+    "frac_boot_gt0": 0.976
+   },
+   "gene3_logreg_oof_minus_attention_sym_mean_per_tf_mean": {
+    "value": 0.12302,
+    "ci95_tf_bootstrap": [
+     0.05547,
+     0.18253
+    ]
+   }
+  },
+  "n_tfs_variance_gt_attention": 13,
+  "n_tfs_gene3_gt_attention": 15,
+  "n_tfs_attention_auroc_gt_0.5": 14,
+  "per_tf_table": [
+   {
+    "tf": "JUN",
+    "n_targets": 21,
+    "attention_tf_query": 0.6671,
+    "attention_sym_mean": 0.6813,
+    "variance": 0.74,
+    "gene3": 0.7426
+   },
+   {
+    "tf": "PARP1",
+    "n_targets": 5,
+    "attention_tf_query": 0.5964,
+    "attention_sym_mean": 0.7158,
+    "variance": 0.8901,
+    "gene3": 0.9141
+   },
+   {
+    "tf": "PTTG1",
+    "n_targets": 8,
+    "attention_tf_query": 0.5433,
+    "attention_sym_mean": 0.5307,
+    "variance": 0.7551,
+    "gene3": 0.7424
+   },
+   {
+    "tf": "HDAC2",
+    "n_targets": 4,
+    "attention_tf_query": 0.6069,
+    "attention_sym_mean": 0.4783,
+    "variance": 0.6957,
+    "gene3": 0.6331
+   },
+   {
+    "tf": "HIPK2",
+    "n_targets": 4,
+    "attention_tf_query": 0.5189,
+    "attention_sym_mean": 0.6717,
+    "variance": 0.6649,
+    "gene3": 0.8186
+   },
+   {
+    "tf": "KLF6",
+    "n_targets": 4,
+    "attention_tf_query": 0.8548,
+    "attention_sym_mean": 0.812,
+    "variance": 0.7602,
+    "gene3": 0.9187
+   },
+   {
+    "tf": "FOXM1",
+    "n_targets": 4,
+    "attention_tf_query": 0.6182,
+    "attention_sym_mean": 0.8007,
+    "variance": 0.5182,
+    "gene3": 0.743
+   },
+   {
+    "tf": "TFDP1",
+    "n_targets": 7,
+    "attention_tf_query": 0.5218,
+    "attention_sym_mean": 0.5426,
+    "variance": 0.7472,
+    "gene3": 0.8716
+   },
+   {
+    "tf": "HIF1A",
+    "n_targets": 19,
+    "attention_tf_query": 0.6862,
+    "attention_sym_mean": 0.7506,
+    "variance": 0.69,
+    "gene3": 0.6206
+   },
+   {
+    "tf": "YY1",
+    "n_targets": 15,
+    "attention_tf_query": 0.5028,
+    "attention_sym_mean": 0.4721,
+    "variance": 0.5332,
+    "gene3": 0.7507
+   },
+   {
+    "tf": "BRCA1",
+    "n_targets": 16,
+    "attention_tf_query": 0.5697,
+    "attention_sym_mean": 0.5541,
+    "variance": 0.7296,
+    "gene3": 0.8623
+   },
+   {
+    "tf": "NFIC",
+    "n_targets": 5,
+    "attention_tf_query": 0.5062,
+    "attention_sym_mean": 0.6593,
+    "variance": 0.6797,
+    "gene3": 0.6348
+   },
+   {
+    "tf": "DNMT1",
+    "n_targets": 6,
+    "attention_tf_query": 0.6113,
+    "attention_sym_mean": 0.6178,
+    "variance": 0.3795,
+    "gene3": 0.6744
+   },
+   {
+    "tf": "JUND",
+    "n_targets": 10,
+    "attention_tf_query": 0.6759,
+    "attention_sym_mean": 0.7525,
+    "variance": 0.749,
+    "gene3": 0.7736
+   },
+   {
+    "tf": "CEBPB",
+    "n_targets": 4,
+    "attention_tf_query": 0.4592,
+    "attention_sym_mean": 0.5311,
+    "variance": 0.6151,
+    "gene3": 0.7217
+   },
+   {
+    "tf": "ATF4",
+    "n_targets": 6,
+    "attention_tf_query": 0.4481,
+    "attention_sym_mean": 0.7115,
+    "variance": 0.7617,
+    "gene3": 0.8282
+   }
+  ],
+  "other_resampling_units": {
+   "pair_bootstrap_1000": {
+    "attention_tf_query": [
+     0.54698,
+     0.65484
+    ],
+    "variance_minus_attention": [
+     0.01817,
+     0.14398
+    ],
+    "gene3_minus_attention": [
+     0.08093,
+     0.20851
+    ],
+    "attention_sym_mean": [
+     0.59008,
+     0.68524
+    ]
+   },
+   "two_way_tf_and_gene_bootstrap_1000": {
+    "attention_tf_query": [
+     0.50908,
+     0.69907
+    ],
+    "variance_minus_attention": [
+     -0.03874,
+     0.19534
+    ],
+    "gene3_minus_attention": [
+     0.00183,
+     0.28427
+    ],
+    "attention_sym_mean": [
+     0.53147,
+     0.73049
+    ]
+   },
+   "hanley_mcneil_pairs_independent": {
+    "se": 0.0256,
+    "z_vs_0.5": 4.08191,
+    "p_two_sided": 4.4667144053788576e-05
+   }
+  },
+  "analyst_choices": {
+   "min_targets_1": {
+    "n_tfs": 42,
+    "n_pos": 173,
+    "attention_tf_query": 0.59478,
+    "attention_tf_key": 0.51801,
+    "attention_sym_mean": 0.60647,
+    "variance": 0.69424
+   },
+   "min_targets_2": {
+    "n_tfs": 25,
+    "n_pos": 156,
+    "attention_tf_query": 0.60102,
+    "attention_tf_key": 0.5381,
+    "attention_sym_mean": 0.62904,
+    "variance": 0.68797
+   },
+   "min_targets_3": {
+    "n_tfs": 16,
+    "n_pos": 138,
+    "attention_tf_query": 0.60451,
+    "attention_tf_key": 0.54629,
+    "attention_sym_mean": 0.63825,
+    "variance": 0.68638
+   },
+   "min_targets_5": {
+    "n_tfs": 11,
+    "n_pos": 118,
+    "attention_tf_query": 0.60872,
+    "attention_tf_key": 0.53925,
+    "attention_sym_mean": 0.63038,
+    "variance": 0.69264
+   },
+   "with_self_pairs_scored_by_diagonal": 0.60981,
+   "with_self_pairs_and_duplicate_rows_as_weights": 0.6243,
+   "n_self_positive_pairs_among_evaluated_tfs": 2,
+   "direction_known_positives_only": {
+    "n_pos": 83,
+    "attention_tf_query": 0.60851,
+    "variance": 0.6951
+   }
+  },
+  "uniform_label_permutation_null": {
+   "null_mean": 0.50095,
+   "null_sd": 0.02514,
+   "z": 4.11979,
+   "p_one_sided": 0.000999000999000999
+  },
+  "row_only_null_targets_uniform": {
+   "null_mean": 0.50137,
+   "null_sd": 0.02454,
+   "z": 4.20372
+  },
+  "incremental_logreg": {
+   "attention_tf_query_groupTF": {
+    "gene_only_auroc": 0.74941,
+    "gene_plus_score_auroc": 0.76225,
+    "delta": 0.01284,
+    "delta_ci95_tf_bootstrap_models_fixed": [
+     0.00048,
+     0.02497
+    ]
+   },
+   "attention_sym_mean_groupTF": {
+    "gene_only_auroc": 0.74941,
+    "gene_plus_score_auroc": 0.76727,
+    "delta": 0.01786,
+    "delta_ci95_tf_bootstrap_models_fixed": [
+     0.00164,
+     0.03445
+    ]
+   },
+   "attention_tf_query_groupGene": {
+    "gene_only_auroc": 0.75145,
+    "gene_plus_score_auroc": 0.76071,
+    "delta": 0.00925,
+    "delta_ci95_tf_bootstrap_models_fixed": [
+     -0.00176,
+     0.01935
+    ]
+   },
+   "attention_sym_mean_groupGene": {
+    "gene_only_auroc": 0.75145,
+    "gene_plus_score_auroc": 0.76374,
+    "delta": 0.01229,
+    "delta_ci95_tf_bootstrap_models_fixed": [
+     -0.00249,
+     0.02896
+    ]
+   },
+   "co_detection_lift_groupTF": {
+    "gene_only_auroc": 0.74941,
+    "gene_plus_score_auroc": 0.7455,
+    "delta": -0.00391,
+    "delta_ci95_tf_bootstrap_models_fixed": [
+     -0.0124,
+     0.00359
+    ]
+   }
+  },
+  "seconds": 23.7
+ },
+ "degree_preserving_null": {
+  "n_draws": 1000,
+  "n_trades_per_draw": 5000,
+  "seed": 20261602,
+  "draws_failing_margin_checks": 0,
+  "draws_identical_to_observed": 0,
+  "mean_jaccard_distance": 0.87661,
+  "min_jaccard_distance": 0.82051,
+  "scores": {
+   "attention_tf_query": {
+    "pooled": {
+     "observed": 0.60451,
+     "null_mean": 0.57394,
+     "null_sd": 0.01682,
+     "null_central95": [
+      0.54277,
+      0.60701
+     ],
+     "z": 1.81737,
+     "p_one_sided": 0.04595404595404595
+    },
+    "per_tf_mean": {
+     "observed": 0.58667,
+     "null_mean": 0.56942,
+     "null_sd": 0.02301,
+     "null_central95": [
+      0.52402,
+      0.61549
+     ],
+     "z": 0.74958,
+     "p_one_sided": 0.22477522477522477
+    }
+   },
+   "expr_proximity": {
+    "pooled": {
+     "observed": 0.46016,
+     "null_mean": 0.42787,
+     "null_sd": 0.01748,
+     "null_central95": [
+      0.39386,
+      0.45983
+     ],
+     "z": 1.84677,
+     "p_one_sided": 0.023976023976023976
+    },
+    "per_tf_mean": {
+     "observed": 0.46938,
+     "null_mean": 0.43342,
+     "null_sd": 0.02505,
+     "null_central95": [
+      0.38379,
+      0.48242
+     ],
+     "z": 1.43549,
+     "p_one_sided": 0.08191808191808192
+    }
+   },
+   "variance": {
+    "pooled": {
+     "observed": 0.68638,
+     "null_mean": 0.68638,
+     "null_sd": 0.0,
+     "null_central95": [
+      0.68638,
+      0.68638
+     ],
+     "z": 0.9995,
+     "p_one_sided": 1.0
+    },
+    "per_tf_mean": {
+     "observed": 0.68182,
+     "null_mean": 0.68988,
+     "null_sd": 0.01351,
+     "null_central95": [
+      0.66294,
+      0.71638
+     ],
+     "z": -0.59679,
+     "p_one_sided": 0.7302697302697303
+    }
+   }
+  },
+  "share_of_raw_excess_over_0.5_explained_by_null": 0.70749,
+  "method": "Curveball (Strona et al. 2014): rows = 16 evaluated TFs, columns = 1,500 genes; row and column sums kept; (TF, own gene) never an edge; independent chains from the observed network; z = (obs - null mean)/null SD; p = (1 + #null >= obs)/(1 + n), one-sided",
+  "seconds": 55.8
+ },
+ "degree_preserving_null_other_scores": {
+  "n_draws": 1000,
+  "n_trades_per_draw": 1000,
+  "seed": 20261612,
+  "draws_failing_margin_checks": 0,
+  "draws_identical_to_observed": 0,
+  "mean_jaccard_distance": 0.87644,
+  "min_jaccard_distance": 0.81034,
+  "scores": {
+   "attention_tf_key": {
+    "pooled": {
+     "observed": 0.54629,
+     "null_mean": 0.51074,
+     "null_sd": 0.01521,
+     "null_central95": [
+      0.48186,
+      0.53969
+     ],
+     "z": 2.33684,
+     "p_one_sided": 0.012987012987012988
+    },
+    "per_tf_mean": {
+     "observed": 0.55251,
+     "null_mean": 0.52184,
+     "null_sd": 0.02675,
+     "null_central95": [
+      0.47193,
+      0.57278
+     ],
+     "z": 1.14625,
+     "p_one_sided": 0.13086913086913088
+    }
+   },
+   "attention_sym_mean": {
+    "pooled": {
+     "observed": 0.63825,
+     "null_mean": 0.57818,
+     "null_sd": 0.01841,
+     "null_central95": [
+      0.54275,
+      0.61415
+     ],
+     "z": 3.26273,
+     "p_one_sided": 0.000999000999000999
+    },
+    "per_tf_mean": {
+     "observed": 0.64263,
+     "null_mean": 0.58887,
+     "null_sd": 0.02302,
+     "null_central95": [
+      0.54392,
+      0.6327
+     ],
+     "z": 2.33561,
+     "p_one_sided": 0.008991008991008992
+    }
+   },
+   "attention_sym_max": {
+    "pooled": {
+     "observed": 0.64731,
+     "null_mean": 0.59415,
+     "null_sd": 0.01781,
+     "null_central95": [
+      0.56249,
+      0.62732
+     ],
+     "z": 2.98496,
+     "p_one_sided": 0.001998001998001998
+    },
+    "per_tf_mean": {
+     "observed": 0.64017,
+     "null_mean": 0.59328,
+     "null_sd": 0.0227,
+     "null_central95": [
+      0.54777,
+      0.63586
+     ],
+     "z": 2.06541,
+     "p_one_sided": 0.01898101898101898
+    }
+   },
+   "co_detection_lift": {
+    "pooled": {
+     "observed": 0.56265,
+     "null_mean": 0.49334,
+     "null_sd": 0.02241,
+     "null_central95": [
+      0.45104,
+      0.5347
+     ],
+     "z": 3.09201,
+     "p_one_sided": 0.001998001998001998
+    },
+    "per_tf_mean": {
+     "observed": 0.58148,
+     "null_mean": 0.49562,
+     "null_sd": 0.02837,
+     "null_central95": [
+      0.44238,
+      0.55304
+     ],
+     "z": 3.02687,
+     "p_one_sided": 0.001998001998001998
+    }
+   },
+   "pair_cell_count": {
+    "pooled": {
+     "observed": 0.4835,
+     "null_mean": 0.45682,
+     "null_sd": 0.0077,
+     "null_central95": [
+      0.44218,
+      0.47227
+     ],
+     "z": 3.46652,
+     "p_one_sided": 0.000999000999000999
+    },
+    "per_tf_mean": {
+     "observed": 0.44859,
+     "null_mean": 0.45456,
+     "null_sd": 0.0188,
+     "null_central95": [
+      0.42,
+      0.4922
+     ],
+     "z": -0.31762,
+     "p_one_sided": 0.6003996003996004
+    }
+   }
+  },
+  "seconds": 10.3
+ },
+ "residualised_attention": {
+  "raw_attention_ci95_tf_bootstrap": [
+   0.54643,
+   0.6546
+  ],
+  "method": "predict attention of every ordered pair (i != j) from gene features only, 5-fold KFold(shuffle, 42) cross-fitting; residual scored like raw attention; CI = TF bootstrap with fitted models held fixed",
+  "ols5_float64": {
+   "residualised_auroc": 0.49219,
+   "ci95_tf_bootstrap": [
+    0.40395,
+    0.5685
+   ],
+   "drop_from_raw": 0.11232,
+   "drop_ci95_tf_bootstrap": [
+    0.07754,
+    0.15315
+   ],
+   "share_of_above_chance_signal_kept": -0.0747,
+   "train_r2_mean": 0.06145
+  },
+  "hgb6": {
+   "residualised_auroc": 0.55857,
+   "ci95_tf_bootstrap": [
+    0.48835,
+    0.61678
+   ],
+   "drop_from_raw": 0.04595,
+   "drop_ci95_tf_bootstrap": [
+    0.02345,
+    0.07597
+   ],
+   "share_of_above_chance_signal_kept": 0.56039,
+   "train_r2_mean": 0.40496
+  },
+  "sym_mean_ols9_float64": {
+   "raw_auroc": 0.63825,
+   "residualised_auroc": 0.55116,
+   "ci95_tf_bootstrap": [
+    0.48881,
+    0.6108
+   ],
+   "share_of_above_chance_signal_kept": 0.37007,
+   "train_r2_mean": 0.08458
+  },
+  "seconds": 16.5
+ },
+ "incremental_hgb": {
+  "gene_model": "HistGradientBoostingClassifier on candidate mean, variance, dropout (+ score); GroupKFold(5) by TF",
+  "attention_tf_query": {
+   "gene_only_auroc": 0.80298,
+   "gene_plus_score_auroc": 0.7881,
+   "delta": -0.01488,
+   "delta_ci95_tf_bootstrap_models_fixed": [
+    -0.03479,
+    0.00308
+   ]
+  },
+  "attention_sym_mean": {
+   "gene_only_auroc": 0.80298,
+   "gene_plus_score_auroc": 0.80909,
+   "delta": 0.00611,
+   "delta_ci95_tf_bootstrap_models_fixed": [
+    -0.01401,
+    0.02492
+   ]
+  },
+  "attention_tf_query_groupGene": {
+   "gene_only_auroc": 0.67667,
+   "gene_plus_score_auroc": 0.67063,
+   "delta": -0.00604,
+   "delta_ci95_tf_bootstrap_models_fixed": [
+    -0.0381,
+    0.02043
+   ]
+  },
+  "seconds": 146.2
+ }
+}

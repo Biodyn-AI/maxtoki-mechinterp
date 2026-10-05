@@ -1,0 +1,2370 @@
+{
+ "rows": [
+  {
+   "number": "H65 internal trust | maxtoki",
+   "unit": "trustworthiness k=15",
+   "v2b": 0.810936329588015,
+   "v3": 0.8452115889620733,
+   "change": 0.03427525937405829
+  },
+  {
+   "number": "H65 internal random holdout | maxtoki",
+   "unit": "Spearman",
+   "v2b": 0.8341080550865552,
+   "v3": 0.8486992249520233,
+   "change": 0.014591169865468157
+  },
+  {
+   "number": "H65 internal donor holdout | maxtoki",
+   "unit": "Spearman",
+   "v2b": 0.715887968347085,
+   "v3": 0.7833232491235216,
+   "change": 0.06743528077643657
+  },
+  {
+   "number": "H65 internal branch holdout | maxtoki",
+   "unit": "Spearman, plain mean over branches",
+   "v2b": 0.37040378877968805,
+   "v3": 0.41359109068175415,
+   "change": 0.0431873019020661
+  },
+  {
+   "number": "H65 internal branch holdout, diff cell type | maxtoki",
+   "unit": "Spearman",
+   "v2b": 0.047157808453755244,
+   "v3": 0.0673459277389464,
+   "change": 0.02018811928519116
+  },
+  {
+   "number": "H65 external frozen trust | maxtoki",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": 0.895688041594454,
+   "v3": 0.9053119584055459,
+   "change": 0.00962391681109187
+  },
+  {
+   "number": "H65 external frozen random | maxtoki",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": 0.8857749063129917,
+   "v3": 0.8693751141232017,
+   "change": -0.01639979218979004
+  },
+  {
+   "number": "H65 external frozen donor | maxtoki",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": 0.8869530363318562,
+   "v3": 0.8839187313875426,
+   "change": -0.0030343049443135595
+  },
+  {
+   "number": "H65 external frozen branch | maxtoki",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": 0.34644275347273074,
+   "v3": 0.41730581046311804,
+   "change": 0.07086305699038731
+  },
+  {
+   "number": "H65 external frozen branch_diff_ct | maxtoki",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": 0.049637687844402055,
+   "v3": 0.0055711767890459785,
+   "change": -0.04406651105535608
+  },
+  {
+   "number": "H65 external frozen global | maxtoki",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": 0.8821200321268053,
+   "v3": 0.8654526975109337,
+   "change": -0.016667334615871665
+  },
+  {
+   "number": "H65 external frozen global_diff_ct | maxtoki",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": 0.8556065185936799,
+   "v3": 0.8353858929247671,
+   "change": -0.020220625668912806
+  },
+  {
+   "number": "H65 zeroshot frozen trust | maxtoki",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": 0.8267244525547446,
+   "v3": 0.8225091240875912,
+   "change": -0.004215328467153334
+  },
+  {
+   "number": "H65 zeroshot frozen random | maxtoki",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": 0.8925656989707351,
+   "v3": 0.8619305501032037,
+   "change": -0.03063514886753138
+  },
+  {
+   "number": "H65 zeroshot frozen donor | maxtoki",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": 0.8703093321429258,
+   "v3": 0.8800055253771326,
+   "change": 0.009696193234206785
+  },
+  {
+   "number": "H65 zeroshot frozen branch | maxtoki",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": 0.31683028161845,
+   "v3": 0.17950200266901395,
+   "change": -0.13732827894943606
+  },
+  {
+   "number": "H65 zeroshot frozen branch_diff_ct | maxtoki",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": 0.09440591255235017,
+   "v3": 0.015536716819319812,
+   "change": -0.07886919573303036
+  },
+  {
+   "number": "H65 zeroshot frozen global | maxtoki",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": 0.8989748601586247,
+   "v3": 0.8670749659188554,
+   "change": -0.031899894239769355
+  },
+  {
+   "number": "H65 zeroshot frozen global_diff_ct | maxtoki",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": 0.8861197677423556,
+   "v3": 0.8508986564048886,
+   "change": -0.03522111133746697
+  },
+  {
+   "number": "H65 lung_nonhema frozen trust | maxtoki",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": 0.7995555555555556,
+   "v3": 0.7194567901234568,
+   "change": -0.08009876543209882
+  },
+  {
+   "number": "H65 lung_nonhema frozen random | maxtoki",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": -0.01642006280037764,
+   "v3": -0.020637671784559948,
+   "change": -0.00421760898418231
+  },
+  {
+   "number": "H65 lung_nonhema frozen donor | maxtoki",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": 0.01339727102198118,
+   "v3": -0.0642394765200935,
+   "change": -0.07763674754207468
+  },
+  {
+   "number": "H65 lung_nonhema frozen branch | maxtoki",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": -0.14687071442603894,
+   "v3": -0.04511674891450955,
+   "change": 0.10175396551152939
+  },
+  {
+   "number": "H65 lung_nonhema frozen branch_diff_ct | maxtoki",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": -0.10272734073766239,
+   "v3": 0.014941391550447608,
+   "change": 0.11766873228810999
+  },
+  {
+   "number": "H65 lung_nonhema frozen global | maxtoki",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": -0.017499871255280627,
+   "v3": -0.0411983052822393,
+   "change": -0.023698434026958672
+  },
+  {
+   "number": "H65 lung_nonhema frozen global_diff_ct | maxtoki",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": -0.021011281155371552,
+   "v3": -0.04379767640581547,
+   "change": -0.02278639525044392
+  },
+  {
+   "number": "H65 internal trust | maxtoki_pca64",
+   "unit": "trustworthiness k=15",
+   "v2b": 0.6962322958371001,
+   "v3": 0.6856429463171037,
+   "change": -0.01058934951999646
+  },
+  {
+   "number": "H65 internal random holdout | maxtoki_pca64",
+   "unit": "Spearman",
+   "v2b": 0.7817336822611379,
+   "v3": 0.7960147155772107,
+   "change": 0.014281033316072778
+  },
+  {
+   "number": "H65 internal donor holdout | maxtoki_pca64",
+   "unit": "Spearman",
+   "v2b": 0.6704698330760561,
+   "v3": 0.5754090643782955,
+   "change": -0.09506076869776059
+  },
+  {
+   "number": "H65 internal branch holdout | maxtoki_pca64",
+   "unit": "Spearman, plain mean over branches",
+   "v2b": 0.48997823677099256,
+   "v3": 0.4874188484223609,
+   "change": -0.002559388348631675
+  },
+  {
+   "number": "H65 internal branch holdout, diff cell type | maxtoki_pca64",
+   "unit": "Spearman",
+   "v2b": 0.06523906942968678,
+   "v3": 0.07536804278818732,
+   "change": 0.010128973358500534
+  },
+  {
+   "number": "H65 external frozen trust | maxtoki_pca64",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": 0.842522819179665,
+   "v3": 0.8202193337184671,
+   "change": -0.02230348546119787
+  },
+  {
+   "number": "H65 external frozen random | maxtoki_pca64",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": 0.8791076150704134,
+   "v3": 0.8684156801526395,
+   "change": -0.010691934917773871
+  },
+  {
+   "number": "H65 external frozen donor | maxtoki_pca64",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": 0.8958497752426945,
+   "v3": 0.8678889528079347,
+   "change": -0.027960822434759836
+  },
+  {
+   "number": "H65 external frozen branch | maxtoki_pca64",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": 0.4000621822976061,
+   "v3": 0.38060967439512217,
+   "change": -0.01945250790248393
+  },
+  {
+   "number": "H65 external frozen branch_diff_ct | maxtoki_pca64",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": -0.037268359447955625,
+   "v3": -0.014087995304972121,
+   "change": 0.023180364142983502
+  },
+  {
+   "number": "H65 external frozen global | maxtoki_pca64",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": 0.8792007009732972,
+   "v3": 0.8632044989802184,
+   "change": -0.015996201993078718
+  },
+  {
+   "number": "H65 external frozen global_diff_ct | maxtoki_pca64",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": 0.8534879588954368,
+   "v3": 0.8331504360482214,
+   "change": -0.02033752284721546
+  },
+  {
+   "number": "H65 zeroshot frozen trust | maxtoki_pca64",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": 0.7494343065693431,
+   "v3": 0.73470498783455,
+   "change": -0.014729318734793106
+  },
+  {
+   "number": "H65 zeroshot frozen random | maxtoki_pca64",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": 0.8815975722102374,
+   "v3": 0.8505823692071791,
+   "change": -0.031015203003058267
+  },
+  {
+   "number": "H65 zeroshot frozen donor | maxtoki_pca64",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": 0.7994577428180875,
+   "v3": 0.806592954979815,
+   "change": 0.007135212161727522
+  },
+  {
+   "number": "H65 zeroshot frozen branch | maxtoki_pca64",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": 0.47502014916252894,
+   "v3": 0.4572999139824396,
+   "change": -0.01772023518008936
+  },
+  {
+   "number": "H65 zeroshot frozen branch_diff_ct | maxtoki_pca64",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": 0.1718377143183501,
+   "v3": 0.16031932372063737,
+   "change": -0.01151839059771273
+  },
+  {
+   "number": "H65 zeroshot frozen global | maxtoki_pca64",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": 0.8764713573128032,
+   "v3": 0.8551502525082528,
+   "change": -0.021321104804550406
+  },
+  {
+   "number": "H65 zeroshot frozen global_diff_ct | maxtoki_pca64",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": 0.8613483056559548,
+   "v3": 0.8353267373586744,
+   "change": -0.026021568297280417
+  },
+  {
+   "number": "H65 lung_nonhema frozen trust | maxtoki_pca64",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": 0.7801975308641975,
+   "v3": 0.8110617283950617,
+   "change": 0.030864197530864224
+  },
+  {
+   "number": "H65 lung_nonhema frozen random | maxtoki_pca64",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": -0.021170377733442956,
+   "v3": -0.008859961822710035,
+   "change": 0.012310415910732921
+  },
+  {
+   "number": "H65 lung_nonhema frozen donor | maxtoki_pca64",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": -0.09034394224664807,
+   "v3": -0.0741057715265393,
+   "change": 0.016238170720108774
+  },
+  {
+   "number": "H65 lung_nonhema frozen branch | maxtoki_pca64",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": -0.06776160440454312,
+   "v3": -0.15707103334391775,
+   "change": -0.08930942893937463
+  },
+  {
+   "number": "H65 lung_nonhema frozen branch_diff_ct | maxtoki_pca64",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": -0.022111159756576303,
+   "v3": -0.10985871851550529,
+   "change": -0.08774755875892898
+  },
+  {
+   "number": "H65 lung_nonhema frozen global | maxtoki_pca64",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": -0.0373371534120383,
+   "v3": -0.006753621376002232,
+   "change": 0.030583532036036067
+  },
+  {
+   "number": "H65 lung_nonhema frozen global_diff_ct | maxtoki_pca64",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": -0.03471811496957785,
+   "v3": -0.004738519131653031,
+   "change": 0.029979595837924818
+  },
+  {
+   "number": "H65 internal trust | tokenbag_pca64",
+   "unit": "trustworthiness k=15",
+   "v2b": 0.7080339231133497,
+   "v3": 0.705028197511731,
+   "change": -0.003005725601618714
+  },
+  {
+   "number": "H65 internal random holdout | tokenbag_pca64",
+   "unit": "Spearman",
+   "v2b": 0.6523259638141151,
+   "v3": 0.6742666014005633,
+   "change": 0.021940637586448153
+  },
+  {
+   "number": "H65 internal donor holdout | tokenbag_pca64",
+   "unit": "Spearman",
+   "v2b": 0.5633823558316513,
+   "v3": 0.5557275136409737,
+   "change": -0.00765484219067758
+  },
+  {
+   "number": "H65 internal branch holdout | tokenbag_pca64",
+   "unit": "Spearman, plain mean over branches",
+   "v2b": 0.4165644670160747,
+   "v3": 0.4294707541298854,
+   "change": 0.0129062871138107
+  },
+  {
+   "number": "H65 internal branch holdout, diff cell type | tokenbag_pca64",
+   "unit": "Spearman",
+   "v2b": 0.0064020171259901795,
+   "v3": -0.07828389880561494,
+   "change": -0.08468591593160513
+  },
+  {
+   "number": "H65 external frozen trust | tokenbag_pca64",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": 0.8747194300019256,
+   "v3": 0.8593219718852301,
+   "change": -0.015397458116695573
+  },
+  {
+   "number": "H65 external frozen random | tokenbag_pca64",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": 0.8785969974697327,
+   "v3": 0.8524920129114785,
+   "change": -0.026104984558254274
+  },
+  {
+   "number": "H65 external frozen donor | tokenbag_pca64",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": 0.8650107255431748,
+   "v3": 0.7322910130330609,
+   "change": -0.13271971251011394
+  },
+  {
+   "number": "H65 external frozen branch | tokenbag_pca64",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": 0.421739615216641,
+   "v3": 0.3863289948626312,
+   "change": -0.03541062035400977
+  },
+  {
+   "number": "H65 external frozen branch_diff_ct | tokenbag_pca64",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": 0.009363909822010416,
+   "v3": -0.03891515854378093,
+   "change": -0.04827906836579134
+  },
+  {
+   "number": "H65 external frozen global | tokenbag_pca64",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": 0.8755705686470237,
+   "v3": 0.8492829911668001,
+   "change": -0.02628757748022359
+  },
+  {
+   "number": "H65 external frozen global_diff_ct | tokenbag_pca64",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": 0.8501351142047123,
+   "v3": 0.8200170640312754,
+   "change": -0.03011805017343694
+  },
+  {
+   "number": "H65 zeroshot frozen trust | tokenbag_pca64",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": 0.7594221411192215,
+   "v3": 0.7497506082725061,
+   "change": -0.009671532846715403
+  },
+  {
+   "number": "H65 zeroshot frozen random | tokenbag_pca64",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": 0.8754877200251515,
+   "v3": 0.8212302014876555,
+   "change": -0.05425751853749605
+  },
+  {
+   "number": "H65 zeroshot frozen donor | tokenbag_pca64",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": 0.8230587720634426,
+   "v3": 0.8018009124995871,
+   "change": -0.021257859563855508
+  },
+  {
+   "number": "H65 zeroshot frozen branch | tokenbag_pca64",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": 0.2702755048464485,
+   "v3": 0.13279270672489488,
+   "change": -0.13748279812155365
+  },
+  {
+   "number": "H65 zeroshot frozen branch_diff_ct | tokenbag_pca64",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": 0.0279279252240075,
+   "v3": -0.08481594918401662,
+   "change": -0.11274387440802412
+  },
+  {
+   "number": "H65 zeroshot frozen global | tokenbag_pca64",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": 0.879379594802474,
+   "v3": 0.819213769281586,
+   "change": -0.060165825520888006
+  },
+  {
+   "number": "H65 zeroshot frozen global_diff_ct | tokenbag_pca64",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": 0.8661427484759263,
+   "v3": 0.8069592229481876,
+   "change": -0.059183525527738756
+  },
+  {
+   "number": "H65 lung_nonhema frozen trust | tokenbag_pca64",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": 0.9275555555555556,
+   "v3": 0.8915061728395062,
+   "change": -0.036049382716049405
+  },
+  {
+   "number": "H65 lung_nonhema frozen random | tokenbag_pca64",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": -0.01830525144076753,
+   "v3": -0.07335071856110553,
+   "change": -0.055045467120338004
+  },
+  {
+   "number": "H65 lung_nonhema frozen donor | tokenbag_pca64",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": 0.01878886879097616,
+   "v3": -0.05274650839721872,
+   "change": -0.07153537718819489
+  },
+  {
+   "number": "H65 lung_nonhema frozen branch | tokenbag_pca64",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": -0.05495099206565538,
+   "v3": -0.05975536616731293,
+   "change": -0.004804374101657551
+  },
+  {
+   "number": "H65 lung_nonhema frozen branch_diff_ct | tokenbag_pca64",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": 0.02833507326683411,
+   "v3": 0.04550794047539482,
+   "change": 0.01717286720856071
+  },
+  {
+   "number": "H65 lung_nonhema frozen global | tokenbag_pca64",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": -0.014953229534936878,
+   "v3": -0.03576562813778587,
+   "change": -0.02081239860284899
+  },
+  {
+   "number": "H65 lung_nonhema frozen global_diff_ct | tokenbag_pca64",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": -0.0220455488136889,
+   "v3": -0.046246378097868523,
+   "change": -0.024200829284179624
+  },
+  {
+   "number": "H65 internal trust | hvg_pca64",
+   "unit": "trustworthiness k=15",
+   "v2b": 0.7171595850015067,
+   "v3": 0.7171595850015067,
+   "change": 0.0
+  },
+  {
+   "number": "H65 internal random holdout | hvg_pca64",
+   "unit": "Spearman",
+   "v2b": 0.7263266799620789,
+   "v3": 0.7263266799620789,
+   "change": 0.0
+  },
+  {
+   "number": "H65 internal donor holdout | hvg_pca64",
+   "unit": "Spearman",
+   "v2b": 0.6763634877628603,
+   "v3": 0.6763634877628603,
+   "change": 0.0
+  },
+  {
+   "number": "H65 internal branch holdout | hvg_pca64",
+   "unit": "Spearman, plain mean over branches",
+   "v2b": 0.35362596470590796,
+   "v3": 0.35362596470590796,
+   "change": 0.0
+  },
+  {
+   "number": "H65 internal branch holdout, diff cell type | hvg_pca64",
+   "unit": "Spearman",
+   "v2b": 0.0879186823994107,
+   "v3": 0.0879186823994107,
+   "change": 0.0
+  },
+  {
+   "number": "H65 external frozen trust | hvg_pca64",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": 0.8594860388985173,
+   "v3": 0.8594860388985173,
+   "change": 0.0
+  },
+  {
+   "number": "H65 external frozen random | hvg_pca64",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": 0.7720778859248721,
+   "v3": 0.7720778859248721,
+   "change": 0.0
+  },
+  {
+   "number": "H65 external frozen donor | hvg_pca64",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": 0.7899680944469102,
+   "v3": 0.7899680944469102,
+   "change": 0.0
+  },
+  {
+   "number": "H65 external frozen branch | hvg_pca64",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": 0.36724595129541643,
+   "v3": 0.36724595129541643,
+   "change": 0.0
+  },
+  {
+   "number": "H65 external frozen branch_diff_ct | hvg_pca64",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": -0.011295646183048694,
+   "v3": -0.011295646183048694,
+   "change": 0.0
+  },
+  {
+   "number": "H65 external frozen global | hvg_pca64",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": 0.7632826651838377,
+   "v3": 0.7632826651838377,
+   "change": 0.0
+  },
+  {
+   "number": "H65 external frozen global_diff_ct | hvg_pca64",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": 0.7199948156799508,
+   "v3": 0.7199948156799508,
+   "change": 0.0
+  },
+  {
+   "number": "H65 zeroshot frozen trust | hvg_pca64",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": 0.7679744525547445,
+   "v3": 0.7679744525547445,
+   "change": 0.0
+  },
+  {
+   "number": "H65 zeroshot frozen random | hvg_pca64",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": 0.7796456133578051,
+   "v3": 0.7796456133578051,
+   "change": 0.0
+  },
+  {
+   "number": "H65 zeroshot frozen donor | hvg_pca64",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": 0.6700332322253728,
+   "v3": 0.6700332322253728,
+   "change": 0.0
+  },
+  {
+   "number": "H65 zeroshot frozen branch | hvg_pca64",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": 0.030034047570847988,
+   "v3": 0.030034047570847988,
+   "change": 0.0
+  },
+  {
+   "number": "H65 zeroshot frozen branch_diff_ct | hvg_pca64",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": -0.060456179096196654,
+   "v3": -0.060456179096196654,
+   "change": 0.0
+  },
+  {
+   "number": "H65 zeroshot frozen global | hvg_pca64",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": 0.7570619110136941,
+   "v3": 0.7570619110136941,
+   "change": 0.0
+  },
+  {
+   "number": "H65 zeroshot frozen global_diff_ct | hvg_pca64",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": 0.746184198619881,
+   "v3": 0.746184198619881,
+   "change": 0.0
+  },
+  {
+   "number": "H65 lung_nonhema frozen trust | hvg_pca64",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": 0.7549135802469136,
+   "v3": 0.7549135802469136,
+   "change": 0.0
+  },
+  {
+   "number": "H65 lung_nonhema frozen random | hvg_pca64",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": 0.10045613982813664,
+   "v3": 0.10045613982813664,
+   "change": 0.0
+  },
+  {
+   "number": "H65 lung_nonhema frozen donor | hvg_pca64",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": 0.04315093120894688,
+   "v3": 0.04315093120894688,
+   "change": 0.0
+  },
+  {
+   "number": "H65 lung_nonhema frozen branch | hvg_pca64",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": -0.14404065060231797,
+   "v3": -0.14404065060231797,
+   "change": 0.0
+  },
+  {
+   "number": "H65 lung_nonhema frozen branch_diff_ct | hvg_pca64",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": -0.11119446432020297,
+   "v3": -0.11119446432020297,
+   "change": 0.0
+  },
+  {
+   "number": "H65 lung_nonhema frozen global | hvg_pca64",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": 0.06828591729409013,
+   "v3": 0.06828591729409013,
+   "change": 0.0
+  },
+  {
+   "number": "H65 lung_nonhema frozen global_diff_ct | hvg_pca64",
+   "unit": "Spearman (trust: trustworthiness)",
+   "v2b": 0.06389764541981635,
+   "v3": 0.06389764541981635,
+   "change": 0.0
+  },
+  {
+   "number": "H38 internal trust | maxtoki",
+   "unit": "",
+   "v2b": 0.813508064516129,
+   "v3": 0.8005320340501793,
+   "change": -0.01297603046594975
+  },
+  {
+   "number": "H38 internal random | maxtoki",
+   "unit": "",
+   "v2b": 0.7614337028842301,
+   "v3": 0.7580765484785408,
+   "change": -0.003357154405689289
+  },
+  {
+   "number": "H38 internal donor | maxtoki",
+   "unit": "",
+   "v2b": 0.6728153864579443,
+   "v3": 0.5994991606159367,
+   "change": -0.07331622584200759
+  },
+  {
+   "number": "H38 internal cat | maxtoki",
+   "unit": "",
+   "v2b": 0.2877468817186868,
+   "v3": 0.22947426469041363,
+   "change": -0.05827261702827316
+  },
+  {
+   "number": "H38 external frozen trust | maxtoki",
+   "unit": "",
+   "v2b": 0.8827922573722116,
+   "v3": 0.8781462679791163,
+   "change": -0.00464598939309524
+  },
+  {
+   "number": "H38 external frozen random | maxtoki",
+   "unit": "",
+   "v2b": 0.8027689124567582,
+   "v3": 0.802945726036949,
+   "change": 0.0001768135801908377
+  },
+  {
+   "number": "H38 external frozen donor | maxtoki",
+   "unit": "",
+   "v2b": 0.7588308836487697,
+   "v3": 0.7698927437031022,
+   "change": 0.011061860054332517
+  },
+  {
+   "number": "H38 external frozen category | maxtoki",
+   "unit": "",
+   "v2b": 0.5939387887806408,
+   "v3": 0.6082341015562895,
+   "change": 0.014295312775648772
+  },
+  {
+   "number": "H38 zeroshot frozen trust | maxtoki",
+   "unit": "",
+   "v2b": 0.7865437361620568,
+   "v3": 0.7827104193516408,
+   "change": -0.0038333168104159876
+  },
+  {
+   "number": "H38 zeroshot frozen random | maxtoki",
+   "unit": "",
+   "v2b": 0.7468825111989683,
+   "v3": 0.7368162042376027,
+   "change": -0.010066306961365568
+  },
+  {
+   "number": "H38 zeroshot frozen donor | maxtoki",
+   "unit": "",
+   "v2b": 0.5907064673942526,
+   "v3": 0.680244918639445,
+   "change": 0.08953845124519244
+  },
+  {
+   "number": "H38 zeroshot frozen category | maxtoki",
+   "unit": "",
+   "v2b": 0.5852414322226771,
+   "v3": 0.5556634766004213,
+   "change": -0.029577955622255847
+  },
+  {
+   "number": "H95 internal trust | maxtoki",
+   "unit": "",
+   "v2b": 0.799440401940402,
+   "v3": 0.8018121968121968,
+   "change": 0.002371794871794841
+  },
+  {
+   "number": "H95 internal random | maxtoki",
+   "unit": "",
+   "v2b": 0.7848074682583253,
+   "v3": 0.7899593316328978,
+   "change": 0.005151863374572518
+  },
+  {
+   "number": "H95 internal donor | maxtoki",
+   "unit": "",
+   "v2b": 0.6572888958724519,
+   "v3": 0.7237184782170881,
+   "change": 0.06642958234463625
+  },
+  {
+   "number": "H95 internal cat | maxtoki",
+   "unit": "",
+   "v2b": NaN,
+   "v3": NaN,
+   "change": NaN
+  },
+  {
+   "number": "H95 external frozen trust | maxtoki",
+   "unit": "",
+   "v2b": 0.8884614132734433,
+   "v3": 0.8324624693045746,
+   "change": -0.05599894396886873
+  },
+  {
+   "number": "H95 external frozen random | maxtoki",
+   "unit": "",
+   "v2b": 0.8064219507951194,
+   "v3": 0.8066876159100215,
+   "change": 0.00026566511490211386
+  },
+  {
+   "number": "H95 external frozen donor | maxtoki",
+   "unit": "",
+   "v2b": 0.8123776085753512,
+   "v3": 0.8123401425123187,
+   "change": -3.746606303256517e-05
+  },
+  {
+   "number": "H95 external frozen category | maxtoki",
+   "unit": "",
+   "v2b": 0.1550557045216732,
+   "v3": 0.20570179517250362,
+   "change": 0.05064609065083042
+  },
+  {
+   "number": "H95 zeroshot frozen trust | maxtoki",
+   "unit": "",
+   "v2b": 0.817426400759734,
+   "v3": 0.7770180436847103,
+   "change": -0.04040835707502377
+  },
+  {
+   "number": "H95 zeroshot frozen random | maxtoki",
+   "unit": "",
+   "v2b": 0.8059730137177137,
+   "v3": 0.8061345522374479,
+   "change": 0.00016153851973421673
+  },
+  {
+   "number": "H95 zeroshot frozen donor | maxtoki",
+   "unit": "",
+   "v2b": 0.7943032488685585,
+   "v3": 0.7947141297481365,
+   "change": 0.00041088087957796837
+  },
+  {
+   "number": "H95 zeroshot frozen category | maxtoki",
+   "unit": "",
+   "v2b": 0.04237767314039376,
+   "v3": -0.006080179089743564,
+   "change": -0.04845785223013732
+  },
+  {
+   "number": "H103 internal trust | maxtoki",
+   "unit": "",
+   "v2b": 0.8601346801346801,
+   "v3": 0.8620875420875421,
+   "change": 0.0019528619528620395
+  },
+  {
+   "number": "H103 internal random | maxtoki",
+   "unit": "",
+   "v2b": 0.8609543262117892,
+   "v3": 0.8609543262117892,
+   "change": 0.0
+  },
+  {
+   "number": "H103 internal donor | maxtoki",
+   "unit": "",
+   "v2b": 0.8607226240279782,
+   "v3": 0.8607226240279782,
+   "change": 0.0
+  },
+  {
+   "number": "H103 internal cat | maxtoki",
+   "unit": "",
+   "v2b": NaN,
+   "v3": NaN,
+   "change": NaN
+  },
+  {
+   "number": "H103 external frozen trust | maxtoki",
+   "unit": "",
+   "v2b": 0.8772069409714329,
+   "v3": 0.8433734939759037,
+   "change": -0.03383344699552926
+  },
+  {
+   "number": "H103 external frozen random | maxtoki",
+   "unit": "",
+   "v2b": 0.8584149027136343,
+   "v3": 0.8584148750970977,
+   "change": -2.7616536613095377e-08
+  },
+  {
+   "number": "H103 external frozen donor | maxtoki",
+   "unit": "",
+   "v2b": 0.8589515692314038,
+   "v3": 0.8589517171222291,
+   "change": 1.478908252527944e-07
+  },
+  {
+   "number": "H103 external frozen category | maxtoki",
+   "unit": "",
+   "v2b": NaN,
+   "v3": NaN,
+   "change": NaN
+  },
+  {
+   "number": "H103 zeroshot frozen trust | maxtoki",
+   "unit": "",
+   "v2b": NaN,
+   "v3": NaN,
+   "change": NaN
+  },
+  {
+   "number": "H103 zeroshot frozen random | maxtoki",
+   "unit": "",
+   "v2b": 0.8643569005306648,
+   "v3": 0.8643569005306648,
+   "change": 0.0
+  },
+  {
+   "number": "H103 zeroshot frozen donor | maxtoki",
+   "unit": "",
+   "v2b": 0.8574713802163146,
+   "v3": 0.8574713802163146,
+   "change": 0.0
+  },
+  {
+   "number": "H103 zeroshot frozen category | maxtoki",
+   "unit": "",
+   "v2b": NaN,
+   "v3": NaN,
+   "change": NaN
+  },
+  {
+   "number": "H65 run null internal trust | maxtoki",
+   "unit": "",
+   "v2b": 0.7985001506737268,
+   "v3": 0.7986327435533169,
+   "change": 0.0001325928795901099
+  },
+  {
+   "number": "H65 run null internal branch | maxtoki",
+   "unit": "",
+   "v2b": -0.0034553064794525155,
+   "v3": -0.008110061855022352,
+   "change": -0.004654755375569836
+  },
+  {
+   "number": "structured null p | maxtoki | internal_branch",
+   "unit": "one-sided p, refit null",
+   "v2b": 0.5238095238095238,
+   "v3": 0.38095238095238093,
+   "change": -0.1428571428571429
+  },
+  {
+   "number": "structured null mean | maxtoki | internal_branch",
+   "unit": "",
+   "v2b": 0.38143240653963373,
+   "v3": 0.3839533244736192,
+   "change": 0.002520917933985456
+  },
+  {
+   "number": "structured null p | maxtoki | external_branch",
+   "unit": "one-sided p, refit null",
+   "v2b": 0.1951219512195122,
+   "v3": 0.14634146341463414,
+   "change": -0.048780487804878064
+  },
+  {
+   "number": "structured null mean | maxtoki | external_branch",
+   "unit": "",
+   "v2b": 0.2561713118945774,
+   "v3": 0.3317058355830168,
+   "change": 0.07553452368843938
+  },
+  {
+   "number": "structured null p | maxtoki | external_global",
+   "unit": "one-sided p, refit null",
+   "v2b": 0.21951219512195122,
+   "v3": 0.2926829268292683,
+   "change": 0.07317073170731705
+  },
+  {
+   "number": "structured null mean | maxtoki | external_global",
+   "unit": "",
+   "v2b": 0.8626835865637237,
+   "v3": 0.842604349650719,
+   "change": -0.020079236913004728
+  },
+  {
+   "number": "structured null p | maxtoki | zeroshot_branch",
+   "unit": "one-sided p, refit null",
+   "v2b": 0.24390243902439024,
+   "v3": 0.2682926829268293,
+   "change": 0.024390243902439046
+  },
+  {
+   "number": "structured null mean | maxtoki | zeroshot_branch",
+   "unit": "",
+   "v2b": 0.19311437535591955,
+   "v3": 0.12362485564284129,
+   "change": -0.06948951971307826
+  },
+  {
+   "number": "structured null p | maxtoki | zeroshot_global",
+   "unit": "one-sided p, refit null",
+   "v2b": 0.04878048780487805,
+   "v3": 0.14634146341463414,
+   "change": 0.09756097560975609
+  },
+  {
+   "number": "structured null mean | maxtoki | zeroshot_global",
+   "unit": "",
+   "v2b": 0.8603438026741426,
+   "v3": 0.8309630355310826,
+   "change": -0.029380767143059927
+  },
+  {
+   "number": "structured null p | maxtoki | trust",
+   "unit": "one-sided p, refit null",
+   "v2b": 0.36585365853658536,
+   "v3": 0.024390243902439025,
+   "change": -0.3414634146341463
+  },
+  {
+   "number": "structured null mean | maxtoki | trust",
+   "unit": "",
+   "v2b": 0.807831051702613,
+   "v3": 0.8045222566619312,
+   "change": -0.0033087950406818223
+  },
+  {
+   "number": "structured null p | maxtoki | external_branch_diff_ct",
+   "unit": "one-sided p, refit null",
+   "v2b": 0.7560975609756098,
+   "v3": 0.7073170731707317,
+   "change": -0.04878048780487809
+  },
+  {
+   "number": "structured null mean | maxtoki | external_branch_diff_ct",
+   "unit": "",
+   "v2b": 0.12127612341439742,
+   "v3": 0.09871083386075791,
+   "change": -0.02256528955363951
+  },
+  {
+   "number": "structured null p | lookup_ct_s0 | internal_branch",
+   "unit": "one-sided p, refit null",
+   "v2b": 0.6666666666666666,
+   "v3": 0.6666666666666666,
+   "change": 0.0
+  },
+  {
+   "number": "structured null mean | lookup_ct_s0 | internal_branch",
+   "unit": "",
+   "v2b": 0.3877381386104334,
+   "v3": 0.3877381386104334,
+   "change": 0.0
+  },
+  {
+   "number": "structured null p | lookup_ct_s0 | external_branch",
+   "unit": "one-sided p, refit null",
+   "v2b": 0.8536585365853658,
+   "v3": 0.8536585365853658,
+   "change": 0.0
+  },
+  {
+   "number": "structured null mean | lookup_ct_s0 | external_branch",
+   "unit": "",
+   "v2b": 0.3693160910777099,
+   "v3": 0.3693160910777099,
+   "change": 0.0
+  },
+  {
+   "number": "structured null p | lookup_ct_s0 | external_global",
+   "unit": "one-sided p, refit null",
+   "v2b": 0.8292682926829268,
+   "v3": 0.8292682926829268,
+   "change": 0.0
+  },
+  {
+   "number": "structured null mean | lookup_ct_s0 | external_global",
+   "unit": "",
+   "v2b": 0.8393477145624291,
+   "v3": 0.8393477145624291,
+   "change": 0.0
+  },
+  {
+   "number": "structured null p | lookup_ct_s0 | zeroshot_branch",
+   "unit": "one-sided p, refit null",
+   "v2b": 0.6097560975609756,
+   "v3": 0.6097560975609756,
+   "change": 0.0
+  },
+  {
+   "number": "structured null mean | lookup_ct_s0 | zeroshot_branch",
+   "unit": "",
+   "v2b": 0.3354543688256998,
+   "v3": 0.3354543688256998,
+   "change": 0.0
+  },
+  {
+   "number": "structured null p | lookup_ct_s0 | zeroshot_global",
+   "unit": "one-sided p, refit null",
+   "v2b": 0.2682926829268293,
+   "v3": 0.2682926829268293,
+   "change": 0.0
+  },
+  {
+   "number": "structured null mean | lookup_ct_s0 | zeroshot_global",
+   "unit": "",
+   "v2b": 0.7977180362511682,
+   "v3": 0.7977180362511682,
+   "change": 0.0
+  },
+  {
+   "number": "structured null p | lookup_ct_s0 | trust",
+   "unit": "one-sided p, refit null",
+   "v2b": 0.975609756097561,
+   "v3": 0.975609756097561,
+   "change": 0.0
+  },
+  {
+   "number": "structured null mean | lookup_ct_s0 | trust",
+   "unit": "",
+   "v2b": 0.8101397821688405,
+   "v3": 0.8101397821688405,
+   "change": 0.0
+  },
+  {
+   "number": "structured null p | lookup_ct_s0 | external_branch_diff_ct",
+   "unit": "one-sided p, refit null",
+   "v2b": 0.7317073170731707,
+   "v3": 0.7317073170731707,
+   "change": 0.0
+  },
+  {
+   "number": "structured null mean | lookup_ct_s0 | external_branch_diff_ct",
+   "unit": "",
+   "v2b": 0.15356438641975334,
+   "v3": 0.15356438641975334,
+   "change": 0.0
+  },
+  {
+   "number": "structured null p | tokenbag_pca64 | internal_branch",
+   "unit": "one-sided p, refit null",
+   "v2b": 0.42857142857142855,
+   "v3": 0.6190476190476191,
+   "change": 0.19047619047619052
+  },
+  {
+   "number": "structured null mean | tokenbag_pca64 | internal_branch",
+   "unit": "",
+   "v2b": 0.4046419341962554,
+   "v3": 0.43743881607242113,
+   "change": 0.03279688187616575
+  },
+  {
+   "number": "structured null p | tokenbag_pca64 | external_branch",
+   "unit": "one-sided p, refit null",
+   "v2b": 0.14634146341463414,
+   "v3": 0.12195121951219512,
+   "change": -0.02439024390243902
+  },
+  {
+   "number": "structured null mean | tokenbag_pca64 | external_branch",
+   "unit": "",
+   "v2b": 0.34605887518460954,
+   "v3": 0.317224297801541,
+   "change": -0.02883457738306855
+  },
+  {
+   "number": "structured null p | tokenbag_pca64 | external_global",
+   "unit": "one-sided p, refit null",
+   "v2b": 0.3902439024390244,
+   "v3": 0.4634146341463415,
+   "change": 0.07317073170731708
+  },
+  {
+   "number": "structured null mean | tokenbag_pca64 | external_global",
+   "unit": "",
+   "v2b": 0.8660917787466922,
+   "v3": 0.8414181765969394,
+   "change": -0.024673602149752782
+  },
+  {
+   "number": "structured null p | tokenbag_pca64 | zeroshot_branch",
+   "unit": "one-sided p, refit null",
+   "v2b": 0.3170731707317073,
+   "v3": 0.5609756097560976,
+   "change": 0.2439024390243903
+  },
+  {
+   "number": "structured null mean | tokenbag_pca64 | zeroshot_branch",
+   "unit": "",
+   "v2b": 0.23824780689986694,
+   "v3": 0.1436308524621045,
+   "change": -0.09461695443776244
+  },
+  {
+   "number": "structured null p | tokenbag_pca64 | zeroshot_global",
+   "unit": "one-sided p, refit null",
+   "v2b": 0.07317073170731707,
+   "v3": 0.14634146341463414,
+   "change": 0.07317073170731707
+  },
+  {
+   "number": "structured null mean | tokenbag_pca64 | zeroshot_global",
+   "unit": "",
+   "v2b": 0.8460989786382704,
+   "v3": 0.7836431948821467,
+   "change": -0.062455783756123706
+  },
+  {
+   "number": "structured null p | tokenbag_pca64 | trust",
+   "unit": "one-sided p, refit null",
+   "v2b": 0.8048780487804879,
+   "v3": 0.7804878048780488,
+   "change": -0.024390243902439046
+  },
+  {
+   "number": "structured null mean | tokenbag_pca64 | trust",
+   "unit": "",
+   "v2b": 0.7134185070386154,
+   "v3": 0.7091998148865641,
+   "change": -0.004218692152051284
+  },
+  {
+   "number": "structured null p | tokenbag_pca64 | external_branch_diff_ct",
+   "unit": "one-sided p, refit null",
+   "v2b": 0.5609756097560976,
+   "v3": 0.7317073170731707,
+   "change": 0.1707317073170731
+  },
+  {
+   "number": "structured null mean | tokenbag_pca64 | external_branch_diff_ct",
+   "unit": "",
+   "v2b": 0.025852806456355258,
+   "v3": 0.028893326856148115,
+   "change": 0.0030405203997928565
+  },
+  {
+   "number": "structured null p | hvg_pca64 | internal_branch",
+   "unit": "one-sided p, refit null",
+   "v2b": 0.42857142857142855,
+   "v3": 0.42857142857142855,
+   "change": 0.0
+  },
+  {
+   "number": "structured null mean | hvg_pca64 | internal_branch",
+   "unit": "",
+   "v2b": 0.33643297127665284,
+   "v3": 0.33643297127665284,
+   "change": 0.0
+  },
+  {
+   "number": "structured null p | hvg_pca64 | external_branch",
+   "unit": "one-sided p, refit null",
+   "v2b": 0.14634146341463414,
+   "v3": 0.14634146341463414,
+   "change": 0.0
+  },
+  {
+   "number": "structured null mean | hvg_pca64 | external_branch",
+   "unit": "",
+   "v2b": 0.2943062466251331,
+   "v3": 0.2943062466251331,
+   "change": 0.0
+  },
+  {
+   "number": "structured null p | hvg_pca64 | external_global",
+   "unit": "one-sided p, refit null",
+   "v2b": 0.5365853658536586,
+   "v3": 0.5365853658536586,
+   "change": 0.0
+  },
+  {
+   "number": "structured null mean | hvg_pca64 | external_global",
+   "unit": "",
+   "v2b": 0.7621095441318853,
+   "v3": 0.7621095441318853,
+   "change": 0.0
+  },
+  {
+   "number": "structured null p | hvg_pca64 | zeroshot_branch",
+   "unit": "one-sided p, refit null",
+   "v2b": 0.34146341463414637,
+   "v3": 0.34146341463414637,
+   "change": 0.0
+  },
+  {
+   "number": "structured null mean | hvg_pca64 | zeroshot_branch",
+   "unit": "",
+   "v2b": -0.004809992977034499,
+   "v3": -0.004809992977034499,
+   "change": 0.0
+  },
+  {
+   "number": "structured null p | hvg_pca64 | zeroshot_global",
+   "unit": "one-sided p, refit null",
+   "v2b": 0.36585365853658536,
+   "v3": 0.36585365853658536,
+   "change": 0.0
+  },
+  {
+   "number": "structured null mean | hvg_pca64 | zeroshot_global",
+   "unit": "",
+   "v2b": 0.7440168206255883,
+   "v3": 0.7440168206255883,
+   "change": 0.0
+  },
+  {
+   "number": "structured null p | hvg_pca64 | trust",
+   "unit": "one-sided p, refit null",
+   "v2b": 0.8780487804878049,
+   "v3": 0.8780487804878049,
+   "change": 0.0
+  },
+  {
+   "number": "structured null mean | hvg_pca64 | trust",
+   "unit": "",
+   "v2b": 0.7259158164363512,
+   "v3": 0.7259158164363512,
+   "change": 0.0
+  },
+  {
+   "number": "structured null p | hvg_pca64 | external_branch_diff_ct",
+   "unit": "one-sided p, refit null",
+   "v2b": 0.6341463414634146,
+   "v3": 0.6341463414634146,
+   "change": 0.0
+  },
+  {
+   "number": "structured null mean | hvg_pca64 | external_branch_diff_ct",
+   "unit": "",
+   "v2b": 0.03560279079654173,
+   "v3": 0.03560279079654173,
+   "change": 0.0
+  },
+  {
+   "number": "boot_external_global | global|maxtoki_minus_lookup | observed",
+   "unit": "donor bootstrap 95% percentile",
+   "v2b": 0.081079194982009,
+   "v3": 0.06441186036613722,
+   "change": -0.016667334615871776
+  },
+  {
+   "number": "boot_external_global | global|maxtoki_minus_lookup | lo",
+   "unit": "donor bootstrap 95% percentile",
+   "v2b": 0.062217236816776676,
+   "v3": 0.05003194111988006,
+   "change": -0.012185295696896616
+  },
+  {
+   "number": "boot_external_global | global|maxtoki_minus_lookup | hi",
+   "unit": "donor bootstrap 95% percentile",
+   "v2b": 0.10426206615902545,
+   "v3": 0.09130314627227756,
+   "change": -0.012958919886747883
+  },
+  {
+   "number": "boot_external_global | global|maxtoki_minus_tokenbag | observed",
+   "unit": "donor bootstrap 95% percentile",
+   "v2b": 0.006549463479781692,
+   "v3": 0.016169706344133394,
+   "change": 0.009620242864351702
+  },
+  {
+   "number": "boot_external_global | global|maxtoki_minus_tokenbag | lo",
+   "unit": "donor bootstrap 95% percentile",
+   "v2b": -0.010708305497557125,
+   "v3": 0.001771266118120607,
+   "change": 0.012479571615677733
+  },
+  {
+   "number": "boot_external_global | global|maxtoki_minus_tokenbag | hi",
+   "unit": "donor bootstrap 95% percentile",
+   "v2b": 0.032864635463638,
+   "v3": 0.046140834623574926,
+   "change": 0.013276199159936927
+  },
+  {
+   "number": "boot_external_global | global|maxtoki_minus_hvg | observed",
+   "unit": "donor bootstrap 95% percentile",
+   "v2b": 0.11883736694296754,
+   "v3": 0.10217003232709576,
+   "change": -0.016667334615871776
+  },
+  {
+   "number": "boot_external_global | global|maxtoki_minus_hvg | lo",
+   "unit": "donor bootstrap 95% percentile",
+   "v2b": 0.08366501615346732,
+   "v3": 0.07337373692013686,
+   "change": -0.010291279233330453
+  },
+  {
+   "number": "boot_external_global | global|maxtoki_minus_hvg | hi",
+   "unit": "donor bootstrap 95% percentile",
+   "v2b": 0.15970018820277745,
+   "v3": 0.13957032886986864,
+   "change": -0.02012985933290881
+  },
+  {
+   "number": "boot_external_global | global|maxtoki | observed",
+   "unit": "donor bootstrap 95% percentile",
+   "v2b": 0.8821200321268053,
+   "v3": 0.8654526975109336,
+   "change": -0.016667334615871776
+  },
+  {
+   "number": "boot_external_global | global|maxtoki | lo",
+   "unit": "donor bootstrap 95% percentile",
+   "v2b": 0.8606717077707529,
+   "v3": 0.8391945582251923,
+   "change": -0.02147714954556057
+  },
+  {
+   "number": "boot_external_global | global|maxtoki | hi",
+   "unit": "donor bootstrap 95% percentile",
+   "v2b": 0.9000843173545877,
+   "v3": 0.8961192834180264,
+   "change": -0.003965033936561335
+  },
+  {
+   "number": "boot_external_global | global_diff_ct|maxtoki_minus_tokenbag | observed",
+   "unit": "donor bootstrap 95% percentile",
+   "v2b": 0.005471404388967427,
+   "v3": 0.015368828893491782,
+   "change": 0.009897424504524355
+  },
+  {
+   "number": "boot_external_global | global_diff_ct|maxtoki_minus_tokenbag | lo",
+   "unit": "donor bootstrap 95% percentile",
+   "v2b": -0.015323074056870495,
+   "v3": -0.00048194552226081544,
+   "change": 0.01484112853460968
+  },
+  {
+   "number": "boot_external_global | global_diff_ct|maxtoki_minus_tokenbag | hi",
+   "unit": "donor bootstrap 95% percentile",
+   "v2b": 0.03492106633841043,
+   "v3": 0.04674163290953187,
+   "change": 0.01182056657112144
+  },
+  {
+   "number": "boot_zeroshot_global | global|maxtoki_minus_lookup | observed",
+   "unit": "donor bootstrap 95% percentile",
+   "v2b": 0.12256789486339359,
+   "v3": 0.09066800062362412,
+   "change": -0.031899894239769466
+  },
+  {
+   "number": "boot_zeroshot_global | global|maxtoki_minus_lookup | lo",
+   "unit": "donor bootstrap 95% percentile",
+   "v2b": 0.05004413458430295,
+   "v3": 0.02657705144301143,
+   "change": -0.02346708314129152
+  },
+  {
+   "number": "boot_zeroshot_global | global|maxtoki_minus_lookup | hi",
+   "unit": "donor bootstrap 95% percentile",
+   "v2b": 0.18767157450097863,
+   "v3": 0.16293114485501373,
+   "change": -0.0247404296459649
+  },
+  {
+   "number": "boot_zeroshot_global | global|maxtoki_minus_tokenbag | observed",
+   "unit": "donor bootstrap 95% percentile",
+   "v2b": 0.01959526535615086,
+   "v3": 0.04786119663726929,
+   "change": 0.028265931281118428
+  },
+  {
+   "number": "boot_zeroshot_global | global|maxtoki_minus_tokenbag | lo",
+   "unit": "donor bootstrap 95% percentile",
+   "v2b": 0.0013691397230063383,
+   "v3": 0.009396330450388141,
+   "change": 0.008027190727381802
+  },
+  {
+   "number": "boot_zeroshot_global | global|maxtoki_minus_tokenbag | hi",
+   "unit": "donor bootstrap 95% percentile",
+   "v2b": 0.04153321239906749,
+   "v3": 0.14899667789599186,
+   "change": 0.10746346549692437
+  },
+  {
+   "number": "boot_zeroshot_global | global|maxtoki_minus_hvg | observed",
+   "unit": "donor bootstrap 95% percentile",
+   "v2b": 0.14191294914493058,
+   "v3": 0.11001305490516111,
+   "change": -0.031899894239769466
+  },
+  {
+   "number": "boot_zeroshot_global | global|maxtoki_minus_hvg | lo",
+   "unit": "donor bootstrap 95% percentile",
+   "v2b": 0.06474038222793693,
+   "v3": 0.037708162223048944,
+   "change": -0.02703222000488799
+  },
+  {
+   "number": "boot_zeroshot_global | global|maxtoki_minus_hvg | hi",
+   "unit": "donor bootstrap 95% percentile",
+   "v2b": 0.18361316115909415,
+   "v3": 0.1505196472722769,
+   "change": -0.03309351388681725
+  },
+  {
+   "number": "boot_zeroshot_global | global|maxtoki | observed",
+   "unit": "donor bootstrap 95% percentile",
+   "v2b": 0.8989748601586248,
+   "v3": 0.8670749659188554,
+   "change": -0.031899894239769466
+  },
+  {
+   "number": "boot_zeroshot_global | global|maxtoki | lo",
+   "unit": "donor bootstrap 95% percentile",
+   "v2b": 0.8424772161903457,
+   "v3": 0.827752075025887,
+   "change": -0.014725141164458666
+  },
+  {
+   "number": "boot_zeroshot_global | global|maxtoki | hi",
+   "unit": "donor bootstrap 95% percentile",
+   "v2b": 0.9172409890454928,
+   "v3": 0.8876642393370244,
+   "change": -0.029576749708468353
+  },
+  {
+   "number": "boot_zeroshot_global | global_diff_ct|maxtoki_minus_tokenbag | observed",
+   "unit": "donor bootstrap 95% percentile",
+   "v2b": 0.019977019266429252,
+   "v3": 0.043939433456700816,
+   "change": 0.023962414190271564
+  },
+  {
+   "number": "boot_zeroshot_global | global_diff_ct|maxtoki_minus_tokenbag | lo",
+   "unit": "donor bootstrap 95% percentile",
+   "v2b": -0.0007003205832240594,
+   "v3": 0.008063951973042934,
+   "change": 0.008764272556266994
+  },
+  {
+   "number": "boot_zeroshot_global | global_diff_ct|maxtoki_minus_tokenbag | hi",
+   "unit": "donor bootstrap 95% percentile",
+   "v2b": 0.04554014973568116,
+   "v3": 0.14037764944837874,
+   "change": 0.09483749971269759
+  },
+  {
+   "number": "boot_external | branch|maxtoki_minus_lookup | observed",
+   "unit": "donor bootstrap 95% percentile",
+   "v2b": 0.004549636690996117,
+   "v3": 0.07541269368138342,
+   "change": 0.07086305699038731
+  },
+  {
+   "number": "boot_external | branch|maxtoki_minus_lookup | lo",
+   "unit": "donor bootstrap 95% percentile",
+   "v2b": -0.20255742990372308,
+   "v3": -0.037716963349513445,
+   "change": 0.16484046655420964
+  },
+  {
+   "number": "boot_external | branch|maxtoki_minus_lookup | hi",
+   "unit": "donor bootstrap 95% percentile",
+   "v2b": 0.15762849688910646,
+   "v3": 0.13816476549444492,
+   "change": -0.019463731394661538
+  },
+  {
+   "number": "boot_external | branch|maxtoki_minus_tokenbag | observed",
+   "unit": "donor bootstrap 95% percentile",
+   "v2b": -0.07529686174391026,
+   "v3": 0.030976815600486818,
+   "change": 0.10627367734439708
+  },
+  {
+   "number": "boot_external | branch|maxtoki_minus_tokenbag | lo",
+   "unit": "donor bootstrap 95% percentile",
+   "v2b": -0.29250128047150015,
+   "v3": -0.067353614404283,
+   "change": 0.22514766606721714
+  },
+  {
+   "number": "boot_external | branch|maxtoki_minus_tokenbag | hi",
+   "unit": "donor bootstrap 95% percentile",
+   "v2b": 0.062129484185047844,
+   "v3": 0.09440710377142075,
+   "change": 0.03227761958637291
+  },
+  {
+   "number": "boot_external | branch|maxtoki_minus_hvg | observed",
+   "unit": "donor bootstrap 95% percentile",
+   "v2b": -0.020803197822685693,
+   "v3": 0.050059859167701615,
+   "change": 0.07086305699038731
+  },
+  {
+   "number": "boot_external | branch|maxtoki_minus_hvg | lo",
+   "unit": "donor bootstrap 95% percentile",
+   "v2b": -0.23974616669546697,
+   "v3": -0.061833974206701434,
+   "change": 0.17791219248876555
+  },
+  {
+   "number": "boot_external | branch|maxtoki_minus_hvg | hi",
+   "unit": "donor bootstrap 95% percentile",
+   "v2b": 0.1145943377052474,
+   "v3": 0.11093442547194142,
+   "change": -0.003659912233305987
+  },
+  {
+   "number": "boot_external | branch|maxtoki | observed",
+   "unit": "donor bootstrap 95% percentile",
+   "v2b": 0.34644275347273074,
+   "v3": 0.41730581046311804,
+   "change": 0.07086305699038731
+  },
+  {
+   "number": "boot_external | branch|maxtoki | lo",
+   "unit": "donor bootstrap 95% percentile",
+   "v2b": 0.1456527586891262,
+   "v3": 0.2971378924988999,
+   "change": 0.1514851338097737
+  },
+  {
+   "number": "boot_external | branch|maxtoki | hi",
+   "unit": "donor bootstrap 95% percentile",
+   "v2b": 0.539667789141952,
+   "v3": 0.5316444194709176,
+   "change": -0.008023369671034453
+  },
+  {
+   "number": "boot_external | branch_diff_ct|maxtoki | observed",
+   "unit": "donor bootstrap 95% percentile",
+   "v2b": 0.049637687844402034,
+   "v3": 0.0055711767890459785,
+   "change": -0.044066511055356056
+  },
+  {
+   "number": "boot_external | branch_diff_ct|maxtoki | lo",
+   "unit": "donor bootstrap 95% percentile",
+   "v2b": -0.028210308174934164,
+   "v3": -0.09445508413634092,
+   "change": -0.06624477596140675
+  },
+  {
+   "number": "boot_external | branch_diff_ct|maxtoki | hi",
+   "unit": "donor bootstrap 95% percentile",
+   "v2b": 0.32527649052298674,
+   "v3": 0.2453492368288622,
+   "change": -0.07992725369412454
+  },
+  {
+   "number": "boot_zeroshot | branch|maxtoki_minus_lookup | observed",
+   "unit": "donor bootstrap 95% percentile",
+   "v2b": -0.05971771367889711,
+   "v3": -0.1970459926283331,
+   "change": -0.137328278949436
+  },
+  {
+   "number": "boot_zeroshot | branch|maxtoki_minus_lookup | lo",
+   "unit": "donor bootstrap 95% percentile",
+   "v2b": -0.36531209456786573,
+   "v3": -0.5674692275061863,
+   "change": -0.2021571329383206
+  },
+  {
+   "number": "boot_zeroshot | branch|maxtoki_minus_lookup | hi",
+   "unit": "donor bootstrap 95% percentile",
+   "v2b": 0.08845217566973931,
+   "v3": 0.0049577391263770755,
+   "change": -0.08349443654336224
+  },
+  {
+   "number": "boot_zeroshot | branch|maxtoki_minus_tokenbag | observed",
+   "unit": "donor bootstrap 95% percentile",
+   "v2b": 0.04655477677200143,
+   "v3": 0.04670929594411907,
+   "change": 0.00015451917211764532
+  },
+  {
+   "number": "boot_zeroshot | branch|maxtoki_minus_tokenbag | lo",
+   "unit": "donor bootstrap 95% percentile",
+   "v2b": -0.3462749829571981,
+   "v3": -0.3324633098797475,
+   "change": 0.013811673077450626
+  },
+  {
+   "number": "boot_zeroshot | branch|maxtoki_minus_tokenbag | hi",
+   "unit": "donor bootstrap 95% percentile",
+   "v2b": 0.37347241290716154,
+   "v3": 0.36261642078021905,
+   "change": -0.010855992126942493
+  },
+  {
+   "number": "boot_zeroshot | branch|maxtoki_minus_hvg | observed",
+   "unit": "donor bootstrap 95% percentile",
+   "v2b": 0.28679623404760196,
+   "v3": 0.14946795509816596,
+   "change": -0.137328278949436
+  },
+  {
+   "number": "boot_zeroshot | branch|maxtoki_minus_hvg | lo",
+   "unit": "donor bootstrap 95% percentile",
+   "v2b": -0.044300188399832116,
+   "v3": -0.17710466621677795,
+   "change": -0.13280447781694582
+  },
+  {
+   "number": "boot_zeroshot | branch|maxtoki_minus_hvg | hi",
+   "unit": "donor bootstrap 95% percentile",
+   "v2b": 0.5097713294284674,
+   "v3": 0.2981872458728204,
+   "change": -0.21158408355564695
+  },
+  {
+   "number": "boot_zeroshot | branch|maxtoki | observed",
+   "unit": "donor bootstrap 95% percentile",
+   "v2b": 0.31683028161844995,
+   "v3": 0.17950200266901395,
+   "change": -0.137328278949436
+  },
+  {
+   "number": "boot_zeroshot | branch|maxtoki | lo",
+   "unit": "donor bootstrap 95% percentile",
+   "v2b": -0.025729337802390385,
+   "v3": -0.10289792248190958,
+   "change": -0.0771685846795192
+  },
+  {
+   "number": "boot_zeroshot | branch|maxtoki | hi",
+   "unit": "donor bootstrap 95% percentile",
+   "v2b": 0.46737337288472525,
+   "v3": 0.3685316908305374,
+   "change": -0.09884168205418786
+  },
+  {
+   "number": "boot_internal_branch | branch|maxtoki_minus_lookup | observed",
+   "unit": "donor bootstrap 95% percentile",
+   "v2b": -0.021714636303432566,
+   "v3": 0.0214727217554595,
+   "change": 0.04318735805889207
+  },
+  {
+   "number": "boot_internal_branch | branch|maxtoki_minus_lookup | lo",
+   "unit": "donor bootstrap 95% percentile",
+   "v2b": -0.2134786787642992,
+   "v3": -0.39265193931374404,
+   "change": -0.17917326054944482
+  },
+  {
+   "number": "boot_internal_branch | branch|maxtoki_minus_lookup | hi",
+   "unit": "donor bootstrap 95% percentile",
+   "v2b": 0.045336576615924606,
+   "v3": 0.06329133598670415,
+   "change": 0.017954759370779547
+  },
+  {
+   "number": "boot_internal_branch | branch|maxtoki_minus_tokenbag | observed",
+   "unit": "donor bootstrap 95% percentile",
+   "v2b": -0.04616072924894393,
+   "v3": -0.01587965830386262,
+   "change": 0.030281070945081312
+  },
+  {
+   "number": "boot_internal_branch | branch|maxtoki_minus_tokenbag | lo",
+   "unit": "donor bootstrap 95% percentile",
+   "v2b": -0.27923538710626833,
+   "v3": -0.35797773155412255,
+   "change": -0.07874234444785422
+  },
+  {
+   "number": "boot_internal_branch | branch|maxtoki_minus_tokenbag | hi",
+   "unit": "donor bootstrap 95% percentile",
+   "v2b": 0.0203026125006636,
+   "v3": 0.06297349477149765,
+   "change": 0.04267088227083405
+  },
+  {
+   "number": "boot_internal_branch | branch|maxtoki_minus_hvg | observed",
+   "unit": "donor bootstrap 95% percentile",
+   "v2b": 0.016777791652101248,
+   "v3": 0.059965149710993315,
+   "change": 0.04318735805889207
+  },
+  {
+   "number": "boot_internal_branch | branch|maxtoki_minus_hvg | lo",
+   "unit": "donor bootstrap 95% percentile",
+   "v2b": -0.23555229853027876,
+   "v3": -0.347058758026944,
+   "change": -0.11150645949666527
+  },
+  {
+   "number": "boot_internal_branch | branch|maxtoki_minus_hvg | hi",
+   "unit": "donor bootstrap 95% percentile",
+   "v2b": 0.02824459442696702,
+   "v3": 0.08253999732812387,
+   "change": 0.05429540290115685
+  },
+  {
+   "number": "boot_internal_branch | branch|maxtoki | observed",
+   "unit": "donor bootstrap 95% percentile",
+   "v2b": 0.3704037377671307,
+   "v3": 0.41359109582602277,
+   "change": 0.04318735805889207
+  },
+  {
+   "number": "boot_internal_branch | branch|maxtoki | lo",
+   "unit": "donor bootstrap 95% percentile",
+   "v2b": 0.20249062547156127,
+   "v3": 0.06304917951263295,
+   "change": -0.13944144595892832
+  },
+  {
+   "number": "boot_internal_branch | branch|maxtoki | hi",
+   "unit": "donor bootstrap 95% percentile",
+   "v2b": 0.48452989977340866,
+   "v3": 0.4635204540066944,
+   "change": -0.021009445766714263
+  },
+  {
+   "number": "evalnull | maxtoki | branch_all_pairs | observed",
+   "unit": "",
+   "v2b": 0.3704037377671307,
+   "v3": 0.41359109582602277,
+   "change": 0.04318735805889207
+  },
+  {
+   "number": "evalnull | maxtoki | branch_all_pairs | null_mean",
+   "unit": "",
+   "v2b": 0.3703464015413151,
+   "v3": 0.40168654725911934,
+   "change": 0.031340145717804246
+  },
+  {
+   "number": "evalnull | maxtoki | branch_all_pairs | p_one_sided",
+   "unit": "",
+   "v2b": 0.5497251374312844,
+   "v3": 0.39080459770114945,
+   "change": -0.15892053973013492
+  },
+  {
+   "number": "evalnull | maxtoki | branch_diff_ct | observed",
+   "unit": "",
+   "v2b": 0.04715746246036318,
+   "v3": 0.06734615043299122,
+   "change": 0.020188687972628037
+  },
+  {
+   "number": "evalnull | maxtoki | branch_diff_ct | null_mean",
+   "unit": "",
+   "v2b": 0.009511930674667931,
+   "v3": 0.007358913655989229,
+   "change": -0.002153017018678702
+  },
+  {
+   "number": "evalnull | maxtoki | branch_diff_ct | p_one_sided",
+   "unit": "",
+   "v2b": 0.3778110944527736,
+   "v3": 0.2683658170914543,
+   "change": -0.10944527736131932
+  },
+  {
+   "number": "evalnull | tokenbag_pca64 | branch_all_pairs | observed",
+   "unit": "",
+   "v2b": 0.4165644670160747,
+   "v3": 0.4294707541298854,
+   "change": 0.0129062871138107
+  },
+  {
+   "number": "evalnull | tokenbag_pca64 | branch_all_pairs | null_mean",
+   "unit": "",
+   "v2b": 0.41984427887926606,
+   "v3": 0.45569171377308065,
+   "change": 0.03584743489381459
+  },
+  {
+   "number": "evalnull | tokenbag_pca64 | branch_all_pairs | p_one_sided",
+   "unit": "",
+   "v2b": 0.5057471264367817,
+   "v3": 0.7271364317841079,
+   "change": 0.22138930534732626
+  },
+  {
+   "number": "evalnull | tokenbag_pca64 | branch_diff_ct | observed",
+   "unit": "",
+   "v2b": 0.0064020171259901795,
+   "v3": -0.07828389880561494,
+   "change": -0.08468591593160513
+  },
+  {
+   "number": "evalnull | tokenbag_pca64 | branch_diff_ct | null_mean",
+   "unit": "",
+   "v2b": 0.005809319170485998,
+   "v3": 0.0021716473610101923,
+   "change": -0.0036376718094758057
+  },
+  {
+   "number": "evalnull | tokenbag_pca64 | branch_diff_ct | p_one_sided",
+   "unit": "",
+   "v2b": 0.47926036981509246,
+   "v3": 0.7866066966516742,
+   "change": 0.3073463268365817
+  },
+  {
+   "number": "evalnull | hvg_pca64 | branch_all_pairs | observed",
+   "unit": "",
+   "v2b": 0.35362594611502945,
+   "v3": 0.35362594611502945,
+   "change": 0.0
+  },
+  {
+   "number": "evalnull | hvg_pca64 | branch_all_pairs | null_mean",
+   "unit": "",
+   "v2b": 0.34305860702945506,
+   "v3": 0.34305860702945506,
+   "change": 0.0
+  },
+  {
+   "number": "evalnull | hvg_pca64 | branch_all_pairs | p_one_sided",
+   "unit": "",
+   "v2b": 0.5372313843078461,
+   "v3": 0.5372313843078461,
+   "change": 0.0
+  },
+  {
+   "number": "evalnull | hvg_pca64 | branch_diff_ct | observed",
+   "unit": "",
+   "v2b": 0.0879186823994107,
+   "v3": 0.0879186823994107,
+   "change": 0.0
+  },
+  {
+   "number": "evalnull | hvg_pca64 | branch_diff_ct | null_mean",
+   "unit": "",
+   "v2b": 0.011999053461848066,
+   "v3": 0.011999053461848066,
+   "change": 0.0
+  },
+  {
+   "number": "evalnull | hvg_pca64 | branch_diff_ct | p_one_sided",
+   "unit": "",
+   "v2b": 0.29235382308845576,
+   "v3": 0.29235382308845576,
+   "change": 0.0
+  },
+  {
+   "number": "evalnull | lookup_ct_s0 | branch_all_pairs | observed",
+   "unit": "",
+   "v2b": 0.3643998493167195,
+   "v3": 0.3643998493167195,
+   "change": 0.0
+  },
+  {
+   "number": "evalnull | lookup_ct_s0 | branch_all_pairs | null_mean",
+   "unit": "",
+   "v2b": 0.37471569710405916,
+   "v3": 0.37471569710405916,
+   "change": 0.0
+  },
+  {
+   "number": "evalnull | lookup_ct_s0 | branch_all_pairs | p_one_sided",
+   "unit": "",
+   "v2b": 0.6086956521739131,
+   "v3": 0.6086956521739131,
+   "change": 0.0
+  },
+  {
+   "number": "evalnull | lookup_ct_s0 | branch_diff_ct | observed",
+   "unit": "",
+   "v2b": 0.055771939877888844,
+   "v3": 0.055771939877888844,
+   "change": 0.0
+  },
+  {
+   "number": "evalnull | lookup_ct_s0 | branch_diff_ct | null_mean",
+   "unit": "",
+   "v2b": 0.004987283031640633,
+   "v3": 0.004987283031640633,
+   "change": 0.0
+  },
+  {
+   "number": "evalnull | lookup_ct_s0 | branch_diff_ct | p_one_sided",
+   "unit": "",
+   "v2b": 0.30484757621189407,
+   "v3": 0.30484757621189407,
+   "change": 0.0
+  },
+  {
+   "number": "lung 6161 pass rate | maxtoki | branch",
+   "unit": "share of 2,000 label draws",
+   "v2b": 0.119,
+   "v3": 0.1175,
+   "change": -0.0015000000000000013
+  },
+  {
+   "number": "lung 6161 pass rate | maxtoki | random",
+   "unit": "share of 2,000 label draws",
+   "v2b": 0.0005,
+   "v3": 0.0,
+   "change": -0.0005
+  },
+  {
+   "number": "lung 6161 pass rate | maxtoki | donor",
+   "unit": "share of 2,000 label draws",
+   "v2b": 0.0035,
+   "v3": 0.003,
+   "change": -0.0005
+  },
+  {
+   "number": "lung 6161 pass rate | maxtoki | random_donor_branch",
+   "unit": "share of 2,000 label draws",
+   "v2b": 0.0,
+   "v3": 0.0,
+   "change": 0.0
+  },
+  {
+   "number": "lung 6161 pass rate | lookup_ct_s0 | branch",
+   "unit": "share of 2,000 label draws",
+   "v2b": 0.109,
+   "v3": 0.109,
+   "change": 0.0
+  },
+  {
+   "number": "lung 6161 pass rate | lookup_ct_s0 | random",
+   "unit": "share of 2,000 label draws",
+   "v2b": 0.0,
+   "v3": 0.0,
+   "change": 0.0
+  },
+  {
+   "number": "lung 6161 pass rate | lookup_ct_s0 | donor",
+   "unit": "share of 2,000 label draws",
+   "v2b": 0.0025,
+   "v3": 0.0025,
+   "change": 0.0
+  },
+  {
+   "number": "lung 6161 pass rate | lookup_ct_s0 | random_donor_branch",
+   "unit": "share of 2,000 label draws",
+   "v2b": 0.0,
+   "v3": 0.0,
+   "change": 0.0
+  },
+  {
+   "number": "lung 6161 pass rate | tokenbag_pca64 | branch",
+   "unit": "share of 2,000 label draws",
+   "v2b": 0.1155,
+   "v3": 0.1185,
+   "change": 0.002999999999999989
+  },
+  {
+   "number": "lung 6161 pass rate | tokenbag_pca64 | random",
+   "unit": "share of 2,000 label draws",
+   "v2b": 0.002,
+   "v3": 0.001,
+   "change": -0.001
+  },
+  {
+   "number": "lung 6161 pass rate | tokenbag_pca64 | donor",
+   "unit": "share of 2,000 label draws",
+   "v2b": 0.0045,
+   "v3": 0.0055,
+   "change": 0.001
+  },
+  {
+   "number": "lung 6161 pass rate | tokenbag_pca64 | random_donor_branch",
+   "unit": "share of 2,000 label draws",
+   "v2b": 0.0,
+   "v3": 0.0,
+   "change": 0.0
+  },
+  {
+   "number": "lung 6161 pass rate | hvg_pca64 | branch",
+   "unit": "share of 2,000 label draws",
+   "v2b": 0.103,
+   "v3": 0.103,
+   "change": 0.0
+  },
+  {
+   "number": "lung 6161 pass rate | hvg_pca64 | random",
+   "unit": "share of 2,000 label draws",
+   "v2b": 0.001,
+   "v3": 0.001,
+   "change": 0.0
+  },
+  {
+   "number": "lung 6161 pass rate | hvg_pca64 | donor",
+   "unit": "share of 2,000 label draws",
+   "v2b": 0.0085,
+   "v3": 0.0085,
+   "change": 0.0
+  },
+  {
+   "number": "lung 6161 pass rate | hvg_pca64 | random_donor_branch",
+   "unit": "share of 2,000 label draws",
+   "v2b": 0.0,
+   "v3": 0.0,
+   "change": 0.0
+  },
+  {
+   "number": "lung 6262 pass rate | maxtoki | branch",
+   "unit": "share of 2,000 label draws",
+   "v2b": 0.9645,
+   "v3": 0.93,
+   "change": -0.034499999999999975
+  },
+  {
+   "number": "lung 6262 pass rate | maxtoki | random",
+   "unit": "share of 2,000 label draws",
+   "v2b": 0.1495,
+   "v3": 0.155,
+   "change": 0.005500000000000005
+  },
+  {
+   "number": "lung 6262 pass rate | maxtoki | donor",
+   "unit": "share of 2,000 label draws",
+   "v2b": 0.032,
+   "v3": 0.058,
+   "change": 0.026000000000000002
+  },
+  {
+   "number": "lung 6262 pass rate | maxtoki | random_donor_branch",
+   "unit": "share of 2,000 label draws",
+   "v2b": 0.031,
+   "v3": 0.052,
+   "change": 0.020999999999999998
+  },
+  {
+   "number": "lung 6262 pass rate | lookup_ct_s0 | branch",
+   "unit": "share of 2,000 label draws",
+   "v2b": 0.9645,
+   "v3": 0.9645,
+   "change": 0.0
+  },
+  {
+   "number": "lung 6262 pass rate | lookup_ct_s0 | random",
+   "unit": "share of 2,000 label draws",
+   "v2b": 0.1455,
+   "v3": 0.1455,
+   "change": 0.0
+  },
+  {
+   "number": "lung 6262 pass rate | lookup_ct_s0 | donor",
+   "unit": "share of 2,000 label draws",
+   "v2b": 0.0305,
+   "v3": 0.0305,
+   "change": 0.0
+  },
+  {
+   "number": "lung 6262 pass rate | lookup_ct_s0 | random_donor_branch",
+   "unit": "share of 2,000 label draws",
+   "v2b": 0.0265,
+   "v3": 0.0265,
+   "change": 0.0
+  },
+  {
+   "number": "lung 6262 pass rate | tokenbag_pca64 | branch",
+   "unit": "share of 2,000 label draws",
+   "v2b": 0.974,
+   "v3": 0.9715,
+   "change": -0.0024999999999999467
+  },
+  {
+   "number": "lung 6262 pass rate | tokenbag_pca64 | random",
+   "unit": "share of 2,000 label draws",
+   "v2b": 0.2025,
+   "v3": 0.1895,
+   "change": -0.013000000000000012
+  },
+  {
+   "number": "lung 6262 pass rate | tokenbag_pca64 | donor",
+   "unit": "share of 2,000 label draws",
+   "v2b": 0.0495,
+   "v3": 0.0525,
+   "change": 0.0029999999999999957
+  },
+  {
+   "number": "lung 6262 pass rate | tokenbag_pca64 | random_donor_branch",
+   "unit": "share of 2,000 label draws",
+   "v2b": 0.0485,
+   "v3": 0.0515,
+   "change": 0.0029999999999999957
+  },
+  {
+   "number": "lung 6262 pass rate | hvg_pca64 | branch",
+   "unit": "share of 2,000 label draws",
+   "v2b": 0.8985,
+   "v3": 0.8985,
+   "change": 0.0
+  },
+  {
+   "number": "lung 6262 pass rate | hvg_pca64 | random",
+   "unit": "share of 2,000 label draws",
+   "v2b": 0.1205,
+   "v3": 0.1205,
+   "change": 0.0
+  },
+  {
+   "number": "lung 6262 pass rate | hvg_pca64 | donor",
+   "unit": "share of 2,000 label draws",
+   "v2b": 0.048,
+   "v3": 0.048,
+   "change": 0.0
+  },
+  {
+   "number": "lung 6262 pass rate | hvg_pca64 | random_donor_branch",
+   "unit": "share of 2,000 label draws",
+   "v2b": 0.042,
+   "v3": 0.042,
+   "change": 0.0
+  },
+  {
+   "number": "N60 L10H6 trust",
+   "unit": "",
+   "v2b": 0.8817943088380903,
+   "v3": 0.8746833699255241,
+   "change": -0.0071109389125662
+  },
+  {
+   "number": "N60 random-proj (index 11) mean trust",
+   "unit": "",
+   "v2b": 0.8159485126350684,
+   "v3": 0.8085641224331656,
+   "change": -0.007384390201902846
+  },
+  {
+   "number": "N60 share random >= L10H6 trust",
+   "unit": "",
+   "v2b": 0.0,
+   "v3": 0.0,
+   "change": 0.0
+  },
+  {
+   "number": "N60 L10H6 random",
+   "unit": "",
+   "v2b": 0.7932634326574881,
+   "v3": 0.7885552661842624,
+   "change": -0.0047081664732256945
+  },
+  {
+   "number": "N60 random-proj (index 11) mean random",
+   "unit": "",
+   "v2b": 0.7895320633382246,
+   "v3": 0.7758446950286869,
+   "change": -0.01368736830953765
+  },
+  {
+   "number": "N60 share random >= L10H6 random",
+   "unit": "",
+   "v2b": 0.4,
+   "v3": 0.16666666666666663,
+   "change": -0.2333333333333334
+  },
+  {
+   "number": "N60 L10H6 branch",
+   "unit": "",
+   "v2b": 0.4665434715973677,
+   "v3": 0.4193653201467984,
+   "change": -0.047178151450569306
+  },
+  {
+   "number": "N60 random-proj (index 11) mean branch",
+   "unit": "",
+   "v2b": 0.4175722087587564,
+   "v3": 0.40251175430888986,
+   "change": -0.015060454449866534
+  },
+  {
+   "number": "N60 share random >= L10H6 branch",
+   "unit": "",
+   "v2b": 0.23333333333333328,
+   "v3": 0.5,
+   "change": 0.2666666666666667
+  },
+  {
+   "number": "N60 L10H6 branch_diff_ct",
+   "unit": "",
+   "v2b": -0.013657155999330595,
+   "v3": 0.06615454072960651,
+   "change": 0.0798116967289371
+  },
+  {
+   "number": "N60 random-proj (index 11) mean branch_diff_ct",
+   "unit": "",
+   "v2b": 0.04719300032257844,
+   "v3": 0.04942264938600107,
+   "change": 0.0022296490634226285
+  },
+  {
+   "number": "N60 share random >= L10H6 branch_diff_ct",
+   "unit": "",
+   "v2b": 0.8333333333333334,
+   "v3": 0.43333333333333335,
+   "change": -0.4
+  },
+  {
+   "number": "N60 L10H6 composite",
+   "unit": "",
+   "v2b": 0.7558488804827591,
+   "v3": 0.7393218315455272,
+   "change": -0.016527048937231892
+  },
+  {
+   "number": "N60 random-proj (index 11) mean composite",
+   "unit": "",
+   "v2b": 0.7097503243417793,
+   "v3": 0.6988711735509768,
+   "change": -0.010879150790802483
+  },
+  {
+   "number": "N60 share random >= L10H6 composite",
+   "unit": "",
+   "v2b": 0.0,
+   "v3": 0.0,
+   "change": 0.0
+  }
+ ]
+}

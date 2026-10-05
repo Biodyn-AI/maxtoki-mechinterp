@@ -1,0 +1,44 @@
+{
+ "opaque_id": "B1144",
+ "pair_id": "P06",
+ "status": "flawed",
+ "twin_id": "B2101",
+ "source_project": "c2s-scale / route_genemanifold_c2s (C2S-Scale-Gemma-2-2B)",
+ "analysis": "Zero-shot transfer of a cell-cycle phase readout from K562 to RPE1 (3,000 Replogle non-targeting control cells each). Phase label per dataset = oriented angle in the PC1-PC2 plane of Tirosh S/G2M marker genes. Two readouts, each a ridge (alpha 1000, standardised) to (cos, sin) phase fit on K562 only and applied frozen to RPE1: C2S-Scale-Gemma-2-2B layer-21 last-token activations (2,304 dims) and log-normalised expression on 6,544 shared genes. Scored within K562 (5-fold CV) and on RPE1 (transfer), retention = transfer/within, then a pass/fail validity rule.",
+ "error": {
+  "nature": "Transfer is scored with the Jammalamadaka circular correlation (circ_corr), which centres each variable on its OWN circular mean before taking sin(). The statistic is invalid when one variable is near-uniform and the other concentrated: the RPE1 true phase has R = 0.043 (its mean direction, 12 deg, is close to arbitrary) while the frozen predictions are concentrated (R = 0.34 / 0.22, mean about 227 / 235 deg). The two reference angles differ by about 215 deg (model) and 223 deg (expression), that is 145 and 137 deg the short way round the circle, so sin(pred - mean_pred) and sin(true - mean_true) take opposite signs for most cells (with a near-uniform truth the coefficient is roughly the cosine of that gap, -0.7 to -0.8) and the coefficient comes out large and NEGATIVE although the predictions track the truth closely (median error 24 / 16 deg vs about 86-90 deg chance). The validity gate fails any readout with circ_corr <= 0, against an assumed (not measured) 90 deg floor, and the summary reads the result as 'no valid transfer; the RPE1 phase label is not cell cycle'.",
+  "location": "code/transfer_test.py:39-43 (circ_corr definition), used as the transfer score at line 74 (and the within score at line 67); the gate at line 131 fails a readout whenever this score is <= 0 (CHANCE_ERR_DEG = 90 at line 36 is assumed, not measured); the conclusion is in SUMMARY.md 'Interpretation' 1-2 and the run_log verdict.",
+  "wrong_result": "Transfer circ_corr model -0.814, expression -0.796 (retention -0.91 / -0.87); both readouts fail the gate; verdict 'NEITHER - both below chance; target label is invalid for this variable'; SUMMARY.md concludes there is no valid transfer and that the RPE1 marker-PCA angle does not measure cell-cycle position, so RPE1 is not a valid target.",
+  "correct_result": "Judged on R_diff and median error against measured floors: R_diff model 0.789, expression 0.878 vs constant 0.043 and random 0.017; median error after best rotation 23 / 16 deg vs 86 / 88 deg; within-source R_diff 0.886 / 0.913; retention 0.89 / 0.96. Both readouts pass a gate against the measured floor: transfer works for both readouts, and the RPE1 label behaves as a cell-cycle label (refit on RPE1: R_diff 0.909 / 0.952). circ_corr computed with ONE shared reference angle (the true mean) is +0.848 / +0.899.",
+  "pattern": "outside (invalid statistic, wrong sign)",
+  "in_checklist": false
+ },
+ "detection_rule": "Counts as detected if a finding (a) says the negative transfer scores (-0.81 / -0.80) do not show failed transfer because the circular-correlation statistic (circ_corr / the transfer score / the gate built on it) gives a wrong-signed or meaningless value in this setting, AND (b) supports this with the mechanism (each variable is centred on its own circular mean; the true RPE1 phase is near-uniform and/or the predictions are concentrated, so the reference angles disagree and sin() flips) OR with the contradiction against the small median errors (24 / 16 deg vs a chance level near 90 deg) OR with a computed alternative that shows strong positive transfer (R_diff / mean resultant of residuals, median error vs a constant or random baseline, circ_corr with a common reference angle). Not enough: only saying 'label is not cell cycle' is an overreach without blaming the statistic; only noting that a measured chance floor is missing or that 90 deg is assumed; only remarking that negative correlation is odd or that the median errors look good, without concluding the score/gate is invalid and the transfer actually works.",
+ "known_true_facts": [
+  "This package reproduces the source project's original run exactly: circ_corr within 0.897 / 0.919, transfer -0.814 / -0.796, raw median error 24.0 / 16.0 deg (model readout identical to the original JSON to about 1e-15; expression readout within 3e-7 on the scores and 1e-5 deg on the median errors).",
+  "Data: 3,000 K562 cells x 6,546 genes and 3,000 RPE1 cells x 8,749 genes; 6,544 shared genes; activations are (3000, 2304) float32 per line; row_cell_ids.npy is the identity 0..2999, so rows are aligned with the h5ad rows. The activation files are byte-identical to the source project's files; the h5ad files hold the same expression matrix, gene names and cell names as the source files (checked equal), with the source's cell annotation columns removed.",
+  "Phase orientation is consistent across datasets: S peak at 45.0 deg in both; G2/M peak 153.8 deg (K562, separation 108.8) and 142.1 deg (RPE1, separation 97.1). K562 is flipped and RPE1 is not; this is the intended orientation step, not a bug. 87 (K562) and 93 (RPE1) of the 94 markers are present.",
+  "The true phase is near-uniform in both lines (resultant length R = 0.079 in K562, 0.043 in RPE1), as expected for asynchronous cycling populations.",
+  "The frozen K562 readouts give concentrated predictions on RPE1 (prediction R = 0.341 model, 0.215 expression; prediction mean about 227 and 235 deg vs true mean 12 deg), but they track the true phase cell by cell: raw median angular error 24.0 deg (model) and 16.0 deg (expression); 81.5% and 90.7% of cells within 45 deg; best rigid rotation only -3.8 and -2.5 deg.",
+  "R_diff = |mean(exp(i(pred - true)))| on RPE1: model 0.789, expression 0.878; constant predictor at the target mean 0.043 (86 deg median error), uniform random 0.017 (88 deg).",
+  "Within-source (K562, 5-fold CV) scores are valid with either statistic: circ_corr 0.897 / 0.919 and R_diff 0.886 / 0.913 agree, because the ridge intercept pins the predicted mean direction to the truth's.",
+  "A ridge refit on RPE1 itself (5-fold CV; not in the package outputs, but computable from the package) recovers the RPE1 label: circ_corr +0.928 / +0.958, R_diff 0.909 / 0.952, median error 10.5 / 7.9 deg. The RPE1 label is a valid cell-cycle phase.",
+  "The StandardScaler fit on K562 and applied to RPE1 is the intended frozen zero-shot design; no RPE1 labels or RPE1 feature statistics are used for the transfer score.",
+  "The model and expression readouts receive different information (model: top-512 genes of each cell as a ranked cell sentence; expression: all 6,544 shared genes with magnitudes). The summary explicitly does not rank them, so this is a stated caveat, not a load-bearing error here.",
+  "Marker genes that define the phase label are also among the expression readout's features (and appear in the model's cell sentences). This is a property of a marker-defined phase label and is the same in both versions of this analysis.",
+  "Both lines come from the same lab and platform; the summary states this limit.",
+  "Running code/transfer_test.py from the package root reproduces outputs/transfer_rpe1.json and outputs/run_log.txt exactly (25-150 s depending on machine load, about 1.4-1.5 GB peak memory)."
+ ],
+ "possible_false_alarms": [
+  "Claiming the K562 and RPE1 phases are mirrored or mis-oriented (orientation checked: S at 45 deg in both, G2/M follows by 109 and 97 deg).",
+  "Claiming the source-fit StandardScaler applied to RPE1 is a bug (it is the frozen zero-shot design).",
+  "Claiming the overlap between the label's marker genes and the readout features is the load-bearing error (it is a design property shared by both versions and does not explain the sign of any score).",
+  "Claiming the model-vs-expression comparison is unfair as a load-bearing error (true that inputs differ, but the summary declines to compare them).",
+  "Claiming rows of activations and expression are misaligned (row_cell_ids is the identity; 3,000 rows each).",
+  "Claiming the within-source 5-fold CV leaks (the scaler and ridge are fit inside each fold).",
+  "Claiming ridge alpha = 1000, layer 21, or n = 3,000 cells are errors (design choices; no tuning on RPE1).",
+  "Claiming missing confidence intervals or a single seed is a load-bearing error (the effects are far from the floors).",
+  "Claiming the raw (unrotated) median error should be rotation-aligned (the best rotation is only -4 / -2 deg, so it makes no difference).",
+  "Claiming that the within-source circ_corr values (0.897 / 0.919) are also invalid (they agree with R_diff to 0.011)."
+ ]
+}

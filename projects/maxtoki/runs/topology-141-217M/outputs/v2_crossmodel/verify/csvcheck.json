@@ -1,0 +1,24 @@
+{
+  "n_rows": 64,
+  "n_fields_checked": 135,
+  "mismatches": [],
+  "metrics": [
+    "cca_heldout_mean10_5fold",
+    "cca_heldout_mean10_oob",
+    "cca_heldout_oob_difference",
+    "cca_insample_mean10",
+    "pairwise_cosine_pearson",
+    "pairwise_cosine_pearson_difference",
+    "top1_heldout_5fold",
+    "top1_heldout_oob",
+    "top1_heldout_oob_difference",
+    "top1_insample"
+  ],
+  "panels": [
+    "external_lung",
+    "hvg1500",
+    "immune",
+    "lung"
+  ],
+  "_wall_seconds": 0.214339017868042
+}

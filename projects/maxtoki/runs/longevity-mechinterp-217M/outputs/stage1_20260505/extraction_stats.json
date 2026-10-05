@@ -1,0 +1,31 @@
+{
+  "dataset_id": "tabula_sapiens_immune_subset_20000",
+  "n_cells_in_pre_extract": 2974,
+  "n_cells_in_final": 2974,
+  "n_donors_final": 17,
+  "n_cell_types_final": 38,
+  "max_genes_per_cell": 1024,
+  "layer_indices": [
+    5
+  ],
+  "model": "MaxToki-217M-HF",
+  "extraction_stats": {
+    "n_cells_in": 2974,
+    "n_cells_out": 2974,
+    "n_skipped_zero_expr": 0,
+    "mean_seq_len": 998.2484868863484,
+    "mean_fwd_seconds": 0.20983312974941354
+  },
+  "best_representation": "maxtoki217m_layer_05",
+  "best_balanced_accuracy_mean": 0.27545319460071,
+  "hvg_pca_balanced_accuracy_mean": 0.17218074474124578,
+  "null_mean": 0.3319785657292986,
+  "null_std": 0.010338387049213443,
+  "null_p95": 0.348712429076562,
+  "null_p_value": 1.0,
+  "g1_pass_vs_null": false,
+  "g1_pass_vs_baseline": true,
+  "g1_pass": false,
+  "total_seconds": 5522.697019100189,
+  "seed": 42
+}

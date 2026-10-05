@@ -1,0 +1,174 @@
+\section*{Results}
+
+The results come in two parts. The first part evaluates the framework:
+the errors in the deployment's outputs, the blind re-audit (Study~C), the
+controlled execution study (Study~A), the held-out benchmark (Study~B)
+and what deterministic checks can and cannot catch. The second part
+reports the MaxToki-217M case study after correction.
+
+\subsection*{Errors in the deployment's outputs}
+The ledger holds 149 confirmed errors in the deployment's code, logs,
+outputs, run summaries and audit reports: 13 critical, 57 major and 79
+minor (Fig~\ref{fig:ledger}; S1~Table). Of these, 129 were present before
+the in-session audit. Two more (L002 and L085) were partly present: an earlier form of each error was in the files before the audit. The audit's repairs then rewrote that
+text, and the error is in the rewritten version. The other 18 were introduced
+by the audit itself. Sixteen are in files written during its two repair rounds;
+one of these (L093) also appears in its sweep report. The other 2 are in
+its sweep report (L091) and in the checklist that the agent wrote that
+day (L092), both written before the repairs began. Two of the 18 are
+critical. One is a transcription-factor ``positive'' for GATA1 that does
+not survive a null matched for how often each gene is detected; it was
+found by trying four thresholds after the original test failed. The
+other is an audit summary that, after repair, called 60 of the 80
+entries in its pipeline-by-pattern verdict matrix (75\%) ``clean'', with
+no new matrix behind that count.
+
+\begin{figure}[H]
+\caption{\textbf{Errors in the deployment's outputs.} (A)~The 149
+confirmed errors in the deployment's code, logs, outputs, run summaries
+and audit reports, by type and severity (critical: a headline result or
+claim cannot stand; major: it stands only with material qualification;
+minor). (B)~Who or what found each error first. ``In-session audit''
+covers errors first flagged, fully or only partly, in the audit's sweep
+report. ``Deployment agent, outside the audit sweep'' covers errors the
+executing agent found while running the analyses or during the audit's
+two repair rounds. ``Human reader'' is a person from outside the
+project, not the author.
+Source data: S1~Table; the type used for each error in panel A is listed
+in the figure's source data.}
+\label{fig:ledger}
+\end{figure}
+
+Ten of the 13 critical errors were of four kinds. The other three are
+the two critical errors that the audit introduced (above) and the
+comparison of the direction-of-change accuracy with 50\% (below).
+(i)~\emph{Intervention code that
+edited the wrong tensor.} A hook is a short piece of code that changes a
+layer's activations while the model runs. Here hooks were used to ablate
+a sparse-autoencoder feature (set it to zero) or to boost it. In the
+circuit-tracing, exhaustive-mapping and steering scripts, the hook
+replaced the output of transformer block~$l$ with the input of that block
+plus the feature edit. This deleted the whole block. At the last layer,
+the steering hook instead applied the final normalisation twice.
+Combined edits also overwrote each other, so ablating three features gave
+exactly the effect of ablating the last one. With the feature edit set to
+exactly zero, the deployed steering code still gave 98.5\% to 101.9\% of
+the effect that the deployment reported for one steered feature at each
+of the five layers. It gave 93\% to 101\% of the deployment's mean over
+the three steered features of each layer. With a zero edit, the deployed
+circuit code gave a set of 71,474 edges, and this set held more than 99\% of the edges of
+each of the 120 traced features. So the deployed steering effects and
+circuit edges came from the hook bug, not from the features.
+(ii)~\emph{Wrong model input.} Every run except the RPE1 attention run
+ranked genes by $\log(1+\text{CP10k})$ values ($\log(1+\text{CPM})$,
+counts per million, in one external lung dataset) divided by the gene
+median, instead of by counts divided by the gene median. On average,
+30\% to 51\% of the 200 highest-ranked genes differed from the correct
+encoding (dataset means over 35 to 55 cells each), and the position of
+nearly every gene changed. (iii)~\emph{Metrics that could not measure
+what they claimed.} The CRISPR-interference direction-of-change accuracy
+counted every target that went down as correct, whatever the prediction.
+The annotation of sparse-autoencoder features applied a false-discovery
+correction only to tests that had already passed $p<0.1$. In the
+developmental orderings, each cell group's place in the ordering was
+looked up from its cell-type label, so a random code for each label
+passed the same quality gates. The scGPT cross-model comparison read
+another gene's embedding row for every gene. (iv)~\emph{A mislabelled
+steering axis.} The steering runs pushed cells along a ``pseudotime''
+axis, which should order cells from immature to mature. In fact, the
+axis was the first principal component of the expression of 200 randomly
+drawn Tabula Sapiens immune cells. Cell type explained 94.5\% of its
+variance. The 50 ``earliest'' cells were 49 lymphoid cells (T, B and
+plasma cells) and one stem cell. The 50 ``latest'' were all myeloid cells
+(neutrophils, monocytes and macrophages). So the axis separated two
+blood-cell lineages, not immature from mature cells.
+
+Fig~\ref{fig:ledger}B shows who or what found each error first. The
+sweep report of the in-session audit was the first to flag 10 errors (4
+major, 6 minor). For 3 of them (1 major, 2 minor) it flagged only the
+area, not the error itself. It flagged none of the critical errors. The
+deployment agent found 4 more (1 critical, 1 major, 2 minor): one while
+running an analysis and three during the audit's two repair rounds. The
+critical one was the direction-of-change metric, found in the second
+repair round. Independent verification found 71, the blind re-audits of
+Study~C 60, and a human reader 4. Of the 13 critical errors, independent
+verification first found 8, the blind re-audits 3, the deployment agent 1
+and the human reader 1. The one the human reader found was that the
+direction-of-change accuracy was compared with 50\%, both before and after
+its repair, instead of with the accuracy of always predicting a decrease.
+The repair rounds repaired 8 errors that were present before the audit,
+3 of them only partly.
+
+The audit's sweep of all eight pipelines took about 8~minutes (3.7~hours
+with the two repair rounds). The sweep rated as
+clean, or as exemplary, several analyses that later proved to be
+artefacts. For example, it called the nulls of the developmental-order
+analysis the project's ``gold standard'', although a random code for each
+cell-type label passed the same quality gates (S1~Table, R58). It also
+rated the degree-preserving null of the attention analysis ``clean ---
+exemplary'', although in the MaxToki-217M K562 run 49 of that null's 50
+draws were identical to the real reference network (L033).
+
+\subsection*{Study C: blind re-audits find four times more errors than the in-session audit, with or without the checklist}
+Nine blind re-audits of the pre-audit snapshot (three per arm) each took
+21 to 29~minutes and 84 to 105 tool calls, and returned 36 to 49
+findings. Scored against the 68 reference errors, fresh agents fully
+detected 43\% of them with the checklist as deployed (95\% bootstrap
+interval over errors 32--53\%), 45\% with the generic checklist
+(35--55\%) and 41\% with a generic critical review (31--51\%); the sweep
+report of the in-session audit had detected 10\% (4--18\%)
+(Fig~\ref{fig:studyC}A).
+Counting partial detections, the three arms reached 73\%, 71\% and 61\%.
+The arms did not differ clearly: the generic checklist detected 4.4
+percentage points more than the generic review ($-0.5$ to $+9.3$;
+Wilcoxon signed-rank $p=0.10$ over the 20 errors on which they differed),
+and the checklist as deployed 2.0 points more ($-5.9$ to $+9.8$;
+$p=0.42$). Each fresh arm detected 30 to 35 points more than the in-session
+audit.
+
+\begin{figure}[H]
+\caption{\textbf{Study C: blind re-audits of the pre-audit snapshot.}
+(A)~Share of the 68 reference errors fully detected by each arm (filled
+marker; line, 95\% bootstrap interval over errors), detected fully or
+partly (open marker), and by each single run (ticks). The in-session
+audit is scored from its written report. (B)~Detection of each reference
+error (rows, grouped by severity) by the in-session audit (A) and by each
+of the nine re-audits (G, generic review; C, generic checklist; D,
+checklist as deployed; 1--3, runs).}
+\label{fig:studyC}
+\end{figure}
+
+The arms differed in what they found. Averaged over its three runs, the
+generic review fully detected 81\% of the 12 code bugs, against 69\% for
+the generic checklist and 58\% for the checklist as deployed. It also
+fully detected five of the six critical errors in every run
+(Fig~\ref{fig:studyC}B). The checklist arms did better on two other
+types. They fully detected 51\% (generic checklist) and 55\% (as
+deployed) of the 17 missing baselines and nulls, against 39\% for the
+generic review. They fully detected 22\% and 37\% of the 9 wrong
+statistics, against 15\%. Fig~\ref{fig:studyC} does not show error
+types; the type of each error is in the figure's source data. Together
+the nine audits fully
+detected 44 of the 68 errors; 6 (2 major, 4 minor) were never detected,
+even partly. One critical error, the scGPT row lookup, was detected only
+partly: reviewers saw that the cross-model correlation sat at chance, but
+none traced it to the lookup. Only part of the wrong input encoding was
+in the reference set: three attention runs fed $\log(1+\text{CP10k})$
+values in as if they were counts (S1~Table, L118, major). The full error,
+that every run except the RPE1 attention run was encoded on the wrong
+scale (L124, critical), was found after the set was frozen. Three audits
+were graded as fully detecting L118 and two as detecting it partly. All
+five suspected that the Adamson input was log-normalised and noted that
+no code checked whether the stored values were raw counts. None found
+that the K562 inputs were log-transformed, and none traced the error to
+all the runs it affected.
+
+Beyond the reference set, the nine audits raised 132 findings that
+matched no ledger entry. The checking agent judged 123 of them real
+errors, 6 real but trivial, 2 false alarms and 1 undecidable. After
+de-duplication across audits the real errors formed 62 candidate errors,
+of which 60 were confirmed against the full project and added to the
+ledger. The graders
+agreed closely on detection ($\kappa = 0.94$, range 0.86--1.00 across the
+nine audits).
+

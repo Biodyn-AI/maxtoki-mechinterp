@@ -1,0 +1,25 @@
+{
+  "n_layers": 12,
+  "n_genes": 1500,
+  "hidden_size": 1232,
+  "n_nonzero_genes": 1500,
+  "topk_sv": 7,
+  "depth_correlations": {
+    "effective_rank": {
+      "rho": -0.8951048951048951,
+      "p": 8.366586429091719e-05
+    },
+    "participation_ratio": {
+      "rho": -0.8881118881118882,
+      "p": 0.00011413359814618024
+    },
+    "sv1_variance_fraction": {
+      "rho": 0.9790209790209792,
+      "p": 3.08980139854871e-08
+    },
+    "twonn_intrinsic_dim": {
+      "rho": -0.9720279720279721,
+      "p": 1.2868115751495027e-07
+    }
+  }
+}

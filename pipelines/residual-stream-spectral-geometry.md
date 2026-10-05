@@ -20,12 +20,12 @@ The pipeline is **model-agnostic**: a Phase 0 adapter must expose per-layer resi
 
 ## 2. Source
 
-- **Paper:** Anonymous, (2026). *Multi-Dimensional Spectral Geometry of Biological Knowledge in Single-Cell Transformer Representations.* arXiv:2602.22247 [q-bio.GN; cs.AI; cs.LG], 24 Feb 2026. 14 pages (12 pages main + 2 pages supplementary tables; 6 main figures; 6 supplementary tables; 13 hypothesis families; 63 iterations of an autonomous screening loop).
-- **Local PDF:** `references/2602.22247_anon_spectral_geometry.pdf`
+- **Paper:** Kendiukhov, I. (2026). *Multi-Dimensional Spectral Geometry of Biological Knowledge in Single-Cell Transformer Representations.* arXiv:2602.22247 [q-bio.GN; cs.AI; cs.LG], 24 Feb 2026. 14 pages (12 pages main + 2 pages supplementary tables; 6 main figures; 6 supplementary tables; 13 hypothesis families; 63 iterations of an autonomous screening loop).
+- **Local PDF:** `references/2602.22247_Kendiukhov_spectral_geometry.pdf`
 - **GitHub repo:** https://github.com/Biodyn-AI/topology-biomechinterp1
 - **Pinned commit:** `42ac179697c4dd938c57a40142356e8763b9fcc1` (2026-02-24, "Update README.md")
 - **Local clone:** `repos/topology-biomechinterp1/` (see `repos/topology-biomechinterp1/PINNED_COMMIT.txt`)
-- **Direct predecessor:** the prior work, arXiv:2602.17532 — the attention-based interpretability evaluation. See `pipelines/attention-grn-extraction-and-evaluation.md`. This pipeline is the residual-stream counterpart; both are needed for a complete geometric audit of a single-cell transformer.
+- **Direct predecessor:** Kendiukhov 2026, arXiv:2602.17532 — the attention-based interpretability evaluation. See `pipelines/attention-grn-extraction-and-evaluation.md`. This pipeline is the residual-stream counterpart; both are needed for a complete geometric audit of a single-cell transformer.
 - **Theoretical / methodological references:** Park et al. 2023 (linear representation hypothesis), Elhage et al. 2022 (superposition), Nanda et al. 2023 (depth-dependent processing stages in transformers), Alain & Bengio 2017 (linear classifier probes), Kornblith et al. 2019 (centered kernel alignment), Roy & Vetterli 2007 (effective rank), Facco et al. 2017 (TwoNN intrinsic dimensionality), Sharma et al. 2024 (layer-selective rank reduction), Cui et al. 2024 (scGPT), Theodoris et al. 2023 (Geneformer), Jones et al. 2022 (Tabula Sapiens), Han et al. 2018 (TRRUST v2), Szklarczyk et al. 2023 (STRING v12), Ashburner et al. 2000 (Gene Ontology).
 
 ## 3. Inputs

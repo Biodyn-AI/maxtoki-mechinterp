@@ -1,0 +1,103 @@
+======================================================================
+PHASE 1A — derive stages, subsample, tokenize
+======================================================================
+
+[1] Loading Tabula Sapiens immune (backed='r')...
+  immune adata: (592317, 60606)  (551.0s)
+
+[2] Building all viable hematopoietic anchors over the full TS immune...
+  [ts_immune_all] cells with valid hematopoietic stage: 572724
+  [ts_immune_all] viable (donor × tissue × cell_type × stage) anchors: 1757
+
+[3] Splitting donors → internal vs external strict non-overlap...
+  internal donors: 11  external donors: 13
+  [internal] selected anchors: 290 (cells: 90366)
+  [external] selected anchors: 600 (cells: 461101)
+  [zeroshot] selected anchors: 160 (cells: 9162)
+
+[4] Loading TS lung for negative control...
+  lung adata: (65847, 60606)
+  [ts_lung_all] cells with valid hematopoietic stage: 29476
+  [ts_lung_all] viable (donor × tissue × cell_type × stage) anchors: 51
+  [lung_control] selected anchors: 51 (cells: 29462)
+
+[5] Verifying donor non-overlap (internal vs external + zeroshot)...
+  ok. |int|=11 |ext|=13 |zs|=12 no overlap
+
+[6] Tokenizing each panel...
+
+  [internal] gathering cells...
+  [internal] cells gathered: 11804
+  [internal] tokenizing 11804 cells...
+    tokenized 1000/11804  elapsed 4.0s  eta 43.1s
+    tokenized 2000/11804  elapsed 7.4s  eta 36.3s
+    tokenized 3000/11804  elapsed 10.8s  eta 31.6s
+    tokenized 4000/11804  elapsed 14.6s  eta 28.4s
+    tokenized 5000/11804  elapsed 18.2s  eta 24.8s
+    tokenized 6000/11804  elapsed 21.0s  eta 20.4s
+    tokenized 7000/11804  elapsed 23.8s  eta 16.3s
+    tokenized 8000/11804  elapsed 25.9s  eta 12.3s
+    tokenized 9000/11804  elapsed 28.5s  eta 8.9s
+    tokenized 10000/11804  elapsed 30.9s  eta 5.6s
+    tokenized 11000/11804  elapsed 32.9s  eta 2.4s
+    tokenized 11804/11804  elapsed 34.7s  eta 0.0s
+  [internal] persisted → outputs/phase1/cells_internal.npz
+
+  [external] gathering cells...
+  [external] cells gathered: 30000
+  [external] tokenizing 30000 cells...
+    tokenized 1000/30000  elapsed 4.2s  eta 123.0s
+    tokenized 2000/30000  elapsed 8.4s  eta 116.9s
+    tokenized 3000/30000  elapsed 12.2s  eta 110.2s
+    tokenized 4000/30000  elapsed 16.4s  eta 106.9s
+    tokenized 5000/30000  elapsed 20.2s  eta 101.1s
+    tokenized 6000/30000  elapsed 24.6s  eta 98.5s
+    tokenized 7000/30000  elapsed 29.2s  eta 96.1s
+    tokenized 8000/30000  elapsed 33.0s  eta 90.6s
+    tokenized 9000/30000  elapsed 36.8s  eta 85.9s
+    tokenized 10000/30000  elapsed 40.4s  eta 80.8s
+    tokenized 11000/30000  elapsed 44.0s  eta 76.0s
+    tokenized 12000/30000  elapsed 47.6s  eta 71.4s
+    tokenized 13000/30000  elapsed 51.0s  eta 66.7s
+    tokenized 14000/30000  elapsed 54.5s  eta 62.2s
+    tokenized 15000/30000  elapsed 58.2s  eta 58.2s
+    tokenized 16000/30000  elapsed 62.2s  eta 54.5s
+    tokenized 17000/30000  elapsed 66.0s  eta 50.5s
+    tokenized 18000/30000  elapsed 69.7s  eta 46.5s
+    tokenized 19000/30000  elapsed 73.1s  eta 42.3s
+    tokenized 20000/30000  elapsed 76.3s  eta 38.2s
+    tokenized 21000/30000  elapsed 79.6s  eta 34.1s
+    tokenized 22000/30000  elapsed 82.7s  eta 30.1s
+    tokenized 23000/30000  elapsed 85.8s  eta 26.1s
+    tokenized 24000/30000  elapsed 89.4s  eta 22.3s
+    tokenized 25000/30000  elapsed 92.8s  eta 18.6s
+    tokenized 26000/30000  elapsed 95.9s  eta 14.8s
+    tokenized 27000/30000  elapsed 99.2s  eta 11.0s
+    tokenized 28000/30000  elapsed 101.9s  eta 7.3s
+    tokenized 29000/30000  elapsed 105.0s  eta 3.6s
+    tokenized 30000/30000  elapsed 108.2s  eta 0.0s
+  [external] persisted → outputs/phase1/cells_external.npz
+
+  [zeroshot] gathering cells...
+  [zeroshot] cells gathered: 7796
+  [zeroshot] tokenizing 7796 cells...
+    tokenized 1000/7796  elapsed 3.2s  eta 22.0s
+    tokenized 2000/7796  elapsed 6.2s  eta 17.8s
+    tokenized 3000/7796  elapsed 8.8s  eta 14.0s
+    tokenized 4000/7796  elapsed 11.7s  eta 11.1s
+    tokenized 5000/7796  elapsed 14.6s  eta 8.2s
+    tokenized 6000/7796  elapsed 17.4s  eta 5.2s
+    tokenized 7000/7796  elapsed 20.0s  eta 2.3s
+    tokenized 7796/7796  elapsed 22.4s  eta 0.0s
+  [zeroshot] persisted → outputs/phase1/cells_zeroshot.npz
+
+  [lung_control] gathering cells...
+  [lung_control] cells gathered: 2124
+  [lung_control] tokenizing 2124 cells...
+    tokenized 1000/2124  elapsed 3.2s  eta 3.6s
+    tokenized 2000/2124  elapsed 6.4s  eta 0.4s
+    tokenized 2124/2124  elapsed 6.8s  eta 0.0s
+  [lung_control] persisted → outputs/phase1/cells_lung_control.npz
+
+Total phase 1A time: 900.6s
+Summary written to outputs/phase1/panel_summary.json

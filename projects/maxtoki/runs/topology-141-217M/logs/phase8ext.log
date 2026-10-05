@@ -1,0 +1,179 @@
+[load] TRRUST, STRING, GO BP
+  string pairs (700): 2747
+  GO BP terms: 1276, gene2terms: 1624
+
+[lung] emb (12, 382, 20)  pairs 1308
+  L00  H124 Δ=-0.056  H127 Δ=-0.051  H130 Δ=-0.054  H138 Δ=-0.050
+  L01  H124 Δ=-0.020  H127 Δ=-0.014  H130 Δ=-0.019  H138 Δ=-0.023
+  L02  H124 Δ=-0.028  H127 Δ=-0.020  H130 Δ=-0.025  H138 Δ=-0.036
+  L03  H124 Δ=-0.053  H127 Δ=-0.049  H130 Δ=-0.051  H138 Δ=-0.053
+  L04  H124 Δ=-0.054  H127 Δ=-0.051  H130 Δ=-0.053  H138 Δ=-0.056
+  L05  H124 Δ=-0.034  H127 Δ=-0.031  H130 Δ=-0.029  H138 Δ=-0.030
+  L06  H124 Δ=-0.030  H127 Δ=-0.032  H130 Δ=-0.029  H138 Δ=-0.027
+  L07  H124 Δ=-0.051  H127 Δ=-0.042  H130 Δ=-0.046  H138 Δ=-0.051
+  L08  H124 Δ=-0.024  H127 Δ=-0.023  H130 Δ=-0.026  H138 Δ=-0.032
+  L09  H124 Δ=-0.037  H127 Δ=-0.037  H130 Δ=-0.039  H138 Δ=-0.042
+  L10  H124 Δ=-0.039  H127 Δ=-0.031  H130 Δ=-0.038  H138 Δ=-0.038
+  L11  H124 Δ=-0.018  H127 Δ=-0.017  H130 Δ=-0.017  H138 Δ=-0.016
+
+[immune] emb (12, 350, 20)  pairs 2544
+  L00  H124 Δ=+0.010  H127 Δ=+0.010  H130 Δ=+0.013  H138 Δ=+0.003
+  L01  H124 Δ=-0.014  H127 Δ=-0.015  H130 Δ=-0.018  H138 Δ=-0.012
+  L02  H124 Δ=-0.028  H127 Δ=-0.026  H130 Δ=-0.029  H138 Δ=-0.031
+  L03  H124 Δ=-0.027  H127 Δ=-0.020  H130 Δ=-0.022  H138 Δ=-0.028
+  L04  H124 Δ=-0.023  H127 Δ=-0.016  H130 Δ=-0.019  H138 Δ=-0.020
+  L05  H124 Δ=-0.021  H127 Δ=-0.018  H130 Δ=-0.022  H138 Δ=-0.026
+  L06  H124 Δ=-0.035  H127 Δ=-0.025  H130 Δ=-0.028  H138 Δ=-0.027
+  L07  H124 Δ=-0.029  H127 Δ=-0.020  H130 Δ=-0.021  H138 Δ=-0.030
+  L08  H124 Δ=-0.027  H127 Δ=-0.021  H130 Δ=-0.025  H138 Δ=-0.025
+  L09  H124 Δ=+0.001  H127 Δ=+0.004  H130 Δ=+0.005  H138 Δ=+0.002
+  L10  H124 Δ=-0.011  H127 Δ=-0.007  H130 Δ=-0.012  H138 Δ=-0.016
+  L11  H124 Δ=-0.023  H127 Δ=-0.021  H130 Δ=-0.020  H138 Δ=-0.031
+
+[external_lung] emb (12, 380, 20)  pairs 751
+  L00  H124 Δ=-0.060  H127 Δ=-0.061  H130 Δ=-0.062  H138 Δ=-0.069
+  L01  H124 Δ=-0.029  H127 Δ=-0.030  H130 Δ=-0.030  H138 Δ=-0.040
+  L02  H124 Δ=-0.053  H127 Δ=-0.055  H130 Δ=-0.057  H138 Δ=-0.055
+  L03  H124 Δ=-0.027  H127 Δ=-0.028  H130 Δ=-0.029  H138 Δ=-0.038
+  L04  H124 Δ=-0.028  H127 Δ=-0.028  H130 Δ=-0.029  H138 Δ=-0.037
+  L05  H124 Δ=-0.024  H127 Δ=-0.024  H130 Δ=-0.025  H138 Δ=-0.032
+  L06  H124 Δ=-0.044  H127 Δ=-0.045  H130 Δ=-0.047  H138 Δ=-0.051
+  L07  H124 Δ=-0.062  H127 Δ=-0.064  H130 Δ=-0.066  H138 Δ=-0.066
+  L08  H124 Δ=-0.076  H127 Δ=-0.077  H130 Δ=-0.080  H138 Δ=-0.073
+  L09  H124 Δ=-0.085  H127 Δ=-0.086  H130 Δ=-0.090  H138 Δ=-0.081
+  L10  H124 Δ=-0.095  H127 Δ=-0.096  H130 Δ=-0.100  H138 Δ=-0.094
+  L11  H124 Δ=-0.079  H127 Δ=-0.081  H130 Δ=-0.084  H138 Δ=-0.074
+
+[phase 8 extensions] summary:
+{
+  "H124_string": {
+    "external_lung": {
+      "n_layers": 12,
+      "mean_delta": -0.05529637641755522,
+      "n_layers_positive_null_gap": 0,
+      "fraction_layers_positive": 0.0,
+      "mean_auc_combo": 0.3943926283187933,
+      "mean_null_combo_mean": 0.41371628011442896
+    },
+    "immune": {
+      "n_layers": 12,
+      "mean_delta": -0.018913852578068272,
+      "n_layers_positive_null_gap": 2,
+      "fraction_layers_positive": 0.16666666666666666,
+      "mean_auc_combo": 0.48215379901960786,
+      "mean_null_combo_mean": 0.4819126732869074
+    },
+    "lung": {
+      "n_layers": 12,
+      "mean_delta": -0.03707137408309284,
+      "n_layers_positive_null_gap": 0,
+      "fraction_layers_positive": 0.0,
+      "mean_auc_combo": 0.39994031335177166,
+      "mean_null_combo_mean": 0.41306319958012666
+    }
+  },
+  "H127_go_comem": {
+    "external_lung": {
+      "n_layers": 12,
+      "mean_delta": -0.05623606087114134,
+      "n_layers_positive_null_gap": 0,
+      "fraction_layers_positive": 0.0,
+      "mean_auc_combo": 0.40293834866144956,
+      "mean_null_combo_mean": 0.42258870802499776
+    },
+    "immune": {
+      "n_layers": 12,
+      "mean_delta": -0.014645770924110383,
+      "n_layers_positive_null_gap": 2,
+      "fraction_layers_positive": 0.16666666666666666,
+      "mean_auc_combo": 0.496099747769478,
+      "mean_null_combo_mean": 0.493437037199139
+    },
+    "lung": {
+      "n_layers": 12,
+      "mean_delta": -0.03330219043109668,
+      "n_layers_positive_null_gap": 0,
+      "fraction_layers_positive": 0.0,
+      "mean_auc_combo": 0.4125784757295174,
+      "mean_null_combo_mean": 0.4211430024450858
+    }
+  },
+  "H130_go_semantic": {
+    "external_lung": {
+      "n_layers": 12,
+      "mean_delta": -0.058159906927993284,
+      "n_layers_positive_null_gap": 0,
+      "fraction_layers_positive": 0.0,
+      "mean_auc_combo": 0.41565103120000635,
+      "mean_null_combo_mean": 0.43578362531621634
+    },
+    "immune": {
+      "n_layers": 12,
+      "mean_delta": -0.01648292013564683,
+      "n_layers_positive_null_gap": 2,
+      "fraction_layers_positive": 0.16666666666666666,
+      "mean_auc_combo": 0.4926524081854964,
+      "mean_null_combo_mean": 0.49135345990247953
+    },
+    "lung": {
+      "n_layers": 12,
+      "mean_delta": -0.03538597783389449,
+      "n_layers_positive_null_gap": 0,
+      "fraction_layers_positive": 0.0,
+      "mean_auc_combo": 0.41665476691518366,
+      "mean_null_combo_mean": 0.42618815260742343
+    }
+  },
+  "H138_ontology_sheaf": {
+    "external_lung": {
+      "n_layers": 12,
+      "mean_delta": -0.0591685482027882,
+      "n_layers_positive_null_gap": 0,
+      "fraction_layers_positive": 0.0,
+      "mean_auc_combo": 0.4236401714857634,
+      "mean_null_combo_mean": 0.4467436126281612
+    },
+    "immune": {
+      "n_layers": 12,
+      "mean_delta": -0.019992425789760345,
+      "n_layers_positive_null_gap": 2,
+      "fraction_layers_positive": 0.16666666666666666,
+      "mean_auc_combo": 0.42517863626932256,
+      "mean_null_combo_mean": 0.4298132780890133
+    },
+    "lung": {
+      "n_layers": 12,
+      "mean_delta": -0.0377388405383197,
+      "n_layers_positive_null_gap": 0,
+      "fraction_layers_positive": 0.0,
+      "mean_auc_combo": 0.4555168500481,
+      "mean_null_combo_mean": 0.47170757362814647
+    }
+  },
+  "H123_baseline": {
+    "external_lung": {
+      "n_layers": 12,
+      "mean_delta": -0.060066661544159884,
+      "n_layers_positive_null_gap": 0,
+      "fraction_layers_positive": 0.0,
+      "mean_auc_combo": 0.43028563885539545,
+      "mean_null_combo_mean": 0.4543680107336218
+    },
+    "immune": {
+      "n_layers": 12,
+      "mean_delta": -0.02008339533730157,
+      "n_layers_positive_null_gap": 1,
+      "fraction_layers_positive": 0.08333333333333333,
+      "mean_auc_combo": 0.4881695618062039,
+      "mean_null_combo_mean": 0.4879033439185858
+    },
+    "lung": {
+      "n_layers": 12,
+      "mean_delta": -0.04142643260481798,
+      "n_layers_positive_null_gap": 0,
+      "fraction_layers_positive": 0.0,
+      "mean_auc_combo": 0.41770131874298544,
+      "mean_null_combo_mean": 0.43183650586970895
+    }
+  }
+}

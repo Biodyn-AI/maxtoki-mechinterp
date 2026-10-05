@@ -1,0 +1,37 @@
+corpus: 5,000 proteins / 1,606,104 residues
+parsing uniprot_sprot_subset.dat.gz (restricted to 5,000 accessions)...
+  parsed FT tables for 4,124 accessions in 0s
+  4,124/5,000 corpus accessions carry >=1 FT annotation
+
+concept      group                 positives  prevalence
+DOMAIN       domain                  224,224     0.13961
+REGION       domain                  135,838     0.08458
+TOPO_DOM     topology                 80,723     0.05026
+TRANSMEM     topology                 68,839     0.04286
+HELIX        secondary_structure      31,592     0.01967
+COMPBIAS     domain                   31,524     0.01963
+REPEAT       domain                   22,554     0.01404
+BINDING      binding                  19,010     0.01184
+STRAND       secondary_structure      18,530     0.01154
+COILED       domain                   10,953     0.00682
+SIGNAL       targeting                 9,302     0.00579
+ZN_FING      binding                   6,187     0.00385
+DNA_BIND     binding                   5,220     0.00325
+PROPEP       targeting                 4,913     0.00306
+MOTIF        domain                    3,262     0.00203
+VARIANT      variation                 3,243     0.00202
+TRANSIT      targeting                 2,946     0.00183
+TURN         secondary_structure       2,757     0.00172
+DISULFID     ptm                       2,154     0.00134
+CONFLICT     variation                 1,860     0.00116
+MOD_RES      ptm                       1,802     0.00112
+ACT_SITE     catalytic                 1,534     0.00096
+MUTAGEN      variation                 1,109     0.00069
+CARBOHYD     ptm                         794     0.00049
+SITE         site_other                  577     0.00036
+INTRAMEM     topology                    263     0.00016
+CROSSLNK     ptm                         178     0.00011
+LIPID        ptm                         117     0.00007
+
+21 concepts at prevalence >= 0.001 (the scoring floor): DOMAIN, REGION, TOPO_DOM, TRANSMEM, HELIX, COMPBIAS, REPEAT, BINDING, STRAND, COILED, SIGNAL, ZN_FING, DNA_BIND, PROPEP, MOTIF, VARIANT, TRANSIT, TURN, DISULFID, CONFLICT, MOD_RES
+artefacts -> outputs/

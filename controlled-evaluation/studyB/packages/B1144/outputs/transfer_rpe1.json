@@ -1,0 +1,22 @@
+{
+ "n_shared_genes": 6544,
+ "n_source": 3000,
+ "n_target": 3000,
+ "model": {
+  "within": 0.8968738656300205,
+  "within_median_err_deg": 12.551890906707484,
+  "transfer": -0.8141593513101562,
+  "transfer_median_err_deg": 23.954657901389602,
+  "retention": -0.9077746409048633
+ },
+ "expression": {
+  "within": 0.9191543826897693,
+  "within_median_err_deg": 10.753083166023448,
+  "transfer": -0.7955525911046992,
+  "transfer_median_err_deg": 16.04907753543115,
+  "retention": -0.865526625435617
+ },
+ "model_valid": false,
+ "expression_valid": false,
+ "verdict": "NEITHER - both below chance; target label is invalid for this variable"
+}

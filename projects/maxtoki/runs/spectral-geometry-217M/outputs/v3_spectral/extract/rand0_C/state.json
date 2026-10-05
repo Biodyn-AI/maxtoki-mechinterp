@@ -1,0 +1,70 @@
+{
+  "job": "rand0_C",
+  "next": 2000,
+  "done": true,
+  "chunks": [
+    {
+      "start": "2026-10-02T20:46:01",
+      "cells": [
+        0,
+        500
+      ],
+      "wall_s": 256.5,
+      "min_free_gb": 9.69,
+      "peak_rss_gb": 4.15,
+      "mps_driver_peak_gb": 2.22,
+      "stopped": "time"
+    },
+    {
+      "start": "2026-10-02T20:50:44",
+      "cells": [
+        500,
+        1200
+      ],
+      "wall_s": 439.4,
+      "min_free_gb": 9.36,
+      "peak_rss_gb": 4.07,
+      "mps_driver_peak_gb": 2.22,
+      "stopped": "time"
+    },
+    {
+      "start": "2026-10-02T20:58:24",
+      "cells": [
+        1200,
+        1850
+      ],
+      "wall_s": 463.0,
+      "min_free_gb": 7.12,
+      "peak_rss_gb": 4.52,
+      "mps_driver_peak_gb": 2.22,
+      "stopped": "time"
+    },
+    {
+      "start": "2026-10-02T21:06:28",
+      "cells": [
+        1850,
+        2000
+      ],
+      "wall_s": 106.8,
+      "min_free_gb": 11.49,
+      "peak_rss_gb": 3.22,
+      "mps_driver_peak_gb": 2.21,
+      "stopped": ""
+    }
+  ],
+  "batches_checked": 40,
+  "cells_checked": 2000,
+  "model_info": {
+    "kind": "random_init",
+    "init_seed": 0,
+    "init": "transformers default (LlamaForCausalLM(config))",
+    "initializer_range": 0.02,
+    "attn_implementation": "eager",
+    "state_dict_sha256_cpu": "6e6c47a7571367d25f2d41f70be6c9598c1ca42acd680553cfc1b82d5db97720",
+    "param_std": {
+      "model.embed_tokens.weight": 0.01999765820801258,
+      "model.layers.0.self_attn.q_proj.weight": 0.019985176622867584,
+      "model.layers.10.mlp.down_proj.weight": 0.02001946046948433
+    }
+  }
+}

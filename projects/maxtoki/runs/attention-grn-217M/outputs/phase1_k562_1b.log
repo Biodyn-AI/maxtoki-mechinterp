@@ -1,0 +1,70 @@
+======================================================================
+PHASE 1 — Trivial baselines (MaxToki primary layer L8)
+======================================================================
+
+[1] Loading Phase 0 artefacts...
+  edges shape: (20, 16, 1500, 1500)  primary layer: 8
+  gene_features: 1500
+  load: 1.2s
+
+[2] DE-calling against K562 control cells...
+  cells in COI: 188,590
+  controls: 10,691
+  loading HVG-only expression (sequential)...
+  loaded HVG matrix: (643413, 1500)  (71.1s)
+  NT expression (HVG space): (5000, 1500)
+  perturbations with >= 30 cells: 1383
+  evaluable perturbations after DE filter: 574  (2.5s)
+
+[3] Per-perturbation AUROCs...
+  saved per-perturbation AUROC table: (155, 11)
+
+[3b] Per-layer attention AUROC profile...
+ layer  mean_auroc  median_auroc  std_auroc  n_perts
+     0    0.532709      0.533540   0.117093      155
+     1    0.537692      0.531912   0.104078      155
+     2    0.542256      0.537055   0.096658      155
+     3    0.539930      0.538848   0.095320      155
+     4    0.580123      0.585766   0.107818      155
+     5    0.581328      0.578046   0.105102      155
+     6    0.574155      0.575981   0.105871      155
+     7    0.574012      0.573360   0.109476      155
+     8    0.539836      0.547051   0.103926      155
+     9    0.527931      0.524023   0.106301      155
+    10    0.521814      0.523184   0.104070      155
+    11    0.528722      0.525483   0.101299      155
+    12    0.505013      0.517389   0.093568      155
+    13    0.521135      0.525178   0.095340      155
+    14    0.526111      0.526125   0.094653      155
+    15    0.516550      0.520722   0.092738      155
+    16    0.523691      0.527536   0.101974      155
+    17    0.520470      0.527021   0.098438      155
+    18    0.530505      0.533706   0.096396      155
+    19    0.538431      0.541791   0.098685      155
+
+[4] Paired Wilcoxon tests...
+              baseline              reference  n_valid  mean_auc_baseline  mean_auc_reference  mean_delta  median_delta  wilcoxon_W  wilcoxon_p_raw  wilcoxon_p_bh
+         gene_variance      attention_primary      155           0.596080            0.539836    0.056244      0.034111      3795.0    5.830400e-05   9.474400e-05
+         gene_variance attention_primary_norm      155           0.596080            0.539836    0.056244      0.034111      3795.0    5.830400e-05   9.474400e-05
+         gene_variance               spearman      155           0.596080            0.492379    0.103701      0.081493      1348.0    4.816983e-17   6.262077e-16
+        gene_mean_expr      attention_primary      155           0.572372            0.539836    0.032536      0.039761      4022.0    3.014605e-04   3.918987e-04
+        gene_mean_expr attention_primary_norm      155           0.572372            0.539836    0.032536      0.039761      4022.0    3.014605e-04   3.918987e-04
+        gene_mean_expr               spearman      155           0.572372            0.492379    0.079993      0.089262      2459.0    1.490893e-10   9.690802e-10
+gene_one_minus_dropout      attention_primary      155           0.560358            0.539836    0.020522      0.034684      4523.0    6.547613e-03   7.093247e-03
+gene_one_minus_dropout attention_primary_norm      155           0.560358            0.539836    0.020522      0.034684      4523.0    6.547613e-03   7.093247e-03
+gene_one_minus_dropout               spearman      155           0.560358            0.492379    0.067979      0.080785      2930.0    2.623420e-08   1.136815e-07
+    gene_tf_out_degree      attention_primary      155           0.501387            0.539836   -0.038449     -0.041317      3485.0    4.799197e-06   1.039826e-05
+    gene_tf_out_degree attention_primary_norm      155           0.501387            0.539836   -0.038449     -0.041317      3485.0    4.799197e-06   1.039826e-05
+    gene_tf_out_degree               spearman      155           0.501387            0.492379    0.009008      0.003181      5545.0    3.717296e-01   3.717296e-01
+     attention_primary               spearman      155           0.539836            0.492379    0.047457      0.051627      3459.0    3.840584e-06   1.039826e-05
+
+[5] Mean AUROC across evaluable perturbations:
+  gene_variance                  0.5961
+  gene_mean_expr                 0.5724
+  gene_one_minus_dropout         0.5604
+  attention_primary              0.5398
+  attention_primary_norm         0.5398
+  gene_tf_out_degree             0.5014
+  spearman                       0.4924
+
+PHASE 1 COMPLETE — outputs: <REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/phase1_k562_1b

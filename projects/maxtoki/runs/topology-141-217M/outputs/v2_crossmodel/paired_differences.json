@@ -1,0 +1,117 @@
+{
+  "panel_lung": {
+    "complete": true,
+    "same_genes_same_order": true,
+    "n_genes": 382,
+    "seed": 20261201,
+    "pearson_gf_minus_scgpt": {
+      "observed": 0.13247781478430437,
+      "ci95": [
+        0.11889914000323631,
+        0.14734530113842959
+      ],
+      "n_boot": 2000,
+      "frac_draws_le_0": 0.0
+    },
+    "heldout_cca_gf_minus_scgpt": {
+      "mean": 0.11168496595518698,
+      "ci95": [
+        0.051626246819879935,
+        0.1717739833346113
+      ],
+      "n_boot": 500,
+      "frac_draws_le_0": 0.0
+    },
+    "heldout_top1_gf_minus_scgpt": {
+      "mean": 0.09286793997891225,
+      "ci95": [
+        0.028151823368891098,
+        0.1575375939849624
+      ],
+      "n_boot": 500,
+      "frac_draws_le_0": 0.004
+    },
+    "method": "same gene resamples for both comparisons; Pearson drops copy pairs; held-out values are out-of-bag (fit on resample, score on undrawn genes); percentile CI of the difference"
+  },
+  "panel_immune": {
+    "complete": true,
+    "same_genes_same_order": true,
+    "n_genes": 350,
+    "seed": 20261202,
+    "pearson_gf_minus_scgpt": {
+      "observed": 0.1371544706169014,
+      "ci95": [
+        0.12098597359651594,
+        0.15307802906907925
+      ],
+      "n_boot": 2000,
+      "frac_draws_le_0": 0.0
+    },
+    "heldout_cca_gf_minus_scgpt": {
+      "mean": 0.10576280836629769,
+      "ci95": [
+        0.050637686522573284,
+        0.15397556192904635
+      ],
+      "n_boot": 500,
+      "frac_draws_le_0": 0.0
+    },
+    "heldout_top1_gf_minus_scgpt": {
+      "mean": 0.08868041039758541,
+      "ci95": [
+        0.014814814814814815,
+        0.16377704326923076
+      ],
+      "n_boot": 500,
+      "frac_draws_le_0": 0.012
+    },
+    "method": "same gene resamples for both comparisons; Pearson drops copy pairs; held-out values are out-of-bag (fit on resample, score on undrawn genes); percentile CI of the difference"
+  },
+  "panel_external_lung": {
+    "complete": true,
+    "same_genes_same_order": true,
+    "n_genes": 380,
+    "seed": 20261203,
+    "pearson_gf_minus_scgpt": {
+      "observed": 0.10388568252219593,
+      "ci95": [
+        0.08845177631201319,
+        0.11888305117636114
+      ],
+      "n_boot": 2000,
+      "frac_draws_le_0": 0.0
+    },
+    "heldout_cca_gf_minus_scgpt": {
+      "mean": 0.1003201963620832,
+      "ci95": [
+        0.04442789588771399,
+        0.15903660701697436
+      ],
+      "n_boot": 500,
+      "frac_draws_le_0": 0.004
+    },
+    "heldout_top1_gf_minus_scgpt": {
+      "mean": 0.06726154765192406,
+      "ci95": [
+        0.0,
+        0.1348404255319149
+      ],
+      "n_boot": 500,
+      "frac_draws_le_0": 0.028
+    },
+    "method": "same gene resamples for both comparisons; Pearson drops copy pairs; held-out values are out-of-bag (fit on resample, score on undrawn genes); percentile CI of the difference"
+  },
+  "hvg1500_pearson_gf_minus_scgpt": {
+    "n_genes": 1500,
+    "gf": 0.38198441159197566,
+    "scgpt_fixed": 0.23902677356325217,
+    "observed_diff": 0.1429576380287235,
+    "ci95": [
+      0.13790737520943086,
+      0.14821350083176152
+    ],
+    "n_boot": 2000,
+    "seed": 20261211
+  },
+  "wall_seconds_last_run": 225.64720582962036
+}

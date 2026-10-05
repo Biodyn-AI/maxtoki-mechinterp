@@ -1,0 +1,195 @@
+{
+  "n_cells": 442,
+  "groups": [
+    {
+      "group": "selection",
+      "stage": 0,
+      "stage_label": "hematopoietic stem cell",
+      "donor": "TSP14",
+      "n": 30
+    },
+    {
+      "group": "selection",
+      "stage": 0,
+      "stage_label": "hematopoietic stem cell",
+      "donor": "TSP21",
+      "n": 16
+    },
+    {
+      "group": "selection",
+      "stage": 0,
+      "stage_label": "hematopoietic stem cell",
+      "donor": "TSP25",
+      "n": 30
+    },
+    {
+      "group": "selection",
+      "stage": 1,
+      "stage_label": "common myeloid progenitor",
+      "donor": "TSP14",
+      "n": 30
+    },
+    {
+      "group": "selection",
+      "stage": 1,
+      "stage_label": "common myeloid progenitor",
+      "donor": "TSP21",
+      "n": 30
+    },
+    {
+      "group": "selection",
+      "stage": 1,
+      "stage_label": "common myeloid progenitor",
+      "donor": "TSP25",
+      "n": 30
+    },
+    {
+      "group": "selection",
+      "stage": 2,
+      "stage_label": "erythroid progenitor cell",
+      "donor": "TSP14",
+      "n": 30
+    },
+    {
+      "group": "selection",
+      "stage": 2,
+      "stage_label": "erythroid progenitor cell",
+      "donor": "TSP21",
+      "n": 30
+    },
+    {
+      "group": "selection",
+      "stage": 2,
+      "stage_label": "erythroid progenitor cell",
+      "donor": "TSP25",
+      "n": 16
+    },
+    {
+      "group": "selection",
+      "stage": 3,
+      "stage_label": "erythrocyte",
+      "donor": "TSP14",
+      "n": 30
+    },
+    {
+      "group": "selection",
+      "stage": 3,
+      "stage_label": "erythrocyte",
+      "donor": "TSP21",
+      "n": 30
+    },
+    {
+      "group": "selection",
+      "stage": 3,
+      "stage_label": "erythrocyte",
+      "donor": "TSP25",
+      "n": 30
+    },
+    {
+      "group": "steer",
+      "stage": 0,
+      "stage_label": "hematopoietic stem cell",
+      "donor": "TSP2+TSP27",
+      "n": 50
+    },
+    {
+      "group": "validation",
+      "stage": 1,
+      "stage_label": "common myeloid progenitor",
+      "donor": "TSP2+TSP27",
+      "n": 30
+    },
+    {
+      "group": "validation",
+      "stage": 2,
+      "stage_label": "erythroid progenitor cell",
+      "donor": "TSP2+TSP27",
+      "n": 30
+    }
+  ],
+  "available": {
+    "hematopoietic stem cell|TSP14": 90,
+    "hematopoietic stem cell|TSP21": 16,
+    "hematopoietic stem cell|TSP25": 41,
+    "hematopoietic stem cell|TSP2": 122,
+    "hematopoietic stem cell|TSP27": 9,
+    "common myeloid progenitor|TSP14": 191,
+    "common myeloid progenitor|TSP21": 52,
+    "common myeloid progenitor|TSP25": 43,
+    "common myeloid progenitor|TSP2": 73,
+    "common myeloid progenitor|TSP27": 9,
+    "erythroid progenitor cell|TSP14": 173,
+    "erythroid progenitor cell|TSP21": 44,
+    "erythroid progenitor cell|TSP25": 16,
+    "erythroid progenitor cell|TSP2": 112,
+    "erythroid progenitor cell|TSP27": 28,
+    "erythrocyte|TSP14": 103,
+    "erythrocyte|TSP21": 76,
+    "erythrocyte|TSP25": 47,
+    "erythrocyte|TSP2": 0,
+    "erythrocyte|TSP27": 0
+  },
+  "encoding_check": {
+    "label": "prep: all cells",
+    "n_checked": 442,
+    "n_cells": 442,
+    "all_pass": true,
+    "max_order_violations": 0,
+    "n_positions_tie_reordered": 38,
+    "check": "inputs_v3.check_encoding (token order == counts/median order; counts count-like)"
+  },
+  "tokenize_info": {
+    "dataset": "ts_immune",
+    "path": "<DATA_ROOT>/biodyn-work/single_cell_mechinterp/data/raw/tabula_sapiens_immune.h5ad",
+    "source": "raw_X",
+    "source_description": "raw/X (integer counts, same genes and order as var), checked per row",
+    "max_len": 2048,
+    "expm1_mode": null,
+    "n_rows_requested": 442,
+    "n_cells": 442,
+    "count_checks_all_pass": true,
+    "encoding_check": "check_encoding passed on all 442 cells"
+  },
+  "deployed_path_fails_check": "442 of 442",
+  "deployed_vs_correct_top200_overlap_mean": 0.588552036199095,
+  "deployed_vs_correct_top200_overlap_range": [
+    0.375,
+    0.99
+  ],
+  "self_agreement_sanity": [
+    1.0,
+    1.0
+  ],
+  "counts_sha256_all": "2624911e18f9da5c773af773944701bc3c400392b565d0e5f8352ba1bd7f9c2b",
+  "n_tokens_by_group_stage": {
+    "selection|HSC": [
+      2048,
+      76
+    ],
+    "selection|CMP": [
+      2048,
+      90
+    ],
+    "selection|EryP": [
+      2048,
+      76
+    ],
+    "selection|Ery": [
+      1796,
+      90
+    ],
+    "steer|HSC": [
+      2048,
+      50
+    ],
+    "validation|CMP": [
+      2048,
+      30
+    ],
+    "validation|EryP": [
+      2048,
+      30
+    ]
+  },
+  "wall_s": 7.2
+}

@@ -1,0 +1,47 @@
+{
+ "opaque_id": "B1131",
+ "pair_id": "P01",
+ "status": "flawed",
+ "twin_id": "B1448",
+ "source_project": "biotensor / codebase/route_branchpoint (branch-point curvature across SCFMs)",
+ "analysis": "Significance test of full-space branch-point curvature (CV R2 of a degree-2 poly-kernel ridge minus a linear-kernel ridge, predicting diffusion pseudotime) in Geneformer V2-316M and scGPT whole-human layer-11 cell embeddings, lung/gut/pancreas, 1,500 cells each, 200 null draws, BH across 6 cells.",
+ "error": {
+  "nature": "Invalid significance null. The null targets are synthetic and linear in the embedding by construction (random linear projection plus noise matched to the real linear R2). On a truly linear target the degree-2 poly kernel pays a cross-validation cost for its extra flexibility, so poly R2 - linear R2 is negative under this null (null mean -0.012 to -0.027 in all 6 cells). The bar sits below zero (null 95th percentile < 0 in 5 of 6 cells), so even a curvature of +0.0021 (geneformer pancreas) lands at the p floor. The test cannot fail and does not measure whether the poly kernel's gain exceeds what it gets by chance. A valid null (e.g. blocked permutation of pseudotime, which keeps the poly kernel's chance gain) gives positive null means and only 1 of 6 cells significant.",
+  "location": "code/curvature_significance.py:54-61 (null_draw builds the synthetic linear target), used at code/curvature_significance.py:124; described in the docstring at lines 9-11 and in README.md 'Null' bullet",
+  "wrong_result": "6/6 cells significant, p = 0.005 (floor) and q = 0.005 in every cell, z +2.45 to +4.90, including geneformer pancreas at curvature +0.0021 (null mean -0.0273); SUMMARY concludes curvature is real and general across models and tissues, and that human tissues curve more than mouse (species effect).",
+  "correct_result": "Under a blocked-permutation null (block 50, 200 draws, same seed): null mean positive in all 6 cells (+0.0006 to +0.0164); only geneformer gut significant (p 0.005, q 0.030, z +5.73); other five q >= 0.34; scgpt lung, geneformer pancreas, scgpt pancreas have curvature below the null mean (z -0.65, -0.22, -0.68). No general curvature and no species conclusion (the only significant cell is also the lowest-linear-R2 cell; species confounded with headroom).",
+  "pattern": "P1",
+  "in_checklist": true
+ },
+ "detection_rule": "A finding counts as detection if it says that the significance null (the synthetic linear target in null_draw / the README 'Null') is biased or cannot fail because the polynomial kernel is handicapped on a linear target, i.e. the null curvature is centred below zero (negative null mean), so every positive curvature reaches p = 0.005; OR equivalently that the null does not capture the chance R2 gain of the more flexible poly kernel and should be replaced by a permutation-type null (permute/blocked-permute pseudotime) or another null under which the poly kernel's spurious gain is kept. Pointing to the negative null means together with p at the floor in all cells, and saying this makes the test invalid, is enough. NOT enough: only noting that p sits at the floor because N_NULL = 200; only saying the null has a different headroom; only criticising the bootstrap; only saying the species claim is confounded with linear R2 (this is a real secondary overreach but not the documented error).",
+ "known_true_facts": [
+  "The curvature values are the same in both twins: geneformer lung +0.0180, scgpt lung +0.0076, geneformer gut +0.0407, scgpt gut +0.0174, geneformer pancreas +0.0021, scgpt pancreas +0.0024.",
+  "Linear CV R2 ranges 0.759 (geneformer gut) to 0.973 (scgpt pancreas); both mouse pancreas cells have linear R2 >= 0.945 (0.9455, 0.9726).",
+  "The p-value formula (count(null >= real) + 1) / (N_NULL + 1) is standard; with N_NULL = 200 the smallest possible p is 1/201 = 0.005.",
+  "bh_fdr implements Benjamini-Hochberg correctly (step-up with cumulative minimum from the largest p).",
+  "The FoldSolver eigendecomposition solver gives the same predictions as ordinary kernel ridge; the curvature matches the original source script on the same cells.",
+  "Lin and poly decoders use the same CV folds and the same alpha grid; null draws are scored with the same folds and the same max-over-alpha selection, so selection optimism is applied equally to real and null.",
+  "The degree-2 kernel (K_lin)^2 = (Xz.Xz^T/d + 1)^2 contains the linear features, so the poly decoder nests the linear one.",
+  "The bootstrap resamples cells from fixed out-of-fold predictions; it does not refit and is not a significance test against chance.",
+  "Geneformer pancreas bootstrap lower bound is +0.00002 and 2.4% of resamples are <= 0.",
+  "Each package runs in about 1.5-2.5 minutes on CPU with < 0.5 GB memory and reproduces outputs/ exactly.",
+  "In this package the null mean is negative in all 6 cells (-0.0119 to -0.0273) and the null 95th percentile is below zero in 5 of 6 cells (geneformer gut +0.0012).",
+  "All 6 p-values equal 0.005 (the floor) and all BH q-values equal 0.005.",
+  "The SUMMARY species claim (human curves more than mouse) is also confounded with linear-R2 headroom: all mouse cells have linear R2 >= 0.946 while the largest curvature is in the lowest-R2 cell. A reviewer who flags this is correct, but it is a consequence-level overreach, not the documented error."
+ ],
+ "possible_false_alarms": [
+  "StandardScaler is fit on all cells before cross-validation. It does not use y and is unsupervised, so it does not leak pseudotime; not an error.",
+  "Alpha is chosen as the max CV R2 on the same folds (no nested CV). This biases both decoders and every null draw the same way, so it does not explain the result; at most a minor note.",
+  "The bootstrap interval holds the fitted decoders fixed. This is stated in README/SUMMARY and is a limitation, not the documented error.",
+  "Only 1,500 cells per tissue and one layer (11); the source analysis used up to 3,000 cells. Subsampling is documented and does not change the direction of any conclusion.",
+  "Pseudotime is computed upstream from expression (dpt), not from the embedding; this is the intended target, not circular.",
+  "Mouse genes mapped to human symbols by uppercasing for the pancreas data; a known approximation, documented, not the error.",
+  "scGPT input uses 51-bin quantile binning; this matches scGPT's pretraining and is correct.",
+  "Thread environment variables are set to 1 inside the script; this only affects speed.",
+  "Claiming that the curvature values themselves (poly R2 - linear R2) are miscomputed: they are correct and identical in the clean twin."
+ ],
+ "other_real_issues": [
+  "VERIFICATION PROBLEM (see P01_VERIFICATION.md): the documented error does not change the verdict when the null is repaired as a linear-truth null. Nulls that keep the real fitted linear direction (in-sample linear kernel-ridge fit plus the real residuals, permuted or sign-flipped, at in-sample or CV noise scale, 200 draws each; keys/P01_verify_linear_null.py) also have negative null means (-0.0002 to -0.0209) and give p <= 0.010 and BH q <= 0.010 in all 6 cells. A negative null mean is what poly-minus-linear CV R2 should do when the truth is linear. The random direction w in null_draw makes the null mean more negative than the matched-direction null (e.g. -0.0273 vs -0.0002 to -0.0039 for geneformer pancreas), so z is inflated, but 6/6 'curvature beyond linear' still holds. A finding that says the 6/6 result survives a properly matched linear null, or that the null should use the fitted direction rather than a random one, is CORRECT; do not count it as a false alarm.",
+  "The SUMMARY species claim (human curves more than mouse) compares raw curvature across cells whose linear R2 headroom differs (mouse 0.9455 and 0.9726; largest curvature in the lowest-R2 cell, 0.759). The source project withdrew this claim for that reason. A finding that reports it is CORRECT but is not detection of the documented error."
+ ]
+}

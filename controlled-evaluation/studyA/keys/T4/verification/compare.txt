@@ -1,0 +1,76 @@
+pearson_geneformer_lung                              key   0.398 tol 0.010 mine   0.3979 OK
+pearson_geneformer_immune                            key   0.400 tol 0.010 mine   0.4003 OK
+pearson_geneformer_external_lung                     key   0.387 tol 0.010 mine   0.3874 OK
+pearson_scgpt_lung                                   key   0.265 tol 0.012 mine   0.2655 OK
+pearson_scgpt_immune                                 key   0.263 tol 0.012 mine   0.2632 OK
+pearson_scgpt_external_lung                          key   0.283 tol 0.012 mine   0.2835 OK
+pearson_chance_mean_any_panel                        key   0.000 tol 0.010 mine   0.0003 OK
+pearson_diff_geneformer_minus_scgpt_lung             key   0.132 tol 0.015 mine   0.1325 OK
+pearson_diff_ci_low_lung                             key   0.119 tol 0.012 mine   0.1173 OK
+pearson_diff_geneformer_minus_scgpt_immune           key   0.137 tol 0.015 mine   0.1372 OK
+pearson_diff_ci_low_immune                           key   0.121 tol 0.012 mine   0.1205 OK
+pearson_diff_geneformer_minus_scgpt_external_lung    key   0.104 tol 0.015 mine   0.1039 OK
+pearson_diff_ci_low_external_lung                    key   0.088 tol 0.012 mine   0.0892 OK
+cca_insample_geneformer_lung                         key   0.783 tol 0.020 mine   0.7831 OK
+cca_insample_geneformer_immune                       key   0.776 tol 0.020 mine   0.7757 OK
+cca_insample_geneformer_external_lung                key   0.766 tol 0.020 mine   0.7662 OK
+cca_insample_scgpt_lung                              key   0.722 tol 0.020 mine   0.7223 OK
+cca_insample_scgpt_immune                            key   0.736 tol 0.020 mine    0.736 OK
+cca_insample_scgpt_external_lung                     key   0.733 tol 0.020 mine   0.7326 OK
+cca_insample_chance_mean_lung                        key   0.411 tol 0.015 mine    0.411 OK
+cca_insample_chance_mean_immune                      key   0.429 tol 0.015 mine   0.4287 OK
+cca_insample_chance_mean_external_lung               key   0.412 tol 0.015 mine   0.4116 OK
+cca_heldout_geneformer_lung                          key   0.604 tol 0.030 mine   0.6149 OK
+cca_heldout_geneformer_immune                        key   0.558 tol 0.030 mine   0.5731 OK
+cca_heldout_geneformer_external_lung                 key   0.578 tol 0.030 mine   0.5771 OK
+cca_heldout_scgpt_lung                               key   0.495 tol 0.030 mine   0.5022 OK
+cca_heldout_scgpt_immune                             key   0.481 tol 0.030 mine   0.4951 OK
+cca_heldout_scgpt_external_lung                      key   0.493 tol 0.030 mine   0.4908 OK
+cca_heldout_diff_geneformer_minus_scgpt_lung         key   0.112 tol 0.030 mine    0.112 OK
+cca_heldout_diff_geneformer_minus_scgpt_immune       key   0.106 tol 0.030 mine   0.1063 OK
+cca_heldout_diff_geneformer_minus_scgpt_external_lung key   0.100 tol 0.030 mine   0.1036 OK
+top1_heldout_geneformer_lung                         key   0.179 tol 0.030 mine   0.1866 OK
+top1_heldout_geneformer_immune                       key   0.158 tol 0.030 mine   0.1686 OK
+top1_heldout_geneformer_external_lung                key   0.146 tol 0.030 mine   0.1403 OK
+top1_heldout_scgpt_lung                              key   0.059 tol 0.030 mine    0.049 OK
+top1_heldout_scgpt_immune                            key   0.091 tol 0.030 mine   0.0891 OK
+top1_heldout_scgpt_external_lung                     key   0.068 tol 0.030 mine   0.0592 OK
+top1_insample_geneformer_lung                        key   0.450 tol 0.060 mine   0.4503 OK
+top1_insample_geneformer_immune                      key   0.466 tol 0.060 mine   0.4657 OK
+top1_insample_geneformer_external_lung               key   0.382 tol 0.060 mine   0.3816 OK
+top1_insample_scgpt_lung                             key   0.309 tol 0.060 mine   0.3089 OK
+top1_insample_scgpt_immune                           key   0.349 tol 0.060 mine   0.3486 OK
+top1_insample_scgpt_external_lung                    key   0.313 tol 0.060 mine   0.3132 OK
+top1_insample_chance_rotation_refit_lung             key   0.066 tol 0.015 mine   0.0668 OK
+top1_insample_chance_rotation_refit_immune           key   0.080 tol 0.015 mine   0.0801 OK
+top1_insample_chance_rotation_refit_external_lung    key   0.072 tol 0.015 mine   0.0717 OK
+WRONG_LOOKUP_scgpt_pearson_lung                      key  -0.008 tol 0.010 mine  -0.0084 OK
+WRONG_LOOKUP_scgpt_pearson_immune                    key  -0.019 tol 0.010 mine  -0.0188 OK
+WRONG_LOOKUP_scgpt_pearson_external_lung             key  -0.005 tol 0.010 mine  -0.0047 OK
+WRONG_LOOKUP_scgpt_cca_lung                          key   0.401 tol 0.015 mine   0.4011 OK
+WRONG_LOOKUP_scgpt_cca_immune                        key   0.438 tol 0.015 mine   0.4382 OK
+WRONG_LOOKUP_scgpt_cca_external_lung                 key   0.406 tol 0.015 mine   0.4057 OK
+WRONG_LOOKUP_scgpt_top1_lung                         key   0.050 tol 0.020 mine   0.0497 OK
+WRONG_LOOKUP_scgpt_top1_immune                       key   0.066 tol 0.020 mine   0.0657 OK
+WRONG_LOOKUP_scgpt_top1_external_lung                key   0.076 tol 0.020 mine   0.0763 OK
+pearson_geneformer_union_828                         key   0.373 tol 0.010 mine   0.3728 OK
+pearson_scgpt_union_828                              key   0.238 tol 0.012 mine   0.2382 OK
+n key numbers 57 outside tolerance 0
+exact/raw variant cca_insample_geneformer_lung 0.7939 OK
+exact/raw variant cca_insample_scgpt_lung 0.7295 OK
+exact/raw variant top1_insample_geneformer_lung 0.4869 OK
+exact/raw variant top1_insample_scgpt_lung 0.301 OK
+exact/raw variant pearson_scgpt_lung 0.266 OK
+exact/raw variant cca_insample_scgpt_lung 0.7308 OK
+exact/raw variant cca_insample_geneformer_immune 0.7785 OK
+exact/raw variant cca_insample_scgpt_immune 0.7407 OK
+exact/raw variant top1_insample_geneformer_immune 0.5143 OK
+exact/raw variant top1_insample_scgpt_immune 0.3771 OK
+exact/raw variant pearson_scgpt_immune 0.256 OK
+exact/raw variant cca_insample_scgpt_immune 0.7395 OK
+exact/raw variant cca_insample_geneformer_external_lung 0.7689 OK
+exact/raw variant cca_insample_scgpt_external_lung 0.7303 OK
+exact/raw variant top1_insample_geneformer_external_lung 0.4026 OK
+exact/raw variant top1_insample_scgpt_external_lung 0.3316 OK
+exact/raw variant pearson_scgpt_external_lung 0.2841 OK
+exact/raw variant cca_insample_scgpt_external_lung 0.7295 OK

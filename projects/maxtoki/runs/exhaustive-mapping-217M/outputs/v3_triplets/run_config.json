@@ -1,0 +1,2174 @@
+{
+ "input_encoding": {
+  "inputs_module": "<REPO_ROOT>/projects/maxtoki/setup/inputs_v3.py",
+  "inputs_v3_sha256": "019e38346748c027a55ce3d32c33c9096f9e60b9434e51e51b1d836a6bfc3707",
+  "dataset": "k562",
+  "file": {
+   "path": "<DATA_ROOT>/biodyn-nmi-paper/src/02_cssi_method/crispri_validation/data/replogle_concat.h5ad",
+   "size": 30010775846,
+   "mtime": "2026-02-14T23:33:00",
+   "sha256_head_tail_16MB": "ef45fd6a820bf4f2795ab091c1f22ac25fb5f39daae1712804d902b9680bb995"
+  },
+  "count_source": "expm1_X",
+  "count_source_description": "expm1(X) (X = log1p(CP10k)), checked per row to be whole-number multiples of the cell's smallest non-zero value; by default divided by that value and rounded (= integer counts up to one per-cell factor; expm1_mode='integer')",
+  "encoding": "counts / row total * 1e4 / Geneformer gc104M gene median, ranked high->low, first max_len-2 genes, <bos>=2 ... <eos>=3 (maxtoki_adapter.tokenize_cell)",
+  "gene_median_pkl": "<DATA_ROOT>/biodyn-nmi-paper/src/02_cssi_method/crispri_validation/data/gene_median_dictionary_gc104M.pkl",
+  "token_dictionary": "<REPO_ROOT>/projects/maxtoki/setup/token_dictionary.json",
+  "rows": [
+   289300,
+   292833,
+   293501,
+   294821,
+   296499,
+   296999,
+   297671,
+   298043,
+   298575,
+   304014,
+   304434,
+   306407,
+   308960,
+   310091,
+   310869,
+   314183,
+   315807,
+   316745,
+   317964,
+   322713
+  ],
+  "counts_sha256": "4c138184148d089a8f1eaad357ace62531ac8f91920824247fad30dfe8a28d7a",
+  "encoding_check": {
+   "label": "select: all 20 cells",
+   "n_checked": 20,
+   "n_cells": 20,
+   "all_pass": true,
+   "max_order_violations": 0,
+   "n_positions_tie_reordered": 2,
+   "check": "inputs_v3.check_encoding (token order == counts/median order; counts count-like)"
+  },
+  "count_row_checks_all_pass": true,
+  "count_row_unit_max_dev": 0.000130810578184537,
+  "loader_info": {
+   "dataset": "k562",
+   "path": "<DATA_ROOT>/biodyn-nmi-paper/src/02_cssi_method/crispri_validation/data/replogle_concat.h5ad",
+   "source": "expm1_X",
+   "source_description": "expm1(X) (X = log1p(CP10k)), checked per row to be whole-number multiples of the cell's smallest non-zero value; by default divided by that value and rounded (= integer counts up to one per-cell factor; expm1_mode='integer')",
+   "selection": "rng(42).choice(K562 non-targeting, 100) sorted, first 20 that tokenize",
+   "rows": [
+    289300,
+    292833,
+    293501,
+    294821,
+    296499,
+    296999,
+    297671,
+    298043,
+    298575,
+    304014,
+    304434,
+    306407,
+    308960,
+    310091,
+    310869,
+    314183,
+    315807,
+    316745,
+    317964,
+    322713
+   ],
+   "max_len": 2048,
+   "count_unit_max_dev": 0.000130810578184537,
+   "encoding_check": "check_encoding passed on all 20 cells"
+  }
+ },
+ "item": "V3-4: triplet grid with v3 SAEs and correctly encoded inputs",
+ "script": "<REPO_ROOT>/projects/maxtoki/runs/exhaustive-mapping-217M/scripts/v3_triplets.py",
+ "script_sha256": "94e31c039de90776339871ad99a4f344e39cae20b7c1bebe8b4382c5120d7bb5",
+ "selection": {
+  "features": {
+   "0": [
+    763,
+    3035,
+    2518,
+    3778,
+    859,
+    293,
+    1910,
+    3275
+   ],
+   "5": [
+    3812,
+    4369,
+    1812,
+    1550,
+    3142,
+    4903,
+    4821,
+    1053
+   ],
+   "9": [
+    1154,
+    4302,
+    1535,
+    235,
+    494,
+    110,
+    2772,
+    1628
+   ]
+  },
+  "null_features": {
+   "0": [
+    1581,
+    3049
+   ],
+   "5": [
+    3437,
+    4481
+   ],
+   "9": [
+    1995,
+    3537
+   ]
+  },
+  "null_kind": {
+   "0": "exact: zero activations in the 20 clean cells",
+   "5": "near-null: no feature has zero activations at L5; the 2 rarest features are used (active positions [4, 40] of 40960)",
+   "9": "exact: zero activations in the 20 clean cells"
+  },
+  "rule": "Per layer: candidates = v3 SAE features active (z>0) in >= 1% of all tokens of the 20 clean cells (all positions incl. <bos>/<eos>). Candidate log10(frequency) cut into 8 equal-count bins (octiles, numpy quantile); one feature drawn at random from each bin with numpy default_rng(20261001 + layer), bins in order 0 (rarest) .. 7 (commonest). If a bin had no unused candidate the nearest bin would be used (logged). Null features: 2 drawn with the same generator from features with zero activations in the 20 clean cells; if a layer has fewer than 2 such features (v3 L5: none), its 2 rarest features (fewest active positions, rarest first) are used as near-null features instead. No annotation is used for the choice; the v3 annotation label (item V3-3, circuit-tracing-217M/outputs/v3_circuit/annotation) is recorded afterwards for description only.",
+  "rule_amendment": "The first select call (2026-10-02 13:38) stopped before choosing because L5 had no feature with zero activations. The near-null fallback was added before any ablation was run. The octile rule for the 24 real features was not changed.",
+  "selected_at": "2026-10-02T13:40:16"
+ },
+ "env": {
+  "device": "mps",
+  "torch": "2.11.0",
+  "transformers": "5.5.4",
+  "python": "3.12.9",
+  "platform": "macOS-26.3-arm64-arm-64bit",
+  "hooks_v2_sha256": "1ba6fda5ad761b1f82041a7b1397fa9332fa7438e13db955a00d751c4b440f54",
+  "model_dir": "<REPO_ROOT>/projects/maxtoki/setup/MaxToki-217M-HF",
+  "model_dtype": "float32",
+  "timestamp": "2026-10-02T13:40:18"
+ },
+ "seeds": {
+  "cell_pool_seed": 42,
+  "selection_seed_base": 20261001,
+  "bootstrap_seed": 20261001,
+  "n_boot": 1000,
+  "signflip_seed": 20261002,
+  "n_signflip": 999,
+  "power_pick_seed": 20261003,
+  "readout_pick_seed": 20261021,
+  "crosscheck_signflip_seed": 20261099,
+  "torch_manual_seed": 0
+ },
+ "cells": {
+  "dataset_path": "<DATA_ROOT>/biodyn-nmi-paper/src/02_cssi_method/crispri_validation/data/replogle_concat.h5ad",
+  "rows": [
+   289300,
+   292833,
+   293501,
+   294821,
+   296499,
+   296999,
+   297671,
+   298043,
+   298575,
+   304014,
+   304434,
+   306407,
+   308960,
+   310091,
+   310869,
+   314183,
+   315807,
+   316745,
+   317964,
+   322713
+  ],
+  "barcodes": [
+   "AATCGACAGTAAGAGG-19-k562",
+   "ACAGGGACAACACAAA-36-k562",
+   "ACATGCAGTGTATCCA-44-k562",
+   "ACCCTCAGTACTTCCC-27-k562",
+   "ACGGAAGCAGACGATG-42-k562",
+   "ACGGTCGTCTCCACTG-25-k562",
+   "ACGTAGTGTAGGCAGT-41-k562",
+   "ACGTTCCAGTTAACGA-11-k562",
+   "ACTATGGAGCACTAGG-17-k562",
+   "AGAGCAGTCAGAGCAG-15-k562",
+   "AGATAGATCCGGTAAT-19-k562",
+   "AGCGCCAGTTCCGCGA-22-k562",
+   "AGGCATTAGTGGATAT-25-k562",
+   "AGGGTCCCAACTGTGT-34-k562",
+   "AGGTCATAGCGTCTGC-40-k562",
+   "AGTGTTGCAGCCCACA-14-k562",
+   "ATAGAGATCAAGTAAG-40-k562",
+   "ATCACTTGTCCCTGAG-24-k562",
+   "ATCCGTCGTCAGTCCG-2-k562",
+   "ATGTCCCCAACTCCAA-23-k562"
+  ],
+  "n_tokens": [
+   2048,
+   2048,
+   2048,
+   2048,
+   2048,
+   2048,
+   2048,
+   2048,
+   2048,
+   2048,
+   2048,
+   2048,
+   2048,
+   2048,
+   2048,
+   2048,
+   2048,
+   2048,
+   2048,
+   2048
+  ],
+  "pool": "inputs_v3.load_k562_control_cells(n_cells=20, pool=100, seed=42, max_len=2048): K562 non-targeting controls, 100-cell pool drawn with numpy default_rng(42), sorted rows, first 20 that tokenize (same rows as v2_triplets)",
+  "counts_sha256": "4c138184148d089a8f1eaad357ace62531ac8f91920824247fad30dfe8a28d7a",
+  "tokens_sha256": "ec7162a2aa4e3c05e1a4d740d842effef4cc930e4d13c906d4400e3092184e70"
+ },
+ "inputs": {
+  "sae_dir": "<REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/outputs/v3_sae",
+  "sae_sha256": {
+   "0": "ca27925c9a8c49b37a806921561ae2a900bc013056d0c302faa1d05fc05bb8bc",
+   "5": "aff63f2744474945df50cac688b8fd402f50c8434a56fac5b670051b3cc05a25",
+   "9": "ee0da1c9a3908b4d0f3083a688272ac892fb393680aec13556eb90c368a9d0ad",
+   "11": "f47762d692183a1f84913f908e6bed1e05335286f208b6ed1d1c50ea3dbf43cf"
+  },
+  "hooks_v2_sha256": "1ba6fda5ad761b1f82041a7b1397fa9332fa7438e13db955a00d751c4b440f54",
+  "inputs_v3_sha256": "019e38346748c027a55ce3d32c33c9096f9e60b9434e51e51b1d836a6bfc3707",
+  "posthoc_annotation_dir": "<REPO_ROOT>/projects/maxtoki/runs/circuit-tracing-217M/outputs/v3_circuit/annotation"
+ },
+ "chunks": [
+  {
+   "stage": "select",
+   "start": "2026-10-02T13:40:03",
+   "wall_seconds": 15.8,
+   "free_gb": 13.499056128,
+   "encoding_check": {
+    "label": "select: all 20 cells",
+    "n_checked": 20,
+    "n_cells": 20,
+    "all_pass": true,
+    "max_order_violations": 0,
+    "n_positions_tie_reordered": 2,
+    "check": "inputs_v3.check_encoding (token order == counts/median order; counts count-like)"
+   },
+   "script_sha256": "73ada25266e74a447cc57f6c030907cfbf2d97d0250e880ecfda65a98befa70c"
+  },
+  {
+   "stage": "verify",
+   "start": "2026-10-02T13:40:49",
+   "wall_seconds": 39.1,
+   "free_gb": 14.307311616,
+   "encoding_check": {
+    "label": "verify: all 20 cells",
+    "n_checked": 20,
+    "n_cells": 20,
+    "all_pass": true,
+    "max_order_violations": 0,
+    "n_positions_tie_reordered": 2,
+    "check": "inputs_v3.check_encoding (token order == counts/median order; counts count-like)"
+   },
+   "script_sha256": "73ada25266e74a447cc57f6c030907cfbf2d97d0250e880ecfda65a98befa70c"
+  },
+  {
+   "stage": "run",
+   "start": "2026-10-02T13:41:51",
+   "wall_seconds": 418.6,
+   "free_gb_at_start": 13.580959744,
+   "min_free_gb_seen": 5.101928448,
+   "groups_done": [
+    [
+     0,
+     0,
+     104,
+     18.2
+    ],
+    [
+     0,
+     1,
+     85,
+     15.2
+    ],
+    [
+     0,
+     2,
+     85,
+     14.8
+    ],
+    [
+     0,
+     3,
+     85,
+     14.5
+    ],
+    [
+     0,
+     4,
+     85,
+     14.7
+    ],
+    [
+     0,
+     5,
+     85,
+     14.7
+    ],
+    [
+     0,
+     6,
+     85,
+     14.5
+    ],
+    [
+     0,
+     7,
+     85,
+     14.2
+    ],
+    [
+     0,
+     8,
+     85,
+     14.3
+    ],
+    [
+     0,
+     9,
+     33,
+     6.6
+    ],
+    [
+     0,
+     10,
+     9,
+     1.9
+    ],
+    [
+     1,
+     0,
+     104,
+     17.3
+    ],
+    [
+     1,
+     1,
+     85,
+     14.1
+    ],
+    [
+     1,
+     2,
+     85,
+     14.3
+    ],
+    [
+     1,
+     3,
+     85,
+     14.1
+    ],
+    [
+     1,
+     4,
+     85,
+     14.1
+    ],
+    [
+     1,
+     5,
+     85,
+     14.1
+    ],
+    [
+     1,
+     6,
+     85,
+     14.3
+    ],
+    [
+     1,
+     7,
+     85,
+     14.3
+    ],
+    [
+     1,
+     8,
+     85,
+     14.2
+    ],
+    [
+     1,
+     9,
+     33,
+     6.6
+    ],
+    [
+     1,
+     10,
+     9,
+     2.0
+    ],
+    [
+     2,
+     0,
+     104,
+     17.3
+    ],
+    [
+     2,
+     1,
+     85,
+     14.4
+    ],
+    [
+     2,
+     2,
+     85,
+     14.5
+    ],
+    [
+     2,
+     3,
+     85,
+     14.9
+    ],
+    [
+     2,
+     4,
+     85,
+     26.8
+    ],
+    [
+     2,
+     5,
+     85,
+     43.4
+    ]
+   ],
+   "groups_left": 192,
+   "encoding_check": {
+    "label": "run: all 20 cells",
+    "n_checked": 20,
+    "n_cells": 20,
+    "all_pass": true,
+    "max_order_violations": 0,
+    "n_positions_tie_reordered": 2,
+    "check": "inputs_v3.check_encoding (token order == counts/median order; counts count-like)"
+   },
+   "script_sha256": "73ada25266e74a447cc57f6c030907cfbf2d97d0250e880ecfda65a98befa70c"
+  },
+  {
+   "stage": "run",
+   "start": "2026-10-02T13:49:07",
+   "wall_seconds": 394.4,
+   "free_gb_at_start": 10.369138688,
+   "min_free_gb_seen": 4.463542272,
+   "groups_done": [
+    [
+     2,
+     6,
+     85,
+     43.3
+    ],
+    [
+     2,
+     7,
+     85,
+     41.4
+    ],
+    [
+     2,
+     8,
+     85,
+     41.6
+    ],
+    [
+     2,
+     9,
+     33,
+     18.5
+    ],
+    [
+     2,
+     10,
+     9,
+     5.1
+    ],
+    [
+     3,
+     0,
+     104,
+     46.1
+    ],
+    [
+     3,
+     1,
+     85,
+     37.2
+    ],
+    [
+     3,
+     2,
+     85,
+     40.1
+    ],
+    [
+     3,
+     3,
+     85,
+     39.8
+    ],
+    [
+     3,
+     4,
+     85,
+     39.6
+    ],
+    [
+     3,
+     5,
+     85,
+     38.1
+    ]
+   ],
+   "groups_left": 181,
+   "encoding_check": {
+    "label": "run: all 20 cells",
+    "n_checked": 20,
+    "n_cells": 20,
+    "all_pass": true,
+    "max_order_violations": 0,
+    "n_positions_tie_reordered": 2,
+    "check": "inputs_v3.check_encoding (token order == counts/median order; counts count-like)"
+   },
+   "script_sha256": "73ada25266e74a447cc57f6c030907cfbf2d97d0250e880ecfda65a98befa70c"
+  },
+  {
+   "stage": "run",
+   "start": "2026-10-02T13:56:04",
+   "wall_seconds": 404.7,
+   "free_gb_at_start": 8.36091904,
+   "min_free_gb_seen": 4.28703744,
+   "groups_done": [
+    [
+     3,
+     6,
+     85,
+     38.2
+    ],
+    [
+     3,
+     7,
+     85,
+     37.8
+    ],
+    [
+     3,
+     8,
+     85,
+     37.9
+    ],
+    [
+     3,
+     9,
+     33,
+     16.0
+    ],
+    [
+     3,
+     10,
+     9,
+     4.8
+    ],
+    [
+     4,
+     0,
+     104,
+     45.9
+    ],
+    [
+     4,
+     1,
+     85,
+     36.6
+    ],
+    [
+     4,
+     2,
+     85,
+     38.1
+    ],
+    [
+     4,
+     3,
+     85,
+     37.5
+    ],
+    [
+     4,
+     4,
+     85,
+     38.3
+    ],
+    [
+     4,
+     5,
+     85,
+     35.7
+    ],
+    [
+     4,
+     6,
+     85,
+     33.9
+    ]
+   ],
+   "groups_left": 169,
+   "encoding_check": {
+    "label": "run: all 20 cells",
+    "n_checked": 20,
+    "n_cells": 20,
+    "all_pass": true,
+    "max_order_violations": 0,
+    "n_positions_tie_reordered": 2,
+    "check": "inputs_v3.check_encoding (token order == counts/median order; counts count-like)"
+   },
+   "script_sha256": "73ada25266e74a447cc57f6c030907cfbf2d97d0250e880ecfda65a98befa70c"
+  },
+  {
+   "stage": "run",
+   "start": "2026-10-02T14:03:21",
+   "wall_seconds": 382.2,
+   "free_gb_at_start": 6.988382208,
+   "min_free_gb_seen": 3.97312,
+   "groups_done": [
+    [
+     4,
+     7,
+     85,
+     40.2
+    ],
+    [
+     4,
+     8,
+     85,
+     37.6
+    ],
+    [
+     4,
+     9,
+     33,
+     16.8
+    ],
+    [
+     4,
+     10,
+     9,
+     5.1
+    ],
+    [
+     5,
+     0,
+     104,
+     49.6
+    ],
+    [
+     5,
+     1,
+     85,
+     40.2
+    ],
+    [
+     5,
+     2,
+     85,
+     38.7
+    ],
+    [
+     5,
+     3,
+     85,
+     38.5
+    ],
+    [
+     5,
+     4,
+     85,
+     38.4
+    ],
+    [
+     5,
+     5,
+     85,
+     36.6
+    ],
+    [
+     5,
+     6,
+     85,
+     34.9
+    ]
+   ],
+   "groups_left": 158,
+   "encoding_check": {
+    "label": "run: all 20 cells",
+    "n_checked": 20,
+    "n_cells": 20,
+    "all_pass": true,
+    "max_order_violations": 0,
+    "n_positions_tie_reordered": 2,
+    "check": "inputs_v3.check_encoding (token order == counts/median order; counts count-like)"
+   },
+   "script_sha256": "73ada25266e74a447cc57f6c030907cfbf2d97d0250e880ecfda65a98befa70c"
+  },
+  {
+   "stage": "run",
+   "start": "2026-10-02T14:10:16",
+   "wall_seconds": 408.6,
+   "free_gb_at_start": 7.641759744,
+   "min_free_gb_seen": 4.347674624,
+   "groups_done": [
+    [
+     5,
+     7,
+     85,
+     38.3
+    ],
+    [
+     5,
+     8,
+     85,
+     36.6
+    ],
+    [
+     5,
+     9,
+     33,
+     17.0
+    ],
+    [
+     5,
+     10,
+     9,
+     5.0
+    ],
+    [
+     6,
+     0,
+     104,
+     44.4
+    ],
+    [
+     6,
+     1,
+     85,
+     37.3
+    ],
+    [
+     6,
+     2,
+     85,
+     36.4
+    ],
+    [
+     6,
+     3,
+     85,
+     37.1
+    ],
+    [
+     6,
+     4,
+     85,
+     39.7
+    ],
+    [
+     6,
+     5,
+     85,
+     37.3
+    ],
+    [
+     6,
+     6,
+     85,
+     37.2
+    ],
+    [
+     6,
+     7,
+     85,
+     37.3
+    ]
+   ],
+   "groups_left": 146,
+   "encoding_check": {
+    "label": "run: all 20 cells",
+    "n_checked": 20,
+    "n_cells": 20,
+    "all_pass": true,
+    "max_order_violations": 0,
+    "n_positions_tie_reordered": 2,
+    "check": "inputs_v3.check_encoding (token order == counts/median order; counts count-like)"
+   },
+   "script_sha256": "73ada25266e74a447cc57f6c030907cfbf2d97d0250e880ecfda65a98befa70c"
+  },
+  {
+   "stage": "run",
+   "start": "2026-10-02T14:43:46",
+   "wall_seconds": 380.6,
+   "free_gb_at_start": 4.5285376,
+   "min_free_gb_seen": 4.5285376,
+   "groups_done": [
+    [
+     6,
+     8,
+     85,
+     40.6
+    ],
+    [
+     6,
+     9,
+     33,
+     17.0
+    ],
+    [
+     6,
+     10,
+     9,
+     4.7
+    ],
+    [
+     7,
+     0,
+     104,
+     46.6
+    ],
+    [
+     7,
+     1,
+     85,
+     38.6
+    ],
+    [
+     7,
+     2,
+     85,
+     36.8
+    ],
+    [
+     7,
+     3,
+     85,
+     38.6
+    ],
+    [
+     7,
+     4,
+     85,
+     38.9
+    ],
+    [
+     7,
+     5,
+     85,
+     39.3
+    ],
+    [
+     7,
+     6,
+     85,
+     37.5
+    ],
+    [
+     7,
+     7,
+     85,
+     37.6
+    ]
+   ],
+   "groups_left": 135,
+   "encoding_check": {
+    "label": "run: all 20 cells",
+    "n_checked": 20,
+    "n_cells": 20,
+    "all_pass": true,
+    "max_order_violations": 0,
+    "n_positions_tie_reordered": 2,
+    "check": "inputs_v3.check_encoding (token order == counts/median order; counts count-like)"
+   },
+   "script_sha256": "94e31c039de90776339871ad99a4f344e39cae20b7c1bebe8b4382c5120d7bb5"
+  },
+  {
+   "stage": "run",
+   "start": "2026-10-02T14:50:34",
+   "wall_seconds": 410.8,
+   "free_gb_at_start": 9.4199808,
+   "min_free_gb_seen": 3.794468864,
+   "groups_done": [
+    [
+     7,
+     8,
+     85,
+     38.7
+    ],
+    [
+     7,
+     9,
+     33,
+     17.9
+    ],
+    [
+     7,
+     10,
+     9,
+     5.0
+    ],
+    [
+     8,
+     0,
+     104,
+     37.0
+    ],
+    [
+     8,
+     1,
+     85,
+     17.0
+    ],
+    [
+     8,
+     2,
+     85,
+     39.5
+    ],
+    [
+     8,
+     3,
+     85,
+     38.9
+    ],
+    [
+     8,
+     4,
+     85,
+     38.1
+    ],
+    [
+     8,
+     5,
+     85,
+     36.5
+    ],
+    [
+     8,
+     6,
+     85,
+     38.7
+    ],
+    [
+     8,
+     7,
+     85,
+     39.2
+    ],
+    [
+     8,
+     8,
+     85,
+     38.1
+    ],
+    [
+     8,
+     9,
+     33,
+     17.3
+    ],
+    [
+     8,
+     10,
+     9,
+     5.0
+    ]
+   ],
+   "groups_left": 121,
+   "encoding_check": {
+    "label": "run: all 20 cells",
+    "n_checked": 20,
+    "n_cells": 20,
+    "all_pass": true,
+    "max_order_violations": 0,
+    "n_positions_tie_reordered": 2,
+    "check": "inputs_v3.check_encoding (token order == counts/median order; counts count-like)"
+   },
+   "script_sha256": "94e31c039de90776339871ad99a4f344e39cae20b7c1bebe8b4382c5120d7bb5"
+  },
+  {
+   "stage": "run",
+   "start": "2026-10-02T14:57:57",
+   "wall_seconds": 435.8,
+   "free_gb_at_start": 4.595171328,
+   "min_free_gb_seen": 4.155113472,
+   "groups_done": [
+    [
+     9,
+     0,
+     104,
+     47.1
+    ],
+    [
+     9,
+     1,
+     85,
+     37.7
+    ],
+    [
+     9,
+     2,
+     85,
+     38.8
+    ],
+    [
+     9,
+     3,
+     85,
+     40.2
+    ],
+    [
+     9,
+     4,
+     85,
+     40.3
+    ],
+    [
+     9,
+     5,
+     85,
+     38.9
+    ],
+    [
+     9,
+     6,
+     85,
+     38.5
+    ],
+    [
+     9,
+     7,
+     85,
+     39.5
+    ],
+    [
+     9,
+     8,
+     85,
+     39.4
+    ],
+    [
+     9,
+     9,
+     33,
+     17.3
+    ],
+    [
+     9,
+     10,
+     9,
+     5.0
+    ],
+    [
+     10,
+     0,
+     104,
+     47.5
+    ]
+   ],
+   "groups_left": 109,
+   "encoding_check": {
+    "label": "run: all 20 cells",
+    "n_checked": 20,
+    "n_cells": 20,
+    "all_pass": true,
+    "max_order_violations": 0,
+    "n_positions_tie_reordered": 2,
+    "check": "inputs_v3.check_encoding (token order == counts/median order; counts count-like)"
+   },
+   "script_sha256": "94e31c039de90776339871ad99a4f344e39cae20b7c1bebe8b4382c5120d7bb5"
+  },
+  {
+   "stage": "run",
+   "start": "2026-10-02T15:05:46",
+   "wall_seconds": 421.2,
+   "free_gb_at_start": 9.717465088,
+   "min_free_gb_seen": 3.835772928,
+   "groups_done": [
+    [
+     10,
+     1,
+     85,
+     40.8
+    ],
+    [
+     10,
+     2,
+     85,
+     39.1
+    ],
+    [
+     10,
+     3,
+     85,
+     37.9
+    ],
+    [
+     10,
+     4,
+     85,
+     38.6
+    ],
+    [
+     10,
+     5,
+     85,
+     37.6
+    ],
+    [
+     10,
+     6,
+     85,
+     38.0
+    ],
+    [
+     10,
+     7,
+     85,
+     38.3
+    ],
+    [
+     10,
+     8,
+     85,
+     38.5
+    ],
+    [
+     10,
+     9,
+     33,
+     18.1
+    ],
+    [
+     10,
+     10,
+     9,
+     5.2
+    ],
+    [
+     11,
+     0,
+     104,
+     47.7
+    ],
+    [
+     11,
+     1,
+     85,
+     36.9
+    ]
+   ],
+   "groups_left": 97,
+   "encoding_check": {
+    "label": "run: all 20 cells",
+    "n_checked": 20,
+    "n_cells": 20,
+    "all_pass": true,
+    "max_order_violations": 0,
+    "n_positions_tie_reordered": 2,
+    "check": "inputs_v3.check_encoding (token order == counts/median order; counts count-like)"
+   },
+   "script_sha256": "94e31c039de90776339871ad99a4f344e39cae20b7c1bebe8b4382c5120d7bb5"
+  },
+  {
+   "stage": "run",
+   "start": "2026-10-02T15:13:27",
+   "wall_seconds": 417.1,
+   "free_gb_at_start": 7.967883264,
+   "min_free_gb_seen": 4.160700416,
+   "groups_done": [
+    [
+     11,
+     2,
+     85,
+     39.4
+    ],
+    [
+     11,
+     3,
+     85,
+     37.3
+    ],
+    [
+     11,
+     4,
+     85,
+     38.0
+    ],
+    [
+     11,
+     5,
+     85,
+     37.5
+    ],
+    [
+     11,
+     6,
+     85,
+     37.9
+    ],
+    [
+     11,
+     7,
+     85,
+     38.4
+    ],
+    [
+     11,
+     8,
+     85,
+     39.4
+    ],
+    [
+     11,
+     9,
+     33,
+     17.1
+    ],
+    [
+     11,
+     10,
+     9,
+     5.0
+    ],
+    [
+     12,
+     0,
+     104,
+     46.0
+    ],
+    [
+     12,
+     1,
+     85,
+     39.5
+    ],
+    [
+     12,
+     2,
+     85,
+     36.6
+    ]
+   ],
+   "groups_left": 85,
+   "encoding_check": {
+    "label": "run: all 20 cells",
+    "n_checked": 20,
+    "n_cells": 20,
+    "all_pass": true,
+    "max_order_violations": 0,
+    "n_positions_tie_reordered": 2,
+    "check": "inputs_v3.check_encoding (token order == counts/median order; counts count-like)"
+   },
+   "script_sha256": "94e31c039de90776339871ad99a4f344e39cae20b7c1bebe8b4382c5120d7bb5"
+  },
+  {
+   "stage": "run",
+   "start": "2026-10-02T15:21:04",
+   "wall_seconds": 409.9,
+   "free_gb_at_start": 9.361440768,
+   "min_free_gb_seen": 3.78560512,
+   "groups_done": [
+    [
+     12,
+     3,
+     85,
+     39.5
+    ],
+    [
+     12,
+     4,
+     85,
+     36.8
+    ],
+    [
+     12,
+     5,
+     85,
+     36.8
+    ],
+    [
+     12,
+     6,
+     85,
+     37.3
+    ],
+    [
+     12,
+     7,
+     85,
+     39.1
+    ],
+    [
+     12,
+     8,
+     85,
+     37.2
+    ],
+    [
+     12,
+     9,
+     33,
+     17.6
+    ],
+    [
+     12,
+     10,
+     9,
+     4.9
+    ],
+    [
+     13,
+     0,
+     104,
+     45.1
+    ],
+    [
+     13,
+     1,
+     85,
+     36.8
+    ],
+    [
+     13,
+     2,
+     85,
+     38.3
+    ],
+    [
+     13,
+     3,
+     85,
+     35.8
+    ]
+   ],
+   "groups_left": 73,
+   "encoding_check": {
+    "label": "run: all 20 cells",
+    "n_checked": 20,
+    "n_cells": 20,
+    "all_pass": true,
+    "max_order_violations": 0,
+    "n_positions_tie_reordered": 2,
+    "check": "inputs_v3.check_encoding (token order == counts/median order; counts count-like)"
+   },
+   "script_sha256": "94e31c039de90776339871ad99a4f344e39cae20b7c1bebe8b4382c5120d7bb5"
+  },
+  {
+   "stage": "run",
+   "start": "2026-10-02T15:28:27",
+   "wall_seconds": 439.4,
+   "free_gb_at_start": 7.243218944,
+   "min_free_gb_seen": 3.535388672,
+   "groups_done": [
+    [
+     13,
+     4,
+     85,
+     39.2
+    ],
+    [
+     13,
+     5,
+     85,
+     38.2
+    ],
+    [
+     13,
+     6,
+     85,
+     37.9
+    ],
+    [
+     13,
+     7,
+     85,
+     38.2
+    ],
+    [
+     13,
+     8,
+     85,
+     37.9
+    ],
+    [
+     13,
+     9,
+     33,
+     18.2
+    ],
+    [
+     13,
+     10,
+     9,
+     5.4
+    ],
+    [
+     14,
+     0,
+     104,
+     25.0
+    ],
+    [
+     14,
+     1,
+     85,
+     40.1
+    ],
+    [
+     14,
+     2,
+     85,
+     40.3
+    ],
+    [
+     14,
+     3,
+     85,
+     38.9
+    ],
+    [
+     14,
+     4,
+     85,
+     37.7
+    ],
+    [
+     14,
+     5,
+     85,
+     37.1
+    ]
+   ],
+   "groups_left": 60,
+   "encoding_check": {
+    "label": "run: all 20 cells",
+    "n_checked": 20,
+    "n_cells": 20,
+    "all_pass": true,
+    "max_order_violations": 0,
+    "n_positions_tie_reordered": 2,
+    "check": "inputs_v3.check_encoding (token order == counts/median order; counts count-like)"
+   },
+   "script_sha256": "94e31c039de90776339871ad99a4f344e39cae20b7c1bebe8b4382c5120d7bb5"
+  },
+  {
+   "stage": "run",
+   "start": "2026-10-02T15:36:03",
+   "wall_seconds": 414.6,
+   "free_gb_at_start": 8.547975168,
+   "min_free_gb_seen": 3.823157248,
+   "groups_done": [
+    [
+     14,
+     6,
+     85,
+     39.4
+    ],
+    [
+     14,
+     7,
+     85,
+     37.1
+    ],
+    [
+     14,
+     8,
+     85,
+     38.6
+    ],
+    [
+     14,
+     9,
+     33,
+     16.8
+    ],
+    [
+     14,
+     10,
+     9,
+     5.0
+    ],
+    [
+     15,
+     0,
+     104,
+     47.2
+    ],
+    [
+     15,
+     1,
+     85,
+     36.5
+    ],
+    [
+     15,
+     2,
+     85,
+     37.3
+    ],
+    [
+     15,
+     3,
+     85,
+     38.7
+    ],
+    [
+     15,
+     4,
+     85,
+     37.9
+    ],
+    [
+     15,
+     5,
+     85,
+     38.1
+    ],
+    [
+     15,
+     6,
+     85,
+     38.2
+    ]
+   ],
+   "groups_left": 48,
+   "encoding_check": {
+    "label": "run: all 20 cells",
+    "n_checked": 20,
+    "n_cells": 20,
+    "all_pass": true,
+    "max_order_violations": 0,
+    "n_positions_tie_reordered": 2,
+    "check": "inputs_v3.check_encoding (token order == counts/median order; counts count-like)"
+   },
+   "script_sha256": "94e31c039de90776339871ad99a4f344e39cae20b7c1bebe8b4382c5120d7bb5"
+  },
+  {
+   "stage": "run",
+   "start": "2026-10-02T15:43:13",
+   "wall_seconds": 416.4,
+   "free_gb_at_start": 8.55138304,
+   "min_free_gb_seen": 4.098605056,
+   "groups_done": [
+    [
+     15,
+     7,
+     85,
+     38.8
+    ],
+    [
+     15,
+     8,
+     85,
+     38.1
+    ],
+    [
+     15,
+     9,
+     33,
+     17.6
+    ],
+    [
+     15,
+     10,
+     9,
+     5.0
+    ],
+    [
+     16,
+     0,
+     104,
+     45.5
+    ],
+    [
+     16,
+     1,
+     85,
+     40.0
+    ],
+    [
+     16,
+     2,
+     85,
+     37.9
+    ],
+    [
+     16,
+     3,
+     85,
+     37.2
+    ],
+    [
+     16,
+     4,
+     85,
+     38.7
+    ],
+    [
+     16,
+     5,
+     85,
+     38.7
+    ],
+    [
+     16,
+     6,
+     85,
+     37.5
+    ],
+    [
+     16,
+     7,
+     85,
+     37.7
+    ]
+   ],
+   "groups_left": 36,
+   "encoding_check": {
+    "label": "run: all 20 cells",
+    "n_checked": 20,
+    "n_cells": 20,
+    "all_pass": true,
+    "max_order_violations": 0,
+    "n_positions_tie_reordered": 2,
+    "check": "inputs_v3.check_encoding (token order == counts/median order; counts count-like)"
+   },
+   "script_sha256": "94e31c039de90776339871ad99a4f344e39cae20b7c1bebe8b4382c5120d7bb5"
+  },
+  {
+   "stage": "run",
+   "start": "2026-10-02T15:50:25",
+   "wall_seconds": 408.4,
+   "free_gb_at_start": 8.212955136,
+   "min_free_gb_seen": 4.341219328,
+   "groups_done": [
+    [
+     16,
+     8,
+     85,
+     39.0
+    ],
+    [
+     16,
+     9,
+     33,
+     17.5
+    ],
+    [
+     16,
+     10,
+     9,
+     5.0
+    ],
+    [
+     17,
+     0,
+     104,
+     47.6
+    ],
+    [
+     17,
+     1,
+     85,
+     38.1
+    ],
+    [
+     17,
+     2,
+     85,
+     38.7
+    ],
+    [
+     17,
+     3,
+     85,
+     39.2
+    ],
+    [
+     17,
+     4,
+     85,
+     38.7
+    ],
+    [
+     17,
+     5,
+     85,
+     33.0
+    ],
+    [
+     17,
+     6,
+     85,
+     14.0
+    ],
+    [
+     17,
+     7,
+     85,
+     13.9
+    ],
+    [
+     17,
+     8,
+     85,
+     13.8
+    ],
+    [
+     17,
+     9,
+     33,
+     6.4
+    ],
+    [
+     17,
+     10,
+     9,
+     2.2
+    ],
+    [
+     18,
+     0,
+     104,
+     16.7
+    ],
+    [
+     18,
+     1,
+     85,
+     13.7
+    ],
+    [
+     18,
+     2,
+     85,
+     13.7
+    ],
+    [
+     18,
+     3,
+     85,
+     13.6
+    ]
+   ],
+   "groups_left": 18,
+   "encoding_check": {
+    "label": "run: all 20 cells",
+    "n_checked": 20,
+    "n_cells": 20,
+    "all_pass": true,
+    "max_order_violations": 0,
+    "n_positions_tie_reordered": 2,
+    "check": "inputs_v3.check_encoding (token order == counts/median order; counts count-like)"
+   },
+   "script_sha256": "94e31c039de90776339871ad99a4f344e39cae20b7c1bebe8b4382c5120d7bb5"
+  },
+  {
+   "stage": "run",
+   "start": "2026-10-02T15:57:29",
+   "wall_seconds": 427.9,
+   "free_gb_at_start": 17.318526976,
+   "min_free_gb_seen": 3.78945536,
+   "groups_done": [
+    [
+     18,
+     4,
+     85,
+     20.9
+    ],
+    [
+     18,
+     5,
+     85,
+     41.9
+    ],
+    [
+     18,
+     6,
+     85,
+     40.4
+    ],
+    [
+     18,
+     7,
+     85,
+     39.1
+    ],
+    [
+     18,
+     8,
+     85,
+     38.2
+    ],
+    [
+     18,
+     9,
+     33,
+     19.0
+    ],
+    [
+     18,
+     10,
+     9,
+     5.3
+    ],
+    [
+     19,
+     0,
+     104,
+     50.6
+    ],
+    [
+     19,
+     1,
+     85,
+     38.7
+    ],
+    [
+     19,
+     2,
+     85,
+     43.6
+    ],
+    [
+     19,
+     3,
+     85,
+     42.6
+    ],
+    [
+     19,
+     4,
+     85,
+     43.6
+    ]
+   ],
+   "groups_left": 6,
+   "encoding_check": {
+    "label": "run: all 20 cells",
+    "n_checked": 20,
+    "n_cells": 20,
+    "all_pass": true,
+    "max_order_violations": 0,
+    "n_positions_tie_reordered": 2,
+    "check": "inputs_v3.check_encoding (token order == counts/median order; counts count-like)"
+   },
+   "script_sha256": "94e31c039de90776339871ad99a4f344e39cae20b7c1bebe8b4382c5120d7bb5"
+  },
+  {
+   "stage": "run",
+   "start": "2026-10-02T16:05:04",
+   "wall_seconds": 199.9,
+   "free_gb_at_start": 6.025166848,
+   "min_free_gb_seen": 4.618600448,
+   "groups_done": [
+    [
+     19,
+     5,
+     85,
+     45.3
+    ],
+    [
+     19,
+     6,
+     85,
+     41.5
+    ],
+    [
+     19,
+     7,
+     85,
+     43.4
+    ],
+    [
+     19,
+     8,
+     85,
+     42.3
+    ],
+    [
+     19,
+     9,
+     33,
+     17.4
+    ],
+    [
+     19,
+     10,
+     9,
+     5.5
+    ]
+   ],
+   "groups_left": 0,
+   "encoding_check": {
+    "label": "run: all 20 cells",
+    "n_checked": 20,
+    "n_cells": 20,
+    "all_pass": true,
+    "max_order_violations": 0,
+    "n_positions_tie_reordered": 2,
+    "check": "inputs_v3.check_encoding (token order == counts/median order; counts count-like)"
+   },
+   "script_sha256": "94e31c039de90776339871ad99a4f344e39cae20b7c1bebe8b4382c5120d7bb5"
+  },
+  {
+   "stage": "recheck",
+   "start": "2026-10-02T16:08:43",
+   "wall_seconds": 466.8,
+   "free_gb_at_start": 8.009875456,
+   "cells_done": [
+    [
+     0,
+     53.3
+    ],
+    [
+     1,
+     51.5
+    ],
+    [
+     2,
+     43.9
+    ],
+    [
+     3,
+     48.1
+    ],
+    [
+     4,
+     53.5
+    ],
+    [
+     5,
+     52.3
+    ],
+    [
+     6,
+     39.4
+    ],
+    [
+     7,
+     46.9
+    ],
+    [
+     8,
+     73.1
+    ]
+   ],
+   "cells_left": 11,
+   "encoding_check": {
+    "label": "recheck: all 20 cells",
+    "n_checked": 20,
+    "n_cells": 20,
+    "all_pass": true,
+    "max_order_violations": 0,
+    "n_positions_tie_reordered": 2,
+    "check": "inputs_v3.check_encoding (token order == counts/median order; counts count-like)"
+   },
+   "script_sha256": "94e31c039de90776339871ad99a4f344e39cae20b7c1bebe8b4382c5120d7bb5"
+  },
+  {
+   "stage": "recheck",
+   "start": "2026-10-02T16:16:54",
+   "wall_seconds": 417.0,
+   "free_gb_at_start": 9.588834304,
+   "cells_done": [
+    [
+     9,
+     44.4
+    ],
+    [
+     10,
+     61.6
+    ],
+    [
+     11,
+     40.3
+    ],
+    [
+     12,
+     34.3
+    ],
+    [
+     13,
+     34.2
+    ],
+    [
+     14,
+     35.0
+    ],
+    [
+     15,
+     33.1
+    ],
+    [
+     16,
+     31.7
+    ],
+    [
+     17,
+     31.9
+    ],
+    [
+     18,
+     32.3
+    ],
+    [
+     19,
+     33.7
+    ]
+   ],
+   "cells_left": 0,
+   "encoding_check": {
+    "label": "recheck: all 20 cells",
+    "n_checked": 20,
+    "n_cells": 20,
+    "all_pass": true,
+    "max_order_violations": 0,
+    "n_positions_tie_reordered": 2,
+    "check": "inputs_v3.check_encoding (token order == counts/median order; counts count-like)"
+   },
+   "script_sha256": "94e31c039de90776339871ad99a4f344e39cae20b7c1bebe8b4382c5120d7bb5"
+  },
+  {
+   "stage": "readout",
+   "start": "2026-10-02T16:24:08",
+   "wall_seconds": 157.2,
+   "free_gb_at_start": 11.283562496,
+   "cells_done": [
+    [
+     0,
+     38.4
+    ],
+    [
+     1,
+     38.0
+    ],
+    [
+     2,
+     40.2
+    ],
+    [
+     3,
+     36.8
+    ]
+   ],
+   "cells_left": 0,
+   "encoding_check": {
+    "label": "readout: all 20 cells",
+    "n_checked": 20,
+    "n_cells": 20,
+    "all_pass": true,
+    "max_order_violations": 0,
+    "n_positions_tie_reordered": 2,
+    "check": "inputs_v3.check_encoding (token order == counts/median order; counts count-like)"
+   },
+   "triplets_read": [
+    [
+     763,
+     4369,
+     110
+    ],
+    [
+     3035,
+     4903,
+     110
+    ],
+    [
+     1910,
+     3812,
+     110
+    ],
+    [
+     1910,
+     4369,
+     2772
+    ]
+   ],
+   "script_sha256": "94e31c039de90776339871ad99a4f344e39cae20b7c1bebe8b4382c5120d7bb5"
+  },
+  {
+   "stage": "analyze",
+   "start": "2026-10-02T16:27:10",
+   "wall_seconds": 435.6,
+   "triplets_done": 544,
+   "device": "cpu",
+   "script_sha256": "94e31c039de90776339871ad99a4f344e39cae20b7c1bebe8b4382c5120d7bb5"
+  },
+  {
+   "stage": "analyze",
+   "start": "2026-10-02T16:34:41",
+   "wall_seconds": 42.2,
+   "triplets_done": 544,
+   "device": "cpu",
+   "status": "DONE",
+   "script_sha256": "94e31c039de90776339871ad99a4f344e39cae20b7c1bebe8b4382c5120d7bb5"
+  },
+  {
+   "stage": "power",
+   "end": "2026-10-02T16:36:05",
+   "wall_seconds": 19.9,
+   "script_sha256": "94e31c039de90776339871ad99a4f344e39cae20b7c1bebe8b4382c5120d7bb5"
+  },
+  {
+   "stage": "crosscheck",
+   "end": "2026-10-02T16:38:19",
+   "wall_seconds": 13.7,
+   "script_sha256": "94e31c039de90776339871ad99a4f344e39cae20b7c1bebe8b4382c5120d7bb5"
+  }
+ ],
+ "verify": {
+  "zero_delta_max_abs_logits": 0.0,
+  "zero_delta_max_abs_dz": 0.0,
+  "zero_delta_pass(<1e-5)": true,
+  "fast_vs_full_max_abs_dz": 0.0,
+  "fast_vs_full_max_abs_dlog": 0.0,
+  "fast_vs_full_pass(<1e-5)": true,
+  "float32_mean_vs_float64_max_abs": 8.032657206058502e-09,
+  "float32_pass(<1e-6)": true,
+  "clean_repeat_max_abs": 0.0,
+  "encoding_check": {
+   "label": "verify: all 20 cells",
+   "n_checked": 20,
+   "n_cells": 20,
+   "all_pass": true,
+   "max_order_violations": 0,
+   "n_positions_tie_reordered": 2,
+   "check": "inputs_v3.check_encoding (token order == counts/median order; counts count-like)"
+  }
+ },
+ "notes": {
+  "script_hash_change_during_run": "Run chunks 1-5 (13:41-14:17, 74 of 220 groups: cells 0-5 and cell 6 groups 0-7) were made with v3_triplets.py sha256 73ada252...; the file was edited at 14:17 (after chunk 5) while only later stages were being written, and chunks 6-17 plus all later stages used sha256 94e31c03.... The 73ada252 text was not kept, so the edit cannot be diffed. Checks that cover both parts: recheck (2 random stored conditions in every one of the 220 groups recomputed from scratch on the full model path with CPU float64 sums: max |diff| 1.1e-7 in dz, 2.5e-8 in logits), 2,144 of 2,144 twin conditions bit-identical, 220 of 220 stored clean fingerprints correct, readout of cells 0-3 matches stored dz_ABC to 1.2e-8.",
+  "machine_load": "Another project's job (ctx_extract_state_std.py) ran on the same machine from about 13:45 to 15:55; group times rose from ~14 s to ~38 s. Determinism checks (clean repeat, zero edit, recheck) were unaffected.",
+  "memory": "hooks_v2.check_memory guard at 3 GB free before every group; lowest free memory seen 3.54 GB. analyze peak footprint 4.42 GB (/usr/bin/time -l). Model stages were not measured with /usr/bin/time.",
+  "written": "2026-10-02T16:53:09"
+ }
+}

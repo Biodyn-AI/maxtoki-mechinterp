@@ -1,0 +1,725 @@
+{
+  "tool": "run_manifest_check.py",
+  "tool_sha256": "ade69aa0994f9cbbf307cf71bd3173c631940c6152340455dacbd02d31f52061",
+  "common_sha256": "05576048f477b020b37d44cf36f0a15ba056fa4a72a1d193852f8a9c7dc231aa",
+  "started_utc": "2026-10-01T00:16:05Z",
+  "python": "3.12.9",
+  "platform": "macOS-26.3-arm64-arm-64bit",
+  "seed": 20261001,
+  "n_inputs": 118,
+  "inputs": [
+    {
+      "path": "pipelines/attention-grn-extraction-and-evaluation.md",
+      "bytes": 97491,
+      "mtime": 1776272659,
+      "sha256": "ca00ada7240cc13ce550cda5a1f044e57bf55f16aa3f52e80161239a8405bb4a"
+    },
+    {
+      "path": "pipelines/longevity-mechinterp-donor-aware.md",
+      "bytes": 48289,
+      "mtime": 1776289257,
+      "sha256": "fe782547b75d1b5a3d866cbd06db520882c9c3b978ca5578387ba30f20ddf2cb"
+    },
+    {
+      "path": "pipelines/manifold-discovery-extraction-compactification.md",
+      "bytes": 79424,
+      "mtime": 1776282721,
+      "sha256": "c5fa1f6d459eecbed350c1e7fdca2c2039c03f1fcfa672b2cdeff4336ae52d95"
+    },
+    {
+      "path": "pipelines/residual-stream-spectral-geometry.md",
+      "bytes": 68632,
+      "mtime": 1776273881,
+      "sha256": "8ce2e7be8106877c175f4f92d323b88b465107e86f8f8b8ccd436252c1cb7b1b"
+    },
+    {
+      "path": "pipelines/sparse-autoencoders/01-sae-atlas.md",
+      "bytes": 77795,
+      "mtime": 1776276346,
+      "sha256": "daf7414b239e60f023db554c6469340d5cde7274f513f5345a6a46f1e566edd4"
+    },
+    {
+      "path": "pipelines/sparse-autoencoders/02-causal-circuit-tracing.md",
+      "bytes": 84171,
+      "mtime": 1776277509,
+      "sha256": "3a2048b6f1e249b55a3cbae4fb8a34cf3fa4ffcc6a839b2f15d67dc12f899585"
+    },
+    {
+      "path": "pipelines/sparse-autoencoders/03-exhaustive-mapping-and-steering.md",
+      "bytes": 72620,
+      "mtime": 1776278332,
+      "sha256": "bff319943dd338344669349ac791e286a1e58abce7442a6710d8f2eb285fbe51"
+    },
+    {
+      "path": "pipelines/topology-geometry-141-hypotheses.md",
+      "bytes": 72207,
+      "mtime": 1776279532,
+      "sha256": "43731ef3e65ba8fb4a0f995cb5c461f648b3b0ade810399ab63f691c0e83c44a"
+    },
+    {
+      "path": "projects/maxtoki/checks/param_map.json",
+      "bytes": 14578,
+      "mtime": 1790809885,
+      "sha256": "64043531f6256ad3c3ab9e6089228b4b2db99885e9741bfc03ec2ad84e852507"
+    },
+    {
+      "path": "projects/maxtoki/runs/attention-grn-217M/outputs/FINAL_SUMMARY.md",
+      "bytes": 7466,
+      "mtime": 1776357994,
+      "sha256": "a26e8d4bd65a2a3a44661df31157e8a395dfaa7241e5769c06d3b2f30ff7062d"
+    },
+    {
+      "path": "projects/maxtoki/runs/attention-grn-217M/scripts/cross_dataset_comparison.py",
+      "bytes": 3913,
+      "mtime": 1776330203,
+      "sha256": "ca2a0beefc16ce2f3cf428cf61d518a6c96b34940d97415e53987780c24a26e8"
+    },
+    {
+      "path": "projects/maxtoki/runs/attention-grn-217M/scripts/phase0_any.py",
+      "bytes": 8906,
+      "mtime": 1776350805,
+      "sha256": "b6663b0a4bed5806d4c7dcddc48d549eccbff13ebc427a22a0b0245074b464ad"
+    },
+    {
+      "path": "projects/maxtoki/runs/attention-grn-217M/scripts/phase0_extract.py",
+      "bytes": 15741,
+      "mtime": 1776291177,
+      "sha256": "6766331d34dd10a6c57a5ef8c90ce331426cbd9db5e6cfae842ae667ece4769a"
+    },
+    {
+      "path": "projects/maxtoki/runs/attention-grn-217M/scripts/phase0_rpe1.py",
+      "bytes": 8636,
+      "mtime": 1776329945,
+      "sha256": "01292b0366eb500335305d478b5ed0e15140b68f065b3511797e5116e456b1f1"
+    },
+    {
+      "path": "projects/maxtoki/runs/attention-grn-217M/scripts/phase0b_value_weighted.py",
+      "bytes": 15559,
+      "mtime": 1776329782,
+      "sha256": "195c16c012f150e88c9d9f9ee25f9e77481a4744154dc4c97077dd7d9c6899af"
+    },
+    {
+      "path": "projects/maxtoki/runs/attention-grn-217M/scripts/phase12_verdict.py",
+      "bytes": 12851,
+      "mtime": 1776347096,
+      "sha256": "a1f2e8cc7fa0e37e3ab78674938ab65f3880f06594e58ce9cba5339bcdb1d96f"
+    },
+    {
+      "path": "projects/maxtoki/runs/attention-grn-217M/scripts/phase1_trivial_baselines.py",
+      "bytes": 14711,
+      "mtime": 1776347075,
+      "sha256": "041b54d5cef3df76db2b0e4bf2ffe91bb028a6548593d45f7f8002b4a793fe79"
+    },
+    {
+      "path": "projects/maxtoki/runs/attention-grn-217M/scripts/phase2_incremental_value.py",
+      "bytes": 13135,
+      "mtime": 1776347082,
+      "sha256": "7fdd47e03585219d84f8088b1580225f67923610e92a48b69c8ea12b966b4c4f"
+    },
+    {
+      "path": "projects/maxtoki/runs/attention-grn-217M/scripts/phase3_residualization.py",
+      "bytes": 20091,
+      "mtime": 1776347089,
+      "sha256": "e07ad311aa3bb613848ecf08b8b580fd6af166a855e516aa2fac10274b70c6ed"
+    },
+    {
+      "path": "projects/maxtoki/runs/attention-grn-217M/scripts/phase4_causal_ablation.py",
+      "bytes": 11982,
+      "mtime": 1776291872,
+      "sha256": "ebbbafe5f62dbb3dcae89fae471dd5a2d71ea2cb1a3456b619afb100b6b0b7b5"
+    },
+    {
+      "path": "projects/maxtoki/runs/attention-grn-217M/scripts/phase6_cssi.py",
+      "bytes": 14160,
+      "mtime": 1776340759,
+      "sha256": "a7824580009e27e2de645e1fd8dff54eb6556acb56762efedfe3ea3cb126650b"
+    },
+    {
+      "path": "projects/maxtoki/runs/circuit-tracing-217M/scripts/audit_a2_groupkfold_crispri.py",
+      "bytes": 10922,
+      "mtime": 1778177970,
+      "sha256": "1a3c96aa61c63689be77ce8347175d61bb14a428863c47b4c1b1ca18fd8e5d5f"
+    },
+    {
+      "path": "projects/maxtoki/runs/circuit-tracing-217M/scripts/audit_a4_edge_density_chance_baseline.py",
+      "bytes": 9111,
+      "mtime": 1778169388,
+      "sha256": "5e1169d63429926b90122e0e81a28e056fe2c288493ce51787d0a436ca9898b2"
+    },
+    {
+      "path": "projects/maxtoki/runs/circuit-tracing-217M/scripts/circuit_trace.py",
+      "bytes": 14749,
+      "mtime": 1776630320,
+      "sha256": "6a65e769afc4a63d9494ae7b5b40fe0a86d37498042d1f50a27bf6642bb4b591"
+    },
+    {
+      "path": "projects/maxtoki/runs/circuit-tracing-217M/scripts/remaining_phases.py",
+      "bytes": 18248,
+      "mtime": 1776675926,
+      "sha256": "9e9e42f4648ad2218c691c6c16ebcfb78b2412a6da6ed81260f8e5ccf7f89057"
+    },
+    {
+      "path": "projects/maxtoki/runs/exhaustive-mapping-217M/scripts/aggregate_alpha2.py",
+      "bytes": 2233,
+      "mtime": 1776968795,
+      "sha256": "12130587cebfc17346dd6e1d6f331a64b017973208ab3f0794e15707ecbee1b3"
+    },
+    {
+      "path": "projects/maxtoki/runs/exhaustive-mapping-217M/scripts/experiment1_exhaustive.py",
+      "bytes": 11010,
+      "mtime": 1776687569,
+      "sha256": "4895f5ccd8127688c2dd33b9f39e804175b82dc07234b863b4ed7dc32623420b"
+    },
+    {
+      "path": "projects/maxtoki/runs/exhaustive-mapping-217M/scripts/experiment2_rerun.py",
+      "bytes": 14676,
+      "mtime": 1776968933,
+      "sha256": "16267ac6d8e43f557625c1a6e4d1a8d44598ded36ca36da08b719654c173a23b"
+    },
+    {
+      "path": "projects/maxtoki/runs/exhaustive-mapping-217M/scripts/experiment3_rerun.py",
+      "bytes": 15827,
+      "mtime": 1776965785,
+      "sha256": "c6982f14f1e7c1fea69c6a827f13350514ae297026f2e415bdc7b259aa1ecf86"
+    },
+    {
+      "path": "projects/maxtoki/runs/exhaustive-mapping-217M/scripts/experiments_2_3.py",
+      "bytes": 18929,
+      "mtime": 1776708141,
+      "sha256": "9453f0476240e1b72320aa51c13e8ffa50e0cb6e15c442ffd813610afb10b5e4"
+    },
+    {
+      "path": "projects/maxtoki/runs/exhaustive-mapping-217M/scripts/stage3_synthesize.py",
+      "bytes": 9879,
+      "mtime": 1776975566,
+      "sha256": "e24ddec23edbeba4e0bf3f3a6ef3449a477d0c1124dbfd68cbc6ca777db6f053"
+    },
+    {
+      "path": "projects/maxtoki/runs/longevity-mechinterp-217M/FINAL_SUMMARY.md",
+      "bytes": 8531,
+      "mtime": 1778172628,
+      "sha256": "9bdb23a6631ed0a0263dbb82d0f57174d0592b040a21f06a4d141ac5c66e6c67"
+    },
+    {
+      "path": "projects/maxtoki/runs/longevity-mechinterp-217M/scripts/maxtoki_runtime.py",
+      "bytes": 10263,
+      "mtime": 1777990570,
+      "sha256": "66af0cb17c191cd1ec872a9bfdeef6719fd2257f5e8a9a04700965362b8c7560"
+    },
+    {
+      "path": "projects/maxtoki/runs/longevity-mechinterp-217M/scripts/run_stage1.py",
+      "bytes": 11867,
+      "mtime": 1777990703,
+      "sha256": "13d70573dbc40da8e45767c97edbbfea4415e4750341ac88e293c70933021de0"
+    },
+    {
+      "path": "projects/maxtoki/runs/longevity-mechinterp-217M/scripts/run_stage2.py",
+      "bytes": 9713,
+      "mtime": 1777990850,
+      "sha256": "94926a7153f2046aba6df8874412be4a355132d6e51e7d8f1f767de01b7feb6b"
+    },
+    {
+      "path": "projects/maxtoki/runs/longevity-mechinterp-217M/scripts/run_stage3_sae.py",
+      "bytes": 9429,
+      "mtime": 1777990932,
+      "sha256": "d8a0e3fab7ac772acac2863c2511c1a59e0cb4411a9bf2de036efc13a8a59a97"
+    },
+    {
+      "path": "projects/maxtoki/runs/manifold-discovery-217M/FINAL_SUMMARY.md",
+      "bytes": 34518,
+      "mtime": 1778164867,
+      "sha256": "671af4358bc3ac3d2d8108f8d4cb7ccbd2919efad380808858f599c1c00e2be5"
+    },
+    {
+      "path": "projects/maxtoki/runs/manifold-discovery-217M/scripts/audit_a3_bootstrap_h65_gates.py",
+      "bytes": 8084,
+      "mtime": 1778172960,
+      "sha256": "b0f8290572b3a0f7553e3a65298641648081c55614e9d370a7ecaf7a8d243621"
+    },
+    {
+      "path": "projects/maxtoki/runs/manifold-discovery-217M/scripts/audit_residual6_cell_level_benchmark_lite.py",
+      "bytes": 10820,
+      "mtime": 1778174759,
+      "sha256": "c01e33aa66f0d4dd4c628a71e4b882ca02f19670c63a9d6a662a89ef249514b9"
+    },
+    {
+      "path": "projects/maxtoki/runs/manifold-discovery-217M/scripts/phase10_compaction_chain.py",
+      "bytes": 7715,
+      "mtime": 1777850063,
+      "sha256": "5623528b9a7e29cfe8be1df39a67f8a771fc4c46b13707a0bdc17cc57517080a"
+    },
+    {
+      "path": "projects/maxtoki/runs/manifold-discovery-217M/scripts/phase11_factor_ablation.py",
+      "bytes": 13846,
+      "mtime": 1777851088,
+      "sha256": "722ad8ad648a286a0435aa71ac1a17448541a4a13e4fe1e3b4ed8da8ee636e54"
+    },
+    {
+      "path": "projects/maxtoki/runs/manifold-discovery-217M/scripts/phase12_anchor_benchmark_lite.py",
+      "bytes": 12422,
+      "mtime": 1777873932,
+      "sha256": "f744881e3fadebc30c3b1bbacf2dcc925cb5510805d1dfc0f403f84508432dc4"
+    },
+    {
+      "path": "projects/maxtoki/runs/manifold-discovery-217M/scripts/phase13_h38_lite.py",
+      "bytes": 11772,
+      "mtime": 1777875866,
+      "sha256": "89667c63b83b43d59dc69d0c2069ce9666d4b2f9d37a120f366278ad2a2b9cae"
+    },
+    {
+      "path": "projects/maxtoki/runs/manifold-discovery-217M/scripts/phase14_sweep3.py",
+      "bytes": 23166,
+      "mtime": 1778151249,
+      "sha256": "a4b215bfd2ba176cb97eaa0d6d01b88f19aaaeac1809d46062cc171b625a38a4"
+    },
+    {
+      "path": "projects/maxtoki/runs/manifold-discovery-217M/scripts/phase15_validate_candidate.py",
+      "bytes": 11228,
+      "mtime": 1778162250,
+      "sha256": "3dd569867bfea78af8837f270a9f8869ecf7cb306217bbed95a3f2713b79f6db"
+    },
+    {
+      "path": "projects/maxtoki/runs/manifold-discovery-217M/scripts/phase16_graph_dag_rescue.py",
+      "bytes": 16764,
+      "mtime": 1778162422,
+      "sha256": "83ce6399b4ca060aece48dd1560cd4158992354581c727faa86cdb8797f4facb"
+    },
+    {
+      "path": "projects/maxtoki/runs/manifold-discovery-217M/scripts/phase17_cross_axis_h65_h95.py",
+      "bytes": 8830,
+      "mtime": 1778162479,
+      "sha256": "4803536097851fccec357678799c8101080e5e64ffbff21ccb57173de3496c32"
+    },
+    {
+      "path": "projects/maxtoki/runs/manifold-discovery-217M/scripts/phase1a_lung_nonhema_panel.py",
+      "bytes": 7194,
+      "mtime": 1777861374,
+      "sha256": "72dcd9f0417d77f677387c59dff32ef8a152ac50e28f6dffdbd550a89ef9a3ae"
+    },
+    {
+      "path": "projects/maxtoki/runs/manifold-discovery-217M/scripts/phase1a_subsample_and_tokenize.py",
+      "bytes": 13446,
+      "mtime": 1777832253,
+      "sha256": "5749fda920fcf19a49f985dea2d67e5791ff05dfb4beb6ba5ec2271173af9644"
+    },
+    {
+      "path": "projects/maxtoki/runs/manifold-discovery-217M/scripts/phase1bc_hidden_states_and_centroids.py",
+      "bytes": 10933,
+      "mtime": 1777871939,
+      "sha256": "30dca6d79c8827d5595b7f5e265a91079a1a732f555960f73c41f99498b6cd58"
+    },
+    {
+      "path": "projects/maxtoki/runs/manifold-discovery-217M/scripts/phase3a_manifold_sweep.py",
+      "bytes": 16933,
+      "mtime": 1777990167,
+      "sha256": "54015329122c03c43a9ddc128bf5e5953c7109710d0732298ab828e96e2bb472"
+    },
+    {
+      "path": "projects/maxtoki/runs/manifold-discovery-217M/scripts/phase3a_revaluate_3gate.py",
+      "bytes": 7653,
+      "mtime": 1777997983,
+      "sha256": "4f3184ffe0cf7b1a97f26cf7c6a88e6905d06f0020462d27f50bf0af8566a8c9"
+    },
+    {
+      "path": "projects/maxtoki/runs/manifold-discovery-217M/scripts/phase3a_sweep2_ordinal.py",
+      "bytes": 15104,
+      "mtime": 1777998855,
+      "sha256": "9350a20ec0494eabfd4a5f8a2452797eee8ebbe1d324c095d7eedc1a69e4936b"
+    },
+    {
+      "path": "projects/maxtoki/runs/manifold-discovery-217M/scripts/phase4_export_operators.py",
+      "bytes": 6544,
+      "mtime": 1777832315,
+      "sha256": "c531f7e556927f6e4674453872fbf2ffc88bdce55caff39c61afb8278e4cd765"
+    },
+    {
+      "path": "projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py",
+      "bytes": 14184,
+      "mtime": 1777844458,
+      "sha256": "cee0d86bc8a9ddb4b07b5a10984f2af6720e4d09da4fb218dcdab82258f7b860"
+    },
+    {
+      "path": "projects/maxtoki/runs/manifold-discovery-217M/scripts/phase6_task_probes.py",
+      "bytes": 8906,
+      "mtime": 1777850926,
+      "sha256": "b7ed6a386d8c8bf3a74b540d8772b284c099ad7b0c20f4b13a34efbc95c4ffaf"
+    },
+    {
+      "path": "projects/maxtoki/runs/manifold-discovery-217M/scripts/phase7_external_validation.py",
+      "bytes": 8111,
+      "mtime": 1777873623,
+      "sha256": "35b29c64658ea6187d9c09d5985841360c7951a10d3f3a1889bd315b0514717a"
+    },
+    {
+      "path": "projects/maxtoki/runs/manifold-discovery-217M/scripts/phase7_h103_external.py",
+      "bytes": 8235,
+      "mtime": 1778001005,
+      "sha256": "8e49b050c5e33b66fbd4aedd0873876737f618a09db7d577f85fb222b711d5bd"
+    },
+    {
+      "path": "projects/maxtoki/runs/manifold-discovery-217M/scripts/phase8_zeroshot_transfer.py",
+      "bytes": 7480,
+      "mtime": 1777857465,
+      "sha256": "f796b285e296848da24c5ade70343ec3b7c39c31d90ec7b78c07c8b8ba7dd5a2"
+    },
+    {
+      "path": "projects/maxtoki/runs/manifold-discovery-217M/scripts/phase9_head_attribution.py",
+      "bytes": 5788,
+      "mtime": 1777845295,
+      "sha256": "40cc3386bcd3cd84c69358e20c77db8684dd70d23ea3ef439a199470e6672401"
+    },
+    {
+      "path": "projects/maxtoki/runs/sae-atlas-217M/scripts/audit_a4_phase8t_chance_baseline.py",
+      "bytes": 7108,
+      "mtime": 1778169300,
+      "sha256": "ac8ea41b5983bc3cd138cf5d11fe2246797918904fed358eca29efacfa6e7ba3"
+    },
+    {
+      "path": "projects/maxtoki/runs/sae-atlas-217M/scripts/audit_a8_positive_tf_case_study.py",
+      "bytes": 9758,
+      "mtime": 1778169847,
+      "sha256": "bce944a31afce72e64d9227ebade3c160f8ce5cc0676186f2d8e79a265dcf93e"
+    },
+    {
+      "path": "projects/maxtoki/runs/sae-atlas-217M/scripts/audit_a8_rerun_phase8t_targeted.py",
+      "bytes": 16286,
+      "mtime": 1778174480,
+      "sha256": "f856545cf6f9e3a04b00609f627a6dde19496b3b9dbd139eeeab5ac05b9009f9"
+    },
+    {
+      "path": "projects/maxtoki/runs/sae-atlas-217M/scripts/build_atlas_data.py",
+      "bytes": 19648,
+      "mtime": 1777827593,
+      "sha256": "7c920ba5b39a8a22c29f05761e016e1164909c654425f4691c4584e035f1dde7"
+    },
+    {
+      "path": "projects/maxtoki/runs/sae-atlas-217M/scripts/full_12layer_pipeline.py",
+      "bytes": 26893,
+      "mtime": 1776605437,
+      "sha256": "8db0051ac358a7f6167ad2abc3b493ffb3b48e2a5ee40879ec17d9caa537a994"
+    },
+    {
+      "path": "projects/maxtoki/runs/sae-atlas-217M/scripts/phase0_extract_positions.py",
+      "bytes": 6273,
+      "mtime": 1776433997,
+      "sha256": "8f0b40b59f1f2353d504cc19437b5729b3ed285059278bd40539a88aba2e047d"
+    },
+    {
+      "path": "projects/maxtoki/runs/sae-atlas-217M/scripts/phase1_train_saes.py",
+      "bytes": 1315,
+      "mtime": 1776434075,
+      "sha256": "a9a990f3847ef279ef3aa09742b73d4169f9de2d911c83d207fffbbff8ff6663"
+    },
+    {
+      "path": "projects/maxtoki/runs/sae-atlas-217M/scripts/phase6_patching.py",
+      "bytes": 7465,
+      "mtime": 1776516152,
+      "sha256": "0a3ff258a0c6e47e8d67e31dbf31563153b7d84b351c8effba7252de26715fd0"
+    },
+    {
+      "path": "projects/maxtoki/runs/sae-atlas-217M/scripts/phase9_multitissue.py",
+      "bytes": 12370,
+      "mtime": 1776516239,
+      "sha256": "a990e4a61984e9b2857c1913f1ff7fd43a36a5c6c3e2d6cdb51e520401183f47"
+    },
+    {
+      "path": "projects/maxtoki/runs/sae-atlas-217M/scripts/phases12_13_viz.py",
+      "bytes": 20067,
+      "mtime": 1776597222,
+      "sha256": "c26b12e46fab92e963f902d26fef3c03e2f7bb402a3315f2f1d672c821e6e40d"
+    },
+    {
+      "path": "projects/maxtoki/runs/sae-atlas-217M/scripts/phases2_to_8.py",
+      "bytes": 25725,
+      "mtime": 1776446997,
+      "sha256": "d6489cb377d701ccfd8983cc4f4a775da7d5c1fc9343cffb17175c8fb596783f"
+    },
+    {
+      "path": "projects/maxtoki/runs/sae-atlas-217M/scripts/remaining_phases.py",
+      "bytes": 28800,
+      "mtime": 1776454980,
+      "sha256": "56ce27d7589228df60b1565744cd10988ad15b7613dcaaeb0b0586d0bf98fd6a"
+    },
+    {
+      "path": "projects/maxtoki/runs/spectral-geometry-217M/autoloop/iterations/iter_0002/h01_persistent_topology.py",
+      "bytes": 4089,
+      "mtime": 1777990868,
+      "sha256": "cd8fb259094c207975099bc45f149f206de8d5e4e68e1aea8ae024205b1c3853"
+    },
+    {
+      "path": "projects/maxtoki/runs/spectral-geometry-217M/autoloop/iterations/iter_0002/h02_lid_per_gene.py",
+      "bytes": 5726,
+      "mtime": 1777990896,
+      "sha256": "83eb62f4259d0bf504f5a2cfeb397ba5ddeda00358c4a662a0029b424198d3bf"
+    },
+    {
+      "path": "projects/maxtoki/runs/spectral-geometry-217M/autoloop/iterations/iter_0002/h03_spectral_gap.py",
+      "bytes": 6019,
+      "mtime": 1777990925,
+      "sha256": "6fee9145a752ebceaebfcd26846ca2478c17170fc7ac7066071b13677ffcfa51"
+    },
+    {
+      "path": "projects/maxtoki/runs/spectral-geometry-217M/autoloop/iterations/iter_0003/h3bc_string_persistence.py",
+      "bytes": 9265,
+      "mtime": 1777992396,
+      "sha256": "83260089054c73d0ca4cdd544e180f6275e039476a76b55a8a92e221e2a24d6b"
+    },
+    {
+      "path": "projects/maxtoki/runs/spectral-geometry-217M/autoloop/iterations/iter_0003/h3del_lid_confound.py",
+      "bytes": 14041,
+      "mtime": 1777992468,
+      "sha256": "11983f4f5b273ca1b0a3525b4c4932e883940398d30e0438d06d70b09ad4db6c"
+    },
+    {
+      "path": "projects/maxtoki/runs/spectral-geometry-217M/autoloop/iterations/iter_0003/h3g_centroid_trajectory.py",
+      "bytes": 14893,
+      "mtime": 1777992663,
+      "sha256": "c2375de986e7f0f2a0b0223db6bb7322a9804c4b6517d98479e448f7f16d9e11"
+    },
+    {
+      "path": "projects/maxtoki/runs/spectral-geometry-217M/autoloop/run_maxtoki_autoloop.py",
+      "bytes": 11028,
+      "mtime": 1777990526,
+      "sha256": "c7b77ae46ba44e817d479d2c14c286d8742053507c2580a5069961decfd739b9"
+    },
+    {
+      "path": "projects/maxtoki/runs/spectral-geometry-217M/outputs/FINAL_SUMMARY.md",
+      "bytes": 16505,
+      "mtime": 1776415010,
+      "sha256": "79a4fc2e61ab594434dc9389213090334bd088f30f45520ece0c28a3a4161aa6"
+    },
+    {
+      "path": "projects/maxtoki/runs/spectral-geometry-217M/scripts/audit_a3_bootstrap_cross_model_pearson.py",
+      "bytes": 5138,
+      "mtime": 1778172785,
+      "sha256": "87e27fb1fc48ba14f79449ca03a0810caa5a3bd5e32b84c250c3ba28f4dd5921"
+    },
+    {
+      "path": "projects/maxtoki/runs/spectral-geometry-217M/scripts/phase0_extract.py",
+      "bytes": 12268,
+      "mtime": 1776360355,
+      "sha256": "397294259b3601058a27b9f284184688713cb45c6e36dce7af0087e230f6a4fd"
+    },
+    {
+      "path": "projects/maxtoki/runs/spectral-geometry-217M/scripts/phase1_svd.py",
+      "bytes": 6139,
+      "mtime": 1776359158,
+      "sha256": "2aaba31931a2ae55d1958811506d65b0ad76ec9d1986824fc766766e71c2c1ef"
+    },
+    {
+      "path": "projects/maxtoki/runs/spectral-geometry-217M/scripts/phase8_stability.py",
+      "bytes": 10689,
+      "mtime": 1777828593,
+      "sha256": "e7749d929b9103f1a1ff0af1959dba9059bac9417e07aaeccfc224d80bfd7299"
+    },
+    {
+      "path": "projects/maxtoki/runs/spectral-geometry-217M/scripts/phase9_report.py",
+      "bytes": 11667,
+      "mtime": 1776359416,
+      "sha256": "f9c69cafd2decc4b6d3c98dbade9b4f46b53f60ac7d9b95805986db0ed59b6ae"
+    },
+    {
+      "path": "projects/maxtoki/runs/spectral-geometry-217M/scripts/phase9b_cross_model.py",
+      "bytes": 13338,
+      "mtime": 1777828734,
+      "sha256": "6eb69c3020e5c1e82a735a644d8805ca7f31acffc5b6028c8cd23fd2a745a530"
+    },
+    {
+      "path": "projects/maxtoki/runs/spectral-geometry-217M/scripts/phases_345.py",
+      "bytes": 17277,
+      "mtime": 1776360256,
+      "sha256": "c5c91e2d9bddf9a64f968eed8fb817bfccdb2d1408a37b5dc53029a2b824ed4d"
+    },
+    {
+      "path": "projects/maxtoki/runs/spectral-geometry-217M/scripts/phases_67.py",
+      "bytes": 10416,
+      "mtime": 1776359344,
+      "sha256": "1099463bb73ed09e1733dc35d53d7f960e8abe8decbbd07e42aa5108528dd06c"
+    },
+    {
+      "path": "projects/maxtoki/runs/spectral-geometry-217M/scripts/remaining_analyses.py",
+      "bytes": 25438,
+      "mtime": 1776414534,
+      "sha256": "bc95c6b0b1014b0bb28da126f3e0d7a8992e5c83503d54bbfd423747f5779cd1"
+    },
+    {
+      "path": "projects/maxtoki/runs/topology-141-217M/FINAL_SUMMARY.md",
+      "bytes": 25744,
+      "mtime": 1778179815,
+      "sha256": "13b028abd0db9c62d0b515df3d8bf6486e7dc4d6f1af17628c336aba97d48864"
+    },
+    {
+      "path": "projects/maxtoki/runs/topology-141-217M/scripts/audit_a1_synthetic_positive_control.py",
+      "bytes": 10022,
+      "mtime": 1778169671,
+      "sha256": "0d0e5d454579675a7e9e3fdfa07ee73d8225470f574b1495be85bc8fe43ca1f1"
+    },
+    {
+      "path": "projects/maxtoki/runs/topology-141-217M/scripts/audit_a2_groupkfold_h123.py",
+      "bytes": 10831,
+      "mtime": 1778169989,
+      "sha256": "a86141930a5ee31223d90d3367525f4b8b21d232becec5dcbd8dd4312fffb41c"
+    },
+    {
+      "path": "projects/maxtoki/runs/topology-141-217M/scripts/audit_residual8_phase0_seed43_lung.py",
+      "bytes": 6155,
+      "mtime": 1778178841,
+      "sha256": "0058ccf841571cbf82e1ef0eff5db596a4eb199ecbe966bf8676a7d76e79ad4b"
+    },
+    {
+      "path": "projects/maxtoki/runs/topology-141-217M/scripts/audit_residual8_seed_stability.py",
+      "bytes": 6894,
+      "mtime": 1778174856,
+      "sha256": "e084c212c8b4e9f43f015f86512e2f291b3b694425afb70f393a8ab78c29ce52"
+    },
+    {
+      "path": "projects/maxtoki/runs/topology-141-217M/scripts/audit_residual9_cross_layer_replication.py",
+      "bytes": 12245,
+      "mtime": 1778173765,
+      "sha256": "4f5e3b52ecec9601af5c4625eaca0b6e646d55f4e881b961d246979ebf728f51"
+    },
+    {
+      "path": "projects/maxtoki/runs/topology-141-217M/scripts/phase0_extract.py",
+      "bytes": 19429,
+      "mtime": 1777829097,
+      "sha256": "640ed10fbf809570294e300ebf2d65a25d5ff0d722ddfeffbe6ad8288b054244"
+    },
+    {
+      "path": "projects/maxtoki/runs/topology-141-217M/scripts/phase10_h139_sectional_anisotropy.py",
+      "bytes": 11720,
+      "mtime": 1778147042,
+      "sha256": "d8b8b80cefb07c0ce46ea20a054c04fc0de5ea5cba28baa01efa2b57375856cf"
+    },
+    {
+      "path": "projects/maxtoki/runs/topology-141-217M/scripts/phase11_autoloop.py",
+      "bytes": 25592,
+      "mtime": 1778163882,
+      "sha256": "a15a5d0b40c329c80947523e87b9156e49c7b2d0ed01704f539164f44b3c40a0"
+    },
+    {
+      "path": "projects/maxtoki/runs/topology-141-217M/scripts/phase123_splits_nulls.py",
+      "bytes": 12481,
+      "mtime": 1777829531,
+      "sha256": "99688e1d25dd5248a2fac7b67bd9fe82535a2ea5581e90d4c7661895218601c1"
+    },
+    {
+      "path": "projects/maxtoki/runs/topology-141-217M/scripts/phase12_strict_max_null.py",
+      "bytes": 8958,
+      "mtime": 1777829776,
+      "sha256": "19a4a1c586661039dab0f05762199e251db5eb5c913731017db422e9e042e8e5"
+    },
+    {
+      "path": "projects/maxtoki/runs/topology-141-217M/scripts/phase13_synthesis.py",
+      "bytes": 7300,
+      "mtime": 1777829814,
+      "sha256": "1a8e5aa64c17db4ebe9fb821959de9b8866487088db4d8861c81db82d72aa67c"
+    },
+    {
+      "path": "projects/maxtoki/runs/topology-141-217M/scripts/phase14_cross_model_cca.py",
+      "bytes": 10634,
+      "mtime": 1777992778,
+      "sha256": "604014c071acad5293c7ab38f8184782e5bc54bea256bbd506d99ca696f5842e"
+    },
+    {
+      "path": "projects/maxtoki/runs/topology-141-217M/scripts/phase15_cross_domain_tissue.py",
+      "bytes": 6456,
+      "mtime": 1777993115,
+      "sha256": "5afe4e640a572a722b09f3d9a8d3ab64412e05cbb8dc17bd64578e8ca25ecf28"
+    },
+    {
+      "path": "projects/maxtoki/runs/topology-141-217M/scripts/phase16_lineage_hub_depth.py",
+      "bytes": 15228,
+      "mtime": 1777993666,
+      "sha256": "bdcf82af5211b56a69a609f07eb15f9a1ccbd89bc61648b83b0b35e986f2d95d"
+    },
+    {
+      "path": "projects/maxtoki/runs/topology-141-217M/scripts/phase4_scgpt_cross_model.py",
+      "bytes": 9713,
+      "mtime": 1778163211,
+      "sha256": "f2ccceef7e709303ec2f2368fcf11be3429dba302b9a7652a82bac0c832c7099"
+    },
+    {
+      "path": "projects/maxtoki/runs/topology-141-217M/scripts/phase5_persistent_homology.py",
+      "bytes": 7677,
+      "mtime": 1777829577,
+      "sha256": "6d33c10799c7ac1704f4acca8ebd14ca93280c77cda2882721e98d604a057c73"
+    },
+    {
+      "path": "projects/maxtoki/runs/topology-141-217M/scripts/phase6_manifold_distances.py",
+      "bytes": 10799,
+      "mtime": 1777830120,
+      "sha256": "0bd394ff5e38a85ba1d44690f61ff237450367cd197823afae91ab81c27c6a46"
+    },
+    {
+      "path": "projects/maxtoki/runs/topology-141-217M/scripts/phase78_community_signed_motif.py",
+      "bytes": 12170,
+      "mtime": 1777829688,
+      "sha256": "04c60c6f4c276e009567148fac8ae54de8c90e9eaef72efa9718e9acdd045570"
+    },
+    {
+      "path": "projects/maxtoki/runs/topology-141-217M/scripts/phase8ext_h124_h138_chain.py",
+      "bytes": 16043,
+      "mtime": 1778162484,
+      "sha256": "640c1d1d83b7a5fe6a5756385f6d01b1f851cb0182898997006ef4465b92f5a0"
+    },
+    {
+      "path": "projects/maxtoki/runs/topology-141-217M/scripts/phase9_stability_selection.py",
+      "bytes": 8537,
+      "mtime": 1777830348,
+      "sha256": "705d0a4c3194b78a5dce9f3e1265ea46f77c818e0e04941571bc5d5b76430c77"
+    },
+    {
+      "path": "projects/maxtoki/summaries/attention-grn-217M-FINAL_SUMMARY.md",
+      "bytes": 9667,
+      "mtime": 1776969118,
+      "sha256": "10528949d6bf54ae9779f454ea22cae3a8d067785593b98f08639b4f51340b3d"
+    },
+    {
+      "path": "projects/maxtoki/summaries/circuit-tracing-217M-FINAL_SUMMARY.md",
+      "bytes": 10827,
+      "mtime": 1778181010,
+      "sha256": "bc7ceeb149cb65c1520250d675c39b1269e59efe197703c1a4c2dbf5c5c4d94a"
+    },
+    {
+      "path": "projects/maxtoki/summaries/exhaustive-mapping-217M-FINAL_SUMMARY.md",
+      "bytes": 19883,
+      "mtime": 1776975599,
+      "sha256": "469fb5b1d9701f6f4ffc56d2cabd5b232fbd56c974fe0ec06807bb9796dc8166"
+    },
+    {
+      "path": "projects/maxtoki/summaries/manifold-discovery-217M-FINAL_SUMMARY.md",
+      "bytes": 23370,
+      "mtime": 1778175562,
+      "sha256": "10e5b8f89d814eff1f701c6c72bbd4bd24d7f3e1f5b353e7137577c28672772a"
+    },
+    {
+      "path": "projects/maxtoki/summaries/sae-atlas-217M-FINAL_SUMMARY.md",
+      "bytes": 17508,
+      "mtime": 1778175061,
+      "sha256": "4e4d3f485bc215b00db1932e87c3c2cfe23ce995a65ebb860aeb33824ca4e4fb"
+    },
+    {
+      "path": "projects/maxtoki/summaries/sae-atlas-217M-FINAL_SUMMARY_12layer.md",
+      "bytes": 2297,
+      "mtime": 1776630071,
+      "sha256": "f30a759d5c2f78c8961427c96f82b7a9f6e8c6e3edf3ee7cc65c8f51c1881f57"
+    },
+    {
+      "path": "projects/maxtoki/summaries/spectral-geometry-217M-FINAL_SUMMARY.md",
+      "bytes": 28552,
+      "mtime": 1778172878,
+      "sha256": "4f793897848bb0fa013e8ba0fcfe356cc8c740e273d1364420ebd6dc3bab2028"
+    },
+    {
+      "path": "projects/maxtoki/summaries/topology-141-217M-FINAL_SUMMARY.md",
+      "bytes": 7595,
+      "mtime": 1777993808,
+      "sha256": "ac3dad410f9a04e3558806a3ebb23c9567d6989ecb0029ed9dd265dd907a2b45"
+    }
+  ],
+  "helper_sha256": {
+    "run_evidence.py": "9c886db8913316e5c5c7e40aced1f5963efc2bf0921161c3292a4fa0a821233b",
+    "spec_parse.py": "2779279d3ca8b5e141e10eb7f36aec4e47c30cd2d6bd70b2b044190020468640",
+    "param_map.json": "64043531f6256ad3c3ab9e6089228b4b2db99885e9741bfc03ec2ad84e852507"
+  }
+}

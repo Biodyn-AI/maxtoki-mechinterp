@@ -1,0 +1,147 @@
+{
+ "method": "internal branch-holdout with held-out heads fixed; evaluation donors drawn with replacement; copies never paired; plain mean over scored branches; percentile 2.5/97.5",
+ "rng": "default_rng([8080, 9, b])",
+ "n_boot": 2000,
+ "results": {
+  "branch|maxtoki": {
+   "observed": 0.3704037377671307,
+   "ci95": [
+    0.20249062547156127,
+    0.48452989977340866
+   ],
+   "boot_mean": 0.38604782749243105,
+   "n_valid": 1999,
+   "share_le_0": null
+  },
+  "branch|lookup_ct_mean5": {
+   "observed": 0.39211837407056327,
+   "ci95": [
+    0.3840864060872027,
+    0.5469466117743906
+   ],
+   "boot_mean": 0.41996541864644404,
+   "n_valid": 1999,
+   "share_le_0": null
+  },
+  "branch|tokenbag_pca64": {
+   "observed": 0.41656446701607464,
+   "ci95": [
+    0.3968367880821182,
+    0.6054125873523273
+   ],
+   "boot_mean": 0.45492514369984915,
+   "n_valid": 1999,
+   "share_le_0": null
+  },
+  "branch|hvg_pca64": {
+   "observed": 0.35362594611502945,
+   "ci95": [
+    0.308818805623844,
+    0.5779087226863133
+   ],
+   "boot_mean": 0.4367399029011092,
+   "n_valid": 1999,
+   "share_le_0": null
+  },
+  "branch|maxtoki_minus_lookup": {
+   "observed": -0.021714636303432566,
+   "ci95": [
+    -0.2134786787642992,
+    0.045336576615924606
+   ],
+   "boot_mean": -0.03391759115401294,
+   "n_valid": 1999,
+   "share_le_0": 0.5937968984492246
+  },
+  "branch|maxtoki_minus_tokenbag": {
+   "observed": -0.04616072924894393,
+   "ci95": [
+    -0.27923538710626833,
+    0.0203026125006636
+   ],
+   "boot_mean": -0.06887731620741802,
+   "n_valid": 1999,
+   "share_le_0": 0.8254127063531765
+  },
+  "branch|maxtoki_minus_hvg": {
+   "observed": 0.016777791652101248,
+   "ci95": [
+    -0.23555229853027876,
+    0.02824459442696702
+   ],
+   "boot_mean": -0.05069207540867809,
+   "n_valid": 1999,
+   "share_le_0": 0.6593296648324162
+  },
+  "branch_diff_ct|maxtoki": {
+   "observed": 0.04715746246036318,
+   "ci95": [
+    -0.32324588366522816,
+    0.30815210268573556
+   ],
+   "boot_mean": 0.04034293860105319,
+   "n_valid": 1979,
+   "share_le_0": null
+  },
+  "branch_diff_ct|lookup_ct_mean5": {
+   "observed": 0.05402266633283883,
+   "ci95": [
+    -0.035917568318982906,
+    0.3154460081178466
+   ],
+   "boot_mean": 0.0837529706749531,
+   "n_valid": 1979,
+   "share_le_0": null
+  },
+  "branch_diff_ct|tokenbag_pca64": {
+   "observed": 0.006402017125990177,
+   "ci95": [
+    -0.2948319162849146,
+    0.30667228617985215
+   ],
+   "boot_mean": 0.048408197519050934,
+   "n_valid": 1979,
+   "share_le_0": null
+  },
+  "branch_diff_ct|hvg_pca64": {
+   "observed": 0.0879186823994107,
+   "ci95": [
+    -0.31244596252274853,
+    0.3792031151918553
+   ],
+   "boot_mean": 0.08100916479164011,
+   "n_valid": 1979,
+   "share_le_0": null
+  },
+  "branch_diff_ct|maxtoki_minus_lookup": {
+   "observed": -0.0068652038724756476,
+   "ci95": [
+    -0.4462218030865636,
+    0.05285255182299911
+   ],
+   "boot_mean": -0.04341003207389991,
+   "n_valid": 1979,
+   "share_le_0": 0.5765538150581102
+  },
+  "branch_diff_ct|maxtoki_minus_tokenbag": {
+   "observed": 0.040755445334373,
+   "ci95": [
+    -0.1447299180425478,
+    0.10785556649523464
+   ],
+   "boot_mean": -0.008065258917997748,
+   "n_valid": 1979,
+   "share_le_0": 0.4608388074785245
+  },
+  "branch_diff_ct|maxtoki_minus_hvg": {
+   "observed": -0.040761219939047515,
+   "ci95": [
+    -0.12107713165979851,
+    0.031719134529566005
+   ],
+   "boot_mean": -0.040666226190586935,
+   "n_valid": 1979,
+   "share_le_0": 0.8817584638706417
+  }
+ }
+}

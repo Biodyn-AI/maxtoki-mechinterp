@@ -1,0 +1,21 @@
+{
+  "script": "<REPO_ROOT>/projects/maxtoki/runs/circuit-tracing-217M/scripts/v2_circuit_crispri.py",
+  "script_sha256": "e7658d82fd8682b094fc16e43088d645119e456a20fce717df95a1775c0590e3",
+  "device": "cpu",
+  "seeds": {
+    "bootstrap": 42,
+    "source_folds": 42,
+    "within_source_target_folds": 43
+  },
+  "n_boot": 2000,
+  "inputs": {
+    "v2": "<REPO_ROOT>/projects/maxtoki/runs/circuit-tracing-217M/outputs/v2_circuit/circuit_edges_v2.csv",
+    "deployed": "<REPO_ROOT>/projects/maxtoki/runs/circuit-tracing-217M/outputs/circuit_edges.csv",
+    "lfc": "<REPO_ROOT>/projects/maxtoki/runs/circuit-tracing-217M/outputs/v2_circuit/lfc",
+    "deployed_records": "<REPO_ROOT>/projects/maxtoki/runs/circuit-tracing-217M/outputs/groupkfold_crispri/per_pair.parquet"
+  },
+  "numpy": "1.26.4",
+  "pandas": "2.3.3",
+  "timestamp": "2026-10-01T11:48:27",
+  "wall_seconds": 29.0
+}

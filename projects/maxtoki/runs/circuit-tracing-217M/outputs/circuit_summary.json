@@ -1,0 +1,58 @@
+{
+  "model": "MaxToki-217M",
+  "condition": "K562/K562",
+  "n_cells": 200,
+  "source_layers": [
+    0,
+    3,
+    6,
+    9
+  ],
+  "n_features_per_layer": 30,
+  "total_source_features": 120,
+  "total_edges": 2144011,
+  "inhibitory_pct": 0.8817,
+  "mean_abs_d": 1.8362,
+  "median_abs_d": 1.3033,
+  "pct_d_above_1": 0.6089,
+  "unique_targets": 42173,
+  "biological_coherence": 0.3611,
+  "per_layer_stats": [
+    {
+      "source_layer": 0,
+      "n_features": 30,
+      "n_downstream": 11,
+      "n_passes": 6200,
+      "n_edges": 1189594,
+      "compute_seconds": 4270,
+      "edges_per_feature": 39653.1
+    },
+    {
+      "source_layer": 3,
+      "n_features": 30,
+      "n_downstream": 8,
+      "n_passes": 6200,
+      "n_edges": 620045,
+      "compute_seconds": 3752,
+      "edges_per_feature": 20668.2
+    },
+    {
+      "source_layer": 6,
+      "n_features": 30,
+      "n_downstream": 5,
+      "n_passes": 6200,
+      "n_edges": 255429,
+      "compute_seconds": 3380,
+      "edges_per_feature": 8514.3
+    },
+    {
+      "source_layer": 9,
+      "n_features": 30,
+      "n_downstream": 2,
+      "n_passes": 6200,
+      "n_edges": 78943,
+      "compute_seconds": 3071,
+      "edges_per_feature": 2631.4
+    }
+  ]
+}

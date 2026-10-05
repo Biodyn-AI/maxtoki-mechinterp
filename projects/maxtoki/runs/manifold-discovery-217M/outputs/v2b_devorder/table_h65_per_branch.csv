@@ -1,0 +1,361 @@
+rep,panel,branch,n,rho,rho_diff_ct
+maxtoki,external,granulocyte,57,0.6012149196515815,-0.2536958579392075
+maxtoki,external,macrophage,91,,
+maxtoki,external,T_lineage,219,0.2885322935170455,0.3187316839343863
+maxtoki,external,B_lineage,106,0.3753113043885855,
+maxtoki,external,erythroid,21,0.5792651202162871,
+maxtoki,external,monocyte,54,0.07542245152195251,0.08387723753802741
+maxtoki,external,NK,34,,
+maxtoki,external,stem,7,0.15891043154093204,
+maxtoki,external,lymphoid,7,,
+maxtoki,zeroshot,granulocyte,23,0.5865209703966504,
+maxtoki,zeroshot,T_lineage,56,0.39195438693685986,0.4187086829563912
+maxtoki,zeroshot,monocyte,20,-0.18763727456584908,-0.22989685785169084
+maxtoki,zeroshot,macrophage,14,,
+maxtoki,zeroshot,stem,4,0.09759000729485333,
+maxtoki,zeroshot,B_lineage,18,0.15975073422574362,
+maxtoki,zeroshot,NK,16,,
+maxtoki,zeroshot,erythroid,5,0.8528028654224417,
+maxtoki,lung_nonhema,granulocyte,10,0.13516528049858717,0.2100739758463645
+maxtoki,lung_nonhema,dendritic,5,-0.21320071635561041,0.0
+maxtoki,lung_nonhema,monocyte,5,-0.4022543496452981,-0.4022543496452981
+maxtoki,lung_nonhema,T_lineage,14,0.1873036281245014,0.20558994680535161
+maxtoki,lung_nonhema,myeloid,3,,
+maxtoki,lung_nonhema,B_lineage,4,-0.44136741475237473,-0.5270462766947299
+maxtoki,lung_nonhema,macrophage,3,,
+maxtoki,internal (held out),monocyte,34,-0.07464624792419637,-0.0686277255179327
+maxtoki,internal (held out),T_lineage,101,0.030649756416565397,-0.068114694495467
+maxtoki,internal (held out),B_lineage,45,0.1535981878239143,
+maxtoki,internal (held out),erythroid,7,0.7833494518006403,
+maxtoki,internal (held out),stem,4,0.6210590034081188,
+maxtoki,internal (held out),granulocyte,25,0.7084125811530857,0.2782158453746654
+maxtoki_pca64,external,granulocyte,57,0.650639328172854,-0.34798674483105885
+maxtoki_pca64,external,macrophage,91,,
+maxtoki_pca64,external,T_lineage,219,0.34641205736011843,0.3067245742115001
+maxtoki_pca64,external,B_lineage,106,0.2535743798791639,
+maxtoki_pca64,external,erythroid,21,0.592565032998169,
+maxtoki_pca64,external,monocyte,54,-0.06256838763430382,-0.07054290772430814
+maxtoki_pca64,external,NK,34,,
+maxtoki_pca64,external,stem,7,0.619750683009635,
+maxtoki_pca64,external,lymphoid,7,,
+maxtoki_pca64,zeroshot,granulocyte,23,0.6546599400617076,
+maxtoki_pca64,zeroshot,T_lineage,56,0.532706927611035,0.5253223286676658
+maxtoki_pca64,zeroshot,monocyte,20,-0.19131855981411158,-0.18164690003096562
+maxtoki_pca64,zeroshot,macrophage,14,,
+maxtoki_pca64,zeroshot,stem,4,0.87831006565368,
+maxtoki_pca64,zeroshot,B_lineage,18,0.12295965604042085,
+maxtoki_pca64,zeroshot,NK,16,,
+maxtoki_pca64,zeroshot,erythroid,5,0.8528028654224417,
+maxtoki_pca64,lung_nonhema,granulocyte,10,-0.22614191160340547,-0.16589456707462058
+maxtoki_pca64,lung_nonhema,dendritic,5,-0.21320071635561041,0.0
+maxtoki_pca64,lung_nonhema,monocyte,5,-0.06935419821470659,-0.06935419821470659
+maxtoki_pca64,lung_nonhema,T_lineage,14,0.08161532120053192,0.07198833883697266
+maxtoki_pca64,lung_nonhema,myeloid,3,,
+maxtoki_pca64,lung_nonhema,B_lineage,4,0.08827348295047495,0.05270462766947298
+maxtoki_pca64,lung_nonhema,macrophage,3,,
+maxtoki_pca64,internal (held out),T_lineage,101,0.13302654032917555,0.006644803297566915
+maxtoki_pca64,internal (held out),monocyte,34,-0.18444084700973548,-0.16837643194618354
+maxtoki_pca64,internal (held out),B_lineage,45,0.6166216905155157,
+maxtoki_pca64,internal (held out),granulocyte,25,0.763233913779534,0.357448836937677
+maxtoki_pca64,internal (held out),erythroid,7,0.7833494518006403,
+maxtoki_pca64,internal (held out),stem,4,0.8280786712108252,
+lookup_ct_s0,external,granulocyte,57,0.67378366225259,-0.06363152304085312
+lookup_ct_s0,external,macrophage,91,,
+lookup_ct_s0,external,T_lineage,219,0.3473714728065612,0.30173869824715494
+lookup_ct_s0,external,B_lineage,106,0.16961431642698607,
+lookup_ct_s0,external,erythroid,21,0.4175094242204265,
+lookup_ct_s0,external,monocyte,54,0.009692053716877888,-0.027425705976536555
+lookup_ct_s0,external,NK,34,,
+lookup_ct_s0,external,stem,7,0.2542566904654913,
+lookup_ct_s0,external,lymphoid,7,,
+lookup_ct_s0,zeroshot,granulocyte,23,0.7932383912293882,
+lookup_ct_s0,zeroshot,T_lineage,56,0.4840973093590494,0.4418205422657624
+lookup_ct_s0,zeroshot,monocyte,20,-0.07395052425186088,-0.1510570574910287
+lookup_ct_s0,zeroshot,macrophage,14,,
+lookup_ct_s0,zeroshot,stem,4,-0.2927700218845599,
+lookup_ct_s0,zeroshot,B_lineage,18,0.1481324990093259,
+lookup_ct_s0,zeroshot,NK,16,,
+lookup_ct_s0,zeroshot,erythroid,5,0.8528028654224417,
+lookup_ct_s0,lung_nonhema,granulocyte,10,-0.2961072731435395,-0.253543675240249
+lookup_ct_s0,lung_nonhema,dendritic,5,0.21320071635561041,0.5477225575051661
+lookup_ct_s0,lung_nonhema,monocyte,5,-0.4508022883955927,-0.4508022883955927
+lookup_ct_s0,lung_nonhema,T_lineage,14,0.008539881291181484,0.00015215500943085368
+lookup_ct_s0,lung_nonhema,myeloid,3,,
+lookup_ct_s0,lung_nonhema,B_lineage,4,0.44136741475237473,0.7378647873726218
+lookup_ct_s0,lung_nonhema,macrophage,3,,
+lookup_ct_s0,internal (held out),T_lineage,101,0.14512451661569437,0.045485998406389075
+lookup_ct_s0,internal (held out),monocyte,34,0.06725453458983675,-0.0568948464355507
+lookup_ct_s0,internal (held out),B_lineage,45,0.10943135258948991,
+lookup_ct_s0,internal (held out),erythroid,7,0.7659416862050704,
+lookup_ct_s0,internal (held out),granulocyte,25,0.6846075611865798,0.1787244184688385
+lookup_ct_s0,internal (held out),stem,4,0.4140393356054126,
+lookup_ct_s1,external,granulocyte,57,0.6261629242716827,0.14054679366898593
+lookup_ct_s1,external,macrophage,91,,
+lookup_ct_s1,external,T_lineage,219,0.3522038376286553,0.287724846079675
+lookup_ct_s1,external,B_lineage,106,0.20699396901571654,
+lookup_ct_s1,external,erythroid,21,0.7568369287095205,
+lookup_ct_s1,external,monocyte,54,0.18873527894142064,0.21174916151394943
+lookup_ct_s1,external,NK,34,,
+lookup_ct_s1,external,stem,7,0.540295467239169,
+lookup_ct_s1,external,lymphoid,7,,
+lookup_ct_s1,zeroshot,granulocyte,23,0.6630951501327838,
+lookup_ct_s1,zeroshot,T_lineage,56,0.4219999321288995,0.37525360069468944
+lookup_ct_s1,zeroshot,monocyte,20,0.468930776771317,0.4629473077178082
+lookup_ct_s1,zeroshot,macrophage,14,,
+lookup_ct_s1,zeroshot,stem,4,-0.09759000729485333,
+lookup_ct_s1,zeroshot,B_lineage,18,0.1955736261430316,
+lookup_ct_s1,zeroshot,NK,16,,
+lookup_ct_s1,zeroshot,erythroid,5,0.8528028654224417,
+lookup_ct_s1,lung_nonhema,granulocyte,10,-0.07148163872521436,-0.011887632079143938
+lookup_ct_s1,lung_nonhema,dendritic,5,-0.2842676218074806,-0.09128709291752768
+lookup_ct_s1,lung_nonhema,monocyte,5,-0.5617690055391233,-0.5617690055391233
+lookup_ct_s1,lung_nonhema,T_lineage,14,0.016306433507309537,0.016737051037393907
+lookup_ct_s1,lung_nonhema,myeloid,3,,
+lookup_ct_s1,lung_nonhema,B_lineage,4,0.08827348295047495,0.31622776601683794
+lookup_ct_s1,lung_nonhema,macrophage,3,,
+lookup_ct_s1,internal (held out),monocyte,34,0.07741185495405883,0.06882006779797174
+lookup_ct_s1,internal (held out),T_lineage,101,0.11067694435817205,-0.0175460643223116
+lookup_ct_s1,internal (held out),B_lineage,45,0.38098676942472925,
+lookup_ct_s1,internal (held out),erythroid,7,0.7137183894183612,
+lookup_ct_s1,internal (held out),granulocyte,25,0.6421927536241085,0.3858106464176186
+lookup_ct_s1,internal (held out),stem,4,0.8280786712108252,
+lookup_ct_s2,external,granulocyte,57,0.4862130575408584,-0.38439844580690585
+lookup_ct_s2,external,macrophage,91,,
+lookup_ct_s2,external,T_lineage,219,0.36069563354283324,0.33687907182433924
+lookup_ct_s2,external,B_lineage,106,0.1131646370067203,
+lookup_ct_s2,external,erythroid,21,0.3792272428347396,
+lookup_ct_s2,external,monocyte,54,-0.05524112317189089,-0.14605822963288506
+lookup_ct_s2,external,NK,34,,
+lookup_ct_s2,external,stem,7,0.7468790282423806,
+lookup_ct_s2,external,lymphoid,7,,
+lookup_ct_s2,zeroshot,granulocyte,23,0.3953593915131698,
+lookup_ct_s2,zeroshot,T_lineage,56,0.43988115106489245,0.432214094455728
+lookup_ct_s2,zeroshot,monocyte,20,-0.09408932002176738,-0.22705862503870705
+lookup_ct_s2,zeroshot,macrophage,14,,
+lookup_ct_s2,zeroshot,stem,4,0.48795003647426655,
+lookup_ct_s2,zeroshot,B_lineage,18,0.21300097896765816,
+lookup_ct_s2,zeroshot,NK,16,,
+lookup_ct_s2,zeroshot,erythroid,5,0.21320071635561041,
+lookup_ct_s2,lung_nonhema,granulocyte,10,0.12953339381114604,0.1648300030078316
+lookup_ct_s2,lung_nonhema,dendritic,5,-0.2842676218074806,-0.18257418583505536
+lookup_ct_s2,lung_nonhema,monocyte,5,0.24967511357294367,0.24967511357294367
+lookup_ct_s2,lung_nonhema,T_lineage,14,-0.03143208498604286,-0.021140036622799233
+lookup_ct_s2,lung_nonhema,myeloid,3,,
+lookup_ct_s2,lung_nonhema,B_lineage,4,0.08827348295047495,0.21081851067789192
+lookup_ct_s2,lung_nonhema,macrophage,3,,
+lookup_ct_s2,internal (held out),T_lineage,101,0.11309911468649171,-0.14938600775993016
+lookup_ct_s2,internal (held out),B_lineage,45,0.4595660722185536,
+lookup_ct_s2,internal (held out),granulocyte,25,0.5484459486094325,0.1260524865775183
+lookup_ct_s2,internal (held out),monocyte,34,-0.03653115467627394,-0.05774115246772252
+lookup_ct_s2,internal (held out),stem,4,0.8280786712108252,
+lookup_ct_s2,internal (held out),erythroid,7,0.0,
+lookup_ct_s3,external,granulocyte,57,0.2804540722775496,-0.35569606262724796
+lookup_ct_s3,external,macrophage,91,,
+lookup_ct_s3,external,T_lineage,219,0.41790987587217154,0.42186407583911706
+lookup_ct_s3,external,B_lineage,106,0.22442071224900212,
+lookup_ct_s3,external,erythroid,21,0.7029183633775671,
+lookup_ct_s3,external,monocyte,54,-0.04754660003190798,-0.10173663740825221
+lookup_ct_s3,external,NK,34,,
+lookup_ct_s3,external,stem,7,0.2383656473113981,
+lookup_ct_s3,external,lymphoid,7,,
+lookup_ct_s3,zeroshot,granulocyte,23,0.3355460837364475,
+lookup_ct_s3,zeroshot,T_lineage,56,0.4974845576122292,0.49206996423223837
+lookup_ct_s3,zeroshot,monocyte,20,-0.038220402724607465,-0.10816820609482847
+lookup_ct_s3,zeroshot,macrophage,14,,
+lookup_ct_s3,zeroshot,stem,4,0.6831300510639732,
+lookup_ct_s3,zeroshot,B_lineage,18,0.26689668122159593,
+lookup_ct_s3,zeroshot,NK,16,,
+lookup_ct_s3,zeroshot,erythroid,5,0.7106690545187014,
+lookup_ct_s3,lung_nonhema,granulocyte,10,0.1085221242464618,0.19570236094471286
+lookup_ct_s3,lung_nonhema,dendritic,5,0.1421338109037403,0.45643546458763845
+lookup_ct_s3,lung_nonhema,monocyte,5,0.24273969375147303,0.24273969375147303
+lookup_ct_s3,lung_nonhema,T_lineage,14,0.22960389699328448,0.2409469671218462
+lookup_ct_s3,lung_nonhema,myeloid,3,,
+lookup_ct_s3,lung_nonhema,B_lineage,4,-0.08827348295047495,0.0
+lookup_ct_s3,lung_nonhema,macrophage,3,,
+lookup_ct_s3,internal (held out),monocyte,34,0.08161054926303181,0.07043574295029975
+lookup_ct_s3,internal (held out),B_lineage,45,0.25777718858839105,
+lookup_ct_s3,internal (held out),granulocyte,25,0.4744720429154697,0.26921209633341414
+lookup_ct_s3,internal (held out),T_lineage,101,0.1699854442119479,0.046197542898657275
+lookup_ct_s3,internal (held out),erythroid,7,0.6614950926316517,
+lookup_ct_s3,internal (held out),stem,4,0.8280786712108252,
+lookup_ct_s4,external,granulocyte,57,0.5671368724149689,-0.3949542809432263
+lookup_ct_s4,external,macrophage,91,,
+lookup_ct_s4,external,T_lineage,219,0.2928798922712686,0.2959581160323388
+lookup_ct_s4,external,B_lineage,106,0.17779152143790156,
+lookup_ct_s4,external,erythroid,21,0.5429599528927718,
+lookup_ct_s4,external,monocyte,54,-0.06449425770144396,-0.12573843116469832
+lookup_ct_s4,external,NK,34,,
+lookup_ct_s4,external,stem,7,0.34960294939005054,
+lookup_ct_s4,external,lymphoid,7,,
+lookup_ct_s4,zeroshot,granulocyte,23,0.5650495265793654,
+lookup_ct_s4,zeroshot,T_lineage,56,0.5082768734527076,0.5352492950221495
+lookup_ct_s4,zeroshot,monocyte,20,0.07178506234111827,0.006622543230295621
+lookup_ct_s4,zeroshot,macrophage,14,,
+lookup_ct_s4,zeroshot,stem,4,0.87831006565368,
+lookup_ct_s4,zeroshot,B_lineage,18,0.03517743440526476,
+lookup_ct_s4,zeroshot,NK,16,,
+lookup_ct_s4,zeroshot,erythroid,5,0.7106690545187014,
+lookup_ct_s4,lung_nonhema,granulocyte,10,0.06281719766761262,0.17033025068624147
+lookup_ct_s4,lung_nonhema,dendritic,5,0.1421338109037403,0.18257418583505536
+lookup_ct_s4,lung_nonhema,monocyte,5,-0.3953189298238275,-0.3953189298238275
+lookup_ct_s4,lung_nonhema,T_lineage,14,-0.04880288539235066,-0.04594130316002838
+lookup_ct_s4,lung_nonhema,myeloid,3,,
+lookup_ct_s4,lung_nonhema,B_lineage,4,0.9710083124552245,0.9486832980505138
+lookup_ct_s4,lung_nonhema,macrophage,3,,
+lookup_ct_s4,internal (held out),monocyte,34,-0.15135413017974478,-0.23527307694376476
+lookup_ct_s4,internal (held out),T_lineage,101,0.23870337958603038,0.1256373950276636
+lookup_ct_s4,internal (held out),B_lineage,45,0.4407488229631143,
+lookup_ct_s4,internal (held out),erythroid,7,0.7833494518006403,
+lookup_ct_s4,internal (held out),granulocyte,25,0.7125222425805281,0.01080449884950157
+lookup_ct_s4,internal (held out),stem,4,0.4140393356054126,
+lookup_cls_s0,external,granulocyte,57,0.4132058081153312,-0.3283576356730697
+lookup_cls_s0,external,macrophage,91,,
+lookup_cls_s0,external,T_lineage,219,0.6600102203614111,0.6612903468492461
+lookup_cls_s0,external,B_lineage,106,0.30660886876072396,
+lookup_cls_s0,external,erythroid,21,0.7117250623817861,
+lookup_cls_s0,external,monocyte,54,0.1885919583688975,0.18518373489677725
+lookup_cls_s0,external,NK,34,,
+lookup_cls_s0,external,stem,7,0.2542566904654913,
+lookup_cls_s0,external,lymphoid,7,,
+lookup_cls_s0,zeroshot,granulocyte,23,0.5681168756961203,
+lookup_cls_s0,zeroshot,T_lineage,56,0.7052609997735886,0.6781804511906074
+lookup_cls_s0,zeroshot,monocyte,20,0.09885333622540118,0.0063071840288529725
+lookup_cls_s0,zeroshot,macrophage,14,,
+lookup_cls_s0,zeroshot,stem,4,0.48795003647426655,
+lookup_cls_s0,zeroshot,B_lineage,18,0.2046100313113565,
+lookup_cls_s0,zeroshot,NK,16,,
+lookup_cls_s0,zeroshot,erythroid,5,0.8528028654224417,
+lookup_cls_s0,lung_nonhema,granulocyte,10,0.07473080412181501,0.16376543894104256
+lookup_cls_s0,lung_nonhema,dendritic,5,0.1421338109037403,0.3651483716701107
+lookup_cls_s0,lung_nonhema,monocyte,5,0.6311232037538299,0.6311232037538299
+lookup_cls_s0,lung_nonhema,T_lineage,14,-0.0444539487659749,-0.04141469162946049
+lookup_cls_s0,lung_nonhema,myeloid,3,,
+lookup_cls_s0,lung_nonhema,B_lineage,4,0.0,0.05270462766947298
+lookup_cls_s0,lung_nonhema,macrophage,3,,
+lookup_cls_s0,internal (held out),monocyte,34,-0.07665759849136906,-0.22607911595789823
+lookup_cls_s0,internal (held out),T_lineage,101,0.12392406061494046,-0.1965195359372695
+lookup_cls_s0,internal (held out),erythroid,7,0.5222329678670935,
+lookup_cls_s0,internal (held out),stem,4,0.8280786712108252,
+lookup_cls_s0,internal (held out),B_lineage,45,0.45246730539623187,
+lookup_cls_s0,internal (held out),granulocyte,25,0.8279804664571638,0.38896195858205657
+lookup_cls_s1,external,granulocyte,57,0.3841912735098555,-0.3765408718992516
+lookup_cls_s1,external,macrophage,91,,
+lookup_cls_s1,external,T_lineage,219,0.5794313623430967,0.4979758976909102
+lookup_cls_s1,external,B_lineage,106,0.22280294070833587,
+lookup_cls_s1,external,erythroid,21,0.6046068459223051,
+lookup_cls_s1,external,monocyte,54,0.033062264607781895,-0.027012771982235072
+lookup_cls_s1,external,NK,34,,
+lookup_cls_s1,external,stem,7,0.2701477336195845,
+lookup_cls_s1,external,lymphoid,7,,
+lookup_cls_s1,zeroshot,granulocyte,23,0.39119656056900226,
+lookup_cls_s1,zeroshot,T_lineage,56,0.5608774385519673,0.5437150436638204
+lookup_cls_s1,zeroshot,monocyte,20,0.12159068628819882,-0.0006307184028852972
+lookup_cls_s1,zeroshot,macrophage,14,,
+lookup_cls_s1,zeroshot,stem,4,0.48795003647426655,
+lookup_cls_s1,zeroshot,B_lineage,18,0.3246651285476729,
+lookup_cls_s1,zeroshot,NK,16,,
+lookup_cls_s1,zeroshot,erythroid,5,0.8528028654224417,
+lookup_cls_s1,lung_nonhema,granulocyte,10,0.1553101059575112,0.2065254289570678
+lookup_cls_s1,lung_nonhema,dendritic,5,0.5685352436149612,0.8215838362577491
+lookup_cls_s1,lung_nonhema,monocyte,5,0.027741679285882632,0.027741679285882632
+lookup_cls_s1,lung_nonhema,T_lineage,14,-0.07080534488258067,-0.08170724006436843
+lookup_cls_s1,lung_nonhema,myeloid,3,,
+lookup_cls_s1,lung_nonhema,B_lineage,4,0.6179143806533246,0.9486832980505138
+lookup_cls_s1,lung_nonhema,macrophage,3,,
+lookup_cls_s1,internal (held out),monocyte,34,-0.025066456443389624,-0.11982924046432754
+lookup_cls_s1,internal (held out),T_lineage,101,0.1430431861402201,-0.023087890708317727
+lookup_cls_s1,internal (held out),granulocyte,25,0.3232675186982502,0.013505623561876963
+lookup_cls_s1,internal (held out),stem,4,0.4140393356054126,
+lookup_cls_s1,internal (held out),B_lineage,45,0.5947516037147256,
+lookup_cls_s1,internal (held out),erythroid,7,0.5396407334626633,
+lookup_cls_s2,external,granulocyte,57,0.3715393860723852,-0.3700176029947838
+lookup_cls_s2,external,macrophage,91,,
+lookup_cls_s2,external,T_lineage,219,0.6084436954736188,0.5601865680699643
+lookup_cls_s2,external,B_lineage,106,0.42626679685904595,
+lookup_cls_s2,external,erythroid,21,0.2994277661434484,
+lookup_cls_s2,external,monocyte,54,0.04669563403519819,0.03561556547768549
+lookup_cls_s2,external,NK,34,,
+lookup_cls_s2,external,stem,7,0.540295467239169,
+lookup_cls_s2,external,lymphoid,7,,
+lookup_cls_s2,zeroshot,granulocyte,23,0.4126680043862872,
+lookup_cls_s2,zeroshot,T_lineage,56,0.5604790429192009,0.5360422769679628
+lookup_cls_s2,zeroshot,monocyte,20,0.14844241398140745,0.13308158300879774
+lookup_cls_s2,zeroshot,macrophage,14,,
+lookup_cls_s2,zeroshot,stem,4,0.87831006565368,
+lookup_cls_s2,zeroshot,B_lineage,18,0.37049261190132055,
+lookup_cls_s2,zeroshot,NK,16,,
+lookup_cls_s2,zeroshot,erythroid,5,0.8528028654224417,
+lookup_cls_s2,lung_nonhema,granulocyte,10,-0.3639065244192732,-0.3301922880490577
+lookup_cls_s2,lung_nonhema,dendritic,5,-0.42640143271122083,-0.27386127875258304
+lookup_cls_s2,lung_nonhema,monocyte,5,0.24967511357294367,0.24967511357294367
+lookup_cls_s2,lung_nonhema,T_lineage,14,-0.1337110916866585,-0.13351602077557412
+lookup_cls_s2,lung_nonhema,myeloid,3,,
+lookup_cls_s2,lung_nonhema,B_lineage,4,-0.44136741475237473,-0.5270462766947299
+lookup_cls_s2,lung_nonhema,macrophage,3,,
+lookup_cls_s2,internal (held out),T_lineage,101,0.3979342120839012,0.1687432562979453
+lookup_cls_s2,internal (held out),monocyte,34,0.13239715108414218,0.016772246819405073
+lookup_cls_s2,internal (held out),B_lineage,45,0.6997177216294495,
+lookup_cls_s2,internal (held out),erythroid,7,0.5396407334626633,
+lookup_cls_s2,internal (held out),granulocyte,25,0.6856931321296779,0.06617755545319713
+lookup_cls_s2,internal (held out),stem,4,0.8280786712108252,
+tokenbag_pca64,external,granulocyte,57,0.5514595639507175,-0.1855870003321061
+tokenbag_pca64,external,macrophage,91,,
+tokenbag_pca64,external,T_lineage,219,0.08724242812297753,0.06486760621528623
+tokenbag_pca64,external,B_lineage,106,0.434993219794164,
+tokenbag_pca64,external,erythroid,21,0.48293061682319677,
+tokenbag_pca64,external,monocyte,54,0.11569553228775696,0.14881112358285112
+tokenbag_pca64,external,NK,34,,
+tokenbag_pca64,external,stem,7,0.8581163303210331,
+tokenbag_pca64,external,lymphoid,7,,
+tokenbag_pca64,zeroshot,granulocyte,23,0.4188027026197972,
+tokenbag_pca64,zeroshot,T_lineage,56,0.20371684649668317,0.2106972183563555
+tokenbag_pca64,zeroshot,monocyte,20,-0.15840353877082358,-0.1548413679083405
+tokenbag_pca64,zeroshot,macrophage,14,,
+tokenbag_pca64,zeroshot,stem,4,0.87831006565368,
+tokenbag_pca64,zeroshot,B_lineage,18,0.2081600476274841,
+tokenbag_pca64,zeroshot,NK,16,,
+tokenbag_pca64,zeroshot,erythroid,5,0.07106690545187015,
+tokenbag_pca64,lung_nonhema,granulocyte,10,-0.16679049035883353,-0.11940860282483386
+tokenbag_pca64,lung_nonhema,dendritic,5,-0.497468338163091,-0.3651483716701107
+tokenbag_pca64,lung_nonhema,monocyte,5,0.24967511357294367,0.24967511357294367
+tokenbag_pca64,lung_nonhema,T_lineage,14,0.05155527167022902,0.060329461239333484
+tokenbag_pca64,lung_nonhema,myeloid,3,,
+tokenbag_pca64,lung_nonhema,B_lineage,4,0.08827348295047495,0.31622776601683794
+tokenbag_pca64,lung_nonhema,macrophage,3,,
+tokenbag_pca64,internal (held out),monocyte,34,0.03122621755535598,0.0411997163843643
+tokenbag_pca64,internal (held out),T_lineage,101,0.033959164810865604,-0.034598913664145595
+tokenbag_pca64,internal (held out),B_lineage,45,0.49500841268481877,
+tokenbag_pca64,internal (held out),erythroid,7,0.7833494518006403,
+tokenbag_pca64,internal (held out),granulocyte,25,0.32776488403394194,0.012605248657751832
+tokenbag_pca64,internal (held out),stem,4,0.8280786712108252,
+hvg_pca64,external,granulocyte,57,0.6625976013705283,-0.11086592015365788
+hvg_pca64,external,macrophage,91,,
+hvg_pca64,external,T_lineage,219,0.08672206210153044,0.10247766181607214
+hvg_pca64,external,B_lineage,106,0.2106055787345902,
+hvg_pca64,external,erythroid,21,0.4209242666914502,
+hvg_pca64,external,monocyte,54,-0.019599088292540503,-0.025498680211560334
+hvg_pca64,external,NK,34,,
+hvg_pca64,external,stem,7,0.8422252871669399,
+hvg_pca64,external,lymphoid,7,,
+hvg_pca64,zeroshot,granulocyte,23,0.6238769007114163,
+hvg_pca64,zeroshot,T_lineage,56,0.10137983274694189,0.08407112274532831
+hvg_pca64,zeroshot,monocyte,20,-0.16619920164949703,-0.20498348093772162
+hvg_pca64,zeroshot,macrophage,14,,
+hvg_pca64,zeroshot,stem,4,-0.6831300510639732,
+hvg_pca64,zeroshot,B_lineage,18,0.020009182872719404,
+hvg_pca64,zeroshot,NK,16,,
+hvg_pca64,zeroshot,erythroid,5,0.2842676218074806,
+hvg_pca64,lung_nonhema,granulocyte,10,-0.07927963567705594,-0.051099075205872445
+hvg_pca64,lung_nonhema,dendritic,5,-0.497468338163091,-0.3651483716701107
+hvg_pca64,lung_nonhema,monocyte,5,-0.07628961803617723,-0.07628961803617723
+hvg_pca64,lung_nonhema,T_lineage,14,-0.15543914408574053,-0.16884451202780046
+hvg_pca64,lung_nonhema,myeloid,3,,
+hvg_pca64,lung_nonhema,B_lineage,4,0.08827348295047495,0.10540925533894596
+hvg_pca64,lung_nonhema,macrophage,3,,
+hvg_pca64,internal (held out),B_lineage,45,0.4192906853250703,
+hvg_pca64,internal (held out),erythroid,7,0.7833494518006403,
+hvg_pca64,internal (held out),T_lineage,101,0.08663053125070161,0.039473665214494795
+hvg_pca64,internal (held out),monocyte,34,-0.11597950207959513,-0.11605933177556217
+hvg_pca64,internal (held out),granulocyte,25,0.7414449541359244,0.3403417137592995
+hvg_pca64,internal (held out),stem,4,0.2070196678027063,

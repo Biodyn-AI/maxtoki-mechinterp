@@ -1,0 +1,164 @@
+{
+  "stat_side_GATA1": {
+    "all_same": true,
+    "by_cutoff": {
+      "0.5|ChIP": {
+        "K": 7,
+        "M": 4,
+        "K_results": 7,
+        "M_results": 4,
+        "same": true
+      },
+      "0.5|TRRUST": {
+        "K": 7,
+        "M": 1,
+        "K_results": 7,
+        "M_results": 1,
+        "same": true
+      },
+      "0.25|ChIP": {
+        "K": 13,
+        "M": 4,
+        "K_results": 13,
+        "M_results": 4,
+        "same": true
+      },
+      "0.25|TRRUST": {
+        "K": 13,
+        "M": 1,
+        "K_results": 13,
+        "M_results": 1,
+        "same": true
+      },
+      "0.1|ChIP": {
+        "K": 21,
+        "M": 4,
+        "K_results": 21,
+        "M_results": 4,
+        "same": true
+      },
+      "0.1|TRRUST": {
+        "K": 21,
+        "M": 1,
+        "K_results": 21,
+        "M_results": 1,
+        "same": true
+      },
+      "0.05|ChIP": {
+        "K": 46,
+        "M": 4,
+        "K_results": 46,
+        "M_results": 4,
+        "same": true
+      },
+      "0.05|TRRUST": {
+        "K": 46,
+        "M": 1,
+        "K_results": 46,
+        "M_results": 1,
+        "same": true
+      },
+      "0.02|ChIP": {
+        "K": 249,
+        "M": 5,
+        "K_results": 249,
+        "M_results": 5,
+        "same": true
+      },
+      "0.02|TRRUST": {
+        "K": 249,
+        "M": 1,
+        "K_results": 249,
+        "M_results": 1,
+        "same": true
+      },
+      "0.01|ChIP": {
+        "K": 543,
+        "M": 5,
+        "K_results": 543,
+        "M_results": 5,
+        "same": true
+      },
+      "0.01|TRRUST": {
+        "K": 543,
+        "M": 1,
+        "K_results": 543,
+        "M_results": 1,
+        "same": true
+      },
+      "0.0|ChIP": {
+        "K": 4097,
+        "M": 5,
+        "K_results": 4097,
+        "M_results": 5,
+        "same": true
+      },
+      "0.0|TRRUST": {
+        "K": 4097,
+        "M": 1,
+        "K_results": 4097,
+        "M_results": 1,
+        "same": true
+      }
+    }
+  },
+  "model_side": {
+    "rows": [
+      282761,
+      288542,
+      288755,
+      289004,
+      294912,
+      295032,
+      281481,
+      282103,
+      282429,
+      282951,
+      283185,
+      283311
+    ],
+    "encoding_check": {
+      "label": "verify 12 cells",
+      "n_checked": 12,
+      "n_cells": 12,
+      "all_pass": true,
+      "max_order_violations": 0,
+      "n_positions_tie_reordered": 0,
+      "check": "inputs_v3.check_encoding (token order == counts/median order; counts count-like)"
+    },
+    "mem_gb_before_load": 15.78,
+    "tokens_equal_stored": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "max_abs_diff_per_cell_mean": [
+      2.384185791015625e-07,
+      2.384185791015625e-07,
+      5.960464477539063e-08,
+      1.1920928955078125e-07,
+      2.384185791015625e-07,
+      1.1920928955078125e-07,
+      4.470348358154297e-08,
+      2.9802322387695312e-08,
+      2.2351741790771484e-08,
+      2.9802322387695312e-08,
+      1.4901161193847656e-08,
+      1.4901161193847656e-08
+    ],
+    "max_over_cells": 2.384185791015625e-07,
+    "max_stored_value_these_cells": 2.6353085041046143,
+    "path": "LlamaForCausalLM(output_hidden_states=True).hidden_states[5] + TopKSAE.encode (no hooks_v2)"
+  },
+  "wall_s": 8.8,
+  "script_sha256": "73cfed23620de9f330dc8be83348b3a7669db2cf984bd47baaebe13d0fc8cbdb"
+}

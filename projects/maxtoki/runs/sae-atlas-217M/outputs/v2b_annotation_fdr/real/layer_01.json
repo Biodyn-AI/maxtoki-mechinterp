@@ -1,0 +1,79 @@
+{
+  "n_features": 4928,
+  "n_terms": 2377,
+  "n_tests": 11713856,
+  "A_deployed": {
+    "n_kept_tests": 36559,
+    "n_sig_rows": 30031,
+    "n_annotated": 3685,
+    "n_ge3": 2567,
+    "max_raw_p_sig": 0.03908217355877198,
+    "frac_sig_rows_overlap2": 0.8321068229496187,
+    "rate": 0.7477678571428571
+  },
+  "A2_overlap2_only": {
+    "n_kept_tests": 46525,
+    "n_sig_rows": 28314,
+    "n_annotated": 3612,
+    "n_ge3": 2483,
+    "rate": 0.7329545454545454
+  },
+  "B_perfeature_bh": {
+    "n_sig_rows": 822,
+    "n_annotated": 86,
+    "n_ge3": 38,
+    "rate": 0.0174512987012987,
+    "overlap_min": 2,
+    "overlap_median": 2.0,
+    "by_database": {
+      "Reactome": 521,
+      "GO_BP": 232,
+      "KEGG": 46,
+      "TRRUST_TF": 23
+    }
+  },
+  "C_global_bh": {
+    "n_sig_rows": 19,
+    "n_annotated": 5,
+    "n_ge3": 4,
+    "p_cutoff": 6.231413039380515e-08,
+    "rate": 0.0010146103896103895
+  },
+  "Bu_perfeature_bh_Kuniverse": {
+    "n_annotated": 86,
+    "rate": 0.0174512987012987,
+    "n_sig_rows": 824,
+    "n_ge3": 38
+  },
+  "Cu_global_bh_Kuniverse": {
+    "n_annotated": 5,
+    "rate": 0.0010146103896103895,
+    "n_sig_rows": 19,
+    "n_ge3": 4
+  },
+  "layer": 1,
+  "N_universe": 6325,
+  "repro_check": {
+    "deployed_n_alive": 4928,
+    "deployed_n_annotated": 3685,
+    "deployed_total_enrichments": 30031,
+    "deployed_rate": 0.7478,
+    "rows_only_in_deployed_csv": 0,
+    "rows_only_in_rebuild": 0,
+    "max_abs_diff_p": 9.8879238130678e-17,
+    "max_abs_diff_q": 9.8879238130678e-17,
+    "deployed_csv_max_raw_p": 0.0390821735587719,
+    "deployed_csv_frac_overlap2": 0.8321068229496187,
+    "N_in_csv": [
+      6325
+    ],
+    "exact_match": true
+  },
+  "selftest_perfeature_bh_vs_statsmodels": {
+    "rows_checked": 185,
+    "mismatches": 0
+  },
+  "smallest_possible_p_overlap2": 9.446186068764125e-05,
+  "perfeature_bh_rank1_threshold": 2.1034917963819943e-05,
+  "seconds": 1.7
+}

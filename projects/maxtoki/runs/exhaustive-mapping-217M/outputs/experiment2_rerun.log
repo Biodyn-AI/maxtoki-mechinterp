@@ -1,0 +1,33 @@
+======================================================================
+EXPERIMENT 2 RERUN — diversified triplet selection
+======================================================================
+  SAEs loaded for layers [0, 5, 9, 11]
+  annotated features: L0=2016, L5=3340, L9=3442
+  171083392 candidate triplets
+  997 distinct primary pathways available
+
+  selected 4 triplets (distinct features + distinct pathways):
+    T0: L0_F4388 × L5_F226 × L9_F3852  pathway='Reactome:Post-translational Protein Modification R-HSA-597592'  (#shared=8)
+    T1: L0_F3872 × L5_F1879 × L9_F3956  pathway='Reactome:Gene Expression (Transcription) R-HSA-74160'  (#shared=12)
+    T2: L0_F2160 × L5_F3317 × L9_F3456  pathway='Reactome:Immune System R-HSA-168256'  (#shared=8)
+    T3: L0_F1103 × L5_F3554 × L9_F457  pathway='Reactome:Cell Cycle Checkpoints R-HSA-69620'  (#shared=23)
+
+  tokenized 50 cells for ablation
+
+  Triplet 0: L0_F4388 × L5_F226 × L9_F3852  pathway='Reactome:Post-translational Protein Modification R-HSA-597592'
+    pairwise[AB/AC/BC]=0.165/0.219/0.586  threeway=0.190  marg_C|AB=0.294  synergy=0/2980
+
+  Triplet 1: L0_F3872 × L5_F1879 × L9_F3956  pathway='Reactome:Gene Expression (Transcription) R-HSA-74160'
+    pairwise[AB/AC/BC]=0.165/0.219/0.586  threeway=0.190  marg_C|AB=0.294  synergy=0/2980
+
+  Triplet 2: L0_F2160 × L5_F3317 × L9_F3456  pathway='Reactome:Immune System R-HSA-168256'
+    pairwise[AB/AC/BC]=0.165/0.219/0.586  threeway=0.190  marg_C|AB=0.294  synergy=0/2979
+
+  Triplet 3: L0_F1103 × L5_F3554 × L9_F457  pathway='Reactome:Cell Cycle Checkpoints R-HSA-69620'
+    pairwise[AB/AC/BC]=0.166/0.219/0.586  threeway=0.190  marg_C|AB=0.293  synergy=0/2977
+
+  SUMMARY (diversified): pairwise=0.323 ±0.000  threeway=0.190 ±0.000  synergy=0.00%
+  v1 reference:         pairwise=0.165 (no spread — identical triplets)  threeway=0.190  synergy=0.00%
+  Paper (Geneformer):   pairwise=0.74   threeway=0.59   synergy=0.14%
+  EXPERIMENT 2 RERUN COMPLETE — wrote <REPO_ROOT>/projects/maxtoki/runs/exhaustive-mapping-217M/outputs/experiment2_v2/combinatorial_summary.json
+  wall-clock: 15.0 min

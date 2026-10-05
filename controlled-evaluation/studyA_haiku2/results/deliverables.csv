@@ -1,0 +1,121 @@
+task,arm,rep,cond,delivered,verdict,correct,verdict_given,g1,g2,trap,false_statements,key_numbers
+T1,paper,1,none,True,inconclusive,False,inconclusive,False,False,0.23333333333333334,2.0,0.0
+T1,paper,1,generic,True,inconclusive,False,inconclusive,False,False,0.2,3.5,0.0
+T1,paper,1,checklist,True,supported,False,supported,False,False,0.08333333333333333,6.5,0.0
+T1,paper,2,none,True,supported,False,supported,False,False,0.08333333333333333,3.5,0.35
+T1,paper,2,generic,True,"supported (rank-based evidence, modest effect)",False,"supported (rank-based evidence, modest effect)",False,False,0.20833333333333331,5.0,0.375
+T1,paper,2,checklist,True,supported,False,supported,False,False,0.25,4.5,0.41666666666666663
+T1,paper,3,none,True,supported,False,supported,False,False,0.041666666666666664,6.0,0.5
+T1,paper,3,generic,True,supported,False,supported,False,False,0.16666666666666666,5.5,0.5
+T1,paper,3,checklist,True,supported,False,supported,False,False,0.08333333333333333,6.5,0.5
+T1,paper,4,none,True,supported,False,supported,False,False,0.041666666666666664,6.0,0.16666666666666666
+T1,paper,4,generic,True,inconclusive,False,inconclusive,False,False,0.16666666666666666,6.0,0.0
+T1,paper,4,checklist,True,not supported,True,not supported,True,True,0.3333333333333333,2.0,0.09545454545454546
+T1,paper,5,none,True,supported,False,supported,False,False,0.08333333333333333,5.5,0.30952380952380953
+T1,paper,5,generic,True,supported,False,supported,False,False,0.20833333333333331,8.5,0.42857142857142855
+T1,paper,5,checklist,True,inconclusive,False,inconclusive,False,False,0.375,3.5,0.2
+T1,contract,1,none,True,supported,False,supported,False,False,0.125,2.5,0.14285714285714285
+T1,contract,1,generic,False,,,,,,,,
+T1,contract,1,checklist,True,not supported,True,not supported,True,True,0.25,4.0,0.08712121212121213
+T1,contract,2,none,True,supported,False,supported,False,False,0.20833333333333331,5.5,0.375
+T1,contract,2,generic,True,inconclusive,False,inconclusive,False,False,0.375,2.0,0.25
+T1,contract,2,checklist,True,inconclusive,False,inconclusive,False,False,0.4166666666666667,3.0,0.25
+T1,contract,3,none,True,not supported,True,not supported,True,True,0.5,1.5,0.4
+T1,contract,3,generic,True,not supported,True,not supported,True,True,0.5,2.0,0.3333333333333333
+T1,contract,3,checklist,True,not supported,True,not supported,True,True,0.5,4.0,0.25
+T1,contract,4,none,True,not supported,True,not supported,True,True,0.35,5.0,0.36363636363636365
+T1,contract,4,generic,True,not supported,True,not supported,True,True,0.4166666666666667,3.5,0.36363636363636365
+T1,contract,4,checklist,False,,,,,,,,
+T1,contract,5,none,True,not supported,True,not supported,True,True,0.4166666666666667,5.5,0.1111111111111111
+T1,contract,5,generic,True,not supported,True,not supported,True,True,0.45833333333333337,4.5,0.3
+T1,contract,5,checklist,True,not supported,True,not supported,True,True,0.625,3.0,0.2857142857142857
+T2,paper,1,none,True,not supported,True,not supported,True,True,0.45,2.0,0.6666666666666666
+T2,paper,1,generic,True,not supported,True,not supported,True,True,0.4083333333333333,4.0,0.8571428571428572
+T2,paper,1,checklist,False,,,,,,,,
+T2,paper,2,none,True,inconclusive,False,inconclusive,False,False,0.29166666666666663,5.0,0.8888888888888888
+T2,paper,2,generic,True,inconclusive,False,inconclusive,False,False,0.29166666666666663,5.0,1.0
+T2,paper,2,checklist,True,not supported,True,not supported,True,True,0.4166666666666667,3.5,0.875
+T2,paper,3,none,True,not supported,True,not supported,True,True,0.25,2.5,0.7777777777777778
+T2,paper,3,generic,True,not supported,True,not supported,True,True,0.25,3.5,0.7777777777777778
+T2,paper,3,checklist,True,not supported,True,not supported,True,True,0.25,6.0,0.7846153846153847
+T2,paper,4,none,True,not supported,True,not supported,True,True,0.29166666666666663,3.5,0.7638888888888888
+T2,paper,4,generic,True,not supported,True,not supported,True,True,0.20833333333333331,5.5,0.7638888888888888
+T2,paper,4,checklist,True,not supported,True,not supported,True,True,0.7083333333333333,4.0,0.9230769230769231
+T2,paper,5,none,True,not supported,True,not supported,True,True,0.375,3.5,0.7083333333333333
+T2,paper,5,generic,True,not supported,True,not supported,True,True,0.25,4.0,0.7083333333333333
+T2,paper,5,checklist,False,,,,,,,,
+T2,contract,1,none,True,not supported,True,not supported,True,True,0.3333333333333333,6.5,0.7321428571428572
+T2,contract,1,generic,True,not supported,True,not supported,True,True,0.4166666666666667,3.0,0.75
+T2,contract,1,checklist,True,not supported,True,not supported,True,True,0.5833333333333334,3.0,0.8181818181818182
+T2,contract,2,none,True,not supported,True,not supported,True,True,0.5,2.5,0.8181818181818182
+T2,contract,2,generic,True,not supported,True,not supported,True,True,0.5,2.5,0.8090909090909091
+T2,contract,2,checklist,True,not supported,True,not supported,True,True,0.6666666666666666,5.0,0.7272727272727273
+T2,contract,3,none,True,not supported,True,not supported,True,True,0.25,3.0,0.7142857142857143
+T2,contract,3,generic,False,,,,,,,,
+T2,contract,3,checklist,True,weakly supported,False,weakly supported,False,False,0.45833333333333337,3.5,0.8571428571428572
+T2,contract,4,none,True,not supported,True,not supported,True,True,0.8333333333333334,3.5,1.0
+T2,contract,4,generic,True,not supported,True,not supported,True,True,0.4166666666666667,7.0,0.9615384615384616
+T2,contract,4,checklist,True,not supported,True,not supported,True,True,0.75,5.5,1.0
+T2,contract,5,none,True,not supported,True,not supported,True,True,0.3333333333333333,2.5,0.775
+T2,contract,5,generic,True,not supported,True,not supported,True,True,0.3333333333333333,2.0,0.788888888888889
+T2,contract,5,checklist,True,not supported,True,not supported,True,True,0.4166666666666667,5.0,0.7388888888888889
+T3,paper,1,none,True,supported,False,supported,False,False,0.05,2.5,0.6666666666666666
+T3,paper,1,generic,True,not supported,True,not supported,True,True,0.25,6.0,0.5
+T3,paper,1,checklist,False,,,,,,,,
+T3,paper,2,none,True,not supported,True,not supported,True,True,0.4,1.0,1.0
+T3,paper,2,generic,True,not supported,True,not supported,True,True,0.3,2.0,1.0
+T3,paper,2,checklist,True,not supported,True,not supported,True,True,0.4,1.5,1.0
+T3,paper,3,none,True,inconclusive,False,inconclusive,False,False,0.2,4.0,0.5
+T3,paper,3,generic,False,,,,,,,,
+T3,paper,3,checklist,True,inconclusive,False,inconclusive,False,False,0.2,7.5,0.5
+T3,paper,4,none,True,not supported,True,not supported,True,True,0.2,1.5,1.0
+T3,paper,4,generic,True,not supported,True,not supported,True,True,0.25,1.0,1.0
+T3,paper,4,checklist,True,supported,False,supported,False,False,0.3,3.5,1.0
+T3,paper,5,none,True,inconclusive,False,inconclusive,False,False,0.15000000000000002,4.0,1.0
+T3,paper,5,generic,True,inconclusive,False,inconclusive,False,False,0.4,0.5,1.0
+T3,paper,5,checklist,True,inconclusive,False,inconclusive,False,False,0.15000000000000002,5.5,1.0
+T3,contract,1,none,True,inconclusive,False,inconclusive,False,False,0.25,3.5,1.0
+T3,contract,1,generic,True,not supported,True,not supported,True,True,0.15000000000000002,3.5,1.0
+T3,contract,1,checklist,True,inconclusive,False,inconclusive,False,False,0.2,4.5,1.0
+T3,contract,2,none,True,not supported,True,not supported,True,True,0.3,4.5,0.6666666666666666
+T3,contract,2,generic,True,not supported,True,not supported,True,True,0.3,2.5,1.0
+T3,contract,2,checklist,True,not supported,True,not supported,True,True,0.4,2.5,0.8333333333333333
+T3,contract,3,none,True,inconclusive,False,inconclusive,False,False,0.25,1.0,1.0
+T3,contract,3,generic,True,inconclusive,False,inconclusive,False,False,0.25,0.0,1.0
+T3,contract,3,checklist,False,,,,,,,,
+T3,contract,4,none,True,not supported,True,not supported,True,True,0.3,4.5,1.0
+T3,contract,4,generic,True,not supported,True,not supported,True,True,0.3,0.5,1.0
+T3,contract,4,checklist,False,,,,,,,,
+T3,contract,5,none,True,not supported,True,not supported,True,True,0.25,5.5,0.75
+T3,contract,5,generic,True,not supported,True,not supported,True,True,0.2,5.0,0.875
+T3,contract,5,checklist,True,not supported,True,not supported,True,True,0.25,7.5,0.8
+T4,paper,1,none,True,aligned with scGPT but clearly less than with Geneformer,True,aligned with scGPT but clearly less than with Geneformer,True,True,0.55,3.5,
+T4,paper,1,generic,True,aligned with scGPT but clearly less than with Geneformer,True,aligned with scGPT but clearly less than with Geneformer,True,True,0.6499999999999999,2.5,
+T4,paper,1,checklist,True,aligned with scGPT but clearly less than with Geneformer,True,aligned with scGPT but clearly less than with Geneformer,True,True,0.6499999999999999,3.0,
+T4,paper,2,none,True,aligned with scGPT about as well as with Geneformer,False,aligned with scGPT about as well as with Geneformer,False,False,0.75,3.0,
+T4,paper,2,generic,True,aligned with scGPT about as well as with Geneformer,False,aligned with scGPT about as well as with Geneformer,False,False,0.75,3.5,0.0
+T4,paper,2,checklist,True,aligned with scGPT about as well as with Geneformer,False,aligned with scGPT about as well as with Geneformer,False,False,0.75,3.0,
+T4,paper,3,none,True,aligned with scGPT but clearly less than with Geneformer,True,aligned with scGPT but clearly less than with Geneformer,True,True,0.6,3.0,0.0
+T4,paper,3,generic,True,aligned with scGPT but clearly less than with Geneformer,True,aligned with scGPT but clearly less than with Geneformer,True,True,0.6,6.5,0.0
+T4,paper,3,checklist,True,aligned with scGPT but clearly less than with Geneformer,True,aligned with scGPT but clearly less than with Geneformer,True,True,0.6499999999999999,4.0,0.3333333333333333
+T4,paper,4,none,True,aligned with scGPT but clearly less than with Geneformer,True,aligned with scGPT but clearly less than with Geneformer,True,True,0.625,4.5,0.0
+T4,paper,4,generic,True,aligned with scGPT but clearly less than with Geneformer,True,aligned with scGPT but clearly less than with Geneformer,True,True,0.625,3.5,0.0
+T4,paper,4,checklist,True,aligned with scGPT but clearly less than with Geneformer,True,aligned with scGPT but clearly less than with Geneformer,True,True,0.5,5.0,1.0
+T4,paper,5,none,True,aligned with scGPT but clearly less than with Geneformer,True,aligned with scGPT but clearly less than with Geneformer,True,True,0.375,4.0,0.675
+T4,paper,5,generic,True,aligned with scGPT but clearly less than with Geneformer,True,aligned with scGPT but clearly less than with Geneformer,True,True,0.375,3.0,0.9166666666666666
+T4,paper,5,checklist,True,aligned with scGPT but clearly less than with Geneformer,True,aligned with scGPT but clearly less than with Geneformer,True,True,0.375,6.0,0.9230769230769231
+T4,contract,1,none,True,aligned with scGPT but clearly less than with Geneformer,True,aligned with scGPT but clearly less than with Geneformer,True,True,0.375,2.5,0.0
+T4,contract,1,generic,True,aligned with scGPT but clearly less than with Geneformer,True,aligned with scGPT but clearly less than with Geneformer,True,True,0.5,2.5,0.0
+T4,contract,1,checklist,True,aligned with scGPT but clearly less than with Geneformer,True,aligned with scGPT but clearly less than with Geneformer,True,True,0.5,4.5,0.625
+T4,contract,2,none,True,aligned with scGPT but clearly less than with Geneformer,True,aligned with scGPT but clearly less than with Geneformer,True,True,0.3333333333333333,4.0,0.0
+T4,contract,2,generic,False,,,,,,,,
+T4,contract,2,checklist,True,aligned with scGPT but clearly less than with Geneformer,True,aligned with scGPT but clearly less than with Geneformer,True,True,0.4166666666666667,5.0,0.0
+T4,contract,3,none,True,aligned with scGPT about as well as with Geneformer,False,aligned with scGPT about as well as with Geneformer,False,False,0.3666666666666667,6.0,0.0
+T4,contract,3,generic,True,aligned with scGPT about as well as with Geneformer,False,aligned with scGPT about as well as with Geneformer,False,False,0.3333333333333333,6.0,0.0
+T4,contract,3,checklist,False,,,,,,,,
+T4,contract,4,none,True,aligned with scGPT but clearly less than with Geneformer,True,aligned with scGPT but clearly less than with Geneformer,True,True,0.4375,5.0,
+T4,contract,4,generic,False,,,,,,,,
+T4,contract,4,checklist,True,aligned with scGPT but substantially less than with Geneformer,True,aligned with scGPT but substantially less than with Geneformer,True,True,0.75,5.0,0.375
+T4,contract,5,none,True,aligned with scGPT but clearly less than with Geneformer,True,aligned with scGPT but clearly less than with Geneformer,True,True,0.5,4.5,
+T4,contract,5,generic,True,aligned with scGPT but clearly less than with Geneformer,True,aligned with scGPT but clearly less than with Geneformer,True,True,0.5,3.0,
+T4,contract,5,checklist,True,aligned with scGPT about as well as with Geneformer,False,aligned with scGPT about as well as with Geneformer,False,False,0.5,4.5,0.625

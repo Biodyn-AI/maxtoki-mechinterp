@@ -1,0 +1,548 @@
+\section*{Materials and methods}
+
+\subsection*{Study overview}
+Fig~\ref{fig:overview} shows how the parts of the study fit together. An
+agent ran eight interpretability pipelines on MaxToki-217M by following
+the specifications, over several working sessions. Then, in a single
+session on the last day, it audited its outputs with the checklist (the
+\emph{deployment} and the \emph{in-session audit}). Everything after that was done separately and is the evaluation:
+the independent verification that built the error ledger, the three
+controlled studies, and the corrected MaxToki-217M analyses. The
+controlled studies used fresh agents that had no access to the ledger,
+the answer keys, this manuscript or the project's working notes.
+
+\begin{figure}[H]
+\caption{\textbf{Study overview.} Left: what was deployed. Each
+interpretability method is written as a markdown specification; an agent
+follows the specification to run the analysis on MaxToki-217M over
+several working sessions and writes run summaries. Then, in one session
+on the last day, the agent applies the ten-pattern checklist to the
+outputs of all eight pipelines and repairs what it finds. Right: how the deployment was
+evaluated. Independent verification (number tracing by code,
+re-derivation of statistics from stored per-record outputs, unit tests of
+intervention code, an input-encoding audit) and blind re-audits produced
+an error ledger of confirmed errors in the deployment's outputs.
+Study~C scores blind re-audits of the pre-audit project against that
+ledger; Study~A tests the specification and the checklist on four
+analysis tasks with known answers; Study~B tests the checklist on held-out
+analyses from other projects. The corrected MaxToki-217M analyses re-run
+most of the affected pipelines with corrected code and inputs.}
+\label{fig:overview}
+\end{figure}
+
+\subsection*{The framework}
+
+\subsubsection*{Pipeline specifications}
+Each method is described in one markdown file. The template asks for
+ten sections, in this order: overview; source (citation and pinned code
+commit); inputs; outputs; dependencies; methodology (numbered steps with
+equations and hyperparameters); code references (pointers into the pinned
+reference code); a parameter table with defaults and ranges; validation
+criteria; and known pitfalls. Only one of the eight deployed
+specifications (the ageing-probe one) has all ten. The other seven have
+no separate code-references section. Their code pointers are mostly inside
+the methodology section, and they end with a quick-start section on
+applying the method to a new model (see \emph{What deterministic checks
+catch} in Results). The manifold specification names no pinned commit,
+because its source paper links no code. The specifications for the eight
+pipelines were written on 15 April 2026, at the start of the deployment,
+by Claude Opus~4.7 under the author's direction, from the source papers
+and their code; they are 48,000--96,000 characters long. During the deployment the ten-section
+structure was an instruction to the agent; no code read or checked the
+specifications. A specification therefore worked as a long, structured
+prompt that the agent was asked to follow. The executing agent chose, for
+example, the number of null-model draws and the number of cells where
+compute was limited, and recorded some but not all of these choices.
+
+\subsubsection*{Per-model project folders}
+Model-specific code (loading the checkpoint, mapping genes to tokens,
+encoding cells as model input) lives in a project folder separate from the
+specifications, so that a specification can be pointed at a new model
+without being rewritten. Each pipeline run writes its scripts, logs,
+outputs and an agent-written run summary into its own folder.
+
+\subsubsection*{The ten-pattern audit checklist}
+The checklist (Table~\ref{tab:checklist}) was distilled from six
+peer-review comment sets on the author's earlier interpretability papers.
+For each pattern it gives the objection as a reviewer would state it, a
+diagnostic signature to search for in run outputs and code, and a
+prescription. The deployed version is a full audit specification.
+Besides the ten patterns, it has the other template sections and a
+step-by-step audit workflow: list the runs, check each pattern in each
+run, compare runs, grade severity, propose actions and write a report.
+For each pattern it also lists examples from the MaxToki project and cites
+the review documents that raised it. Studies~A and B, and one arm of
+Study~C, used a shorter \emph{generic} version, about 40\% of the length
+of the deployed file. It keeps the ten pattern entries, without the
+project-specific examples and the citations, and with a few
+project-specific phrases made general. It adds a short opening
+instruction and leaves out the workflow and the other sections. Another
+arm of Study~C received the deployed file. Both versions are in the code
+repository.
+
+% TABLE: checklist (tab:checklist) is inserted here in the assembled file.
+
+\subsubsection*{What was checked by code, by agent judgment, or by a person}
+Table~\ref{tab:checks} lists each requirement the framework imposes and
+how it was checked during the deployment. Apart from pass/fail flags that
+two pipelines computed from their own numbers, every check was an agent
+judgment; the author's role was to start runs, answer questions, and ask
+whether issues had been addressed. To make the distinction testable we
+wrote a deterministic checker (see \emph{Deterministic checks} below) and
+report what it can and cannot detect.
+
+% TABLE: checks (tab:checks) is inserted here.
+
+\subsection*{The MaxToki-217M deployment}
+
+\subsubsection*{Model and data}
+MaxToki-217M~\cite{maxtoki2026} is a Llama-architecture autoregressive
+transformer with 11 transformer blocks, hidden size 1,232, 8 attention
+heads per block and a vocabulary of 20,275 tokens, 20,271 of them genes (Hugging Face
+\texttt{theodoris-lab/MaxToki}). The downloaded weight files match
+revision \texttt{21aa7b7f} byte for byte. That was the \texttt{main}
+branch on the download day. The same bytes are also at earlier and later
+revisions, so the hashes confirm the weights but not the exact revision.
+The model exposes 12 hidden states, called layers 0--11 below. Layer~0
+is the token embedding. For $l$ from 0 to 10, layer~$l$ is the input of
+transformer block~$l$ (blocks counted from 0). Layer~11 is the output of
+the last block after the final normalisation. Layer-8 attention is the
+attention inside block~8. One attention run also used MaxToki-1B. Every pipeline gave
+the model one cell per sequence (about 1,000--2,900 tokens per cell); no
+multi-cell trajectory inputs were used. Cells came from the Replogle
+essential-gene Perturb-seq screens in K562 and
+RPE1~\cite{replogle2022perturbseq} (the K562 cells from the filtered public
+copy in the Hugging Face dataset \texttt{arcinstitute/State-Replogle-Filtered},
+and the RPE1 cells from the scPerturb copy~\cite{peidli2024scperturb}),
+the Adamson CRISPR-interference
+screen~\cite{adamson2016perturbseq} (in the processed form distributed with
+GEARS~\cite{roohani2024gears}), Tabula
+Sapiens~\cite{tabulasapiens2022} and, for the external-lung panel of the
+topological hypothesis screen only, 1,500 cells from the Krasnow Lab Human
+Lung Cell Atlas~\cite{travaglini2020lung} (Smart-seq2 data; CELLxGENE dataset
+version \texttt{c88e0403-da93-40f4-99b5-f5fdeb81a82c}). Reference sets were
+TRRUST~v2~\cite{han2018trrust}, ChIP-seq target sets from
+DoRothEA~\cite{garcia-alonso2019dorothea}, the STRING protein-interaction
+network~\cite{szklarczyk2023string}, and GO
+biological-process~\cite{ashburner2000go}, KEGG~\cite{kanehisa2000kegg}
+and Reactome~\cite{gillespie2022reactome} gene sets. In the
+deployment, DoRothEA was used only in the audit's repairs of the
+transcription-factor test; the corrected analyses use it for the same
+test. STRING was used by the spectral-geometry, topology and SAE-atlas
+runs. The gene sets were used mainly to annotate SAE features. The GO,
+KEGG and Reactome sets are the Enrichr libraries
+GO\_Biological\_Process\_2023, KEGG\_2021\_Human and Reactome\_2022, as
+named in the script of an earlier project that built them. The
+spectral-geometry and SAE-atlas runs also read GO terms, including
+cellular-component terms, from a gene-to-GO table that appears to be the
+one distributed with GEARS~\cite{roohani2024gears}. No file records which
+release of DoRothEA or STRING, or which version of that gene-to-GO table,
+was used.
+
+\subsubsection*{Pipelines, compute and supervision}
+Table~\ref{tab:pipelines} lists the eight pipelines and what was run.
+All model computation of the deployment and of the corrected analyses ran
+on one Apple-silicon MacBook Pro laptop with
+32~GB unified memory. It used the PyTorch Metal (MPS) backend in 32-bit
+floating point; some analysis ran on the same machine's CPU. The run
+files do not name the chip. The machine that holds the files today has
+an Apple M2 Pro and is probably the same one, but no file proves it.
+From the first to the last run file the deployment spanned 21.9 days (15 April to 7 May 2026), with
+files written on 11 of those days. Log files cover 47.8~hours of
+computation when overlapping runs are counted once. The agent was Claude
+Opus~4.7, run through Claude Code (Anthropic). The run files do not
+record the model, and the session transcripts were not kept; the model is
+known from the author, and a usage note that the agent wrote on 8 May
+2026 also names it. The one automated hypothesis loop, in the
+spectral-geometry pipeline, called Claude Sonnet (version not recorded).
+The author typed 73
+prompts during the deployment. Supervision time was not logged.
+
+% TABLE: pipelines (tab:pipelines) is inserted here.
+
+\subsubsection*{The in-session audit}
+On the last day of the deployment the agent wrote the audit specification
+and applied the checklist to all eight pipelines in one working session.
+Earlier that day the same session had extended the topological hypothesis
+screen, so for that pipeline it graded its own same-day work. All other
+runs, including the first run of that screen, had been made in other
+sessions. The agent wrote an 8~$\times$~10
+matrix of free-text verdicts (pipeline $\times$ pattern) and a list of
+proposed repairs, and then carried out two rounds of repair, each started
+by a prompt from the author. From the audit request to the last repair
+took 3.7~hours. The audit sweep read mainly the run summaries, plus
+selected output tables and scripts, and re-ran no model. Three repair
+steps did run MaxToki-217M again: a re-extraction of the lung cells with a
+new sampling seed, a targeted re-run of the transcription-factor test for
+GATA1, and a small cell-level benchmark.
+
+\subsection*{Independent verification and the error ledger}
+After the deployment, each claim in the run summaries and each number
+they report was checked in four ways. (i)~A deterministic number tracer
+searched each run's stored outputs for every number in its summary,
+together with a chance rate for such matches. (ii)~Key statistics were
+re-derived from stored per-record outputs with new code (for example,
+direction-of-change predictions were rescored against constant-sign
+baselines on the identical records; null models were re-sampled and
+checked for actual randomisation). (iii)~Intervention code was read
+against the transformer library source and unit-tested: an edit of zero
+must leave the output unchanged, an edit at layer~$l$ must leave earlier
+layers unchanged, and combined edits must differ from single edits.
+(iv)~The model-input encoding of every run was compared with the
+encoding the model expects. Claude Opus~5.5 agents ran checks (i)--(iv)
+in working sessions that the author started and directed. Some of these
+checks followed up points raised by a human reader from outside the
+project (not the author). So an error credited to independent verification was found
+by an agent doing a directed check, not by an agent working on its own.
+Further errors came from the blind re-audits
+of Study~C: every finding that matched no ledger entry was checked against
+the full project by a separate agent, which confirmed or rejected it with
+code. This agent's confirming code was not kept; the ledger rows give
+the recomputed values. Four errors were first pointed out by the human reader.
+Independent verification then confirmed each of them from the stored
+files and code.
+
+Each confirmed error is one row of the ledger (S1~Table), with its
+location, the deterministic evidence that confirms it, its type (code
+bug, wrong statistic, missing baseline or null, wrong description,
+unsupported claim, reproducibility), the checklist pattern it falls
+under (or ``outside the checklist''), whether it was present before the
+in-session audit (from file timestamps), who or what first found it, and
+whether the in-session audit report caught it. The full ledger in the code
+release also records who or what confirmed each error. Severity was graded as \emph{critical} (a headline result or claim cannot
+stand), \emph{major} (it stands only with material qualification) or
+\emph{minor}. The ledger covers the deployment's code, logs, outputs, run
+summaries and audit reports.
+
+\subsection*{Subject agents and context control}
+All agents in the pre-registered parts of the three controlled studies
+(executors, reviewers, repairers and graders) were Claude Opus~5.5
+(\texttt{claude-opus-5-5}). In the exploratory arm of Study~A (described
+below), the executors, reviewers and repairers were Claude Haiku~4.5 and
+the graders were Opus~5.5. All agents were run as Claude Code workflow
+subagents of the built-in read-only type with the model set explicitly.
+We used this agent type because it starts
+without project instruction files and without the author's memory notes,
+both of which contain descriptions of earlier errors; we checked this with
+a probe agent before the studies. The agents can read files and run
+shell commands. They were asked to run all analyses as inline Python
+(\texttt{numpy}, \texttt{pandas}, \texttt{scipy}, \texttt{scikit-learn};
+CPU only, at most 9~minutes per command) without writing files, and to
+read only inside their task folder. Deliverables were returned as
+structured output and written to disk by the harness. Study~A task folders and Study~B item folders were placed
+at a neutral path under opaque names, so that folder names revealed
+neither the study, the arm nor the status of an item. After each study we
+scanned every tool call of the subject agents in its pre-registered part:
+341 executors, reviewers, repairers and re-auditors in all (200 in
+Study~A, 132 in Study~B and 9 in Study~C). Graders were meant to read the
+keys and were not scanned. We looked for any access to the project
+repository, the answer keys, the protocol files other than the checklist
+given to a reviewer, the author's notes, this manuscript, or the folder
+of another task or item. No subject agent accessed any of them. The
+subject agents of the exploratory Haiku arm were checked in a separate
+scan (see below and S2~Appendix). We also checked whether any agent
+read a file that another agent had written. Twenty-five agents used a
+scratch folder that the session shares between agents. Three of them
+wrote temporary files there. The other 22 only ran a command to make sure
+the folder existed. Six of these 22 also listed the folder and so saw the
+names of other agents' files; none opened such a file.
+
+In Study~A task T1 (whether layer-8 attention encodes TRRUST
+regulator--target pairs in RPE1 cells), a Claude
+Haiku~4.5 executor from the first run of the exploratory arm left a
+script in the task folder. That run was set aside (see \emph{Study A}
+below). All ten Opus~5.5 repair agents of T1 in the contract arm (the
+agents that revised a deliverable after its review) opened this script. The contract arm is the Study~A arm in which the
+executor also received the deployed specification. All ten of their
+deliverables reached the correct verdict. Leaving out the T1
+contract-arm runs does not change any Study~A result. For example, a
+checklist review followed by repair still raised the share of pitfalls
+handled by 2.9 percentage points over no review (95\% bootstrap interval
+over the remaining 35 executor runs, 0.7 to 5.1). Graders of these
+deliverables also opened that script.
+Every task and item folder was afterwards checked to be identical to its
+source.
+Reasoning effort was the same session default for all agents.
+
+The design, outcomes and analyses were written down before the studies
+were run, and the answer keys were frozen by hash before the studies that
+used them (S2~Appendix). We call this protocol pre-registered in that
+sense: it was frozen by file hash and logged before the studies, but it
+was not lodged in a public registry. The protocol has three amendments, all given in
+S2~Appendix. Amendment~1 was logged on 1 October 2026, after Study~C had run
+and before Studies~A and B started. It replaced one Study~A task, split
+Study~A into two batches with the same protocol, and excluded one Study~B
+pair that failed its own verification. Amendment~2 added the exploratory
+Haiku arm described below, after the results of Study~A task T2 were
+known. Amendment~3, logged before that arm was re-run, set aside the
+arm's first run and gave every agent its own folder.
+
+\subsection*{Study C: blind re-audit of the deployment}
+We used file timestamps to rebuild a snapshot of the project as it stood
+before the in-session audit started. The snapshot held all run code, logs
+and configuration files, the specifications and the run summaries. It
+also held most outputs smaller than 5~MB, and nine outputs of 5--20~MB
+chosen because they hold the per-gene-pair or per-cell-group data behind
+headline numbers. Every other output was replaced by a listing of its
+name, size and shape. Where the audit had edited a summary in place, we
+removed its dated audit additions. The audit files, all manuscript folders and
+every later file were excluded. The reference set was the 68 ledger
+errors that had been logged when the study started and were present in
+this snapshot (6 critical, 25 major, 37 minor). When the set was frozen,
+60 of them had been confirmed. The other 8 (3 critical, 3 major, 2 minor)
+were confirmed later: 6 by new analyses, 1 by reading the code and 1 by
+a literature check. All 68 are in S1~Table. Three arms received
+the same project description, output format and budget instruction
+(``Work as a careful expert would in about one working day. You may use
+up to roughly 150 tool calls''): the checklist as deployed (the full
+audit specification, with its project-specific examples and its step-by-step audit workflow, which
+the prompt asked the agent to follow), the generic checklist (the ten
+pattern entries only), or an instruction to review the project critically
+before publication. Each arm was run three times.
+
+Two graders, given the ledger and the audit's findings, judged for every
+ledger error whether the audit detected it (\emph{yes}: a finding
+identifies the same problem clearly enough that acting on it would lead
+to the fix; \emph{partial}: it points at the same result or code with a
+related but wrong or incomplete concern; \emph{no}), and matched every
+finding to ledger rows. A third agent resolved disagreements. Findings
+that matched no ledger row were checked by a fourth agent against the
+snapshot and classified as real error, real but trivial, false alarm, or
+undecidable; real errors were then verified against the full repository
+and added to the ledger. The in-session audit was scored on the same 68
+errors from its written sweep report, made before the repair rounds. The
+Study~C graders did not score it. Its score is the ledger's record of
+whether that report caught each error (yes, partly or no). The
+independent verification made this record when it built the ledger,
+before Study~C ran. The record was not blinded, and no second grader
+checked it. ``Partly'' means that the report flagged
+the area but not the actual error.
+
+\subsection*{Study A: controlled execution study}
+Four analysis tasks were built from the deployment's data
+(Table~\ref{tab:tasks}). Each task asks a question about MaxToki-217M
+that the deployment had answered, gives the data needed to answer it,
+and asks for a report with a verdict, estimates with uncertainty, and a
+complete analysis script. Each task has known pitfalls into which the
+deployment fell (for example, a 50\% baseline for a direction-of-change
+score whose classes are unbalanced). The pitfalls are not mentioned in
+the task brief.
+
+% TABLE: tasks (tab:tasks) is inserted here.
+
+In the \emph{paper} arm the agent received the brief, the data and the
+source paper of the method. In the \emph{contract} arm it also received
+the deployed specification and one sentence asking it to follow it (the
+arm names are those of the pre-registration, S2~Appendix). Both arms
+therefore had the same task information and the same access to the
+source method. Each executor output was then (a)~left as is,
+(b)~reviewed by a fresh agent instructed to review it critically, or
+(c)~reviewed by a fresh agent instructed to apply the generic checklist;
+in (b) and (c) a fresh agent then revised the deliverable given the
+review points, with the same repair instruction in both arms. Review
+prompts had the same budget sentence (``Spend about the effort of a
+careful two-hour expert review; you may use up to roughly 60 tool
+calls.''). Each task--arm cell had five
+independent executor runs, giving 40 executor runs and 120 final
+deliverables.
+
+Each answer key states the correct verdict and any conditions under which
+a hedged verdict also counts as correct, key numbers with tolerances,
+six pitfalls, each with what correct and incorrect handling looks like,
+and tempting false statements. Each key was written by one agent. Its key numbers were computed by a
+script that reads only the task's data. A second agent re-derived the key
+numbers with its own code, and the keys were then frozen by hash. Two graders scored each deliverable against the key;
+a third grader decided when the first two disagreed on the primary
+outcome. Before grading, words that could reveal the arm (such as
+``specification'', ``review'' and ``repair'') were replaced by a
+placeholder in the deliverable. Graders also read the task brief, which in
+the contract arm points to the specification file, so they could tell the
+executor arm. Only the review arm was hidden from them.
+
+The primary outcome was a correct verdict. Secondary outcomes were the
+share of pitfalls handled (yes~=~1, partly~=~0.5, no~=~0), the number of
+materially false statements, key numbers within tolerance, the share of
+review points that a grader judged invalid, verdict changes caused by
+repair, and whether the returned analysis script reproduced the reported
+estimates. For this last outcome, the harness ran each script on the
+task data with the same Python interpreter that the subjects used, with a
+20-minute limit. Scripts that stopped while other scripts shared the
+machine were run again, alone or two at a time, with a 60-minute limit;
+none of these needed more than 10~minutes. A reported estimate counted as
+reproduced when the script printed a number of the same name that agreed
+with it within 0.005 or within 1\% of its value, whichever was larger.
+
+There were four primary contrasts. The first compared the contract and
+paper arms without review. It used a Fisher exact test, the risk
+difference with a Newcombe interval~\cite{newcombe1998interval}, and a
+Mantel--Haenszel test stratified by task. The other three compared review
+arms on the same executor outputs: checklist versus generic, checklist
+versus none, and generic versus none. These used exact McNemar
+tests~\cite{mcnemar1947note}. We applied Holm
+correction~\cite{holm1979simple} across all four contrasts.
+
+Because every Opus~5.5 deliverable reached the correct verdict on the
+first task to finish (T2), we added an exploratory arm after that task's
+results were known, while the other tasks were still running
+(Amendment~2): the same design with Claude Haiku~4.5 as executor, reviewer
+and repairer, and the same Opus~5.5 graders and keys. A first run of this
+arm was set aside and not analysed. Its Haiku agents did not keep to the
+instruction not to write files: they wrote scripts into the shared
+temporary folder and into shared task folders, where other agents could
+read them, and some did. The arm was then run again with one folder per agent, each holding
+links to the task files (Amendment~3, S2~Appendix). Only the re-run is
+reported. S2~Appendix describes the checks of which files its agents
+read. Five reviewers opened the folder of the executor whose deliverable
+they were reviewing, because the deliverable named it. Every read of a
+file in the shared temporary folder was of a file that the reading agent
+had written itself. The arm is reported separately and does not enter the
+pre-registered contrasts.
+
+\subsection*{Study B: held-out audit benchmark}
+Study~B used analyses that played no part in building the checklist.
+They came from three other projects by the author. One studied
+Cell2Sentence (C2S-Scale-Gemma-2-2B)~\cite{rizvi2025c2sscale} cell
+embeddings. One studied the ESM-2 (650M)~\cite{lin2023esm2} protein
+language model. One studied frozen scGPT, Geneformer V2-316M and
+STATE-SE~\cite{adduri2025state} cell embeddings, together with
+gene-regulatory-network and perturbation benchmarks, including the
+Perturb-seq data of Norman et al.~\cite{norman2019exploring} as
+distributed by scPerturb~\cite{peidli2024scperturb}. One pair used the
+fetal human gut atlas of Elmentaite et al.~\cite{elmentaite2020gut}, and
+three used proteins and residue annotations from
+UniProtKB/Swiss-Prot~\cite{uniprot2025}. Four of the 11 pairs
+in the study use no model at all (two label-building steps and two
+benchmarks). Each analysis was rebuilt as a self-contained package (data,
+code, outputs and a results summary written as the original analyst would
+have written it) in a \emph{flawed} version with exactly one documented
+error and a \emph{clean} version that differs only in that error. Of
+twelve planned pairs, nine had a natural error that had been found and
+fixed after the fact. The other three had a planted overclaim of causal
+or mechanistic meaning in the summary (the checklist's pattern P9, for
+which the pool had no natural example). Every package was checked by
+code: the flawed version reproduces its wrong result, the clean version
+the correct one, and comments or names that hinted at the error were
+removed. One natural pair failed this check and was dropped, leaving 22
+items (11 flawed, 11 clean; 6 errors inside the checklist's patterns and
+5 outside, such as a circular statistic that breaks on evenly spread
+angles or a row-index join that matched the wrong cells).
+
+Each item was reviewed three times with the generic checklist and three
+times with a generic critical review, with the same budget sentence in
+both arms (``Spend about the effort of a careful one-hour expert review;
+you may use up to roughly 50 tool calls.''). Two graders with the item's key judged
+whether a review detected the documented error under a pre-written
+detection rule, and classified every finding as the documented error,
+another real problem, a false alarm, a minor or style point, or disputed;
+a third grader resolved disagreements, and a verifier agent resolved
+disputed findings by running code on the package. There were three
+outcomes. The first was sensitivity: the share of reviews of flawed items
+that found the documented error. The second was the share of reviews of
+clean items with at least one false alarm. A finding counted as a false
+alarm in one of two ways. In the first, the graders judged that it
+claimed a problem that does not exist, checked against the item's key and
+the data, and that it said a headline result or claim was wrong. In the
+second, a grader marked the finding as disputed and the verifier agent,
+after running code on the package, ruled it a false alarm. These findings
+counted at any severity, whether or not they concerned a headline result.
+The third was the number of other real problems found per review.
+
+After the results were known, we also sorted the false alarms about a
+main result that the graders had marked into four groups: correct but
+changing no stated conclusion; correct and already stated in the
+analysis's own summary or README; factually wrong; or a real problem that
+the key had missed. This step was not pre-registered. Each claim was
+labelled by one agent, with no second rater. False alarms that the
+verifier agent ruled after a grader dispute were not sorted.
+
+\subsection*{Corrected MaxToki-217M analyses}
+The verification found that the intervention code of two pipelines (SAE
+circuit tracing, and exhaustive mapping and steering) edited the wrong
+tensor and that every run except the RPE1 attention run encoded the model
+input incorrectly (Results). We therefore re-ran the main affected
+analyses (those not re-run are listed in Results) with three changes.
+First, the model input follows MaxToki's rank-value encoding. Each gene's count is divided by that gene's median in the
+Geneformer gene-median table (gc104M) that the MaxToki tokenizer uses,
+and genes are ranked from high to low. The K562 and Adamson files store
+only $\log(1+\text{CP10k})$ values, where CP10k means counts scaled so
+that each cell sums to 10,000. For these files we undid the log with
+$\exp(x)-1$, divided by the smallest non-zero value in the cell and
+rounded. This gives whole-number counts up to one factor per cell, so the
+gene ranking is the same as from the raw counts. For the RPE1, Tabula
+Sapiens and lung files we used the stored raw counts. Second, the
+intervention hooks edit the input of transformer block~$l$, which is the
+tensor that the layer-$l$ sparse autoencoder reads. They add each edit to
+the live activations, so edits at several layers add up instead of
+overwriting each other. Third, we retrained all twelve sparse
+autoencoders (one per layer state) on correctly encoded cells. Every
+model input was checked against the expected token order before each
+forward pass. Each re-run that edits the model had sanity checks (zero
+edit gives zero effect; edits change only later layers; combined edits
+differ from single ones; a feature that never fires changes nothing). The
+key numbers of each corrected analysis were computed a second way with
+separate code. Other agents also re-derived them with their own code:
+three for the RPE1 attention analysis and one for the cross-model
+comparison (S3~Appendix). Methods
+specific to each analysis are given with its result and in S3~Appendix.
+
+\subsection*{Deterministic checks}
+The checker has three parts: a specification linter (presence and order
+of the ten sections, a resolvable pinned commit, code references in the
+required form, a machine-readable parameter table), a run-manifest check
+(parameters used versus the specification's defaults and ranges, gate
+flags recomputed from stored values) and the number tracer described
+above. It reads files only and runs no model. Its code and outputs are in
+the repository.
+
+\subsection*{Statistics}
+Proportions are reported with Wilson 95\% intervals~\cite{wilson1927probable}
+unless stated otherwise. Bootstrap intervals are percentile intervals.
+The one exception is the feature-triplet analysis, which uses basic
+bootstrap intervals over cells, as stated with its result. The resampling
+unit is the item in Study~B, the reference error in Study~C, the executor run in Study~A, the
+deployed pipeline run (eight in all) for the number tracer, and the knockdown
+(silenced gene), transcription factor, gene, donor or cell in the
+MaxToki-217M analyses. The spectral-geometry analysis uses jackknife
+intervals instead, over blocks of cells or groups of genes. In Study~A
+the main intervals resample executor runs pooled over all four tasks. The
+pre-registered plan resamples runs within each task. Results report
+intervals of that kind as well, for the main study and for the Haiku~4.5
+arm. Study~A bootstrap intervals use 4,000 draws; those of Studies~B and
+C use 2,000. In the MaxToki-217M analyses, multiple testing within a
+family of tests was controlled with the Benjamini--Hochberg (BH)
+procedure~\cite{benjamini1995fdr}. A BH-adjusted $p$-value is called a
+$q$ value, and a test passes when $q < 0.05$. Study~A used Holm
+correction instead, as described above. Empirical $p$-values use the
+$(b+1)/(m+1)$ form~\cite{phipson2010permp}. Degree-preserving network
+nulls used the Curveball algorithm~\cite{strona2014curveball} and were
+checked to change the network in every draw. The corrected analyses ran
+in Python 3.12.9 with PyTorch 2.11.0, transformers 5.5.4, NumPy 1.26.4,
+SciPy 1.17.1, pandas 2.3.3 and scikit-learn 1.8.0, as recorded in their
+run configuration files; the deployment's runs did not record package
+versions. All code is at
+\url{https://github.com/Biodyn-AI/maxtoki-mechinterp}.
+
+\subsection*{Declaration of generative AI and AI-assisted technologies}
+Generative AI was the object of this study and also a tool in it. The
+deployment (specifications, pipeline execution, run summaries and the
+in-session audit) was carried out by Claude Opus~4.7 through Claude Code,
+except for one automated loop that called Claude Sonnet, as described
+above. The controlled studies used Claude Opus~5.5 as subjects
+and graders. Opus~5.5 agents also wrote the Study~A answer keys (a
+second agent re-derived their key numbers before the keys were frozen),
+classified review findings that matched no ledger entry, checked disputed
+Study~B findings by running code, and did the post-hoc labelling of false
+alarms, as described above. The protocol, the Study~A tasks, the Study~B
+packages, the deterministic checker and the supporting files were drafted
+by Opus~5.5 agents under the author's direction and checked by separate
+agents and by code. The exploratory arm of Study~A used Claude Haiku~4.5 as
+executor, reviewer and repairer, with Opus~5.5 graders, as described
+above. Claude Opus~5.5 also carried out the independent verification, the
+corrected analyses (the key numbers of each were computed a second way
+with separate code; other agents also re-derived them, three for the RPE1
+attention analysis and one for the cross-model comparison), the statistical
+analysis code and the figure code, and
+drafted this manuscript under the author's direction. The author reviewed
+and edited all content and takes full responsibility for it. AI tools were
+not used to create or alter any image of primary data; all figures are
+plotted by code from the stored outputs.

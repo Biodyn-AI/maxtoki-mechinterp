@@ -1,0 +1,72 @@
+======================================================================
+PHASE 1B+C — panel=external  device=mps
+======================================================================
+  cells (full): 30000  anchors: 600  L_cap: 4096
+  subsampled to 12000 cells (cap=12000, target/anchor=20)
+  seq_len  median: 2170  mean: 2348.4  max: 4096
+
+[1] Loading MaxToki-217M on mps...
+  n_layers=11 hidden=1232  loaded in 2.3s
+
+[2] Running forward passes (mean-pool hidden states across gene-token positions)...
+    cell 240/12000  elapsed 111.2s  eta 5446.7s
+    cell 480/12000  elapsed 233.5s  eta 5603.4s
+    cell 720/12000  elapsed 363.6s  eta 5696.8s
+    cell 960/12000  elapsed 531.8s  eta 6116.2s
+    cell 1200/12000  elapsed 674.3s  eta 6068.6s
+    cell 1440/12000  elapsed 948.7s  eta 6957.0s
+    cell 1680/12000  elapsed 1219.5s  eta 7491.3s
+    cell 1920/12000  elapsed 1437.3s  eta 7545.8s
+    cell 2160/12000  elapsed 1754.1s  eta 7991.1s
+    cell 2400/12000  elapsed 2045.2s  eta 8180.7s
+    cell 2640/12000  elapsed 2356.3s  eta 8354.1s
+    cell 2880/12000  elapsed 2624.2s  eta 8309.9s
+    cell 3120/12000  elapsed 2784.0s  eta 7923.7s
+    cell 3360/12000  elapsed 3015.3s  eta 7753.6s
+    cell 3600/12000  elapsed 3301.7s  eta 7704.0s
+    cell 3840/12000  elapsed 3519.3s  eta 7478.5s
+    cell 4080/12000  elapsed 3695.6s  eta 7173.7s
+    cell 4320/12000  elapsed 3988.0s  eta 7089.7s
+    cell 4560/12000  elapsed 4220.0s  eta 6885.3s
+    cell 4800/12000  elapsed 4525.2s  eta 6787.9s
+    cell 5040/12000  elapsed 4813.7s  eta 6647.4s
+    cell 5280/12000  elapsed 5026.0s  eta 6396.7s
+    cell 5520/12000  elapsed 5434.8s  eta 6380.0s
+    cell 5760/12000  elapsed 5720.5s  eta 6197.3s
+    cell 6000/12000  elapsed 5961.2s  eta 5961.2s
+    cell 6240/12000  elapsed 6241.7s  eta 5761.6s
+    cell 6480/12000  elapsed 6501.4s  eta 5538.3s
+    cell 6720/12000  elapsed 6747.1s  eta 5301.3s
+    cell 6960/12000  elapsed 6983.0s  eta 5056.6s
+    cell 7200/12000  elapsed 7251.3s  eta 4834.2s
+    cell 7440/12000  elapsed 7599.8s  eta 4657.9s
+    cell 7680/12000  elapsed 7821.6s  eta 4399.6s
+    cell 7920/12000  elapsed 8052.3s  eta 4148.1s
+    cell 8160/12000  elapsed 8357.0s  eta 3932.7s
+    cell 8400/12000  elapsed 8685.5s  eta 3722.3s
+    cell 8640/12000  elapsed 8942.6s  eta 3477.7s
+    cell 8880/12000  elapsed 9364.2s  eta 3290.1s
+    cell 9120/12000  elapsed 9610.2s  eta 3034.8s
+    cell 9360/12000  elapsed 9861.8s  eta 2781.5s
+    cell 9600/12000  elapsed 10182.9s  eta 2545.7s
+    cell 9840/12000  elapsed 10403.8s  eta 2283.8s
+    cell 10080/12000  elapsed 10697.3s  eta 2037.6s
+    cell 10320/12000  elapsed 10950.4s  eta 1782.6s
+    cell 10560/12000  elapsed 11251.4s  eta 1534.3s
+    cell 10800/12000  elapsed 11465.7s  eta 1274.0s
+    cell 11040/12000  elapsed 11679.3s  eta 1015.6s
+    cell 11280/12000  elapsed 12031.4s  eta 768.0s
+    cell 11520/12000  elapsed 12307.9s  eta 512.8s
+    cell 11760/12000  elapsed 12547.0s  eta 256.1s
+    cell 12000/12000  elapsed 12775.0s  eta 0.0s
+  done in 12775.0s  per_cell shape=(12000, 12, 1232)
+
+[3] Aggregating to anchor centroids...
+  centroids saved → artifacts/anchors/centroids_external.npy
+  anchor cell counts: min 20, median 20, max 20
+
+[4] Building H65 ruler (graph distance on stage DAG)...
+  d_target shape=(600, 600)  min=0.0 median=7.0 max=9.0
+  d_target_null_shuffled saved (within-branch shuffle)
+
+Phase 1B+C (external) complete in 12789.0s

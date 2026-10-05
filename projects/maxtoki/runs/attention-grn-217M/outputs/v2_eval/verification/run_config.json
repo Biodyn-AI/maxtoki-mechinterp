@@ -1,0 +1,441 @@
+{
+ "what": "independent verification of revision item D1 (attention-GRN v2), CPU only, no model forward pass",
+ "python": "3.12.9",
+ "platform": "macOS-26.3-arm64-arm-64bit",
+ "packages": {
+  "numpy": "1.26.4",
+  "scipy": "1.17.1",
+  "scikit-learn": "1.8.0",
+  "pandas": "2.3.3",
+  "h5py": "3.16.0"
+ },
+ "seeds": {
+  "endpointA_bootstrap": "7+run_index",
+  "trrust_bootstrap": "11+run_index",
+  "own_curveball_null": "23+run_index",
+  "incremental_bootstrap": 31,
+  "incremental_refit_splits": "41..60",
+  "single_log_knockdown_bootstrap": 51,
+  "single_log_trrust_bootstrap": "61+run_index",
+  "deployed_null_rerun": "42..91 (deployed)",
+  "ols_kfold": 42
+ },
+ "run_index_order": [
+  "217M_K562",
+  "217M_RPE1",
+  "217M_Adamson",
+  "1B_K562"
+ ],
+ "inputs": [
+  {
+   "path": "<DATA_ROOT>/biodyn-nmi-paper/src/02_cssi_method/crispri_validation/data/replogle_concat.h5ad",
+   "bytes": 30010775846,
+   "sha256": "a7992a6109d589f2d49c2eaccff45a9f860418af23125d41b80d8e3929a33d56",
+   "note": "from v2 hash cache (path|size|mtime match)"
+  },
+  {
+   "path": "<DATA_ROOT>/biodyn-nmi-paper/results/round13_non_k562_replication/data/ReplogleWeissman2022_rpe1.h5ad",
+   "bytes": 1236886900,
+   "sha256": "12d6a0cf9378c4f09411e27f0ce07b59f1d97731bd576d6fadf112f6f088d1a4"
+  },
+  {
+   "path": "<DATA_ROOT>/biodyn-work/single_cell_mechinterp/data/perturb/adamson/perturb_processed_symbols.h5ad",
+   "bytes": 601696516,
+   "sha256": "3b816440acd5f02e55e63df83e697d9e80f3787f5e9056bf965c66acad5d7fc2"
+  },
+  {
+   "path": "<DATA_ROOT>/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+   "bytes": 297659,
+   "sha256": "9b909319ccc8e36588b5a1bd3640e0dfba03936c6fc154cc4304d742bec11bed"
+  },
+  {
+   "path": "<DATA_ROOT>/biodyn-nmi-paper/src/02_cssi_method/crispri_validation/data/gene_name_id_dict_gc104M.pkl",
+   "bytes": 1660882,
+   "sha256": "fabfa0c2f49c598c59ae432a32c3499a5908c033756c663b5e0cddf58deea8e1"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/setup/dataset_loader.py",
+   "bytes": 8354,
+   "sha256": "775ddc078582face58b235bb5e973b0b837859e7180f396cb7b8c39deea87d1c"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/setup/maxtoki_adapter.py",
+   "bytes": 16389,
+   "sha256": "cab725dfc391ec74d6b9c2930ffd87b53badff47f5f04e93d29977b7a771540a"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/setup/MaxToki-217M-HF/config.json",
+   "bytes": 676,
+   "sha256": "a4effbdf27969b7cc4d6cce34fc24b3f2134886946a19e7999c3ebd08babf9bd"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/setup/MaxToki-1B-HF/config.json",
+   "bytes": 823,
+   "sha256": "23358e6663b32e796dec2818a1d9cff97eb9e150d259850ba26b1bf2144eba9e"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/setup/MaxToki-217M-HF/model.safetensors",
+   "bytes": 867797760,
+   "sha256": "9da1fbf8cc489486d158d4653a14e3f44ac49c75a8e1480566eab0e9f99cf898"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/setup/MaxToki-1B-HF/model.safetensors",
+   "bytes": 4196167128,
+   "sha256": "96c6c8f9d61732c9bedfc37a9cfd937359e6ce0bfa860526646d101815a242e6"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/scripts/phase3_residualization.py",
+   "bytes": 20091,
+   "sha256": "e07ad311aa3bb613848ecf08b8b580fd6af166a855e516aa2fac10274b70c6ed"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/phase2_k562_1b/pair_dataset.csv",
+   "bytes": 24795670,
+   "sha256": "2842ebe2470bffa488a0f53538efeb05639f2189bd31d2364bd1591923b64bb5"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/phase0/gene_features.csv",
+   "bytes": 102056,
+   "sha256": "31a904d79fb9719d708ed25bc893f1f66c2f3a597c7aec76507f1e9ab844a695"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/phase0/attention_edges_layer_mean.npy",
+   "bytes": 99000128,
+   "sha256": "bc292d68c75c412f5f7ba70e624f2c26df7c4e746f75d04dd5c931c574b7e1e4"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/phase0/spearman_edges.npy",
+   "bytes": 9000128,
+   "sha256": "6603ad6109c6ac32b0e4602f46d507489def5337ffd24869f1ee308bfbfd6dd9"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/phase0/control_cells.csv",
+   "bytes": 110525,
+   "sha256": "39f97222f69208fd3f5dd9497ab000280e3beb6038fc46ba004e2b967050951c"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/phase0/run_config.json",
+   "bytes": 793,
+   "sha256": "ceab9a522f77d69eaaa42deef4f7f8cc52de0d0040954bc4f611724d0f58d9a3"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/phase1/per_perturbation_auroc.csv",
+   "bytes": 26465,
+   "sha256": "b9e8e9e14646e91ada03facfc618d15359e76d0b8182363e08f1f85bb760994d"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/phase1/run_config.json",
+   "bytes": 490,
+   "sha256": "14c0d5fa5c79523114bdd23dd01962bd3005c3fd38f03c0be7fb261251c950fa"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/phase3/full_pair_dataset.csv",
+   "bytes": 18127232,
+   "sha256": "a6b75c2ec37be54ce4c754f7cb130648197f5409d8c7d884f9e9155e82ad0814"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/phase0_rpe1/gene_features.csv",
+   "bytes": 102094,
+   "sha256": "1949d2af2fa2d8fc8c30c716eb5a9370c1d43116a915face3bcef4e38a29251f"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/phase0_rpe1/attention_edges_layer_mean.npy",
+   "bytes": 99000128,
+   "sha256": "b7d82bf5590f1ee8e3b7da442280e5c17a16b2cbfbe10bf523e020d1af5be378"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/phase0_rpe1/spearman_edges.npy",
+   "bytes": 9000128,
+   "sha256": "4dbc3d0f2b929a9a854523049bf061979833e01fcf2c826f98e5c22ab60f288d"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/phase0_rpe1/control_cells.csv",
+   "bytes": 22023,
+   "sha256": "83dabcc149f5ab7b8c2f07ba09b63a855d9af7f7041af9b02ae9c8eabe28ed53"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/phase0_rpe1/run_config.json",
+   "bytes": 371,
+   "sha256": "ecfdef5dceaa3e610e19c4697c4325a8af4eeffb0a2ca4caec8bbd8dc58b70db"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/phase1_rpe1/per_perturbation_auroc.csv",
+   "bytes": 49080,
+   "sha256": "c53c6b8e4692c81354a0bda97fa2b47f2ad5804507e4294b6aa6da6f53962297"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/phase1_rpe1/run_config.json",
+   "bytes": 492,
+   "sha256": "7ed7d7ae2bef6a0530f6015c997fd308ce2c3139e0bfa72f3722d992531f8126"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/phase3_rpe1/full_pair_dataset.csv",
+   "bytes": 33805925,
+   "sha256": "c790a3aa45baaa0ef8da1413c2ea704e5ce428cd5cefcad237267f8cee88ac1f"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/phase0_adamson/gene_features.csv",
+   "bytes": 101257,
+   "sha256": "21f87f747a4a52d4d4fa1b53558b5300952229908cd4e4b365af51d71e974d00"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/phase0_adamson/attention_edges_layer_mean.npy",
+   "bytes": 99000128,
+   "sha256": "333e2c729ea7f0cd36d8e2ce876c4613bcbd0166e4a13a0cfef4d838f2c7c644"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/phase0_adamson/spearman_edges.npy",
+   "bytes": 9000128,
+   "sha256": "d323775b1441e91d7509fe0f6dae5e347404307842414fef8a1ce339ded2d084"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/phase0_adamson/control_cells.csv",
+   "bytes": 20186,
+   "sha256": "a80d3b4e54091fedad1c6b19c5f7b836226d03e1a67946ad111dcf33d5663a0c"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/phase0_adamson/run_config.json",
+   "bytes": 372,
+   "sha256": "746752375b0d1b1ac5e52a3bf52b9f22a40f001fec32ec0ac7e00d66f0e1a1d8"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/phase1_adamson/per_perturbation_auroc.csv",
+   "bytes": 8842,
+   "sha256": "5b8e59283e34b21312248b70bedf6f37eef8e401f55f3fced4015332ce04e724"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/phase1_adamson/run_config.json",
+   "bytes": 494,
+   "sha256": "e55b4a981e4b3ab4e13296f6c25689e34f89266901550443bdc5a23d6730690e"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/phase3_adamson/full_pair_dataset.csv",
+   "bytes": 5883948,
+   "sha256": "ed9704e1813207e2d040ac0d2ca1d2e2b184cb21c9b2b1eeb4e41a4cba25f1d1"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/phase0_k562_1b/gene_features.csv",
+   "bytes": 100500,
+   "sha256": "dfedc68371d3f7dd7e63f86b5297174bdbaeeebadd43fd0b655b921cfb83232b"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/phase0_k562_1b/attention_edges_layer_mean.npy",
+   "bytes": 180000128,
+   "sha256": "81a22ccf77e5e8c657f48ee22d5b59d1068e52ca2a86da458b0c5363fd3494d9"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/phase0_k562_1b/spearman_edges.npy",
+   "bytes": 9000128,
+   "sha256": "b22ceca62e2cc04540fb74e6f82383044a2922084177785c9f990346cdf33494"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/phase0_k562_1b/control_cells.csv",
+   "bytes": 2121,
+   "sha256": "12c826c12d83661ec12d5ec27b61304d96acbb240cb57e1c04be7d3e086d6078"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/phase0_k562_1b/run_config.json",
+   "bytes": 370,
+   "sha256": "48b2f7d62ccc9e8b9a6d53d7c7fdd5fd3963dfd45f42c4fc260f5b1a58bee2ab"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/phase1_k562_1b/per_perturbation_auroc.csv",
+   "bytes": 23528,
+   "sha256": "a6626f76e2c48cc48065786ededa584c5d11793ef78f3dcdddf6aeb3dbdacefe"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/phase1_k562_1b/run_config.json",
+   "bytes": 496,
+   "sha256": "46ef0876ad183bd2026fc612748743daf5245b776323ec5079cc68d796d66555"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/phase3_k562_1b/full_pair_dataset.csv",
+   "bytes": 15697629,
+   "sha256": "c7c4adac26f665417c2363bf4cd02bdff6729aac5fb96736bfee340d80eedb10"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/v2_eval/knockdown/knockdown_summary.json",
+   "bytes": 6595,
+   "sha256": "44625666616eec04a232c14f55fc6a5e20928127df1e183f56f6f798063ca8ff"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/v2_eval/trrust/trrust_summary.json",
+   "bytes": 16363,
+   "sha256": "e90b2c204428729b2f6af72af7a61009683529635dc70b203c7afe9e7358587a"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/v2_eval/curveball/curveball_summary.json",
+   "bytes": 7600,
+   "sha256": "6899f283d9a12959571280bcc1a3b58eda932dc1a4b0c5af1e3668d856dc503c"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/v2_eval/layers/layers_summary.json",
+   "bytes": 885,
+   "sha256": "a8b46498cfe42ccb057709007ac416714e888b25ac66a92999c517747034b923"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/v2_eval/_sha256_cache.json",
+   "bytes": 38299,
+   "sha256": "dceaf853f2d62dc268c23cf2f370fd6ca8c5b959b623df9867c3b145ca35261d"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/v2_eval/knockdown/per_perturbation_217M_K562.csv",
+   "bytes": 15750,
+   "sha256": "360ff2b27a8f80eec144807cc12d567309906ff7bbde95362877dd50bf9724d3"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/v2_eval/knockdown/per_perturbation_217M_RPE1.csv",
+   "bytes": 29335,
+   "sha256": "e106b690edff0fa0b4e805a3fd9ab6d0428a413e1de76d75afdab3b8f145a3cc"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/v2_eval/knockdown/per_perturbation_217M_Adamson.csv",
+   "bytes": 5261,
+   "sha256": "e5a1e35f7b5173423b0c84065a6d448385cb1aac495400e44280d8b92e483683"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/v2_eval/knockdown/per_perturbation_1B_K562.csv",
+   "bytes": 13997,
+   "sha256": "03e47391f8308e5a955f3d9da7fef019cff051aef0a24e7946d105ae642257b9"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/v2_eval/curveball/null_curveball_217M_K562.npy",
+   "bytes": 24128,
+   "sha256": "b9c1725ecb9da36910912828685bf3377fdb70e5278f8902ac8cccf257fa39fa"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/v2_eval/curveball/null_curveball_217M_RPE1.npy",
+   "bytes": 24128,
+   "sha256": "ceca2550fd9b498719b0af32679a2f5ed9936735706c73c058e84e4a1fbb5b7d"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/v2_eval/curveball/null_curveball_217M_Adamson.npy",
+   "bytes": 24128,
+   "sha256": "ae49bf5fca9ed4e549c3f313c5e47c1f209df59bb2192912eabef27ceb46bc10"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/v2_eval/curveball/null_curveball_1B_K562.npy",
+   "bytes": 24128,
+   "sha256": "6abf4f81c201111b20b0c63e5e38d3ae73dc4adcd8538d13f089f52198104217"
+  }
+ ],
+ "scripts": [
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/scripts/v2verify_01_endpointA.py",
+   "bytes": 4788,
+   "sha256": "e12c440ac206c88ad7f315a23ddfd7006ed5e4f6f89dd9aaebfeba18ccaad015"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/scripts/v2verify_02_trrust.py",
+   "bytes": 6604,
+   "sha256": "8ea7700308a7d6fa8ce9ed14714c8284b255e981f16d489ee9a08e834b7d4a68"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/scripts/v2verify_03_ols_precision.py",
+   "bytes": 5083,
+   "sha256": "5aa5a553095ca90a56c39b536e84d6f01dbbdfd7bd60cd65bc160d3633f042e5"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/scripts/v2verify_04_null.py",
+   "bytes": 8220,
+   "sha256": "3442e3d81d76052dddb4dfb0654346e265ce2270a69c884af2ef5766c69169ac"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/scripts/v2verify_05_incremental.py",
+   "bytes": 3532,
+   "sha256": "4b2979218e210c78e4225e6098ea1987d01485231f8d76ef17d9676a1b43f94d"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/scripts/v2verify_06_input_scale.py",
+   "bytes": 8898,
+   "sha256": "20c7220fea3f7f183427e15bef97f3b09924700e11f6436411b4e4b47b24cd0e"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/scripts/v2verify_07_facts.py",
+   "bytes": 2135,
+   "sha256": "3452e6e5b94761aef6eaca715f191d0f429f69318795026b55af7e4aadc2f688"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/scripts/v2verify_08_deployed_null.py",
+   "bytes": 2247,
+   "sha256": "486b2c7136342da0ae0eed812f722f0e2f8c95943edd79c562d8db0dc585fbd3"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/scripts/v2verify_09_single_log_trrust.py",
+   "bytes": 3937,
+   "sha256": "46028a6ed0ef24a33ba024e2fc437a4f89778f518272fb1326378ed8ed5fef42"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/scripts/v2verify_10_run_config.py",
+   "bytes": 4408,
+   "sha256": "cf1a83b836429a43144d21e3d23de9bfb8d0aadc4b98252cd0f8a5608a92694b"
+  }
+ ],
+ "outputs": [
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/v2_eval/verification/deployed_null_check.json",
+   "bytes": 593,
+   "sha256": "e90fe9c677154e03a193d79914461abb3170bb31fefbc50a3f9dc355cf248869"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/v2_eval/verification/endpointA_check.json",
+   "bytes": 4842,
+   "sha256": "c0fa652b1da533a0036fb381f8f6aa921c2ccefeb767707b07c8321daac43ffb"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/v2_eval/verification/facts_check.json",
+   "bytes": 801,
+   "sha256": "31947678ccc0ac046b5efa301a211a9fbc8ef797349adb23595ea4995dd92cef"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/v2_eval/verification/incremental_1B_check.json",
+   "bytes": 530,
+   "sha256": "6c3ddf65e0badd04a3abf97da6d81f5d017f953daa022abb1d08e7a14f3c4562"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/v2_eval/verification/input_scale_check.json",
+   "bytes": 2566,
+   "sha256": "e610f4cad1e3441d2aec50395c7651fde863e5826b8b81fb9dabfdccfd530db1"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/v2_eval/verification/null_check.json",
+   "bytes": 7770,
+   "sha256": "066911979eec540b477d1a62fe77c1d9406cd775fb85a265f485c354a92fade8"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/v2_eval/verification/null_check_1B_K562.json",
+   "bytes": 2077,
+   "sha256": "78fb5d9f657fe8e294e29160d5c43fca91d5ecac009e9ba4237526faa95c0425"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/v2_eval/verification/null_check_217M_Adamson.json",
+   "bytes": 1665,
+   "sha256": "0bff6294f780b41ff87253261a4381c253ffc5ea4bac31cfe9fa19c322a06899"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/v2_eval/verification/null_check_217M_K562.json",
+   "bytes": 1669,
+   "sha256": "dd4b17f314f0e3fc92a893d683d3716c5f66321466e56619ae1b731b6eb980f2"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/v2_eval/verification/null_check_217M_RPE1.json",
+   "bytes": 1670,
+   "sha256": "3848fcd0cb117817c00d6fc8296b16134b87b8abecd58cbbd2f56a3b58bcf2b3"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/v2_eval/verification/ols_precision_check.json",
+   "bytes": 5329,
+   "sha256": "89cf2aab34393821fb6c267b137b1f63f53c11414ec2ea0804197548abd12675"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/v2_eval/verification/single_log_trrust_check.json",
+   "bytes": 967,
+   "sha256": "52e4bbd3eed5ac0c09837c61d812a9b8a1388672351e889e751bd93020cc8bf1"
+  },
+  {
+   "path": "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/v2_eval/verification/trrust_check.json",
+   "bytes": 9925,
+   "sha256": "d4340b8a24bafd705c14c57b4e626dcaa56e211ac8a8320b2c4e52c4ea8c3e09"
+  }
+ ]
+}

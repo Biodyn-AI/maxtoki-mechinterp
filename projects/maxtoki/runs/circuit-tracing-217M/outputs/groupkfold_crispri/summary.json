@@ -1,0 +1,51 @@
+{
+  "overall_directional_accuracy_with_proper_signs": 0.5347610229558443,
+  "n_pairs_total": 1503408,
+  "n_unique_sources": 248,
+  "groupkfold_5_by_source": [
+    {
+      "fold": 0,
+      "n_sources": 50,
+      "n_pairs": 297343,
+      "accuracy": 0.5188284237395869
+    },
+    {
+      "fold": 1,
+      "n_sources": 50,
+      "n_pairs": 305669,
+      "accuracy": 0.5396065678887948
+    },
+    {
+      "fold": 2,
+      "n_sources": 50,
+      "n_pairs": 304351,
+      "accuracy": 0.5386050974039842
+    },
+    {
+      "fold": 3,
+      "n_sources": 49,
+      "n_pairs": 296398,
+      "accuracy": 0.5461878960046964
+    },
+    {
+      "fold": 4,
+      "n_sources": 49,
+      "n_pairs": 299647,
+      "accuracy": 0.5304207951356096
+    }
+  ],
+  "groupkfold_mean_accuracy": 0.5347297560345343,
+  "per_source_mean_accuracy": 0.5341867476695223,
+  "per_source_median_accuracy": 0.5243881376149161,
+  "per_source_bootstrap_ci95": [
+    0.5260496227786731,
+    0.5416490932400868
+  ],
+  "comparison_vs_original_phase11": {
+    "original_directional_accuracy": 0.5461,
+    "original_method": "buggy: just `actual_lfc < 0` regardless of predicted sign",
+    "new_overall_with_signs": 0.5347610229558443,
+    "new_per_source_mean": 0.5341867476695223
+  },
+  "interpretation": "Properly accounting for predicted sign, overall directional accuracy is 0.5348 (above chance). Per-source mean (each source gene = 1 unit) is 0.5342, 95% CI [0.5260, 0.5416]. GroupKFold-by-source-gene 5-fold mean: 0.5347. The original Phase 11 metric (54.61%) was inflated by a buggy sign-comparison; the corrected number is the appropriate one to report. This shifts the interpretation: there IS a small but real circuit-prediction signal."
+}

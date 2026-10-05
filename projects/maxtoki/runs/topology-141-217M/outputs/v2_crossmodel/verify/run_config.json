@@ -1,0 +1,81 @@
+{
+  "what": "independent verification of D10 cross-model item",
+  "script": "<REPO_ROOT>/projects/maxtoki/runs/topology-141-217M/scripts/v2_crossmodel_verify.py",
+  "created": "2026-10-01 03:17:33",
+  "seeds": {
+    "base": 7000000,
+    "rule": "insample SEED+100*domain+10*model+1; heldout cv +1000, cv-perm +2000, oob +3000; pearson +4000; bootcheck +5000/+5001"
+  },
+  "counts": {
+    "N_PERM": 300,
+    "N_CV_REP": 3,
+    "N_CV_PERM": 20,
+    "N_OOB": 100,
+    "N_PB": 1000,
+    "N_BC": 100
+  },
+  "inputs": {
+    "maxtoki_model_safetensors": {
+      "path": "<REPO_ROOT>/projects/maxtoki/setup/MaxToki-217M-HF/model.safetensors",
+      "resolved": "<REPO_ROOT>/projects/maxtoki/setup/MaxToki-217M-HF/model.safetensors",
+      "sha256": "9da1fbf8cc489486d158d4653a14e3f44ac49c75a8e1480566eab0e9f99cf898"
+    },
+    "geneformer_model_safetensors": {
+      "path": "<HF_CACHE>/hub/models--ctheodoris--Geneformer/snapshots/05fcbeb8a27d49e0a7a4349152202ee2c1cbfd28/Geneformer-V2-316M/model.safetensors",
+      "resolved": "<HF_CACHE>/hub/models--ctheodoris--Geneformer/blobs/965ceccea81953d362081ef3843560a0e4fef88d396c28017881f1e94b1246f3",
+      "sha256": "965ceccea81953d362081ef3843560a0e4fef88d396c28017881f1e94b1246f3"
+    },
+    "geneformer_token_dictionary": {
+      "path": "<HF_CACHE>/hub/models--ctheodoris--Geneformer/snapshots/05fcbeb8a27d49e0a7a4349152202ee2c1cbfd28/geneformer/token_dictionary_gc104M.pkl",
+      "resolved": "<HF_CACHE>/hub/models--ctheodoris--Geneformer/blobs/67c445f4385127adfc48dcc072320cd65d6822829bf27dd38070e6e787bc597f",
+      "sha256": "67c445f4385127adfc48dcc072320cd65d6822829bf27dd38070e6e787bc597f"
+    },
+    "scgpt_embeddings_pt": {
+      "path": "<DATA_ROOT>/biodyn-work/subproject_53_scgpt_gpl_replication/embeddings/scgpt_whole_human_gene_embeddings.pt",
+      "resolved": "<DATA_ROOT>/biodyn-work/subproject_53_scgpt_gpl_replication/embeddings/scgpt_whole_human_gene_embeddings.pt",
+      "sha256": "b41289b862126ccd8db166e2688e08bcbe4149c87a9a177f8409b4723bf33f4b"
+    },
+    "scgpt_checkpoint_vocab_json": {
+      "path": "<DATA_ROOT>/biodyn-work/single_cell_mechinterp/external/scGPT_checkpoints/whole-human/vocab.json",
+      "resolved": "<DATA_ROOT>/biodyn-work/single_cell_mechinterp/external/scGPT_checkpoints/whole-human/vocab.json",
+      "sha256": "acca93d114ca62c3f0f50debbd23e8c87f0714f4737764454f6b2b13f2e8580f"
+    },
+    "hvg_gene_features": {
+      "path": "<REPO_ROOT>/projects/maxtoki/runs/spectral-geometry-217M/outputs/phase0/gene_features.csv",
+      "resolved": "<REPO_ROOT>/projects/maxtoki/runs/spectral-geometry-217M/outputs/phase0/gene_features.csv",
+      "sha256": "9030bd55ecb333e2494995c90fb2aa835e9a59bd8fa3e1bf099bc40dff1622c5"
+    },
+    "D10_embeddings_subset_npz": {
+      "path": "<REPO_ROOT>/projects/maxtoki/runs/topology-141-217M/outputs/v2_crossmodel/embeddings_subset.npz",
+      "resolved": "<REPO_ROOT>/projects/maxtoki/runs/topology-141-217M/outputs/v2_crossmodel/embeddings_subset.npz",
+      "sha256": "11838a7028331e9aafeaad6260797e27adf5911ec6d94e1fa757b671621e7e9e"
+    },
+    "D10_fig_crossmodel_csv": {
+      "path": "<REPO_ROOT>/projects/maxtoki/runs/topology-141-217M/outputs/v2_crossmodel/fig_crossmodel.csv",
+      "resolved": "<REPO_ROOT>/projects/maxtoki/runs/topology-141-217M/outputs/v2_crossmodel/fig_crossmodel.csv",
+      "sha256": "4ebd70f234ff5bd84fdad1bbab8d41c350e56f6ff7d315f89441c890ebb6b9b3"
+    },
+    "gene_features_lung": {
+      "path": "<REPO_ROOT>/projects/maxtoki/runs/topology-141-217M/outputs/phase0/lung/gene_features.csv",
+      "resolved": "<REPO_ROOT>/projects/maxtoki/runs/topology-141-217M/outputs/phase0/lung/gene_features.csv",
+      "sha256": "10d82a9325b074272540e4801ba9630a3d08761cc5d8899d6296b6548725c421"
+    },
+    "gene_features_immune": {
+      "path": "<REPO_ROOT>/projects/maxtoki/runs/topology-141-217M/outputs/phase0/immune/gene_features.csv",
+      "resolved": "<REPO_ROOT>/projects/maxtoki/runs/topology-141-217M/outputs/phase0/immune/gene_features.csv",
+      "sha256": "a6bc15cf8cc11e670e953deb2a7d6db9dfc19ed97ef1b3ec2e466d17e522843a"
+    },
+    "gene_features_external_lung": {
+      "path": "<REPO_ROOT>/projects/maxtoki/runs/topology-141-217M/outputs/phase0/external_lung/gene_features.csv",
+      "resolved": "<REPO_ROOT>/projects/maxtoki/runs/topology-141-217M/outputs/phase0/external_lung/gene_features.csv",
+      "sha256": "b83cdca9126efde39f7449f86e7928480d9f027ee250bd078babb6cef6d337f7"
+    }
+  },
+  "software": {
+    "python": "3.12.9",
+    "numpy": "1.26.4",
+    "torch": "2.11.0",
+    "pandas": "2.3.3"
+  },
+  "device": "CPU only; no model forward pass"
+}

@@ -1,0 +1,79 @@
+{
+ "n_k562_nontargeting_cells": 10691,
+ "rows_equal_deployed_control_cells_csv": true,
+ "count_rows": {
+  "n": 2000,
+  "kinds": {
+   "integer_multiple": 2000
+  },
+  "max_dev_from_whole_multiple": 0.0003729221546109329,
+  "max_multiple": 1110.0003729221546,
+  "stored_X_whole_number_fraction": 0.0
+ },
+ "implied_total_over_UMI_count": {
+  "min": 0.9556332081008103,
+  "median": 0.987194877965293,
+  "max": 0.9936429992451309
+ },
+ "sum_counts_over_implied_total": {
+  "median": 0.9417413623345027
+ },
+ "gene_set": {
+  "n_eligible_vocab_genes": 6332,
+  "n_selected": 1500,
+  "float32_route_same_set": true,
+  "variance_at_rank_1500": 0.20029918334234662,
+  "variance_at_rank_1501": 0.20022195466535989,
+  "relative_gap_1500_1501": 0.0003855666093991595,
+  "deployed_rule_on_stored_X_rebuilds_deployed_set": true,
+  "n_shared_with_deployed": 627,
+  "n_new_only": 873,
+  "n_deployed_only": 873,
+  "jaccard_with_deployed": 0.26422250316055623,
+  "spearman_single_log_var_vs_deployed_var_on_deployed_genes": 0.47562552245689976,
+  "spearman_single_log_var_vs_storedX_var_on_new_genes": 0.9910166431185081
+ },
+ "spearman_spot_check_vs_scipy": 4.683753385137379e-17,
+ "tokens": {
+  "n_cells": 2000,
+  "all_pass_check_encoding": true,
+  "max_order_violations": 0,
+  "n_positions_tie_reordered_total": 240,
+  "mean_len": 2038.9945,
+  "min_len": 1016,
+  "n_cells_cut_at_max_len": 1946,
+  "deployed_tokens_failing_check_encoding": 2000,
+  "deployed_mean_len": 2038.9945
+ },
+ "order_agreement_deployed_vs_new_mean_min_max": {
+  "spearman_full": [
+   0.8403548867438423,
+   0.714018859136371,
+   0.9126090447484749
+  ],
+  "spearman_fed": [
+   0.8470246825916112,
+   0.714018859136371,
+   0.8964612043474314
+  ],
+  "top200_overlap": [
+   0.5631499999999999,
+   0.47,
+   0.735
+  ],
+  "kept_set_overlap": [
+   0.9166263440860214,
+   0.8875855327468231,
+   1.0
+  ],
+  "same_position_share": [
+   0.0009356716627729178,
+   0.0,
+   0.006903353057199211
+  ]
+ },
+ "deployed_tokens_rebuild_deployed_pair_counts": true,
+ "counts_sha256": "4cf90013e6afe65665eee1c55fffddd54afb6db7f3c470555e1ee727c3d249f4",
+ "tokens_sha256": "a731c69ad3dfabe465645c563ab6fcffab94a41748e602afbb3d04febffa11af",
+ "seconds": 16.098706007003784
+}

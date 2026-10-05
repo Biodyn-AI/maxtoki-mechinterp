@@ -1,0 +1,50 @@
+
+[lung] emb (12, 382, 20)  pairs 1308  log_expr (1500, 382)
+  L00  eucl=+0.016  geo=-0.005  diff=-0.028  tri=-0.027
+  L01  eucl=-0.042  geo=-0.029  diff=+0.050  tri=-0.037
+  L02  eucl=-0.044  geo=-0.049  diff=+0.005  tri=-0.013
+  L03  eucl=-0.016  geo=-0.027  diff=+0.046  tri=-0.041
+  L04  eucl=-0.030  geo=-0.013  diff=+0.030  tri=-0.038
+  L05  eucl=-0.018  geo=-0.012  diff=+0.044  tri=-0.057
+  L06  eucl=-0.038  geo=-0.013  diff=+0.026  tri=-0.112
+  L07  eucl=-0.070  geo=-0.068  diff=+0.013  tri=-0.056
+  L08  eucl=-0.087  geo=-0.079  diff=-0.007  tri=+0.015
+  L09  eucl=-0.082  geo=-0.069  diff=-0.005  tri=-0.016
+  L10  eucl=-0.083  geo=-0.089  diff=+0.027  tri=-0.004
+  L11  eucl=-0.088  geo=-0.078  diff=+0.080  tri=-0.043
+
+[immune] emb (12, 350, 20)  pairs 2544  log_expr (2000, 350)
+  L00  eucl=+0.040  geo=+0.047  diff=+0.047  tri=-0.084
+  L01  eucl=+0.020  geo=+0.027  diff=+0.036  tri=-0.087
+  L02  eucl=+0.002  geo=+0.012  diff=+0.023  tri=-0.072
+  L03  eucl=-0.022  geo=+0.007  diff=-0.005  tri=-0.061
+  L04  eucl=-0.002  geo=+0.001  diff=-0.002  tri=-0.077
+  L05  eucl=-0.003  geo=-0.002  diff=+0.012  tri=-0.068
+  L06  eucl=+0.013  geo=+0.018  diff=-0.006  tri=-0.070
+  L07  eucl=+0.007  geo=+0.012  diff=-0.021  tri=-0.067
+  L08  eucl=-0.026  geo=-0.021  diff=-0.018  tri=-0.064
+  L09  eucl=-0.020  geo=-0.009  diff=+0.001  tri=-0.060
+  L10  eucl=-0.018  geo=-0.004  diff=+0.010  tri=-0.087
+  L11  eucl=-0.040  geo=-0.003  diff=-0.026  tri=-0.059
+
+[external_lung] emb (12, 380, 20)  pairs 751  log_expr (1500, 380)
+  L00  eucl=+0.010  geo=+0.018  diff=-0.021  tri=-0.140
+  L01  eucl=+0.003  geo=+0.005  diff=-0.024  tri=-0.167
+  L02  eucl=+0.002  geo=-0.013  diff=-0.055  tri=-0.136
+  L03  eucl=-0.012  geo=-0.034  diff=-0.009  tri=-0.149
+  L04  eucl=+0.011  geo=-0.017  diff=+0.022  tri=-0.137
+  L05  eucl=-0.012  geo=-0.075  diff=+0.040  tri=-0.100
+  L06  eucl=-0.059  geo=-0.091  diff=+0.046  tri=-0.005
+  L07  eucl=-0.112  geo=-0.132  diff=+0.002  tri=-0.017
+  L08  eucl=-0.139  geo=-0.135  diff=+0.047  tri=+0.046
+  L09  eucl=-0.134  geo=-0.135  diff=+0.024  tri=+0.058
+  L10  eucl=-0.130  geo=-0.132  diff=+0.016  tri=+0.058
+  L11  eucl=-0.067  geo=-0.085  diff=+0.021  tri=+0.004
+
+[phase 6] hierarchy:
+metric
+triangle_defect   -0.054691
+geodesic          -0.035353
+euclidean         -0.035254
+diffusion          0.012271
+Name: delta_vs_coex, dtype: float64

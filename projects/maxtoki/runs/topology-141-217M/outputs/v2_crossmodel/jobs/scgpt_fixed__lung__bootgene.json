@@ -1,0 +1,40 @@
+{
+  "seed_gene_perm_base": 20262007,
+  "n_boot": 1000,
+  "method": "same gene-bootstrap resamples as 'boot'; chance per resample = CCA / top-1 after replacing each gene of the other model by a randomly chosen gene (whole-gene permutation, copies stay paired); one permutation per resample; percentile 2.5/97.5 of (resample value - resample chance)",
+  "resample_check_max_abs_diff": 0.0,
+  "cca_null_gene": {
+    "mean": 0.7434894567757108,
+    "ci95": [
+      0.7015778160186809,
+      0.7894797436813961
+    ]
+  },
+  "top1_null_gene": {
+    "mean": 0.2780235602094241,
+    "ci95": [
+      0.23298429319371727,
+      0.3219895287958115
+    ]
+  },
+  "cca_excess": {
+    "mean": 0.10971575284660393,
+    "ci95": [
+      0.08072731035014134,
+      0.14244752164743024
+    ],
+    "sd": 0.01572529687361229
+  },
+  "top1_excess": {
+    "mean": 0.14598167539267018,
+    "ci95": [
+      0.08376963350785338,
+      0.2094240837696335
+    ],
+    "sd": 0.03187704139403724
+  },
+  "wall_seconds": 100.6775598526001,
+  "model": "scgpt_fixed",
+  "domain": "lung",
+  "part": "bootgene"
+}

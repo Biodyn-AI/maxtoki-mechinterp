@@ -1,0 +1,25 @@
+{
+  "script": "v2b_devorder_01_features_lookup",
+  "written_at": "2026-10-01 12:09:32",
+  "python": "3.12.9",
+  "torch": "2.11.0",
+  "numpy": "1.26.4",
+  "torch_threads": 6,
+  "inputs": {
+    "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/artifacts/anchors/anchor_meta_internal.csv": "9b8c5686d7d87497e5b973693dbbd2bf2bb865872d3c27b8e50622a3e7a784ca",
+    "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/artifacts/anchors/anchor_meta_external.csv": "85436fada49d034ae1f048b56b7dba394b0650ccb09e0c58e62b710365806011",
+    "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/artifacts/anchors/anchor_meta_zeroshot.csv": "6b6bae3162bacf37a21aa213794c3693ec4db9544905af59e302db9027c9ade2",
+    "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/artifacts/anchors/anchor_meta_lung_nonhema.csv": "6c1d4598c712892fa97184f6756b0d9b4bc2884f151dbf645cfb95cc767328c0"
+  },
+  "info": {
+    "lookup_ct_n_labels": 45,
+    "lookup_cls_n_labels": 64
+  },
+  "seconds": 0.15353989601135254,
+  "seeds": {
+    "pca": 42,
+    "lookup_ct": "default_rng([7001,k]) codes, default_rng([7001,k,panel_index]) noise",
+    "lookup_cls": "default_rng([7002,k]) codes, default_rng([7002,k,panel_index]) noise",
+    "cell_subsample": "default_rng(42) as phase1bc"
+  }
+}

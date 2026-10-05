@@ -1,0 +1,3357 @@
+{
+  "meta": {
+    "generated": "2026-10-01T01:20:27",
+    "timezone": "local machine time, CEST (UTC+2) in April-May 2026",
+    "scripts": [
+      "checks/d12_deployment_facts/scripts/common.py",
+      "checks/d12_deployment_facts/scripts/s1_timeline.py",
+      "checks/d12_deployment_facts/scripts/s2_history.py",
+      "checks/d12_deployment_facts/scripts/s3_provenance.py",
+      "checks/d12_deployment_facts/scripts/s4_adamson_modality.py",
+      "checks/d12_deployment_facts/scripts/s4b_perturbation_counts.py",
+      "checks/d12_deployment_facts/scripts/s5_pipeline_facts.py",
+      "checks/d12_deployment_facts/scripts/s6_audit.py",
+      "checks/d12_deployment_facts/scripts/s7_assemble.py"
+    ],
+    "report": "projects/maxtoki/checks/DEPLOYMENT_FACTS.md",
+    "run_config": "projects/maxtoki/checks/d12_deployment_facts/run_config.json",
+    "cutoff_for_deployment_files": "2026-05-08 06:00 (later files are revision work and are excluded)"
+  },
+  "whole_deployment": {
+    "first_artefact": {
+      "path": "setup/token_dictionary.json",
+      "time": "2026-04-15 23:59:54"
+    },
+    "first_run_folder_artefact": {
+      "path": "runs/attention-grn-217M/scripts/phase0_extract.py",
+      "time": "2026-04-16 00:12:57"
+    },
+    "last_artefact": {
+      "path": "audits/audit-20260507-completion-v2.md",
+      "time": "2026-05-07 21:10:46"
+    },
+    "span_days": 21.88,
+    "active_days": [
+      "2026-04-15",
+      "2026-04-16",
+      "2026-04-17",
+      "2026-04-18",
+      "2026-04-19",
+      "2026-04-20",
+      "2026-04-23",
+      "2026-05-03",
+      "2026-05-04",
+      "2026-05-05",
+      "2026-05-07"
+    ],
+    "n_active_days": 11,
+    "n_distinct_clock_hours_with_a_write": 66,
+    "compute_hours": {
+      "log_windows_overlap_aware": 47.75,
+      "log_windows_sum_over_pipelines": 53.79,
+      "activity_sessions_overlap_aware": {
+        "gap_15min": 49.76,
+        "gap_30min": 50.65,
+        "gap_60min": 53.59
+      },
+      "logged_durations_lower_bound_sum": 29.61,
+      "paper_table3_sum": 47.5,
+      "concurrency": {
+        "hours_by_n_pipelines_running": {
+          "1": 44.35,
+          "2": 1.46,
+          "3": 1.24,
+          "4": 0.7
+        },
+        "hours_with_2_or_more": 3.4,
+        "max_pipelines_at_once": 4,
+        "first_time_max_reached": [
+          "2026-05-05 16:18:27",
+          [
+            "longevity-mechinterp-217M",
+            "manifold-discovery-217M",
+            "spectral-geometry-217M",
+            "topology-141-217M"
+          ]
+        ]
+      },
+      "what_it_is": "laptop wall-clock time of logged jobs (MPS forward passes plus CPU analysis); not GPU-hours, not agent thinking time"
+    },
+    "hardware": {
+      "device_in_every_log_or_config_that_names_one": "mps",
+      "cuda_or_a100_in_any_run_log": false,
+      "machine_now": {
+        "hw_model": "Mac14,9",
+        "cpu": "Apple M2 Pro",
+        "mem_gb": 32.0,
+        "note": "machine that holds the files on 2026-10-01; run files record only 'MacBook Pro (Apple Silicon, 32 GB)' and device 'mps'; same machine is likely but not proven"
+      }
+    }
+  },
+  "pipelines": {
+    "spectral-geometry-217M": {
+      "spec": "pipelines/residual-stream-spectral-geometry.md",
+      "spec_phase_count": 11,
+      "phase_evidence": {
+        "phase 0": {
+          "first": "2026-04-16 19:41:17",
+          "last": "2026-05-05 16:13:02",
+          "n_files": 6,
+          "example": "outputs/phase0/gene_counts.npy",
+          "label": "base run"
+        },
+        "phase 1": {
+          "first": "2026-04-16 19:42:42",
+          "last": "2026-04-16 19:42:49",
+          "n_files": 5,
+          "example": "outputs/phase1/per_layer_metrics.csv",
+          "label": "base run"
+        },
+        "phase 5b": {
+          "first": "2026-04-16 19:43:08",
+          "last": "2026-04-17 10:34:37",
+          "n_files": 2,
+          "example": "outputs/phases_345.log",
+          "label": "base run"
+        },
+        "phase 5c": {
+          "first": "2026-04-16 19:43:08",
+          "last": "2026-04-17 10:34:37",
+          "n_files": 2,
+          "example": "outputs/phases_345.log",
+          "label": "base run"
+        },
+        "phase 3": {
+          "first": "2026-04-16 19:43:08",
+          "last": "2026-04-17 10:34:37",
+          "n_files": 3,
+          "example": "outputs/phases_345.log",
+          "label": "base run"
+        },
+        "phase 4": {
+          "first": "2026-04-16 19:43:08",
+          "last": "2026-04-17 10:34:37",
+          "n_files": 7,
+          "example": "outputs/phases_345.log",
+          "label": "base run"
+        },
+        "phase 5": {
+          "first": "2026-04-16 19:43:08",
+          "last": "2026-04-17 10:34:37",
+          "n_files": 8,
+          "example": "outputs/phases_345.log",
+          "label": "base run"
+        },
+        "phase 7": {
+          "first": "2026-04-16 19:43:38",
+          "last": "2026-04-17 10:32:05",
+          "n_files": 5,
+          "example": "outputs/phase7/b_cell_attractor_trajectory.csv",
+          "label": "base run"
+        },
+        "phase 7b": {
+          "first": "2026-04-16 19:43:38",
+          "last": "2026-04-16 19:43:38",
+          "n_files": 1,
+          "example": "outputs/phases_67.log",
+          "label": "base run"
+        },
+        "phase 6": {
+          "first": "2026-04-16 19:43:38",
+          "last": "2026-04-17 10:31:54",
+          "n_files": 4,
+          "example": "outputs/phase6/cell_type_clustering_auroc.csv",
+          "label": "base run"
+        },
+        "phase 9": {
+          "first": "2026-04-16 19:44:23",
+          "last": "2026-04-16 19:44:24",
+          "n_files": 3,
+          "example": "outputs/phase9/go_bp_sv2_copole.csv",
+          "label": "base run"
+        },
+        "phase 9e": {
+          "first": "2026-04-16 19:44:24",
+          "last": "2026-04-16 19:44:24",
+          "n_files": 1,
+          "example": "outputs/phase9.log",
+          "label": "base run"
+        },
+        "phase 9d": {
+          "first": "2026-04-16 19:44:24",
+          "last": "2026-04-16 19:44:24",
+          "n_files": 1,
+          "example": "outputs/phase9.log",
+          "label": "base run"
+        },
+        "phase 9a": {
+          "first": "2026-04-17 10:34:03",
+          "last": "2026-04-17 10:34:37",
+          "n_files": 2,
+          "example": "outputs/remaining/phase9a_persistent_homology.json",
+          "label": "base run"
+        },
+        "phase 9c": {
+          "first": "2026-04-17 10:34:36",
+          "last": "2026-04-17 10:34:37",
+          "n_files": 2,
+          "example": "outputs/remaining/phase9c_ffl_geometry.csv",
+          "label": "base run"
+        },
+        "phase 9b": {
+          "first": "2026-05-03 19:19:39",
+          "last": "2026-05-07 18:54:30",
+          "n_files": 6,
+          "example": "outputs/phase9b/cross_model_cosine.json",
+          "label": "later session (extension)"
+        },
+        "phase 8": {
+          "first": "2026-05-03 19:41:44",
+          "last": "2026-05-03 20:29:49",
+          "n_files": 6,
+          "example": "outputs/phase8/embeddings_seed43.npy",
+          "label": "later session (extension)"
+        },
+        "autoloop iter 2": {
+          "first": "2026-05-05 16:15:34",
+          "last": "2026-05-05 16:38:26",
+          "n_files": 19,
+          "example": "autoloop/iterations/iter_0002/executor_prompt.md",
+          "label": "later session (extension)"
+        },
+        "autoloop iter 3": {
+          "first": "2026-05-05 16:38:36",
+          "last": "2026-05-05 17:21:33",
+          "n_files": 26,
+          "example": "autoloop/iterations/iter_0003/executor_prompt.md",
+          "label": "later session (extension)"
+        },
+        "autoloop iter 4": {
+          "first": "2026-05-05 17:21:43",
+          "last": "2026-05-05 17:36:56",
+          "n_files": 2,
+          "example": "autoloop/iterations/iter_0004/executor_prompt.md",
+          "label": "later session (extension)"
+        },
+        "autoloop iter 5": {
+          "first": "2026-05-05 17:37:06",
+          "last": "2026-05-05 17:51:50",
+          "n_files": 2,
+          "example": "autoloop/iterations/iter_0005/executor_prompt.md",
+          "label": "later session (extension)"
+        }
+      },
+      "coverage": {
+        "spec_phases_run": "all 11 spec phases have some run evidence; Phase 2 is the shared co-pole test inside phases_345.py; Phase 8 (cell-sample stability, not fine-tuning seeds) and Phase 9b were run on 2026-05-03; Phase 10 (autonomous loop) ran only as a 4-iteration Sonnet autoloop on 2026-05-05 that aborted",
+        "not_run_or_reduced": [
+          "Phase 8 as specified (3 fine-tuning seeds): replaced by 3 cell samples",
+          "Phase 10: 4 iterations (spec: 40-80), aborted after 2 API connection failures; the pipeline summary still says 'Phase 10 ... NOT run'"
+        ],
+        "evidence": [
+          "runs/spectral-geometry-217M/outputs/phases_345.log",
+          "runs/spectral-geometry-217M/outputs/phase8.log",
+          "runs/spectral-geometry-217M/autoloop/runtime/driver.log",
+          "summaries/spectral-geometry-217M-FINAL_SUMMARY.md (section 'Phase 2 / 10 \u2014 status')"
+        ]
+      },
+      "file_write_days": {
+        "2026-04-16": {
+          "first": "19:05",
+          "last": "19:44",
+          "n_files": 24
+        },
+        "2026-04-17": {
+          "first": "10:16",
+          "last": "10:36",
+          "n_files": 21
+        },
+        "2026-05-03": {
+          "first": "19:16",
+          "last": "20:29",
+          "n_files": 13
+        },
+        "2026-05-05": {
+          "first": "16:13",
+          "last": "17:51",
+          "n_files": 61
+        },
+        "2026-05-07": {
+          "first": "18:53",
+          "last": "18:54",
+          "n_files": 3
+        }
+      },
+      "first_file": "2026-04-16 19:05:58",
+      "last_file": "2026-05-07 18:54:38",
+      "compute_hours": {
+        "log_windows": 3.63,
+        "log_windows_first_session": 0.8,
+        "log_windows_later_sessions": 2.82,
+        "activity_sessions_gap30": 3.74,
+        "logged_durations_lower_bound": 2.6,
+        "logged_duration_items": {
+          "phase0 extraction (total_phase_seconds)": 907.4,
+          "phase8 stability, 2 re-extractions (tqdm bars)": 2701.8,
+          "autoloop executor+brainstormer turns (driver dt)": 5746.0
+        },
+        "log_window_list": [
+          "04-16 19:05 -> 19:43",
+          "04-17 10:24 -> 10:34",
+          "05-03 19:16 -> 20:29",
+          "05-05 16:15 -> 17:51"
+        ],
+        "work_blocks_gap3h": [
+          {
+            "start": "2026-04-16 19:05:16",
+            "end": "2026-04-16 19:44:24",
+            "hours": 0.65
+          },
+          {
+            "start": "2026-04-17 10:24:52",
+            "end": "2026-04-17 10:36:50",
+            "hours": 0.2
+          },
+          {
+            "start": "2026-05-03 19:16:33",
+            "end": "2026-05-03 20:29:49",
+            "hours": 1.22
+          },
+          {
+            "start": "2026-05-05 16:13:02",
+            "end": "2026-05-05 17:51:50",
+            "hours": 1.65
+          },
+          {
+            "start": "2026-05-07 18:53:05",
+            "end": "2026-05-07 18:54:30",
+            "hours": 0.02
+          }
+        ],
+        "work_blocks_gap3h_total": 3.74,
+        "paper_table3_agent_hours": "0.5"
+      },
+      "device": "MPS (phase0.log, phase8.log, run_config.json; autoloop h3g_run.log 'Device: mps')",
+      "device_counts": {
+        "logs_total": 16,
+        "logs_mentioning_mps": 4,
+        "logs_mentioning_cuda": 0,
+        "logs_mentioning_cpu_device": [],
+        "run_config_device_values": {
+          "mps": 1
+        },
+        "scripts_total": 16,
+        "scripts_with_mps_default": 3,
+        "scripts_forcing_cpu": [],
+        "scripts_mentioning_cuda": []
+      },
+      "agent_model": {
+        "recorded_in_run_files": "Claude 'sonnet' alias for all 6 autoloop executor/brainstormer calls on 2026-05-05 (exact version not recorded); main sessions not recorded",
+        "claimed": "Claude Opus 4.7 (paper/LLM_USAGE_STATEMENT.txt:15, agent-written 2026-05-08 01:19; paper-plos-one/main.tex:1020)",
+        "sessions": [
+          "8fb71b84",
+          "965ec1c8"
+        ],
+        "n_human_prompts": 8
+      },
+      "token_budget": {
+        "max_len": 2048,
+        "max_gene_tokens": 2046,
+        "mean_seq_len": {
+          "TS immune, 2,000 cells (phase0 run_config mean_seq_len)": 1783.629
+        },
+        "cells": "2,000 TS immune cells"
+      },
+      "input_format": "single cells: <bos> + that cell's genes ranked by median-normalised expression + <eos>; no multi-cell trajectories, no time or query tokens"
+    },
+    "attention-grn-217M": {
+      "spec": "pipelines/attention-grn-extraction-and-evaluation.md",
+      "spec_phase_count": 14,
+      "phase_evidence": {
+        "phase 0": {
+          "first": "2026-04-16 00:14:44",
+          "last": "2026-04-16 18:22:46",
+          "n_files": 36,
+          "example": "outputs/phase0/gene_features.csv",
+          "label": "base run"
+        },
+        "phase 1": {
+          "first": "2026-04-16 01:12:14",
+          "last": "2026-04-16 18:24:30",
+          "n_files": 20,
+          "example": "outputs/phase1/per_perturbation_auroc.csv",
+          "label": "base run"
+        },
+        "phase 2": {
+          "first": "2026-04-16 01:14:06",
+          "last": "2026-04-16 18:25:59",
+          "n_files": 20,
+          "example": "outputs/phase2/pair_dataset.csv",
+          "label": "base run"
+        },
+        "phase 3": {
+          "first": "2026-04-16 01:35:49",
+          "last": "2026-04-16 18:45:10",
+          "n_files": 28,
+          "example": "outputs/phase3/residualization_results.csv",
+          "label": "base run"
+        },
+        "phase 4": {
+          "first": "2026-04-16 01:37:12",
+          "last": "2026-04-16 01:59:50",
+          "n_files": 10,
+          "example": "outputs/phase4/per_head_trrust_auroc_ranking.csv",
+          "label": "base run"
+        },
+        "phase 12": {
+          "first": "2026-04-16 02:00:11",
+          "last": "2026-04-16 18:45:23",
+          "n_files": 4,
+          "example": "outputs/phase12_verdict.json",
+          "label": "base run"
+        },
+        "phase 0b": {
+          "first": "2026-04-16 11:14:33",
+          "last": "2026-04-16 11:15:18",
+          "n_files": 6,
+          "example": "outputs/phase0b/vw_edges_per_head.npy",
+          "label": "added later in the same session"
+        },
+        "phase 6": {
+          "first": "2026-04-16 13:59:39",
+          "last": "2026-04-16 14:36:16",
+          "n_files": 9,
+          "example": "outputs/phase6_cssi/clusters.csv",
+          "label": "added later in the same session"
+        }
+      },
+      "coverage": {
+        "spec_phases_run": "0a, 1, 2, 3, 4, 12 first (K562 217M); then 0b and 6 (CSSI) the same day; phases 0a, 1, 2, 3, 12 repeated for RPE1, Adamson and the 1B model",
+        "not_run_or_reduced": [
+          "Phases 5, 7, 8, 9, 10, 11 not run as specified (README: '5-11 ... skipped'); the RPE1/Adamson/1B re-runs cover part of phase 5 (cross-context) and phase 9 (multi-model)",
+          "Phase 3 Curveball null: 50 permutations (spec 200)",
+          "Phase 4: 6 conditions (spec 13)",
+          "1B run: 200 control cells (217M runs: 2,000)"
+        ],
+        "evidence": [
+          "runs/attention-grn-217M/README.md (table 'Phases run')",
+          "runs/attention-grn-217M/scripts/phase3_residualization.py:9-10",
+          "runs/attention-grn-217M/outputs/phase0_k562_1b/run_config.json"
+        ]
+      },
+      "file_write_days": {
+        "2026-04-16": {
+          "first": "00:12",
+          "last": "18:46",
+          "n_files": 151
+        },
+        "2026-04-17": {
+          "first": "10:16",
+          "last": "10:16",
+          "n_files": 5
+        },
+        "2026-04-23": {
+          "first": "20:31",
+          "last": "20:31",
+          "n_files": 1
+        }
+      },
+      "first_file": "2026-04-16 00:12:57",
+      "last_file": "2026-04-23 20:31:58",
+      "compute_hours": {
+        "log_windows": 8.83,
+        "log_windows_first_session": 8.83,
+        "log_windows_later_sessions": 0.0,
+        "activity_sessions_gap30": 9.0,
+        "logged_durations_lower_bound": 4.44,
+        "logged_duration_items": {
+          "phase0 K562 217M": 3286.3,
+          "phase0 RPE1": 4259.7,
+          "phase0 Adamson": 1645.8,
+          "phase0 K562 1B (200 cells)": 5735.8,
+          "phase0b value-weighted (total_fwd_seconds)": 1062.7
+        },
+        "log_window_list": [
+          "04-16 00:14 -> 01:09",
+          "04-16 01:14 -> 01:36",
+          "04-16 01:37 -> 01:59",
+          "04-16 10:56 -> 11:15",
+          "04-16 11:15 -> 12:26",
+          "04-16 12:26 -> 13:00",
+          "04-16 13:02 -> 13:21",
+          "04-16 13:59 -> 14:36",
+          "04-16 14:36 -> 15:05",
+          "04-16 15:05 -> 15:43",
+          "04-16 15:45 -> 18:22",
+          "04-16 18:26 -> 18:45"
+        ],
+        "work_blocks_gap3h": [
+          {
+            "start": "2026-04-16 00:12:57",
+            "end": "2026-04-16 02:00:11",
+            "hours": 1.79
+          },
+          {
+            "start": "2026-04-16 10:56:22",
+            "end": "2026-04-16 18:46:34",
+            "hours": 7.84
+          }
+        ],
+        "work_blocks_gap3h_total": 9.63,
+        "paper_table3_agent_hours": "5.5"
+      },
+      "device": "MPS for all 4 runs including the 1B model (run_config.json device=mps in all phase0 runs)",
+      "device_counts": {
+        "logs_total": 19,
+        "logs_mentioning_mps": 7,
+        "logs_mentioning_cuda": 0,
+        "logs_mentioning_cpu_device": [],
+        "run_config_device_values": {
+          "mps": 5
+        },
+        "scripts_total": 11,
+        "scripts_with_mps_default": 6,
+        "scripts_forcing_cpu": [],
+        "scripts_mentioning_cuda": []
+      },
+      "agent_model": {
+        "recorded_in_run_files": "not recorded",
+        "claimed": "Claude Opus 4.7 (paper/LLM_USAGE_STATEMENT.txt:15, agent-written 2026-05-08 01:19; paper-plos-one/main.tex:1020)",
+        "sessions": [
+          "965ec1c8"
+        ],
+        "n_human_prompts": 4
+      },
+      "token_budget": {
+        "max_len": 2048,
+        "max_gene_tokens": 2046,
+        "mean_seq_len": {
+          "K562 217M, 2,000 cells": 2038.9945,
+          "RPE1": 2038.8755,
+          "Adamson": 991.08,
+          "K562 1B, 200 cells": 2040.41
+        },
+        "cells": "2,000 control cells per 217M run; 200 for 1B"
+      },
+      "input_format": "single cells: <bos> + that cell's genes ranked by median-normalised expression + <eos>; no multi-cell trajectories, no time or query tokens"
+    },
+    "topology-141-217M": {
+      "spec": "pipelines/topology-geometry-141-hypotheses.md",
+      "spec_phase_count": 14,
+      "phase_evidence": {
+        "phase 0": {
+          "first": "2026-05-03 19:25:50",
+          "last": "2026-05-07 20:49:26",
+          "n_files": 28,
+          "example": "outputs/phase0/immune/layer_gene_embeddings_full.npy",
+          "label": "base run"
+        },
+        "phase 5": {
+          "first": "2026-05-03 19:40:12",
+          "last": "2026-05-03 20:22:49",
+          "n_files": 7,
+          "example": "logs/phase5_immune.log",
+          "label": "base run"
+        },
+        "phase 6": {
+          "first": "2026-05-03 19:43:39",
+          "last": "2026-05-03 20:28:12",
+          "n_files": 6,
+          "example": "logs/phase6_immune.log",
+          "label": "base run"
+        },
+        "phase 7": {
+          "first": "2026-05-03 19:45:27",
+          "last": "2026-05-03 20:31:38",
+          "n_files": 7,
+          "example": "logs/phase78_immune.log",
+          "label": "base run"
+        },
+        "phase 8": {
+          "first": "2026-05-03 19:45:27",
+          "last": "2026-05-07 16:14:28",
+          "n_files": 12,
+          "example": "logs/phase78_immune.log",
+          "label": "base run"
+        },
+        "phase 9": {
+          "first": "2026-05-03 19:46:19",
+          "last": "2026-05-03 20:32:17",
+          "n_files": 5,
+          "example": "logs/phase9_immune.log",
+          "label": "base run"
+        },
+        "phase 12": {
+          "first": "2026-05-03 19:49:25",
+          "last": "2026-05-03 20:40:55",
+          "n_files": 5,
+          "example": "logs/phase12_immune.log",
+          "label": "base run"
+        },
+        "phase 1": {
+          "first": "2026-05-03 19:51:13",
+          "last": "2026-05-03 20:13:18",
+          "n_files": 9,
+          "example": "logs/phase1_lung.log",
+          "label": "base run"
+        },
+        "phase 14": {
+          "first": "2026-05-05 16:57:47",
+          "last": "2026-05-05 16:57:48",
+          "n_files": 3,
+          "example": "outputs/phase14_cross_model/cross_model_alignment.csv",
+          "label": "later session (extension)"
+        },
+        "phase 15": {
+          "first": "2026-05-05 17:01:09",
+          "last": "2026-05-05 17:01:10",
+          "n_files": 3,
+          "example": "outputs/phase15_cross_domain/cross_domain_alignment.csv",
+          "label": "later session (extension)"
+        },
+        "phase 16": {
+          "first": "2026-05-05 17:08:08",
+          "last": "2026-05-05 17:08:08",
+          "n_files": 6,
+          "example": "outputs/phase16_extended/h_depth_persistence_dim.csv",
+          "label": "later session (extension)"
+        },
+        "phase 10": {
+          "first": "2026-05-07 11:44:09",
+          "last": "2026-05-07 11:44:09",
+          "n_files": 3,
+          "example": "outputs/phase10/h139_sectional_spot_check.csv",
+          "label": "later session (extension)"
+        },
+        "phase 8e": {
+          "first": "2026-05-07 16:14:28",
+          "last": "2026-05-07 16:14:28",
+          "n_files": 2,
+          "example": "outputs/phase8_extensions/phase8ext_summary.json",
+          "label": "later session (extension)"
+        },
+        "phase 4": {
+          "first": "2026-05-07 16:20:05",
+          "last": "2026-05-07 16:20:06",
+          "n_files": 3,
+          "example": "outputs/phase4_scgpt/cross_model_alignment_scgpt.csv",
+          "label": "later session (extension)"
+        },
+        "phase 11": {
+          "first": "2026-05-07 16:24:55",
+          "last": "2026-05-07 19:27:00",
+          "n_files": 16,
+          "example": "outputs/phase11_autoloop/iter_01_ollivier_ricci/report.json",
+          "label": "later session (extension)"
+        },
+        "autoloop iter 1": {
+          "first": "2026-05-07 16:24:55",
+          "last": "2026-05-07 16:24:55",
+          "n_files": 2,
+          "example": "outputs/phase11_autoloop/iter_01_ollivier_ricci/report.json",
+          "label": "later session (extension)"
+        },
+        "autoloop iter 2": {
+          "first": "2026-05-07 16:24:56",
+          "last": "2026-05-07 16:24:56",
+          "n_files": 2,
+          "example": "outputs/phase11_autoloop/iter_02_gromov_hyperbolicity/report.json",
+          "label": "later session (extension)"
+        },
+        "autoloop iter 3": {
+          "first": "2026-05-07 16:36:01",
+          "last": "2026-05-07 16:36:01",
+          "n_files": 2,
+          "example": "outputs/phase11_autoloop/iter_03_coex_residual_triangle/report.json",
+          "label": "later session (extension)"
+        },
+        "autoloop iter 4": {
+          "first": "2026-05-07 16:36:06",
+          "last": "2026-05-07 19:27:00",
+          "n_files": 3,
+          "example": "outputs/phase11_autoloop/iter_04_cross_layer_consistency/rows.json",
+          "label": "later session (extension)"
+        },
+        "autoloop iter 5": {
+          "first": "2026-05-07 16:36:12",
+          "last": "2026-05-07 16:36:12",
+          "n_files": 2,
+          "example": "outputs/phase11_autoloop/iter_05_token_frequency_strata/rows.json",
+          "label": "later session (extension)"
+        },
+        "autoloop iter 6": {
+          "first": "2026-05-07 16:36:12",
+          "last": "2026-05-07 16:36:12",
+          "n_files": 2,
+          "example": "outputs/phase11_autoloop/iter_06_pooled_multi_tissue/rows.json",
+          "label": "later session (extension)"
+        }
+      },
+      "coverage": {
+        "spec_phases_run": "base run 2026-05-03: phases 0, 1-3 (one script), 5, 6, 7+8, 9, 12, 13 on 3 domains; later sessions: 14-16 (not spec phases) on 2026-05-05; phase 10 spot-check, phase 8 extensions, phase 4 vs scGPT and phase 11 substitute batch on 2026-05-07",
+        "not_run_or_reduced": [
+          "only the 'headline backbone' of the 141 hypotheses; the 130+ explorer hypotheses were not re-screened",
+          "Phase 11: a scripted 6-hypothesis batch (no LLM, no Codex), not an autonomous loop",
+          "Phase 12 strict max-null on layers 3, 6, 9 only (of 12 layer states)",
+          "Phase 10: 2 spot-checks (H23 Forman direction, H139) instead of the 70+ remaining hypotheses",
+          "immune domain reuses the spectral-geometry Phase-0 embeddings (2,000 TS immune cells)"
+        ],
+        "evidence": [
+          "runs/topology-141-217M/README.md",
+          "runs/topology-141-217M/FINAL_SUMMARY.md (section 'Scope')",
+          "runs/topology-141-217M/scripts/phase12_strict_max_null.py:174",
+          "runs/topology-141-217M/outputs/phase0/immune/run_config.json"
+        ]
+      },
+      "file_write_days": {
+        "2026-05-03": {
+          "first": "19:24",
+          "last": "20:41",
+          "n_files": 76
+        },
+        "2026-05-05": {
+          "first": "16:52",
+          "last": "17:10",
+          "n_files": 16
+        },
+        "2026-05-07": {
+          "first": "11:44",
+          "last": "20:50",
+          "n_files": 55
+        }
+      },
+      "first_file": "2026-05-03 19:24:57",
+      "last_file": "2026-05-07 20:50:15",
+      "compute_hours": {
+        "log_windows": 2.59,
+        "log_windows_first_session": 1.26,
+        "log_windows_later_sessions": 1.33,
+        "activity_sessions_gap30": 3.54,
+        "logged_durations_lower_bound": 0.88,
+        "logged_duration_items": {
+          "phase0 lung": 1182.4,
+          "phase0 external lung": 1100.0,
+          "audit re-extraction lung seed 43": 893.5
+        },
+        "log_window_list": [
+          "05-03 19:25 -> 19:30",
+          "05-03 19:31 -> 20:13",
+          "05-03 20:13 -> 20:32",
+          "05-03 20:32 -> 20:40",
+          "05-05 16:10 -> 16:57",
+          "05-07 16:01 -> 16:14",
+          "05-07 16:14 -> 16:20",
+          "05-07 16:24 -> 16:36"
+        ],
+        "work_blocks_gap3h": [
+          {
+            "start": "2026-05-03 19:24:57",
+            "end": "2026-05-03 20:41:57",
+            "hours": 1.28
+          },
+          {
+            "start": "2026-05-05 16:10:46",
+            "end": "2026-05-05 17:08:08",
+            "hours": 0.96
+          },
+          {
+            "start": "2026-05-07 11:44:02",
+            "end": "2026-05-07 11:44:09",
+            "hours": 0.0
+          },
+          {
+            "start": "2026-05-07 16:01:24",
+            "end": "2026-05-07 20:50:15",
+            "hours": 4.81
+          }
+        ],
+        "work_blocks_gap3h_total": 7.05,
+        "paper_table3_agent_hours": "4+"
+      },
+      "device": "MPS for lung/external-lung extraction (run_config.json); immune embeddings reused from spectral-geometry; later phases CPU analysis",
+      "device_counts": {
+        "logs_total": 26,
+        "logs_mentioning_mps": 1,
+        "logs_mentioning_cuda": 0,
+        "logs_mentioning_cpu_device": [],
+        "run_config_device_values": {
+          "mps": 3
+        },
+        "scripts_total": 20,
+        "scripts_with_mps_default": 1,
+        "scripts_forcing_cpu": [],
+        "scripts_mentioning_cuda": []
+      },
+      "agent_model": {
+        "recorded_in_run_files": "not recorded",
+        "claimed": "Claude Opus 4.7 (paper/LLM_USAGE_STATEMENT.txt:15, agent-written 2026-05-08 01:19; paper-plos-one/main.tex:1020)",
+        "sessions": [
+          "2a9284b9",
+          "3af9282c"
+        ],
+        "n_human_prompts": 5
+      },
+      "token_budget": {
+        "max_len": 2048,
+        "max_gene_tokens": 2046,
+        "mean_seq_len": "not recorded (lung, external lung 1,500 cells each); immune reused from spectral-geometry (mean 1,783.6)",
+        "cells": "1,500 per new domain"
+      },
+      "input_format": "single cells: <bos> + that cell's genes ranked by median-normalised expression + <eos>; no multi-cell trajectories, no time or query tokens"
+    },
+    "sae-atlas-217M": {
+      "spec": "pipelines/sparse-autoencoders/01-sae-atlas.md",
+      "spec_phase_count": 14,
+      "phase_evidence": {
+        "phase 0": {
+          "first": "2026-04-17 15:59:35",
+          "last": "2026-04-19 17:36:21",
+          "n_files": 14,
+          "example": "outputs/phase0.log",
+          "label": "base run"
+        },
+        "phase 1": {
+          "first": "2026-04-17 16:06:09",
+          "last": "2026-04-19 17:36:21",
+          "n_files": 38,
+          "example": "outputs/phase1.log",
+          "label": "base run"
+        },
+        "phase 3": {
+          "first": "2026-04-17 19:24:06",
+          "last": "2026-04-17 19:29:36",
+          "n_files": 2,
+          "example": "outputs/phase3/svd_comparison.csv",
+          "label": "base run"
+        },
+        "phase 4": {
+          "first": "2026-04-17 19:24:07",
+          "last": "2026-04-17 19:29:36",
+          "n_files": 2,
+          "example": "outputs/phase4/cross_layer_tracking.csv",
+          "label": "base run"
+        },
+        "phase 8": {
+          "first": "2026-04-17 19:29:36",
+          "last": "2026-04-17 22:20:16",
+          "n_files": 6,
+          "example": "outputs/phases2_to_8.log",
+          "label": "base run"
+        },
+        "phase 2": {
+          "first": "2026-04-17 19:29:36",
+          "last": "2026-04-19 17:36:21",
+          "n_files": 38,
+          "example": "outputs/phases2_to_8.log",
+          "label": "base run"
+        },
+        "phase 5": {
+          "first": "2026-04-17 19:29:36",
+          "last": "2026-04-19 17:36:21",
+          "n_files": 14,
+          "example": "outputs/phases2_to_8.log",
+          "label": "base run"
+        },
+        "phase 7": {
+          "first": "2026-04-17 21:44:42",
+          "last": "2026-04-17 23:11:35",
+          "n_files": 3,
+          "example": "outputs/phase7/highways_L0_to_L5.json",
+          "label": "base run"
+        },
+        "phase 10": {
+          "first": "2026-04-17 22:20:16",
+          "last": "2026-04-17 23:11:35",
+          "n_files": 4,
+          "example": "outputs/phase10/unannotated_L0.json",
+          "label": "base run"
+        },
+        "phase 11": {
+          "first": "2026-04-17 23:11:35",
+          "last": "2026-04-17 23:20:30",
+          "n_files": 4,
+          "example": "outputs/remaining_phases.log",
+          "label": "base run"
+        },
+        "phase 8t": {
+          "first": "2026-04-17 23:11:35",
+          "last": "2026-05-07 19:30:18",
+          "n_files": 9,
+          "example": "outputs/remaining_phases.log",
+          "label": "base run"
+        },
+        "phase 6": {
+          "first": "2026-04-18 15:22:28",
+          "last": "2026-04-18 15:22:29",
+          "n_files": 3,
+          "example": "outputs/phase6/causal_patching.csv",
+          "label": "added later in the same session"
+        },
+        "phase 9": {
+          "first": "2026-04-18 15:31:16",
+          "last": "2026-04-18 16:00:06",
+          "n_files": 6,
+          "example": "outputs/phase9/sae_multitissue/sae_final.pt",
+          "label": "added later in the same session"
+        },
+        "phase 13": {
+          "first": "2026-04-19 13:16:08",
+          "last": "2026-04-19 13:16:09",
+          "n_files": 2,
+          "example": "outputs/phase13/maxtoki_sae_atlas.html",
+          "label": "added later in the same session"
+        },
+        "phase 12": {
+          "first": "2026-04-19 13:16:09",
+          "last": "2026-04-19 17:36:21",
+          "n_files": 26,
+          "example": "outputs/phases12_13.log",
+          "label": "added later in the same session"
+        }
+      },
+      "coverage": {
+        "spec_phases_run": "all 14 spec phases have run evidence; base run 2026-04-17 on 3 layers (0, 5, 11); phases 6 and 9 on 04-18; full 12-layer re-run plus phases 12-13 on 04-19 (the re-run overwrote the 3-layer phase0/1/2/5/12 outputs); web atlas deployed 05-03",
+        "not_run_or_reduced": [
+          "phase0 activations and cell-id files were deleted after training (cannot rerun SAE training without re-extraction)",
+          "the 04-17 layer-5 SAE used by Phase 8t was overwritten by the 04-19 run"
+        ],
+        "evidence": [
+          "runs/sae-atlas-217M/outputs/phases2_to_8.log",
+          "runs/sae-atlas-217M/outputs/remaining_phases.log",
+          "runs/sae-atlas-217M/outputs/full_12layer.log",
+          "runs/sae-atlas-217M/outputs/phase6.log"
+        ]
+      },
+      "file_write_days": {
+        "2026-04-17": {
+          "first": "15:53",
+          "last": "23:20",
+          "n_files": 23
+        },
+        "2026-04-18": {
+          "first": "14:42",
+          "last": "16:00",
+          "n_files": 11
+        },
+        "2026-04-19": {
+          "first": "13:13",
+          "last": "22:21",
+          "n_files": 131
+        },
+        "2026-05-03": {
+          "first": "18:59",
+          "last": "19:02",
+          "n_files": 181
+        },
+        "2026-05-07": {
+          "first": "17:55",
+          "last": "19:31",
+          "n_files": 12
+        }
+      },
+      "first_file": "2026-04-17 15:53:17",
+      "last_file": "2026-05-07 19:31:01",
+      "compute_hours": {
+        "log_windows": 10.1,
+        "log_windows_first_session": 9.77,
+        "log_windows_later_sessions": 0.33,
+        "activity_sessions_gap30": 10.42,
+        "logged_durations_lower_bound": 1.86,
+        "logged_duration_items": {
+          "12-layer extraction+SAE training+annotation (sum of 'Lx DONE in')": 6681.0
+        },
+        "log_window_list": [
+          "04-17 15:53 -> 15:59",
+          "04-17 16:00 -> 16:06",
+          "04-17 16:09 -> 19:29",
+          "04-17 21:39 -> 23:11",
+          "04-17 23:12 -> 23:20",
+          "04-18 14:44 -> 16:00",
+          "04-19 15:30 -> 17:36",
+          "04-19 21:07 -> 22:14",
+          "05-07 19:10 -> 19:30"
+        ],
+        "work_blocks_gap3h": [
+          {
+            "start": "2026-04-17 15:53:17",
+            "end": "2026-04-17 23:20:30",
+            "hours": 7.45
+          },
+          {
+            "start": "2026-04-18 14:42:32",
+            "end": "2026-04-18 16:00:06",
+            "hours": 1.29
+          },
+          {
+            "start": "2026-04-19 13:13:42",
+            "end": "2026-04-19 17:36:21",
+            "hours": 4.38
+          },
+          {
+            "start": "2026-04-19 21:07:16",
+            "end": "2026-04-19 22:14:13",
+            "hours": 1.12
+          },
+          {
+            "start": "2026-05-03 18:59:53",
+            "end": "2026-05-03 19:02:13",
+            "hours": 0.04
+          },
+          {
+            "start": "2026-05-07 17:55:00",
+            "end": "2026-05-07 19:30:18",
+            "hours": 1.59
+          }
+        ],
+        "work_blocks_gap3h_total": 15.87,
+        "paper_table3_agent_hours": "2.5"
+      },
+      "device": "MPS for extraction AND SAE training (full_12layer.log 'device=mps'; setup/topk_sae.py default device='mps')",
+      "device_counts": {
+        "logs_total": 12,
+        "logs_mentioning_mps": 4,
+        "logs_mentioning_cuda": 0,
+        "logs_mentioning_cpu_device": [],
+        "run_config_device_values": {},
+        "scripts_total": 15,
+        "scripts_with_mps_default": 7,
+        "scripts_forcing_cpu": [],
+        "scripts_mentioning_cuda": [
+          "runs/sae-atlas-217M/atlas/scripts/extract_and_enrich_missing_layers.py"
+        ]
+      },
+      "agent_model": {
+        "recorded_in_run_files": "not recorded",
+        "claimed": "Claude Opus 4.7 (paper/LLM_USAGE_STATEMENT.txt:15, agent-written 2026-05-08 01:19; paper-plos-one/main.tex:1020)",
+        "sessions": [
+          "8fb71b84",
+          "965ec1c8"
+        ],
+        "n_human_prompts": 17
+      },
+      "token_budget": {
+        "max_len": 2048,
+        "max_gene_tokens": 2046,
+        "mean_seq_len": {
+          "K562 500 cells: positions / cells (full_12layer.log '1,019,996 positions', N_ctrl=500)": 2039.992,
+          "TS immune 500 cells, phase 9 (phase9.log 'TS positions: 886,965')": 1773.93
+        },
+        "cells": "500 K562 controls; 500 TS immune (phase 9)"
+      },
+      "input_format": "single cells: <bos> + that cell's genes ranked by median-normalised expression + <eos>; no multi-cell trajectories, no time or query tokens"
+    },
+    "circuit-tracing-217M": {
+      "spec": "pipelines/sparse-autoencoders/02-causal-circuit-tracing.md",
+      "spec_phase_count": 14,
+      "phase_evidence": {
+        "phase 1": {
+          "first": "2026-04-20 02:27:21",
+          "last": "2026-04-20 02:27:21",
+          "n_files": 1,
+          "example": "outputs/circuit_trace.log",
+          "label": "base run"
+        },
+        "phase 6": {
+          "first": "2026-04-20 02:27:21",
+          "last": "2026-04-20 02:27:21",
+          "n_files": 1,
+          "example": "outputs/circuit_trace.log",
+          "label": "base run"
+        },
+        "phase 0": {
+          "first": "2026-04-20 02:27:21",
+          "last": "2026-04-20 02:27:21",
+          "n_files": 1,
+          "example": "outputs/circuit_trace.log",
+          "label": "base run"
+        },
+        "phase 5": {
+          "first": "2026-04-20 02:27:21",
+          "last": "2026-04-20 02:27:21",
+          "n_files": 1,
+          "example": "outputs/circuit_trace.log",
+          "label": "base run"
+        },
+        "phase 9": {
+          "first": "2026-04-20 11:07:21",
+          "last": "2026-04-20 11:13:14",
+          "n_files": 2,
+          "example": "outputs/phase9_knowledge.json",
+          "label": "added later in the same session"
+        },
+        "phase 10": {
+          "first": "2026-04-20 11:11:19",
+          "last": "2026-04-20 11:13:14",
+          "n_files": 2,
+          "example": "outputs/phase10_gene_predictions.json",
+          "label": "added later in the same session"
+        },
+        "phase 11": {
+          "first": "2026-04-20 11:13:10",
+          "last": "2026-04-20 11:13:14",
+          "n_files": 2,
+          "example": "outputs/phase11_crispri_validation.json",
+          "label": "added later in the same session"
+        },
+        "phase 12": {
+          "first": "2026-04-20 11:13:10",
+          "last": "2026-04-20 11:13:14",
+          "n_files": 2,
+          "example": "outputs/phase12_disease_mapping.json",
+          "label": "added later in the same session"
+        },
+        "phase 7": {
+          "first": "2026-04-20 11:13:14",
+          "last": "2026-04-20 11:13:14",
+          "n_files": 1,
+          "example": "outputs/remaining_phases.log",
+          "label": "added later in the same session"
+        }
+      },
+      "coverage": {
+        "spec_phases_run": "phases 0, 1, (2-4 inside the tracing loop), 5, 6 overnight 04-19/20 at source layers L0/L3/L6/L9 (30 features each, 200 cells); phases 7, 9, 10, 11, 12 on 04-20 morning",
+        "not_run_or_reduced": [
+          "Phase 8 (four experimental conditions) not run",
+          "Phase 13 (cross-model comparison) not run as a phase; a summary was written"
+        ],
+        "evidence": [
+          "runs/circuit-tracing-217M/outputs/circuit_trace.log",
+          "runs/circuit-tracing-217M/outputs/remaining_phases.log"
+        ]
+      },
+      "file_write_days": {
+        "2026-04-19": {
+          "first": "22:25",
+          "last": "22:25",
+          "n_files": 1
+        },
+        "2026-04-20": {
+          "first": "02:26",
+          "last": "11:13",
+          "n_files": 9
+        },
+        "2026-05-07": {
+          "first": "17:56",
+          "last": "21:10",
+          "n_files": 9
+        }
+      },
+      "first_file": "2026-04-19 22:25:20",
+      "last_file": "2026-05-07 21:10:10",
+      "compute_hours": {
+        "log_windows": 4.17,
+        "log_windows_first_session": 4.17,
+        "log_windows_later_sessions": 0.0,
+        "activity_sessions_gap30": 4.2,
+        "logged_durations_lower_bound": 4.02,
+        "logged_duration_items": {
+          "trace L0/L3/L6/L9 (sum of 'complete: ... in Ns')": 14473.0
+        },
+        "log_window_list": [
+          "04-19 22:24 -> 02:27",
+          "04-20 11:05 -> 11:13"
+        ],
+        "work_blocks_gap3h": [
+          {
+            "start": "2026-04-19 22:24:22",
+            "end": "2026-04-20 02:27:21",
+            "hours": 4.05
+          },
+          {
+            "start": "2026-04-20 11:05:26",
+            "end": "2026-04-20 11:13:14",
+            "hours": 0.13
+          },
+          {
+            "start": "2026-05-07 17:56:28",
+            "end": "2026-05-07 21:09:39",
+            "hours": 3.22
+          }
+        ],
+        "work_blocks_gap3h_total": 7.4,
+        "paper_table3_agent_hours": "4"
+      },
+      "device": "logs print no device; script default MPS (circuit_trace.py:37)",
+      "device_counts": {
+        "logs_total": 2,
+        "logs_mentioning_mps": 0,
+        "logs_mentioning_cuda": 0,
+        "logs_mentioning_cpu_device": [],
+        "run_config_device_values": {},
+        "scripts_total": 4,
+        "scripts_with_mps_default": 1,
+        "scripts_forcing_cpu": [],
+        "scripts_mentioning_cuda": []
+      },
+      "agent_model": {
+        "recorded_in_run_files": "not recorded",
+        "claimed": "Claude Opus 4.7 (paper/LLM_USAGE_STATEMENT.txt:15, agent-written 2026-05-08 01:19; paper-plos-one/main.tex:1020)",
+        "sessions": [
+          "965ec1c8"
+        ],
+        "n_human_prompts": 4
+      },
+      "token_budget": {
+        "max_len": 2048,
+        "max_gene_tokens": 2046,
+        "mean_seq_len": "not recorded",
+        "cells": "200 K562 controls (circuit_trace.log 'cell 200/200')"
+      },
+      "input_format": "single cells: <bos> + that cell's genes ranked by median-normalised expression + <eos>; no multi-cell trajectories, no time or query tokens"
+    },
+    "exhaustive-mapping-217M": {
+      "spec": "pipelines/sparse-autoencoders/03-exhaustive-mapping-and-steering.md",
+      "spec_phase_count": 14,
+      "phase_evidence": {
+        "experiment 1": {
+          "first": "2026-04-20 14:20:20",
+          "last": "2026-04-20 19:51:10",
+          "n_files": 1002,
+          "example": "outputs/experiment1/feature_F3594.json",
+          "label": "base run"
+        },
+        "phase 3": {
+          "first": "2026-04-20 19:51:10",
+          "last": "2026-04-20 19:51:10",
+          "n_files": 1,
+          "example": "outputs/experiment1.log",
+          "label": "base run"
+        },
+        "phase 1": {
+          "first": "2026-04-20 19:51:10",
+          "last": "2026-04-20 19:51:10",
+          "n_files": 1,
+          "example": "outputs/experiment1.log",
+          "label": "base run"
+        },
+        "phase 0": {
+          "first": "2026-04-20 19:51:10",
+          "last": "2026-04-20 19:51:10",
+          "n_files": 1,
+          "example": "outputs/experiment1.log",
+          "label": "base run"
+        },
+        "phase 4": {
+          "first": "2026-04-20 19:51:10",
+          "last": "2026-04-20 19:51:10",
+          "n_files": 1,
+          "example": "outputs/experiment1.log",
+          "label": "base run"
+        },
+        "experiment 2": {
+          "first": "2026-04-20 20:15:19",
+          "last": "2026-04-23 21:32:25",
+          "n_files": 4,
+          "example": "outputs/experiment2/combinatorial_summary.json",
+          "label": "base run"
+        },
+        "experiment 3": {
+          "first": "2026-04-20 20:23:22",
+          "last": "2026-04-23 20:26:39",
+          "n_files": 20,
+          "example": "outputs/experiment3/switch_features.csv",
+          "label": "base run"
+        },
+        "phase 13 (stage-3 synthesis)": {
+          "first": "2026-04-23 22:19:29",
+          "last": "2026-04-23 22:19:29",
+          "n_files": 1,
+          "example": "outputs/stage3_summary.json",
+          "label": "later session (extension)"
+        }
+      },
+      "coverage": {
+        "spec_phases_run": "Experiment 1 (phases 0-5; 1,000 features at L5), Experiment 2 (phases 6-8; 4 triplets) and Experiment 3 (phases 9-12) on 04-20; Experiment 2 and 3 re-run and phase 13 synthesis on 04-23",
+        "not_run_or_reduced": [
+          "Experiment 1: 1,000 of ~4,928 L5 features (spec: all ~4,065 active)",
+          "Experiment 2: 4 triplets (spec: 8)"
+        ],
+        "evidence": [
+          "runs/exhaustive-mapping-217M/outputs/experiment1.log",
+          "runs/exhaustive-mapping-217M/outputs/experiment2_rerun.log",
+          "runs/exhaustive-mapping-217M/outputs/experiment3_rerun.log",
+          "summaries/exhaustive-mapping-217M-FINAL_SUMMARY.md (section 'Scope reductions')"
+        ]
+      },
+      "file_write_days": {
+        "2026-04-20": {
+          "first": "14:19",
+          "last": "20:39",
+          "n_files": 1007
+        },
+        "2026-04-23": {
+          "first": "19:36",
+          "last": "22:19",
+          "n_files": 26
+        }
+      },
+      "first_file": "2026-04-20 14:19:29",
+      "last_file": "2026-04-23 22:19:59",
+      "compute_hours": {
+        "log_windows": 7.72,
+        "log_windows_first_session": 6.18,
+        "log_windows_later_sessions": 1.54,
+        "activity_sessions_gap30": 8.29,
+        "logged_durations_lower_bound": 5.77,
+        "logged_duration_items": {
+          "experiment 1 (last 'min elapsed')": 19872.0,
+          "experiment 2 rerun (wall-clock)": 900.0
+        },
+        "log_window_list": [
+          "04-20 14:18 -> 19:51",
+          "04-20 20:01 -> 20:39",
+          "04-23 19:36 -> 20:05",
+          "04-23 20:28 -> 21:32"
+        ],
+        "work_blocks_gap3h": [
+          {
+            "start": "2026-04-20 14:18:31",
+            "end": "2026-04-20 20:39:53",
+            "hours": 6.36
+          },
+          {
+            "start": "2026-04-23 19:36:25",
+            "end": "2026-04-23 22:19:29",
+            "hours": 2.72
+          }
+        ],
+        "work_blocks_gap3h_total": 9.08,
+        "paper_table3_agent_hours": "5.5+"
+      },
+      "device": "logs print no device; script default MPS (experiment1_exhaustive.py:34, experiment2_rerun.py:43, experiment3_rerun.py:42)",
+      "device_counts": {
+        "logs_total": 4,
+        "logs_mentioning_mps": 0,
+        "logs_mentioning_cuda": 0,
+        "logs_mentioning_cpu_device": [],
+        "run_config_device_values": {},
+        "scripts_total": 6,
+        "scripts_with_mps_default": 4,
+        "scripts_forcing_cpu": [],
+        "scripts_mentioning_cuda": []
+      },
+      "agent_model": {
+        "recorded_in_run_files": "not recorded",
+        "claimed": "Claude Opus 4.7 (paper/LLM_USAGE_STATEMENT.txt:15, agent-written 2026-05-08 01:19; paper-plos-one/main.tex:1020)",
+        "sessions": [
+          "8fb71b84",
+          "965ec1c8"
+        ],
+        "n_human_prompts": 7
+      },
+      "token_budget": {
+        "max_len": 2048,
+        "max_gene_tokens": 2046,
+        "mean_seq_len": "not recorded",
+        "cells": "K562 controls (exp 1-2); TS immune (exp 3)"
+      },
+      "input_format": "single cells: <bos> + that cell's genes ranked by median-normalised expression + <eos>; no multi-cell trajectories, no time or query tokens"
+    },
+    "manifold-discovery-217M": {
+      "spec": "pipelines/manifold-discovery-extraction-compactification.md",
+      "spec_phase_count": 14,
+      "phase_evidence": {
+        "phase 1": {
+          "first": "2026-05-03 20:29:21",
+          "last": "2026-05-04 04:24:05",
+          "n_files": 16,
+          "example": "outputs/phase1/cells_internal.npz",
+          "label": "base run"
+        },
+        "phase 1a": {
+          "first": "2026-05-03 20:32:44",
+          "last": "2026-05-04 04:24:07",
+          "n_files": 2,
+          "example": "outputs/phase1a.log",
+          "label": "base run"
+        },
+        "phase 4": {
+          "first": "2026-05-03 20:34:35",
+          "last": "2026-05-03 20:34:35",
+          "n_files": 1,
+          "example": "outputs/phase4.log",
+          "label": "base run"
+        },
+        "phase 1b": {
+          "first": "2026-05-03 23:37:42",
+          "last": "2026-05-04 07:41:26",
+          "n_files": 9,
+          "example": "outputs/phase1b_internal.log",
+          "label": "base run"
+        },
+        "phase 5": {
+          "first": "2026-05-03 23:53:26",
+          "last": "2026-05-03 23:53:26",
+          "n_files": 1,
+          "example": "outputs/phase5_anchor.log",
+          "label": "base run"
+        },
+        "phase 9": {
+          "first": "2026-05-04 01:12:59",
+          "last": "2026-05-04 01:12:59",
+          "n_files": 1,
+          "example": "outputs/phase9.log",
+          "label": "base run"
+        },
+        "phase 10": {
+          "first": "2026-05-04 01:27:15",
+          "last": "2026-05-04 01:27:15",
+          "n_files": 1,
+          "example": "outputs/phase10.log",
+          "label": "base run"
+        },
+        "phase 6": {
+          "first": "2026-05-04 01:29:20",
+          "last": "2026-05-04 01:29:20",
+          "n_files": 1,
+          "example": "outputs/phase6.log",
+          "label": "base run"
+        },
+        "phase 11": {
+          "first": "2026-05-04 01:31:43",
+          "last": "2026-05-04 01:31:43",
+          "n_files": 1,
+          "example": "outputs/phase11.log",
+          "label": "base run"
+        },
+        "phase 8": {
+          "first": "2026-05-04 03:18:03",
+          "last": "2026-05-04 03:18:03",
+          "n_files": 1,
+          "example": "outputs/phase8.log",
+          "label": "base run"
+        },
+        "phase 7": {
+          "first": "2026-05-04 03:50:21",
+          "last": "2026-05-05 19:10:16",
+          "n_files": 4,
+          "example": "outputs/phase7_lung_control.log",
+          "label": "base run"
+        },
+        "phase 12": {
+          "first": "2026-05-04 07:54:04",
+          "last": "2026-05-04 07:54:05",
+          "n_files": 4,
+          "example": "reports/phase12_anchor_benchmark_lite.csv",
+          "label": "base run"
+        },
+        "phase 13": {
+          "first": "2026-05-04 08:31:02",
+          "last": "2026-05-04 08:31:02",
+          "n_files": 1,
+          "example": "outputs/phase13_h38_lite.log",
+          "label": "base run"
+        },
+        "phase 3a": {
+          "first": "2026-05-05 17:37:05",
+          "last": "2026-05-05 18:52:52",
+          "n_files": 3,
+          "example": "outputs/phase3a_sweep.log",
+          "label": "later session (extension)"
+        },
+        "phase 14": {
+          "first": "2026-05-07 12:41:31",
+          "last": "2026-05-07 12:41:31",
+          "n_files": 1,
+          "example": "outputs/phase14_sweep3.log",
+          "label": "later session (extension)"
+        },
+        "phase 15": {
+          "first": "2026-05-07 12:51:56",
+          "last": "2026-05-07 15:57:58",
+          "n_files": 6,
+          "example": "reports/phase15_H38_lite_summary.json",
+          "label": "later session (extension)"
+        },
+        "phase 16": {
+          "first": "2026-05-07 16:37:16",
+          "last": "2026-05-07 16:37:18",
+          "n_files": 2,
+          "example": "reports/phase16_graph_dag_rescue.json",
+          "label": "later session (extension)"
+        },
+        "phase 17": {
+          "first": "2026-05-07 16:39:50",
+          "last": "2026-05-07 16:39:52",
+          "n_files": 2,
+          "example": "reports/phase17_cross_axis_h65_h95.json",
+          "label": "later session (extension)"
+        }
+      },
+      "coverage": {
+        "spec_phases_run": "base run 05-03 19:41 to 05-04 08:31: phases 0, 1, 2, 4-13 (12 and 13 at 'LITE' scope) on the pre-set H65 ordering; phase 3a sweeps #1-#2 (12 candidates) on 05-05; sweep #3 (6 candidates) and phases 15-17 (not spec phases) on 05-07",
+        "not_run_or_reduced": [
+          "Phase 12 full cell-level benchmark (scVI/Palantir) deferred; only anchor-level LITE",
+          "Phase 13 H38 at LITE scope",
+          "Phase 3b (author-led closure) has no artefact",
+          "no retirement code; the quality-gate file lists 5 gates, the permutation gate was never computed"
+        ],
+        "evidence": [
+          "runs/manifold-discovery-217M/STATUS.md",
+          "runs/manifold-discovery-217M/reports/quality_gates_spec.json"
+        ]
+      },
+      "file_write_days": {
+        "2026-05-03": {
+          "first": "19:41",
+          "last": "23:59",
+          "n_files": 127
+        },
+        "2026-05-04": {
+          "first": "00:00",
+          "last": "08:31",
+          "n_files": 154
+        },
+        "2026-05-05": {
+          "first": "16:09",
+          "last": "19:11",
+          "n_files": 17
+        },
+        "2026-05-07": {
+          "first": "12:41",
+          "last": "19:39",
+          "n_files": 30
+        }
+      },
+      "first_file": "2026-05-03 19:41:10",
+      "last_file": "2026-05-07 19:39:22",
+      "compute_hours": {
+        "log_windows": 15.21,
+        "log_windows_first_session": 11.92,
+        "log_windows_later_sessions": 3.29,
+        "activity_sessions_gap30": 17.23,
+        "logged_durations_lower_bound": 9.87,
+        "logged_duration_items": {
+          "STATUS.md iteration-log 'done in Ns' entries (one per step)": 35520.0
+        },
+        "log_window_list": [
+          "05-03 19:54 -> 20:32",
+          "05-03 20:34 -> 23:37",
+          "05-03 23:39 -> 03:15",
+          "05-04 03:16 -> 07:18",
+          "05-04 07:18 -> 07:41",
+          "05-04 07:41 -> 07:47",
+          "05-04 08:24 -> 08:31",
+          "05-05 16:09 -> 17:37",
+          "05-05 18:38 -> 18:52",
+          "05-07 11:46 -> 12:41",
+          "05-07 16:00 -> 16:37"
+        ],
+        "work_blocks_gap3h": [
+          {
+            "start": "2026-05-03 19:41:10",
+            "end": "2026-05-04 08:31:02",
+            "hours": 12.83
+          },
+          {
+            "start": "2026-05-05 16:09:27",
+            "end": "2026-05-05 19:11:50",
+            "hours": 3.04
+          },
+          {
+            "start": "2026-05-07 11:46:11",
+            "end": "2026-05-07 12:54:09",
+            "hours": 1.13
+          },
+          {
+            "start": "2026-05-07 15:57:30",
+            "end": "2026-05-07 19:38:41",
+            "hours": 3.69
+          }
+        ],
+        "work_blocks_gap3h_total": 20.69,
+        "paper_table3_agent_hours": "24"
+      },
+      "device": "MPS for forward passes (phase1b logs); CPU for LET heads, head scan, compaction, probes (7 scripts set DEVICE='cpu')",
+      "device_counts": {
+        "logs_total": 33,
+        "logs_mentioning_mps": 8,
+        "logs_mentioning_cuda": 0,
+        "logs_mentioning_cpu_device": [],
+        "run_config_device_values": {},
+        "scripts_total": 23,
+        "scripts_with_mps_default": 2,
+        "scripts_forcing_cpu": [
+          "runs/manifold-discovery-217M/scripts/phase5_let_anchor.py: DEVICE = \"cpu\"  # LET is small (290 anchors, 2464-dim); CPU avoids MPS contention with Pha",
+          "runs/manifold-discovery-217M/scripts/phase9_head_attribution.py: DEVICE = \"cpu\"",
+          "runs/manifold-discovery-217M/scripts/phase11_factor_ablation.py: DEVICE = \"cpu\"",
+          "runs/manifold-discovery-217M/scripts/phase10_compaction_chain.py: DEVICE = \"cpu\"",
+          "runs/manifold-discovery-217M/scripts/phase6_task_probes.py: DEVICE = \"cpu\"",
+          "runs/manifold-discovery-217M/scripts/phase8_zeroshot_transfer.py: DEVICE = \"cpu\"",
+          "runs/manifold-discovery-217M/scripts/phase7_external_validation.py: DEVICE = \"cpu\""
+        ],
+        "scripts_mentioning_cuda": [
+          "runs/manifold-discovery-217M/scripts/phase1bc_hidden_states_and_centroids.py"
+        ]
+      },
+      "agent_model": {
+        "recorded_in_run_files": "not recorded",
+        "claimed": "Claude Opus 4.7 (paper/LLM_USAGE_STATEMENT.txt:15, agent-written 2026-05-08 01:19; paper-plos-one/main.tex:1020)",
+        "sessions": [
+          "5137b56d",
+          "8be46b0f"
+        ],
+        "n_human_prompts": 6
+      },
+      "token_budget": {
+        "max_len": 4096,
+        "max_gene_tokens": 4094,
+        "mean_seq_len": {
+          "per_panel_from_npz": {
+            "internal": {
+              "n_cells_tokenized": 11804,
+              "mean": 2190.3,
+              "median": 2043.0,
+              "max": 4096,
+              "n_at_4096_cap": 924,
+              "frac_at_cap": 0.0783,
+              "max_token_id": 20239
+            },
+            "external": {
+              "n_cells_tokenized": 30000,
+              "mean": 2344.0,
+              "median": 2161.0,
+              "max": 4096,
+              "n_at_4096_cap": 3503,
+              "frac_at_cap": 0.1168,
+              "max_token_id": 20239
+            },
+            "zeroshot": {
+              "n_cells_tokenized": 7796,
+              "mean": 2261.1,
+              "median": 2096.5,
+              "max": 4096,
+              "n_at_4096_cap": 815,
+              "frac_at_cap": 0.1045,
+              "max_token_id": 20239
+            },
+            "lung_control": {
+              "n_cells_tokenized": 2124,
+              "mean": 2395.8,
+              "median": 2219.0,
+              "max": 4096,
+              "n_at_4096_cap": 238,
+              "frac_at_cap": 0.1121,
+              "max_token_id": 20239
+            },
+            "lung_nonhema": {
+              "n_cells_tokenized": 1500,
+              "mean": 2901.5,
+              "median": 2937.5,
+              "max": 4096,
+              "n_at_4096_cap": 384,
+              "frac_at_cap": 0.256,
+              "max_token_id": 20239
+            }
+          },
+          "note": "all tokenized cells of each panel; the forward pass used a stratified subset for external (12,000) and zeroshot (5,120) per STATUS.md"
+        },
+        "cells": "panels of 1,500-30,000 TS cells"
+      },
+      "input_format": "single cells: <bos> + that cell's genes ranked by median-normalised expression + <eos>; no multi-cell trajectories, no time or query tokens"
+    },
+    "longevity-mechinterp-217M": {
+      "spec": "pipelines/longevity-mechinterp-donor-aware.md",
+      "spec_phase_count": 13,
+      "phase_evidence": {
+        "stage 1": {
+          "first": "2026-05-05 16:18:47",
+          "last": "2026-05-07 11:40:12",
+          "n_files": 8,
+          "example": "outputs/stage1_20260505/sampled_obs.csv",
+          "label": "base run"
+        }
+      },
+      "coverage": {
+        "spec_phases_run": "stages 0 (setup) and 1 (frozen probes) on 05-05; gate G1 failed",
+        "not_run_or_reduced": [
+          "stages 2-5 skipped (gated on stage 1)",
+          "stages 6-11 deferred (need AIDA data)",
+          "stage 12 not applicable"
+        ],
+        "evidence": [
+          "runs/longevity-mechinterp-217M/README.md (Status table)",
+          "runs/longevity-mechinterp-217M/FINAL_SUMMARY.md"
+        ]
+      },
+      "file_write_days": {
+        "2026-05-05": {
+          "first": "16:16",
+          "last": "17:50",
+          "n_files": 12
+        },
+        "2026-05-07": {
+          "first": "11:40",
+          "last": "18:50",
+          "n_files": 3
+        }
+      },
+      "first_file": "2026-05-05 16:16:10",
+      "last_file": "2026-05-07 18:50:28",
+      "compute_hours": {
+        "log_windows": 1.54,
+        "log_windows_first_session": 1.54,
+        "log_windows_later_sessions": 0.0,
+        "activity_sessions_gap30": 1.59,
+        "logged_durations_lower_bound": 0.17,
+        "logged_duration_items": {
+          "stage 1 extraction (last elapsed=)": 624.0
+        },
+        "log_window_list": [
+          "05-05 16:18 -> 17:50"
+        ],
+        "work_blocks_gap3h": [
+          {
+            "start": "2026-05-05 16:16:10",
+            "end": "2026-05-05 17:50:53",
+            "hours": 1.58
+          },
+          {
+            "start": "2026-05-07 11:40:12",
+            "end": "2026-05-07 11:40:38",
+            "hours": 0.01
+          },
+          {
+            "start": "2026-05-07 18:50:28",
+            "end": "2026-05-07 18:50:28",
+            "hours": 0.0
+          }
+        ],
+        "work_blocks_gap3h_total": 1.59,
+        "paper_table3_agent_hours": "1.5"
+      },
+      "device": "log prints no device; runtime picks cuda>mps>cpu (setup/maxtoki_adapter.py:34-39), no CUDA on this machine; README says MPS",
+      "device_counts": {
+        "logs_total": 1,
+        "logs_mentioning_mps": 0,
+        "logs_mentioning_cuda": 0,
+        "logs_mentioning_cpu_device": [],
+        "run_config_device_values": {},
+        "scripts_total": 4,
+        "scripts_with_mps_default": 0,
+        "scripts_forcing_cpu": [],
+        "scripts_mentioning_cuda": [
+          "runs/longevity-mechinterp-217M/scripts/run_stage3_sae.py"
+        ]
+      },
+      "agent_model": {
+        "recorded_in_run_files": "not recorded",
+        "claimed": "Claude Opus 4.7 (paper/LLM_USAGE_STATEMENT.txt:15, agent-written 2026-05-08 01:19; paper-plos-one/main.tex:1020)",
+        "sessions": [
+          "58d03bad",
+          "b9b1ea22"
+        ],
+        "n_human_prompts": 3
+      },
+      "token_budget": {
+        "max_len": 1024,
+        "max_gene_tokens": 1022,
+        "mean_seq_len": {
+          "TS immune subset, 2,974 cells (extraction_stats.json mean_seq_len)": 998.2484868863484
+        },
+        "cells": "2,974 TS immune-subset cells"
+      },
+      "input_format": "single cells: <bos> + that cell's genes ranked by median-normalised expression + <eos>; no multi-cell trajectories, no time or query tokens"
+    }
+  },
+  "audit": {
+    "prompts": {
+      "spec_request": "2026-05-07 16:49:46",
+      "apply_request": "2026-05-07 17:30:17",
+      "fix_request": "2026-05-07 17:50:00",
+      "done_question": "2026-05-07 18:47:31",
+      "fix_remaining_request": "2026-05-07 18:48:59"
+    },
+    "files": {
+      "audit_spec": "2026-05-07 16:57:38",
+      "audit_report": "2026-05-07 17:38:25",
+      "completion_v1": "2026-05-07 18:09:25",
+      "completion_v2": "2026-05-07 21:10:46"
+    },
+    "steps": {
+      "spec_writing": {
+        "start": "2026-05-07 16:49:46",
+        "end": "2026-05-07 16:57:38",
+        "minutes": 7.9
+      },
+      "audit_sweep": {
+        "start": "2026-05-07 17:30:17",
+        "end": "2026-05-07 17:38:25",
+        "minutes": 8.1
+      },
+      "repair_round_1": {
+        "start": "2026-05-07 17:50:00",
+        "end": "2026-05-07 18:09:25",
+        "minutes": 19.4,
+        "artefacts": [
+          [
+            "2026-05-07 17:55:00",
+            "runs/sae-atlas-217M/scripts/audit_a4_phase8t_chance_baseline.py"
+          ],
+          [
+            "2026-05-07 17:55:10",
+            "runs/sae-atlas-217M/outputs/phase8t_chance_baseline/"
+          ],
+          [
+            "2026-05-07 17:56:28",
+            "runs/circuit-tracing-217M/scripts/audit_a4_edge_density_chance_baseline.py"
+          ],
+          [
+            "2026-05-07 17:57:31",
+            "runs/circuit-tracing-217M/outputs/edge_density_chance_baseline/"
+          ],
+          [
+            "2026-05-07 17:59:36",
+            "audits/audit_a3_bootstrap_cis.py"
+          ],
+          [
+            "2026-05-07 17:59:48",
+            "audits/bootstrap_cis_summary.json"
+          ],
+          [
+            "2026-05-07 18:01:11",
+            "runs/topology-141-217M/scripts/audit_a1_synthetic_positive_control.py"
+          ],
+          [
+            "2026-05-07 18:01:27",
+            "runs/topology-141-217M/outputs/synthetic_positive_control/"
+          ],
+          [
+            "2026-05-07 18:04:07",
+            "runs/sae-atlas-217M/scripts/audit_a8_positive_tf_case_study.py"
+          ],
+          [
+            "2026-05-07 18:04:27",
+            "runs/sae-atlas-217M/outputs/phase8t_positive_tf_case_study/"
+          ],
+          [
+            "2026-05-07 18:06:29",
+            "runs/topology-141-217M/scripts/audit_a2_groupkfold_h123.py"
+          ],
+          [
+            "2026-05-07 18:07:02",
+            "runs/topology-141-217M/outputs/groupkfold_h123/"
+          ],
+          [
+            "2026-05-07 18:08:22",
+            "audits/audit_a2_groupkfold_status.md"
+          ]
+        ]
+      },
+      "repair_round_2": {
+        "start": "2026-05-07 18:48:59",
+        "end": "2026-05-07 21:10:46",
+        "minutes": 141.8,
+        "artefacts": [
+          [
+            "2026-05-07 18:53:05",
+            "runs/spectral-geometry-217M/scripts/audit_a3_bootstrap_cross_model_pearson.py"
+          ],
+          [
+            "2026-05-07 18:54:30",
+            "runs/spectral-geometry-217M/outputs/phase9b/bootstrap_pearson.json"
+          ],
+          [
+            "2026-05-07 18:56:00",
+            "runs/manifold-discovery-217M/scripts/audit_a3_bootstrap_h65_gates.py"
+          ],
+          [
+            "2026-05-07 19:09:25",
+            "runs/topology-141-217M/scripts/audit_residual9_cross_layer_replication.py"
+          ],
+          [
+            "2026-05-07 19:14:17",
+            "runs/manifold-discovery-217M/reports/external_validation_external_bootstrap.json"
+          ],
+          [
+            "2026-05-07 19:21:20",
+            "runs/sae-atlas-217M/scripts/audit_a8_rerun_phase8t_targeted.py"
+          ],
+          [
+            "2026-05-07 19:25:59",
+            "runs/manifold-discovery-217M/scripts/audit_residual6_cell_level_benchmark_lite.py"
+          ],
+          [
+            "2026-05-07 19:27:00",
+            "runs/topology-141-217M/outputs/phase11_autoloop/iter_04_replication/"
+          ],
+          [
+            "2026-05-07 19:27:36",
+            "runs/topology-141-217M/scripts/audit_residual8_seed_stability.py"
+          ],
+          [
+            "2026-05-07 19:28:28",
+            "runs/topology-141-217M/outputs/seed_stability/"
+          ],
+          [
+            "2026-05-07 19:30:18",
+            "runs/sae-atlas-217M/outputs/phase8t_positive_tf_rerun/"
+          ],
+          [
+            "2026-05-07 19:38:41",
+            "runs/manifold-discovery-217M/outputs/cell_level_benchmark_lite/"
+          ],
+          [
+            "2026-05-07 20:19:30",
+            "runs/circuit-tracing-217M/scripts/audit_a2_groupkfold_crispri.py"
+          ],
+          [
+            "2026-05-07 20:34:01",
+            "runs/topology-141-217M/scripts/audit_residual8_phase0_seed43_lung.py"
+          ],
+          [
+            "2026-05-07 20:49:33",
+            "runs/topology-141-217M/outputs/seed_stability_phase0/"
+          ],
+          [
+            "2026-05-07 21:09:39",
+            "runs/circuit-tracing-217M/outputs/groupkfold_crispri/"
+          ]
+        ]
+      }
+    },
+    "total_from_spec_request_h": 4.35,
+    "total_from_apply_request_h": 3.67,
+    "repair_artefacts_outside_rounds": [],
+    "model_forward_passes_during_repair": [
+      "runs/topology-141-217M/outputs/seed_stability_phase0/seed43/lung/run_config.json (device mps, wall_seconds 893.5)",
+      "runs/sae-atlas-217M/outputs/phase8t_positive_tf_rerun/run.log (device=mps)",
+      "runs/manifold-discovery-217M/scripts/audit_residual6_cell_level_benchmark_lite.py (MaxToki forward on MPS)"
+    ],
+    "session": "2a9284b9 (the same session also ran the topology-141 extensions earlier that day)",
+    "n_human_prompts_in_session_that_day": 11,
+    "n_audit_prompts": 5
+  },
+  "human_supervision": {
+    "source": "~/.claude/history.jsonl (typed prompts only)",
+    "n_prompts_maxtoki_sessions_apr15_may8": 97,
+    "n_deployment_prompts_excl_spec_authoring_and_paper": 73,
+    "by_category": {
+      "spec_authoring": 14,
+      "setup": 3,
+      "session_admin": 11,
+      "continue": 21,
+      "run_request": 9,
+      "docs": 2,
+      "scope_check": 9,
+      "stop_decision": 1,
+      "atlas_webapp": 10,
+      "status_check": 1,
+      "scope_decision": 1,
+      "audit": 5,
+      "paper": 10
+    },
+    "per_day": {
+      "2026-04-15": {
+        "all_maxtoki_session_prompts": 22,
+        "deployment_prompts": 8,
+        "by_category": {
+          "spec_authoring": 14,
+          "setup": 3,
+          "session_admin": 2,
+          "continue": 2,
+          "run_request": 1
+        },
+        "sessions": [
+          "17b19da0",
+          "965ec1c8"
+        ],
+        "first": "18:31",
+        "last": "23:57"
+      },
+      "2026-04-16": {
+        "all_maxtoki_session_prompts": 3,
+        "deployment_prompts": 3,
+        "by_category": {
+          "continue": 2,
+          "run_request": 1
+        },
+        "sessions": [
+          "965ec1c8"
+        ],
+        "first": "10:52",
+        "last": "18:57"
+      },
+      "2026-04-17": {
+        "all_maxtoki_session_prompts": 8,
+        "deployment_prompts": 8,
+        "by_category": {
+          "docs": 1,
+          "scope_check": 3,
+          "continue": 2,
+          "stop_decision": 1,
+          "run_request": 1
+        },
+        "sessions": [
+          "965ec1c8"
+        ],
+        "first": "10:15",
+        "last": "21:35"
+      },
+      "2026-04-18": {
+        "all_maxtoki_session_prompts": 1,
+        "deployment_prompts": 1,
+        "by_category": {
+          "continue": 1
+        },
+        "sessions": [
+          "965ec1c8"
+        ],
+        "first": "14:40",
+        "last": "14:40"
+      },
+      "2026-04-19": {
+        "all_maxtoki_session_prompts": 11,
+        "deployment_prompts": 11,
+        "by_category": {
+          "continue": 3,
+          "atlas_webapp": 7,
+          "run_request": 1
+        },
+        "sessions": [
+          "965ec1c8"
+        ],
+        "first": "13:10",
+        "last": "22:20"
+      },
+      "2026-04-20": {
+        "all_maxtoki_session_prompts": 4,
+        "deployment_prompts": 4,
+        "by_category": {
+          "scope_check": 2,
+          "continue": 1,
+          "run_request": 1
+        },
+        "sessions": [
+          "965ec1c8"
+        ],
+        "first": "11:03",
+        "last": "14:15"
+      },
+      "2026-04-23": {
+        "all_maxtoki_session_prompts": 10,
+        "deployment_prompts": 10,
+        "by_category": {
+          "session_admin": 5,
+          "scope_check": 2,
+          "continue": 2,
+          "status_check": 1
+        },
+        "sessions": [
+          "8fb71b84"
+        ],
+        "first": "19:27",
+        "last": "20:45"
+      },
+      "2026-04-24": {
+        "all_maxtoki_session_prompts": 1,
+        "deployment_prompts": 1,
+        "by_category": {
+          "docs": 1
+        },
+        "sessions": [
+          "8fb71b84"
+        ],
+        "first": "13:49",
+        "last": "13:49"
+      },
+      "2026-05-03": {
+        "all_maxtoki_session_prompts": 7,
+        "deployment_prompts": 7,
+        "by_category": {
+          "atlas_webapp": 3,
+          "run_request": 3,
+          "scope_decision": 1
+        },
+        "sessions": [
+          "3af9282c",
+          "8be46b0f",
+          "8fb71b84"
+        ],
+        "first": "18:55",
+        "last": "19:51"
+      },
+      "2026-05-05": {
+        "all_maxtoki_session_prompts": 5,
+        "deployment_prompts": 5,
+        "by_category": {
+          "continue": 3,
+          "scope_check": 1,
+          "run_request": 1
+        },
+        "sessions": [
+          "3af9282c",
+          "8be46b0f",
+          "8fb71b84",
+          "b9b1ea22"
+        ],
+        "first": "16:07",
+        "last": "16:10"
+      },
+      "2026-05-07": {
+        "all_maxtoki_session_prompts": 19,
+        "deployment_prompts": 15,
+        "by_category": {
+          "session_admin": 4,
+          "continue": 5,
+          "scope_check": 1,
+          "audit": 5,
+          "paper": 4
+        },
+        "sessions": [
+          "2a9284b9",
+          "5137b56d",
+          "58d03bad",
+          "862b8d39"
+        ],
+        "first": "11:33",
+        "last": "23:51"
+      },
+      "2026-05-08": {
+        "all_maxtoki_session_prompts": 6,
+        "deployment_prompts": 0,
+        "by_category": {
+          "paper": 6
+        },
+        "sessions": [
+          "862b8d39"
+        ],
+        "first": "00:13",
+        "last": "01:30"
+      }
+    },
+    "by_pipeline": {
+      "setup": 4,
+      "attention-grn": 4,
+      "spectral-geometry": 8,
+      "sae-atlas": 17,
+      "circuit-tracing": 4,
+      "exhaustive-mapping": 7,
+      "topology-141": 5,
+      "manifold-discovery": 6,
+      "longevity": 3,
+      "audit": 5
+    },
+    "excluded_sessions_same_folder": {
+      "6fa7aa59": "AIDO.Cell project (different model)",
+      "9c9a1e82": "journal correspondence for an unrelated paper",
+      "91ff0dbe": "download of a different model"
+    },
+    "supervision_time": "NOT LOGGED. history.jsonl records when a prompt was typed, not how long the person read, checked or thought. No stopwatch or time log exists.",
+    "paper_claim": "about 15 hours of human supervision (paper-plos-one/main.tex:224, 575, 661, 1697): no record supports or refutes it"
+  },
+  "topology_141": {
+    "readme_scope_line": [
+      "the **headline backbone** of the pipeline end-to-end on MaxToki-217M:"
+    ],
+    "summary_not_rescreened_line": [
+      "environment. The 130+ \"explorer\" hypotheses beyond the headline backbone"
+    ],
+    "numbered_hypotheses_named_in_scripts": [
+      1,
+      3,
+      13,
+      16,
+      17,
+      20,
+      23,
+      24,
+      30,
+      32,
+      47,
+      69,
+      70,
+      91,
+      116,
+      123,
+      124,
+      127,
+      130,
+      136,
+      138,
+      139,
+      141
+    ],
+    "n_numbered_hypotheses_named_in_scripts": 23,
+    "n_numbered_hypotheses_with_code": 21,
+    "autoloop_extra_hypotheses": [
+      "H-orc",
+      "H-hyp",
+      "H-coex-res",
+      "H-cross",
+      "H-tokfreq",
+      "H-pooled"
+    ],
+    "id_1_note": "ID 1 matches both hypothesis H01 (tested, phase5) and the homology dimension 'H1' (not a hypothesis)",
+    "ids_only_referenced_not_tested": {
+      "H30": "named as the source-paper companion of H-hyp (phase11_autoloop.py:13)",
+      "H136": "named as the source of a support matrix that was not rebuilt (phase10_h139_sectional_anisotropy.py:25)"
+    },
+    "immune_domain": {
+      "reused": true,
+      "n_gene_pool": 350,
+      "n_layer_states": 12,
+      "hidden_size": 1232,
+      "n_genes_with_obs": 350,
+      "pca_dim": 20,
+      "source": "<REPO_ROOT>/projects/maxtoki/runs/spectral-geometry-217M/outputs/phase0"
+    },
+    "new_domain_extractions": {
+      "lung": {
+        "n_cells": 1500,
+        "max_len": 2048,
+        "device": "mps",
+        "seed": 42,
+        "wall_seconds": 1182.4418432712555
+      },
+      "external_lung": {
+        "n_cells": 1500,
+        "max_len": 2048,
+        "device": "mps",
+        "seed": 42,
+        "wall_seconds": 1100.0259981155396
+      }
+    },
+    "strict_max_null": {
+      "layers": [
+        3,
+        6,
+        9
+      ],
+      "domains": [
+        "external_lung",
+        "immune",
+        "lung"
+      ],
+      "metrics": [
+        "diffusion_t4",
+        "euclidean",
+        "geodesic",
+        "triangle_defect"
+      ],
+      "n_tests": 36,
+      "n_pass": 4,
+      "code_line": [
+        174
+      ],
+      "n_layer_states_available": 12
+    },
+    "dual_axis_cv": {
+      "scope": "H123 motif AUROC under 4 CV schemes (no-grouping, GroupKFold-by-TF, GroupKFold-by-target, dual-axis disjoint), immune domain \u00d7 12 layers",
+      "n_folds": 5,
+      "domains": [
+        "immune"
+      ],
+      "layers": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "n_test_pairs_dual_per_layer": [
+        76
+      ],
+      "auc_dual_axis_range": [
+        0.448,
+        0.476
+      ],
+      "hypothesis": "H123 only",
+      "written": "2026-05-07 18:07:02"
+    },
+    "verification_2026_10_01": {
+      "layer_states": "12 layer states = embedding output + 11 transformer layers (setup/MaxToki-217M-HF/config.json num_hidden_layers = 11); the strict max-null used 3 of them (3, 6, 9).",
+      "single_axis_splits_in_base_run": "The base run did make held-out splits: Phase 1 built TF-disjoint and target-disjoint splits (3 seeds), and Phase 9 (H91) used them one axis at a time (scripts/phase9_stability_selection.py:150). Its docstring says 'dual disjoint', but the code never holds out both at once. The only both-at-once test is the audit GroupKFold for H123.",
+      "strict_max_null_recheck": {
+        "n": 36,
+        "layers": [
+          "3",
+          "6",
+          "9"
+        ],
+        "n_pass": 4
+      },
+      "dual_axis_recheck": {
+        "scope": "H123 motif AUROC under 4 CV schemes (no-grouping, GroupKFold-by-TF, GroupKFold-by-target, dual-axis disjoint), immune domain \u00d7 12 layers",
+        "layers": 12,
+        "domains": [
+          "immune"
+        ],
+        "pairs": [
+          76
+        ],
+        "auc": [
+          0.4478887168902649,
+          0.4756664946680427
+        ]
+      }
+    }
+  },
+  "loops": {
+    "spectral-geometry-217M": {
+      "kind": "two-agent autoloop driver (executor + brainstormer), separate CLI processes",
+      "driver": "runs/spectral-geometry-217M/autoloop/run_maxtoki_autoloop.py",
+      "model_default": "sonnet",
+      "driver_log_first_line": "[2026-05-05T14:15:34.231107+00:00] autoloop start  range=iter_0002..iter_0009  model=sonnet  timeout=1800s",
+      "driver_log_last_line": "[2026-05-05T15:51:50.771019+00:00] aborting: 2 consecutive executor failures",
+      "n_spawns": 6,
+      "n_spawns_with_model_sonnet": 6,
+      "stop_rule_in_code": "stop after 2 consecutive executor failures (failure = missing report / missing or empty hypothesis JSON / no data file); also STOP file or max iteration",
+      "stop_rule_lines": [
+        258
+      ],
+      "retirement_in_code": "none: the driver passes the `retired` flags back into the next prompt but never acts on them",
+      "n_hypotheses_in_screens": 6,
+      "n_marked_retired": 0,
+      "iterations_run": [
+        "iter_0002",
+        "iter_0003",
+        "iter_0004",
+        "iter_0005"
+      ],
+      "outcome": "aborted after 2 consecutive executor failures; both failures were API connection errors",
+      "api_errors": [
+        "API Error: Unable to connect to API (UNKNOWN_CERTIFICATE_VERIFICATION_ERROR)",
+        "API Error: Unable to connect to API (ECONNRESET)",
+        "API Error: Unable to connect to API (ECONNRESET)"
+      ],
+      "reported_in_pipeline_summary": false,
+      "summary_phase10_line": [
+        "- **Phase 10** (autonomous two-agent hypothesis-screening loop): NOT run. The full 40-80-iteration agent-driven exploration is compute-heavy and the existing `r"
+      ],
+      "verification_2026_10_01": {
+        "call_outcomes": [
+          "iter_0002 executor done  rc=0  dt=925s  valid=True  fails=[]",
+          "iter_0002 brainstormer done  rc=0  dt=447s",
+          "iter_0003 executor done  rc=124  dt=1800s  valid=True  fails=[]",
+          "iter_0003 brainstormer done  rc=1  dt=777s",
+          "iter_0004 executor done  rc=1  dt=913s  valid=False  fails=['missing executor_iteration_re",
+          "iter_0005 executor done  rc=1  dt=884s  valid=False  fails=['missing executor_iteration_re"
+        ],
+        "api_errors": {
+          "iter_0003_brainstormer.log": [
+            "API Error: Unable to connect to API (UNKNOWN_CERTIFICATE_VERIFICATION_ERROR)"
+          ],
+          "iter_0004.log": [
+            "API Error: Unable to connect to API (ECONNRESET)"
+          ],
+          "iter_0005.log": [
+            "API Error: Unable to connect to API (ECONNRESET)"
+          ]
+        },
+        "note": "Of the 6 Sonnet calls, 2 finished normally (iter_0002), 1 hit the 1,800 s timeout but left valid files (iter_0003 executor), and 3 failed with API connection errors (iter_0003 brainstormer, iter_0004 and iter_0005 executors). The driver comment at run_maxtoki_autoloop.py:46 reads 'cheaper than opus for an iterative loop'. That hints the authoring agent treated Opus as the default, but it names no version and is not a record of the model used."
+      }
+    },
+    "topology-141-217M": {
+      "kind": "one Python script with 6 hard-coded hypotheses; no LLM call inside the loop",
+      "script": "runs/topology-141-217M/scripts/phase11_autoloop.py",
+      "decision_rule_lines": [
+        98,
+        99,
+        100
+      ],
+      "stop_rule": "3 consecutive RETIRE",
+      "stop_rule_line": [
+        538
+      ],
+      "coded_outcome": {
+        "n_iterations": 6,
+        "n_promote": 0,
+        "n_inconclusive": 5,
+        "n_retire": 1
+      },
+      "stop_rule_fired": false,
+      "manual_review_changed": [
+        [
+          "iter_03 H-coex-res",
+          "INCONCLUSIVE",
+          "RETIRE"
+        ],
+        [
+          "iter_04 H-cross",
+          "INCONCLUSIVE",
+          "**NOVEL POSITIVE**"
+        ],
+        [
+          "iter_05 H-tokfreq",
+          "INCONCLUSIVE",
+          "RETIRE"
+        ],
+        [
+          "iter_06 H-pooled",
+          "RETIRE_no_signal",
+          "(untestable)"
+        ]
+      ],
+      "n_changed": 4
+    },
+    "manifold-discovery-217M": {
+      "kind": "Claude Code /loop wake-ups reading and updating a hand-kept STATUS.md tracker",
+      "status_line_3": "This file is the loop iteration tracker. Each `/loop` wake-up reads this, picks the next unfinished sub-task, executes it, then updates this file.",
+      "iterations_dir_files": 0,
+      "scripts_mentioning_retire": 0,
+      "n_scripts": 23,
+      "stop_statements": [
+        "**Run EXTENDED + STOPPED:** 2026-05-05 \u2014 Sweeps #1 (Hamming, 6) + #2 (ordinal, 6) + Phase 7 external validation for H95 ",
+        "See FINAL_SUMMARY \u00a714-15 for full registry + interpretation. Loop ending."
+      ]
+    },
+    "others": "attention-grn, sae-atlas, circuit-tracing, exhaustive-mapping, longevity: no loop code; the agent ran phases in one chat session and the human asked 'is anything remaining?' / 'proceed' (see human_prompts.json categories scope_check / continue)"
+  },
+  "h115_h118": {
+    "pattern": "\\bH11[58]\\b",
+    "per_folder": {
+      "projects/maxtoki/runs": {
+        "hits": 0,
+        "files": []
+      },
+      "projects/maxtoki/summaries": {
+        "hits": 0,
+        "files": []
+      },
+      "projects/maxtoki/audits": {
+        "hits": 0,
+        "files": []
+      },
+      "projects/maxtoki/setup": {
+        "hits": 0,
+        "files": []
+      },
+      "pipelines": {
+        "hits": 0,
+        "files": []
+      },
+      "projects/maxtoki/paper": {
+        "hits": 2,
+        "files": [
+          "projects/maxtoki/paper/main.tex"
+        ]
+      },
+      "projects/maxtoki/paper-biosystems": {
+        "hits": 4,
+        "files": [
+          "projects/maxtoki/paper-biosystems/main.tex",
+          "projects/maxtoki/paper-biosystems/README.md"
+        ]
+      },
+      "projects/maxtoki/paper-cbac": {
+        "hits": 2,
+        "files": [
+          "projects/maxtoki/paper-cbac/main.tex"
+        ]
+      },
+      "projects/maxtoki/paper-deanon": {
+        "hits": 2,
+        "files": [
+          "projects/maxtoki/paper-deanon/main.tex"
+        ]
+      },
+      "projects/maxtoki/paper-jbi": {
+        "hits": 2,
+        "files": [
+          "projects/maxtoki/paper-jbi/main.tex"
+        ]
+      },
+      "projects/maxtoki/paper-plos-one": {
+        "hits": 2,
+        "files": [
+          "projects/maxtoki/paper-plos-one/main.tex"
+        ]
+      }
+    },
+    "plos_main_tex_lines": [
+      1616
+    ],
+    "note": "paper-plos-one/revision/ (this revision's own investigation notes) is excluded",
+    "manifold_hypothesis_ids_in_status_and_summary": [
+      38,
+      112
+    ],
+    "verification_2026_10_01": {
+      "hits_outside_maxtoki": {
+        "projects/maxtoki/runs": 0,
+        "projects/maxtoki/summaries": 0,
+        "projects/maxtoki/audits": 0,
+        "projects/maxtoki/setup": 0,
+        "pipelines": 0,
+        "repos": 39,
+        "references": 0,
+        "prompts": 0
+      },
+      "example_files": [
+        "repos/topology-biomechinterp2/iterations/iter_0044/executor_hypothesis_screen.json",
+        "repos/topology-biomechinterp2/iterations/iter_0044/executor_iteration_report.md",
+        "repos/topology-biomechinterp2/iterations/iter_0044/executor_last_message.md",
+        "repos/topology-biomechinterp2/iterations/iter_0044/executor_next_steps.md",
+        "repos/topology-biomechinterp2/iterations/iter_0044/h115_tangent_acceleration_by_domain_split.csv",
+        "repos/topology-biomechinterp2/iterations/iter_0044/h115_tangent_acceleration_null_summary.csv"
+      ],
+      "prior_repo_iter0045_lines": [
+        "5. Tangent-acceleration formulation (`H115`) -> `retire_now`.",
+        "7. Signed motif-community (`H118`) -> `prioritize_hardening`.",
+        "| `N600` | module_structure + biological anchoring | The signed TRRUST motif-community eff",
+        "1. High-probability discovery candidate: `N600` (strict hardening of `H118`)."
+      ],
+      "note": "CORRECTION: H115 and H118 are in no MaxToki file, but they are not 'only in paper drafts'. They are hypothesis ids of the earlier topology study's own autonomous run, in the pinned reference repo repos/topology-biomechinterp2/iterations/iter_0044-0053. There, iter_0045 marks H115 'retire_now' and H118 'prioritize_hardening' (not retired). So the paper's example comes from a different, earlier run.",
+      "evidence": "checks/d12_deployment_facts/verification/out/v4_facts.json"
+    }
+  },
+  "checkpoints": {
+    "maxtoki_revision": {
+      "local_download_time": "2026-04-16 00:00:58",
+      "hf_commit_that_was_main_at_download": {
+        "id": "21aa7b7f844c146c16fb79ffb3aa75d9b07a3d77",
+        "date": "2026-04-02T04:29:01.000Z",
+        "title": "add manuscript link"
+      },
+      "later_commits": [
+        {
+          "id": "581b94c2ba9c7c82761e1ec6eb6b8cf5fba0f8d7",
+          "date": "2026-04-23T02:32:25.000Z",
+          "title": "upload config.json for tracking"
+        },
+        {
+          "id": "9fe1a7a3bb98dd91e5beb1c6576671c606499720",
+          "date": "2026-04-23T02:30:24.000Z",
+          "title": "upload config.json for tracking 217M"
+        },
+        {
+          "id": "bf6179a6bc7ed09bb5e4b83cbe8f0a8b236f632a",
+          "date": "2026-04-23T02:29:54.000Z",
+          "title": "upload config.json for tracking 1B"
+        }
+      ],
+      "all_weight_and_config_files_match_21aa7b7f": true,
+      "note": "post-hoc pin: no revision was written down at download time; the download used resolve/main",
+      "verification_2026_10_01": {
+        "same_bytes_at_revisions": {
+          "1523f7c2": {
+            "MaxToki-1B-HF": "folder absent at this revision",
+            "MaxToki-217M-HF": true
+          },
+          "21aa7b7f": {
+            "MaxToki-1B-HF": true,
+            "MaxToki-217M-HF": true
+          },
+          "e7041eb7": {
+            "MaxToki-1B-HF": true,
+            "MaxToki-217M-HF": true
+          },
+          "main": {
+            "MaxToki-1B-HF": true,
+            "MaxToki-217M-HF": true
+          }
+        },
+        "note": "The hash match does not single out 21aa7b7f. The 217M files are byte-identical at 1523f7c2 (2026-03-28), e7041eb7 (2026-03-31), 21aa7b7f and today's main; the 1B files at e7041eb7, 21aa7b7f and main (the 1B folder does not exist at 1523f7c2). 21aa7b7f is chosen because it was main when the files were downloaded (2026-04-16). Any of these revisions gives the same weights.",
+        "evidence": "checks/d12_deployment_facts/verification/out/v2_hashes.json; verification/inputs/hf_maxtoki_tree_*.json"
+      }
+    },
+    "maxtoki_files": {
+      "MaxToki-217M-HF/model.safetensors": {
+        "path": "<REPO_ROOT>/projects/maxtoki/setup/MaxToki-217M-HF/model.safetensors",
+        "size": 867797760,
+        "mtime": "2026-04-16 00:00:58",
+        "sha256": "9da1fbf8cc489486d158d4653a14e3f44ac49c75a8e1480566eab0e9f99cf898",
+        "hf_21aa7b7f": {
+          "size": 867797760,
+          "lfs_sha256": "9da1fbf8cc489486d158d4653a14e3f44ac49c75a8e1480566eab0e9f99cf898",
+          "blob_sha1": "b8f08f202e3f4c5ddf758bf7e36b965c6ed8f991"
+        },
+        "hf_main_2026_10_01": {
+          "size": 867797760,
+          "lfs_sha256": "9da1fbf8cc489486d158d4653a14e3f44ac49c75a8e1480566eab0e9f99cf898",
+          "blob_sha1": "b8f08f202e3f4c5ddf758bf7e36b965c6ed8f991"
+        },
+        "matches_hf_21aa7b7f": true
+      },
+      "MaxToki-217M-HF/config.json": {
+        "path": "<REPO_ROOT>/projects/maxtoki/setup/MaxToki-217M-HF/config.json",
+        "size": 676,
+        "mtime": "2026-04-16 00:00:27",
+        "sha256": "a4effbdf27969b7cc4d6cce34fc24b3f2134886946a19e7999c3ebd08babf9bd",
+        "git_blob_sha1": "d55a18cd382c0eff3c9fca48bd88df7c356e2f34",
+        "hf_21aa7b7f": {
+          "size": 676,
+          "lfs_sha256": null,
+          "blob_sha1": "d55a18cd382c0eff3c9fca48bd88df7c356e2f34"
+        },
+        "hf_main_2026_10_01": {
+          "size": 676,
+          "lfs_sha256": null,
+          "blob_sha1": "d55a18cd382c0eff3c9fca48bd88df7c356e2f34"
+        },
+        "matches_hf_21aa7b7f": true
+      },
+      "MaxToki-217M-HF/generation_config.json": {
+        "path": "<REPO_ROOT>/projects/maxtoki/setup/MaxToki-217M-HF/generation_config.json",
+        "size": 132,
+        "mtime": "2026-04-16 00:00:27",
+        "sha256": "3ecb636c810f6805b0534c7e8f6df2c53788726ec81b4b6372de0fed944d458e",
+        "git_blob_sha1": "f718cbb634ad6adf7cee66f5801a429128fef391",
+        "hf_21aa7b7f": {
+          "size": 132,
+          "lfs_sha256": null,
+          "blob_sha1": "f718cbb634ad6adf7cee66f5801a429128fef391"
+        },
+        "hf_main_2026_10_01": {
+          "size": 132,
+          "lfs_sha256": null,
+          "blob_sha1": "f718cbb634ad6adf7cee66f5801a429128fef391"
+        },
+        "matches_hf_21aa7b7f": true
+      },
+      "MaxToki-1B-HF/model.safetensors": {
+        "path": "<REPO_ROOT>/projects/maxtoki/setup/MaxToki-1B-HF/model.safetensors",
+        "size": 4196167128,
+        "mtime": "2026-04-16 14:03:24",
+        "sha256": "96c6c8f9d61732c9bedfc37a9cfd937359e6ce0bfa860526646d101815a242e6",
+        "hf_21aa7b7f": {
+          "size": 4196167128,
+          "lfs_sha256": "96c6c8f9d61732c9bedfc37a9cfd937359e6ce0bfa860526646d101815a242e6",
+          "blob_sha1": "39ae124dfcd68b65d98bf814a76a9e3cd3212007"
+        },
+        "hf_main_2026_10_01": {
+          "size": 4196167128,
+          "lfs_sha256": "96c6c8f9d61732c9bedfc37a9cfd937359e6ce0bfa860526646d101815a242e6",
+          "blob_sha1": "39ae124dfcd68b65d98bf814a76a9e3cd3212007"
+        },
+        "matches_hf_21aa7b7f": true
+      },
+      "MaxToki-1B-HF/config.json": {
+        "path": "<REPO_ROOT>/projects/maxtoki/setup/MaxToki-1B-HF/config.json",
+        "size": 823,
+        "mtime": "2026-04-16 14:01:46",
+        "sha256": "23358e6663b32e796dec2818a1d9cff97eb9e150d259850ba26b1bf2144eba9e",
+        "git_blob_sha1": "7b0e9401b2fb5c1a210fb1662b9ed3846308ab89",
+        "hf_21aa7b7f": {
+          "size": 823,
+          "lfs_sha256": null,
+          "blob_sha1": "7b0e9401b2fb5c1a210fb1662b9ed3846308ab89"
+        },
+        "hf_main_2026_10_01": {
+          "size": 823,
+          "lfs_sha256": null,
+          "blob_sha1": "7b0e9401b2fb5c1a210fb1662b9ed3846308ab89"
+        },
+        "matches_hf_21aa7b7f": true
+      },
+      "MaxToki-1B-HF/generation_config.json": {
+        "path": "<REPO_ROOT>/projects/maxtoki/setup/MaxToki-1B-HF/generation_config.json",
+        "size": 111,
+        "mtime": "2026-04-16 14:01:47",
+        "sha256": "b10a73d1785bb92ee3ff879dc114a6cb3adcf84caa3a4d31973b301cf059ddec",
+        "git_blob_sha1": "9142117462ac69b2ff300000fe68d619fa7674ab",
+        "hf_21aa7b7f": {
+          "size": 111,
+          "lfs_sha256": null,
+          "blob_sha1": "9142117462ac69b2ff300000fe68d619fa7674ab"
+        },
+        "hf_main_2026_10_01": {
+          "size": 111,
+          "lfs_sha256": null,
+          "blob_sha1": "9142117462ac69b2ff300000fe68d619fa7674ab"
+        },
+        "matches_hf_21aa7b7f": true
+      }
+    },
+    "geneformer": {
+      "revision": "05fcbeb8a27d49e0a7a4349152202ee2c1cbfd28",
+      "hf_lastModified": "2026-02-06T04:37:36.000Z",
+      "cache_refs_main_now": "04c2b2e84da7c0f385c3f9ad8f3ec24bab6650e5",
+      "files": {
+        "Geneformer-V2-316M/model.safetensors": {
+          "path": "<HF_CACHE>/hub/models--ctheodoris--Geneformer/snapshots/05fcbeb8a27d49e0a7a4349152202ee2c1cbfd28/Geneformer-V2-316M/model.safetensors",
+          "size": 1265455076,
+          "mtime": "2026-02-16 03:00:39",
+          "sha256": "965ceccea81953d362081ef3843560a0e4fef88d396c28017881f1e94b1246f3",
+          "hf_05fcbeb8": {
+            "size": 1265455076,
+            "lfs_sha256": "965ceccea81953d362081ef3843560a0e4fef88d396c28017881f1e94b1246f3",
+            "blob_sha1": "f9c0c25c4a1df80ddc1455def715a9856152882c"
+          },
+          "cache_blob_name": "965ceccea81953d362081ef3843560a0e4fef88d396c28017881f1e94b1246f3",
+          "matches_hf_05fcbeb8": true
+        },
+        "Geneformer-V2-316M/config.json": {
+          "path": "<HF_CACHE>/hub/models--ctheodoris--Geneformer/snapshots/05fcbeb8a27d49e0a7a4349152202ee2c1cbfd28/Geneformer-V2-316M/config.json",
+          "size": 591,
+          "mtime": "2026-02-16 03:00:22",
+          "sha256": "2cc4af3442644e84af71814a607b61c958d7b4e5ebde6791ab77b5f534ac6f6e",
+          "git_blob_sha1": "6bc648aa565eabb748a6a43ee4def5032a0d5237",
+          "hf_05fcbeb8": {
+            "size": 591,
+            "lfs_sha256": null,
+            "blob_sha1": "6bc648aa565eabb748a6a43ee4def5032a0d5237"
+          },
+          "cache_blob_name": "6bc648aa565eabb748a6a43ee4def5032a0d5237",
+          "matches_hf_05fcbeb8": true
+        }
+      },
+      "referenced_by": {
+        "spectral-geometry-217M": [
+          "runs/spectral-geometry-217M/autoloop/iterations/iter_0003/h3del_lid_confound.py",
+          "runs/spectral-geometry-217M/scripts/audit_a3_bootstrap_cross_model_pearson.py",
+          "runs/spectral-geometry-217M/scripts/phase9b_cross_model.py"
+        ],
+        "topology-141-217M": [
+          "runs/topology-141-217M/scripts/phase14_cross_model_cca.py"
+        ]
+      },
+      "verification_2026_10_01": {
+        "hf_main_V2_316M_model_safetensors_lfs_sha256": "965ceccea81953d362081ef3843560a0e4fef88d396c28017881f1e94b1246f3",
+        "same_as_05fcbeb8": true,
+        "note": "CORRECTION: today's HF main (and the local 04c2b2e8 snapshot) serve the same Geneformer-V2-316M model.safetensors (sha256 965ceccea819...) as 05fcbeb8. The ledger's earlier line \"'latest' would not reproduce\" was wrong for the weights. Pinning 05fcbeb8 is still advised because main can change.",
+        "evidence": "checks/d12_deployment_facts/verification/inputs/hf_geneformer_tree_main_V2-316M.json"
+      }
+    },
+    "scgpt": {
+      "checkpoint": {
+        "path": "<DATA_ROOT>/biodyn-work/single_cell_mechinterp/external/scGPT_checkpoints/whole-human/best_model.pt",
+        "size": 205385258,
+        "mtime": "2023-06-23 17:54:42",
+        "sha256": "6cb5d451ab5c4b33eb673adbe4fddc61d2389df1b89b7651a9fe2e557572b922"
+      },
+      "args_json": {
+        "path": "<DATA_ROOT>/biodyn-work/single_cell_mechinterp/external/scGPT_checkpoints/whole-human/args.json",
+        "size": 1300,
+        "mtime": "2026-01-11 02:06:30",
+        "sha256": "c18e075e018140cb8b2d9029387b9de26607a5ce6a8ccabd6ead70cd76b95d60",
+        "git_blob_sha1": "44b52cb4243e326f4fffaf7674d1639c7d3d2a21"
+      },
+      "args_save_dir": "/scratch/ssd004/datasets/cellxgene/save/cellxgene_census_human-May23-08-36-2023",
+      "derived_embeddings": {
+        "path": "<DATA_ROOT>/biodyn-work/subproject_53_scgpt_gpl_replication/embeddings/scgpt_whole_human_gene_embeddings.pt",
+        "size": 249944756,
+        "mtime": "2026-04-08 22:14:35",
+        "sha256": "b41289b862126ccd8db166e2688e08bcbe4149c87a9a177f8409b4723bf33f4b"
+      },
+      "referenced_by": {
+        "topology-141-217M": [
+          "runs/topology-141-217M/scripts/phase4_scgpt_cross_model.py"
+        ]
+      },
+      "note": "scGPT is not on HF; the run used only a gene-embedding table derived from the whole-human checkpoint"
+    },
+    "tokenizer_and_medians": {
+      "MaxToki token_dictionary.json": {
+        "path": "<REPO_ROOT>/projects/maxtoki/setup/token_dictionary.json",
+        "size": 560316,
+        "mtime": "2026-04-15 23:59:54",
+        "sha256": "3d06ba6f896c3c0f8721a78e39b68e660d9d12ea525af8c2ffdf631ac0a32d87",
+        "git_blob_sha1": "5a4d6c3e18dedbf7a41874cd9c2a5930e68475f5"
+      },
+      "Geneformer gene_median_dictionary_gc104M.pkl": {
+        "path": "<DATA_ROOT>/biodyn-nmi-paper/src/02_cssi_method/crispri_validation/data/gene_median_dictionary_gc104M.pkl",
+        "size": 1512661,
+        "mtime": "2026-02-16 03:00:21",
+        "sha256": "a51c53f6a771d64508dfaf61529df70e394c53bd20856926117ae5d641a24bf5"
+      },
+      "Geneformer gene_name_id_dict_gc104M.pkl": {
+        "path": "<DATA_ROOT>/biodyn-nmi-paper/src/02_cssi_method/crispri_validation/data/gene_name_id_dict_gc104M.pkl",
+        "size": 1660882,
+        "mtime": "2026-02-16 03:00:21",
+        "sha256": "fabfa0c2f49c598c59ae432a32c3499a5908c033756c663b5e0cddf58deea8e1"
+      }
+    }
+  },
+  "datasets": {
+    "files": {
+      "replogle_concat.h5ad": {
+        "path": "<DATA_ROOT>/biodyn-nmi-paper/src/02_cssi_method/crispri_validation/data/replogle_concat.h5ad",
+        "size": 30010775846,
+        "mtime": "2026-02-14 23:33:00",
+        "sha256": "a7992a6109d589f2d49c2eaccff45a9f860418af23125d41b80d8e3929a33d56",
+        "referenced_by": {
+          "attention-grn-217M": [
+            "runs/attention-grn-217M/scripts/phase0_extract.py",
+            "runs/attention-grn-217M/scripts/phase0b_value_weighted.py",
+            "runs/attention-grn-217M/scripts/phase4_causal_ablation.py"
+          ],
+          "sae-atlas-217M": [
+            "runs/sae-atlas-217M/scripts/full_12layer_pipeline.py",
+            "runs/sae-atlas-217M/scripts/phase0_extract_positions.py",
+            "runs/sae-atlas-217M/scripts/phase9_multitissue.py",
+            "runs/sae-atlas-217M/scripts/remaining_phases.py"
+          ],
+          "circuit-tracing-217M": [
+            "runs/circuit-tracing-217M/scripts/remaining_phases.py"
+          ],
+          "setup": [
+            "setup/dataset_loader.py"
+          ]
+        },
+        "shape_cells_x_genes": [
+          643413,
+          6546
+        ],
+        "cells_per_cell_line": {
+          "hepg2": 96616,
+          "jurkat": 184470,
+          "k562": 188590,
+          "rpe1": 173737
+        },
+        "hf_arcinstitute_State-Replogle-Filtered_main": {
+          "size": 30010775846,
+          "lfs_sha256": "a7992a6109d589f2d49c2eaccff45a9f860418af23125d41b80d8e3929a33d56",
+          "blob_sha1": "bb3c420a40fe3687044a2c7b1b1c614f3643cb8d"
+        },
+        "matches_hf_state_replogle": true,
+        "size_matches_hf_state_replogle": true
+      },
+      "ReplogleWeissman2022_rpe1.h5ad": {
+        "path": "<DATA_ROOT>/biodyn-nmi-paper/results/round13_non_k562_replication/data/ReplogleWeissman2022_rpe1.h5ad",
+        "size": 1236886900,
+        "mtime": "2026-02-17 11:36:44",
+        "sha256": "12d6a0cf9378c4f09411e27f0ce07b59f1d97731bd576d6fadf112f6f088d1a4",
+        "referenced_by": {
+          "attention-grn-217M": [
+            "runs/attention-grn-217M/scripts/cross_dataset_comparison.py",
+            "runs/attention-grn-217M/scripts/phase0_rpe1.py"
+          ],
+          "setup": [
+            "setup/dataset_loader.py"
+          ]
+        },
+        "shape_cells_x_genes": [
+          247914,
+          8749
+        ],
+        "cells_per_cell_line": {
+          "RPE1": 247914
+        },
+        "md5": "cc7f1ec50aeb3a3e1b4a6cfa713d80fa",
+        "zenodo_scperturb_records": [
+          {
+            "record": 7278143,
+            "version": "1.1",
+            "size": 1236886900,
+            "checksum": "md5:cc7f1ec50aeb3a3e1b4a6cfa713d80fa"
+          },
+          {
+            "record": 10044268,
+            "version": "1.3",
+            "size": 1236886900,
+            "checksum": "md5:cc7f1ec50aeb3a3e1b4a6cfa713d80fa"
+          },
+          {
+            "record": 13350497,
+            "version": "1.4",
+            "size": 1236886900,
+            "checksum": "md5:cc7f1ec50aeb3a3e1b4a6cfa713d80fa"
+          },
+          {
+            "record": 7416068,
+            "version": "1.1",
+            "size": 1236886900,
+            "checksum": "md5:cc7f1ec50aeb3a3e1b4a6cfa713d80fa"
+          },
+          {
+            "record": 7041849,
+            "version": "1.0",
+            "size": 1236886900,
+            "checksum": "md5:cc7f1ec50aeb3a3e1b4a6cfa713d80fa"
+          }
+        ],
+        "matches_zenodo_scperturb_md5": true
+      },
+      "adamson perturb_processed_symbols.h5ad": {
+        "path": "<DATA_ROOT>/biodyn-work/single_cell_mechinterp/data/perturb/adamson/perturb_processed_symbols.h5ad",
+        "size": 601696516,
+        "mtime": "2026-01-09 21:56:38",
+        "sha256": "3b816440acd5f02e55e63df83e697d9e80f3787f5e9056bf965c66acad5d7fc2",
+        "referenced_by": {
+          "setup": [
+            "setup/dataset_loader.py"
+          ]
+        },
+        "shape_cells_x_genes": [
+          68603,
+          4888
+        ]
+      },
+      "tabula_sapiens_immune.h5ad": {
+        "path": "<DATA_ROOT>/biodyn-work/single_cell_mechinterp/data/raw/tabula_sapiens_immune.h5ad",
+        "size": 19773999714,
+        "mtime": "2026-01-08 18:12:00",
+        "sha256": "14d41c8e7248319db031940da7347725a9d8b53af539c3392be69dbb66170615",
+        "referenced_by": {
+          "spectral-geometry-217M": [
+            "runs/spectral-geometry-217M/autoloop/iterations/iter_0003/h3g_centroid_trajectory.py",
+            "runs/spectral-geometry-217M/scripts/phase0_extract.py",
+            "runs/spectral-geometry-217M/scripts/phase8_stability.py",
+            "runs/spectral-geometry-217M/scripts/remaining_analyses.py"
+          ],
+          "topology-141-217M": [
+            "runs/topology-141-217M/scripts/phase0_extract.py"
+          ],
+          "sae-atlas-217M": [
+            "runs/sae-atlas-217M/scripts/phase9_multitissue.py",
+            "runs/sae-atlas-217M/scripts/remaining_phases.py"
+          ],
+          "exhaustive-mapping-217M": [
+            "runs/exhaustive-mapping-217M/scripts/experiment3_rerun.py",
+            "runs/exhaustive-mapping-217M/scripts/experiments_2_3.py"
+          ],
+          "manifold-discovery-217M": [
+            "runs/manifold-discovery-217M/scripts/phase1a_subsample_and_tokenize.py"
+          ]
+        },
+        "shape_cells_x_genes": [
+          592317,
+          60606
+        ],
+        "title": "Tabula Sapiens - Immune",
+        "schema_version": "7.0.0",
+        "citation": "Publication: https://doi.org/10.1126/science.abl4896 Dataset Version: https://datasets.cellxgene.cziscience.com/e62b0182-368f-4875-8ac1-f49e3d5eda60.h5ad curated and distributed by CZ CELLxGENE Discover in Collection: https://cellxgene.cziscience.com/collections/e5f58829-1a66-40b5-a624-9046778e74f5",
+        "cellxgene_dataset_version_id": "e62b0182-368f-4875-8ac1-f49e3d5eda60",
+        "cellxgene_collection_id": "e5f58829-1a66-40b5-a624-9046778e74f5"
+      },
+      "tabula_sapiens_immune_subset_20000.h5ad": {
+        "path": "<DATA_ROOT>/biodyn-work/single_cell_mechinterp/data/raw/tabula_sapiens_immune_subset_20000.h5ad",
+        "size": 1721702998,
+        "mtime": "2026-01-08 19:29:06",
+        "sha256": "25845071b19bb381fda15f2daf08fded6514f27366fa6f251260fb6c068f8f1a",
+        "referenced_by": {
+          "sae-atlas-217M": [
+            "runs/sae-atlas-217M/atlas/scripts/extract_and_enrich_missing_layers.py"
+          ],
+          "longevity-mechinterp-217M": [
+            "runs/longevity-mechinterp-217M/scripts/maxtoki_runtime.py",
+            "runs/longevity-mechinterp-217M/scripts/run_stage1.py",
+            "runs/longevity-mechinterp-217M/scripts/run_stage2.py"
+          ]
+        },
+        "shape_cells_x_genes": [
+          20000,
+          60606
+        ],
+        "title": "Tabula Sapiens - Immune",
+        "schema_version": "7.0.0",
+        "citation": "Publication: https://doi.org/10.1126/science.abl4896 Dataset Version: https://datasets.cellxgene.cziscience.com/e62b0182-368f-4875-8ac1-f49e3d5eda60.h5ad curated and distributed by CZ CELLxGENE Discover in Collection: https://cellxgene.cziscience.com/collections/e5f58829-1a66-40b5-a624-9046778e74f5",
+        "cellxgene_dataset_version_id": "e62b0182-368f-4875-8ac1-f49e3d5eda60",
+        "cellxgene_collection_id": "e5f58829-1a66-40b5-a624-9046778e74f5"
+      },
+      "tabula_sapiens_lung.h5ad": {
+        "path": "<DATA_ROOT>/biodyn-work/single_cell_mechinterp/data/raw/tabula_sapiens_lung.h5ad",
+        "size": 3196847019,
+        "mtime": "2026-01-08 17:44:38",
+        "sha256": "213eb5b8539af9b508f41078ce40d921c87f2b438cfb1bdf4d4af391068a2595",
+        "referenced_by": {
+          "topology-141-217M": [
+            "runs/topology-141-217M/scripts/phase0_extract.py"
+          ],
+          "sae-atlas-217M": [
+            "runs/sae-atlas-217M/atlas/scripts/extract_and_enrich_missing_layers.py"
+          ],
+          "manifold-discovery-217M": [
+            "runs/manifold-discovery-217M/scripts/phase1a_lung_nonhema_panel.py",
+            "runs/manifold-discovery-217M/scripts/phase1a_subsample_and_tokenize.py"
+          ]
+        },
+        "shape_cells_x_genes": [
+          65847,
+          60606
+        ],
+        "title": "Tabula Sapiens - Lung",
+        "schema_version": "7.0.0",
+        "citation": "Publication: https://doi.org/10.1126/science.abl4896 Dataset Version: https://datasets.cellxgene.cziscience.com/40f8b1a3-9f76-4ac4-8761-32078555ed4e.h5ad curated and distributed by CZ CELLxGENE Discover in Collection: https://cellxgene.cziscience.com/collections/e5f58829-1a66-40b5-a624-9046778e74f5",
+        "cellxgene_dataset_version_id": "40f8b1a3-9f76-4ac4-8761-32078555ed4e",
+        "cellxgene_collection_id": "e5f58829-1a66-40b5-a624-9046778e74f5"
+      },
+      "tabula_sapiens_kidney.h5ad": {
+        "path": "<DATA_ROOT>/biodyn-work/single_cell_mechinterp/data/raw/tabula_sapiens_kidney.h5ad",
+        "size": 449970582,
+        "mtime": "2026-01-07 22:49:50",
+        "sha256": "5653133d835f3f3799e2813bc127187f67ec1d0fb9286eacb72303e61454fc0e",
+        "referenced_by": {
+          "sae-atlas-217M": [
+            "runs/sae-atlas-217M/atlas/scripts/extract_and_enrich_missing_layers.py"
+          ]
+        },
+        "shape_cells_x_genes": [
+          11376,
+          60606
+        ],
+        "title": "Tabula Sapiens - Kidney",
+        "schema_version": "7.0.0",
+        "citation": "Publication: https://doi.org/10.1126/science.abl4896 Dataset Version: https://datasets.cellxgene.cziscience.com/65ca6e36-73b0-4c88-b0f3-7b23b48844ad.h5ad curated and distributed by CZ CELLxGENE Discover in Collection: https://cellxgene.cziscience.com/collections/e5f58829-1a66-40b5-a624-9046778e74f5",
+        "cellxgene_dataset_version_id": "65ca6e36-73b0-4c88-b0f3-7b23b48844ad",
+        "cellxgene_collection_id": "e5f58829-1a66-40b5-a624-9046778e74f5"
+      },
+      "krasnow_lung_smartsq2.h5ad": {
+        "path": "<DATA_ROOT>/biodyn-work/single_cell_mechinterp/data/raw/krasnow_lung_smartsq2.h5ad",
+        "size": 186674175,
+        "mtime": "2026-01-08 18:42:08",
+        "sha256": "2d3097dbc196849afa0cc229db516f439e25389ffa118d941e6c0518b08874a5",
+        "referenced_by": {
+          "topology-141-217M": [
+            "runs/topology-141-217M/scripts/phase0_extract.py"
+          ]
+        },
+        "shape_cells_x_genes": [
+          9409,
+          53514
+        ],
+        "title": "Krasnow Lab Human Lung Cell Atlas, Smart-seq2",
+        "schema_version": "7.0.0",
+        "citation": "Publication: https://doi.org/10.1038/s41586-020-2922-4 Dataset Version: https://datasets.cellxgene.cziscience.com/c88e0403-da93-40f4-99b5-f5fdeb81a82c.h5ad curated and distributed by CZ CELLxGENE Discover in Collection: https://cellxgene.cziscience.com/collections/5d445965-6f1a-4b68-ba3a-b8f765155d3a",
+        "cellxgene_dataset_version_id": "c88e0403-da93-40f4-99b5-f5fdeb81a82c",
+        "cellxgene_collection_id": "5d445965-6f1a-4b68-ba3a-b8f765155d3a"
+      },
+      "trrust_human.tsv": {
+        "path": "<DATA_ROOT>/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",
+        "size": 297659,
+        "mtime": "2026-02-14 14:58:48",
+        "sha256": "9b909319ccc8e36588b5a1bd3640e0dfba03936c6fc154cc4304d742bec11bed",
+        "referenced_by": {
+          "spectral-geometry-217M": [
+            "runs/spectral-geometry-217M/autoloop/iterations/iter_0002/h02_lid_per_gene.py",
+            "runs/spectral-geometry-217M/scripts/phase0_extract.py",
+            "runs/spectral-geometry-217M/scripts/phases_345.py",
+            "runs/spectral-geometry-217M/scripts/remaining_analyses.py"
+          ],
+          "attention-grn-217M": [
+            "runs/attention-grn-217M/scripts/phase0_any.py",
+            "runs/attention-grn-217M/scripts/phase0_extract.py",
+            "runs/attention-grn-217M/scripts/phase0_rpe1.py",
+            "runs/attention-grn-217M/scripts/phase0b_value_weighted.py",
+            "runs/attention-grn-217M/scripts/phase3_residualization.py",
+            "runs/attention-grn-217M/scripts/phase4_causal_ablation.py",
+            "runs/attention-grn-217M/scripts/phase6_cssi.py"
+          ],
+          "topology-141-217M": [
+            "runs/topology-141-217M/scripts/phase0_extract.py",
+            "runs/topology-141-217M/scripts/phase123_splits_nulls.py"
+          ],
+          "sae-atlas-217M": [
+            "runs/sae-atlas-217M/scripts/audit_a4_phase8t_chance_baseline.py",
+            "runs/sae-atlas-217M/scripts/audit_a8_positive_tf_case_study.py",
+            "runs/sae-atlas-217M/scripts/audit_a8_rerun_phase8t_targeted.py",
+            "runs/sae-atlas-217M/scripts/full_12layer_pipeline.py",
+            "runs/sae-atlas-217M/scripts/phase9_multitissue.py",
+            "runs/sae-atlas-217M/scripts/phases2_to_8.py",
+            "runs/sae-atlas-217M/scripts/remaining_phases.py"
+          ],
+          "circuit-tracing-217M": [
+            "runs/circuit-tracing-217M/scripts/remaining_phases.py"
+          ]
+        }
+      },
+      "dorothea_chipseq_human.tsv": {
+        "path": "<DATA_ROOT>/biodyn-work/single_cell_mechinterp/external/networks/dorothea_chipseq_human.tsv",
+        "size": 1640587,
+        "mtime": "2026-01-11 02:06:30",
+        "sha256": "c175f174d52540620a70f8de1e2cd56152756b33c164dd045974f9db8a248321",
+        "referenced_by": {
+          "sae-atlas-217M": [
+            "runs/sae-atlas-217M/scripts/audit_a8_positive_tf_case_study.py",
+            "runs/sae-atlas-217M/scripts/audit_a8_rerun_phase8t_targeted.py"
+          ]
+        }
+      },
+      "string_ppi_edges.json": {
+        "path": "<DATA_ROOT>/biodyn-nmi-paper/results/biological_impact/reference_edge_sets/string_ppi_edges.json",
+        "size": 91141,
+        "mtime": "2026-02-18 12:45:57",
+        "sha256": "20cb0e636db323c88489cb5a21bbf958b8c4a93acccfa6e3126dbf3bb8cb5ea6",
+        "referenced_by": {
+          "spectral-geometry-217M": [
+            "runs/spectral-geometry-217M/autoloop/iterations/iter_0002/h02_lid_per_gene.py",
+            "runs/spectral-geometry-217M/autoloop/iterations/iter_0002/h03_spectral_gap.py",
+            "runs/spectral-geometry-217M/autoloop/iterations/iter_0003/h3bc_string_persistence.py",
+            "runs/spectral-geometry-217M/autoloop/iterations/iter_0003/h3del_lid_confound.py",
+            "runs/spectral-geometry-217M/scripts/phase0_extract.py",
+            "runs/spectral-geometry-217M/scripts/phase9b_cross_model.py",
+            "runs/spectral-geometry-217M/scripts/phases_345.py",
+            "runs/spectral-geometry-217M/scripts/remaining_analyses.py"
+          ],
+          "topology-141-217M": [
+            "runs/topology-141-217M/scripts/phase0_extract.py",
+            "runs/topology-141-217M/scripts/phase123_splits_nulls.py",
+            "runs/topology-141-217M/scripts/phase8ext_h124_h138_chain.py"
+          ],
+          "sae-atlas-217M": [
+            "runs/sae-atlas-217M/scripts/phases2_to_8.py"
+          ]
+        }
+      },
+      "reactome_gene_sets.json": {
+        "path": "<DATA_ROOT>/biodyn-nmi-paper/results/biological_impact/reference_edge_sets/reactome_gene_sets.json",
+        "size": 191888,
+        "mtime": "2026-02-18 12:42:35",
+        "sha256": "ce41f0f52b0390b4133e8d0d2a50c179aa00fc66f32639123091ef5dd3879e11",
+        "referenced_by": {
+          "sae-atlas-217M": [
+            "runs/sae-atlas-217M/scripts/full_12layer_pipeline.py",
+            "runs/sae-atlas-217M/scripts/phases2_to_8.py"
+          ]
+        }
+      },
+      "kegg_gene_sets.json": {
+        "path": "<DATA_ROOT>/biodyn-nmi-paper/results/biological_impact/reference_edge_sets/kegg_gene_sets.json",
+        "size": 40567,
+        "mtime": "2026-02-18 12:42:37",
+        "sha256": "6deba1a07e93b17e0884f49c730c69620e558b08b6588e99cd73c21db7bee677",
+        "referenced_by": {
+          "sae-atlas-217M": [
+            "runs/sae-atlas-217M/scripts/full_12layer_pipeline.py",
+            "runs/sae-atlas-217M/scripts/phases2_to_8.py"
+          ]
+        }
+      },
+      "go_bp_gene_sets.json": {
+        "path": "<DATA_ROOT>/biodyn-nmi-paper/results/biological_impact/reference_edge_sets/go_bp_gene_sets.json",
+        "size": 233433,
+        "mtime": "2026-02-18 12:42:43",
+        "sha256": "36ebdf5c7c7f05237acc37b6007ab3da1a71d5862aadc170a6fe8110397aaef6",
+        "referenced_by": {
+          "spectral-geometry-217M": [
+            "runs/spectral-geometry-217M/scripts/phase9_report.py"
+          ],
+          "topology-141-217M": [
+            "runs/topology-141-217M/scripts/phase8ext_h124_h138_chain.py"
+          ],
+          "sae-atlas-217M": [
+            "runs/sae-atlas-217M/scripts/full_12layer_pipeline.py",
+            "runs/sae-atlas-217M/scripts/phases2_to_8.py",
+            "runs/sae-atlas-217M/scripts/remaining_phases.py"
+          ]
+        }
+      },
+      "gene2go_all.pkl": {
+        "path": "<DATA_ROOT>/biodyn-work/single_cell_mechinterp/data/perturb/gene2go_all.pkl",
+        "size": 9462558,
+        "mtime": "2026-01-11 02:06:30",
+        "sha256": "f145c5e84a53048d87942a417d870a4f2d8db50200b96e492b358c13aba8c771",
+        "referenced_by": {
+          "spectral-geometry-217M": [
+            "runs/spectral-geometry-217M/scripts/phases_345.py",
+            "runs/spectral-geometry-217M/scripts/remaining_analyses.py"
+          ],
+          "sae-atlas-217M": [
+            "runs/sae-atlas-217M/scripts/phases2_to_8.py",
+            "runs/sae-atlas-217M/scripts/remaining_phases.py"
+          ]
+        }
+      }
+    },
+    "perturbation_counts": {
+      "replogle_concat_k562": {
+        "n_cells": 188590,
+        "n_gene_labels": 1384,
+        "n_perturbed_genes": 1383,
+        "n_nontargeting_cells": 10691
+      },
+      "replogle_rpe1": {
+        "n_cells": 247914,
+        "n_perturbation_labels": 2394,
+        "control_like_labels": [
+          "control"
+        ]
+      },
+      "attention_grn_k562_217M_perturbations_evaluated": 174,
+      "attention_grn_rpe1_perturbations_evaluated": 325,
+      "attention_grn_adamson_perturbations_evaluated": 57,
+      "attention_grn_k562_1b_perturbations_evaluated": 155
+    },
+    "dataset_loader_names_by_pipeline": {
+      "attention-grn-217M": [
+        "k562",
+        "rpe1"
+      ],
+      "sae-atlas-217M": [
+        "k562"
+      ],
+      "circuit-tracing-217M": [
+        "k562"
+      ],
+      "exhaustive-mapping-217M": [
+        "k562"
+      ],
+      "attention-grn-217M_output_suffixes": [
+        "adamson",
+        "k562_1b",
+        "rpe1"
+      ]
+    },
+    "rpe1_obs_perturbation_type": [
+      "CRISPR"
+    ],
+    "replogle_concat_public_source": "huggingface.co/datasets/arcinstitute/State-Replogle-Filtered (file replogle_concat.h5ad; sha256 identical; HF commits dated 2025-12-06)",
+    "rpe1_public_source": "Zenodo scPerturb RNA h5ad records 7041849 / 7278143 / 7416068 / 10044268 / 13350497 (md5 identical)",
+    "adamson": {
+      "input": {
+        "path": "<DATA_ROOT>/biodyn-work/single_cell_mechinterp/data/perturb/adamson/perturb_processed_symbols.h5ad",
+        "sha256": "3b816440acd5f02e55e63df83e697d9e80f3787f5e9056bf965c66acad5d7fc2",
+        "project_csv": "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/phase1_adamson/per_perturbation_auroc.csv",
+        "project_csv_sha256": "5b8e59283e34b21312248b70bedf6f37eef8e401f55f3fced4015332ce04e724"
+      },
+      "cell_type_field": [
+        "K562(?)"
+      ],
+      "n_conditions_in_file": 87,
+      "n_perturbations_in_file": 86,
+      "n_control_cells": 24263,
+      "n_cells_total": 68603,
+      "n_targets_measured": 85,
+      "n_targets_down": 85,
+      "frac_targets_down": 1.0,
+      "frac_targets_down_ci95_bootstrap": [
+        1.0,
+        1.0
+      ],
+      "frac_targets_down_ci95_clopper_pearson": [
+        0.9575296600887508,
+        1.0
+      ],
+      "median_target_log2fc": -2.931213695451343,
+      "median_target_log2fc_ci95": [
+        -3.1639074750044673,
+        -2.7454209470776187
+      ],
+      "n_targets_log2fc_below_minus1": 78,
+      "null_random_genes": {
+        "n": 1700,
+        "frac_down": 0.28823529411764703,
+        "median_log2fc": 0.20821870863437653
+      },
+      "interval_method": "bootstrap over perturbed genes, 10,000 resamples, seed 42, percentile 95%; plus exact Clopper-Pearson 95% interval for the fraction (the bootstrap is degenerate at 85/85)",
+      "project_label": "CRISPRa (setup/dataset_loader.py:96 docstring; summaries/attention-grn-217M-FINAL_SUMMARY.md run table)",
+      "n_perturbations_used_by_project": 57,
+      "project_perturbations_all_in_file": true,
+      "verdict": "knock-down (CRISPRi-like): the perturbed gene falls in its own cells",
+      "public_source": "GEARS-processed Adamson 2016 data (inferred from uns keys and 'GENE+ctrl' labels); local file name has '_symbols'; byte identity not checkable"
+    },
+    "adamson_verification_2026_10_01": {
+      "recheck": {
+        "n_measured": 85,
+        "log2fc": {
+          "n_down": 85,
+          "frac_down_cp95": [
+            0.9575,
+            1.0
+          ],
+          "median": -2.931,
+          "n_below_minus1": 78
+        },
+        "auc": {
+          "n_below_half": 85,
+          "frac_below_half_cp95": [
+            0.9575,
+            1.0
+          ],
+          "median": 0.232
+        },
+        "detection": {
+          "n_lower_in_pert": 85,
+          "median_diff": -0.533
+        },
+        "bootstrap": {
+          "seed_42": {
+            "median_log2fc_ci95": [
+              -3.164,
+              -2.745
+            ],
+            "median_auc_ci95": [
+              0.186,
+              0.281
+            ]
+          },
+          "seed_2026": {
+            "median_log2fc_ci95": [
+              -3.164,
+              -2.745
+            ],
+            "median_auc_ci95": [
+              0.186,
+              0.281
+            ]
+          }
+        },
+        "expressed_targets": {
+          "n": 82,
+          "n_down": 82,
+          "n_auc_below_half": 82,
+          "frac_down_cp95": [
+            0.956,
+            1.0
+          ]
+        },
+        "not_measured": [
+          "TIMM23"
+        ],
+        "n_double_perturbations": 0
+      },
+      "label_origin": "The CRISPRa label is already in the pipeline spec's reference list (pipelines/attention-grn-extraction-and-evaluation.md:20, 'Adamson et al. 2016 (K562 CRISPRa)'). The attention-grn summary builds on it ('Moves with context (CRISPRi vs CRISPRa ...)', summaries/attention-grn-217M-FINAL_SUMMARY.md:100).",
+      "evidence": "checks/d12_deployment_facts/verification/out/v3_adamson.json"
+    }
+  },
+  "verification": {
+    "date": "2026-10-01",
+    "by": "independent verifier (second agent), CPU only, no model forward pass",
+    "verdict": "OK after fixes",
+    "scripts": [
+      "checks/d12_deployment_facts/verification/v1_timing.py",
+      "checks/d12_deployment_facts/verification/v2_hashes.py",
+      "checks/d12_deployment_facts/verification/v3_adamson.py",
+      "checks/d12_deployment_facts/verification/v4_facts.py",
+      "checks/d12_deployment_facts/verification/v5_patch_json.py"
+    ],
+    "reproduced": {
+      "log_windows_overlap_aware_h": 47.75,
+      "log_windows_sum_h": 53.79,
+      "per_pipeline_log_h": {
+        "spectral-geometry-217M": 3.63,
+        "attention-grn-217M": 8.83,
+        "topology-141-217M": 2.59,
+        "sae-atlas-217M": 10.1,
+        "circuit-tracing-217M": 4.17,
+        "exhaustive-mapping-217M": 7.72,
+        "manifold-discovery-217M": 15.21,
+        "longevity-mechinterp-217M": 1.54
+      },
+      "overlap_h": 3.4,
+      "work_blocks_gap3h_h": {
+        "spectral-geometry-217M": 3.74,
+        "attention-grn-217M": 9.62,
+        "topology-141-217M": 7.06,
+        "sae-atlas-217M": 15.87,
+        "circuit-tracing-217M": 7.4,
+        "exhaustive-mapping-217M": 9.07,
+        "manifold-discovery-217M": 20.69,
+        "longevity-mechinterp-217M": 1.59
+      },
+      "span_days": 21.883,
+      "n_active_days": 11,
+      "audit_minutes": {
+        "spec": 7.9,
+        "sweep": 8.1,
+        "round1": 19.4,
+        "round2": 141.8
+      },
+      "audit_total_h": 3.675,
+      "n_prompts_maxtoki_sessions": 97,
+      "all_file_hashes_equal_original": true,
+      "replogle_concat_matches_hf": true,
+      "rpe1_matches_zenodo": true,
+      "adamson_85_of_85_down": true,
+      "adamson_median_log2fc": -2.931
+    },
+    "corrections": [
+      "h115_h118: they are in the pinned prior topology repo, not only in paper drafts",
+      "checkpoints.geneformer: HF main still serves the same V2-316M weights; 'latest would not reproduce' was wrong",
+      "checkpoints.maxtoki_revision: the hash match fits revisions 1523f7c2/e7041eb7 to main, not only 21aa7b7f"
+    ],
+    "additions": [
+      "topology_141: 12 layer states = embedding + 11 layers; base run had single-axis held-out splits",
+      "loops.spectral: per-call outcomes; 3 of 6 calls failed with API errors",
+      "datasets.adamson: second statistic (AUC), expressed-target subset 82/82, label origin in the spec"
+    ]
+  }
+}

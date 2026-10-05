@@ -1,0 +1,36 @@
+{
+ "script": "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/v3_devorder_features.py",
+ "script_sha256": "ee3098c583aa9b58748c90f0c41539e98a133e96ca0496c8d8f23275089ed8b8",
+ "imports": {
+  "v2b_devorder_01_features.py": "150210f84a4768a744e3e65f96e36be6e27553a27df234790a9703032ff51cf9",
+  "v2b_devorder_common.py": "98202441b03c093ef6c010bebd64a06e65377d9ab5f9568cc0030ee620f2e951",
+  "v3_devorder_common.py": "f58d70d87624211bfbdfc8b0c043d698f8a06a281848bd82440c7ebaa57d9b91"
+ },
+ "written_at": "2026-10-03 07:42:32",
+ "python": "3.12.9",
+ "numpy": "1.26.4",
+ "torch": "2.11.0",
+ "torch_threads": 4,
+ "inputs_sha256": {
+  "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/outputs/v3_devorder/artifacts/anchors/anchor_meta_internal.csv": "9b8c5686d7d87497e5b973693dbbd2bf2bb865872d3c27b8e50622a3e7a784ca",
+  "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/outputs/v3_devorder/artifacts/anchors/anchor_meta_external.csv": "85436fada49d034ae1f048b56b7dba394b0650ccb09e0c58e62b710365806011",
+  "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/outputs/v3_devorder/artifacts/anchors/anchor_meta_zeroshot.csv": "6b6bae3162bacf37a21aa213794c3693ec4db9544905af59e302db9027c9ade2",
+  "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/outputs/v3_devorder/artifacts/anchors/anchor_meta_lung_nonhema.csv": "6c1d4598c712892fa97184f6756b0d9b4bc2884f151dbf645cfb95cc767328c0"
+ },
+ "seeds": {
+  "pca": "sklearn PCA random_state 42",
+  "lookup_ct": "default_rng([7001,k]) / ([7001,k,panel])",
+  "lookup_cls": "default_rng([7002,k]) / ([7002,k,panel])"
+ },
+ "info": {
+  "hvg_copied_from_v2b_sha256": {
+   "hvg_gene_index.npy": "9ea7ee6b5a9b40f3a80694b9bd784f56e5aab74b2f714baab71dd985b8e27ce3",
+   "hvg_pca64__external.npy": "111e47519165234380cc551baab1bdb5e1afb1e1c5d06ca42809fa5c13f416b1",
+   "hvg_pca64__internal.npy": "f8bb644113e319f110b547934b026532ad3f8be1037f58065e64c54b6873f81d",
+   "hvg_pca64__lung_nonhema.npy": "e92d18c1b58ab941619278ddaa974389456c128393c00d3c6a88e6055df6f84d",
+   "hvg_pca64__zeroshot.npy": "965849b571f13adf588c37253d797d9b79a080a62ff1c2442a54aca6441f7313"
+  },
+  "reason": "built from raw/X counts of the same cells (v2b_devorder_01_features.part_hvg); it never used the model input, so the encoding fix does not change it"
+ },
+ "seconds": 0.04584503173828125
+}

@@ -1,0 +1,771 @@
+{
+  "external": {
+    "n_anchors": 600,
+    "n_donors": 13,
+    "observed": {
+      "trust": 0.8956878490275371,
+      "branch": 0.34644275347273074,
+      "branch_aw": 0.3331693402868043,
+      "n_branches": 6,
+      "donor": 0.8869530363318562,
+      "n_donor_groups": 12,
+      "global": 0.8821200321268053,
+      "n_anchors": 600
+    },
+    "n_reps": 2000,
+    "resampling": "donor cluster bootstrap, donors drawn with replacement, all anchors of a drawn donor kept; head frozen; percentile 2.5/97.5",
+    "rng": "numpy default_rng([4242, 1, rep])",
+    "resample_size_range": [
+      151,
+      1148
+    ],
+    "n_branches_scored_range": [
+      3,
+      6
+    ],
+    "bootstrap": {
+      "trust": {
+        "ci95_percentile": [
+          0.8642223241142611,
+          0.9175500369264052
+        ],
+        "mean": 0.8949076869277803,
+        "median": 0.8963254826955623,
+        "sd": 0.013659255248066401,
+        "n_valid": 2000,
+        "n_nan": 0,
+        "frac_below_0.8": 0.0005
+      },
+      "branch": {
+        "ci95_percentile": [
+          0.14557188301958182,
+          0.5352662864573008
+        ],
+        "mean": 0.3679143444708533,
+        "median": 0.37067795428252404,
+        "sd": 0.09082100849035028,
+        "n_valid": 2000,
+        "n_nan": 0,
+        "frac_below_0.2": 0.048
+      },
+      "branch_aw": {
+        "ci95_percentile": [
+          0.29715765056669635,
+          0.3976099805296735
+        ],
+        "mean": 0.3458718096094309,
+        "median": 0.34490437018874587,
+        "sd": 0.026254319886430774,
+        "n_valid": 2000,
+        "n_nan": 0,
+        "frac_below_0.2": 0.0
+      },
+      "donor": {
+        "ci95_percentile": [
+          0.8446195779659809,
+          0.9166111758214459
+        ],
+        "mean": 0.8873260639163734,
+        "median": 0.8892780660658595,
+        "sd": 0.01851218273858618,
+        "n_valid": 2000,
+        "n_nan": 0,
+        "frac_below_0.2": 0.0
+      },
+      "global": {
+        "ci95_percentile": [
+          0.859758732629131,
+          0.9001654418706543
+        ],
+        "mean": 0.8826172772453637,
+        "median": 0.8832528554549012,
+        "sd": 0.01032797692981568,
+        "n_valid": 2000,
+        "n_nan": 0
+      }
+    },
+    "leave_one_donor_out": {
+      "TSP1": {
+        "n_anchors_left": 571,
+        "trust": 0.8928198277662018,
+        "branch": 0.3979388831872576,
+        "branch_aw": 0.3643980432434663,
+        "n_branches": 5,
+        "donor": 0.8865955617880853,
+        "n_donor_groups": 11,
+        "global": 0.8821760769026037,
+        "n_anchors": 571
+      },
+      "TSP10": {
+        "n_anchors_left": 574,
+        "trust": 0.8963242842176931,
+        "branch": 0.3429013538126529,
+        "branch_aw": 0.3287405375853814,
+        "n_branches": 6,
+        "donor": 0.882973332224032,
+        "n_donor_groups": 11,
+        "global": 0.8792758592278316,
+        "n_anchors": 574
+      },
+      "TSP11": {
+        "n_anchors_left": 592,
+        "trust": 0.8951958549058725,
+        "branch": 0.3047833737072826,
+        "branch_aw": 0.3268661614255634,
+        "n_branches": 6,
+        "donor": 0.883182698147344,
+        "n_donor_groups": 11,
+        "global": 0.8810233648257834,
+        "n_anchors": 592
+      },
+      "TSP13": {
+        "n_anchors_left": 599,
+        "trust": 0.896140171891424,
+        "branch": 0.3463410155951299,
+        "branch_aw": 0.33293988709676053,
+        "n_branches": 6,
+        "donor": 0.8869530363318562,
+        "n_donor_groups": 12,
+        "global": 0.8823722205951791,
+        "n_anchors": 599
+      },
+      "TSP14": {
+        "n_anchors_left": 475,
+        "trust": 0.8923387672721628,
+        "branch": 0.3295219648283055,
+        "branch_aw": 0.33214262517932225,
+        "n_branches": 6,
+        "donor": 0.8873514103374202,
+        "n_donor_groups": 11,
+        "global": 0.8830729930469664,
+        "n_anchors": 475
+      },
+      "TSP19": {
+        "n_anchors_left": 589,
+        "trust": 0.8955969371736648,
+        "branch": 0.3513337332011442,
+        "branch_aw": 0.3409990021047038,
+        "n_branches": 6,
+        "donor": 0.8835409398151014,
+        "n_donor_groups": 11,
+        "global": 0.8822625356058534,
+        "n_anchors": 589
+      },
+      "TSP21": {
+        "n_anchors_left": 501,
+        "trust": 0.8906365790037777,
+        "branch": 0.3353228941551543,
+        "branch_aw": 0.32437041671221734,
+        "n_branches": 6,
+        "donor": 0.8863150121605035,
+        "n_donor_groups": 11,
+        "global": 0.8803408603050905,
+        "n_anchors": 501
+      },
+      "TSP25": {
+        "n_anchors_left": 471,
+        "trust": 0.88377533869174,
+        "branch": 0.364641194161923,
+        "branch_aw": 0.3332504380255515,
+        "n_branches": 6,
+        "donor": 0.8859355063796372,
+        "n_donor_groups": 11,
+        "global": 0.8824201588490301,
+        "n_anchors": 471
+      },
+      "TSP26": {
+        "n_anchors_left": 590,
+        "trust": 0.8964409768929543,
+        "branch": 0.34427924824089545,
+        "branch_aw": 0.3307108159689749,
+        "n_branches": 6,
+        "donor": 0.9030892542383664,
+        "n_donor_groups": 11,
+        "global": 0.8829020583954911,
+        "n_anchors": 590
+      },
+      "TSP27": {
+        "n_anchors_left": 518,
+        "trust": 0.8984815984815985,
+        "branch": 0.40773762131748587,
+        "branch_aw": 0.3423336140806857,
+        "n_branches": 6,
+        "donor": 0.8852066659826725,
+        "n_donor_groups": 11,
+        "global": 0.8778400170516977,
+        "n_anchors": 518
+      },
+      "TSP6": {
+        "n_anchors_left": 585,
+        "trust": 0.8955174336668998,
+        "branch": 0.3528431047820362,
+        "branch_aw": 0.33902934704975185,
+        "n_branches": 6,
+        "donor": 0.8823029322904055,
+        "n_donor_groups": 11,
+        "global": 0.8821385513727541,
+        "n_anchors": 585
+      },
+      "TSP7": {
+        "n_anchors_left": 539,
+        "trust": 0.8984850881860849,
+        "branch": 0.34860498712836535,
+        "branch_aw": 0.34137329265690824,
+        "n_branches": 6,
+        "donor": 0.8936883245334003,
+        "n_donor_groups": 11,
+        "global": 0.8903864734012216,
+        "n_anchors": 539
+      },
+      "TSP8": {
+        "n_anchors_left": 596,
+        "trust": 0.8952346650737318,
+        "branch": 0.3463094445301562,
+        "branch_aw": 0.33375073544691686,
+        "n_branches": 6,
+        "donor": 0.883254798085305,
+        "n_donor_groups": 11,
+        "global": 0.8823950416020907,
+        "n_anchors": 596
+      }
+    },
+    "jackknife": {
+      "trust": {
+        "lodo_min": 0.88377533869174,
+        "lodo_max": 0.8984850881860849,
+        "lodo_argmin": "TSP25",
+        "lodo_argmax": "TSP7",
+        "jackknife_se": 0.012963059861904803,
+        "t_ci95": [
+          0.8674437678886746,
+          0.9239319301663995
+        ],
+        "df": 12
+      },
+      "branch": {
+        "lodo_min": 0.3047833737072826,
+        "lodo_max": 0.40773762131748587,
+        "lodo_argmin": "TSP11",
+        "lodo_argmax": "TSP27",
+        "jackknife_se": 0.08914068107799095,
+        "t_ci95": [
+          0.15222189389472932,
+          0.5406636130507322
+        ],
+        "df": 12
+      },
+      "branch_aw": {
+        "lodo_min": 0.32437041671221734,
+        "lodo_max": 0.3643980432434663,
+        "lodo_argmin": "TSP21",
+        "lodo_argmax": "TSP1",
+        "jackknife_se": 0.03390256680338387,
+        "t_ci95": [
+          0.2593019927769412,
+          0.40703668779666735
+        ],
+        "df": 12
+      },
+      "donor": {
+        "lodo_min": 0.8823029322904055,
+        "lodo_max": 0.9030892542383664,
+        "lodo_argmin": "TSP6",
+        "lodo_argmax": "TSP26",
+        "jackknife_se": 0.01891316288891144,
+        "t_ci95": [
+          0.8457447943799098,
+          0.9281612782838026
+        ],
+        "df": 12
+      },
+      "global": {
+        "lodo_min": 0.8778400170516977,
+        "lodo_max": 0.8903864734012216,
+        "lodo_argmin": "TSP27",
+        "lodo_argmax": "TSP7",
+        "jackknife_se": 0.009645981130359048,
+        "t_ci95": [
+          0.861103244685251,
+          0.9031368195683597
+        ],
+        "df": 12
+      }
+    }
+  },
+  "zeroshot": {
+    "n_anchors": 160,
+    "n_donors": 12,
+    "observed": {
+      "trust": 0.8267244525547446,
+      "branch": 0.31683028161845,
+      "branch_aw": 0.31124261959226296,
+      "n_branches": 6,
+      "donor": 0.8703093321429258,
+      "n_donor_groups": 11,
+      "global": 0.8989748601586247,
+      "n_anchors": 160
+    },
+    "n_reps": 2000,
+    "resampling": "donor cluster bootstrap, donors drawn with replacement, all anchors of a drawn donor kept; head frozen; percentile 2.5/97.5",
+    "rng": "numpy default_rng([4242, 2, rep])",
+    "resample_size_range": [
+      41,
+      377
+    ],
+    "n_branches_scored_range": [
+      2,
+      6
+    ],
+    "bootstrap": {
+      "trust": {
+        "ci95_percentile": [
+          0.7493285764140816,
+          0.8730179751980003
+        ],
+        "mean": 0.8265582653571412,
+        "median": 0.83221942096726,
+        "sd": 0.03119484254831942,
+        "n_valid": 2000,
+        "n_nan": 0,
+        "frac_below_0.8": 0.1795
+      },
+      "branch": {
+        "ci95_percentile": [
+          -0.029182482751443,
+          0.47074037864588425
+        ],
+        "mean": 0.286878151925453,
+        "median": 0.31376565536087386,
+        "sd": 0.13183774820405356,
+        "n_valid": 2000,
+        "n_nan": 0,
+        "frac_below_0.2": 0.204
+      },
+      "branch_aw": {
+        "ci95_percentile": [
+          0.1424372431140602,
+          0.42955001790402714
+        ],
+        "mean": 0.3049643721372014,
+        "median": 0.3134198475020755,
+        "sd": 0.07507718895201944,
+        "n_valid": 2000,
+        "n_nan": 0,
+        "frac_below_0.2": 0.0855
+      },
+      "donor": {
+        "ci95_percentile": [
+          0.8207496188112717,
+          0.9177071146947752
+        ],
+        "mean": 0.8707701150343057,
+        "median": 0.8706314395940724,
+        "sd": 0.0251878020065525,
+        "n_valid": 2000,
+        "n_nan": 0,
+        "frac_below_0.2": 0.0
+      },
+      "global": {
+        "ci95_percentile": [
+          0.8533724421249331,
+          0.9182040080606638
+        ],
+        "mean": 0.8945519841697499,
+        "median": 0.8975992972766869,
+        "sd": 0.01685138627786635,
+        "n_valid": 2000,
+        "n_nan": 0
+      }
+    },
+    "leave_one_donor_out": {
+      "TSP1": {
+        "n_anchors_left": 157,
+        "trust": 0.8341667458883925,
+        "branch": 0.316502920363662,
+        "branch_aw": 0.30908545361451717,
+        "n_branches": 6,
+        "donor": 0.8707377249787747,
+        "n_donor_groups": 10,
+        "global": 0.9002157488578839,
+        "n_anchors": 157
+      },
+      "TSP10": {
+        "n_anchors_left": 156,
+        "trust": 0.8235139129875972,
+        "branch": 0.3073712549031369,
+        "branch_aw": 0.2972777111882502,
+        "n_branches": 6,
+        "donor": 0.8632278705457864,
+        "n_donor_groups": 10,
+        "global": 0.897913768555609,
+        "n_anchors": 156
+      },
+      "TSP11": {
+        "n_anchors_left": 157,
+        "trust": 0.826342808251735,
+        "branch": 0.32547460361119324,
+        "branch_aw": 0.3325040943009369,
+        "n_branches": 6,
+        "donor": 0.8573402653572184,
+        "n_donor_groups": 10,
+        "global": 0.9013747946950313,
+        "n_anchors": 157
+      },
+      "TSP13": {
+        "n_anchors_left": 155,
+        "trust": 0.8380547409579667,
+        "branch": 0.37324519246615573,
+        "branch_aw": 0.339332589927116,
+        "n_branches": 5,
+        "donor": 0.888055317205372,
+        "n_donor_groups": 10,
+        "global": 0.9014871153032668,
+        "n_anchors": 155
+      },
+      "TSP14": {
+        "n_anchors_left": 116,
+        "trust": 0.814231862563342,
+        "branch": 0.4278184507521104,
+        "branch_aw": 0.3195306109789398,
+        "n_branches": 6,
+        "donor": 0.865706127660172,
+        "n_donor_groups": 10,
+        "global": 0.8862394577545585,
+        "n_anchors": 116
+      },
+      "TSP21": {
+        "n_anchors_left": 126,
+        "trust": 0.7995274053526481,
+        "branch": 0.295308638820941,
+        "branch_aw": 0.270843920987306,
+        "n_branches": 6,
+        "donor": 0.8649482873757247,
+        "n_donor_groups": 10,
+        "global": 0.891067013949993,
+        "n_anchors": 126
+      },
+      "TSP25": {
+        "n_anchors_left": 131,
+        "trust": 0.8110639901988502,
+        "branch": 0.01173699857053554,
+        "branch_aw": 0.2785387013504017,
+        "n_branches": 5,
+        "donor": 0.8648384367762503,
+        "n_donor_groups": 10,
+        "global": 0.8929828994288515,
+        "n_anchors": 131
+      },
+      "TSP26": {
+        "n_anchors_left": 157,
+        "trust": 0.82612098741959,
+        "branch": 0.32511587723542174,
+        "branch_aw": 0.32431868669545716,
+        "n_branches": 6,
+        "donor": 0.8707377249787747,
+        "n_donor_groups": 10,
+        "global": 0.9000496140229565,
+        "n_anchors": 157
+      },
+      "TSP27": {
+        "n_anchors_left": 143,
+        "trust": 0.8264374514374514,
+        "branch": 0.3444139910953528,
+        "branch_aw": 0.3281803063158032,
+        "n_branches": 6,
+        "donor": 0.8760956627883566,
+        "n_donor_groups": 10,
+        "global": 0.9081209371941316,
+        "n_anchors": 143
+      },
+      "TSP6": {
+        "n_anchors_left": 156,
+        "trust": 0.8229291176659598,
+        "branch": 0.3201932123552427,
+        "branch_aw": 0.3197987947558073,
+        "n_branches": 6,
+        "donor": 0.8778941307017909,
+        "n_donor_groups": 10,
+        "global": 0.8989278331098176,
+        "n_anchors": 156
+      },
+      "TSP7": {
+        "n_anchors_left": 149,
+        "trust": 0.8203117787010404,
+        "branch": 0.305912914588613,
+        "branch_aw": 0.2901988743608515,
+        "n_branches": 6,
+        "donor": 0.8738211052039636,
+        "n_donor_groups": 10,
+        "global": 0.9015430790465008,
+        "n_anchors": 149
+      },
+      "TSP8": {
+        "n_anchors_left": 157,
+        "trust": 0.8276959153278195,
+        "branch": 0.3186071830937624,
+        "branch_aw": 0.30750085305672337,
+        "n_branches": 6,
+        "donor": 0.8703093321429258,
+        "n_donor_groups": 11,
+        "global": 0.9004641915492158,
+        "n_anchors": 157
+      }
+    },
+    "jackknife": {
+      "trust": {
+        "lodo_min": 0.7995274053526481,
+        "lodo_max": 0.8380547409579667,
+        "lodo_argmin": "TSP21",
+        "lodo_argmax": "TSP13",
+        "jackknife_se": 0.03290701610074646,
+        "t_ci95": [
+          0.754296598454105,
+          0.8991523066553841
+        ],
+        "df": 11
+      },
+      "branch": {
+        "lodo_min": 0.01173699857053554,
+        "lodo_max": 0.4278184507521104,
+        "lodo_argmin": "TSP25",
+        "lodo_argmax": "TSP14",
+        "jackknife_se": 0.315747153696986,
+        "t_ci95": [
+          -0.3781245180097899,
+          1.01178508124669
+        ],
+        "df": 11
+      },
+      "branch_aw": {
+        "lodo_min": 0.270843920987306,
+        "lodo_max": 0.339332589927116,
+        "lodo_argmin": "TSP21",
+        "lodo_argmax": "TSP13",
+        "jackknife_se": 0.06885872601585874,
+        "t_ci95": [
+          0.15968558548854184,
+          0.4627996536959841
+        ],
+        "df": 11
+      },
+      "donor": {
+        "lodo_min": 0.8573402653572184,
+        "lodo_max": 0.888055317205372,
+        "lodo_argmin": "TSP11",
+        "lodo_argmax": "TSP13",
+        "jackknife_se": 0.025633940120821458,
+        "t_ci95": [
+          0.8138894103423201,
+          0.9267292539435316
+        ],
+        "df": 11
+      },
+      "global": {
+        "lodo_min": 0.8862394577545585,
+        "lodo_max": 0.9081209371941316,
+        "lodo_argmin": "TSP14",
+        "lodo_argmax": "TSP27",
+        "jackknife_se": 0.01827987711004238,
+        "t_ci95": [
+          0.8587411219111226,
+          0.9392085984061268
+        ],
+        "df": 11
+      }
+    }
+  },
+  "lung_nonhema": {
+    "n_anchors": 50,
+    "n_donors": 4,
+    "observed": {
+      "trust": 0.7995555555555556,
+      "branch": -0.14687071442603894,
+      "branch_aw": -0.02286424711276709,
+      "n_branches": 5,
+      "donor": 0.01339727102198118,
+      "n_donor_groups": 4,
+      "global": -0.017499871255280627,
+      "n_anchors": 50
+    },
+    "n_reps": 2000,
+    "resampling": "donor cluster bootstrap, donors drawn with replacement, all anchors of a drawn donor kept; head frozen; percentile 2.5/97.5",
+    "rng": "numpy default_rng([4242, 3, rep])",
+    "resample_size_range": [
+      44,
+      60
+    ],
+    "n_branches_scored_range": [
+      1,
+      5
+    ],
+    "bootstrap": {
+      "trust": {
+        "ci95_percentile": [
+          0.7491723699763594,
+          0.8171304538771456
+        ],
+        "mean": 0.7920007256061276,
+        "median": 0.7995555555555556,
+        "sd": 0.017132563867026402,
+        "n_valid": 2000,
+        "n_nan": 0,
+        "frac_below_0.8": 0.6305
+      },
+      "branch": {
+        "ci95_percentile": [
+          -0.42570718479980396,
+          0.16969246282552009
+        ],
+        "mean": -0.18812745065207825,
+        "median": -0.17838955929441536,
+        "sd": 0.15887811704544047,
+        "n_valid": 2000,
+        "n_nan": 0,
+        "frac_below_0.2": 0.988
+      },
+      "branch_aw": {
+        "ci95_percentile": [
+          -0.18849582641809567,
+          0.25281204866103474
+        ],
+        "mean": -0.026856579033020193,
+        "median": -0.02286424711276709,
+        "sd": 0.11637895880452495,
+        "n_valid": 2000,
+        "n_nan": 0,
+        "frac_below_0.2": 0.9495
+      },
+      "donor": {
+        "ci95_percentile": [
+          -0.0545374954275998,
+          0.0690786589883938
+        ],
+        "mean": 0.013412540616735373,
+        "median": 0.013397271021981181,
+        "sd": 0.03394640082704723,
+        "n_valid": 2000,
+        "n_nan": 0,
+        "frac_below_0.2": 1.0
+      },
+      "global": {
+        "ci95_percentile": [
+          -0.09495278078166869,
+          0.08110242481046097
+        ],
+        "mean": -0.006640895255609415,
+        "median": -0.017499871255280627,
+        "sd": 0.05048824305532195,
+        "n_valid": 2000,
+        "n_nan": 0
+      }
+    },
+    "leave_one_donor_out": {
+      "TSP1": {
+        "n_anchors_left": 38,
+        "trust": 0.767485380116959,
+        "branch": -0.16516621564109882,
+        "branch_aw": 0.00011470802003397631,
+        "n_branches": 4,
+        "donor": 0.04851923539203704,
+        "n_donor_groups": 3,
+        "global": 0.05107378527869424,
+        "n_anchors": 38
+      },
+      "TSP14": {
+        "n_anchors_left": 38,
+        "trust": 0.7514619883040936,
+        "branch": -0.20605688263608068,
+        "branch_aw": -0.045096184198527185,
+        "n_branches": 5,
+        "donor": -0.00850706092050064,
+        "n_donor_groups": 3,
+        "global": -0.052080085562308,
+        "n_anchors": 38
+      },
+      "TSP2": {
+        "n_anchors_left": 39,
+        "trust": 0.7363247863247864,
+        "branch": -0.38339932299986107,
+        "branch_aw": -0.14772029277481163,
+        "n_branches": 5,
+        "donor": 0.015396231962867052,
+        "n_donor_groups": 3,
+        "global": -0.0397481676024194,
+        "n_anchors": 39
+      },
+      "TSP25": {
+        "n_anchors_left": 35,
+        "trust": 0.7517460317460317,
+        "branch": -0.16287201760972692,
+        "branch_aw": -0.04089328736624934,
+        "n_branches": 4,
+        "donor": -0.0018193223464787328,
+        "n_donor_groups": 3,
+        "global": -0.005087345310754563,
+        "n_anchors": 35
+      }
+    },
+    "jackknife": {
+      "trust": {
+        "lodo_min": 0.7363247863247864,
+        "lodo_max": 0.767485380116959,
+        "lodo_argmin": "TSP2",
+        "lodo_argmax": "TSP1",
+        "jackknife_se": 0.019084462688560608,
+        "t_ci95": [
+          0.7388202777840212,
+          0.86029083332709
+        ],
+        "df": 3
+      },
+      "branch": {
+        "lodo_min": -0.38339932299986107,
+        "lodo_max": -0.16287201760972692,
+        "lodo_argmin": "TSP2",
+        "lodo_argmax": "TSP25",
+        "jackknife_se": 0.1568740927962941,
+        "t_ci95": [
+          -0.6461140914403387,
+          0.3523726625882608
+        ],
+        "df": 3
+      },
+      "branch_aw": {
+        "lodo_min": -0.14772029277481163,
+        "lodo_max": 0.00011470802003397631,
+        "lodo_argmin": "TSP2",
+        "lodo_argmax": "TSP1",
+        "jackknife_se": 0.09441489124626268,
+        "t_ci95": [
+          -0.32333456892319884,
+          0.2776060746976647
+        ],
+        "df": 3
+      },
+      "donor": {
+        "lodo_min": -0.00850706092050064,
+        "lodo_max": 0.04851923539203704,
+        "lodo_argmin": "TSP14",
+        "lodo_argmax": "TSP1",
+        "jackknife_se": 0.038231786817144855,
+        "t_ci95": [
+          -0.10827333767863583,
+          0.13506787972259818
+        ],
+        "df": 3
+      },
+      "global": {
+        "lodo_min": -0.052080085562308,
+        "lodo_max": 0.05107378527869424,
+        "lodo_argmin": "TSP14",
+        "lodo_argmax": "TSP1",
+        "jackknife_se": 0.06928905111365037,
+        "t_ci95": [
+          -0.23800855596853124,
+          0.20300881345796998
+        ],
+        "df": 3
+      }
+    }
+  }
+}

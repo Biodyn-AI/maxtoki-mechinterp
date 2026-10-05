@@ -1,0 +1,42 @@
+{
+  "universe": {
+    "n_genes": 6324,
+    "n_positions": 1019996,
+    "n_special_positions": 1000,
+    "max_detection_count": 500,
+    "n_with_length": 6270,
+    "length_tertile_edges_bp": [
+      21375.0,
+      56220.19100000001
+    ]
+  },
+  "targets": {
+    "trrust_edges_in_universe": 2151,
+    "trrust_tfs": 482,
+    "dorothea_edges_in_universe": 106815,
+    "dorothea_tfs": 459,
+    "chip_edges_in_universe": 47129,
+    "chip_tfs": 296,
+    "GATA1_trrust_in_universe": 11,
+    "GATA1_chip_in_universe": 219
+  },
+  "catalog_cells_found": 500,
+  "catalog_cells_missing": 0,
+  "token_check": {
+    "n_positions_ours": 1019996,
+    "n_positions_deployed": 1019996,
+    "n_mismatched_positions": 0,
+    "pass": true
+  },
+  "catalog_check": {
+    "n_features": 4928,
+    "n_same_set": 4927,
+    "n_same_ordered_list": 4927,
+    "mean_jaccard": 0.9999806740878169,
+    "min_jaccard": 0.9047619047619048,
+    "n_features_jaccard_lt_0.9": 0,
+    "pass": true
+  },
+  "script_sha256": "992db4229594d6e4ad7aeeb3267bd24820f9d6a6255cd54ac3bf84a033c4f394",
+  "wall_s": 38.2
+}

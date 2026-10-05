@@ -1,0 +1,492 @@
+{
+  "features": {
+    "0": [
+      810,
+      3147,
+      2137,
+      3526,
+      1107,
+      194,
+      1947,
+      2810
+    ],
+    "5": [
+      3783,
+      3811,
+      2451,
+      1679,
+      2307,
+      4904,
+      4341,
+      735
+    ],
+    "9": [
+      776,
+      4233,
+      1606,
+      234,
+      504,
+      121,
+      2868,
+      1474
+    ]
+  },
+  "null_features": {
+    "0": [
+      1574,
+      3057
+    ],
+    "5": [
+      2618,
+      4501
+    ],
+    "9": [
+      1151,
+      3329
+    ]
+  },
+  "details": {
+    "0": {
+      "n_candidates": 1733,
+      "n_candidates_annotated": 1536,
+      "n_alive_20cells": 2497,
+      "n_zero_20cells": 2431,
+      "log10_freq_bin_edges": [
+        -1.999576091248039,
+        -1.8767610482695944,
+        -1.800784942097181,
+        -1.732118172072294,
+        -1.4772272965909996
+      ],
+      "candidates_per_bin": {
+        "0": {
+          "annotated": 375,
+          "unannotated": 54
+        },
+        "1": {
+          "annotated": 376,
+          "unannotated": 61
+        },
+        "2": {
+          "annotated": 388,
+          "unannotated": 43
+        },
+        "3": {
+          "annotated": 397,
+          "unannotated": 39
+        }
+      },
+      "chosen": [
+        {
+          "feature": 810,
+          "annotated": true,
+          "freq_bin_target": 0,
+          "freq_bin_used": 0,
+          "freq_20cells": 0.0115966796875,
+          "freq_atlas": 0.01155298648229993,
+          "active_at_bos_cells": 0,
+          "top_terms": [
+            "Reactome:Phase II - Conjugation Of Compounds R-HSA-156580",
+            "Reactome:Biological Oxidations R-HSA-211859"
+          ],
+          "n_terms": 2
+        },
+        {
+          "feature": 3147,
+          "annotated": false,
+          "freq_bin_target": 0,
+          "freq_bin_used": 0,
+          "freq_20cells": 0.012744140625,
+          "freq_atlas": 0.012408872191655653,
+          "active_at_bos_cells": 0,
+          "top_terms": [],
+          "n_terms": 0
+        },
+        {
+          "feature": 2137,
+          "annotated": true,
+          "freq_bin_target": 1,
+          "freq_bin_used": 1,
+          "freq_20cells": 0.0138916015625,
+          "freq_atlas": 0.014116722026360887,
+          "active_at_bos_cells": 0,
+          "top_terms": [
+            "TRRUST_TF:TRRUST_TF:MEN1",
+            "TRRUST_TF:TRRUST_TF:E2F1",
+            "GO_BP:Regulation Of Cellular Response To Stress (GO:0080135)"
+          ],
+          "n_terms": 8
+        },
+        {
+          "feature": 3526,
+          "annotated": false,
+          "freq_bin_target": 1,
+          "freq_bin_used": 1,
+          "freq_20cells": 0.01474609375,
+          "freq_atlas": 0.0149853528837368,
+          "active_at_bos_cells": 0,
+          "top_terms": [],
+          "n_terms": 0
+        },
+        {
+          "feature": 1107,
+          "annotated": true,
+          "freq_bin_target": 2,
+          "freq_bin_used": 2,
+          "freq_20cells": 0.018212890625,
+          "freq_atlas": 0.01744124486762693,
+          "active_at_bos_cells": 0,
+          "top_terms": [
+            "Reactome:G1/S Transition R-HSA-69206",
+            "Reactome:Mitotic G1 Phase And G1/S Transition R-HSA-453279",
+            "GO_BP:Negative Regulation Of Gene Expression, Epigenetic (GO:0045814)"
+          ],
+          "n_terms": 21
+        },
+        {
+          "feature": 194,
+          "annotated": false,
+          "freq_bin_target": 2,
+          "freq_bin_used": 2,
+          "freq_20cells": 0.0182373046875,
+          "freq_atlas": 0.017638304463939075,
+          "active_at_bos_cells": 0,
+          "top_terms": [],
+          "n_terms": 0
+        },
+        {
+          "feature": 1947,
+          "annotated": true,
+          "freq_bin_target": 3,
+          "freq_bin_used": 3,
+          "freq_20cells": 0.0213623046875,
+          "freq_atlas": 0.02150302550206079,
+          "active_at_bos_cells": 0,
+          "top_terms": [
+            "Reactome:MAP2K And MAPK Activation R-HSA-5674135",
+            "GO_BP:Regulation Of Telomere Capping (GO:1904353)",
+            "GO_BP:Positive Regulation Of Kinase Activity (GO:0033674)"
+          ],
+          "n_terms": 39
+        },
+        {
+          "feature": 2810,
+          "annotated": false,
+          "freq_bin_target": 3,
+          "freq_bin_used": 3,
+          "freq_20cells": 0.0225341796875,
+          "freq_atlas": 0.023418719289095252,
+          "active_at_bos_cells": 0,
+          "top_terms": [],
+          "n_terms": 0
+        }
+      ],
+      "null": [
+        {
+          "feature": 1574,
+          "freq_atlas": null,
+          "in_atlas_catalog": false
+        },
+        {
+          "feature": 3057,
+          "freq_atlas": null,
+          "in_atlas_catalog": false
+        }
+      ]
+    },
+    "5": {
+      "n_candidates": 617,
+      "n_candidates_annotated": 284,
+      "n_alive_20cells": 4873,
+      "n_zero_20cells": 55,
+      "log10_freq_bin_edges": [
+        -1.999576091248039,
+        -1.9374988072299628,
+        -1.8334854759650347,
+        -1.6424783042212745,
+        -0.5267126596709177
+      ],
+      "candidates_per_bin": {
+        "0": {
+          "annotated": 83,
+          "unannotated": 67
+        },
+        "1": {
+          "annotated": 74,
+          "unannotated": 84
+        },
+        "2": {
+          "annotated": 70,
+          "unannotated": 84
+        },
+        "3": {
+          "annotated": 57,
+          "unannotated": 98
+        }
+      },
+      "chosen": [
+        {
+          "feature": 3783,
+          "annotated": true,
+          "freq_bin_target": 0,
+          "freq_bin_used": 0,
+          "freq_20cells": 0.010498046875,
+          "freq_atlas": 0.00990298001168632,
+          "active_at_bos_cells": 0,
+          "top_terms": [
+            "GO_BP:Spliceosomal snRNP Assembly (GO:0000387)",
+            "Reactome:Regulation Of TP53 Activity R-HSA-5633007",
+            "GO_BP:mRNA Splicing, Via Spliceosome (GO:0000398)"
+          ],
+          "n_terms": 4
+        },
+        {
+          "feature": 3811,
+          "annotated": false,
+          "freq_bin_target": 0,
+          "freq_bin_used": 0,
+          "freq_20cells": 0.0110107421875,
+          "freq_atlas": 0.011626516182416401,
+          "active_at_bos_cells": 0,
+          "top_terms": [],
+          "n_terms": 0
+        },
+        {
+          "feature": 2451,
+          "annotated": true,
+          "freq_bin_target": 1,
+          "freq_bin_used": 1,
+          "freq_20cells": 0.0138671875,
+          "freq_atlas": 0.01381770124588724,
+          "active_at_bos_cells": 0,
+          "top_terms": [
+            "Reactome:Metabolism R-HSA-1430728",
+            "Reactome:Late Phase Of HIV Life Cycle R-HSA-162599",
+            "Reactome:HIV Life Cycle R-HSA-162587"
+          ],
+          "n_terms": 8
+        },
+        {
+          "feature": 1679,
+          "annotated": false,
+          "freq_bin_target": 1,
+          "freq_bin_used": 1,
+          "freq_20cells": 0.011865234375,
+          "freq_atlas": 0.034094251350005295,
+          "active_at_bos_cells": 0,
+          "top_terms": [],
+          "n_terms": 0
+        },
+        {
+          "feature": 2307,
+          "annotated": true,
+          "freq_bin_target": 2,
+          "freq_bin_used": 2,
+          "freq_20cells": 0.0203369140625,
+          "freq_atlas": 0.017136341711143966,
+          "active_at_bos_cells": 0,
+          "top_terms": [
+            "GO_BP:Positive Regulation Of Intracellular Signal Transduction (GO:1902533)",
+            "GO_BP:Protein Localization (GO:0008104)"
+          ],
+          "n_terms": 2
+        },
+        {
+          "feature": 4904,
+          "annotated": false,
+          "freq_bin_target": 2,
+          "freq_bin_used": 2,
+          "freq_20cells": 0.016064453125,
+          "freq_atlas": 0.015967709677292854,
+          "active_at_bos_cells": 0,
+          "top_terms": [],
+          "n_terms": 0
+        },
+        {
+          "feature": 4341,
+          "annotated": true,
+          "freq_bin_target": 3,
+          "freq_bin_used": 3,
+          "freq_20cells": 0.04072265625,
+          "freq_atlas": 0.03755995121549496,
+          "active_at_bos_cells": 0,
+          "top_terms": [
+            "Reactome:COPII-mediated Vesicle Transport R-HSA-204005",
+            "Reactome:Neutrophil Degranulation R-HSA-6798695",
+            "GO_BP:Regulation Of Canonical Wnt Signaling Pathway (GO:0060828)"
+          ],
+          "n_terms": 14
+        },
+        {
+          "feature": 735,
+          "annotated": false,
+          "freq_bin_target": 3,
+          "freq_bin_used": 3,
+          "freq_20cells": 0.028564453125,
+          "freq_atlas": 0.031165808493366642,
+          "active_at_bos_cells": 0,
+          "top_terms": [],
+          "n_terms": 0
+        }
+      ],
+      "null": [
+        {
+          "feature": 2618,
+          "freq_atlas": 3.0392276048141366e-05,
+          "in_atlas_catalog": true
+        },
+        {
+          "feature": 4501,
+          "freq_atlas": 1.6666732026400104e-05,
+          "in_atlas_catalog": true
+        }
+      ]
+    },
+    "9": {
+      "n_candidates": 1046,
+      "n_candidates_annotated": 622,
+      "n_alive_20cells": 4862,
+      "n_zero_20cells": 66,
+      "log10_freq_bin_edges": [
+        -1.999576091248039,
+        -1.9272904920838991,
+        -1.8374783352333814,
+        -1.690153670528758,
+        -0.9362152676115681
+      ],
+      "candidates_per_bin": {
+        "0": {
+          "annotated": 153,
+          "unannotated": 109
+        },
+        "1": {
+          "annotated": 155,
+          "unannotated": 106
+        },
+        "2": {
+          "annotated": 152,
+          "unannotated": 108
+        },
+        "3": {
+          "annotated": 162,
+          "unannotated": 101
+        }
+      },
+      "chosen": [
+        {
+          "feature": 776,
+          "annotated": true,
+          "freq_bin_target": 0,
+          "freq_bin_used": 0,
+          "freq_20cells": 0.0102294921875,
+          "freq_atlas": 0.009593174875195589,
+          "active_at_bos_cells": 0,
+          "top_terms": [
+            "GO_BP:Myeloid Cell Differentiation (GO:0030099)",
+            "GO_BP:Erythrocyte Differentiation (GO:0030218)",
+            "Reactome:Transcriptional Regulation By TP53 R-HSA-3700989"
+          ],
+          "n_terms": 3
+        },
+        {
+          "feature": 4233,
+          "annotated": false,
+          "freq_bin_target": 0,
+          "freq_bin_used": 0,
+          "freq_20cells": 0.0107421875,
+          "freq_atlas": 0.012296126651477064,
+          "active_at_bos_cells": 0,
+          "top_terms": [],
+          "n_terms": 0
+        },
+        {
+          "feature": 1606,
+          "annotated": true,
+          "freq_bin_target": 1,
+          "freq_bin_used": 1,
+          "freq_20cells": 0.011865234375,
+          "freq_atlas": 0.011055925709512587,
+          "active_at_bos_cells": 0,
+          "top_terms": [
+            "GO_BP:Protein Transport (GO:0015031)"
+          ],
+          "n_terms": 1
+        },
+        {
+          "feature": 234,
+          "annotated": false,
+          "freq_bin_target": 1,
+          "freq_bin_used": 1,
+          "freq_20cells": 0.0134765625,
+          "freq_atlas": 0.012234361703379229,
+          "active_at_bos_cells": 0,
+          "top_terms": [],
+          "n_terms": 0
+        },
+        {
+          "feature": 504,
+          "annotated": true,
+          "freq_bin_target": 2,
+          "freq_bin_used": 2,
+          "freq_20cells": 0.0183837890625,
+          "freq_atlas": 0.019192232126400494,
+          "active_at_bos_cells": 0,
+          "top_terms": [
+            "Reactome:Membrane Trafficking R-HSA-199991",
+            "Reactome:Vesicle-mediated Transport R-HSA-5653656",
+            "Reactome:ER To Golgi Anterograde Transport R-HSA-199977"
+          ],
+          "n_terms": 7
+        },
+        {
+          "feature": 121,
+          "annotated": false,
+          "freq_bin_target": 2,
+          "freq_bin_used": 2,
+          "freq_20cells": 0.01962890625,
+          "freq_atlas": 0.015984376409319254,
+          "active_at_bos_cells": 0,
+          "top_terms": [],
+          "n_terms": 0
+        },
+        {
+          "feature": 2868,
+          "annotated": true,
+          "freq_bin_target": 3,
+          "freq_bin_used": 3,
+          "freq_20cells": 0.0273681640625,
+          "freq_atlas": 0.025788336424848724,
+          "active_at_bos_cells": 0,
+          "top_terms": [
+            "GO_BP:Cellular Response To Oxygen-Containing Compound (GO:1901701)"
+          ],
+          "n_terms": 1
+        },
+        {
+          "feature": 1474,
+          "annotated": false,
+          "freq_bin_target": 3,
+          "freq_bin_used": 3,
+          "freq_20cells": 0.02177734375,
+          "freq_atlas": 0.012698089012113773,
+          "active_at_bos_cells": 0,
+          "top_terms": [],
+          "n_terms": 0
+        }
+      ],
+      "null": [
+        {
+          "feature": 1151,
+          "freq_atlas": 1.9607920031058947e-05,
+          "in_atlas_catalog": true
+        },
+        {
+          "feature": 3329,
+          "freq_atlas": 4.0196236063670835e-05,
+          "in_atlas_catalog": true
+        }
+      ]
+    }
+  },
+  "rule": "Per layer: candidates = features active (z>0) in >= 1% of all tokens of the 20 cells (clean pass, all positions incl. <bos>/<eos>). Annotated = feature has >= 1 row in sae-atlas phase2 significant_enrichments.csv. Candidate log10(frequency) split into 4 quartile bins (over annotated + unannotated candidates together); one annotated and one unannotated feature drawn at random from each bin (numpy default_rng(SEL_SEED + layer)). Order: [ann bin0, unann bin0, ann bin1, unann bin1, ...]. Null features: 2 drawn at random from features with zero activations in the 20 cells."
+}

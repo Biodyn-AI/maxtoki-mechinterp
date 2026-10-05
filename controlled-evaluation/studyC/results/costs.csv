@@ -1,0 +1,46 @@
+agent_id,label,input_tokens,output_tokens,cache_read_tokens,cache_creation_tokens,tool_calls,wall_seconds,n_outside_paths,outside_paths
+aed5b8a74a6d6fd2b,C-adjudicate:checklist:1,8,27,244844,57494,4,87.2,1,<LOCAL_VOLUME>
+a528a29635ccc1f0c,C-adjudicate:checklist:2,10,30,319457,58061,5,96.0,2,<LOCAL_VOLUME> | <TMP>
+acc704064007abe78,C-adjudicate:checklist:3,8,30,241523,60143,4,115.2,1,<LOCAL_VOLUME>
+a8f58bb81ada4e4c3,C-adjudicate:deployed:1,6,21,164620,57184,3,89.6,1,<LOCAL_VOLUME>
+a39057a82f296d406,C-adjudicate:deployed:2,6,13,171119,58978,3,82.6,1,<LOCAL_VOLUME>
+a25eae010869abfae,C-adjudicate:deployed:3,8,491,245731,60283,4,106.4,1,<LOCAL_VOLUME>
+a2b5ab7740cf8ce94,C-adjudicate:generic:1,10,37,301899,53833,5,95.4,1,<LOCAL_VOLUME>
+a295c4102ed7ea452,C-adjudicate:generic:2,10,238,302777,53487,5,111.2,1,<LOCAL_VOLUME>
+aab814191f2af6d70,C-adjudicate:generic:3,10,24,316126,61612,5,135.7,2,<LOCAL_VOLUME> | <TMP>
+ad8d53423892d528f,C-grade:checklist:1:1,10,173,316534,74290,5,181.6,2,<CLAUDE_HOME>/projects/<SESSION_DIR>/d422dc33-6d6f-4b2b-bbf7-f274d8a82fae/tool-results/blw6yav0t.txt | <LOCAL_VOLUME>
+ae7ea27f4454cce00,C-grade:checklist:1:2,8,169,224586,70872,4,174.1,2,<CLAUDE_HOME>/projects/<SESSION_DIR>/d422dc33-6d6f-4b2b-bbf7-f274d8a82fae/tool-results/bn0z1b77n.txt | <LOCAL_VOLUME>
+a8532af3e08328d3f,C-grade:checklist:2:1,8,166,222497,71939,4,152.4,3,<CLAUDE_HOME>/projects/<SESSION_DIR>/d422dc33-6d6f-4b2b-bbf7-f274d8a82fae/tool-results/b7cupdjnd.txt | <LOCAL_VOLUME> | <TMP>/maxtoki-atlas-data-12
+ad28740b457520ead,C-grade:checklist:2:2,10,173,315332,77184,5,183.8,3,<CLAUDE_HOME>/projects/<SESSION_DIR>/d422dc33-6d6f-4b2b-bbf7-f274d8a82fae/tool-results/bijt5lj24.txt | <LOCAL_VOLUME> | <TMP>/maxtoki-atlas-data-12
+a192de5ea1d2262b3,C-grade:checklist:3:1,6,156,138497,58779,3,149.5,2,<CLAUDE_HOME>/projects/<SESSION_DIR>/d422dc33-6d6f-4b2b-bbf7-f274d8a82fae/tool-results/brnz70woo.txt | <LOCAL_VOLUME>
+a738925fce440c79b,C-grade:checklist:3:2,6,162,138498,58781,3,141.3,2,<CLAUDE_HOME>/projects/<SESSION_DIR>/d422dc33-6d6f-4b2b-bbf7-f274d8a82fae/tool-results/bhofbki6h.txt | <LOCAL_VOLUME>
+a1c75667a2f3768ba,C-grade:deployed:1:1,12,178,397752,71863,6,173.2,2,<CLAUDE_HOME>/projects/<SESSION_DIR>/d422dc33-6d6f-4b2b-bbf7-f274d8a82fae/tool-results/bz404jytt.txt | <LOCAL_VOLUME>
+ae1151178692fc903,C-grade:deployed:1:2,12,177,402181,73665,6,160.6,2,<CLAUDE_HOME>/projects/<SESSION_DIR>/d422dc33-6d6f-4b2b-bbf7-f274d8a82fae/tool-results/bic1w24ie.txt | <LOCAL_VOLUME>
+a5f6a6d5f1ec38f4f,C-grade:deployed:2:1,6,162,142848,60955,3,142.5,2,<CLAUDE_HOME>/projects/<SESSION_DIR>/d422dc33-6d6f-4b2b-bbf7-f274d8a82fae/tool-results/bdm4qc222.txt | <LOCAL_VOLUME>
+a048c47f911662870,C-grade:deployed:2:2,10,172,320875,75240,5,199.6,2,<CLAUDE_HOME>/projects/<SESSION_DIR>/d422dc33-6d6f-4b2b-bbf7-f274d8a82fae/tool-results/b8jusm5zr.txt | <LOCAL_VOLUME>
+a322ffcef04c43046,C-grade:deployed:3:1,8,176,224621,72908,4,193.7,2,<CLAUDE_HOME>/projects/<SESSION_DIR>/d422dc33-6d6f-4b2b-bbf7-f274d8a82fae/tool-results/b1ls7xb0k.txt | <LOCAL_VOLUME>
+acad45397dadfd04b,C-grade:deployed:3:2,8,175,224618,72012,4,163.9,2,<CLAUDE_HOME>/projects/<SESSION_DIR>/d422dc33-6d6f-4b2b-bbf7-f274d8a82fae/tool-results/bg9wanw3r.txt | <LOCAL_VOLUME>
+aefe1e936ebcadb30,C-grade:generic:1:1,6,161,131348,55206,3,132.1,2,<CLAUDE_HOME>/projects/<SESSION_DIR>/d422dc33-6d6f-4b2b-bbf7-f274d8a82fae/tool-results/bq8zzksaz.txt | <LOCAL_VOLUME>
+a6ff3acff9a520d31,C-grade:generic:1:2,6,159,131347,55203,3,124.1,2,<CLAUDE_HOME>/projects/<SESSION_DIR>/d422dc33-6d6f-4b2b-bbf7-f274d8a82fae/tool-results/bqopxesng.txt | <LOCAL_VOLUME>
+a26a66140f5e46e19,C-grade:generic:2:1,10,326,273013,85858,5,130.7,2,<CLAUDE_HOME>/projects/<SESSION_DIR>/d422dc33-6d6f-4b2b-bbf7-f274d8a82fae/tool-results/b2d0076iz.txt | <LOCAL_VOLUME>
+a024a5ea46bad920e,C-grade:generic:2:2,8,164,209597,64512,4,145.4,2,<CLAUDE_HOME>/projects/<SESSION_DIR>/d422dc33-6d6f-4b2b-bbf7-f274d8a82fae/tool-results/b6s4qgwz0.txt | <LOCAL_VOLUME>
+a4dd8ebd2e31acd07,C-grade:generic:3:1,6,301,115529,79677,3,164.6,2,<CLAUDE_HOME>/projects/<SESSION_DIR>/d422dc33-6d6f-4b2b-bbf7-f274d8a82fae/tool-results/bkqap1fhh.txt | <LOCAL_VOLUME>
+a1170fa97c7810e3e,C-grade:generic:3:2,6,166,137112,58087,3,147.4,2,<CLAUDE_HOME>/projects/<SESSION_DIR>/d422dc33-6d6f-4b2b-bbf7-f274d8a82fae/tool-results/b30s5utrh.txt | <LOCAL_VOLUME>
+a1076638042d73893,C-verify:checklist:1,118,3253,7389530,184904,63,673.7,1,<LOCAL_VOLUME>
+af0f246e353528ea2,C-verify:checklist:2,82,3141,3950824,141130,43,439.4,1,<LOCAL_VOLUME>
+a2197f6b213aa247f,C-verify:checklist:3,96,2071,5214807,153833,50,473.6,1,<LOCAL_VOLUME>
+aac750b410ae1925d,C-verify:deployed:1,76,1381,3872918,142222,40,463.6,1,<LOCAL_VOLUME>
+a69cd0a0cda84a8e2,C-verify:deployed:2,86,2241,4421583,143247,44,497.4,1,<LOCAL_VOLUME>
+a3c78f1c2d5657682,C-verify:deployed:3,78,2155,4207687,152357,42,467.6,1,<LOCAL_VOLUME>
+adccc5a84d7178167,C-verify:generic:1,92,2408,4590506,142099,47,471.8,1,<LOCAL_VOLUME>
+a0365de5cf7ed0582,C-verify:generic:2,94,1901,4777274,174250,50,521.4,1,<LOCAL_VOLUME>
+ae009c2a40f51bd27,C-verify:generic:3,86,3352,4484657,152511,44,443.6,1,<LOCAL_VOLUME>
+a6b60f13c1423afe5,C:checklist:1,172,3294,16778407,314413,88,1453.2,3,/Volumes/.../repos/longevity-mechinterp | <LOCAL_VOLUME> | <AGENT_TMP>/<SESSION_DIR>/d422dc33-6d6f-4b2b-bbf7-f274d8a82fae/tasks/b66ibv79x.output
+ade0eec1148d3d9c0,C:checklist:2,194,2762,25117250,398475,99,1657.6,5,/Volumes | <LOCAL_VOLUME> | <AGENT_TMP>/<SESSION_DIR>/d422dc33-6d6f-4b2b-bbf7-f274d8a82fae/tasks/bs59wc2zk.output | <AGENT_TMP>/<SESSION_DIR>/d422dc33-6d6f-4b2b-bbf7-f274d8a82fae/tasks/buxx7t1up.output | <TMP>/maxtoki-atlas-data-12/cross_layer_graph.json
+a0172234148dbfefc,C:checklist:3,164,3473,18977434,355034,84,1454.8,4,/Volumes/.../repos/longevity-mechinterp/ | <LOCAL_VOLUME> | <AGENT_TMP>/<SESSION_DIR>/d422dc33-6d6f-4b2b-bbf7-f274d8a82fae/tasks/b13yyhuqw.output | <AGENT_TMP>/<SESSION_DIR>/d422dc33-6d6f-4b2b-bbf7-f274d8a82fae/tasks/b712zr0cg.output
+ab267359f90be72d2,C:deployed:1,178,3782,19788243,350114,93,1432.9,3,/Volumes/ | <LOCAL_VOLUME> | <AGENT_TMP>/<SESSION_DIR>/d422dc33-6d6f-4b2b-bbf7-f274d8a82fae/tasks/b2fh2jx7e.output
+abc1c778c8b9b2cda,C:deployed:2,174,27284,16805424,298019,90,1718.4,5,/Users | <HOME> | /Volumes | <LOCAL_VOLUME> | <AGENT_TMP>/<SESSION_DIR>/d422dc33-6d6f-4b2b-bbf7-f274d8a82fae/tasks/bcbbpqhxn.output
+a2a7e505d2d38e612,C:deployed:3,182,3292,18940031,313958,100,1592.9,2,<LOCAL_VOLUME> | <AGENT_TMP>/<SESSION_DIR>/d422dc33-6d6f-4b2b-bbf7-f274d8a82fae/tasks/b8dw91yb4.output
+ac5317574d7746f98,C:generic:1,176,2478,17499696,296471,90,1439.3,2,<LOCAL_VOLUME> | <AGENT_TMP>/<SESSION_DIR>/d422dc33-6d6f-4b2b-bbf7-f274d8a82fae/tasks/b1k9mng7s.output
+a4e9707689c7a5bff,C:generic:2,176,3913,18405086,335895,90,1341.1,2,<CLAUDE_HOME>/projects/<SESSION_DIR>/d422dc33-6d6f-4b2b-bbf7-f274d8a82fae/tool-results/byq4181om.txt | <LOCAL_VOLUME>
+a457fe425afac01f7,C:generic:3,200,4533,24356643,382940,105,1286.1,1,<LOCAL_VOLUME>

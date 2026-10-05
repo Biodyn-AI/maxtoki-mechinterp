@@ -1,0 +1,134 @@
+{
+ "tool": "projects/maxtoki/checks/verification_review/independent_recount.py",
+ "tool_sha256": "4ef33b436d4a20adb4aac9bf8a2b22e3bb39470235b8bfe4c70888943896debf",
+ "started_utc": "2026-10-01T00:21:27Z",
+ "python": "3.12.9",
+ "seed": 20261001,
+ "inputs": [
+  {
+   "path": "pipelines/attention-grn-extraction-and-evaluation.md",
+   "sha256": "ca00ada7240cc13ce550cda5a1f044e57bf55f16aa3f52e80161239a8405bb4a",
+   "bytes": 97491
+  },
+  {
+   "path": "pipelines/longevity-mechinterp-donor-aware.md",
+   "sha256": "fe782547b75d1b5a3d866cbd06db520882c9c3b978ca5578387ba30f20ddf2cb",
+   "bytes": 48289
+  },
+  {
+   "path": "pipelines/manifold-discovery-extraction-compactification.md",
+   "sha256": "c5fa1f6d459eecbed350c1e7fdca2c2039c03f1fcfa672b2cdeff4336ae52d95",
+   "bytes": 79424
+  },
+  {
+   "path": "pipelines/residual-stream-spectral-geometry.md",
+   "sha256": "8ce2e7be8106877c175f4f92d323b88b465107e86f8f8b8ccd436252c1cb7b1b",
+   "bytes": 68632
+  },
+  {
+   "path": "pipelines/sparse-autoencoders/01-sae-atlas.md",
+   "sha256": "daf7414b239e60f023db554c6469340d5cde7274f513f5345a6a46f1e566edd4",
+   "bytes": 77795
+  },
+  {
+   "path": "pipelines/sparse-autoencoders/02-causal-circuit-tracing.md",
+   "sha256": "3a2048b6f1e249b55a3cbae4fb8a34cf3fa4ffcc6a839b2f15d67dc12f899585",
+   "bytes": 84171
+  },
+  {
+   "path": "pipelines/sparse-autoencoders/03-exhaustive-mapping-and-steering.md",
+   "sha256": "bff319943dd338344669349ac791e286a1e58abce7442a6710d8f2eb285fbe51",
+   "bytes": 72620
+  },
+  {
+   "path": "pipelines/topology-geometry-141-hypotheses.md",
+   "sha256": "43731ef3e65ba8fb4a0f995cb5c461f648b3b0ade810399ab63f691c0e83c44a",
+   "bytes": 72207
+  },
+  {
+   "path": "projects/maxtoki/checks/results/cache/attention-grn-217M.values.npy",
+   "sha256": "707d19b10bcb621aeb2186eddb36a3eaa5d437b4483cd8de0c660d5392df5561",
+   "bytes": 32409512
+  },
+  {
+   "path": "projects/maxtoki/checks/results/cache/circuit-tracing-217M.values.npy",
+   "sha256": "45ee1cce393a414268e8f1fcf6467afdc60ec6a7213b59b082fef982512922d0",
+   "bytes": 467280
+  },
+  {
+   "path": "projects/maxtoki/checks/results/cache/exhaustive-mapping-217M.values.npy",
+   "sha256": "aa339d1f505cec33a3dcf2a4f85123f0c9f378d33715bef47b2e7d75223edf5f",
+   "bytes": 149792
+  },
+  {
+   "path": "projects/maxtoki/checks/results/cache/longevity-mechinterp-217M.values.npy",
+   "sha256": "3681cc6553233f9d6f256f2b9840d78bb692f5c69db65cc35326e97d5bd97c01",
+   "bytes": 25056
+  },
+  {
+   "path": "projects/maxtoki/checks/results/cache/manifold-discovery-217M.values.npy",
+   "sha256": "a5fd67df4a66872f2e700d86401036c68062e8a88b67e8423b010540785856f9",
+   "bytes": 455656
+  },
+  {
+   "path": "projects/maxtoki/checks/results/cache/sae-atlas-217M.values.npy",
+   "sha256": "068939e296b8af373dbda68aa047d45661dd3711a6af489f4bb81941af740770",
+   "bytes": 3271888
+  },
+  {
+   "path": "projects/maxtoki/checks/results/cache/spectral-geometry-217M.values.npy",
+   "sha256": "20840d65ca3ad2d9883b7f6c307a4b425c74e847a8d4a80df8283eabbe91000c",
+   "bytes": 185640
+  },
+  {
+   "path": "projects/maxtoki/checks/results/cache/topology-141-217M.values.npy",
+   "sha256": "d9f628d6e9451c2384b793a6fe74d5992c2e8844760468d61e749c27a2677d4d",
+   "bytes": 66392
+  },
+  {
+   "path": "projects/maxtoki/checks/results/number_trace_numbers.csv",
+   "sha256": "585ca4fc7e3cc6866dc2ee1de7d7ecdf9f6df76883933a913c4436a748aeabb1",
+   "bytes": 623214
+  },
+  {
+   "path": "projects/maxtoki/checks/results/spec_lint_coderefs.csv",
+   "sha256": "58a267a0881c56542a04271e9608bb18371999c0309717b18b33a8068dbb3e4a",
+   "bytes": 53705
+  },
+  {
+   "path": "projects/maxtoki/runs/manifold-discovery-217M/reports/external_validation_external.json",
+   "sha256": "12749853f0be3e20daef8326051e2c7017879819b843da6b94d9844e1805bfce",
+   "bytes": 505
+  },
+  {
+   "path": "projects/maxtoki/runs/manifold-discovery-217M/reports/external_validation_lung_control.json",
+   "sha256": "65b285fcc12e564716dcaf11905424651564c4b3c5e4b77dc2c698f47ffe17a2",
+   "bytes": 531
+  },
+  {
+   "path": "projects/maxtoki/runs/manifold-discovery-217M/reports/external_validation_lung_nonhema.json",
+   "sha256": "07c9eff789d0b59b5f029cdc86677bb65f78ab18304b0b0fa40f22fd72892ad3",
+   "bytes": 501
+  },
+  {
+   "path": "projects/maxtoki/runs/manifold-discovery-217M/reports/h38_lite_quality_gates.json",
+   "sha256": "23ad3d971b06f1f3d236b74653fce3c821a7a313a4900a94ebb5f862a5207be7",
+   "bytes": 1045
+  },
+  {
+   "path": "projects/maxtoki/runs/manifold-discovery-217M/reports/quality_gates_let_anchor.json",
+   "sha256": "b964a4456d02cbcc7c147d93ba5caa9aeabcaa1dd02cfee28583245a22edf607",
+   "bytes": 928
+  },
+  {
+   "path": "projects/maxtoki/runs/manifold-discovery-217M/reports/quality_gates_spec.json",
+   "sha256": "878e3143ba273bec2fe83d5d0b2a667151d935d89c0dc41bc8e3d9bee44f6293",
+   "bytes": 2058
+  },
+  {
+   "path": "projects/maxtoki/runs/manifold-discovery-217M/reports/zeroshot_transfer_anchor_head.json",
+   "sha256": "58f85b11f61b05f600f92abcbb20dc64ddf4dc7e973f32a4872bc472835c8aab",
+   "bytes": 492
+  }
+ ]
+}

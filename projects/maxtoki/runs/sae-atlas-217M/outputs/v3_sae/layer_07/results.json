@@ -1,0 +1,47 @@
+{
+  "d_model": 1232,
+  "d_sae": 4928,
+  "k": 32,
+  "n_train": 917996,
+  "n_eval": 102000,
+  "n_epochs": 4,
+  "lr": 0.0003,
+  "batch_size": 4096,
+  "variance_explained": 0.8472406701727256,
+  "n_alive": 4923,
+  "n_dead": 5,
+  "dead_rate": 0.0010146103896103895,
+  "mean_abs_decoder_cosine": 0.0368223873982206,
+  "total_train_seconds": 187.84844613075256,
+  "training_log": [
+    {
+      "epoch": 0,
+      "loss": 0.30754693925380705,
+      "steps": 225,
+      "seconds": 49.12449097633362
+    },
+    {
+      "epoch": 1,
+      "loss": 0.15922603382004633,
+      "steps": 450,
+      "seconds": 105.77184820175171
+    },
+    {
+      "epoch": 2,
+      "loss": 0.12215657267305587,
+      "steps": 675,
+      "seconds": 146.6135711669922
+    },
+    {
+      "epoch": 3,
+      "loss": 0.10486044261190626,
+      "steps": 900,
+      "seconds": 180.46448826789856
+    }
+  ],
+  "mean_l0_eval": 32.0,
+  "counts_on_cpu": true,
+  "input_encoding": "v3: counts = round(expm1(X)/unit) via setup/inputs_v3.py (checked)",
+  "train_mean_seconds": 6.451708078384399,
+  "device": "mps"
+}

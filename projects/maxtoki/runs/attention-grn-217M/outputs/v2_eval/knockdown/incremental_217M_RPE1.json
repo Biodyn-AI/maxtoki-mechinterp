@@ -1,0 +1,28 @@
+{
+ "n_pairs": 487175,
+ "n_perturbations": 325,
+ "positive_rate": 0.09903012264586647,
+ "pair_table_rows_identical_to_deployed": true,
+ "labels_identical_to_deployed": true,
+ "attention_max_abs_diff_vs_deployed": 9.999054535747565e-17,
+ "fold_mean_auroc_gene_only": 0.7474802505178196,
+ "fold_mean_auroc_gene_plus_attn": 0.7471860859238797,
+ "fold_mean_delta": -0.00029416459393993843,
+ "deployed_gene_only": 0.7474802505178196,
+ "deployed_gene_plus_attn": 0.7471860859238797,
+ "deployed_delta": -0.0002941645939399,
+ "per_fold_delta": [
+  -0.00020411304647438566,
+  -4.2278642708670766e-05,
+  0.00013054908818033173,
+  -0.00032661777319353824,
+  -0.0010283625955040954
+ ],
+ "pooled_oof_auroc_gene_only": 0.7477347258631944,
+ "pooled_oof_auroc_gene_plus_attn": 0.747456279462632,
+ "pooled_oof_delta": -0.00027844640056240433,
+ "pooled_oof_delta_ci95": [
+  -0.0004812310781127288,
+  -9.131463098961124e-05
+ ]
+}

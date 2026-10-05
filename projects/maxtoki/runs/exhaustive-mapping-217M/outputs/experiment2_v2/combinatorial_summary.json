@@ -1,0 +1,99 @@
+{
+  "n_triplets": 4,
+  "selection_strategy": "pathway-distinct + feature-distinct (one triplet per primary ontology term, no L0/L5/L9 feature reused)",
+  "triplet_layers": [
+    0,
+    5,
+    9
+  ],
+  "measurement_layer": 11,
+  "n_cells_per_condition": 50,
+  "mean_pairwise_ratio": 0.3235,
+  "std_pairwise_ratio": 0.0,
+  "mean_threeway_ratio": 0.1896,
+  "std_threeway_ratio": 0.0001,
+  "mean_pct_superadditive": 0.0,
+  "v1_comparison": {
+    "v1_mean_pairwise_ratio": 0.1654,
+    "v1_mean_threeway_ratio": 0.1897,
+    "v1_issue": "all 4 v1 triplets shared (L0_F0, L5_F0) base"
+  },
+  "triplets": [
+    {
+      "triplet": 0,
+      "features": {
+        "L0": 4388,
+        "L5": 226,
+        "L9": 3852
+      },
+      "primary_pathway": "Reactome:Post-translational Protein Modification R-HSA-597592",
+      "shared_terms_count": 8,
+      "pairwise_ratio_AB": 0.1652,
+      "pairwise_ratio_AC": 0.2189,
+      "pairwise_ratio_BC": 0.5861,
+      "pairwise_ratio_mean": 0.3234,
+      "threeway_ratio": 0.1896,
+      "marginal_C_given_AB": 0.2938,
+      "n_superadditive": 0,
+      "n_targets_with_effect": 2980,
+      "pct_superadditive": 0.0
+    },
+    {
+      "triplet": 1,
+      "features": {
+        "L0": 3872,
+        "L5": 1879,
+        "L9": 3956
+      },
+      "primary_pathway": "Reactome:Gene Expression (Transcription) R-HSA-74160",
+      "shared_terms_count": 12,
+      "pairwise_ratio_AB": 0.1652,
+      "pairwise_ratio_AC": 0.2189,
+      "pairwise_ratio_BC": 0.5861,
+      "pairwise_ratio_mean": 0.3234,
+      "threeway_ratio": 0.1896,
+      "marginal_C_given_AB": 0.2938,
+      "n_superadditive": 0,
+      "n_targets_with_effect": 2980,
+      "pct_superadditive": 0.0
+    },
+    {
+      "triplet": 2,
+      "features": {
+        "L0": 2160,
+        "L5": 3317,
+        "L9": 3456
+      },
+      "primary_pathway": "Reactome:Immune System R-HSA-168256",
+      "shared_terms_count": 8,
+      "pairwise_ratio_AB": 0.1653,
+      "pairwise_ratio_AC": 0.219,
+      "pairwise_ratio_BC": 0.5861,
+      "pairwise_ratio_mean": 0.3235,
+      "threeway_ratio": 0.1897,
+      "marginal_C_given_AB": 0.2938,
+      "n_superadditive": 0,
+      "n_targets_with_effect": 2979,
+      "pct_superadditive": 0.0
+    },
+    {
+      "triplet": 3,
+      "features": {
+        "L0": 1103,
+        "L5": 3554,
+        "L9": 457
+      },
+      "primary_pathway": "Reactome:Cell Cycle Checkpoints R-HSA-69620",
+      "shared_terms_count": 23,
+      "pairwise_ratio_AB": 0.1656,
+      "pairwise_ratio_AC": 0.2191,
+      "pairwise_ratio_BC": 0.5858,
+      "pairwise_ratio_mean": 0.3235,
+      "threeway_ratio": 0.1897,
+      "marginal_C_given_AB": 0.293,
+      "n_superadditive": 0,
+      "n_targets_with_effect": 2977,
+      "pct_superadditive": 0.0
+    }
+  ]
+}

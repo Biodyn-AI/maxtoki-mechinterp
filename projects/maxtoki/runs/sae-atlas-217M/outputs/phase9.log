@@ -1,0 +1,42 @@
+======================================================================
+Phase 9 — Multi-tissue SAE control
+======================================================================
+
+[1] Pooling K562 + Tabula Sapiens activations at L5...
+  K562 positions: 1,019,996
+  extracting Tabula Sapiens L5 activations (500 cells)...
+Loading weights:   0%|          | 0/102 [00:00<?, ?it/s]Loading weights:  68%|██████▊   | 69/102 [00:00<00:00, 687.34it/s]Loading weights: 100%|██████████| 102/102 [00:00<00:00, 1007.55it/s]
+    100/500 cells
+    200/500 cells
+    300/500 cells
+    400/500 cells
+    500/500 cells
+  TS positions: 886,965
+  pooled: 1,000,000 (500,000 K562 + 500,000 TS)
+
+[2] Training multi-tissue SAE at L5...
+  Loading activations from <REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/outputs/phase9/pooled_l5_activations.npy...
+  total positions: 1,000,000  d_model=1232
+  train=900,000  eval=100,000  d_sae=4928  k=32
+    epoch 0: loss=0.171089  steps=220  time=24.8s
+    epoch 1: loss=0.090051  steps=440  time=48.0s
+    epoch 2: loss=0.073381  steps=660  time=71.2s
+    epoch 3: loss=0.065594  steps=880  time=94.3s
+  var_explained=0.7820  alive=4922/4928  dead=6  dec_cos=0.0346
+  var_explained=0.7820  alive=4922  dead=6
+
+[3] Re-running perturbation specificity with multi-tissue SAE...
+Loading weights:   0%|          | 0/102 [00:00<?, ?it/s]Loading weights:  40%|████      | 41/102 [00:00<00:00, 399.53it/s]Loading weights: 100%|██████████| 102/102 [00:00<00:00, 714.80it/s]
+  targets: 48 TFs + 52 non-TFs
+    20/100 processed
+    40/100 processed
+    60/100 processed
+    80/100 processed
+    100/100 processed
+
+  Multi-tissue detection: 95/100 (95.0%)
+  Multi-tissue TF specificity: 0/48 (0.0%)
+  K562-only TF specificity: 0/48 (0.0%)
+  Δ multi-tissue vs K562-only: +0.0%
+
+Phase 9 COMPLETE — outputs: <REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/outputs/phase9

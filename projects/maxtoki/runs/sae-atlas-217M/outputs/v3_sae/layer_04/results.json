@@ -1,0 +1,48 @@
+{
+  "d_model": 1232,
+  "d_sae": 4928,
+  "k": 32,
+  "n_train": 917996,
+  "n_eval": 102000,
+  "n_epochs": 4,
+  "lr": 0.0003,
+  "batch_size": 4096,
+  "variance_explained": 0.8999476708000153,
+  "n_alive": 4928,
+  "n_dead": 0,
+  "dead_rate": 0.0,
+  "mean_abs_decoder_cosine": 0.036789002551697196,
+  "total_train_seconds": 613.8186542987823,
+  "training_log": [
+    {
+      "epoch": 0,
+      "loss": 0.1287586156030496,
+      "steps": 225,
+      "seconds": 309.38412523269653
+    },
+    {
+      "epoch": 1,
+      "loss": 0.04710145110885302,
+      "steps": 450,
+      "seconds": 490.6291811466217
+    },
+    {
+      "epoch": 2,
+      "loss": 0.03455321699380875,
+      "steps": 675,
+      "seconds": 527.1758553981781
+    },
+    {
+      "epoch": 3,
+      "loss": 0.02981606192058987,
+      "steps": 900,
+      "seconds": 607.6059613227844
+    }
+  ],
+  "mean_l0_eval": 32.0,
+  "input_encoding": "v3: counts = round(expm1(X)/unit) via setup/inputs_v3.py (checked)",
+  "train_mean_seconds": 67.03910493850708,
+  "device": "mps",
+  "counts_on_cpu": true,
+  "recount_note": "recounted on CPU after an MPS bool-sum bug; first values {'variance_explained': 0.8999476708000153, 'n_alive': 4928, 'n_dead': 0, 'mean_l0_eval': 32.0}"
+}

@@ -1,0 +1,91 @@
+{
+  "criteria": {
+    "C1_attention_beats_trivial_baselines": {
+      "pass": false,
+      "details": {
+        "attention_mean_auroc": 0.511937906049327,
+        "beat_baselines": [
+          {
+            "baseline": "gene_variance",
+            "baseline_auroc": 0.59566434928783,
+            "attention_won": false,
+            "wilcoxon_p_bh": 4.033241487529801e-10,
+            "significant": false
+          },
+          {
+            "baseline": "gene_mean_expr",
+            "baseline_auroc": 0.5604681212519123,
+            "attention_won": false,
+            "wilcoxon_p_bh": 2.3143168153472657e-08,
+            "significant": false
+          },
+          {
+            "baseline": "gene_one_minus_dropout",
+            "baseline_auroc": 0.548264245541578,
+            "attention_won": false,
+            "wilcoxon_p_bh": 5.583271429239233e-06,
+            "significant": false
+          }
+        ]
+      }
+    },
+    "C2_incremental_value_over_gene_features": {
+      "pass": false,
+      "delta_auroc": 0.0007146170501274,
+      "threshold": 0.005,
+      "split": "cross_pert",
+      "model": "logreg"
+    },
+    "C3_residualized_retains_signal": {
+      "pass": false,
+      "fraction_above_chance_retained": -13421.31450945372,
+      "threshold": 0.5,
+      "baseline_auroc": 0.4828938924695181,
+      "residualized_auroc": 0.4865786854905463
+    },
+    "C4_top_heads_causal": {
+      "pass": false,
+      "baseline_auroc": 0.4398519386549854,
+      "top5_auroc": 0.4347144331910382,
+      "delta_top5": 0.005137505463947201,
+      "random5_deltas": [
+        -0.014568045906457217,
+        0.005440696409140411,
+        -0.017958948318034407
+      ],
+      "random5_median_delta": -0.014568045906457217,
+      "threshold": 0.02
+    }
+  },
+  "overall": {
+    "criteria_evaluated": 4,
+    "criteria_total": 4,
+    "all_pass": false,
+    "verdict": "FAIL \u2014 at least one mandatory criterion failed"
+  },
+  "scope_notes": {
+    "phases_run": [
+      "0a",
+      "1",
+      "2",
+      "3",
+      "4",
+      "12"
+    ],
+    "phases_skipped": [
+      "0b (value-weighted edges)",
+      "5 (cross-context replication \u2014 RPE1, Adamson, Dixit, Shifrut, Tian)",
+      "6 (CSSI)",
+      "7 (biological characterization \u2014 STRING, Reactome, KEGG, GO)",
+      "8 (detectability)",
+      "9 (ortholog transfer)",
+      "10 (pseudotime)",
+      "11 (batch leakage, calibration, TRRUST circularity, HVG protocol, mediation)"
+    ],
+    "dataset": "Replogle K562 non-targeting controls only",
+    "reference_network": "TRRUST only (no STRING/Reactome/KEGG/GO)",
+    "n_ctrl": 2000,
+    "n_hvg": 1500,
+    "curveball_null_iters": 50
+  }
+}

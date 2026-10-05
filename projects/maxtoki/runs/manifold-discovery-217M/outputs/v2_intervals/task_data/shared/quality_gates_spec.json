@@ -1,0 +1,34 @@
+{
+  "$schema_note": "Frozen quality-gate thresholds for the manifold-discovery pipeline run on MaxToki-217M. Committed at Phase 0 per the pipeline's 'set before Phase 1, never loosen' rule. Source: pipelines/manifold-discovery-extraction-compactification.md sections 2 (Phase 2) and 7 (Parameters).",
+  "committed_on": "2026-05-03",
+  "committed_for_run": "manifold-discovery-217M",
+  "primary_branch": "H65_hematopoietic_developmental_ordering",
+  "null_branch": "H65_null_shuffled",
+  "secondary_branch": "H38_intercellular_communication_omnipath",
+  "gates": {
+    "trustworthiness_min": 0.80,
+    "random_holdout_correlation_min": 0.20,
+    "donor_holdout_correlation_min": 0.20,
+    "clade_branch_holdout_correlation_min": 0.20,
+    "blocked_permutation_p_max": 0.001,
+    "n_permutations_min": 2000
+  },
+  "evaluation_protocol": {
+    "trustworthiness_k_neighbors": 15,
+    "holdout_metric": "spearman",
+    "permutation_blocking": "by_donor_and_tissue",
+    "p_value_method": "two_sided"
+  },
+  "promotion_rules": [
+    "A positive branch must pass ALL five gates on the internal panel before Phase 5 training proceeds.",
+    "A positive branch must pass ALL four gates on the strict non-overlap external panel before Phase 8.",
+    "The paired null branch MUST fail at least one of the four numeric gates with a margin (failure within rounding does not count).",
+    "Adjusting any gate threshold downward to make a failing branch pass is a forbidden pipeline violation. Such a violation invalidates the entire run.",
+    "All rescue operations must expand internal coverage (more donors, more cell types, more tissues). The external panel is read-only after Phase 1."
+  ],
+  "expected_negative_control_failure": {
+    "panel": "tabula_sapiens_lung_non_hematopoietic",
+    "expected_signature": "trustworthiness < 0.80 AND clade_branch_correlation < 0.20",
+    "why": "Lung tissue has no hematopoietic developmental structure. If it passes the gates, the pipeline is detecting generic tissue covariance rather than the hematopoietic manifold."
+  }
+}

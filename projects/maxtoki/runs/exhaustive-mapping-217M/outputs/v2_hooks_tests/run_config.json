@@ -1,0 +1,54 @@
+{
+  "chunks": [
+    {
+      "start": "00:54:09",
+      "cells_done": [
+        289300,
+        292833,
+        293501
+      ],
+      "wall_seconds": 238.7
+    }
+  ],
+  "device": "mps",
+  "torch": "2.11.0",
+  "transformers": "5.5.4",
+  "python": "3.12.9",
+  "platform": "macOS-26.3-arm64-arm-64bit",
+  "hooks_v2_sha256": "1ba6fda5ad761b1f82041a7b1397fa9332fa7438e13db955a00d751c4b440f54",
+  "model_dir": "<REPO_ROOT>/projects/maxtoki/setup/MaxToki-217M-HF",
+  "model_dtype": "float32",
+  "timestamp": "2026-10-01T00:54:09",
+  "script": "<REPO_ROOT>/projects/maxtoki/setup/test_hooks_v2.py",
+  "script_sha256": "b04aa8f1dd678ef25f1174dda61cc9c05b7f997b0211fab1730c4b0c5cbb5112",
+  "seeds": {
+    "cell_selection": 42,
+    "random_vector": 0
+  },
+  "cells": {
+    "dataset": "<DATA_ROOT>/biodyn-nmi-paper/src/02_cssi_method/crispri_validation/data/replogle_concat.h5ad",
+    "dataset_rows": [
+      289300,
+      292833,
+      293501
+    ],
+    "selection": "K562 non-targeting controls; rng(42).choice(pool=100) sorted; first n that tokenize (same pool as experiment2_rerun.py)"
+  },
+  "sae_dir": "<REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/outputs/phase1",
+  "features": {
+    "steer_alpha1_deployed": {
+      "0": 40,
+      "3": 4071,
+      "6": 4138,
+      "9": 1014,
+      "11": 3924
+    },
+    "others": "chosen per cell as the top total-activation feature (see per-cell JSON)"
+  },
+  "tolerances": {
+    "zero": 0.0001,
+    "dead": 1e-05,
+    "same": 1e-06,
+    "min_change": 0.0001
+  }
+}

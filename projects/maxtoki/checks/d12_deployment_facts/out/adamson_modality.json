@@ -1,0 +1,42 @@
+{
+  "input": {
+    "path": "<DATA_ROOT>/biodyn-work/single_cell_mechinterp/data/perturb/adamson/perturb_processed_symbols.h5ad",
+    "sha256": "3b816440acd5f02e55e63df83e697d9e80f3787f5e9056bf965c66acad5d7fc2",
+    "project_csv": "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/phase1_adamson/per_perturbation_auroc.csv",
+    "project_csv_sha256": "5b8e59283e34b21312248b70bedf6f37eef8e401f55f3fced4015332ce04e724"
+  },
+  "cell_type_field": [
+    "K562(?)"
+  ],
+  "n_conditions_in_file": 87,
+  "n_perturbations_in_file": 86,
+  "n_control_cells": 24263,
+  "n_cells_total": 68603,
+  "n_targets_measured": 85,
+  "n_targets_down": 85,
+  "frac_targets_down": 1.0,
+  "frac_targets_down_ci95_bootstrap": [
+    1.0,
+    1.0
+  ],
+  "frac_targets_down_ci95_clopper_pearson": [
+    0.9575296600887508,
+    1.0
+  ],
+  "median_target_log2fc": -2.931213695451343,
+  "median_target_log2fc_ci95": [
+    -3.1639074750044673,
+    -2.7454209470776187
+  ],
+  "n_targets_log2fc_below_minus1": 78,
+  "null_random_genes": {
+    "n": 1700,
+    "frac_down": 0.28823529411764703,
+    "median_log2fc": 0.20821870863437653
+  },
+  "interval_method": "bootstrap over perturbed genes, 10,000 resamples, seed 42, percentile 95%; plus exact Clopper-Pearson 95% interval for the fraction (the bootstrap is degenerate at 85/85)",
+  "project_label": "CRISPRa (setup/dataset_loader.py:96 docstring; summaries/attention-grn-217M-FINAL_SUMMARY.md run table)",
+  "n_perturbations_used_by_project": 57,
+  "project_perturbations_all_in_file": true,
+  "verdict": "knock-down (CRISPRi-like): the perturbed gene falls in its own cells"
+}

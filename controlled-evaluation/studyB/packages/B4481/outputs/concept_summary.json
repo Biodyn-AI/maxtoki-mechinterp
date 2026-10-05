@@ -1,0 +1,193 @@
+{
+  "n_residues": 1606104,
+  "n_proteins": 5000,
+  "n_accessions_with_ft": 4124,
+  "concepts": [
+    {
+      "key": "DOMAIN",
+      "group": "domain",
+      "n_positive_residues": 224224,
+      "prevalence": 0.1396073977774789
+    },
+    {
+      "key": "REGION",
+      "group": "domain",
+      "n_positive_residues": 135838,
+      "prevalence": 0.08457609220822562
+    },
+    {
+      "key": "TOPO_DOM",
+      "group": "topology",
+      "n_positive_residues": 80723,
+      "prevalence": 0.0502601325941533
+    },
+    {
+      "key": "TRANSMEM",
+      "group": "topology",
+      "n_positive_residues": 68839,
+      "prevalence": 0.04286086081598701
+    },
+    {
+      "key": "HELIX",
+      "group": "secondary_structure",
+      "n_positive_residues": 31592,
+      "prevalence": 0.01966995910601057
+    },
+    {
+      "key": "COMPBIAS",
+      "group": "domain",
+      "n_positive_residues": 31524,
+      "prevalence": 0.019627620627306823
+    },
+    {
+      "key": "REPEAT",
+      "group": "domain",
+      "n_positive_residues": 22554,
+      "prevalence": 0.014042677186533375
+    },
+    {
+      "key": "BINDING",
+      "group": "binding",
+      "n_positive_residues": 19010,
+      "prevalence": 0.011836095296444065
+    },
+    {
+      "key": "STRAND",
+      "group": "secondary_structure",
+      "n_positive_residues": 18530,
+      "prevalence": 0.01153723544677057
+    },
+    {
+      "key": "COILED",
+      "group": "domain",
+      "n_positive_residues": 10953,
+      "prevalence": 0.0068196081947370785
+    },
+    {
+      "key": "SIGNAL",
+      "group": "targeting",
+      "n_positive_residues": 9302,
+      "prevalence": 0.005791654836797617
+    },
+    {
+      "key": "ZN_FING",
+      "group": "binding",
+      "n_positive_residues": 6187,
+      "prevalence": 0.0038521789373539947
+    },
+    {
+      "key": "DNA_BIND",
+      "group": "binding",
+      "n_positive_residues": 5220,
+      "prevalence": 0.003250100865199265
+    },
+    {
+      "key": "PROPEP",
+      "group": "targeting",
+      "n_positive_residues": 4913,
+      "prevalence": 0.0030589550863455916
+    },
+    {
+      "key": "MOTIF",
+      "group": "domain",
+      "n_positive_residues": 3262,
+      "prevalence": 0.0020310017284061307
+    },
+    {
+      "key": "VARIANT",
+      "group": "variation",
+      "n_positive_residues": 3243,
+      "prevalence": 0.002019171859356555
+    },
+    {
+      "key": "TRANSIT",
+      "group": "targeting",
+      "n_positive_residues": 2946,
+      "prevalence": 0.0018342523273710794
+    },
+    {
+      "key": "TURN",
+      "group": "secondary_structure",
+      "n_positive_residues": 2757,
+      "prevalence": 0.0017165762615621405
+    },
+    {
+      "key": "DISULFID",
+      "group": "ptm",
+      "n_positive_residues": 2154,
+      "prevalence": 0.0013411335754098116
+    },
+    {
+      "key": "CONFLICT",
+      "group": "variation",
+      "n_positive_residues": 1860,
+      "prevalence": 0.0011580819174847954
+    },
+    {
+      "key": "MOD_RES",
+      "group": "ptm",
+      "n_positive_residues": 1802,
+      "prevalence": 0.001121969685649248
+    },
+    {
+      "key": "ACT_SITE",
+      "group": "catalytic",
+      "n_positive_residues": 1534,
+      "prevalence": 0.0009551062695815464
+    },
+    {
+      "key": "MUTAGEN",
+      "group": "variation",
+      "n_positive_residues": 1109,
+      "prevalence": 0.0006904907776831388
+    },
+    {
+      "key": "CARBOHYD",
+      "group": "ptm",
+      "n_positive_residues": 794,
+      "prevalence": 0.0004943640013349073
+    },
+    {
+      "key": "SITE",
+      "group": "site_other",
+      "n_positive_residues": 577,
+      "prevalence": 0.0003592544442950145
+    },
+    {
+      "key": "INTRAMEM",
+      "group": "topology",
+      "n_positive_residues": 263,
+      "prevalence": 0.0001637502926336028
+    },
+    {
+      "key": "CROSSLNK",
+      "group": "ptm",
+      "n_positive_residues": 178,
+      "prevalence": 0.00011082719425392129
+    },
+    {
+      "key": "LIPID",
+      "group": "ptm",
+      "n_positive_residues": 117,
+      "prevalence": 7.284708835791456e-05
+    },
+    {
+      "key": "CA_BIND",
+      "group": "binding",
+      "n_positive_residues": 0,
+      "prevalence": 0.0
+    },
+    {
+      "key": "METAL",
+      "group": "binding",
+      "n_positive_residues": 0,
+      "prevalence": 0.0
+    },
+    {
+      "key": "NP_BIND",
+      "group": "binding",
+      "n_positive_residues": 0,
+      "prevalence": 0.0
+    }
+  ]
+}

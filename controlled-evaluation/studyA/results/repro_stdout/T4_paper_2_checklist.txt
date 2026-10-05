@@ -1,0 +1,1864 @@
+{
+ "verdict": "aligned with scGPT but clearly less than with Geneformer",
+ "estimates": [
+  {
+   "name": "rsa_MG_union",
+   "value": 0.3339,
+   "ci_low": 0.3264,
+   "ci_high": 0.342,
+   "method_of_uncertainty": "gene bootstrap: genes resampled with replacement (the same draw for all model pairs), pairs of copies of one gene dropped; percentile 95% CI, B=1000"
+  },
+  {
+   "name": "rsa_MS_union",
+   "value": 0.2147,
+   "ci_low": 0.2068,
+   "ci_high": 0.2225,
+   "method_of_uncertainty": "gene bootstrap: genes resampled with replacement (the same draw for all model pairs), pairs of copies of one gene dropped; percentile 95% CI, B=1000"
+  },
+  {
+   "name": "rsa_GS_union",
+   "value": 0.5307,
+   "ci_low": 0.5197,
+   "ci_high": 0.5412,
+   "method_of_uncertainty": "gene bootstrap: genes resampled with replacement (the same draw for all model pairs), pairs of copies of one gene dropped; percentile 95% CI, B=1000"
+  },
+  {
+   "name": "rsa_diff_MG_minus_MS_union",
+   "value": 0.1192,
+   "ci_low": 0.1129,
+   "ci_high": 0.1255,
+   "method_of_uncertainty": "gene bootstrap: genes resampled with replacement (the same draw for all model pairs), pairs of copies of one gene dropped; percentile 95% CI, B=1000"
+  },
+  {
+   "name": "rsa_ratio_MS_over_MG_union",
+   "value": 0.6431,
+   "ci_low": 0.6259,
+   "ci_high": 0.6609,
+   "method_of_uncertainty": "gene bootstrap: genes resampled with replacement (the same draw for all model pairs), pairs of copies of one gene dropped; percentile 95% CI, B=1000"
+  },
+  {
+   "name": "dcka_MG_union",
+   "value": 0.362,
+   "ci_low": 0.3544,
+   "ci_high": 0.37,
+   "method_of_uncertainty": "gene bootstrap: genes resampled with replacement (the same draw for all model pairs), pairs of copies of one gene dropped; percentile 95% CI, B=1000"
+  },
+  {
+   "name": "dcka_MS_union",
+   "value": 0.2453,
+   "ci_low": 0.236,
+   "ci_high": 0.2545,
+   "method_of_uncertainty": "gene bootstrap: genes resampled with replacement (the same draw for all model pairs), pairs of copies of one gene dropped; percentile 95% CI, B=1000"
+  },
+  {
+   "name": "dcka_GS_union",
+   "value": 0.5189,
+   "ci_low": 0.5016,
+   "ci_high": 0.535,
+   "method_of_uncertainty": "gene bootstrap: genes resampled with replacement (the same draw for all model pairs), pairs of copies of one gene dropped; percentile 95% CI, B=1000"
+  },
+  {
+   "name": "dcka_diff_MG_minus_MS_union",
+   "value": 0.1167,
+   "ci_low": 0.1101,
+   "ci_high": 0.1238,
+   "method_of_uncertainty": "gene bootstrap: genes resampled with replacement (the same draw for all model pairs), pairs of copies of one gene dropped; percentile 95% CI, B=1000"
+  },
+  {
+   "name": "dcka_ratio_MS_over_MG_union",
+   "value": 0.6777,
+   "ci_low": 0.6581,
+   "ci_high": 0.6961,
+   "method_of_uncertainty": "gene bootstrap: genes resampled with replacement (the same draw for all model pairs), pairs of copies of one gene dropped; percentile 95% CI, B=1000"
+  },
+  {
+   "name": "rsa_partial_MG_given_S_union",
+   "value": 0.2657,
+   "ci_low": 0.2586,
+   "ci_high": 0.2731,
+   "method_of_uncertainty": "gene bootstrap: genes resampled with replacement (the same draw for all model pairs), pairs of copies of one gene dropped; percentile 95% CI, B=1000"
+  },
+  {
+   "name": "rsa_partial_MS_given_G_union",
+   "value": 0.047,
+   "ci_low": 0.039,
+   "ci_high": 0.0548,
+   "method_of_uncertainty": "gene bootstrap: genes resampled with replacement (the same draw for all model pairs), pairs of copies of one gene dropped; percentile 95% CI, B=1000"
+  },
+  {
+   "name": "rsa_onefactor_loading_M_union",
+   "value": 0.3676,
+   "ci_low": 0.3573,
+   "ci_high": 0.3783,
+   "method_of_uncertainty": "gene bootstrap: genes resampled with replacement (the same draw for all model pairs), pairs of copies of one gene dropped; percentile 95% CI, B=1000"
+  },
+  {
+   "name": "rsa_onefactor_loading_G_union",
+   "value": 0.9085,
+   "ci_low": 0.8955,
+   "ci_high": 0.923,
+   "method_of_uncertainty": "gene bootstrap: genes resampled with replacement (the same draw for all model pairs), pairs of copies of one gene dropped; percentile 95% CI, B=1000"
+  },
+  {
+   "name": "rsa_onefactor_loading_S_union",
+   "value": 0.5842,
+   "ci_low": 0.5724,
+   "ci_high": 0.5949,
+   "method_of_uncertainty": "gene bootstrap: genes resampled with replacement (the same draw for all model pairs), pairs of copies of one gene dropped; percentile 95% CI, B=1000"
+  },
+  {
+   "name": "rsa_MG_union_perm_p",
+   "value": 0.001,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "one-sided gene-label permutation p-value (999 permutations of the MaxToki gene-row correspondence); no CI"
+  },
+  {
+   "name": "rsa_MG_union_perm_null_mean",
+   "value": 0.0001,
+   "ci_low": -0.0032,
+   "ci_high": 0.0035,
+   "method_of_uncertainty": "mean of the gene-label permutation null; interval = its 2.5-97.5 percentiles (999 permutations)"
+  },
+  {
+   "name": "rsa_MS_union_perm_p",
+   "value": 0.001,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "one-sided gene-label permutation p-value (999 permutations of the MaxToki gene-row correspondence); no CI"
+  },
+  {
+   "name": "rsa_MS_union_perm_null_mean",
+   "value": 0.0,
+   "ci_low": -0.0033,
+   "ci_high": 0.0033,
+   "method_of_uncertainty": "mean of the gene-label permutation null; interval = its 2.5-97.5 percentiles (999 permutations)"
+  },
+  {
+   "name": "dcka_MG_union_perm_p",
+   "value": 0.001,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "one-sided gene-label permutation p-value (999 permutations of the MaxToki gene-row correspondence); no CI"
+  },
+  {
+   "name": "dcka_MG_union_perm_null_mean",
+   "value": -0.0,
+   "ci_low": -0.0033,
+   "ci_high": 0.0033,
+   "method_of_uncertainty": "mean of the gene-label permutation null; interval = its 2.5-97.5 percentiles (999 permutations)"
+  },
+  {
+   "name": "dcka_MS_union_perm_p",
+   "value": 0.001,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "one-sided gene-label permutation p-value (999 permutations of the MaxToki gene-row correspondence); no CI"
+  },
+  {
+   "name": "dcka_MS_union_perm_null_mean",
+   "value": 0.0,
+   "ci_low": -0.0033,
+   "ci_high": 0.0033,
+   "method_of_uncertainty": "mean of the gene-label permutation null; interval = its 2.5-97.5 percentiles (999 permutations)"
+  },
+  {
+   "name": "rsa_MG_lung",
+   "value": 0.3526,
+   "ci_low": 0.3398,
+   "ci_high": 0.366,
+   "method_of_uncertainty": "gene bootstrap: genes resampled with replacement (the same draw for all model pairs), pairs of copies of one gene dropped; percentile 95% CI, B=500"
+  },
+  {
+   "name": "rsa_MS_lung",
+   "value": 0.2434,
+   "ci_low": 0.2288,
+   "ci_high": 0.2574,
+   "method_of_uncertainty": "gene bootstrap: genes resampled with replacement (the same draw for all model pairs), pairs of copies of one gene dropped; percentile 95% CI, B=500"
+  },
+  {
+   "name": "rsa_GS_lung",
+   "value": 0.6039,
+   "ci_low": 0.5875,
+   "ci_high": 0.6219,
+   "method_of_uncertainty": "gene bootstrap: genes resampled with replacement (the same draw for all model pairs), pairs of copies of one gene dropped; percentile 95% CI, B=500"
+  },
+  {
+   "name": "rsa_diff_MG_minus_MS_lung",
+   "value": 0.1093,
+   "ci_low": 0.0972,
+   "ci_high": 0.1204,
+   "method_of_uncertainty": "gene bootstrap: genes resampled with replacement (the same draw for all model pairs), pairs of copies of one gene dropped; percentile 95% CI, B=500"
+  },
+  {
+   "name": "rsa_ratio_MS_over_MG_lung",
+   "value": 0.6902,
+   "ci_low": 0.6582,
+   "ci_high": 0.7224,
+   "method_of_uncertainty": "gene bootstrap: genes resampled with replacement (the same draw for all model pairs), pairs of copies of one gene dropped; percentile 95% CI, B=500"
+  },
+  {
+   "name": "dcka_MG_lung",
+   "value": 0.3951,
+   "ci_low": 0.3789,
+   "ci_high": 0.4125,
+   "method_of_uncertainty": "gene bootstrap: genes resampled with replacement (the same draw for all model pairs), pairs of copies of one gene dropped; percentile 95% CI, B=500"
+  },
+  {
+   "name": "dcka_MS_lung",
+   "value": 0.2792,
+   "ci_low": 0.261,
+   "ci_high": 0.2976,
+   "method_of_uncertainty": "gene bootstrap: genes resampled with replacement (the same draw for all model pairs), pairs of copies of one gene dropped; percentile 95% CI, B=500"
+  },
+  {
+   "name": "dcka_GS_lung",
+   "value": 0.6144,
+   "ci_low": 0.5922,
+   "ci_high": 0.6357,
+   "method_of_uncertainty": "gene bootstrap: genes resampled with replacement (the same draw for all model pairs), pairs of copies of one gene dropped; percentile 95% CI, B=500"
+  },
+  {
+   "name": "dcka_diff_MG_minus_MS_lung",
+   "value": 0.1159,
+   "ci_low": 0.1035,
+   "ci_high": 0.1276,
+   "method_of_uncertainty": "gene bootstrap: genes resampled with replacement (the same draw for all model pairs), pairs of copies of one gene dropped; percentile 95% CI, B=500"
+  },
+  {
+   "name": "dcka_ratio_MS_over_MG_lung",
+   "value": 0.7066,
+   "ci_low": 0.6772,
+   "ci_high": 0.7364,
+   "method_of_uncertainty": "gene bootstrap: genes resampled with replacement (the same draw for all model pairs), pairs of copies of one gene dropped; percentile 95% CI, B=500"
+  },
+  {
+   "name": "rsa_MG_lung_perm_p",
+   "value": 0.002,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "one-sided gene-label permutation p-value (499 permutations of the MaxToki gene-row correspondence); no CI"
+  },
+  {
+   "name": "rsa_MS_lung_perm_p",
+   "value": 0.002,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "one-sided gene-label permutation p-value (499 permutations of the MaxToki gene-row correspondence); no CI"
+  },
+  {
+   "name": "dcka_MG_lung_perm_p",
+   "value": 0.002,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "one-sided gene-label permutation p-value (499 permutations of the MaxToki gene-row correspondence); no CI"
+  },
+  {
+   "name": "dcka_MS_lung_perm_p",
+   "value": 0.002,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "one-sided gene-label permutation p-value (499 permutations of the MaxToki gene-row correspondence); no CI"
+  },
+  {
+   "name": "rsa_MG_immune",
+   "value": 0.363,
+   "ci_low": 0.3474,
+   "ci_high": 0.3778,
+   "method_of_uncertainty": "gene bootstrap: genes resampled with replacement (the same draw for all model pairs), pairs of copies of one gene dropped; percentile 95% CI, B=500"
+  },
+  {
+   "name": "rsa_MS_immune",
+   "value": 0.23,
+   "ci_low": 0.2116,
+   "ci_high": 0.2477,
+   "method_of_uncertainty": "gene bootstrap: genes resampled with replacement (the same draw for all model pairs), pairs of copies of one gene dropped; percentile 95% CI, B=500"
+  },
+  {
+   "name": "rsa_GS_immune",
+   "value": 0.4865,
+   "ci_low": 0.4661,
+   "ci_high": 0.5074,
+   "method_of_uncertainty": "gene bootstrap: genes resampled with replacement (the same draw for all model pairs), pairs of copies of one gene dropped; percentile 95% CI, B=500"
+  },
+  {
+   "name": "rsa_diff_MG_minus_MS_immune",
+   "value": 0.133,
+   "ci_low": 0.119,
+   "ci_high": 0.1486,
+   "method_of_uncertainty": "gene bootstrap: genes resampled with replacement (the same draw for all model pairs), pairs of copies of one gene dropped; percentile 95% CI, B=500"
+  },
+  {
+   "name": "rsa_ratio_MS_over_MG_immune",
+   "value": 0.6337,
+   "ci_low": 0.5936,
+   "ci_high": 0.6696,
+   "method_of_uncertainty": "gene bootstrap: genes resampled with replacement (the same draw for all model pairs), pairs of copies of one gene dropped; percentile 95% CI, B=500"
+  },
+  {
+   "name": "dcka_MG_immune",
+   "value": 0.3848,
+   "ci_low": 0.3686,
+   "ci_high": 0.4008,
+   "method_of_uncertainty": "gene bootstrap: genes resampled with replacement (the same draw for all model pairs), pairs of copies of one gene dropped; percentile 95% CI, B=500"
+  },
+  {
+   "name": "dcka_MS_immune",
+   "value": 0.2577,
+   "ci_low": 0.2388,
+   "ci_high": 0.2776,
+   "method_of_uncertainty": "gene bootstrap: genes resampled with replacement (the same draw for all model pairs), pairs of copies of one gene dropped; percentile 95% CI, B=500"
+  },
+  {
+   "name": "dcka_GS_immune",
+   "value": 0.4836,
+   "ci_low": 0.4485,
+   "ci_high": 0.5227,
+   "method_of_uncertainty": "gene bootstrap: genes resampled with replacement (the same draw for all model pairs), pairs of copies of one gene dropped; percentile 95% CI, B=500"
+  },
+  {
+   "name": "dcka_diff_MG_minus_MS_immune",
+   "value": 0.1272,
+   "ci_low": 0.1113,
+   "ci_high": 0.1416,
+   "method_of_uncertainty": "gene bootstrap: genes resampled with replacement (the same draw for all model pairs), pairs of copies of one gene dropped; percentile 95% CI, B=500"
+  },
+  {
+   "name": "dcka_ratio_MS_over_MG_immune",
+   "value": 0.6695,
+   "ci_low": 0.6323,
+   "ci_high": 0.7099,
+   "method_of_uncertainty": "gene bootstrap: genes resampled with replacement (the same draw for all model pairs), pairs of copies of one gene dropped; percentile 95% CI, B=500"
+  },
+  {
+   "name": "rsa_MG_immune_perm_p",
+   "value": 0.002,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "one-sided gene-label permutation p-value (499 permutations of the MaxToki gene-row correspondence); no CI"
+  },
+  {
+   "name": "rsa_MS_immune_perm_p",
+   "value": 0.002,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "one-sided gene-label permutation p-value (499 permutations of the MaxToki gene-row correspondence); no CI"
+  },
+  {
+   "name": "dcka_MG_immune_perm_p",
+   "value": 0.002,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "one-sided gene-label permutation p-value (499 permutations of the MaxToki gene-row correspondence); no CI"
+  },
+  {
+   "name": "dcka_MS_immune_perm_p",
+   "value": 0.002,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "one-sided gene-label permutation p-value (499 permutations of the MaxToki gene-row correspondence); no CI"
+  },
+  {
+   "name": "rsa_MG_external_lung",
+   "value": 0.3566,
+   "ci_low": 0.3429,
+   "ci_high": 0.3699,
+   "method_of_uncertainty": "gene bootstrap: genes resampled with replacement (the same draw for all model pairs), pairs of copies of one gene dropped; percentile 95% CI, B=500"
+  },
+  {
+   "name": "rsa_MS_external_lung",
+   "value": 0.2639,
+   "ci_low": 0.2514,
+   "ci_high": 0.2789,
+   "method_of_uncertainty": "gene bootstrap: genes resampled with replacement (the same draw for all model pairs), pairs of copies of one gene dropped; percentile 95% CI, B=500"
+  },
+  {
+   "name": "rsa_GS_external_lung",
+   "value": 0.5833,
+   "ci_low": 0.5676,
+   "ci_high": 0.5989,
+   "method_of_uncertainty": "gene bootstrap: genes resampled with replacement (the same draw for all model pairs), pairs of copies of one gene dropped; percentile 95% CI, B=500"
+  },
+  {
+   "name": "rsa_diff_MG_minus_MS_external_lung",
+   "value": 0.0927,
+   "ci_low": 0.0785,
+   "ci_high": 0.1045,
+   "method_of_uncertainty": "gene bootstrap: genes resampled with replacement (the same draw for all model pairs), pairs of copies of one gene dropped; percentile 95% CI, B=500"
+  },
+  {
+   "name": "rsa_ratio_MS_over_MG_external_lung",
+   "value": 0.7399,
+   "ci_low": 0.71,
+   "ci_high": 0.7771,
+   "method_of_uncertainty": "gene bootstrap: genes resampled with replacement (the same draw for all model pairs), pairs of copies of one gene dropped; percentile 95% CI, B=500"
+  },
+  {
+   "name": "dcka_MG_external_lung",
+   "value": 0.3814,
+   "ci_low": 0.3671,
+   "ci_high": 0.397,
+   "method_of_uncertainty": "gene bootstrap: genes resampled with replacement (the same draw for all model pairs), pairs of copies of one gene dropped; percentile 95% CI, B=500"
+  },
+  {
+   "name": "dcka_MS_external_lung",
+   "value": 0.2978,
+   "ci_low": 0.2828,
+   "ci_high": 0.3152,
+   "method_of_uncertainty": "gene bootstrap: genes resampled with replacement (the same draw for all model pairs), pairs of copies of one gene dropped; percentile 95% CI, B=500"
+  },
+  {
+   "name": "dcka_GS_external_lung",
+   "value": 0.5772,
+   "ci_low": 0.5538,
+   "ci_high": 0.6038,
+   "method_of_uncertainty": "gene bootstrap: genes resampled with replacement (the same draw for all model pairs), pairs of copies of one gene dropped; percentile 95% CI, B=500"
+  },
+  {
+   "name": "dcka_diff_MG_minus_MS_external_lung",
+   "value": 0.0836,
+   "ci_low": 0.07,
+   "ci_high": 0.0971,
+   "method_of_uncertainty": "gene bootstrap: genes resampled with replacement (the same draw for all model pairs), pairs of copies of one gene dropped; percentile 95% CI, B=500"
+  },
+  {
+   "name": "dcka_ratio_MS_over_MG_external_lung",
+   "value": 0.7809,
+   "ci_low": 0.7488,
+   "ci_high": 0.8154,
+   "method_of_uncertainty": "gene bootstrap: genes resampled with replacement (the same draw for all model pairs), pairs of copies of one gene dropped; percentile 95% CI, B=500"
+  },
+  {
+   "name": "rsa_MG_external_lung_perm_p",
+   "value": 0.002,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "one-sided gene-label permutation p-value (499 permutations of the MaxToki gene-row correspondence); no CI"
+  },
+  {
+   "name": "rsa_MS_external_lung_perm_p",
+   "value": 0.002,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "one-sided gene-label permutation p-value (499 permutations of the MaxToki gene-row correspondence); no CI"
+  },
+  {
+   "name": "dcka_MG_external_lung_perm_p",
+   "value": 0.002,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "one-sided gene-label permutation p-value (499 permutations of the MaxToki gene-row correspondence); no CI"
+  },
+  {
+   "name": "dcka_MS_external_lung_perm_p",
+   "value": 0.002,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "one-sided gene-label permutation p-value (499 permutations of the MaxToki gene-row correspondence); no CI"
+  },
+  {
+   "name": "cvcca_meancorr10_MG_union",
+   "value": 0.5214,
+   "ci_low": 0.4984,
+   "ci_high": 0.5444,
+   "method_of_uncertainty": "gene bootstrap of per-gene held-out scores (PCA basis and CCA maps fitted on training folds only and held fixed; averaged over 5 random 5-fold splits), percentile 95% CI, B=2000"
+  },
+  {
+   "name": "cvcca_meancorr10_MG_union_perm_p",
+   "value": 0.01,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "one-sided gene-label permutation p-value (99 permutations; each null draw averaged over the same 5 splits as the observed statistic); no CI"
+  },
+  {
+   "name": "cvcca_meancorr10_MG_union_perm_null_mean",
+   "value": 0.0002,
+   "ci_low": -0.0215,
+   "ci_high": 0.0167,
+   "method_of_uncertainty": "mean of the gene-label permutation null; interval = its 2.5-97.5 percentiles (99 permutations)"
+  },
+  {
+   "name": "cvcca_meancorr10_MS_union",
+   "value": 0.4092,
+   "ci_low": 0.3906,
+   "ci_high": 0.4271,
+   "method_of_uncertainty": "gene bootstrap of per-gene held-out scores (PCA basis and CCA maps fitted on training folds only and held fixed; averaged over 5 random 5-fold splits), percentile 95% CI, B=2000"
+  },
+  {
+   "name": "cvcca_meancorr10_MS_union_perm_p",
+   "value": 0.01,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "one-sided gene-label permutation p-value (99 permutations; each null draw averaged over the same 5 splits as the observed statistic); no CI"
+  },
+  {
+   "name": "cvcca_meancorr10_MS_union_perm_null_mean",
+   "value": -0.0006,
+   "ci_low": -0.0223,
+   "ci_high": 0.0214,
+   "method_of_uncertainty": "mean of the gene-label permutation null; interval = its 2.5-97.5 percentiles (99 permutations)"
+  },
+  {
+   "name": "cvcca_meancorr10_diff_MG_minus_MS_union",
+   "value": 0.1122,
+   "ci_low": 0.0915,
+   "ci_high": 0.133,
+   "method_of_uncertainty": "gene bootstrap of per-gene held-out scores (PCA basis and CCA maps fitted on training folds only and held fixed; averaged over 5 random 5-fold splits), percentile 95% CI, B=2000"
+  },
+  {
+   "name": "cvcca_meancorr10_ratio_MS_over_MG_union",
+   "value": 0.7849,
+   "ci_low": 0.7511,
+   "ci_high": 0.8203,
+   "method_of_uncertainty": "gene bootstrap of per-gene held-out scores (PCA basis and CCA maps fitted on training folds only and held fixed; averaged over 5 random 5-fold splits), percentile 95% CI, B=2000"
+  },
+  {
+   "name": "cvcca_top1_MG_union",
+   "value": 0.1558,
+   "ci_low": 0.1413,
+   "ci_high": 0.17,
+   "method_of_uncertainty": "gene bootstrap of per-gene held-out scores (PCA basis and CCA maps fitted on training folds only and held fixed; averaged over 5 random 5-fold splits), percentile 95% CI, B=2000"
+  },
+  {
+   "name": "cvcca_top1_MG_union_perm_p",
+   "value": 0.01,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "one-sided gene-label permutation p-value (99 permutations; each null draw averaged over the same 5 splits as the observed statistic); no CI"
+  },
+  {
+   "name": "cvcca_top1_MG_union_perm_null_mean",
+   "value": 0.0061,
+   "ci_low": 0.0041,
+   "ci_high": 0.0085,
+   "method_of_uncertainty": "mean of the gene-label permutation null; interval = its 2.5-97.5 percentiles (99 permutations)"
+  },
+  {
+   "name": "cvcca_top1_MS_union",
+   "value": 0.0785,
+   "ci_low": 0.0681,
+   "ci_high": 0.0891,
+   "method_of_uncertainty": "gene bootstrap of per-gene held-out scores (PCA basis and CCA maps fitted on training folds only and held fixed; averaged over 5 random 5-fold splits), percentile 95% CI, B=2000"
+  },
+  {
+   "name": "cvcca_top1_MS_union_perm_p",
+   "value": 0.01,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "one-sided gene-label permutation p-value (99 permutations; each null draw averaged over the same 5 splits as the observed statistic); no CI"
+  },
+  {
+   "name": "cvcca_top1_MS_union_perm_null_mean",
+   "value": 0.0061,
+   "ci_low": 0.0039,
+   "ci_high": 0.0085,
+   "method_of_uncertainty": "mean of the gene-label permutation null; interval = its 2.5-97.5 percentiles (99 permutations)"
+  },
+  {
+   "name": "cvcca_top1_diff_MG_minus_MS_union",
+   "value": 0.0773,
+   "ci_low": 0.0604,
+   "ci_high": 0.0932,
+   "method_of_uncertainty": "gene bootstrap of per-gene held-out scores (PCA basis and CCA maps fitted on training folds only and held fixed; averaged over 5 random 5-fold splits), percentile 95% CI, B=2000"
+  },
+  {
+   "name": "cvcca_top1_ratio_MS_over_MG_union",
+   "value": 0.5039,
+   "ci_low": 0.4311,
+   "ci_high": 0.5873,
+   "method_of_uncertainty": "gene bootstrap of per-gene held-out scores (PCA basis and CCA maps fitted on training folds only and held fixed; averaged over 5 random 5-fold splits), percentile 95% CI, B=2000"
+  },
+  {
+   "name": "cvcca_top1_chance_union",
+   "value": 0.006,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "deterministic: 1 / held-out fold size"
+  },
+  {
+   "name": "insample_cca_meancorr10_MG_union",
+   "value": 0.6189,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "point estimate only (CCA fitted and scored on the same genes); see its permutation-null entry"
+  },
+  {
+   "name": "insample_cca_meancorr10_MG_union_perm_null_mean",
+   "value": 0.2026,
+   "ci_low": 0.1906,
+   "ci_high": 0.2153,
+   "method_of_uncertainty": "mean of the gene-label permutation null; interval = its 2.5-97.5 percentiles (199 permutations)"
+  },
+  {
+   "name": "insample_minus_heldout_cca_meancorr10_MG_union",
+   "value": 0.0974,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "difference of two point estimates (in-sample minus held-out); no CI"
+  },
+  {
+   "name": "raw_linear_cka_MG_union",
+   "value": 0.6014,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "point estimate only (biased estimator); see its permutation-null entry"
+  },
+  {
+   "name": "raw_linear_cka_MG_union_perm_null_mean",
+   "value": 0.3853,
+   "ci_low": 0.3834,
+   "ci_high": 0.3874,
+   "method_of_uncertainty": "mean of the gene-label permutation null; interval = its 2.5-97.5 percentiles (199 permutations)"
+  },
+  {
+   "name": "insample_cca_meancorr10_MS_union",
+   "value": 0.5396,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "point estimate only (CCA fitted and scored on the same genes); see its permutation-null entry"
+  },
+  {
+   "name": "insample_cca_meancorr10_MS_union_perm_null_mean",
+   "value": 0.2022,
+   "ci_low": 0.189,
+   "ci_high": 0.216,
+   "method_of_uncertainty": "mean of the gene-label permutation null; interval = its 2.5-97.5 percentiles (199 permutations)"
+  },
+  {
+   "name": "insample_minus_heldout_cca_meancorr10_MS_union",
+   "value": 0.1304,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "difference of two point estimates (in-sample minus held-out); no CI"
+  },
+  {
+   "name": "raw_linear_cka_MS_union",
+   "value": 0.4203,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "point estimate only (biased estimator); see its permutation-null entry"
+  },
+  {
+   "name": "raw_linear_cka_MS_union_perm_null_mean",
+   "value": 0.2503,
+   "ci_low": 0.2481,
+   "ci_high": 0.2523,
+   "method_of_uncertainty": "mean of the gene-label permutation null; interval = its 2.5-97.5 percentiles (199 permutations)"
+  },
+  {
+   "name": "sens_full_recentred_rsa_MG_union",
+   "value": 0.3339,
+   "ci_low": 0.3281,
+   "ci_high": 0.3435,
+   "method_of_uncertainty": "gene bootstrap (same draw for all model pairs, pairs of copies of one gene dropped, gene vectors re-centred at the resample mean, PCA basis fitted once on all genes); percentile 95% CI, B=300"
+  },
+  {
+   "name": "sens_full_recentred_rsa_MS_union",
+   "value": 0.2147,
+   "ci_low": 0.2069,
+   "ci_high": 0.2242,
+   "method_of_uncertainty": "gene bootstrap (same draw for all model pairs, pairs of copies of one gene dropped, gene vectors re-centred at the resample mean, PCA basis fitted once on all genes); percentile 95% CI, B=300"
+  },
+  {
+   "name": "sens_full_recentred_rsa_diff_MG_minus_MS_union",
+   "value": 0.1192,
+   "ci_low": 0.1143,
+   "ci_high": 0.1271,
+   "method_of_uncertainty": "gene bootstrap (same draw for all model pairs, pairs of copies of one gene dropped, gene vectors re-centred at the resample mean, PCA basis fitted once on all genes); percentile 95% CI, B=300"
+  },
+  {
+   "name": "sens_full_recentred_rsa_ratio_MS_over_MG_union",
+   "value": 0.6431,
+   "ci_low": 0.6238,
+   "ci_high": 0.6584,
+   "method_of_uncertainty": "gene bootstrap (same draw for all model pairs, pairs of copies of one gene dropped, gene vectors re-centred at the resample mean, PCA basis fitted once on all genes); percentile 95% CI, B=300"
+  },
+  {
+   "name": "sens_full_recentred_dcka_MG_union",
+   "value": 0.362,
+   "ci_low": 0.3543,
+   "ci_high": 0.37,
+   "method_of_uncertainty": "gene bootstrap (same draw for all model pairs, pairs of copies of one gene dropped, gene vectors re-centred at the resample mean, PCA basis fitted once on all genes); percentile 95% CI, B=300"
+  },
+  {
+   "name": "sens_full_recentred_dcka_MS_union",
+   "value": 0.2453,
+   "ci_low": 0.2361,
+   "ci_high": 0.2533,
+   "method_of_uncertainty": "gene bootstrap (same draw for all model pairs, pairs of copies of one gene dropped, gene vectors re-centred at the resample mean, PCA basis fitted once on all genes); percentile 95% CI, B=300"
+  },
+  {
+   "name": "sens_full_recentred_dcka_diff_MG_minus_MS_union",
+   "value": 0.1167,
+   "ci_low": 0.11,
+   "ci_high": 0.1228,
+   "method_of_uncertainty": "gene bootstrap (same draw for all model pairs, pairs of copies of one gene dropped, gene vectors re-centred at the resample mean, PCA basis fitted once on all genes); percentile 95% CI, B=300"
+  },
+  {
+   "name": "sens_full_recentred_dcka_ratio_MS_over_MG_union",
+   "value": 0.6777,
+   "ci_low": 0.6604,
+   "ci_high": 0.6942,
+   "method_of_uncertainty": "gene bootstrap (same draw for all model pairs, pairs of copies of one gene dropped, gene vectors re-centred at the resample mean, PCA basis fitted once on all genes); percentile 95% CI, B=300"
+  },
+  {
+   "name": "sens_scgpt_no_layernorm_rsa_MG_union",
+   "value": 0.3339,
+   "ci_low": 0.3281,
+   "ci_high": 0.3435,
+   "method_of_uncertainty": "gene bootstrap (same draw for all model pairs, pairs of copies of one gene dropped, gene vectors re-centred at the resample mean, PCA basis fitted once on all genes); percentile 95% CI, B=300"
+  },
+  {
+   "name": "sens_scgpt_no_layernorm_rsa_MS_union",
+   "value": 0.2118,
+   "ci_low": 0.2039,
+   "ci_high": 0.2212,
+   "method_of_uncertainty": "gene bootstrap (same draw for all model pairs, pairs of copies of one gene dropped, gene vectors re-centred at the resample mean, PCA basis fitted once on all genes); percentile 95% CI, B=300"
+  },
+  {
+   "name": "sens_scgpt_no_layernorm_rsa_diff_MG_minus_MS_union",
+   "value": 0.1222,
+   "ci_low": 0.1173,
+   "ci_high": 0.1301,
+   "method_of_uncertainty": "gene bootstrap (same draw for all model pairs, pairs of copies of one gene dropped, gene vectors re-centred at the resample mean, PCA basis fitted once on all genes); percentile 95% CI, B=300"
+  },
+  {
+   "name": "sens_scgpt_no_layernorm_rsa_ratio_MS_over_MG_union",
+   "value": 0.6342,
+   "ci_low": 0.6138,
+   "ci_high": 0.6494,
+   "method_of_uncertainty": "gene bootstrap (same draw for all model pairs, pairs of copies of one gene dropped, gene vectors re-centred at the resample mean, PCA basis fitted once on all genes); percentile 95% CI, B=300"
+  },
+  {
+   "name": "sens_scgpt_no_layernorm_dcka_MG_union",
+   "value": 0.362,
+   "ci_low": 0.3543,
+   "ci_high": 0.37,
+   "method_of_uncertainty": "gene bootstrap (same draw for all model pairs, pairs of copies of one gene dropped, gene vectors re-centred at the resample mean, PCA basis fitted once on all genes); percentile 95% CI, B=300"
+  },
+  {
+   "name": "sens_scgpt_no_layernorm_dcka_MS_union",
+   "value": 0.2413,
+   "ci_low": 0.2317,
+   "ci_high": 0.249,
+   "method_of_uncertainty": "gene bootstrap (same draw for all model pairs, pairs of copies of one gene dropped, gene vectors re-centred at the resample mean, PCA basis fitted once on all genes); percentile 95% CI, B=300"
+  },
+  {
+   "name": "sens_scgpt_no_layernorm_dcka_diff_MG_minus_MS_union",
+   "value": 0.1207,
+   "ci_low": 0.1143,
+   "ci_high": 0.1273,
+   "method_of_uncertainty": "gene bootstrap (same draw for all model pairs, pairs of copies of one gene dropped, gene vectors re-centred at the resample mean, PCA basis fitted once on all genes); percentile 95% CI, B=300"
+  },
+  {
+   "name": "sens_scgpt_no_layernorm_dcka_ratio_MS_over_MG_union",
+   "value": 0.6665,
+   "ci_low": 0.6491,
+   "ci_high": 0.683,
+   "method_of_uncertainty": "gene bootstrap (same draw for all model pairs, pairs of copies of one gene dropped, gene vectors re-centred at the resample mean, PCA basis fitted once on all genes); percentile 95% CI, B=300"
+  },
+  {
+   "name": "sens_pca10_rsa_MG_union",
+   "value": 0.2331,
+   "ci_low": 0.2129,
+   "ci_high": 0.254,
+   "method_of_uncertainty": "gene bootstrap (same draw for all model pairs, pairs of copies of one gene dropped, gene vectors re-centred at the resample mean, PCA basis fitted once on all genes); percentile 95% CI, B=300"
+  },
+  {
+   "name": "sens_pca10_rsa_MS_union",
+   "value": 0.1779,
+   "ci_low": 0.1599,
+   "ci_high": 0.1988,
+   "method_of_uncertainty": "gene bootstrap (same draw for all model pairs, pairs of copies of one gene dropped, gene vectors re-centred at the resample mean, PCA basis fitted once on all genes); percentile 95% CI, B=300"
+  },
+  {
+   "name": "sens_pca10_rsa_diff_MG_minus_MS_union",
+   "value": 0.0552,
+   "ci_low": 0.0434,
+   "ci_high": 0.0674,
+   "method_of_uncertainty": "gene bootstrap (same draw for all model pairs, pairs of copies of one gene dropped, gene vectors re-centred at the resample mean, PCA basis fitted once on all genes); percentile 95% CI, B=300"
+  },
+  {
+   "name": "sens_pca10_rsa_ratio_MS_over_MG_union",
+   "value": 0.7632,
+   "ci_low": 0.7168,
+   "ci_high": 0.8149,
+   "method_of_uncertainty": "gene bootstrap (same draw for all model pairs, pairs of copies of one gene dropped, gene vectors re-centred at the resample mean, PCA basis fitted once on all genes); percentile 95% CI, B=300"
+  },
+  {
+   "name": "sens_pca10_dcka_MG_union",
+   "value": 0.2543,
+   "ci_low": 0.2316,
+   "ci_high": 0.2762,
+   "method_of_uncertainty": "gene bootstrap (same draw for all model pairs, pairs of copies of one gene dropped, gene vectors re-centred at the resample mean, PCA basis fitted once on all genes); percentile 95% CI, B=300"
+  },
+  {
+   "name": "sens_pca10_dcka_MS_union",
+   "value": 0.2018,
+   "ci_low": 0.1814,
+   "ci_high": 0.222,
+   "method_of_uncertainty": "gene bootstrap (same draw for all model pairs, pairs of copies of one gene dropped, gene vectors re-centred at the resample mean, PCA basis fitted once on all genes); percentile 95% CI, B=300"
+  },
+  {
+   "name": "sens_pca10_dcka_diff_MG_minus_MS_union",
+   "value": 0.0526,
+   "ci_low": 0.035,
+   "ci_high": 0.0688,
+   "method_of_uncertainty": "gene bootstrap (same draw for all model pairs, pairs of copies of one gene dropped, gene vectors re-centred at the resample mean, PCA basis fitted once on all genes); percentile 95% CI, B=300"
+  },
+  {
+   "name": "sens_pca10_dcka_ratio_MS_over_MG_union",
+   "value": 0.7932,
+   "ci_low": 0.7353,
+   "ci_high": 0.8555,
+   "method_of_uncertainty": "gene bootstrap (same draw for all model pairs, pairs of copies of one gene dropped, gene vectors re-centred at the resample mean, PCA basis fitted once on all genes); percentile 95% CI, B=300"
+  },
+  {
+   "name": "sens_pca20_rsa_MG_union",
+   "value": 0.2374,
+   "ci_low": 0.2234,
+   "ci_high": 0.2522,
+   "method_of_uncertainty": "gene bootstrap (same draw for all model pairs, pairs of copies of one gene dropped, gene vectors re-centred at the resample mean, PCA basis fitted once on all genes); percentile 95% CI, B=300"
+  },
+  {
+   "name": "sens_pca20_rsa_MS_union",
+   "value": 0.1818,
+   "ci_low": 0.1667,
+   "ci_high": 0.1966,
+   "method_of_uncertainty": "gene bootstrap (same draw for all model pairs, pairs of copies of one gene dropped, gene vectors re-centred at the resample mean, PCA basis fitted once on all genes); percentile 95% CI, B=300"
+  },
+  {
+   "name": "sens_pca20_rsa_diff_MG_minus_MS_union",
+   "value": 0.0557,
+   "ci_low": 0.0454,
+   "ci_high": 0.067,
+   "method_of_uncertainty": "gene bootstrap (same draw for all model pairs, pairs of copies of one gene dropped, gene vectors re-centred at the resample mean, PCA basis fitted once on all genes); percentile 95% CI, B=300"
+  },
+  {
+   "name": "sens_pca20_rsa_ratio_MS_over_MG_union",
+   "value": 0.7655,
+   "ci_low": 0.7233,
+   "ci_high": 0.8062,
+   "method_of_uncertainty": "gene bootstrap (same draw for all model pairs, pairs of copies of one gene dropped, gene vectors re-centred at the resample mean, PCA basis fitted once on all genes); percentile 95% CI, B=300"
+  },
+  {
+   "name": "sens_pca20_dcka_MG_union",
+   "value": 0.2571,
+   "ci_low": 0.2426,
+   "ci_high": 0.2742,
+   "method_of_uncertainty": "gene bootstrap (same draw for all model pairs, pairs of copies of one gene dropped, gene vectors re-centred at the resample mean, PCA basis fitted once on all genes); percentile 95% CI, B=300"
+  },
+  {
+   "name": "sens_pca20_dcka_MS_union",
+   "value": 0.2038,
+   "ci_low": 0.1888,
+   "ci_high": 0.2171,
+   "method_of_uncertainty": "gene bootstrap (same draw for all model pairs, pairs of copies of one gene dropped, gene vectors re-centred at the resample mean, PCA basis fitted once on all genes); percentile 95% CI, B=300"
+  },
+  {
+   "name": "sens_pca20_dcka_diff_MG_minus_MS_union",
+   "value": 0.0532,
+   "ci_low": 0.0408,
+   "ci_high": 0.0677,
+   "method_of_uncertainty": "gene bootstrap (same draw for all model pairs, pairs of copies of one gene dropped, gene vectors re-centred at the resample mean, PCA basis fitted once on all genes); percentile 95% CI, B=300"
+  },
+  {
+   "name": "sens_pca20_dcka_ratio_MS_over_MG_union",
+   "value": 0.7929,
+   "ci_low": 0.7439,
+   "ci_high": 0.8339,
+   "method_of_uncertainty": "gene bootstrap (same draw for all model pairs, pairs of copies of one gene dropped, gene vectors re-centred at the resample mean, PCA basis fitted once on all genes); percentile 95% CI, B=300"
+  },
+  {
+   "name": "sens_pca50_rsa_MG_union",
+   "value": 0.2691,
+   "ci_low": 0.2592,
+   "ci_high": 0.2794,
+   "method_of_uncertainty": "gene bootstrap (same draw for all model pairs, pairs of copies of one gene dropped, gene vectors re-centred at the resample mean, PCA basis fitted once on all genes); percentile 95% CI, B=300"
+  },
+  {
+   "name": "sens_pca50_rsa_MS_union",
+   "value": 0.1873,
+   "ci_low": 0.176,
+   "ci_high": 0.1972,
+   "method_of_uncertainty": "gene bootstrap (same draw for all model pairs, pairs of copies of one gene dropped, gene vectors re-centred at the resample mean, PCA basis fitted once on all genes); percentile 95% CI, B=300"
+  },
+  {
+   "name": "sens_pca50_rsa_diff_MG_minus_MS_union",
+   "value": 0.0818,
+   "ci_low": 0.0735,
+   "ci_high": 0.0913,
+   "method_of_uncertainty": "gene bootstrap (same draw for all model pairs, pairs of copies of one gene dropped, gene vectors re-centred at the resample mean, PCA basis fitted once on all genes); percentile 95% CI, B=300"
+  },
+  {
+   "name": "sens_pca50_rsa_ratio_MS_over_MG_union",
+   "value": 0.696,
+   "ci_low": 0.662,
+   "ci_high": 0.7234,
+   "method_of_uncertainty": "gene bootstrap (same draw for all model pairs, pairs of copies of one gene dropped, gene vectors re-centred at the resample mean, PCA basis fitted once on all genes); percentile 95% CI, B=300"
+  },
+  {
+   "name": "sens_pca50_dcka_MG_union",
+   "value": 0.2893,
+   "ci_low": 0.2792,
+   "ci_high": 0.3005,
+   "method_of_uncertainty": "gene bootstrap (same draw for all model pairs, pairs of copies of one gene dropped, gene vectors re-centred at the resample mean, PCA basis fitted once on all genes); percentile 95% CI, B=300"
+  },
+  {
+   "name": "sens_pca50_dcka_MS_union",
+   "value": 0.2069,
+   "ci_low": 0.1954,
+   "ci_high": 0.217,
+   "method_of_uncertainty": "gene bootstrap (same draw for all model pairs, pairs of copies of one gene dropped, gene vectors re-centred at the resample mean, PCA basis fitted once on all genes); percentile 95% CI, B=300"
+  },
+  {
+   "name": "sens_pca50_dcka_diff_MG_minus_MS_union",
+   "value": 0.0824,
+   "ci_low": 0.0739,
+   "ci_high": 0.0919,
+   "method_of_uncertainty": "gene bootstrap (same draw for all model pairs, pairs of copies of one gene dropped, gene vectors re-centred at the resample mean, PCA basis fitted once on all genes); percentile 95% CI, B=300"
+  },
+  {
+   "name": "sens_pca50_dcka_ratio_MS_over_MG_union",
+   "value": 0.7152,
+   "ci_low": 0.6836,
+   "ci_high": 0.7396,
+   "method_of_uncertainty": "gene bootstrap (same draw for all model pairs, pairs of copies of one gene dropped, gene vectors re-centred at the resample mean, PCA basis fitted once on all genes); percentile 95% CI, B=300"
+  },
+  {
+   "name": "sens_drop_top1pc_rsa_MG_union",
+   "value": 0.3248,
+   "ci_low": 0.3181,
+   "ci_high": 0.335,
+   "method_of_uncertainty": "gene bootstrap (same draw for all model pairs, pairs of copies of one gene dropped, gene vectors re-centred at the resample mean, PCA basis fitted once on all genes); percentile 95% CI, B=300"
+  },
+  {
+   "name": "sens_drop_top1pc_rsa_MS_union",
+   "value": 0.1816,
+   "ci_low": 0.173,
+   "ci_high": 0.1926,
+   "method_of_uncertainty": "gene bootstrap (same draw for all model pairs, pairs of copies of one gene dropped, gene vectors re-centred at the resample mean, PCA basis fitted once on all genes); percentile 95% CI, B=300"
+  },
+  {
+   "name": "sens_drop_top1pc_rsa_diff_MG_minus_MS_union",
+   "value": 0.1433,
+   "ci_low": 0.137,
+   "ci_high": 0.1505,
+   "method_of_uncertainty": "gene bootstrap (same draw for all model pairs, pairs of copies of one gene dropped, gene vectors re-centred at the resample mean, PCA basis fitted once on all genes); percentile 95% CI, B=300"
+  },
+  {
+   "name": "sens_drop_top1pc_rsa_ratio_MS_over_MG_union",
+   "value": 0.5589,
+   "ci_low": 0.5373,
+   "ci_high": 0.5824,
+   "method_of_uncertainty": "gene bootstrap (same draw for all model pairs, pairs of copies of one gene dropped, gene vectors re-centred at the resample mean, PCA basis fitted once on all genes); percentile 95% CI, B=300"
+  },
+  {
+   "name": "sens_drop_top1pc_dcka_MG_union",
+   "value": 0.343,
+   "ci_low": 0.3348,
+   "ci_high": 0.3511,
+   "method_of_uncertainty": "gene bootstrap (same draw for all model pairs, pairs of copies of one gene dropped, gene vectors re-centred at the resample mean, PCA basis fitted once on all genes); percentile 95% CI, B=300"
+  },
+  {
+   "name": "sens_drop_top1pc_dcka_MS_union",
+   "value": 0.2114,
+   "ci_low": 0.2015,
+   "ci_high": 0.2204,
+   "method_of_uncertainty": "gene bootstrap (same draw for all model pairs, pairs of copies of one gene dropped, gene vectors re-centred at the resample mean, PCA basis fitted once on all genes); percentile 95% CI, B=300"
+  },
+  {
+   "name": "sens_drop_top1pc_dcka_diff_MG_minus_MS_union",
+   "value": 0.1316,
+   "ci_low": 0.1247,
+   "ci_high": 0.1394,
+   "method_of_uncertainty": "gene bootstrap (same draw for all model pairs, pairs of copies of one gene dropped, gene vectors re-centred at the resample mean, PCA basis fitted once on all genes); percentile 95% CI, B=300"
+  },
+  {
+   "name": "sens_drop_top1pc_dcka_ratio_MS_over_MG_union",
+   "value": 0.6163,
+   "ci_low": 0.595,
+   "ci_high": 0.6371,
+   "method_of_uncertainty": "gene bootstrap (same draw for all model pairs, pairs of copies of one gene dropped, gene vectors re-centred at the resample mean, PCA basis fitted once on all genes); percentile 95% CI, B=300"
+  },
+  {
+   "name": "sens_drop_top5pc_rsa_MG_union",
+   "value": 0.2808,
+   "ci_low": 0.2739,
+   "ci_high": 0.2915,
+   "method_of_uncertainty": "gene bootstrap (same draw for all model pairs, pairs of copies of one gene dropped, gene vectors re-centred at the resample mean, PCA basis fitted once on all genes); percentile 95% CI, B=300"
+  },
+  {
+   "name": "sens_drop_top5pc_rsa_MS_union",
+   "value": 0.1714,
+   "ci_low": 0.1652,
+   "ci_high": 0.1803,
+   "method_of_uncertainty": "gene bootstrap (same draw for all model pairs, pairs of copies of one gene dropped, gene vectors re-centred at the resample mean, PCA basis fitted once on all genes); percentile 95% CI, B=300"
+  },
+  {
+   "name": "sens_drop_top5pc_rsa_diff_MG_minus_MS_union",
+   "value": 0.1094,
+   "ci_low": 0.1026,
+   "ci_high": 0.1185,
+   "method_of_uncertainty": "gene bootstrap (same draw for all model pairs, pairs of copies of one gene dropped, gene vectors re-centred at the resample mean, PCA basis fitted once on all genes); percentile 95% CI, B=300"
+  },
+  {
+   "name": "sens_drop_top5pc_rsa_ratio_MS_over_MG_union",
+   "value": 0.6105,
+   "ci_low": 0.5873,
+   "ci_high": 0.6327,
+   "method_of_uncertainty": "gene bootstrap (same draw for all model pairs, pairs of copies of one gene dropped, gene vectors re-centred at the resample mean, PCA basis fitted once on all genes); percentile 95% CI, B=300"
+  },
+  {
+   "name": "sens_drop_top5pc_dcka_MG_union",
+   "value": 0.2923,
+   "ci_low": 0.2843,
+   "ci_high": 0.3011,
+   "method_of_uncertainty": "gene bootstrap (same draw for all model pairs, pairs of copies of one gene dropped, gene vectors re-centred at the resample mean, PCA basis fitted once on all genes); percentile 95% CI, B=300"
+  },
+  {
+   "name": "sens_drop_top5pc_dcka_MS_union",
+   "value": 0.1921,
+   "ci_low": 0.184,
+   "ci_high": 0.2004,
+   "method_of_uncertainty": "gene bootstrap (same draw for all model pairs, pairs of copies of one gene dropped, gene vectors re-centred at the resample mean, PCA basis fitted once on all genes); percentile 95% CI, B=300"
+  },
+  {
+   "name": "sens_drop_top5pc_dcka_diff_MG_minus_MS_union",
+   "value": 0.1002,
+   "ci_low": 0.0927,
+   "ci_high": 0.1087,
+   "method_of_uncertainty": "gene bootstrap (same draw for all model pairs, pairs of copies of one gene dropped, gene vectors re-centred at the resample mean, PCA basis fitted once on all genes); percentile 95% CI, B=300"
+  },
+  {
+   "name": "sens_drop_top5pc_dcka_ratio_MS_over_MG_union",
+   "value": 0.6572,
+   "ci_low": 0.6337,
+   "ci_high": 0.6809,
+   "method_of_uncertainty": "gene bootstrap (same draw for all model pairs, pairs of copies of one gene dropped, gene vectors re-centred at the resample mean, PCA basis fitted once on all genes); percentile 95% CI, B=300"
+  },
+  {
+   "name": "sens_norm_residualised_rsa_MG_union",
+   "value": 0.3317,
+   "ci_low": 0.3261,
+   "ci_high": 0.3407,
+   "method_of_uncertainty": "gene bootstrap (same draw for all model pairs, pairs of copies of one gene dropped, gene vectors re-centred at the resample mean, PCA basis fitted once on all genes); percentile 95% CI, B=300"
+  },
+  {
+   "name": "sens_norm_residualised_rsa_MS_union",
+   "value": 0.2027,
+   "ci_low": 0.1961,
+   "ci_high": 0.2116,
+   "method_of_uncertainty": "gene bootstrap (same draw for all model pairs, pairs of copies of one gene dropped, gene vectors re-centred at the resample mean, PCA basis fitted once on all genes); percentile 95% CI, B=300"
+  },
+  {
+   "name": "sens_norm_residualised_rsa_diff_MG_minus_MS_union",
+   "value": 0.1289,
+   "ci_low": 0.1234,
+   "ci_high": 0.1369,
+   "method_of_uncertainty": "gene bootstrap (same draw for all model pairs, pairs of copies of one gene dropped, gene vectors re-centred at the resample mean, PCA basis fitted once on all genes); percentile 95% CI, B=300"
+  },
+  {
+   "name": "sens_norm_residualised_rsa_ratio_MS_over_MG_union",
+   "value": 0.6113,
+   "ci_low": 0.5912,
+   "ci_high": 0.6282,
+   "method_of_uncertainty": "gene bootstrap (same draw for all model pairs, pairs of copies of one gene dropped, gene vectors re-centred at the resample mean, PCA basis fitted once on all genes); percentile 95% CI, B=300"
+  },
+  {
+   "name": "sens_norm_residualised_dcka_MG_union",
+   "value": 0.3434,
+   "ci_low": 0.3361,
+   "ci_high": 0.3506,
+   "method_of_uncertainty": "gene bootstrap (same draw for all model pairs, pairs of copies of one gene dropped, gene vectors re-centred at the resample mean, PCA basis fitted once on all genes); percentile 95% CI, B=300"
+  },
+  {
+   "name": "sens_norm_residualised_dcka_MS_union",
+   "value": 0.2188,
+   "ci_low": 0.2105,
+   "ci_high": 0.2267,
+   "method_of_uncertainty": "gene bootstrap (same draw for all model pairs, pairs of copies of one gene dropped, gene vectors re-centred at the resample mean, PCA basis fitted once on all genes); percentile 95% CI, B=300"
+  },
+  {
+   "name": "sens_norm_residualised_dcka_diff_MG_minus_MS_union",
+   "value": 0.1247,
+   "ci_low": 0.1173,
+   "ci_high": 0.1319,
+   "method_of_uncertainty": "gene bootstrap (same draw for all model pairs, pairs of copies of one gene dropped, gene vectors re-centred at the resample mean, PCA basis fitted once on all genes); percentile 95% CI, B=300"
+  },
+  {
+   "name": "sens_norm_residualised_dcka_ratio_MS_over_MG_union",
+   "value": 0.637,
+   "ci_low": 0.6173,
+   "ci_high": 0.6558,
+   "method_of_uncertainty": "gene bootstrap (same draw for all model pairs, pairs of copies of one gene dropped, gene vectors re-centred at the resample mean, PCA basis fitted once on all genes); percentile 95% CI, B=300"
+  },
+  {
+   "name": "sens_pca10_refit_rsa_MG_union",
+   "value": 0.2331,
+   "ci_low": 0.1941,
+   "ci_high": 0.272,
+   "method_of_uncertainty": "gene bootstrap with the PCA basis refitted on every resample (same draw for all model pairs, pairs of copies of one gene dropped); normal-approximation 95% CI = point +/- 1.96 x bootstrap SD, B=300 (refitting on resamples with duplicated genes shifts the bootstrap distribution, so percentiles are off-centre)"
+  },
+  {
+   "name": "sens_pca10_refit_rsa_MS_union",
+   "value": 0.1779,
+   "ci_low": 0.1441,
+   "ci_high": 0.2116,
+   "method_of_uncertainty": "gene bootstrap with the PCA basis refitted on every resample (same draw for all model pairs, pairs of copies of one gene dropped); normal-approximation 95% CI = point +/- 1.96 x bootstrap SD, B=300 (refitting on resamples with duplicated genes shifts the bootstrap distribution, so percentiles are off-centre)"
+  },
+  {
+   "name": "sens_pca10_refit_rsa_diff_MG_minus_MS_union",
+   "value": 0.0552,
+   "ci_low": 0.031,
+   "ci_high": 0.0794,
+   "method_of_uncertainty": "gene bootstrap with the PCA basis refitted on every resample (same draw for all model pairs, pairs of copies of one gene dropped); normal-approximation 95% CI = point +/- 1.96 x bootstrap SD, B=300 (refitting on resamples with duplicated genes shifts the bootstrap distribution, so percentiles are off-centre)"
+  },
+  {
+   "name": "sens_pca10_refit_rsa_ratio_MS_over_MG_union",
+   "value": 0.7632,
+   "ci_low": 0.6573,
+   "ci_high": 0.8691,
+   "method_of_uncertainty": "gene bootstrap with the PCA basis refitted on every resample (same draw for all model pairs, pairs of copies of one gene dropped); normal-approximation 95% CI = point +/- 1.96 x bootstrap SD, B=300 (refitting on resamples with duplicated genes shifts the bootstrap distribution, so percentiles are off-centre)"
+  },
+  {
+   "name": "sens_pca10_refit_dcka_MG_union",
+   "value": 0.2543,
+   "ci_low": 0.2123,
+   "ci_high": 0.2964,
+   "method_of_uncertainty": "gene bootstrap with the PCA basis refitted on every resample (same draw for all model pairs, pairs of copies of one gene dropped); normal-approximation 95% CI = point +/- 1.96 x bootstrap SD, B=300 (refitting on resamples with duplicated genes shifts the bootstrap distribution, so percentiles are off-centre)"
+  },
+  {
+   "name": "sens_pca10_refit_dcka_MS_union",
+   "value": 0.2018,
+   "ci_low": 0.1678,
+   "ci_high": 0.2357,
+   "method_of_uncertainty": "gene bootstrap with the PCA basis refitted on every resample (same draw for all model pairs, pairs of copies of one gene dropped); normal-approximation 95% CI = point +/- 1.96 x bootstrap SD, B=300 (refitting on resamples with duplicated genes shifts the bootstrap distribution, so percentiles are off-centre)"
+  },
+  {
+   "name": "sens_pca10_refit_dcka_diff_MG_minus_MS_union",
+   "value": 0.0526,
+   "ci_low": 0.0173,
+   "ci_high": 0.0879,
+   "method_of_uncertainty": "gene bootstrap with the PCA basis refitted on every resample (same draw for all model pairs, pairs of copies of one gene dropped); normal-approximation 95% CI = point +/- 1.96 x bootstrap SD, B=300 (refitting on resamples with duplicated genes shifts the bootstrap distribution, so percentiles are off-centre)"
+  },
+  {
+   "name": "sens_pca10_refit_dcka_ratio_MS_over_MG_union",
+   "value": 0.7932,
+   "ci_low": 0.6504,
+   "ci_high": 0.936,
+   "method_of_uncertainty": "gene bootstrap with the PCA basis refitted on every resample (same draw for all model pairs, pairs of copies of one gene dropped); normal-approximation 95% CI = point +/- 1.96 x bootstrap SD, B=300 (refitting on resamples with duplicated genes shifts the bootstrap distribution, so percentiles are off-centre)"
+  },
+  {
+   "name": "sens_pca20_refit_rsa_MG_union",
+   "value": 0.2374,
+   "ci_low": 0.2146,
+   "ci_high": 0.2603,
+   "method_of_uncertainty": "gene bootstrap with the PCA basis refitted on every resample (same draw for all model pairs, pairs of copies of one gene dropped); normal-approximation 95% CI = point +/- 1.96 x bootstrap SD, B=300 (refitting on resamples with duplicated genes shifts the bootstrap distribution, so percentiles are off-centre)"
+  },
+  {
+   "name": "sens_pca20_refit_rsa_MS_union",
+   "value": 0.1818,
+   "ci_low": 0.1615,
+   "ci_high": 0.202,
+   "method_of_uncertainty": "gene bootstrap with the PCA basis refitted on every resample (same draw for all model pairs, pairs of copies of one gene dropped); normal-approximation 95% CI = point +/- 1.96 x bootstrap SD, B=300 (refitting on resamples with duplicated genes shifts the bootstrap distribution, so percentiles are off-centre)"
+  },
+  {
+   "name": "sens_pca20_refit_rsa_diff_MG_minus_MS_union",
+   "value": 0.0557,
+   "ci_low": 0.0372,
+   "ci_high": 0.0742,
+   "method_of_uncertainty": "gene bootstrap with the PCA basis refitted on every resample (same draw for all model pairs, pairs of copies of one gene dropped); normal-approximation 95% CI = point +/- 1.96 x bootstrap SD, B=300 (refitting on resamples with duplicated genes shifts the bootstrap distribution, so percentiles are off-centre)"
+  },
+  {
+   "name": "sens_pca20_refit_rsa_ratio_MS_over_MG_union",
+   "value": 0.7655,
+   "ci_low": 0.6923,
+   "ci_high": 0.8386,
+   "method_of_uncertainty": "gene bootstrap with the PCA basis refitted on every resample (same draw for all model pairs, pairs of copies of one gene dropped); normal-approximation 95% CI = point +/- 1.96 x bootstrap SD, B=300 (refitting on resamples with duplicated genes shifts the bootstrap distribution, so percentiles are off-centre)"
+  },
+  {
+   "name": "sens_pca20_refit_dcka_MG_union",
+   "value": 0.2571,
+   "ci_low": 0.2312,
+   "ci_high": 0.2829,
+   "method_of_uncertainty": "gene bootstrap with the PCA basis refitted on every resample (same draw for all model pairs, pairs of copies of one gene dropped); normal-approximation 95% CI = point +/- 1.96 x bootstrap SD, B=300 (refitting on resamples with duplicated genes shifts the bootstrap distribution, so percentiles are off-centre)"
+  },
+  {
+   "name": "sens_pca20_refit_dcka_MS_union",
+   "value": 0.2038,
+   "ci_low": 0.1827,
+   "ci_high": 0.225,
+   "method_of_uncertainty": "gene bootstrap with the PCA basis refitted on every resample (same draw for all model pairs, pairs of copies of one gene dropped); normal-approximation 95% CI = point +/- 1.96 x bootstrap SD, B=300 (refitting on resamples with duplicated genes shifts the bootstrap distribution, so percentiles are off-centre)"
+  },
+  {
+   "name": "sens_pca20_refit_dcka_diff_MG_minus_MS_union",
+   "value": 0.0532,
+   "ci_low": 0.0289,
+   "ci_high": 0.0776,
+   "method_of_uncertainty": "gene bootstrap with the PCA basis refitted on every resample (same draw for all model pairs, pairs of copies of one gene dropped); normal-approximation 95% CI = point +/- 1.96 x bootstrap SD, B=300 (refitting on resamples with duplicated genes shifts the bootstrap distribution, so percentiles are off-centre)"
+  },
+  {
+   "name": "sens_pca20_refit_dcka_ratio_MS_over_MG_union",
+   "value": 0.7929,
+   "ci_low": 0.7071,
+   "ci_high": 0.8787,
+   "method_of_uncertainty": "gene bootstrap with the PCA basis refitted on every resample (same draw for all model pairs, pairs of copies of one gene dropped); normal-approximation 95% CI = point +/- 1.96 x bootstrap SD, B=300 (refitting on resamples with duplicated genes shifts the bootstrap distribution, so percentiles are off-centre)"
+  },
+  {
+   "name": "sens_dcka_on_centred_cosine_dcka_MG_union",
+   "value": 0.3757,
+   "ci_low": 0.3691,
+   "ci_high": 0.3832,
+   "method_of_uncertainty": "gene bootstrap (same draw for all model pairs, pairs of copies of one gene dropped, gene vectors re-centred at the resample mean, PCA basis fitted once on all genes); percentile 95% CI, B=300"
+  },
+  {
+   "name": "sens_dcka_on_centred_cosine_dcka_MS_union",
+   "value": 0.2449,
+   "ci_low": 0.2356,
+   "ci_high": 0.2528,
+   "method_of_uncertainty": "gene bootstrap (same draw for all model pairs, pairs of copies of one gene dropped, gene vectors re-centred at the resample mean, PCA basis fitted once on all genes); percentile 95% CI, B=300"
+  },
+  {
+   "name": "sens_dcka_on_centred_cosine_dcka_diff_MG_minus_MS_union",
+   "value": 0.1309,
+   "ci_low": 0.125,
+   "ci_high": 0.1373,
+   "method_of_uncertainty": "gene bootstrap (same draw for all model pairs, pairs of copies of one gene dropped, gene vectors re-centred at the resample mean, PCA basis fitted once on all genes); percentile 95% CI, B=300"
+  },
+  {
+   "name": "sens_dcka_on_centred_cosine_dcka_ratio_MS_over_MG_union",
+   "value": 0.6517,
+   "ci_low": 0.634,
+   "ci_high": 0.6672,
+   "method_of_uncertainty": "gene bootstrap (same draw for all model pairs, pairs of copies of one gene dropped, gene vectors re-centred at the resample mean, PCA basis fitted once on all genes); percentile 95% CI, B=300"
+  },
+  {
+   "name": "sens_euclidean_rsa_MG_union",
+   "value": 0.5035,
+   "ci_low": 0.4526,
+   "ci_high": 0.5583,
+   "method_of_uncertainty": "gene bootstrap (same draw for all model pairs, pairs of copies of one gene dropped, gene vectors re-centred at the resample mean, PCA basis fitted once on all genes); percentile 95% CI, B=300"
+  },
+  {
+   "name": "sens_euclidean_rsa_MS_union",
+   "value": 0.1468,
+   "ci_low": 0.1228,
+   "ci_high": 0.1696,
+   "method_of_uncertainty": "gene bootstrap (same draw for all model pairs, pairs of copies of one gene dropped, gene vectors re-centred at the resample mean, PCA basis fitted once on all genes); percentile 95% CI, B=300"
+  },
+  {
+   "name": "sens_euclidean_rsa_diff_MG_minus_MS_union",
+   "value": 0.3567,
+   "ci_low": 0.3081,
+   "ci_high": 0.411,
+   "method_of_uncertainty": "gene bootstrap (same draw for all model pairs, pairs of copies of one gene dropped, gene vectors re-centred at the resample mean, PCA basis fitted once on all genes); percentile 95% CI, B=300"
+  },
+  {
+   "name": "sens_euclidean_rsa_ratio_MS_over_MG_union",
+   "value": 0.2916,
+   "ci_low": 0.2455,
+   "ci_high": 0.3411,
+   "method_of_uncertainty": "gene bootstrap (same draw for all model pairs, pairs of copies of one gene dropped, gene vectors re-centred at the resample mean, PCA basis fitted once on all genes); percentile 95% CI, B=300"
+  },
+  {
+   "name": "random828_rsa_MG",
+   "value": 0.3694,
+   "ci_low": 0.359,
+   "ci_high": 0.3776,
+   "method_of_uncertainty": "distribution over 100 random 828-gene sets drawn without replacement from the 19153 genes mappable in all three models: value = mean, interval = 2.5-97.5 percentiles across sets"
+  },
+  {
+   "name": "random828_rsa_MS",
+   "value": 0.1705,
+   "ci_low": 0.1644,
+   "ci_high": 0.1774,
+   "method_of_uncertainty": "distribution over 100 random 828-gene sets drawn without replacement from the 19153 genes mappable in all three models: value = mean, interval = 2.5-97.5 percentiles across sets"
+  },
+  {
+   "name": "random828_rsa_GS",
+   "value": 0.3353,
+   "ci_low": 0.3162,
+   "ci_high": 0.3569,
+   "method_of_uncertainty": "distribution over 100 random 828-gene sets drawn without replacement from the 19153 genes mappable in all three models: value = mean, interval = 2.5-97.5 percentiles across sets"
+  },
+  {
+   "name": "random828_rsa_diff_MG_minus_MS",
+   "value": 0.1989,
+   "ci_low": 0.19,
+   "ci_high": 0.208,
+   "method_of_uncertainty": "distribution over 100 random 828-gene sets drawn without replacement from the 19153 genes mappable in all three models: value = mean, interval = 2.5-97.5 percentiles across sets"
+  },
+  {
+   "name": "random828_rsa_ratio_MS_over_MG",
+   "value": 0.4615,
+   "ci_low": 0.4438,
+   "ci_high": 0.4772,
+   "method_of_uncertainty": "distribution over 100 random 828-gene sets drawn without replacement from the 19153 genes mappable in all three models: value = mean, interval = 2.5-97.5 percentiles across sets"
+  },
+  {
+   "name": "random828_dcka_MG",
+   "value": 0.3921,
+   "ci_low": 0.3823,
+   "ci_high": 0.4005,
+   "method_of_uncertainty": "distribution over 100 random 828-gene sets drawn without replacement from the 19153 genes mappable in all three models: value = mean, interval = 2.5-97.5 percentiles across sets"
+  },
+  {
+   "name": "random828_dcka_MS",
+   "value": 0.1893,
+   "ci_low": 0.1829,
+   "ci_high": 0.1962,
+   "method_of_uncertainty": "distribution over 100 random 828-gene sets drawn without replacement from the 19153 genes mappable in all three models: value = mean, interval = 2.5-97.5 percentiles across sets"
+  },
+  {
+   "name": "random828_dcka_GS",
+   "value": 0.3493,
+   "ci_low": 0.3336,
+   "ci_high": 0.3686,
+   "method_of_uncertainty": "distribution over 100 random 828-gene sets drawn without replacement from the 19153 genes mappable in all three models: value = mean, interval = 2.5-97.5 percentiles across sets"
+  },
+  {
+   "name": "random828_dcka_diff_MG_minus_MS",
+   "value": 0.2028,
+   "ci_low": 0.1951,
+   "ci_high": 0.2114,
+   "method_of_uncertainty": "distribution over 100 random 828-gene sets drawn without replacement from the 19153 genes mappable in all three models: value = mean, interval = 2.5-97.5 percentiles across sets"
+  },
+  {
+   "name": "random828_dcka_ratio_MS_over_MG",
+   "value": 0.4828,
+   "ci_low": 0.4687,
+   "ci_high": 0.496,
+   "method_of_uncertainty": "distribution over 100 random 828-gene sets drawn without replacement from the 19153 genes mappable in all three models: value = mean, interval = 2.5-97.5 percentiles across sets"
+  }
+ ],
+ "diagnostics": {
+  "one_factor_union_rsa": {
+   "loadings_M_G_S": [
+    0.3676,
+    0.9085,
+    0.5842
+   ],
+   "implied_partial_MG_given_S": 0.2657,
+   "implied_partial_MS_given_G": 0.047,
+   "loading_ratio_S_over_G_equals_R": 0.6431
+  },
+  "cvcca_with_pca_basis_fitted_on_all_genes": {
+   "meancorr10_MG": 0.5759,
+   "meancorr10_MS": 0.4768,
+   "meancorr10_ratio": 0.828,
+   "top1_MG": 0.201,
+   "top1_MS": 0.1135
+  },
+  "sensitivity_GS_point_estimates_union": {
+   "full_recentred_rsa_GS": 0.5307,
+   "full_recentred_dcka_GS": 0.5189,
+   "scgpt_no_layernorm_rsa_GS": 0.5275,
+   "scgpt_no_layernorm_dcka_GS": 0.5154,
+   "pca10_rsa_GS": 0.6779,
+   "pca10_dcka_GS": 0.6374,
+   "pca20_rsa_GS": 0.5834,
+   "pca20_dcka_GS": 0.5854,
+   "pca50_rsa_GS": 0.5173,
+   "pca50_dcka_GS": 0.5217,
+   "drop_top1pc_rsa_GS": 0.4102,
+   "drop_top1pc_dcka_GS": 0.426,
+   "drop_top5pc_rsa_GS": 0.3116,
+   "drop_top5pc_dcka_GS": 0.3092,
+   "norm_residualised_rsa_GS": 0.4384,
+   "norm_residualised_dcka_GS": 0.4263,
+   "pca10_refit_rsa_GS": 0.6779,
+   "pca10_refit_dcka_GS": 0.6374,
+   "pca20_refit_rsa_GS": 0.5834,
+   "pca20_refit_dcka_GS": 0.5854,
+   "dcka_on_centred_cosine_dcka_GS": 0.4967,
+   "euclidean_rsa_GS": 0.1633
+  },
+  "sensitivity_refit_bootstrap_shift": {
+   "pca10_refit_rsa_MG": {
+    "bootstrap_mean_minus_point": -0.0353,
+    "percentile_interval": [
+     0.1577,
+     0.2338
+    ]
+   },
+   "pca10_refit_rsa_MS": {
+    "bootstrap_mean_minus_point": -0.0275,
+    "percentile_interval": [
+     0.1189,
+     0.1852
+    ]
+   },
+   "pca10_refit_rsa_diff_MG_minus_MS": {
+    "bootstrap_mean_minus_point": -0.0078,
+    "percentile_interval": [
+     0.0252,
+     0.072
+    ]
+   },
+   "pca10_refit_rsa_ratio_MS_over_MG": {
+    "bootstrap_mean_minus_point": -0.0021,
+    "percentile_interval": [
+     0.663,
+     0.8691
+    ]
+   },
+   "pca10_refit_dcka_MG": {
+    "bootstrap_mean_minus_point": -0.0434,
+    "percentile_interval": [
+     0.1682,
+     0.2537
+    ]
+   },
+   "pca10_refit_dcka_MS": {
+    "bootstrap_mean_minus_point": -0.0438,
+    "percentile_interval": [
+     0.124,
+     0.1921
+    ]
+   },
+   "pca10_refit_dcka_diff_MG_minus_MS": {
+    "bootstrap_mean_minus_point": 0.0004,
+    "percentile_interval": [
+     0.0195,
+     0.0887
+    ]
+   },
+   "pca10_refit_dcka_ratio_MS_over_MG": {
+    "bootstrap_mean_minus_point": -0.0414,
+    "percentile_interval": [
+     0.6234,
+     0.8976
+    ]
+   },
+   "pca20_refit_rsa_MG": {
+    "bootstrap_mean_minus_point": -0.0159,
+    "percentile_interval": [
+     0.1987,
+     0.2436
+    ]
+   },
+   "pca20_refit_rsa_MS": {
+    "bootstrap_mean_minus_point": -0.0167,
+    "percentile_interval": [
+     0.1449,
+     0.1836
+    ]
+   },
+   "pca20_refit_rsa_diff_MG_minus_MS": {
+    "bootstrap_mean_minus_point": 0.0007,
+    "percentile_interval": [
+     0.0385,
+     0.0758
+    ]
+   },
+   "pca20_refit_rsa_ratio_MS_over_MG": {
+    "bootstrap_mean_minus_point": -0.0196,
+    "percentile_interval": [
+     0.6697,
+     0.8144
+    ]
+   },
+   "pca20_refit_dcka_MG": {
+    "bootstrap_mean_minus_point": -0.0136,
+    "percentile_interval": [
+     0.2177,
+     0.2666
+    ]
+   },
+   "pca20_refit_dcka_MS": {
+    "bootstrap_mean_minus_point": -0.0222,
+    "percentile_interval": [
+     0.1606,
+     0.2007
+    ]
+   },
+   "pca20_refit_dcka_diff_MG_minus_MS": {
+    "bootstrap_mean_minus_point": 0.0086,
+    "percentile_interval": [
+     0.0376,
+     0.0863
+    ]
+   },
+   "pca20_refit_dcka_ratio_MS_over_MG": {
+    "bootstrap_mean_minus_point": -0.046,
+    "percentile_interval": [
+     0.6591,
+     0.8349
+    ]
+   }
+  },
+  "random828_rsa_fraction_of_sets_with_GS_below_MG": 1.0,
+  "random828_dcka_fraction_of_sets_with_GS_below_MG": 1.0,
+  "n_mappable_genes_all_three_models": 19153,
+  "delete_half_subsampling_rsa_sd_union": {
+   "MG": 0.003,
+   "MS": 0.0036,
+   "bootstrap_se_MG": 0.0041,
+   "bootstrap_se_MS": 0.0041
+  },
+  "spearman_of_centred_row_norms_union": {
+   "MG": 0.7279,
+   "MS_layernormed_scgpt": 0.069,
+   "MS_raw_scgpt": 0.0896,
+   "GS_layernormed_scgpt": 0.0633
+  },
+  "pca_variance_explained_union": {
+   "M": {
+    "top1": 0.0072,
+    "top5": 0.0316,
+    "top10": 0.0595,
+    "top20": 0.1114
+   },
+   "G": {
+    "top1": 0.0193,
+    "top5": 0.062,
+    "top10": 0.0987,
+    "top20": 0.1578
+   },
+   "S": {
+    "top1": 0.0477,
+    "top5": 0.1452,
+    "top10": 0.2076,
+    "top20": 0.2943
+   }
+  },
+  "n_genes": {
+   "union": 828,
+   "lung": 382,
+   "immune": 350,
+   "external_lung": 380
+  },
+  "panel_overlaps": {
+   "lung&immune": 75,
+   "lung&external_lung": 168,
+   "immune&external_lung": 77
+  },
+  "decision": {
+   "MS_beyond_chance_all_sets_both_metrics": true,
+   "diff_CI_above_0_union_both_metrics": true,
+   "diff_positive_all_panels_both_metrics": true,
+   "ratio_MS_over_MG_union_CI_range": [
+    0.6259,
+    0.6961
+   ]
+  },
+  "criteria_applied_to_secondary_analyses": {
+   "panel_lung_rsa": {
+    "diff_CI_above_0": true,
+    "ratio_CI_upper_below_0.8": true,
+    "ratio_CI_within_0.8_1.25": false,
+    "ratio": 0.6902,
+    "ratio_CI": [
+     0.6582,
+     0.7224
+    ]
+   },
+   "panel_lung_dcka": {
+    "diff_CI_above_0": true,
+    "ratio_CI_upper_below_0.8": true,
+    "ratio_CI_within_0.8_1.25": false,
+    "ratio": 0.7066,
+    "ratio_CI": [
+     0.6772,
+     0.7364
+    ]
+   },
+   "panel_immune_rsa": {
+    "diff_CI_above_0": true,
+    "ratio_CI_upper_below_0.8": true,
+    "ratio_CI_within_0.8_1.25": false,
+    "ratio": 0.6337,
+    "ratio_CI": [
+     0.5936,
+     0.6696
+    ]
+   },
+   "panel_immune_dcka": {
+    "diff_CI_above_0": true,
+    "ratio_CI_upper_below_0.8": true,
+    "ratio_CI_within_0.8_1.25": false,
+    "ratio": 0.6695,
+    "ratio_CI": [
+     0.6323,
+     0.7099
+    ]
+   },
+   "panel_external_lung_rsa": {
+    "diff_CI_above_0": true,
+    "ratio_CI_upper_below_0.8": true,
+    "ratio_CI_within_0.8_1.25": false,
+    "ratio": 0.7399,
+    "ratio_CI": [
+     0.71,
+     0.7771
+    ]
+   },
+   "panel_external_lung_dcka": {
+    "diff_CI_above_0": true,
+    "ratio_CI_upper_below_0.8": false,
+    "ratio_CI_within_0.8_1.25": false,
+    "ratio": 0.7809,
+    "ratio_CI": [
+     0.7488,
+     0.8154
+    ]
+   },
+   "cvcca_meancorr10": {
+    "diff_CI_above_0": true,
+    "ratio_CI_upper_below_0.8": false,
+    "ratio_CI_within_0.8_1.25": false,
+    "ratio": 0.7849,
+    "ratio_CI": [
+     0.7511,
+     0.8203
+    ]
+   },
+   "cvcca_top1": {
+    "diff_CI_above_0": true,
+    "ratio_CI_upper_below_0.8": true,
+    "ratio_CI_within_0.8_1.25": false,
+    "ratio": 0.5039,
+    "ratio_CI": [
+     0.4311,
+     0.5873
+    ]
+   },
+   "sens_full_recentred_rsa": {
+    "diff_CI_above_0": true,
+    "ratio_CI_upper_below_0.8": true,
+    "ratio_CI_within_0.8_1.25": false,
+    "ratio": 0.6431,
+    "ratio_CI": [
+     0.6238,
+     0.6584
+    ]
+   },
+   "sens_full_recentred_dcka": {
+    "diff_CI_above_0": true,
+    "ratio_CI_upper_below_0.8": true,
+    "ratio_CI_within_0.8_1.25": false,
+    "ratio": 0.6777,
+    "ratio_CI": [
+     0.6604,
+     0.6942
+    ]
+   },
+   "sens_scgpt_no_layernorm_rsa": {
+    "diff_CI_above_0": true,
+    "ratio_CI_upper_below_0.8": true,
+    "ratio_CI_within_0.8_1.25": false,
+    "ratio": 0.6342,
+    "ratio_CI": [
+     0.6138,
+     0.6494
+    ]
+   },
+   "sens_scgpt_no_layernorm_dcka": {
+    "diff_CI_above_0": true,
+    "ratio_CI_upper_below_0.8": true,
+    "ratio_CI_within_0.8_1.25": false,
+    "ratio": 0.6665,
+    "ratio_CI": [
+     0.6491,
+     0.683
+    ]
+   },
+   "sens_pca10_rsa": {
+    "diff_CI_above_0": true,
+    "ratio_CI_upper_below_0.8": false,
+    "ratio_CI_within_0.8_1.25": false,
+    "ratio": 0.7632,
+    "ratio_CI": [
+     0.7168,
+     0.8149
+    ]
+   },
+   "sens_pca10_dcka": {
+    "diff_CI_above_0": true,
+    "ratio_CI_upper_below_0.8": false,
+    "ratio_CI_within_0.8_1.25": false,
+    "ratio": 0.7932,
+    "ratio_CI": [
+     0.7353,
+     0.8555
+    ]
+   },
+   "sens_pca20_rsa": {
+    "diff_CI_above_0": true,
+    "ratio_CI_upper_below_0.8": false,
+    "ratio_CI_within_0.8_1.25": false,
+    "ratio": 0.7655,
+    "ratio_CI": [
+     0.7233,
+     0.8062
+    ]
+   },
+   "sens_pca20_dcka": {
+    "diff_CI_above_0": true,
+    "ratio_CI_upper_below_0.8": false,
+    "ratio_CI_within_0.8_1.25": false,
+    "ratio": 0.7929,
+    "ratio_CI": [
+     0.7439,
+     0.8339
+    ]
+   },
+   "sens_pca50_rsa": {
+    "diff_CI_above_0": true,
+    "ratio_CI_upper_below_0.8": true,
+    "ratio_CI_within_0.8_1.25": false,
+    "ratio": 0.696,
+    "ratio_CI": [
+     0.662,
+     0.7234
+    ]
+   },
+   "sens_pca50_dcka": {
+    "diff_CI_above_0": true,
+    "ratio_CI_upper_below_0.8": true,
+    "ratio_CI_within_0.8_1.25": false,
+    "ratio": 0.7152,
+    "ratio_CI": [
+     0.6836,
+     0.7396
+    ]
+   },
+   "sens_drop_top1pc_rsa": {
+    "diff_CI_above_0": true,
+    "ratio_CI_upper_below_0.8": true,
+    "ratio_CI_within_0.8_1.25": false,
+    "ratio": 0.5589,
+    "ratio_CI": [
+     0.5373,
+     0.5824
+    ]
+   },
+   "sens_drop_top1pc_dcka": {
+    "diff_CI_above_0": true,
+    "ratio_CI_upper_below_0.8": true,
+    "ratio_CI_within_0.8_1.25": false,
+    "ratio": 0.6163,
+    "ratio_CI": [
+     0.595,
+     0.6371
+    ]
+   },
+   "sens_drop_top5pc_rsa": {
+    "diff_CI_above_0": true,
+    "ratio_CI_upper_below_0.8": true,
+    "ratio_CI_within_0.8_1.25": false,
+    "ratio": 0.6105,
+    "ratio_CI": [
+     0.5873,
+     0.6327
+    ]
+   },
+   "sens_drop_top5pc_dcka": {
+    "diff_CI_above_0": true,
+    "ratio_CI_upper_below_0.8": true,
+    "ratio_CI_within_0.8_1.25": false,
+    "ratio": 0.6572,
+    "ratio_CI": [
+     0.6337,
+     0.6809
+    ]
+   },
+   "sens_norm_residualised_rsa": {
+    "diff_CI_above_0": true,
+    "ratio_CI_upper_below_0.8": true,
+    "ratio_CI_within_0.8_1.25": false,
+    "ratio": 0.6113,
+    "ratio_CI": [
+     0.5912,
+     0.6282
+    ]
+   },
+   "sens_norm_residualised_dcka": {
+    "diff_CI_above_0": true,
+    "ratio_CI_upper_below_0.8": true,
+    "ratio_CI_within_0.8_1.25": false,
+    "ratio": 0.637,
+    "ratio_CI": [
+     0.6173,
+     0.6558
+    ]
+   },
+   "sens_pca10_refit_rsa": {
+    "diff_CI_above_0": true,
+    "ratio_CI_upper_below_0.8": false,
+    "ratio_CI_within_0.8_1.25": false,
+    "ratio": 0.7632,
+    "ratio_CI": [
+     0.6573,
+     0.8691
+    ]
+   },
+   "sens_pca10_refit_dcka": {
+    "diff_CI_above_0": true,
+    "ratio_CI_upper_below_0.8": false,
+    "ratio_CI_within_0.8_1.25": false,
+    "ratio": 0.7932,
+    "ratio_CI": [
+     0.6504,
+     0.936
+    ]
+   },
+   "sens_pca20_refit_rsa": {
+    "diff_CI_above_0": true,
+    "ratio_CI_upper_below_0.8": false,
+    "ratio_CI_within_0.8_1.25": false,
+    "ratio": 0.7655,
+    "ratio_CI": [
+     0.6923,
+     0.8386
+    ]
+   },
+   "sens_pca20_refit_dcka": {
+    "diff_CI_above_0": true,
+    "ratio_CI_upper_below_0.8": false,
+    "ratio_CI_within_0.8_1.25": false,
+    "ratio": 0.7929,
+    "ratio_CI": [
+     0.7071,
+     0.8787
+    ]
+   },
+   "sens_dcka_on_centred_cosine_dcka": {
+    "diff_CI_above_0": true,
+    "ratio_CI_upper_below_0.8": true,
+    "ratio_CI_within_0.8_1.25": false,
+    "ratio": 0.6517,
+    "ratio_CI": [
+     0.634,
+     0.6672
+    ]
+   },
+   "sens_euclidean_rsa": {
+    "diff_CI_above_0": true,
+    "ratio_CI_upper_below_0.8": true,
+    "ratio_CI_within_0.8_1.25": false,
+    "ratio": 0.2916,
+    "ratio_CI": [
+     0.2455,
+     0.3411
+    ]
+   },
+   "random_sets_rsa": {
+    "ratio": 0.4615,
+    "ratio_range_across_sets": [
+     0.4438,
+     0.4772
+    ]
+   },
+   "random_sets_dcka": {
+    "ratio": 0.4828,
+    "ratio_range_across_sets": [
+     0.4687,
+     0.496
+    ]
+   }
+  },
+  "runtime_seconds": 381.6
+ }
+}

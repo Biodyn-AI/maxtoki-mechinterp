@@ -1,0 +1,1278 @@
+{
+  "spec_lint": {
+    "S1": {
+      "FAIL": 7,
+      "PASS": 1
+    },
+    "S2": {
+      "PASS": 8
+    },
+    "S3": {
+      "WARN": 6,
+      "WAIVER": 1,
+      "PASS": 1
+    },
+    "S4": {
+      "FAIL": 8
+    },
+    "S5": {
+      "PASS": 7,
+      "FAIL": 1
+    },
+    "S6": {
+      "FAIL": 8
+    },
+    "S7": {
+      "FAIL": 8
+    },
+    "template_reject": 7,
+    "pin_status": {
+      "TEXT_MATCH_ONLY_NO_GIT": 6,
+      "NONE_WITH_REASON": 1,
+      "VERIFIED_GIT_HEAD": 1
+    },
+    "code_refs_total": 230,
+    "code_refs_required_form": 5,
+    "code_refs_exist": 218,
+    "code_refs_exist_as_written": 165,
+    "code_refs_missing": 2,
+    "code_refs_pattern_unchecked": 10,
+    "code_refs_with_line": 30,
+    "code_refs_line_in_range": 30,
+    "code_refs_in_clone_without_git": 174,
+    "symbols_checked": 76,
+    "symbols_found_in_file": 72,
+    "symbols_not_found": {
+      "pipelines/attention-grn-extraction-and-evaluation.md": [
+        "run_incremental_value",
+        "run_residualization",
+        "permutation_test_contrast",
+        "bootstrap_stability"
+      ]
+    },
+    "missing_refs": {
+      "pipelines/topology-geometry-141-hypotheses.md": [
+        "`run_claude_topology_autoloop.py`"
+      ],
+      "pipelines/sparse-autoencoders/03-exhaustive-mapping-and-steering.md": [
+        "../../repos/bio-sae-circuits/results/circuit_analysis.json"
+      ]
+    },
+    "param_rows": 258,
+    "param_default_numeric": 177,
+    "param_range_numeric": 80,
+    "val_items": 122,
+    "val_threshold": 80,
+    "val_mention": 36,
+    "val_qualitative": 6,
+    "val_if_broken": 33,
+    "val_machine_readable_blocks": 0,
+    "val_framed_as_source_replication": 7,
+    "slots_labelled": {
+      "null_model": 6,
+      "trivial_baseline": 1,
+      "positive_control": 1,
+      "scope_statement": 2
+    },
+    "slots_all_four": 0
+  },
+  "number_trace": {
+    "summary_rows_all_docs": 1647,
+    "traced": 1587,
+    "traced_share": 0.9636,
+    "traced_wilson": [
+      0.9534,
+      0.9716
+    ],
+    "weak": 1414,
+    "strong": 173,
+    "mean_chance": 0.8003,
+    "mean_chance_ci": [
+      0.7864,
+      0.8136
+    ],
+    "excess": 0.1633,
+    "excess_ci": [
+      0.1495,
+      0.1768
+    ],
+    "untraced": 60,
+    "untraced_not_in_spec": 33,
+    "interval_note": "Wilson over numbers; bootstrap = 2,000 resamples of numbers (rows pooled over the 13 FINAL_SUMMARY documents; a number written in two copies of a summary counts twice)",
+    "docs": [
+      {
+        "scope": "run_summary",
+        "run": "attention-grn-217M",
+        "doc": "projects/maxtoki/summaries/attention-grn-217M-FINAL_SUMMARY.md",
+        "n_numbers": "102",
+        "n_traced": "100",
+        "traced_share": "0.9804",
+        "traced_ci_lo": "0.9313",
+        "traced_ci_hi": "0.9946",
+        "mean_chance": "0.9514",
+        "chance_ci_lo": "0.9216",
+        "chance_ci_hi": "0.9751",
+        "excess": "0.029",
+        "excess_ci_lo": "0.0059",
+        "excess_ci_hi": "0.0528",
+        "n_weak": "98",
+        "n_strong_traced": "2",
+        "n_untraced": "2",
+        "corpus_files": "103",
+        "corpus_values": "4051173"
+      },
+      {
+        "scope": "run_summary",
+        "run": "attention-grn-217M",
+        "doc": "projects/maxtoki/runs/attention-grn-217M/outputs/FINAL_SUMMARY.md",
+        "n_numbers": "93",
+        "n_traced": "92",
+        "traced_share": "0.9892",
+        "traced_ci_lo": "0.9416",
+        "traced_ci_hi": "0.9981",
+        "mean_chance": "0.9497",
+        "chance_ci_lo": "0.9168",
+        "chance_ci_hi": "0.9742",
+        "excess": "0.0396",
+        "excess_ci_lo": "0.0221",
+        "excess_ci_hi": "0.0622",
+        "n_weak": "90",
+        "n_strong_traced": "2",
+        "n_untraced": "1",
+        "corpus_files": "103",
+        "corpus_values": "4051173"
+      },
+      {
+        "scope": "run_summary",
+        "run": "spectral-geometry-217M",
+        "doc": "projects/maxtoki/summaries/spectral-geometry-217M-FINAL_SUMMARY.md",
+        "n_numbers": "200",
+        "n_traced": "199",
+        "traced_share": "0.995",
+        "traced_ci_lo": "0.9722",
+        "traced_ci_hi": "0.9991",
+        "mean_chance": "0.9074",
+        "chance_ci_lo": "0.874",
+        "chance_ci_hi": "0.9364",
+        "excess": "0.0876",
+        "excess_ci_lo": "0.0589",
+        "excess_ci_hi": "0.1179",
+        "n_weak": "185",
+        "n_strong_traced": "14",
+        "n_untraced": "1",
+        "corpus_files": "75",
+        "corpus_values": "23189"
+      },
+      {
+        "scope": "run_summary",
+        "run": "spectral-geometry-217M",
+        "doc": "projects/maxtoki/runs/spectral-geometry-217M/outputs/FINAL_SUMMARY.md",
+        "n_numbers": "116",
+        "n_traced": "116",
+        "traced_share": "1.0",
+        "traced_ci_lo": "0.9679",
+        "traced_ci_hi": "1.0",
+        "mean_chance": "0.9612",
+        "chance_ci_lo": "0.9348",
+        "chance_ci_hi": "0.9819",
+        "excess": "0.0388",
+        "excess_ci_lo": "0.0183",
+        "excess_ci_hi": "0.064",
+        "n_weak": "114",
+        "n_strong_traced": "2",
+        "n_untraced": "0",
+        "corpus_files": "75",
+        "corpus_values": "23189"
+      },
+      {
+        "scope": "run_summary",
+        "run": "topology-141-217M",
+        "doc": "projects/maxtoki/summaries/topology-141-217M-FINAL_SUMMARY.md",
+        "n_numbers": "55",
+        "n_traced": "55",
+        "traced_share": "1.0",
+        "traced_ci_lo": "0.9347",
+        "traced_ci_hi": "1.0",
+        "mean_chance": "0.9295",
+        "chance_ci_lo": "0.8676",
+        "chance_ci_hi": "0.9782",
+        "excess": "0.0705",
+        "excess_ci_lo": "0.0247",
+        "excess_ci_hi": "0.1342",
+        "n_weak": "52",
+        "n_strong_traced": "3",
+        "n_untraced": "0",
+        "corpus_files": "102",
+        "corpus_values": "8283"
+      },
+      {
+        "scope": "run_summary",
+        "run": "topology-141-217M",
+        "doc": "projects/maxtoki/runs/topology-141-217M/FINAL_SUMMARY.md",
+        "n_numbers": "95",
+        "n_traced": "93",
+        "traced_share": "0.9789",
+        "traced_ci_lo": "0.9265",
+        "traced_ci_hi": "0.9942",
+        "mean_chance": "0.8836",
+        "chance_ci_lo": "0.8383",
+        "chance_ci_hi": "0.9259",
+        "excess": "0.0954",
+        "excess_ci_lo": "0.06",
+        "excess_ci_hi": "0.1341",
+        "n_weak": "89",
+        "n_strong_traced": "4",
+        "n_untraced": "2",
+        "corpus_files": "102",
+        "corpus_values": "8283"
+      },
+      {
+        "scope": "run_summary",
+        "run": "manifold-discovery-217M",
+        "doc": "projects/maxtoki/summaries/manifold-discovery-217M-FINAL_SUMMARY.md",
+        "n_numbers": "215",
+        "n_traced": "211",
+        "traced_share": "0.9814",
+        "traced_ci_lo": "0.9531",
+        "traced_ci_hi": "0.9927",
+        "mean_chance": "0.7352",
+        "chance_ci_lo": "0.709",
+        "chance_ci_hi": "0.7619",
+        "excess": "0.2462",
+        "excess_ci_lo": "0.217",
+        "excess_ci_hi": "0.2744",
+        "n_weak": "194",
+        "n_strong_traced": "17",
+        "n_untraced": "4",
+        "corpus_files": "96",
+        "corpus_values": "56941"
+      },
+      {
+        "scope": "run_summary",
+        "run": "manifold-discovery-217M",
+        "doc": "projects/maxtoki/runs/manifold-discovery-217M/FINAL_SUMMARY.md",
+        "n_numbers": "263",
+        "n_traced": "259",
+        "traced_share": "0.9848",
+        "traced_ci_lo": "0.9616",
+        "traced_ci_hi": "0.9941",
+        "mean_chance": "0.7259",
+        "chance_ci_lo": "0.7041",
+        "chance_ci_hi": "0.7468",
+        "excess": "0.2589",
+        "excess_ci_lo": "0.2351",
+        "excess_ci_hi": "0.2833",
+        "n_weak": "239",
+        "n_strong_traced": "20",
+        "n_untraced": "4",
+        "corpus_files": "96",
+        "corpus_values": "56941"
+      },
+      {
+        "scope": "run_summary",
+        "run": "longevity-mechinterp-217M",
+        "doc": "projects/maxtoki/runs/longevity-mechinterp-217M/FINAL_SUMMARY.md",
+        "n_numbers": "35",
+        "n_traced": "22",
+        "traced_share": "0.6286",
+        "traced_ci_lo": "0.4634",
+        "traced_ci_hi": "0.7683",
+        "mean_chance": "0.2303",
+        "chance_ci_lo": "0.1668",
+        "chance_ci_hi": "0.2937",
+        "excess": "0.3983",
+        "excess_ci_lo": "0.2068",
+        "excess_ci_hi": "0.5829",
+        "n_weak": "3",
+        "n_strong_traced": "19",
+        "n_untraced": "13",
+        "corpus_files": "6",
+        "corpus_values": "3116"
+      },
+      {
+        "scope": "run_summary",
+        "run": "sae-atlas-217M",
+        "doc": "projects/maxtoki/summaries/sae-atlas-217M-FINAL_SUMMARY.md",
+        "n_numbers": "141",
+        "n_traced": "139",
+        "traced_share": "0.9858",
+        "traced_ci_lo": "0.9498",
+        "traced_ci_hi": "0.9961",
+        "mean_chance": "0.9604",
+        "chance_ci_lo": "0.9333",
+        "chance_ci_hi": "0.9836",
+        "excess": "0.0254",
+        "excess_ci_lo": "0.0038",
+        "excess_ci_hi": "0.0498",
+        "n_weak": "134",
+        "n_strong_traced": "5",
+        "n_untraced": "2",
+        "corpus_files": "169",
+        "corpus_values": "408970"
+      },
+      {
+        "scope": "run_summary",
+        "run": "sae-atlas-217M",
+        "doc": "projects/maxtoki/summaries/sae-atlas-217M-FINAL_SUMMARY_12layer.md",
+        "n_numbers": "71",
+        "n_traced": "70",
+        "traced_share": "0.9859",
+        "traced_ci_lo": "0.9244",
+        "traced_ci_hi": "0.9975",
+        "mean_chance": "0.9651",
+        "chance_ci_lo": "0.9231",
+        "chance_ci_hi": "0.9997",
+        "excess": "0.0208",
+        "excess_ci_lo": "-0.0054",
+        "excess_ci_hi": "0.058",
+        "n_weak": "68",
+        "n_strong_traced": "2",
+        "n_untraced": "1",
+        "corpus_files": "169",
+        "corpus_values": "408970"
+      },
+      {
+        "scope": "run_summary",
+        "run": "circuit-tracing-217M",
+        "doc": "projects/maxtoki/summaries/circuit-tracing-217M-FINAL_SUMMARY.md",
+        "n_numbers": "112",
+        "n_traced": "96",
+        "traced_share": "0.8571",
+        "traced_ci_lo": "0.7805",
+        "traced_ci_hi": "0.9101",
+        "mean_chance": "0.5791",
+        "chance_ci_lo": "0.5016",
+        "chance_ci_hi": "0.6582",
+        "excess": "0.278",
+        "excess_ci_lo": "0.2014",
+        "excess_ci_hi": "0.3555",
+        "n_weak": "68",
+        "n_strong_traced": "28",
+        "n_untraced": "16",
+        "corpus_files": "13",
+        "corpus_values": "58394"
+      },
+      {
+        "scope": "run_summary",
+        "run": "exhaustive-mapping-217M",
+        "doc": "projects/maxtoki/summaries/exhaustive-mapping-217M-FINAL_SUMMARY.md",
+        "n_numbers": "149",
+        "n_traced": "135",
+        "traced_share": "0.906",
+        "traced_ci_lo": "0.8485",
+        "traced_ci_hi": "0.9432",
+        "mean_chance": "0.529",
+        "chance_ci_lo": "0.4691",
+        "chance_ci_hi": "0.5894",
+        "excess": "0.377",
+        "excess_ci_lo": "0.3126",
+        "excess_ci_hi": "0.4422",
+        "n_weak": "80",
+        "n_strong_traced": "55",
+        "n_untraced": "14",
+        "corpus_files": "1025",
+        "corpus_values": "18708"
+      }
+    ],
+    "paper": [
+      {
+        "scope": "paper_vs_union_of_8_runs (found in any run)",
+        "run": "(paper)",
+        "doc": "projects/maxtoki/paper-plos-one/main.tex",
+        "n_numbers": "124",
+        "n_traced": "123",
+        "traced_share": "0.9919",
+        "traced_ci_lo": "0.9557",
+        "traced_ci_hi": "0.9986",
+        "mean_chance": "0.9744",
+        "chance_ci_lo": "0.9458",
+        "chance_ci_hi": "0.9973",
+        "excess": "0.0176",
+        "excess_ci_lo": "-0.0005",
+        "excess_ci_hi": "0.0413",
+        "n_weak": "121",
+        "n_strong_traced": "2",
+        "n_untraced": "1",
+        "corpus_files": "",
+        "corpus_values": "4554686"
+      },
+      {
+        "scope": "paper_chain (written in run R's FINAL_SUMMARY and found in run R's outputs)",
+        "run": "(paper)",
+        "doc": "projects/maxtoki/paper-plos-one/main.tex",
+        "n_numbers": "124",
+        "n_traced": "119",
+        "traced_share": "0.9597",
+        "traced_ci_lo": "0.9091",
+        "traced_ci_hi": "0.9827",
+        "mean_chance": "0.5",
+        "chance_ci_lo": "0.4339",
+        "chance_ci_hi": "0.5634",
+        "excess": "0.4597",
+        "excess_ci_lo": "0.3937",
+        "excess_ci_hi": "0.5253",
+        "n_weak": "0",
+        "n_strong_traced": "119",
+        "n_untraced": "5",
+        "corpus_files": "",
+        "corpus_values": "4554686"
+      },
+      {
+        "scope": "paper_vs_numbers_written_in_FINAL_SUMMARY_files (transcription check)",
+        "run": "(paper)",
+        "doc": "projects/maxtoki/paper-plos-one/main.tex",
+        "n_numbers": "124",
+        "n_traced": "120",
+        "traced_share": "0.9677",
+        "traced_ci_lo": "0.92",
+        "traced_ci_hi": "0.9874",
+        "mean_chance": "0.5016",
+        "chance_ci_lo": "0.4387",
+        "chance_ci_hi": "0.5692",
+        "excess": "0.4661",
+        "excess_ci_lo": "0.401",
+        "excess_ci_hi": "0.5334",
+        "n_weak": "0",
+        "n_strong_traced": "120",
+        "n_untraced": "4",
+        "corpus_files": "",
+        "corpus_values": "822"
+      },
+      {
+        "scope": "paper_vs_extended_corpus (runs + audits + summaries + setup json/csv/log/txt)",
+        "run": "(paper)",
+        "doc": "projects/maxtoki/paper-plos-one/main.tex",
+        "n_numbers": "124",
+        "n_traced": "123",
+        "traced_share": "0.9919",
+        "traced_ci_lo": "0.9557",
+        "traced_ci_hi": "0.9986",
+        "mean_chance": "0.9758",
+        "chance_ci_lo": "0.9463",
+        "chance_ci_hi": "0.9987",
+        "excess": "0.0161",
+        "excess_ci_lo": "-0.0005",
+        "excess_ci_hi": "0.0398",
+        "n_weak": "0",
+        "n_strong_traced": "123",
+        "n_untraced": "1",
+        "corpus_files": "",
+        "corpus_values": "4559098"
+      },
+      {
+        "scope": "paper_vs_union_excluding_spec_numbers",
+        "run": "(paper)",
+        "doc": "projects/maxtoki/paper-plos-one/main.tex",
+        "n_numbers": "48",
+        "n_traced": "47",
+        "traced_share": "0.9792",
+        "traced_ci_lo": "0.891",
+        "traced_ci_hi": "0.9963",
+        "mean_chance": "0.9408",
+        "chance_ci_lo": "0.8637",
+        "chance_ci_hi": "1.0",
+        "excess": "0.0383",
+        "excess_ci_lo": "-0.0025",
+        "excess_ci_hi": "0.0988",
+        "n_weak": "45",
+        "n_strong_traced": "2",
+        "n_untraced": "1",
+        "corpus_files": "",
+        "corpus_values": "4554686"
+      },
+      {
+        "scope": "paper_class:decimal_1dp",
+        "run": "(paper)",
+        "doc": "projects/maxtoki/paper-plos-one/main.tex",
+        "n_numbers": "13",
+        "n_traced": "13",
+        "traced_share": "1.0",
+        "traced_ci_lo": "0.7719",
+        "traced_ci_hi": "1.0",
+        "mean_chance": "1.0",
+        "chance_ci_lo": "1.0",
+        "chance_ci_hi": "1.0",
+        "excess": "0.0",
+        "excess_ci_lo": "0.0",
+        "excess_ci_hi": "0.0",
+        "n_weak": "13",
+        "n_strong_traced": "0",
+        "n_untraced": "0",
+        "corpus_files": "",
+        "corpus_values": "4554686"
+      },
+      {
+        "scope": "paper_class:decimal_2+dp",
+        "run": "(paper)",
+        "doc": "projects/maxtoki/paper-plos-one/main.tex",
+        "n_numbers": "63",
+        "n_traced": "63",
+        "traced_share": "1.0",
+        "traced_ci_lo": "0.9425",
+        "traced_ci_hi": "1.0",
+        "mean_chance": "0.9857",
+        "chance_ci_lo": "0.9571",
+        "chance_ci_hi": "1.0",
+        "excess": "0.0143",
+        "excess_ci_lo": "0.0",
+        "excess_ci_hi": "0.0429",
+        "n_weak": "62",
+        "n_strong_traced": "1",
+        "n_untraced": "0",
+        "corpus_files": "",
+        "corpus_values": "4554686"
+      },
+      {
+        "scope": "paper_class:integer>=10",
+        "run": "(paper)",
+        "doc": "projects/maxtoki/paper-plos-one/main.tex",
+        "n_numbers": "48",
+        "n_traced": "47",
+        "traced_share": "0.9792",
+        "traced_ci_lo": "0.891",
+        "traced_ci_hi": "0.9963",
+        "mean_chance": "0.9525",
+        "chance_ci_lo": "0.8887",
+        "chance_ci_hi": "1.0",
+        "excess": "0.0267",
+        "excess_ci_lo": "-0.0025",
+        "excess_ci_hi": "0.0767",
+        "n_weak": "46",
+        "n_strong_traced": "1",
+        "n_untraced": "1",
+        "corpus_files": "",
+        "corpus_values": "4554686"
+      }
+    ],
+    "classes": [
+      {
+        "scope": "run_summaries_class:decimal_1dp",
+        "run": "(all runs)",
+        "doc": "(all FINAL_SUMMARY files)",
+        "n_numbers": "203",
+        "n_traced": "193",
+        "traced_share": "0.9507",
+        "traced_ci_lo": "0.9117",
+        "traced_ci_hi": "0.973",
+        "mean_chance": "0.89",
+        "chance_ci_lo": "0.8571",
+        "chance_ci_hi": "0.9202",
+        "excess": "0.0608",
+        "excess_ci_lo": "0.0318",
+        "excess_ci_hi": "0.0903",
+        "n_weak": "182",
+        "n_strong_traced": "11",
+        "n_untraced": "10",
+        "corpus_files": "",
+        "corpus_values": ""
+      },
+      {
+        "scope": "run_summaries_class:decimal_2+dp",
+        "run": "(all runs)",
+        "doc": "(all FINAL_SUMMARY files)",
+        "n_numbers": "900",
+        "n_traced": "881",
+        "traced_share": "0.9789",
+        "traced_ci_lo": "0.9673",
+        "traced_ci_hi": "0.9864",
+        "mean_chance": "0.761",
+        "chance_ci_lo": "0.7432",
+        "chance_ci_hi": "0.7786",
+        "excess": "0.2179",
+        "excess_ci_lo": "0.2004",
+        "excess_ci_hi": "0.2351",
+        "n_weak": "783",
+        "n_strong_traced": "98",
+        "n_untraced": "19",
+        "corpus_files": "",
+        "corpus_values": ""
+      },
+      {
+        "scope": "run_summaries_class:integer>=10",
+        "run": "(all runs)",
+        "doc": "(all FINAL_SUMMARY files)",
+        "n_numbers": "525",
+        "n_traced": "497",
+        "traced_share": "0.9467",
+        "traced_ci_lo": "0.924",
+        "traced_ci_hi": "0.9628",
+        "mean_chance": "0.8455",
+        "chance_ci_lo": "0.8183",
+        "chance_ci_hi": "0.8705",
+        "excess": "0.1012",
+        "excess_ci_lo": "0.0771",
+        "excess_ci_hi": "0.1243",
+        "n_weak": "442",
+        "n_strong_traced": "55",
+        "n_untraced": "28",
+        "corpus_files": "",
+        "corpus_values": ""
+      },
+      {
+        "scope": "run_summaries_class:sci",
+        "run": "(all runs)",
+        "doc": "(all FINAL_SUMMARY files)",
+        "n_numbers": "19",
+        "n_traced": "16",
+        "traced_share": "0.8421",
+        "traced_ci_lo": "0.6243",
+        "traced_ci_hi": "0.9448",
+        "mean_chance": "0.4526",
+        "chance_ci_lo": "0.2853",
+        "chance_ci_hi": "0.6221",
+        "excess": "0.3895",
+        "excess_ci_lo": "0.2263",
+        "excess_ci_hi": "0.5495",
+        "n_weak": "7",
+        "n_strong_traced": "9",
+        "n_untraced": "3",
+        "corpus_files": "",
+        "corpus_values": ""
+      }
+    ],
+    "distinct_per_run": {
+      "n_numbers": 1186,
+      "traced": 1132,
+      "traced_share": 0.9545,
+      "traced_wilson": [
+        0.9411,
+        0.9649
+      ],
+      "traced_cluster_ci": [
+        0.9016,
+        0.9815
+      ],
+      "weak": 980,
+      "mean_chance": 0.7783,
+      "mean_chance_ci": [
+        0.7602,
+        0.7956
+      ],
+      "mean_chance_cluster_ci": [
+        0.6481,
+        0.8902
+      ],
+      "excess": 0.1762,
+      "excess_ci": [
+        0.159,
+        0.1937
+      ],
+      "excess_cluster_ci": [
+        0.0827,
+        0.2679
+      ],
+      "untraced": 54,
+      "untraced_not_in_spec": 32,
+      "n_runs": 8,
+      "n_rows_pooled": 1647,
+      "n_rows_that_repeat_a_number": 461,
+      "interval_note": "unit = distinct number per run (run, value, half-width, %); Wilson over numbers; '_ci' = percentile bootstrap over numbers (2,000); '_cluster_ci' = percentile bootstrap over the 8 runs (2,000), which keeps the numbers of one run together"
+    },
+    "paper_not_chain": [
+      {
+        "line": "841",
+        "raw": "175",
+        "in_summaries": "True",
+        "traced": "False",
+        "context": ", scaling pre-training to ~ 1T gene tokens across ~ 175M human single-cell transcriptomes spanning b"
+      },
+      {
+        "line": "871",
+        "raw": "4,096",
+        "in_summaries": "False",
+        "traced": "True",
+        "context": "32, 8 attention heads per layer, vocabulary 20,275, context 4,096 tokens). The original paper's anal"
+      },
+      {
+        "line": "1149",
+        "raw": "20.4",
+        "in_summaries": "False",
+        "traced": "True",
+        "context": "puted without the model at all. The baseline wins by 5.6 to 20.4 AUROC points, in every screen, at B"
+      },
+      {
+        "line": "1328",
+        "raw": "0.0125",
+        "in_summaries": "False",
+        "traced": "True",
+        "context": "hoc; under Bonferroni across the four thresholds ( \\alpha/4=0.0125 ) the result is no longer signifi"
+      },
+      {
+        "line": "1439",
+        "raw": "0.678",
+        "in_summaries": "False",
+        "traced": "True",
+        "context": "on the feature construction. Cross-layer Pearson is 0.604– 0.678 for the H123 signed motif-community"
+      }
+    ]
+  },
+  "verify_number_trace": {
+    "per_run": {
+      "attention-grn-217M": {
+        "compared": 185,
+        "agree": 185,
+        "agreement": 1.0,
+        "distinct_values_string_method": 4051169
+      },
+      "spectral-geometry-217M": {
+        "compared": 308,
+        "agree": 308,
+        "agreement": 1.0,
+        "distinct_values_string_method": 23189
+      },
+      "topology-141-217M": {
+        "compared": 148,
+        "agree": 148,
+        "agreement": 1.0,
+        "distinct_values_string_method": 8283
+      },
+      "manifold-discovery-217M": {
+        "compared": 470,
+        "agree": 470,
+        "agreement": 1.0,
+        "distinct_values_string_method": 56941
+      },
+      "longevity-mechinterp-217M": {
+        "compared": 34,
+        "agree": 34,
+        "agreement": 1.0,
+        "distinct_values_string_method": 3117
+      },
+      "sae-atlas-217M": {
+        "compared": 211,
+        "agree": 211,
+        "agreement": 1.0,
+        "distinct_values_string_method": 408959
+      },
+      "circuit-tracing-217M": {
+        "compared": 104,
+        "agree": 104,
+        "agreement": 1.0,
+        "distinct_values_string_method": 58394
+      },
+      "exhaustive-mapping-217M": {
+        "compared": 145,
+        "agree": 145,
+        "agreement": 1.0,
+        "distinct_values_string_method": 18659
+      }
+    },
+    "total_compared": 1605,
+    "total_agree": 1605,
+    "agreement": 1.0
+  },
+  "verify_chance_rate": {
+    "n_numbers": 1633,
+    "mean_sampled": 0.8071402327005511,
+    "mean_exact": 0.8064144657898239,
+    "corr": 0.9889968215403918,
+    "mean_abs_diff": 0.02217124520241479,
+    "note": "sampled = 50 random grid points (number_trace.py); exact = all grid points in [0.5x,1.5x]"
+  },
+  "crosscheck_manual_audit": {
+    "n_joined": 130,
+    "n_manual_numbers_not_joined": 22,
+    "n_manual_rows_read": 252,
+    "n_manual_rows_without_a_number": 149,
+    "n_distinct_values_wrong_in_meaning": 23,
+    "n_distinct_values_wrong_in_meaning_traced": 23,
+    "by_manual_status": {
+      "NOT FOUND": {
+        "n": 4,
+        "traced_any_run": 4,
+        "chain": 4,
+        "in_summaries": 4
+      },
+      "DIFFERENT ENDPOINT": {
+        "n": 17,
+        "traced_any_run": 17,
+        "chain": 17,
+        "in_summaries": 17
+      },
+      "MATCH": {
+        "n": 98,
+        "traced_any_run": 96,
+        "chain": 94,
+        "in_summaries": 96
+      },
+      "MISMATCH": {
+        "n": 10,
+        "traced_any_run": 10,
+        "chain": 10,
+        "in_summaries": 10
+      },
+      "AMBIGUOUS": {
+        "n": 1,
+        "traced_any_run": 1,
+        "chain": 1,
+        "in_summaries": 1
+      }
+    },
+    "note": "traced = present in outputs within rounding; it does not test meaning. A number the manual audit marks MISMATCH or DIFFERENT ENDPOINT can still be present in the outputs."
+  },
+  "verify_spec_lint": {
+    "all_agree_simple": true,
+    "all_agree_prototype": true
+  },
+  "verify_manifest_deviations": {
+    "n_values": 35,
+    "n_confirmed": 35
+  },
+  "run_manifest": {
+    "param_rows": 258,
+    "rows_with_evidence": 66,
+    "rows_param_map": 58,
+    "rows_auto": 11,
+    "status_counts": {
+      "OUT_OF_RANGE": 6,
+      "MATCH_DEFAULT": 42,
+      "NO_EVIDENCE_FOUND": 191,
+      "DIFFERS_NO_RANGE_GIVEN": 5,
+      "IN_RANGE_NOT_DEFAULT": 6,
+      "DESCRIPTOR_NOT_JUDGED": 6,
+      "NOT_SAME_PARAMETER (suppressed)": 1,
+      "SPEC_NOT_MACHINE_READABLE": 1
+    },
+    "deviations": [
+      {
+        "run": "attention-grn-217M",
+        "param": "n_ctrl",
+        "used": "200;2000",
+        "spec_default": "2000",
+        "spec_range": "{500, 2000, 10000}",
+        "status": "OUT_OF_RANGE",
+        "reason": ""
+      },
+      {
+        "run": "attention-grn-217M",
+        "param": "hvg",
+        "used": "1500",
+        "spec_default": "{2000, 3309}",
+        "spec_range": "{1000, 2000, 5000}",
+        "status": "OUT_OF_RANGE",
+        "reason": ""
+      },
+      {
+        "run": "attention-grn-217M",
+        "param": "intervention_cells_fidelity",
+        "used": "2000;300",
+        "spec_default": "2000",
+        "spec_range": "not machine-readable",
+        "status": "DIFFERS_NO_RANGE_GIVEN",
+        "reason": ""
+      },
+      {
+        "run": "attention-grn-217M",
+        "param": "degree_null_n_curveball",
+        "used": "50",
+        "spec_default": "200",
+        "spec_range": "not machine-readable",
+        "status": "DIFFERS_NO_RANGE_GIVEN",
+        "reason": "projects/maxtoki/runs/attention-grn-217M/README.md:32"
+      },
+      {
+        "run": "spectral-geometry-217M",
+        "param": "autoloop_iterations",
+        "used": "8",
+        "spec_default": "63",
+        "spec_range": "40–80",
+        "status": "OUT_OF_RANGE",
+        "reason": ""
+      },
+      {
+        "run": "topology-141-217M",
+        "param": "null_label_permutation_replicates",
+        "used": "100;50;8",
+        "spec_default": "100–200",
+        "spec_range": "100–1000",
+        "status": "OUT_OF_RANGE",
+        "reason": ""
+      },
+      {
+        "run": "topology-141-217M",
+        "param": "null_rewiring_replicates",
+        "used": "12;8",
+        "spec_default": "24",
+        "spec_range": "≥ 24",
+        "status": "OUT_OF_RANGE",
+        "reason": ""
+      },
+      {
+        "run": "sae-atlas-217M",
+        "param": "n_cells_training",
+        "used": "500",
+        "spec_default": "2000",
+        "spec_range": "not machine-readable",
+        "status": "DIFFERS_NO_RANGE_GIVEN",
+        "reason": ""
+      },
+      {
+        "run": "sae-atlas-217M",
+        "param": "n_cells_training",
+        "used": "500",
+        "spec_default": "3000",
+        "spec_range": "not machine-readable",
+        "status": "DIFFERS_NO_RANGE_GIVEN",
+        "reason": ""
+      },
+      {
+        "run": "sae-atlas-217M",
+        "param": "causal_patching_cells",
+        "used": "50",
+        "spec_default": "200",
+        "spec_range": "not machine-readable",
+        "status": "DIFFERS_NO_RANGE_GIVEN",
+        "reason": ""
+      },
+      {
+        "run": "exhaustive-mapping-217M",
+        "param": "n_cells_per_condition",
+        "used": "50",
+        "spec_default": "200",
+        "spec_range": "100–500",
+        "status": "OUT_OF_RANGE",
+        "reason": ""
+      }
+    ],
+    "gate_status_counts": {
+      "CONSISTENT": 11,
+      "CONSISTENT; IMPLAUSIBLE_FRACTION": 1,
+      "AMBIGUOUS_NOT_RECOMPUTED": 1,
+      "CONSISTENT; NEGATIVE_CONTROL_PASSED": 1,
+      "PASS_WITH_UNCOMPUTED_GATES": 2,
+      "PROTOCOL_K_DIFFERS(['trustworthiness_k5'] vs k=15)": 1,
+      "CONSISTENT; GATE_SET_FOR_PANEL_UNSTATED": 1
+    },
+    "gate_flags": [
+      {
+        "run": "attention-grn-217M",
+        "file": "phase12_verdict.json",
+        "object": "criteria.C3_residualized_retains_signal",
+        "status": "CONSISTENT; IMPLAUSIBLE_FRACTION",
+        "missing": "",
+        "boundary": ""
+      },
+      {
+        "run": "attention-grn-217M",
+        "file": "phase12_verdict.json",
+        "object": "criteria.C4_top_heads_causal",
+        "status": "AMBIGUOUS_NOT_RECOMPUTED",
+        "missing": "",
+        "boundary": ""
+      },
+      {
+        "run": "manifold-discovery-217M",
+        "file": "external_validation_lung_control.json",
+        "object": "(root)",
+        "status": "CONSISTENT; NEGATIVE_CONTROL_PASSED",
+        "missing": "",
+        "boundary": "trustworthiness=0.8013 vs 0.8"
+      },
+      {
+        "run": "manifold-discovery-217M",
+        "file": "h38_lite_quality_gates.json",
+        "object": "positive",
+        "status": "PASS_WITH_UNCOMPUTED_GATES",
+        "missing": "blocked_permutation_p_max;n_permutations_min",
+        "boundary": ""
+      },
+      {
+        "run": "manifold-discovery-217M",
+        "file": "quality_gates_let_anchor.json",
+        "object": "positive",
+        "status": "PASS_WITH_UNCOMPUTED_GATES",
+        "missing": "blocked_permutation_p_max;n_permutations_min",
+        "boundary": ""
+      },
+      {
+        "run": "manifold-discovery-217M",
+        "file": "zeroshot_h103.json",
+        "object": "(root)",
+        "status": "PROTOCOL_K_DIFFERS(['trustworthiness_k5'] vs k=15)",
+        "missing": "",
+        "boundary": ""
+      },
+      {
+        "run": "manifold-discovery-217M",
+        "file": "zeroshot_transfer_anchor_head.json",
+        "object": "(root)",
+        "status": "CONSISTENT; GATE_SET_FOR_PANEL_UNSTATED",
+        "missing": "blocked_permutation_p_max;n_permutations_min",
+        "boundary": ""
+      }
+    ],
+    "phases": [
+      {
+        "run": "attention-grn-217M",
+        "spec_phases": "0a;0b;1;2;3;4;5;6;7;8;9;10;11;12",
+        "n_spec_phases": 14,
+        "machine_readable_phase_record": true,
+        "recorded_phases": "0a;1;12;2;3;4",
+        "record_files": "projects/maxtoki/runs/attention-grn-217M/outputs/phase12_verdict.json;projects/maxtoki/runs/attention-grn-217M/outputs/phase12_verdict_adamson.json;projects/maxtoki/runs/attention-grn-217M/outputs/phase12_verdict_k562_1b.json",
+        "phases_not_run": "0b;5;6;7;8;9;10;11"
+      },
+      {
+        "run": "spectral-geometry-217M",
+        "spec_phases": "0;1;2;3;4;5;6;7;8;9;10",
+        "n_spec_phases": 11,
+        "machine_readable_phase_record": false,
+        "recorded_phases": "",
+        "record_files": "",
+        "phases_not_run": ""
+      },
+      {
+        "run": "topology-141-217M",
+        "spec_phases": "0;1;2;3;4;5;6;7;8;9;10;11;12;13",
+        "n_spec_phases": 14,
+        "machine_readable_phase_record": false,
+        "recorded_phases": "",
+        "record_files": "",
+        "phases_not_run": ""
+      },
+      {
+        "run": "manifold-discovery-217M",
+        "spec_phases": "0;1;2;3;4;5;6;7;8;9;10;11;12;13",
+        "n_spec_phases": 14,
+        "machine_readable_phase_record": false,
+        "recorded_phases": "",
+        "record_files": "",
+        "phases_not_run": ""
+      },
+      {
+        "run": "longevity-mechinterp-217M",
+        "spec_phases": "0;1;2;3;4;5;6;7;8;9;10;11;12",
+        "n_spec_phases": 13,
+        "machine_readable_phase_record": false,
+        "recorded_phases": "",
+        "record_files": "",
+        "phases_not_run": ""
+      },
+      {
+        "run": "sae-atlas-217M",
+        "spec_phases": "0;1;2;3;4;5;6;7;8;9;10;11;12;13",
+        "n_spec_phases": 14,
+        "machine_readable_phase_record": false,
+        "recorded_phases": "",
+        "record_files": "",
+        "phases_not_run": ""
+      },
+      {
+        "run": "circuit-tracing-217M",
+        "spec_phases": "0;1;2;3;4;5;6;7;8;9;10;11;12;13",
+        "n_spec_phases": 14,
+        "machine_readable_phase_record": false,
+        "recorded_phases": "",
+        "record_files": "",
+        "phases_not_run": ""
+      },
+      {
+        "run": "exhaustive-mapping-217M",
+        "spec_phases": "0;1;2;3;4;5;6;7;8;9;10;11;12;13",
+        "n_spec_phases": 14,
+        "machine_readable_phase_record": false,
+        "recorded_phases": "",
+        "record_files": "",
+        "phases_not_run": ""
+      }
+    ],
+    "repro": [
+      {
+        "run": "attention-grn-217M",
+        "n_scripts": 11,
+        "scripts_using_randomness": 9,
+        "scripts_using_randomness_with_seed": 9,
+        "scripts_random_without_seed": "",
+        "run_level_env_file": "",
+        "project_requirements_pinning": "71/71 lines use ==",
+        "devices_recorded": "mps",
+        "json_files_with_timing": 5,
+        "scripts_loading_hf_checkpoints": 0,
+        "hf_loads_with_revision_pin": 0,
+        "summary_py_paths_ok": 0,
+        "summary_py_paths_missing": "",
+        "machine_readable_decision_log": "none",
+        "manual_reclassification_files": "",
+        "run_manifest_file": "none"
+      },
+      {
+        "run": "spectral-geometry-217M",
+        "n_scripts": 16,
+        "scripts_using_randomness": 13,
+        "scripts_using_randomness_with_seed": 13,
+        "scripts_random_without_seed": "",
+        "run_level_env_file": "",
+        "project_requirements_pinning": "71/71 lines use ==",
+        "devices_recorded": "mps",
+        "json_files_with_timing": 4,
+        "scripts_loading_hf_checkpoints": 0,
+        "hf_loads_with_revision_pin": 0,
+        "summary_py_paths_ok": 2,
+        "summary_py_paths_missing": "",
+        "machine_readable_decision_log": "none",
+        "manual_reclassification_files": "",
+        "run_manifest_file": "none"
+      },
+      {
+        "run": "topology-141-217M",
+        "n_scripts": 20,
+        "scripts_using_randomness": 16,
+        "scripts_using_randomness_with_seed": 16,
+        "scripts_random_without_seed": "",
+        "run_level_env_file": "",
+        "project_requirements_pinning": "71/71 lines use ==",
+        "devices_recorded": "mps",
+        "json_files_with_timing": 6,
+        "scripts_loading_hf_checkpoints": 0,
+        "hf_loads_with_revision_pin": 0,
+        "summary_py_paths_ok": 3,
+        "summary_py_paths_missing": "",
+        "machine_readable_decision_log": "none",
+        "manual_reclassification_files": "projects/maxtoki/runs/topology-141-217M/outputs/phase11_autoloop/MANUAL_REVIEW.md",
+        "run_manifest_file": "none"
+      },
+      {
+        "run": "manifold-discovery-217M",
+        "n_scripts": 23,
+        "scripts_using_randomness": 18,
+        "scripts_using_randomness_with_seed": 18,
+        "scripts_random_without_seed": "",
+        "run_level_env_file": "",
+        "project_requirements_pinning": "71/71 lines use ==",
+        "devices_recorded": "cpu;mps",
+        "json_files_with_timing": 20,
+        "scripts_loading_hf_checkpoints": 1,
+        "hf_loads_with_revision_pin": 0,
+        "summary_py_paths_ok": 2,
+        "summary_py_paths_missing": "",
+        "machine_readable_decision_log": "none",
+        "manual_reclassification_files": "",
+        "run_manifest_file": "none"
+      },
+      {
+        "run": "longevity-mechinterp-217M",
+        "n_scripts": 4,
+        "scripts_using_randomness": 1,
+        "scripts_using_randomness_with_seed": 1,
+        "scripts_random_without_seed": "",
+        "run_level_env_file": "",
+        "project_requirements_pinning": "71/71 lines use ==",
+        "devices_recorded": "",
+        "json_files_with_timing": 1,
+        "scripts_loading_hf_checkpoints": 0,
+        "hf_loads_with_revision_pin": 0,
+        "summary_py_paths_ok": 0,
+        "summary_py_paths_missing": "",
+        "machine_readable_decision_log": "none",
+        "manual_reclassification_files": "",
+        "run_manifest_file": "none"
+      },
+      {
+        "run": "sae-atlas-217M",
+        "n_scripts": 12,
+        "scripts_using_randomness": 10,
+        "scripts_using_randomness_with_seed": 10,
+        "scripts_random_without_seed": "",
+        "run_level_env_file": "",
+        "project_requirements_pinning": "71/71 lines use ==",
+        "devices_recorded": "mps",
+        "json_files_with_timing": 13,
+        "scripts_loading_hf_checkpoints": 0,
+        "hf_loads_with_revision_pin": 0,
+        "summary_py_paths_ok": 0,
+        "summary_py_paths_missing": "",
+        "machine_readable_decision_log": "none",
+        "manual_reclassification_files": "",
+        "run_manifest_file": "none"
+      },
+      {
+        "run": "circuit-tracing-217M",
+        "n_scripts": 4,
+        "scripts_using_randomness": 4,
+        "scripts_using_randomness_with_seed": 4,
+        "scripts_random_without_seed": "",
+        "run_level_env_file": "",
+        "project_requirements_pinning": "71/71 lines use ==",
+        "devices_recorded": "",
+        "json_files_with_timing": 1,
+        "scripts_loading_hf_checkpoints": 0,
+        "hf_loads_with_revision_pin": 0,
+        "summary_py_paths_ok": 0,
+        "summary_py_paths_missing": "",
+        "machine_readable_decision_log": "none",
+        "manual_reclassification_files": "",
+        "run_manifest_file": "none"
+      },
+      {
+        "run": "exhaustive-mapping-217M",
+        "n_scripts": 6,
+        "scripts_using_randomness": 4,
+        "scripts_using_randomness_with_seed": 4,
+        "scripts_random_without_seed": "",
+        "run_level_env_file": "",
+        "project_requirements_pinning": "71/71 lines use ==",
+        "devices_recorded": "",
+        "json_files_with_timing": 0,
+        "scripts_loading_hf_checkpoints": 0,
+        "hf_loads_with_revision_pin": 0,
+        "summary_py_paths_ok": 8,
+        "summary_py_paths_missing": "",
+        "machine_readable_decision_log": "none",
+        "manual_reclassification_files": "",
+        "run_manifest_file": "none"
+      }
+    ],
+    "project_repro": {
+      "setup_scripts": 3,
+      "checkpoint_load_lines": "projects/maxtoki/setup/maxtoki_adapter.py:171;projects/maxtoki/setup/maxtoki_adapter.py:179",
+      "project_requirements_mtime": "2026-05-07 17:52",
+      "revision_pins": "none",
+      "download_refs_in_readmes": "main",
+      "files_mentioning_sha256": "none",
+      "note": "download ref 'main' is a moving branch; no revision= argument and no recorded weight hash means the exact checkpoint cannot be proven from the project files"
+    },
+    "m4_totals": {
+      "scripts": 96,
+      "scripts_using_randomness": 75,
+      "scripts_using_randomness_with_seed": 75,
+      "summary_py_paths_ok": 15,
+      "summary_py_paths_missing": 0,
+      "runs_with_device_recorded": 5,
+      "runs_with_timing_json": 7,
+      "runs_with_decision_log": 0,
+      "runs_with_run_manifest": 0,
+      "runs_with_manual_reclassification": 1,
+      "runs_with_phase_record": 1
+    },
+    "m5_totals": {
+      "summary_docs": 13,
+      "interval_lines": 25,
+      "interval_lines_naming_method": 6,
+      "interval_lines_naming_method_and_unit": 4,
+      "docs_with_scope_heading": 8,
+      "p9_word_lines": 76,
+      "p9_distinct_lines": 64,
+      "p9_max_lines_per_term": 7
+    }
+  },
+  "repair_queue": {
+    "n_items": 95,
+    "by_check": {
+      "spec_lint S1": 7,
+      "spec_lint S3": 7,
+      "spec_lint S4": 14,
+      "spec_lint S6": 8,
+      "spec_lint S7": 8,
+      "number_trace": 33,
+      "run_manifest M1": 11,
+      "run_manifest M2": 7
+    },
+    "by_owner": {
+      "agent (edit) + human (approve)": 7,
+      "agent": 53,
+      "agent (draft) + human (thresholds)": 8,
+      "agent (draft) + human (content)": 8,
+      "human": 13,
+      "agent (compute) + human (accept)": 6
+    }
+  }
+}

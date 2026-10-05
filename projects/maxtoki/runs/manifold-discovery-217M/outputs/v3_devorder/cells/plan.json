@@ -1,0 +1,79 @@
+{
+ "written_at": "2026-10-02 22:37:08",
+ "panels": {
+  "internal": {
+   "dataset": "ts_immune",
+   "n_cells": 11804,
+   "n_anchors": 290,
+   "n_chunks": 237,
+   "obs_label_mismatch": 0,
+   "deployed_tokens_rebuilt_from_X_first5": 5,
+   "assay_counts": {
+    "10x 3' v3": 9142,
+    "Smart-seq2": 2303,
+    "10x 5' v2": 359
+   },
+   "anchors_with_any_smartseq": 140,
+   "deployed_seq_len_median": 2043.0
+  },
+  "external": {
+   "dataset": "ts_immune",
+   "n_cells": 12000,
+   "n_anchors": 600,
+   "n_chunks": 240,
+   "obs_label_mismatch": 0,
+   "deployed_tokens_rebuilt_from_X_first5": 5,
+   "assay_counts": {
+    "10x 3' v3": 10232,
+    "10x 5' v2": 1095,
+    "Smart-seq2": 673
+   },
+   "anchors_with_any_smartseq": 120,
+   "deployed_seq_len_median": 2170.5
+  },
+  "zeroshot": {
+   "dataset": "ts_immune",
+   "n_cells": 5120,
+   "n_anchors": 160,
+   "n_chunks": 103,
+   "obs_label_mismatch": 0,
+   "deployed_tokens_rebuilt_from_X_first5": 5,
+   "assay_counts": {
+    "10x 3' v3": 4205,
+    "Smart-seq2": 470,
+    "10x 5' v2": 445
+   },
+   "anchors_with_any_smartseq": 33,
+   "deployed_seq_len_median": 2102.0
+  },
+  "lung_nonhema": {
+   "dataset": "ts_lung",
+   "n_cells": 1500,
+   "n_anchors": 50,
+   "n_chunks": 30,
+   "obs_label_mismatch": 0,
+   "deployed_tokens_rebuilt_from_X_first5": 5,
+   "assay_counts": {
+    "10x 3' v3": 1314,
+    "Smart-seq2": 186
+   },
+   "anchors_with_any_smartseq": 30,
+   "deployed_seq_len_median": 2937.5
+  },
+  "lung_control": {
+   "dataset": "ts_lung",
+   "n_cells": 2124,
+   "n_anchors": 51,
+   "n_chunks": 43,
+   "obs_label_mismatch": 0,
+   "deployed_tokens_rebuilt_from_X_first5": 5,
+   "assay_counts": {
+    "10x 3' v3": 1921,
+    "Smart-seq2": 203
+   },
+   "anchors_with_any_smartseq": 23,
+   "deployed_seq_len_median": 2219.0
+  }
+ },
+ "seconds": 8.924996137619019
+}

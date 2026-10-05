@@ -1,0 +1,9 @@
+tissue=gut layer=11 n_cells=4269 halves=10
+model       width      PR    PC1  d90    norm  normCV   PR halves      PC1 halves     d90 halves
+scgpt         512    1.82  0.724    3   21.65  0.0031    1.81-1.83    0.722-0.726    3-3
+geneformer   1152    2.73  0.576   20    6.75  0.0186    2.69-2.77    0.570-0.581    19-20
+state        2048   56.48  0.113  775   15.56  0.0284   53.58-57.66   0.111-0.116    644-650
+most->least compact by participation_ratio: scgpt > geneformer > state
+most->least compact by pc1_share: scgpt > geneformer > state
+most->least compact by d90: scgpt > geneformer > state
+most->least compact by norm_cv: scgpt > geneformer > state

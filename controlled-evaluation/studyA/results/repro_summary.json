@@ -1,0 +1,63 @@
+{
+ "per_task": [
+  {
+   "task": "T1",
+   "deliverables": 30,
+   "ran": 30,
+   "estimates": 2586,
+   "matched_by_name": 2585,
+   "reproduced": 2585,
+   "value_only": 1,
+   "fully_by_name": 29
+  },
+  {
+   "task": "T2",
+   "deliverables": 30,
+   "ran": 30,
+   "estimates": 2383,
+   "matched_by_name": 2383,
+   "reproduced": 2383,
+   "value_only": 0,
+   "fully_by_name": 30
+  },
+  {
+   "task": "T3",
+   "deliverables": 30,
+   "ran": 30,
+   "estimates": 1648,
+   "matched_by_name": 967,
+   "reproduced": 967,
+   "value_only": 680,
+   "fully_by_name": 9
+  },
+  {
+   "task": "T4",
+   "deliverables": 30,
+   "ran": 30,
+   "estimates": 4428,
+   "matched_by_name": 4428,
+   "reproduced": 4428,
+   "value_only": 0,
+   "fully_by_name": 30
+  }
+ ],
+ "total": {
+  "deliverables": 120,
+  "ran": 120,
+  "estimates": 11045,
+  "matched_by_name": 10363,
+  "reproduced": 10363,
+  "value_only": 681,
+  "fully_by_name": 98
+ },
+ "any_named_disagreement": 0,
+ "t3_value_match_chance_range": [
+  0.6072727272727271,
+  0.9671794871794868
+ ],
+ "passes": {
+  "1": 90,
+  "2": 28,
+  "3": 2
+ }
+}

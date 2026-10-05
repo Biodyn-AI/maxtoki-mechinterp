@@ -1,0 +1,75 @@
+\section*{Conclusion}
+An agent following written method specifications ran eight
+interpretability analyses of MaxToki-217M. The report of its own
+checklist audit, written before any repair, caught 10\% of a fixed set of
+68 errors in these analyses. It caught none of the 11 critical errors
+present when the audit ran. Fresh agents auditing the same work caught
+41--45\% of the 68, with or without the checklist. In the pre-registered
+tests with Claude Opus~5.5, every executor run reached the correct
+conclusion with or without the specifications (20 of 20 in each arm), so
+these tests could not show a benefit. The checklist did not clearly find
+more errors than a generic review of the same budget, and it did not
+raise fewer false alarms. There were two exceptions in our data. In an
+exploratory arm with the smaller Claude Haiku~4.5, a checklist review
+followed by repair raised the share of pitfalls handled by 6.4
+percentage points more than a generic review followed by repair (95\%
+bootstrap interval over 28 paired executor runs pooled over tasks, 1.3
+to 11.7), but it did not raise the number of correct verdicts. In the
+blind re-audits, the two checklist arms (generic and as deployed) fully
+detected more of the 17 missing baselines and nulls than the generic
+review (51\% and 55\% against 39\%) and more of the 9 wrong statistics
+(22\% and 37\% against 15\%). They fully detected fewer of the 12 code
+bugs (69\% and 58\% against 81\%). These splits by error type were not
+tested for significance. For agent-run interpretability we therefore
+recommend independent review in a fresh context, short code tests of
+interventions, inputs and baselines, and a check of every review point
+against the data before it is acted on. After correction, the attention
+scores, sparse-autoencoder features and traced circuits of MaxToki-217M
+did not beat gene-level baselines with the references used here. One
+pair-level signal remained. In RPE1 cells, symmetric attention beat
+rewired TRRUST networks that keep every gene's number of links, even
+after the gene-level features of both genes were removed ($p = 0.003$,
+not adjusted for multiple tests). Co-expression from the same cells
+carried a signal of about the same size. This signal did not replicate
+in K562 cells.
+
+\section*{Supporting information}
+
+\paragraph*{S1 Table.}
+\label{S1_Table}
+{\bf Error ledger.} The 149 confirmed errors in the deployment's code,
+logs, outputs, run summaries and audit reports, with location,
+confirming evidence, one primary type (with a note when more than one
+type applies), checklist pattern, severity, presence before the
+in-session audit, and who or what first found each one (CSV). For the errors
+found in the blind re-audits, the confirming code was not kept; their
+rows give the recomputed values.
+
+\paragraph*{S2 Appendix.}
+\label{S2_Appendix}
+{\bf Protocol of the controlled studies.} The pre-registered design,
+outcomes and analyses; the three amendments (the first logged after
+Study~C and before Studies~A and~B, the other two for the exploratory
+arm); the freeze log with file hashes; the generic and deployed
+checklists; the prompts sent to the agents; the Study~A task briefs,
+answer keys and grading rubrics; the Study~B items and detection rules;
+the Study~C reference set; and the exploratory arm with Claude Haiku~4.5
+as executor, reviewer and repairer.
+
+\paragraph*{S3 Appendix.}
+\label{S3_Appendix}
+{\bf Corrected MaxToki-217M analyses.} Methods, checks and full results
+of each corrected analysis. The key numbers of each corrected analysis
+were computed a second way with separate code. Other agents also
+re-derived them with their own code: three for the RPE1 attention
+analysis and one for the cross-model comparison.
+
+\section*{Acknowledgments}
+The author thanks the developers and maintainers of the public data
+resources and model releases on which this study depends.
+
+\nolinenumbers
+
+\bibliography{references}
+
+\end{document}

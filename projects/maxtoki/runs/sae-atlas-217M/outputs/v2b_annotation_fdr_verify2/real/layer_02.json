@@ -1,0 +1,108 @@
+{
+ "layer": 2,
+ "n_alive": 4928,
+ "N_universe": 6325,
+ "n_terms": 2377,
+ "n_tests": 11713856,
+ "A_deployed": 3503,
+ "A2_biosae": 3441,
+ "B_perfeature": 85,
+ "B_ge3": 44,
+ "B2_perfeature_ovl2": 3133,
+ "C_global": 8,
+ "Bu_perfeature": 85,
+ "Cu_global": 8,
+ "deployed_summary": {
+  "layer": 2,
+  "n_alive": 4928,
+  "n_annotated": 3503,
+  "annotation_rate": 0.7108,
+  "total_enrichments": 29566
+ },
+ "deployed_kept_tests": 36008,
+ "rows_mine": 29566,
+ "rows_deployed": 29566,
+ "rows_missing": 0,
+ "rows_extra": 0,
+ "max_abs_p_diff": 9.8879238130678e-17,
+ "overlap_col_match": true,
+ "n_col_match": true,
+ "K_col_match": true,
+ "N_col_match": true,
+ "max_abs_q_diff": 1.0061396160665481e-16,
+ "deployed_max_raw_p_sig": 0.0390821735587719,
+ "deployed_share_overlap2": 0.8262531285936549,
+ "B_rows": 770,
+ "B_rows_share_overlap2": 0.5142857142857142,
+ "B_rows_overlap2_full20": 396,
+ "B_rows_overlap2_short": 0,
+ "B_rows_overlap1": 0,
+ "B_rate": 0.017248376623376624,
+ "B_wilson": [
+  0.013971372151449953,
+  0.0212774208748902
+ ],
+ "A_rate": 0.710836038961039,
+ "A2_rate": 0.6982548701298701,
+ "B2_rate": 0.6357548701298701,
+ "list_sizes_lt20": 2,
+ "global_features": [
+  {
+   "feature_id": 361,
+   "n_terms_global": 14,
+   "n_terms_perfeature": 85,
+   "min_p": 1.6548826238001404e-10,
+   "best_term": "Reactome:Cell Cycle R-HSA-1640170"
+  },
+  {
+   "feature_id": 439,
+   "n_terms_global": 7,
+   "n_terms_perfeature": 9,
+   "min_p": 3.3038605049950645e-09,
+   "best_term": "GO_BP:Mitochondrial Translation (GO:0032543)"
+  },
+  {
+   "feature_id": 794,
+   "n_terms_global": 11,
+   "n_terms_perfeature": 54,
+   "min_p": 1.5785003189134685e-10,
+   "best_term": "GO_BP:Double-Strand Break Repair Via Homologous Recombination (GO:0000724)"
+  },
+  {
+   "feature_id": 834,
+   "n_terms_global": 1,
+   "n_terms_perfeature": 11,
+   "min_p": 9.070754370935267e-09,
+   "best_term": "KEGG:Vasopressin-regulated water reabsorption"
+  },
+  {
+   "feature_id": 1535,
+   "n_terms_global": 1,
+   "n_terms_perfeature": 8,
+   "min_p": 3.5405793285705414e-08,
+   "best_term": "GO_BP:Protein Transport (GO:0015031)"
+  },
+  {
+   "feature_id": 1620,
+   "n_terms_global": 1,
+   "n_terms_perfeature": 8,
+   "min_p": 9.90778403023514e-08,
+   "best_term": "GO_BP:Endoplasmic Reticulum To Golgi Vesicle-Mediated Transport (GO:0006888)"
+  },
+  {
+   "feature_id": 2229,
+   "n_terms_global": 6,
+   "n_terms_perfeature": 15,
+   "min_p": 7.867378346000875e-10,
+   "best_term": "Reactome:Metabolism Of Steroids R-HSA-8957322"
+  },
+  {
+   "feature_id": 3714,
+   "n_terms_global": 10,
+   "n_terms_perfeature": 12,
+   "min_p": 1.1355214317809423e-22,
+   "best_term": "Reactome:Mitochondrial Translation Termination R-HSA-5419276"
+  }
+ ],
+ "seconds": 4.8
+}

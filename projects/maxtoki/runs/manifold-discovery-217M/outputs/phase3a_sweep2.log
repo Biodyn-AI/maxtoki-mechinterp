@@ -1,0 +1,287 @@
+======================================================================
+PHASE 3a SWEEP #2 — ordinal-distance rulers (maturation chains)
+======================================================================
+
+--- H101_progenitor_to_terminal: Whole-hematopoiesis maturation depth (HSC=0 → terminal=6) ---
+  [H101_progenitor_to_terminal] trained 1500 epochs in 8.6s
+  [rand-holdout] trained 1500 epochs in 8.1s
+  [rand-holdout] trained 1500 epochs in 7.5s
+  [rand-holdout] trained 1500 epochs in 7.1s
+  [rand-holdout] trained 1500 epochs in 7.2s
+  [rand-holdout] trained 1500 epochs in 7.3s
+  [H101_progenitor_to_terminal-donor] groups: 11
+  [H101_progenitor_to_terminal-donor-TSP2] trained 1500 epochs in 3.0s
+  [H101_progenitor_to_terminal-donor-TSP20] trained 1500 epochs in 7.7s
+  [H101_progenitor_to_terminal-donor-TSP9] trained 1500 epochs in 8.0s
+  [H101_progenitor_to_terminal-donor-TSP4] trained 1500 epochs in 7.6s
+  [H101_progenitor_to_terminal-donor-TSP17] trained 1500 epochs in 7.9s
+  [H101_progenitor_to_terminal-donor-TSP5] trained 1500 epochs in 8.1s
+  [H101_progenitor_to_terminal-donor-TSP15] trained 1500 epochs in 8.0s
+  [H101_progenitor_to_terminal-donor-TSP28] trained 1500 epochs in 8.2s
+  [H101_progenitor_to_terminal-donor-TSP3] trained 1500 epochs in 8.3s
+  [H101_progenitor_to_terminal-depth] groups: 7
+  [H101_progenitor_to_terminal-depth-3] trained 1500 epochs in 7.9s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [H101_progenitor_to_terminal-depth-4] trained 1500 epochs in 3.0s
+  [H101_progenitor_to_terminal-depth-5] trained 1500 epochs in 7.4s
+  [H101_progenitor_to_terminal-depth-6] trained 1500 epochs in 8.0s
+  [H101_progenitor_to_terminal-depth-0] trained 1500 epochs in 8.2s
+  [H101_progenitor_to_terminal_null] trained 1500 epochs in 8.4s
+  [rand-holdout] trained 1500 epochs in 7.4s
+  [rand-holdout] trained 1500 epochs in 7.2s
+  [rand-holdout] trained 1500 epochs in 7.2s
+  [rand-holdout] trained 1500 epochs in 7.2s
+  [rand-holdout] trained 1500 epochs in 7.3s
+  [H101_progenitor_to_terminal-donor-null] groups: 11
+  [H101_progenitor_to_terminal-donor-null-TSP2] trained 1500 epochs in 2.9s
+  [H101_progenitor_to_terminal-donor-null-TSP20] trained 1500 epochs in 8.6s
+  [H101_progenitor_to_terminal-donor-null-TSP9] trained 1500 epochs in 8.5s
+  [H101_progenitor_to_terminal-donor-null-TSP4] trained 1500 epochs in 7.8s
+  [H101_progenitor_to_terminal-donor-null-TSP17] trained 1500 epochs in 8.2s
+  [H101_progenitor_to_terminal-donor-null-TSP5] trained 1500 epochs in 8.3s
+  [H101_progenitor_to_terminal-donor-null-TSP15] trained 1500 epochs in 8.1s
+  [H101_progenitor_to_terminal-donor-null-TSP28] trained 1500 epochs in 8.3s
+  [H101_progenitor_to_terminal-donor-null-TSP3] trained 1500 epochs in 8.0s
+  [H101_progenitor_to_terminal-depth-null] groups: 7
+  [H101_progenitor_to_terminal-depth-null-5] trained 1500 epochs in 7.3s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [H101_progenitor_to_terminal-depth-null-4] trained 1500 epochs in 3.2s
+  [H101_progenitor_to_terminal-depth-null-3] trained 1500 epochs in 7.9s
+  [H101_progenitor_to_terminal-depth-null-0] trained 1500 epochs in 8.2s
+  [H101_progenitor_to_terminal-depth-null-6] trained 1500 epochs in 8.1s
+  POS trust=0.764 rand=0.6690696040949284 donor=0.5899512403714544 depth=None
+  NULL trust=0.575 rand=0.018101342694612905 donor=0.01422490303894413 depth=None
+  VERDICT: INCONCLUSIVE  (296.3s)
+
+--- H102_T_cell_maturation: T-cell-only maturation: DN→DP→naive→memory→effector ---
+  [H102_T_cell_maturation] trained 1500 epochs in 3.4s
+  [rand-holdout] trained 1500 epochs in 2.9s
+  [rand-holdout] trained 1500 epochs in 2.7s
+  [rand-holdout] trained 1500 epochs in 2.7s
+  [rand-holdout] trained 1500 epochs in 2.8s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:162: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [rand-holdout] trained 1500 epochs in 2.7s
+  [H102_T_cell_maturation-donor] groups: 9
+  [H102_T_cell_maturation-donor-TSP20] trained 1500 epochs in 3.1s
+  [H102_T_cell_maturation-donor-TSP2] trained 1500 epochs in 1.8s
+  [H102_T_cell_maturation-donor-TSP4] trained 1500 epochs in 2.7s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [H102_T_cell_maturation-donor-TSP15] trained 1500 epochs in 3.3s
+  [H102_T_cell_maturation-depth] groups: 4
+  [H102_T_cell_maturation-depth-3] trained 1500 epochs in 0.8s
+  [H102_T_cell_maturation-depth-2] trained 1500 epochs in 3.3s
+  [H102_T_cell_maturation-depth-4] trained 1500 epochs in 3.2s
+  [H102_T_cell_maturation_null] trained 1500 epochs in 3.3s
+  [rand-holdout] trained 1500 epochs in 2.9s
+  [rand-holdout] trained 1500 epochs in 2.5s
+  [rand-holdout] trained 1500 epochs in 2.7s
+  [rand-holdout] trained 1500 epochs in 2.7s
+  [rand-holdout] trained 1500 epochs in 2.8s
+  [H102_T_cell_maturation-donor-null] groups: 9
+  [H102_T_cell_maturation-donor-null-TSP20] trained 1500 epochs in 3.1s
+  [H102_T_cell_maturation-donor-null-TSP2] trained 1500 epochs in 2.0s
+  [H102_T_cell_maturation-donor-null-TSP4] trained 1500 epochs in 2.8s
+  [H102_T_cell_maturation-donor-null-TSP15] trained 1500 epochs in 3.3s
+  [H102_T_cell_maturation-depth-null] groups: 4
+  [H102_T_cell_maturation-depth-null-3] trained 1500 epochs in 0.9s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [H102_T_cell_maturation-depth-null-4] trained 1500 epochs in 3.4s
+  [H102_T_cell_maturation-depth-null-2] trained 1500 epochs in 3.3s
+  POS trust=0.755 rand=None donor=0.46217534209005073 depth=None
+  NULL trust=0.774 rand=0.056174461952388254 donor=0.17104604093227002 depth=None
+  VERDICT: INCONCLUSIVE  (71.1s)
+
+--- H103_B_cell_maturation: B-cell-only maturation: transitional→naive→memory→class-switched→plasmablast→plasma ---
+  [H103_B_cell_maturation] trained 1500 epochs in 2.1s
+  [rand-holdout] trained 1500 epochs in 2.0s
+  [rand-holdout] trained 1500 epochs in 1.8s
+  [rand-holdout] trained 1500 epochs in 1.9s
+  [rand-holdout] trained 1500 epochs in 2.0s
+  [rand-holdout] trained 1500 epochs in 1.8s
+  [H103_B_cell_maturation-donor] groups: 7
+  [H103_B_cell_maturation-donor-TSP2] trained 1500 epochs in 1.6s
+  [H103_B_cell_maturation-donor-TSP20] trained 1500 epochs in 1.9s
+  [H103_B_cell_maturation-donor-TSP4] trained 1500 epochs in 1.9s
+  [H103_B_cell_maturation-depth] groups: 2
+  [H103_B_cell_maturation-depth-1] trained 1500 epochs in 1.5s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [H103_B_cell_maturation-depth-5] trained 1500 epochs in 1.9s
+  [H103_B_cell_maturation_null] trained 1500 epochs in 2.1s
+  [rand-holdout] trained 1500 epochs in 2.0s
+  [rand-holdout] trained 1500 epochs in 1.9s
+  [rand-holdout] trained 1500 epochs in 2.0s
+  [rand-holdout] trained 1500 epochs in 1.8s
+  [rand-holdout] trained 1500 epochs in 2.0s
+  [H103_B_cell_maturation-donor-null] groups: 7
+  [H103_B_cell_maturation-donor-null-TSP2] trained 1500 epochs in 1.5s
+  [H103_B_cell_maturation-donor-null-TSP20] trained 1500 epochs in 1.8s
+  [H103_B_cell_maturation-donor-null-TSP4] trained 1500 epochs in 2.0s
+  [H103_B_cell_maturation-depth-null] groups: 2
+  [H103_B_cell_maturation-depth-null-1] trained 1500 epochs in 1.7s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [H103_B_cell_maturation-depth-null-5] trained 1500 epochs in 1.9s
+  POS trust=0.860 rand=0.8609543262117892 donor=0.8607226240279782 depth=None
+  NULL trust=0.593 rand=-0.006797446504861082 donor=-0.0885580974853981 depth=None
+  VERDICT: POSITIVE_3GATE_FALLBACK  (41.1s)
+
+--- H104_mono_macro_axis: Classical mono → intermediate → non-classical → macrophage ---
+  [H104_mono_macro_axis] trained 1500 epochs in 2.6s
+  [rand-holdout] trained 1500 epochs in 2.4s
+  [rand-holdout] trained 1500 epochs in 2.2s
+  [rand-holdout] trained 1500 epochs in 2.3s
+  [rand-holdout] trained 1500 epochs in 2.2s
+  [rand-holdout] trained 1500 epochs in 2.3s
+  [H104_mono_macro_axis-donor] groups: 11
+  [H104_mono_macro_axis-donor-TSP2] trained 1500 epochs in 1.9s
+  [H104_mono_macro_axis-donor-TSP9] trained 1500 epochs in 2.5s
+  [H104_mono_macro_axis-donor-TSP4] trained 1500 epochs in 2.4s
+  [H104_mono_macro_axis-donor-TSP17] trained 1500 epochs in 2.4s
+  [H104_mono_macro_axis-donor-TSP5] trained 1500 epochs in 2.4s
+  [H104_mono_macro_axis-donor-TSP15] trained 1500 epochs in 2.5s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [H104_mono_macro_axis-depth] groups: 4
+  [H104_mono_macro_axis-depth-0] trained 1500 epochs in 2.2s
+  [H104_mono_macro_axis-depth-3] trained 1500 epochs in 1.8s
+  [H104_mono_macro_axis-depth-1] trained 1500 epochs in 2.4s
+  [H104_mono_macro_axis-depth-2] trained 1500 epochs in 2.4s
+  [H104_mono_macro_axis_null] trained 1500 epochs in 2.6s
+  [rand-holdout] trained 1500 epochs in 2.4s
+  [rand-holdout] trained 1500 epochs in 2.3s
+  [rand-holdout] trained 1500 epochs in 2.3s
+  [rand-holdout] trained 1500 epochs in 2.2s
+  [rand-holdout] trained 1500 epochs in 2.1s
+  [H104_mono_macro_axis-donor-null] groups: 11
+  [H104_mono_macro_axis-donor-null-TSP2] trained 1500 epochs in 1.9s
+  [H104_mono_macro_axis-donor-null-TSP9] trained 1500 epochs in 2.5s
+  [H104_mono_macro_axis-donor-null-TSP4] trained 1500 epochs in 2.4s
+  [H104_mono_macro_axis-donor-null-TSP17] trained 1500 epochs in 2.5s
+  [H104_mono_macro_axis-donor-null-TSP5] trained 1500 epochs in 2.5s
+  [H104_mono_macro_axis-donor-null-TSP15] trained 1500 epochs in 2.5s
+  [H104_mono_macro_axis-depth-null] groups: 4
+  [H104_mono_macro_axis-depth-null-3] trained 1500 epochs in 1.8s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [H104_mono_macro_axis-depth-null-2] trained 1500 epochs in 2.5s
+  [H104_mono_macro_axis-depth-null-0] trained 1500 epochs in 2.2s
+  [H104_mono_macro_axis-depth-null-1] trained 1500 epochs in 2.5s
+  POS trust=0.693 rand=0.5689510490534102 donor=0.508118942566447 depth=None
+  NULL trust=0.622 rand=-0.015697818762092308 donor=-0.11171732155357295 depth=None
+  VERDICT: INCONCLUSIVE  (74.2s)
+
+--- H105_myeloid_branches: Myeloid sub-branches as ordinal: prog→mono/macro→DC→granulocyte ---
+  [H105_myeloid_branches] trained 1500 epochs in 3.3s
+  [rand-holdout] trained 1500 epochs in 3.0s
+  [rand-holdout] trained 1500 epochs in 2.7s
+  [rand-holdout] trained 1500 epochs in 2.7s
+  [rand-holdout] trained 1500 epochs in 2.7s
+  [rand-holdout] trained 1500 epochs in 2.8s
+  [H105_myeloid_branches-donor] groups: 11
+  [H105_myeloid_branches-donor-TSP2] trained 1500 epochs in 1.9s
+  [H105_myeloid_branches-donor-TSP9] trained 1500 epochs in 3.2s
+  [H105_myeloid_branches-donor-TSP4] trained 1500 epochs in 3.0s
+  [H105_myeloid_branches-donor-TSP17] trained 1500 epochs in 3.2s
+  [H105_myeloid_branches-donor-TSP5] trained 1500 epochs in 3.2s
+  [H105_myeloid_branches-donor-TSP15] trained 1500 epochs in 3.3s
+  [H105_myeloid_branches-donor-TSP3] trained 1500 epochs in 3.2s
+  [H105_myeloid_branches-depth] groups: 5
+  [H105_myeloid_branches-depth-2] trained 1500 epochs in 2.4s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [H105_myeloid_branches-depth-3] trained 1500 epochs in 2.4s
+  [H105_myeloid_branches-depth-5] trained 1500 epochs in 2.7s
+  [H105_myeloid_branches-depth-4] trained 1500 epochs in 3.2s
+  [H105_myeloid_branches_null] trained 1500 epochs in 3.3s
+  [rand-holdout] trained 1500 epochs in 3.0s
+  [rand-holdout] trained 1500 epochs in 2.8s
+  [rand-holdout] trained 1500 epochs in 2.9s
+  [rand-holdout] trained 1500 epochs in 2.7s
+  [rand-holdout] trained 1500 epochs in 2.9s
+  [H105_myeloid_branches-donor-null] groups: 11
+  [H105_myeloid_branches-donor-null-TSP2] trained 1500 epochs in 2.0s
+  [H105_myeloid_branches-donor-null-TSP9] trained 1500 epochs in 3.3s
+  [H105_myeloid_branches-donor-null-TSP4] trained 1500 epochs in 3.0s
+  [H105_myeloid_branches-donor-null-TSP17] trained 1500 epochs in 3.3s
+  [H105_myeloid_branches-donor-null-TSP5] trained 1500 epochs in 3.3s
+  [H105_myeloid_branches-donor-null-TSP15] trained 1500 epochs in 3.3s
+  [H105_myeloid_branches-donor-null-TSP3] trained 1500 epochs in 3.3s
+  [H105_myeloid_branches-depth-null] groups: 5
+  [H105_myeloid_branches-depth-null-5] trained 1500 epochs in 2.7s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [H105_myeloid_branches-depth-null-3] trained 1500 epochs in 2.5s
+  [H105_myeloid_branches-depth-null-2] trained 1500 epochs in 2.5s
+  [H105_myeloid_branches-depth-null-4] trained 1500 epochs in 3.1s
+  POS trust=0.745 rand=0.7852233511586102 donor=0.8007135716980487 depth=None
+  NULL trust=0.619 rand=0.059878369849926796 donor=0.310549629903138 depth=None
+  VERDICT: INCONCLUSIVE  (98.5s)
+
+--- H106_proliferation_proxy: Cell-state proliferation proxy: naive(0)→activated(1)→effector(2)→cycling/progenitor(3-4)→post-mitotic(5) ---
+  [H106_proliferation_proxy] trained 1500 epochs in 8.5s
+  [rand-holdout] trained 1500 epochs in 7.5s
+  [rand-holdout] trained 1500 epochs in 7.4s
+  [rand-holdout] trained 1500 epochs in 7.4s
+  [rand-holdout] trained 1500 epochs in 7.5s
+  [rand-holdout] trained 1500 epochs in 7.4s
+  [H106_proliferation_proxy-donor] groups: 11
+  [H106_proliferation_proxy-donor-TSP2] trained 1500 epochs in 3.1s
+  [H106_proliferation_proxy-donor-TSP20] trained 1500 epochs in 8.1s
+  [H106_proliferation_proxy-donor-TSP9] trained 1500 epochs in 8.1s
+  [H106_proliferation_proxy-donor-TSP4] trained 1500 epochs in 7.6s
+  [H106_proliferation_proxy-donor-TSP17] trained 1500 epochs in 8.5s
+  [H106_proliferation_proxy-donor-TSP5] trained 1500 epochs in 8.5s
+  [H106_proliferation_proxy-donor-TSP15] trained 1500 epochs in 8.4s
+  [H106_proliferation_proxy-donor-TSP28] trained 1500 epochs in 8.4s
+  [H106_proliferation_proxy-donor-TSP3] trained 1500 epochs in 8.4s
+  [H106_proliferation_proxy-depth] groups: 6
+  [H106_proliferation_proxy-depth-1] trained 1500 epochs in 3.9s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [H106_proliferation_proxy-depth-2] trained 1500 epochs in 6.7s
+  [H106_proliferation_proxy-depth-0] trained 1500 epochs in 7.6s
+  [H106_proliferation_proxy-depth-5] trained 1500 epochs in 8.4s
+  [H106_proliferation_proxy-depth-3] trained 1500 epochs in 8.4s
+  [H106_proliferation_proxy_null] trained 1500 epochs in 8.4s
+  [rand-holdout] trained 1500 epochs in 7.7s
+  [rand-holdout] trained 1500 epochs in 7.2s
+  [rand-holdout] trained 1500 epochs in 7.3s
+  [rand-holdout] trained 1500 epochs in 7.4s
+  [rand-holdout] trained 1500 epochs in 7.4s
+  [H106_proliferation_proxy-donor-null] groups: 11
+  [H106_proliferation_proxy-donor-null-TSP2] trained 1500 epochs in 3.3s
+  [H106_proliferation_proxy-donor-null-TSP20] trained 1500 epochs in 8.2s
+  [H106_proliferation_proxy-donor-null-TSP9] trained 1500 epochs in 8.2s
+  [H106_proliferation_proxy-donor-null-TSP4] trained 1500 epochs in 8.0s
+  [H106_proliferation_proxy-donor-null-TSP17] trained 1500 epochs in 8.2s
+  [H106_proliferation_proxy-donor-null-TSP5] trained 1500 epochs in 8.5s
+  [H106_proliferation_proxy-donor-null-TSP15] trained 1500 epochs in 8.3s
+  [H106_proliferation_proxy-donor-null-TSP28] trained 1500 epochs in 8.2s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [H106_proliferation_proxy-donor-null-TSP3] trained 1500 epochs in 8.6s
+  [H106_proliferation_proxy-depth-null] groups: 6
+  [H106_proliferation_proxy-depth-null-2] trained 1500 epochs in 6.9s
+  [H106_proliferation_proxy-depth-null-0] trained 1500 epochs in 7.7s
+  [H106_proliferation_proxy-depth-null-1] trained 1500 epochs in 3.9s
+  [H106_proliferation_proxy-depth-null-3] trained 1500 epochs in 8.4s
+  [H106_proliferation_proxy-depth-null-5] trained 1500 epochs in 8.4s
+  POS trust=0.736 rand=0.6915201103165238 donor=0.7012789291243468 depth=None
+  NULL trust=0.613 rand=-0.008308594595939188 donor=0.04484722775505818 depth=None
+  VERDICT: INCONCLUSIVE  (300.3s)
+
+=== Sweep #2 SUMMARY ===
+H101_progenitor_to_terminal         INCONCLUSIVE                   trust=0.764/0.575
+H102_T_cell_maturation              INCONCLUSIVE                   trust=0.755/0.774
+H103_B_cell_maturation              POSITIVE_3GATE_FALLBACK        trust=0.860/0.593
+H104_mono_macro_axis                INCONCLUSIVE                   trust=0.693/0.622
+H105_myeloid_branches               INCONCLUSIVE                   trust=0.745/0.619
+H106_proliferation_proxy            INCONCLUSIVE                   trust=0.736/0.613
+
+Total time: 881.7s

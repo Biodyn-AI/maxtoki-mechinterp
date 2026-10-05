@@ -1,0 +1,59 @@
+======================================================================
+PHASE 1 — Trivial baselines (MaxToki primary layer L8)
+======================================================================
+
+[1] Loading Phase 0 artefacts...
+  edges shape: (11, 8, 1500, 1500)  primary layer: 8
+  gene_features: 1500
+  load: 0.3s
+
+[2] DE-calling against K562 non-targeting controls...
+  K562 cells: 188,590
+  K562 NT controls: 10,691
+  NT expression (HVG space): (5000, 1500)
+  perturbations with >= 30 K562 cells: 1383
+  evaluable perturbations after DE filter: 584  (124.8s)
+
+[3] Per-perturbation AUROCs...
+  saved per-perturbation AUROC table: (174, 11)
+
+[3b] Per-layer attention AUROC profile...
+ layer  mean_auroc  median_auroc  std_auroc  n_perts
+     0    0.539139      0.546374   0.111645      174
+     1    0.552866      0.556880   0.101472      174
+     2    0.546080      0.539613   0.095375      174
+     3    0.510717      0.518920   0.097041      174
+     4    0.525539      0.530951   0.100469      174
+     5    0.529365      0.538162   0.099380      174
+     6    0.523853      0.521071   0.099573      174
+     7    0.519026      0.522516   0.095671      174
+     8    0.511938      0.519913   0.096607      174
+     9    0.502766      0.516610   0.102377      174
+    10    0.536957      0.547416   0.098489      174
+
+[4] Paired Wilcoxon tests...
+              baseline              reference  n_valid  mean_auc_baseline  mean_auc_reference  mean_delta  median_delta  wilcoxon_W  wilcoxon_p_raw  wilcoxon_p_bh
+         gene_variance      attention_primary      174           0.595664            0.511938    0.083726      0.046595      3302.0    9.307480e-11   4.033241e-10
+         gene_variance attention_primary_norm      174           0.595664            0.511938    0.083726      0.046595      3302.0    9.307480e-11   4.033241e-10
+         gene_variance               spearman      174           0.595664            0.510252    0.085412      0.062467      2813.0    5.487067e-13   7.133188e-12
+        gene_mean_expr      attention_primary      174           0.560468            0.511938    0.048530      0.053746      3786.0    8.901219e-09   2.314317e-08
+        gene_mean_expr attention_primary_norm      174           0.560468            0.511938    0.048530      0.053746      3786.0    8.901219e-09   2.314317e-08
+        gene_mean_expr               spearman      174           0.560468            0.510252    0.050216      0.062069      4071.0    1.025521e-07   2.221963e-07
+gene_one_minus_dropout      attention_primary      174           0.548264            0.511938    0.036326      0.044167      4523.0    3.435859e-06   5.583271e-06
+gene_one_minus_dropout attention_primary_norm      174           0.548264            0.511938    0.036326      0.044167      4523.0    3.435859e-06   5.583271e-06
+gene_one_minus_dropout               spearman      174           0.548264            0.510252    0.038012      0.054000      4675.0    1.012646e-05   1.462711e-05
+    gene_tf_out_degree      attention_primary      174           0.499960            0.511938   -0.011978     -0.025643      5994.0    1.500448e-02   1.773256e-02
+    gene_tf_out_degree attention_primary_norm      174           0.499960            0.511938   -0.011978     -0.025643      5994.0    1.500448e-02   1.773256e-02
+    gene_tf_out_degree               spearman      174           0.499960            0.510252   -0.010292     -0.008475      6687.0    1.642754e-01   1.779650e-01
+     attention_primary               spearman      174           0.511938            0.510252    0.001686      0.008201      7354.0    6.976667e-01   6.976667e-01
+
+[5] Mean AUROC across evaluable perturbations:
+  gene_variance                  0.5957
+  gene_mean_expr                 0.5605
+  gene_one_minus_dropout         0.5483
+  attention_primary              0.5119
+  attention_primary_norm         0.5119
+  spearman                       0.5103
+  gene_tf_out_degree             0.5000
+
+PHASE 1 COMPLETE — outputs: <REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/phase1

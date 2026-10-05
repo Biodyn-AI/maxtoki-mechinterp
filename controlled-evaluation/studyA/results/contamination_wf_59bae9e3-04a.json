@@ -1,0 +1,584 @@
+{
+ "A:T2:paper:2:checklist:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cat \\\"<CODE_ROOT>/analysis-tasks/w3637/BRIEF.md\\\"; echo ======; cat \\\"<EVAL_ROOT>/studyA/keys/T2/key.json\\\"\", \"description\": \"Read the task brief and the answer key\"}"
+  },
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyA/keys/T2/key.json\\\"\", \"description\": \"Read the answer key\"}"
+  },
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"ls \\\"<EVAL_ROOT>/studyA/keys/T2/\\\"; ls \\\"<CODE_ROOT>/analysis-tasks/w3637/\\\" \\\"<CODE_ROOT>/analysis-tasks/w3637/data\\\"\", \"description\": \"List key and package directories\"}"
+  },
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cd \\\"<EVAL_ROOT>/studyA/keys/T2/\\\"; cat NOTES.md; echo =====; cat VERIFICATION.md | head -200\", \"description\": \"Read key notes and verification documents\"}"
+  },
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cd \\\"<EVAL_ROOT>/studyA/keys/T2/\\\"; \\\"<CODE_ROOT>/analysis-tasks/bin/python\\\" -c \\\"\\nimport json\\nd=json.load(open('reference_output.json'))\\nprint(list(d.keys()))\\nfor k,v in d.items():\\n    if isinstance(v,dict): print(k, list(v.keys()))\\nv=d.get('variants',{})\\nprint(json.dumps(v.get('target_baseline_alternatives'),in"
+  },
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cd \\\"<EVAL_ROOT>/studyA/keys/T2/\\\"; sed -n 60,110p NOTES.md; echo; echo ---------VERIF; wc -l VERIFICATION.md\", \"description\": \"Read truncated portion of notes\"}"
+  },
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cd \\\"<EVAL_ROOT>/studyA/keys/T2/\\\"; \\\"<CODE_ROOT>/analysis-tasks/bin/python\\\" -c \\\"\\nimport json\\nd=json.load(open('reference_output.json'))\\nm=d['main']\\nfor k in ['pooled','bootstrap_by_component','bootstrap_by_silenced_gene','pair_level_naive','per_gene']:\\n    print(k, json.dumps(m[k])[:2500]); print()\\nw=d['within']"
+  }
+ ],
+ "A:T2:contract:5:review-generic": [],
+ "A:T2:contract:5:exec": [],
+ "A:T2:contract:1:repair-generic": [],
+ "A:T2:contract:2:rgrade-generic": [
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cat \\\"<CODE_ROOT>/analysis-tasks/w3318/BRIEF.md\\\"; echo ----; cat \\\"<EVAL_ROOT>/studyA/keys/T2/key.json\\\"; ls -la \\\"<CODE_ROOT>/analysis-tasks/w3318\\\" \\\"<CODE_ROOT>/analysis-tasks/w3318/data\\\"\", \"description\": \"Read brief, answer key, and list package\"}"
+  }
+ ],
+ "A:T2:paper:1:rgrade-generic": [],
+ "A:T2:contract:5:generic:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyA/keys/T2/key.json\\\"; echo ----; cat \\\"<CODE_ROOT>/analysis-tasks/w3318/BRIEF.md\\\"; ls -la \\\"<CODE_ROOT>/analysis-tasks/w3318/\\\" \\\"<CODE_ROOT>/analysis-tasks/w3318/data\\\"\", \"description\": \"Read answer key and task brief\"}"
+  },
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cd \\\"<EVAL_ROOT>/studyA/keys/T2\\\" && ls; \\\"<CODE_ROOT>/analysis-tasks/bin/python\\\" -c \\\"\\nimport json; r=json.load(open('reference_output.json'))\\nv=r.get('variants',{}); print(json.dumps(v.get('target_baseline_alternatives'),indent=0)[:1500])\\n\\\"\", \"description\": \"Check reference target baseline alternatives\"}"
+  }
+ ],
+ "A:T2:contract:5:none:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cat \\\"<CODE_ROOT>/analysis-tasks/w3318/BRIEF.md\\\"; echo ----; cat \\\"<EVAL_ROOT>/studyA/keys/T2/key.json\\\"; ls \\\"<CODE_ROOT>/analysis-tasks/w3318\\\" \\\"<CODE_ROOT>/analysis-tasks/w3318/data\\\"\", \"description\": \"Read brief, key, and list package files\"}"
+  }
+ ],
+ "A:T2:paper:1:review-generic": [],
+ "A:T2:paper:3:review-checklist": [],
+ "A:T2:contract:4:repair-checklist": [],
+ "A:T2:contract:5:repair-generic": [],
+ "A:T2:contract:2:checklist:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyA/keys/T2/key.json\\\"; echo; echo ----; cat \\\"<CODE_ROOT>/analysis-tasks/w3318/BRIEF.md\\\"; ls -la \\\"<CODE_ROOT>/analysis-tasks/w3318/\\\" \\\"<CODE_ROOT>/analysis-tasks/w3318/data\\\"\", \"description\": \"Read answer key, brief, and list package\"}"
+  },
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cd \\\"<CODE_ROOT>/analysis-tasks/w3318\\\" && grep -n -i -E \\\"60%|0\\\\.1|benchmark|meaningful|Phase 11|pitfall 14\\\" contract/SPEC.md | head -40; ls \\\"<EVAL_ROOT>/studyA/keys/T2/\\\"\", \"description\": \"Check spec benchmark text and key folder\"}"
+  },
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cd \\\"<EVAL_ROOT>/studyA/keys/T2\\\" && \\\"<CODE_ROOT>/analysis-tasks/bin/python\\\" -c \\\"\\nimport json;d=json.load(open('reference_output.json'))\\nv=d.get('variants',{})\\nprint(json.dumps(v.get('target_baseline_alternatives'),indent=0)[:2500])\\nprint(list(v.keys()))\\n\\\"\", \"description\": \"Inspect reference target-baseline alte"
+  }
+ ],
+ "A:T2:paper:2:repair-generic": [],
+ "A:T2:paper:2:review-checklist": [],
+ "A:T2:paper:3:rgrade-generic": [],
+ "A:T2:contract:3:rgrade-generic": [],
+ "A:T2:paper:2:none:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyA/keys/T2/key.json\\\"; echo; echo ----; cat \\\"<CODE_ROOT>/analysis-tasks/w3637/BRIEF.md\\\"; ls -la \\\"<CODE_ROOT>/analysis-tasks/w3637/\\\" \\\"<CODE_ROOT>/analysis-tasks/w3637/data\\\"\", \"description\": \"Read answer key, brief, and list package\"}"
+  }
+ ],
+ "A:T2:paper:5:rgrade-generic": [
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"ls -la \\\"<CODE_ROOT>/analysis-tasks/w3637\\\" \\\"<CODE_ROOT>/analysis-tasks/w3637/data\\\"; cat \\\"<CODE_ROOT>/analysis-tasks/w3637/BRIEF.md\\\"; cat \\\"<EVAL_ROOT>/studyA/keys/T2/key.json\\\"\", \"description\": \"List task files and read brief and key\"}"
+  }
+ ],
+ "A:T2:contract:3:repair-generic": [],
+ "A:T2:contract:2:repair-generic": [],
+ "A:T2:paper:4:rgrade-checklist": [],
+ "A:T2:paper:4:rgrade-generic": [],
+ "A:T2:contract:2:none:grade3": [],
+ "A:T2:paper:5:generic:grade3": [],
+ "A:T2:contract:5:repair-checklist": [],
+ "A:T2:contract:1:rgrade-generic": [
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cat \\\"<CODE_ROOT>/analysis-tasks/w3318/BRIEF.md\\\"; echo ----; cat \\\"<EVAL_ROOT>/studyA/keys/T2/key.json\\\"; ls -la \\\"<CODE_ROOT>/analysis-tasks/w3318\\\" \\\"<CODE_ROOT>/analysis-tasks/w3318/data\\\"\", \"description\": \"Read brief, answer key, and list package files\"}"
+  }
+ ],
+ "A:T2:contract:2:repair-checklist": [],
+ "A:T2:contract:2:none:grade1": [],
+ "A:T2:paper:4:checklist:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyA/keys/T2/key.json\\\"; echo ----; cat \\\"<CODE_ROOT>/analysis-tasks/w3637/BRIEF.md\\\"; ls \\\"<CODE_ROOT>/analysis-tasks/w3637/\\\"\", \"description\": \"Read answer key and task brief\"}"
+  }
+ ],
+ "A:T2:paper:3:repair-checklist": [],
+ "A:T2:paper:2:checklist:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cat \\\"<CODE_ROOT>/analysis-tasks/w3637/BRIEF.md\\\"; echo ----; cat \\\"<EVAL_ROOT>/studyA/keys/T2/key.json\\\"\", \"description\": \"Read task brief and answer key\"}"
+  },
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"ls -la \\\"<EVAL_ROOT>/studyA/keys/T2/\\\"; ls \\\"<CODE_ROOT>/analysis-tasks/w3637/\\\" \\\"<CODE_ROOT>/analysis-tasks/w3637/data\\\"\", \"description\": \"List key and package directories\"}"
+  },
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cd \\\"<EVAL_ROOT>/studyA/keys/T2/\\\" && <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/bin/python -c \\\"\\nimport json\\nr=json.load(open('reference_output.json'))\\nprint(list(r.keys()))\\nfor k,v in r.items():\\n    if isinstance(v,dict): print(k, list(v.keys())[:60])\\nv=r.get('variants',{})\\nprint(json.dumps(v.get('target_baseline_alternatives"
+  },
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cd \\\"<EVAL_ROOT>/studyA/keys/T2/\\\" && <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/bin/python -c \\\"\\nimport json\\nr=json.load(open('reference_output.json'))\\nm=r['main']\\nfor k in ['file_facts','rebuild_check','pooled','bootstrap_by_component','bootstrap_by_silenced_gene','per_gene','pair_level_naive']:\\n    print(k, json.dumps(m[k])[:2"
+  }
+ ],
+ "A:T2:contract:1:review-generic": [],
+ "A:T2:paper:5:none:grade2": [],
+ "A:T2:paper:3:repair-generic": [],
+ "A:T2:paper:5:repair-generic": [],
+ "A:T2:contract:1:none:grade2": [],
+ "A:T2:paper:5:generic:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cat \\\"<CODE_ROOT>/analysis-tasks/w3637/BRIEF.md\\\"; echo ----; cat \\\"<EVAL_ROOT>/studyA/keys/T2/key.json\\\"\", \"description\": \"Read task brief and answer key\"}"
+  },
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"ls \\\"<CODE_ROOT>/analysis-tasks/w3637/\\\" \\\"<CODE_ROOT>/analysis-tasks/w3637/data\\\" \\\"<CODE_ROOT>/analysis-tasks/w3637/methods\\\"; ls \\\"<EVAL_ROOT>/studyA/keys/T2/\\\"; grep -n -i -E \\\"evidence|max_abs_d|keep|essential|proliferat\\\" \\\"<CODE_ROOT>/analysis-tasks/w3"
+  },
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cd \\\"<EVAL_ROOT>/studyA/keys/T2/\\\" && grep -n -E \\\"56\\\\.4|57\\\\.3|consensus\\\" NOTES.md VERIFICATION.md | head -20; which pdftotext; \\\"<CODE_ROOT>/analysis-tasks/bin/python\\\" -c \\\"import pypdf\\\" 2>&1 | head -1\", \"description\": \"Search notes for source paper accuracy figures\"}"
+  },
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cd \\\"<EVAL_ROOT>/studyA/keys/T2/\\\" && \\\"<CODE_ROOT>/analysis-tasks/bin/python\\\" - <<'EOF'\\nimport json\\nr=json.load(open(\\\"reference_output.json\\\"))\\ndef walk(d,p=\\\"\\\"):\\n    if isinstance(d,dict):\\n        for k,v in d.items(): walk(v,p+\\\"/\\\"+k)\\n    elif isinstance(d,list): pass\\n    else:\\n        if any(s in p.lower("
+  }
+ ],
+ "A:T2:paper:4:checklist:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cat \\\"<CODE_ROOT>/analysis-tasks/w3637/BRIEF.md\\\"; echo ----; cat \\\"<EVAL_ROOT>/studyA/keys/T2/key.json\\\"\", \"description\": \"Read task brief and answer key\"}"
+  },
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cd \\\"<CODE_ROOT>/analysis-tasks/w3637\\\" && ls -la . data methods 2>/dev/null; ls \\\"<EVAL_ROOT>/studyA/keys/T2/\\\"\", \"description\": \"List package and key folder contents\"}"
+  },
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cd \\\"<EVAL_ROOT>/studyA/keys/T2\\\" && wc -c NOTES.md VERIFICATION.md reference_output.json; grep -n -i -E \\\"mismatch|permut|between|max.?t|family|0\\\\.45|subset\\\" NOTES.md VERIFICATION.md | head -60\", \"description\": \"Search key notes for permutation and subset details\"}"
+  }
+ ],
+ "A:T2:contract:4:review-generic": [],
+ "A:T2:contract:5:rgrade-checklist": [],
+ "A:T2:paper:4:none:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cat \\\"<CODE_ROOT>/analysis-tasks/w3637/BRIEF.md\\\"; echo ----; cat \\\"<EVAL_ROOT>/studyA/keys/T2/key.json\\\"\", \"description\": \"Read task brief and answer key\"}"
+  }
+ ],
+ "A:T2:paper:4:repair-checklist": [],
+ "A:T2:contract:2:generic:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cat \\\"<CODE_ROOT>/analysis-tasks/w3318/BRIEF.md\\\"; echo ----; cat \\\"<EVAL_ROOT>/studyA/keys/T2/key.json\\\"\", \"description\": \"Read the task brief and answer key\"}"
+  },
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"ls -la \\\"<CODE_ROOT>/analysis-tasks/w3318/\\\" \\\"<CODE_ROOT>/analysis-tasks/w3318/data\\\" \\\"<CODE_ROOT>/analysis-tasks/w3318/contract\\\" 2>&1; ls \\\"<EVAL_ROOT>/studyA/keys/T2/\\\"\", \"description\": \"List package and key folder contents\"}"
+  }
+ ],
+ "A:T2:paper:2:rgrade-checklist": [
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"ls -la \\\"<CODE_ROOT>/analysis-tasks/w3637\\\" \\\"<CODE_ROOT>/analysis-tasks/w3637/data\\\"; cat \\\"<CODE_ROOT>/analysis-tasks/w3637/BRIEF.md\\\"; cat \\\"<EVAL_ROOT>/studyA/keys/T2/key.json\\\"\", \"description\": \"List task files and read brief and key\"}"
+  }
+ ],
+ "A:T2:contract:1:generic:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cat \\\"<CODE_ROOT>/analysis-tasks/w3318/BRIEF.md\\\"; echo ----; cat \\\"<EVAL_ROOT>/studyA/keys/T2/key.json\\\"; ls \\\"<CODE_ROOT>/analysis-tasks/w3318\\\" \\\"<CODE_ROOT>/analysis-tasks/w3318/data\\\"\", \"description\": \"Read brief, key, and list package\"}"
+  },
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cd \\\"<EVAL_ROOT>/studyA/keys/T2\\\"; ls; python3 -c 'import json;d=json.load(open(\\\"reference_output.json\\\"));print(list(d.keys()));print(json.dumps(d,indent=0)[:200])' 2>/dev/null\", \"description\": \"List key folder and reference output\"}"
+  },
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cd \\\"<EVAL_ROOT>/studyA/keys/T2\\\"; python3 -c '\\nimport json;d=json.load(open(\\\"reference_output.json\\\"))\\nm=d[\\\"main\\\"]\\nprint(json.dumps(m.get(\\\"file_facts\\\"),indent=0)[:3000])\\nprint(list(m.keys()))\\nprint(list(d[\\\"within\\\"].keys()))\\nprint(list(d[\\\"variants\\\"].keys()))\\n'\", \"description\": \"Inspect reference output structure\"}"
+  },
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cd \\\"<EVAL_ROOT>/studyA/keys/T2\\\"; python3 -c '\\nimport json;d=json.load(open(\\\"reference_output.json\\\"))\\nm=d[\\\"main\\\"]\\nfor k in [\\\"magnitude_spearman_abs_lfc_vs_max_abs_d\\\",\\\"auroc\\\",\\\"baselines\\\",\\\"bootstrap_by_component\\\"]:\\n  print(k, json.dumps(m[k])[:1500])\\nprint(json.dumps(d[\\\"variants\\\"][\\\"on_target_lfc\\\"])[:800])\\nprint(json.dump"
+  }
+ ],
+ "A:T2:paper:1:repair-generic": [],
+ "A:T2:contract:2:checklist:grade3": [],
+ "A:T2:paper:1:repair-checklist": [],
+ "A:T2:paper:5:checklist:grade1": [],
+ "A:T2:contract:4:generic:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyA/keys/T2/key.json\\\"; echo; echo ======; cat \\\"<CODE_ROOT>/analysis-tasks/w3318/BRIEF.md\\\"; ls -la \\\"<CODE_ROOT>/analysis-tasks/w3318/\\\" \\\"<CODE_ROOT>/analysis-tasks/w3318/data\\\"\", \"description\": \"Read answer key, brief, and list package files\"}"
+  },
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cd \\\"<EVAL_ROOT>/studyA/keys/T2/\\\" && \\\"<CODE_ROOT>/analysis-tasks/bin/python\\\" -c \\\"\\nimport json\\nk=json.load(open('key.json'))\\nfor kn in k['key_numbers']:\\n    print(json.dumps(kn))\\n\\\"\", \"description\": \"Print key numbers from the answer key\"}"
+  },
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cd \\\"<EVAL_ROOT>/studyA/keys/T2/\\\" && \\\"<CODE_ROOT>/analysis-tasks/bin/python\\\" -c \\\"\\nimport json\\nk=json.load(open('key.json'))\\nfor t in k['traps']:\\n    print(json.dumps(t)); print()\\n\\\"\", \"description\": \"Print traps from the answer key\"}"
+  }
+ ],
+ "A:T2:contract:4:review-checklist": [],
+ "A:T2:contract:3:none:grade2": [],
+ "A:T2:paper:2:none:grade3": [],
+ "A:T2:contract:1:none:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cat \\\"<CODE_ROOT>/analysis-tasks/w3318/BRIEF.md\\\"; echo ----; cat \\\"<EVAL_ROOT>/studyA/keys/T2/key.json\\\"; ls \\\"<CODE_ROOT>/analysis-tasks/w3318\\\" \\\"<CODE_ROOT>/analysis-tasks/w3318/data\\\"\", \"description\": \"Read brief and answer key\"}"
+  }
+ ],
+ "A:T2:contract:4:none:grade3": [],
+ "A:T2:contract:2:checklist:grade1": [],
+ "A:T2:contract:4:rgrade-generic": [
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cat \\\"<CODE_ROOT>/analysis-tasks/w3318/BRIEF.md\\\"; ls -la \\\"<CODE_ROOT>/analysis-tasks/w3318\\\" \\\"<CODE_ROOT>/analysis-tasks/w3318/data\\\"; cat \\\"<EVAL_ROOT>/studyA/keys/T2/key.json\\\"\", \"description\": \"Read brief, list package, read answer key\"}"
+  }
+ ],
+ "A:T2:paper:4:repair-generic": [],
+ "A:T2:paper:2:review-generic": [],
+ "A:T2:contract:4:rgrade-checklist": [
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cat \\\"<CODE_ROOT>/analysis-tasks/w3318/BRIEF.md\\\"; echo ----; cat \\\"<EVAL_ROOT>/studyA/keys/T2/key.json\\\"; ls -la \\\"<CODE_ROOT>/analysis-tasks/w3318\\\" \\\"<CODE_ROOT>/analysis-tasks/w3318/data\\\"\", \"description\": \"Read brief, answer key, and list task files\"}"
+  }
+ ],
+ "A:T2:paper:1:exec": [],
+ "A:T2:contract:2:generic:grade3": [],
+ "A:T2:contract:3:review-checklist": [],
+ "A:T2:contract:2:exec": [],
+ "A:T2:contract:2:generic:grade1": [],
+ "A:T2:paper:3:generic:grade2": [],
+ "A:T2:contract:5:none:grade3": [],
+ "A:T2:paper:4:exec": [],
+ "A:T2:paper:1:none:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cat \\\"<CODE_ROOT>/analysis-tasks/w3637/BRIEF.md\\\"; echo ----; cat \\\"<EVAL_ROOT>/studyA/keys/T2/key.json\\\"; echo; ls -la \\\"<CODE_ROOT>/analysis-tasks/w3637/\\\" \\\"<CODE_ROOT>/analysis-tasks/w3637/data\\\"\", \"description\": \"Read brief, answer key, and list package files\"}"
+  },
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"ls \\\"<EVAL_ROOT>/studyA/keys/T2/\\\"; cd \\\"<EVAL_ROOT>/studyA/keys/T2/\\\" && \\\"<CODE_ROOT>/analysis-tasks/bin/python\\\" -c \\\"\\nimport json\\nd=json.load(open('reference_output.json'))\\nprint(d.keys())\\nv=d.get('variants',{})\\nprint(v.keys() if isinstance(v,dict) else type(v))\\nfor x"
+  },
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cd \\\"<EVAL_ROOT>/studyA/keys/T2/\\\" && \\\"<CODE_ROOT>/analysis-tasks/bin/python\\\" -c \\\"\\nimport json\\nd=json.load(open('reference_output.json'))\\nv=d['variants']['variants']\\nprint(type(v))\\nif isinstance(v,dict):\\n    for k,x in v.items():\\n        if 'site' in k or 'layer' in k:\\n            print(k, {kk:x[kk] for kk in "
+  }
+ ],
+ "A:T2:paper:5:generic:grade2": [],
+ "A:T2:contract:5:checklist:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyA/keys/T2/key.json\\\"; echo ----; cat \\\"<CODE_ROOT>/analysis-tasks/w3318/BRIEF.md\\\"; ls -la \\\"<CODE_ROOT>/analysis-tasks/w3318/\\\" \\\"<CODE_ROOT>/analysis-tasks/w3318/data\\\"\", \"description\": \"Read answer key and task brief\"}"
+  }
+ ],
+ "A:T2:paper:3:rgrade-checklist": [
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cat \\\"<CODE_ROOT>/analysis-tasks/w3637/BRIEF.md\\\"; echo ----; cat \\\"<EVAL_ROOT>/studyA/keys/T2/key.json\\\"; ls \\\"<CODE_ROOT>/analysis-tasks/w3637\\\" \\\"<CODE_ROOT>/analysis-tasks/w3637/data\\\"\", \"description\": \"Read brief, answer key, and list package\"}"
+  }
+ ],
+ "A:T2:paper:3:generic:grade1": [],
+ "A:T2:contract:4:checklist:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cat \\\"<CODE_ROOT>/analysis-tasks/w3318/BRIEF.md\\\"; echo ----; cat \\\"<EVAL_ROOT>/studyA/keys/T2/key.json\\\"\", \"description\": \"Read the task brief and answer key\"}"
+  }
+ ],
+ "A:T2:paper:4:review-checklist": [],
+ "A:T2:paper:5:review-generic": [],
+ "A:T2:contract:1:review-checklist": [],
+ "A:T2:paper:1:generic:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cat \\\"<CODE_ROOT>/analysis-tasks/w3637/BRIEF.md\\\"; echo ----; cat \\\"<EVAL_ROOT>/studyA/keys/T2/key.json\\\"; ls \\\"<CODE_ROOT>/analysis-tasks/w3637\\\" \\\"<CODE_ROOT>/analysis-tasks/w3637/data\\\"\", \"description\": \"Read brief, answer key, and list package files\"}"
+  },
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cd \\\"<CODE_ROOT>/analysis-tasks/w3637\\\" && sed -n 1,200p data/README.md | head -150; ls methods; ls \\\"<EVAL_ROOT>/studyA/keys/T2/\\\"\", \"description\": \"Read data README and list key folder\"}"
+  }
+ ],
+ "A:T2:paper:1:review-checklist": [],
+ "A:T2:contract:3:repair-checklist": [],
+ "A:T2:contract:4:exec": [],
+ "A:T2:contract:4:generic:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cat \\\"<CODE_ROOT>/analysis-tasks/w3318/BRIEF.md\\\"; echo ----; cat \\\"<EVAL_ROOT>/studyA/keys/T2/key.json\\\"\", \"description\": \"Read the task brief and answer key\"}"
+  }
+ ],
+ "A:T2:contract:5:review-checklist": [],
+ "A:T2:paper:3:none:grade1": [],
+ "A:T2:contract:3:generic:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cat \\\"<CODE_ROOT>/analysis-tasks/w3318/BRIEF.md\\\"; echo ------; cat \\\"<EVAL_ROOT>/studyA/keys/T2/key.json\\\"; ls \\\"<CODE_ROOT>/analysis-tasks/w3318\\\" \\\"<CODE_ROOT>/analysis-tasks/w3318/data\\\"\", \"description\": \"Read brief, answer key, and list package\"}"
+  }
+ ],
+ "A:T2:contract:2:review-checklist": [],
+ "A:T2:contract:4:none:grade1": [],
+ "A:T2:contract:1:exec": [],
+ "A:T2:contract:2:review-generic": [],
+ "A:T2:contract:5:none:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cat \\\"<CODE_ROOT>/analysis-tasks/w3318/BRIEF.md\\\"; echo ----; cat \\\"<EVAL_ROOT>/studyA/keys/T2/key.json\\\"; echo; ls -la \\\"<CODE_ROOT>/analysis-tasks/w3318/\\\" \\\"<CODE_ROOT>/analysis-tasks/w3318/data\\\"\", \"description\": \"Read brief, answer key, and list package files\"}"
+  }
+ ],
+ "A:T2:contract:5:rgrade-generic": [],
+ "A:T2:paper:5:review-checklist": [],
+ "A:T2:paper:3:generic:grade3": [],
+ "A:T2:paper:3:none:grade2": [],
+ "A:T2:contract:1:repair-checklist": [],
+ "A:T2:contract:2:rgrade-checklist": [
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"ls -la \\\"<CODE_ROOT>/analysis-tasks/w3318\\\" \\\"<CODE_ROOT>/analysis-tasks/w3318/data\\\"; cat \\\"<CODE_ROOT>/analysis-tasks/w3318/BRIEF.md\\\"; cat \\\"<EVAL_ROOT>/studyA/keys/T2/key.json\\\"\", \"description\": \"List task files, read brief and answer key\"}"
+  },
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"python3 -c \\\"\\nimport json\\nk=json.load(open('<EVAL_ROOT>/studyA/keys/T2/key.json'))\\nprint(json.dumps(k,indent=1)[:20000])\\n\\\"\", \"description\": \"Pretty-print answer key\"}"
+  },
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"python3 -c \\\"\\nimport json\\nk=json.load(open('<EVAL_ROOT>/studyA/keys/T2/key.json'))\\ns=json.dumps(k,indent=1); print(s[20000:])\\n\\\"; ls \\\"<CODE_ROOT>/analysis-tasks/w3318/contract\\\"\", \"description\": \"Print remainder of answer key\"}"
+  }
+ ],
+ "A:T2:paper:2:repair-checklist": [],
+ "A:T2:contract:3:checklist:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cat \\\"<CODE_ROOT>/analysis-tasks/w3318/BRIEF.md\\\"; echo ----; cat \\\"<EVAL_ROOT>/studyA/keys/T2/key.json\\\"; echo; ls -la \\\"<CODE_ROOT>/analysis-tasks/w3318/\\\" \\\"<CODE_ROOT>/analysis-tasks/w3318/data\\\"\", \"description\": \"Read brief, answer key and list package\"}"
+  }
+ ],
+ "A:T2:contract:4:repair-generic": [],
+ "A:T2:paper:1:checklist:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyA/keys/T2/key.json\\\"; echo ----; cat \\\"<CODE_ROOT>/analysis-tasks/w3637/BRIEF.md\\\"; ls \\\"<CODE_ROOT>/analysis-tasks/w3637/\\\" \\\"<CODE_ROOT>/analysis-tasks/w3637/data\\\"\", \"description\": \"Read answer key, brief, and list package files\"}"
+  }
+ ],
+ "A:T2:paper:1:none:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyA/keys/T2/key.json\\\"; echo ----; cat \\\"<CODE_ROOT>/analysis-tasks/w3637/BRIEF.md\\\"; ls -la \\\"<CODE_ROOT>/analysis-tasks/w3637\\\" \\\"<CODE_ROOT>/analysis-tasks/w3637/data\\\"\", \"description\": \"Read answer key, brief, and list package contents\"}"
+  },
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"ls -la \\\"<EVAL_ROOT>/studyA/keys/T2/\\\"; cat \\\"<CODE_ROOT>/analysis-tasks/w3637/data/README.md\\\"; head -5 \\\"<CODE_ROOT>/analysis-tasks/w3637/data/source_features.tsv\\\"\", \"description\": \"List key folder and read data README\"}"
+  }
+ ],
+ "A:T2:paper:2:none:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cat \\\"<CODE_ROOT>/analysis-tasks/w3637/BRIEF.md\\\"; echo ----; cat \\\"<EVAL_ROOT>/studyA/keys/T2/key.json\\\"; echo; ls -la \\\"<CODE_ROOT>/analysis-tasks/w3637/\\\" \\\"<CODE_ROOT>/analysis-tasks/w3637/data\\\"\", \"description\": \"Read brief, key, and list package\"}"
+  },
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cat \\\"<CODE_ROOT>/analysis-tasks/w3637/data/README.md\\\"; ls \\\"<EVAL_ROOT>/studyA/keys/T2/\\\"\", \"description\": \"Read data README and list key folder\"}"
+  },
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cd \\\"<EVAL_ROOT>/studyA/keys/T2\\\" && \\\"<CODE_ROOT>/analysis-tasks/bin/python\\\" -c '\\nimport json\\nr=json.load(open(\\\"reference_output.json\\\"))\\ndef walk(o,p=\\\"\\\",d=0):\\n    if d>2: return\\n    if isinstance(o,dict):\\n        for k,v in o.items():\\n            print(p+\\\"/\\\"+k, type(v).__name__, (len(v) if hasattr(v,\\\"__le"
+  },
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cd \\\"<EVAL_ROOT>/studyA/keys/T2\\\" && \\\"<CODE_ROOT>/analysis-tasks/bin/python\\\" -c '\\nimport json\\nr=json.load(open(\\\"reference_output.json\\\"))\\nv=r[\\\"variants\\\"]\\nprint(list(v.keys()))\\nvv=v[\\\"variants\\\"]\\nif isinstance(vv,dict):\\n  for k,x in vv.items():\\n    if \\\"site\\\" in k: print(k, {kk:x[kk] for kk in x if not isins"
+  }
+ ],
+ "A:T2:paper:3:exec": [],
+ "A:T2:contract:3:none:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cat \\\"<CODE_ROOT>/analysis-tasks/w3318/BRIEF.md\\\"; echo ----; cat \\\"<EVAL_ROOT>/studyA/keys/T2/key.json\\\"; ls -la \\\"<CODE_ROOT>/analysis-tasks/w3318/\\\" \\\"<CODE_ROOT>/analysis-tasks/w3318/data\\\"\", \"description\": \"Read brief, answer key, and list package data\"}"
+  }
+ ],
+ "A:T2:contract:2:none:grade2": [],
+ "A:T2:contract:1:rgrade-checklist": [
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"ls -la \\\"<CODE_ROOT>/analysis-tasks/w3318\\\" \\\"<CODE_ROOT>/analysis-tasks/w3318/data\\\"; cat \\\"<CODE_ROOT>/analysis-tasks/w3318/BRIEF.md\\\"; cat \\\"<EVAL_ROOT>/studyA/keys/T2/key.json\\\"\", \"description\": \"List task files and read brief and key\"}"
+  }
+ ],
+ "A:T2:contract:3:generic:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cat \\\"<CODE_ROOT>/analysis-tasks/w3318/BRIEF.md\\\"; echo ----; cat \\\"<EVAL_ROOT>/studyA/keys/T2/key.json\\\"\", \"description\": \"Read task brief and answer key\"}"
+  },
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"ls \\\"<CODE_ROOT>/analysis-tasks/w3318/\\\" \\\"<CODE_ROOT>/analysis-tasks/w3318/data\\\" \\\"<CODE_ROOT>/analysis-tasks/w3318/contract\\\" 2>&1; ls \\\"<EVAL_ROOT>/studyA/keys/T2/\\\"\", \"description\": \"List package and key directories\"}"
+  },
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cd \\\"<EVAL_ROOT>/studyA/keys/T2/\\\" && \\\"<CODE_ROOT>/analysis-tasks/bin/python\\\" -c \\\"\\nimport json\\nd=json.load(open('reference_output.json'))\\ndef walk(o,p=''):\\n  if isinstance(o,dict):\\n    for k,v in o.items(): walk(v,p+'.'+k)\\n  elif isinstance(o,list) and len(o)<6 and all(not isinstance(x,(dict,list)) for x in o): "
+  },
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cd \\\"<EVAL_ROOT>/studyA/keys/T2/\\\" && \\\"<CODE_ROOT>/analysis-tasks/bin/python\\\" -c \\\"\\nimport json\\nd=json.load(open('reference_output.json'))\\nb=d['main']['bootstrap_by_component']['stats']\\nfor k,v in b.items(): print(k,v)\\n\\\"\", \"description\": \"Show component bootstrap stats in reference output\"}"
+  }
+ ],
+ "A:T2:contract:3:checklist:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyA/keys/T2/key.json\\\"; echo; echo ----; cat \\\"<CODE_ROOT>/analysis-tasks/w3318/BRIEF.md\\\"; ls -la \\\"<CODE_ROOT>/analysis-tasks/w3318\\\" \\\"<CODE_ROOT>/analysis-tasks/w3318/data\\\"\", \"description\": \"Read answer key, brief, and list package files\"}"
+  }
+ ],
+ "A:T2:paper:4:review-generic": [],
+ "A:T2:paper:5:checklist:grade2": [],
+ "A:T2:paper:5:rgrade-checklist": [],
+ "A:T2:contract:3:exec": [],
+ "A:T2:paper:4:none:grade3": [],
+ "A:T2:paper:3:review-generic": [],
+ "A:T2:contract:1:generic:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyA/keys/T2/key.json\\\"; echo; echo ----; cat \\\"<CODE_ROOT>/analysis-tasks/w3318/BRIEF.md\\\"; ls -la \\\"<CODE_ROOT>/analysis-tasks/w3318/\\\" \\\"<CODE_ROOT>/analysis-tasks/w3318/data\\\"\", \"description\": \"Read answer key, brief, and list package\"}"
+  }
+ ],
+ "A:T2:paper:5:repair-checklist": [],
+ "A:T2:paper:5:none:grade3": [],
+ "A:T2:paper:1:none:grade3": [],
+ "A:T2:paper:3:checklist:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cat \\\"<CODE_ROOT>/analysis-tasks/w3637/BRIEF.md\\\"; echo ----; cat \\\"<EVAL_ROOT>/studyA/keys/T2/key.json\\\"\", \"description\": \"Read the brief and answer key\"}"
+  },
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"file_path\": \"<EVAL_ROOT>/studyA/keys/T2/key.json\"}"
+  },
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"ls \\\"<EVAL_ROOT>/studyA/keys/T2/\\\"; ls \\\"<CODE_ROOT>/analysis-tasks/w3637/\\\" \\\"<CODE_ROOT>/analysis-tasks/w3637/data\\\"\", \"description\": \"List key folder and package contents\"}"
+  }
+ ],
+ "A:T2:contract:1:checklist:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cat \\\"<CODE_ROOT>/analysis-tasks/w3318/BRIEF.md\\\"; echo ----; cat \\\"<EVAL_ROOT>/studyA/keys/T2/key.json\\\"\", \"description\": \"Read task brief and answer key\"}"
+  },
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"file_path\": \"<EVAL_ROOT>/studyA/keys/T2/key.json\"}"
+  }
+ ],
+ "A:T2:paper:5:none:grade1": [],
+ "A:T2:paper:2:rgrade-generic": [
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cat \\\"<CODE_ROOT>/analysis-tasks/w3637/BRIEF.md\\\"; echo ----; cat \\\"<EVAL_ROOT>/studyA/keys/T2/key.json\\\"; echo; ls -la \\\"<CODE_ROOT>/analysis-tasks/w3637\\\" \\\"<CODE_ROOT>/analysis-tasks/w3637/data\\\"\", \"description\": \"Read brief, answer key, and list package\"}"
+  }
+ ],
+ "A:T2:contract:3:rgrade-checklist": [],
+ "A:T2:paper:3:none:grade3": [],
+ "A:T2:contract:3:review-generic": [],
+ "A:T2:paper:4:generic:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cat \\\"<CODE_ROOT>/analysis-tasks/w3637/BRIEF.md\\\"; echo ----; cat \\\"<EVAL_ROOT>/studyA/keys/T2/key.json\\\"\", \"description\": \"Read task brief and answer key\"}"
+  }
+ ],
+ "A:T2:paper:2:generic:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cat \\\"<CODE_ROOT>/analysis-tasks/w3637/BRIEF.md\\\"; echo ======; cat \\\"<EVAL_ROOT>/studyA/keys/T2/key.json\\\"\", \"description\": \"Read the task brief and answer key\"}"
+  },
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyA/keys/T2/key.json\\\"\", \"description\": \"Read the answer key JSON\"}"
+  }
+ ],
+ "A:T2:paper:1:checklist:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyA/keys/T2/key.json\\\"; echo; echo ----; cat \\\"<CODE_ROOT>/analysis-tasks/w3637/BRIEF.md\\\"; ls \\\"<CODE_ROOT>/analysis-tasks/w3637\\\" \\\"<CODE_ROOT>/analysis-tasks/w3637/data\\\"\", \"description\": \"Read answer key and task brief\"}"
+  }
+ ],
+ "A:T2:paper:5:exec": [],
+ "A:T2:contract:1:none:grade3": [],
+ "A:T2:contract:5:checklist:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyA/keys/T2/key.json\\\"; echo; echo ----; cat \\\"<CODE_ROOT>/analysis-tasks/w3318/BRIEF.md\\\"; ls \\\"<CODE_ROOT>/analysis-tasks/w3318\\\" \\\"<CODE_ROOT>/analysis-tasks/w3318/data\\\"\", \"description\": \"Read answer key, brief, and list package\"}"
+  }
+ ],
+ "A:T2:paper:4:none:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cat \\\"<CODE_ROOT>/analysis-tasks/w3637/BRIEF.md\\\"; echo ----; cat \\\"<EVAL_ROOT>/studyA/keys/T2/key.json\\\"\", \"description\": \"Read brief and answer key\"}"
+  },
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"file_path\": \"<EVAL_ROOT>/studyA/keys/T2/key.json\"}"
+  }
+ ],
+ "A:T2:paper:1:generic:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyA/keys/T2/key.json\\\"; echo; echo ----; cat \\\"<CODE_ROOT>/analysis-tasks/w3637/BRIEF.md\\\"; ls \\\"<CODE_ROOT>/analysis-tasks/w3637\\\" \\\"<CODE_ROOT>/analysis-tasks/w3637/data\\\"\", \"description\": \"Read answer key and task brief\"}"
+  }
+ ],
+ "A:T2:paper:5:checklist:grade3": [],
+ "A:T2:contract:3:none:grade3": [],
+ "A:T2:contract:4:checklist:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cat \\\"<CODE_ROOT>/analysis-tasks/w3318/BRIEF.md\\\"; echo ======; cat \\\"<EVAL_ROOT>/studyA/keys/T2/key.json\\\"\", \"description\": \"Read task brief and answer key\"}"
+  },
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyA/keys/T2/key.json\\\"\", \"description\": \"Read the answer key\"}"
+  }
+ ],
+ "A:T2:paper:2:generic:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cat \\\"<CODE_ROOT>/analysis-tasks/w3637/BRIEF.md\\\"; echo ----; cat \\\"<EVAL_ROOT>/studyA/keys/T2/key.json\\\"\", \"description\": \"Read the task brief and answer key\"}"
+  }
+ ],
+ "A:T2:contract:1:checklist:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyA/keys/T2/key.json\\\"; echo; echo ----; cat \\\"<CODE_ROOT>/analysis-tasks/w3318/BRIEF.md\\\"; ls \\\"<CODE_ROOT>/analysis-tasks/w3318\\\" \\\"<CODE_ROOT>/analysis-tasks/w3318/data\\\"\", \"description\": \"Read answer key and task brief\"}"
+  }
+ ],
+ "A:T2:contract:4:none:grade2": [],
+ "A:T2:paper:1:rgrade-checklist": [],
+ "A:T2:paper:4:generic:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cat \\\"<CODE_ROOT>/analysis-tasks/w3637/BRIEF.md\\\"; echo ----; cat \\\"<EVAL_ROOT>/studyA/keys/T2/key.json\\\"; echo; ls \\\"<CODE_ROOT>/analysis-tasks/w3637\\\" \\\"<CODE_ROOT>/analysis-tasks/w3637/data\\\"\", \"description\": \"Read brief, answer key, list package files\"}"
+  }
+ ],
+ "A:T2:contract:5:generic:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cat \\\"<CODE_ROOT>/analysis-tasks/w3318/BRIEF.md\\\"; echo ----; cat \\\"<EVAL_ROOT>/studyA/keys/T2/key.json\\\"\", \"description\": \"Read task brief and answer key\"}"
+  },
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"file_path\": \"<EVAL_ROOT>/studyA/keys/T2/key.json\"}"
+  }
+ ],
+ "A:T2:paper:3:checklist:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cat \\\"<CODE_ROOT>/analysis-tasks/w3637/BRIEF.md\\\"; echo ----; cat \\\"<EVAL_ROOT>/studyA/keys/T2/key.json\\\"\", \"description\": \"Read task brief and answer key\"}"
+  },
+  {
+   "pattern": "maxtoki-framework-eval/studyA/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyA/keys/T2/key.json\\\"\", \"description\": \"Read the answer key\"}"
+  }
+ ],
+ "A:T2:paper:2:exec": []
+}

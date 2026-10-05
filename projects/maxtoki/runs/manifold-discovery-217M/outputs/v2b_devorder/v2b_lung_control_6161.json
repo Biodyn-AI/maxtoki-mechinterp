@@ -1,0 +1,235 @@
+{
+ "n_draws": 2000,
+ "results": {
+  "per_anchor_random (deployed)": {
+   "maxtoki": {
+    "trust": 0.7995555555555556,
+    "trust_passes": false,
+    "mean": {
+     "random": 0.001489386148347088,
+     "donor": 0.0010800952636007975,
+     "branch": 0.004346029023011969,
+     "global": 0.001949837322089265
+    },
+    "pass_rate": {
+     "random": 0.0005,
+     "donor": 0.0035,
+     "branch": 0.119,
+     "random_donor_branch": 0.0,
+     "all_four": 0.0
+    },
+    "branch_ge_external_maxtoki_0.346": 0.0175,
+    "branch_nan_draws": 0
+   },
+   "maxtoki_pca64": {
+    "trust": 0.7801975308641975,
+    "trust_passes": false,
+    "mean": {
+     "random": 7.091443202489378e-05,
+     "donor": 0.0006477385142499705,
+     "branch": 0.008514212074046998,
+     "global": 0.00014943610704383657
+    },
+    "pass_rate": {
+     "random": 0.002,
+     "donor": 0.0085,
+     "branch": 0.1225,
+     "random_donor_branch": 0.0,
+     "all_four": 0.0
+    },
+    "branch_ge_external_maxtoki_0.346": 0.0175,
+    "branch_nan_draws": 0
+   },
+   "lookup_ct_s0": {
+    "trust": 0.6558518518518519,
+    "trust_passes": false,
+    "mean": {
+     "random": -0.0021099155971810134,
+     "donor": -0.0017103175009064394,
+     "branch": -0.0050210139538334345,
+     "global": -0.0015094123545430743
+    },
+    "pass_rate": {
+     "random": 0.0,
+     "donor": 0.0025,
+     "branch": 0.109,
+     "random_donor_branch": 0.0,
+     "all_four": 0.0
+    },
+    "branch_ge_external_maxtoki_0.346": 0.014,
+    "branch_nan_draws": 0
+   },
+   "lookup_ct_s1": {
+    "trust": 0.6619753086419753,
+    "trust_passes": false,
+    "mean": {
+     "random": -0.0007194051342031577,
+     "donor": -0.0007034098974826611,
+     "branch": -0.0018892560859347998,
+     "global": -0.00017289526056266468
+    },
+    "pass_rate": {
+     "random": 0.0,
+     "donor": 0.0045,
+     "branch": 0.1085,
+     "random_donor_branch": 0.0,
+     "all_four": 0.0
+    },
+    "branch_ge_external_maxtoki_0.346": 0.015,
+    "branch_nan_draws": 0
+   },
+   "lookup_ct_s2": {
+    "trust": 0.7057283950617284,
+    "trust_passes": false,
+    "mean": {
+     "random": -8.679792820410798e-05,
+     "donor": 0.0020870962036968594,
+     "branch": 0.001344280999881196,
+     "global": 0.0003387526837804202
+    },
+    "pass_rate": {
+     "random": 0.001,
+     "donor": 0.005,
+     "branch": 0.1025,
+     "random_donor_branch": 0.0,
+     "all_four": 0.0
+    },
+    "branch_ge_external_maxtoki_0.346": 0.0135,
+    "branch_nan_draws": 0
+   },
+   "lookup_ct_s3": {
+    "trust": 0.6814814814814816,
+    "trust_passes": false,
+    "mean": {
+     "random": 7.188061920397493e-05,
+     "donor": 0.0011906878517933478,
+     "branch": 0.00923905537309084,
+     "global": 0.0003631697255202497
+    },
+    "pass_rate": {
+     "random": 0.002,
+     "donor": 0.006,
+     "branch": 0.12,
+     "random_donor_branch": 0.0,
+     "all_four": 0.0
+    },
+    "branch_ge_external_maxtoki_0.346": 0.016,
+    "branch_nan_draws": 0
+   },
+   "lookup_ct_s4": {
+    "trust": 0.6940246913580247,
+    "trust_passes": false,
+    "mean": {
+     "random": 0.000619348437825306,
+     "donor": 0.0016769008724855123,
+     "branch": -0.0025148255807953307,
+     "global": 0.0006333516056474794
+    },
+    "pass_rate": {
+     "random": 0.0,
+     "donor": 0.004,
+     "branch": 0.105,
+     "random_donor_branch": 0.0,
+     "all_four": 0.0
+    },
+    "branch_ge_external_maxtoki_0.346": 0.0135,
+    "branch_nan_draws": 0
+   },
+   "lookup_cls_s0": {
+    "trust": 0.7015308641975309,
+    "trust_passes": false,
+    "mean": {
+     "random": 0.0015224664322450211,
+     "donor": 0.0010011683903909958,
+     "branch": 0.0013826552902056028,
+     "global": 0.0003061009362289632
+    },
+    "pass_rate": {
+     "random": 0.001,
+     "donor": 0.005,
+     "branch": 0.095,
+     "random_donor_branch": 0.0,
+     "all_four": 0.0
+    },
+    "branch_ge_external_maxtoki_0.346": 0.017,
+    "branch_nan_draws": 0
+   },
+   "lookup_cls_s1": {
+    "trust": 0.654567901234568,
+    "trust_passes": false,
+    "mean": {
+     "random": -0.00021021494310868727,
+     "donor": -0.0008117982649979209,
+     "branch": 0.0020239247217949904,
+     "global": 0.0012547570290343316
+    },
+    "pass_rate": {
+     "random": 0.001,
+     "donor": 0.004,
+     "branch": 0.1165,
+     "random_donor_branch": 0.0,
+     "all_four": 0.0
+    },
+    "branch_ge_external_maxtoki_0.346": 0.018,
+    "branch_nan_draws": 0
+   },
+   "lookup_cls_s2": {
+    "trust": 0.6005432098765433,
+    "trust_passes": false,
+    "mean": {
+     "random": -0.0004702689161970734,
+     "donor": 0.00015434905300076954,
+     "branch": -0.0015621615847433439,
+     "global": -0.0003222547449378308
+    },
+    "pass_rate": {
+     "random": 0.0005,
+     "donor": 0.0005,
+     "branch": 0.1035,
+     "random_donor_branch": 0.0,
+     "all_four": 0.0
+    },
+    "branch_ge_external_maxtoki_0.346": 0.011,
+    "branch_nan_draws": 0
+   },
+   "tokenbag_pca64": {
+    "trust": 0.9275555555555556,
+    "trust_passes": true,
+    "mean": {
+     "random": 0.00010577943248959748,
+     "donor": 0.0016263952644363095,
+     "branch": -0.0002468327514054135,
+     "global": -8.805849102243913e-06
+    },
+    "pass_rate": {
+     "random": 0.002,
+     "donor": 0.0045,
+     "branch": 0.1155,
+     "random_donor_branch": 0.0,
+     "all_four": 0.0
+    },
+    "branch_ge_external_maxtoki_0.346": 0.02,
+    "branch_nan_draws": 0
+   },
+   "hvg_pca64": {
+    "trust": 0.7549135802469136,
+    "trust_passes": false,
+    "mean": {
+     "random": 0.001430031989217315,
+     "donor": 0.0016179321822959976,
+     "branch": -0.004619765354658987,
+     "global": 0.0012463006666619586
+    },
+    "pass_rate": {
+     "random": 0.001,
+     "donor": 0.0085,
+     "branch": 0.103,
+     "random_donor_branch": 0.0,
+     "all_four": 0.0
+    },
+    "branch_ge_external_maxtoki_0.346": 0.0175,
+    "branch_nan_draws": 0
+   }
+  }
+ }
+}

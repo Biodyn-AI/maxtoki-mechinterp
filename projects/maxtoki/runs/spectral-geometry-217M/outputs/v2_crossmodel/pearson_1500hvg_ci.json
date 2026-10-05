@@ -1,0 +1,110 @@
+{
+  "n_genes": 1500,
+  "n_pairs": 1124250,
+  "observed_pearson": 0.38198441159197555,
+  "observed_spearman": 0.3448363054762585,
+  "representation": "static input tables: MaxToki model.embed_tokens.weight vs Geneformer V2-316M bert.embeddings.word_embeddings.weight; 1,500 HVGs from spectral-geometry phase0 (Tabula Sapiens immune cells)",
+  "A_published_subsample_reproduced": {
+    "method": "80% of genes without replacement, 1,000 draws, seed 42, percentile",
+    "ci95": [
+      0.3797381343594061,
+      0.38433564322936964
+    ],
+    "sd": 0.0011553171404773,
+    "published_ci95": [
+      0.3797381344334986,
+      0.3843356435408159
+    ],
+    "max_abs_diff_vs_published": 3.1144625767254297e-10,
+    "subsample_size_m": 1200
+  },
+  "B_gene_bootstrap_with_replacement": {
+    "method": "resample 1,500 genes with replacement; drop pairs of two copies of one gene; weighted-pair formula; percentile 2.5/97.5",
+    "n_boot": 2000,
+    "seed": 20261101,
+    "ci95": [
+      0.3772231236354041,
+      0.3866547539117427
+    ],
+    "mean": 0.3819879761094446,
+    "sd": 0.0024089673276895276,
+    "formula_vs_direct_indexing_first_draws": [
+      [
+        0.38165728007744376,
+        0.38165728007744126
+      ],
+      [
+        0.3847867717586624,
+        0.3847867717586627
+      ],
+      [
+        0.38860446303774365,
+        0.3886044630377435
+      ],
+      [
+        0.3781941074604894,
+        0.37819410746048904
+      ],
+      [
+        0.3836349126089063,
+        0.383634912608906
+      ]
+    ]
+  },
+  "C_jackknife": {
+    "method": "leave-one-gene-out jackknife SE; normal 95% CI obs +/- 1.96 SE",
+    "se": 0.0022712914381626875,
+    "ci95": [
+      0.37753268037317667,
+      0.38643614281077443
+    ]
+  },
+  "D_rescaled_subsample": {
+    "method": "published subsample SD x sqrt(m/(n-m)) (finite-population correction for m-of-n without replacement); normal CI",
+    "sd": 0.0023106342809546,
+    "ci95": [
+      0.3774555684013045,
+      0.3865132547826466
+    ]
+  },
+  "chance_permutation": {
+    "method": "permute Geneformer gene labels",
+    "n_perm": 1000,
+    "seed": 20261102,
+    "mean": -4.7017413318275026e-05,
+    "sd": 0.0009806534019295846,
+    "p95": 0.0015569955902387462,
+    "max": 0.0027086107525507728,
+    "p_empirical_one_sided": 0.000999000999000999
+  },
+  "scgpt_same_1500_hvg": {
+    "n_genes": 1500,
+    "fixed_lookup": {
+      "observed_pearson": 0.23902677356325344,
+      "boot_ci95": [
+        0.23263520180790048,
+        0.24492633959006452
+      ],
+      "boot_sd": 0.003179403181867715,
+      "n_boot": 1000,
+      "chance_mean": 5.761553426705403e-05,
+      "chance_sd": 0.001117798484386148,
+      "chance_p95": 0.001905264139386089,
+      "n_perm": 200
+    },
+    "deployed_dict_position_lookup": {
+      "observed_pearson": -0.0007465730221636564,
+      "boot_ci95": [
+        -0.004853101488962535,
+        0.003727725776658717
+      ],
+      "boot_sd": 0.0022408238551009257,
+      "n_boot": 1000,
+      "chance_mean": -5.566005022681354e-05,
+      "chance_sd": 0.0017313226434783066,
+      "chance_p95": 0.0028747356258863404,
+      "n_perm": 200
+    }
+  },
+  "wall_seconds_last_run": 272.94527316093445
+}

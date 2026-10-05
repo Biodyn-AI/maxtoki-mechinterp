@@ -1,0 +1,1213 @@
+{
+ "generated": "2026-10-01 01:10:18",
+ "python": "3.12.9",
+ "numpy": "1.26.4",
+ "pandas": "2.3.3",
+ "boot_seed": 20261001,
+ "checks": {
+  "V01": {
+   "count_line": [
+    327
+   ],
+   "predicted_inhibitory_defined_at": [
+    322
+   ],
+   "predicted_inhibitory_other_uses": [],
+   "phase11_json": {
+    "n_validated": 1458016,
+    "n_correct": 796159,
+    "directional_accuracy": 0.5461,
+    "paper_reference": 0.564
+   },
+   "pass": true,
+   "description": "Phase 11 counts actual_lfc<0 and never uses predicted_inhibitory",
+   "seconds": 0.0
+  },
+  "V02": {
+   "n_pairs": 1503408,
+   "n_sources": 248,
+   "accuracy": 0.5347610229558443,
+   "accuracy_way2": 0.5347610229558443,
+   "always_decrease": 0.546059353149644,
+   "always_decrease_way2": 0.546059353149644,
+   "pred_decrease_rate": 0.8955998637761672,
+   "balanced_accuracy": 0.49830448741689765,
+   "independence_expectation": 0.5364421476632352,
+   "mcc": -0.005521320173723073,
+   "acc_minus_best_constant": -0.011298330193799777,
+   "acc_minus_best_constant_ci95": [
+    -0.015966611538427423,
+    -0.0073374468570458935
+   ],
+   "frac_boot_above0_acc": 0.0,
+   "balacc_minus_half_ci95": [
+    -0.005025072622995406,
+    0.0013386410195080098
+   ],
+   "frac_boot_above0_bal": 0.138,
+   "bootstrap": {
+    "unit": "silenced (source) gene",
+    "method": "percentile, resample sources with replacement, pooled confusion counts",
+    "reps": 2000,
+    "seed": 20261001
+   },
+   "pass": true,
+   "description": "Corrected CRISPRi records: model vs always-decrease, balanced accuracy, MCC; grouped bootstrap by silenced gene",
+   "seconds": 0.58
+  },
+  "V03": {
+   "summary_json": {
+    "overall_directional_accuracy_with_proper_signs": 0.5347610229558443,
+    "n_pairs_total": 1503408,
+    "n_unique_sources": 248,
+    "groupkfold_5_by_source": [
+     {
+      "fold": 0,
+      "n_sources": 50,
+      "n_pairs": 297343,
+      "accuracy": 0.5188284237395869
+     },
+     {
+      "fold": 1,
+      "n_sources": 50,
+      "n_pairs": 305669,
+      "accuracy": 0.5396065678887948
+     },
+     {
+      "fold": 2,
+      "n_sources": 50,
+      "n_pairs": 304351,
+      "accuracy": 0.5386050974039842
+     },
+     {
+      "fold": 3,
+      "n_sources": 49,
+      "n_pairs": 296398,
+      "accuracy": 0.5461878960046964
+     },
+     {
+      "fold": 4,
+      "n_sources": 49,
+      "n_pairs": 299647,
+      "accuracy": 0.5304207951356096
+     }
+    ],
+    "groupkfold_mean_accuracy": 0.5347297560345343,
+    "per_source_mean_accuracy": 0.5341867476695223,
+    "per_source_median_accuracy": 0.5243881376149161,
+    "per_source_bootstrap_ci95": [
+     0.5260496227786731,
+     0.5416490932400868
+    ],
+    "comparison_vs_original_phase11": {
+     "original_directional_accuracy": 0.5461,
+     "original_method": "buggy: just `actual_lfc < 0` regardless of predicted sign",
+     "new_overall_with_signs": 0.5347610229558443,
+     "new_per_source_mean": 0.5341867476695223
+    },
+    "interpretation": "Properly accounting for predicted sign, overall directional accuracy is 0.5348 (above chance). Per-source mean (each source gene = 1 unit) is 0.5342, 95% CI [0.5260, 0.5416]. GroupKFold-by-source-gene 5-fold mean: 0.5347. The original Phase 11 metric (54.61%) was inflated by a buggy sign-comparison; the corrected number is the appropriate one to report. This shifts the interpretation: there IS a small but real circuit-prediction signal."
+   },
+   "summary_md_lines_with_53.55": [
+    103
+   ],
+   "audit_v2_lines_with_966": [
+    72
+   ],
+   "pass": true,
+   "description": "Deployed 'GroupKFold' summary: 5-fold mean, per-source mean, n sources vs summary text (53.55%, 966)",
+   "seconds": 0.0
+  },
+  "V04": {
+   "n_fit_calls": 0,
+   "fold_lines": [
+    1,
+    7,
+    11,
+    32,
+    184,
+    185,
+    189,
+    190,
+    192,
+    193,
+    198,
+    199,
+    219,
+    220,
+    235
+   ],
+   "bootstrap_lines": [
+    223
+   ],
+   "pass": true,
+   "description": "Deployed A2 script trains nothing inside its 'GroupKFold' loop",
+   "seconds": 0.0
+  },
+  "V05": {
+   "n_edges": 2144011,
+   "inhibitory_share": 0.8817240210054892,
+   "edges_at_src_plus_1": {
+    "0": 0,
+    "3": 0,
+    "6": 0,
+    "9": 0
+   },
+   "edges_by_layer_pair": {
+    "0->2": 146332,
+    "0->3": 142019,
+    "0->4": 139162,
+    "0->5": 132216,
+    "0->6": 118418,
+    "0->7": 113720,
+    "0->8": 93845,
+    "0->9": 98722,
+    "0->10": 108583,
+    "0->11": 96577,
+    "3->5": 103673,
+    "3->6": 95596,
+    "3->7": 90816,
+    "3->8": 75283,
+    "3->9": 82210,
+    "3->10": 91162,
+    "3->11": 81305,
+    "6->8": 71274,
+    "6->9": 71116,
+    "6->10": 62448,
+    "6->11": 50591,
+    "9->11": 78943
+   },
+   "code_lines": {
+    "clean_hidden": [
+     178
+    ],
+    "patched": [
+     202
+    ],
+    "hook_on_layers_src": [
+     208
+    ]
+   },
+   "ratio_vs_52116": 41.13920868831069,
+   "summary_22x_lines": [
+    5
+   ],
+   "pass": true,
+   "description": "Circuit edges: zero edges at target layer = source layer + 1; inhibitory share; edge count",
+   "seconds": 1.79
+  },
+  "V06": {
+   "n_feature_files": 1000,
+   "all_L6_zero": true,
+   "total_edges": 4970096,
+   "mean": 4970.096,
+   "sd": 25.163783499307094,
+   "min": 4900,
+   "max": 5400,
+   "hook_and_hidden_state_lines": {
+    "experiment1_exhaustive.py": [
+     145,
+     164,
+     170
+    ],
+    "experiment2_rerun.py": [
+     208,
+     230,
+     239
+    ],
+    "experiment3_rerun.py": [
+     256,
+     273
+    ],
+    "experiments_2_3.py": [
+     156,
+     177,
+     185,
+     376,
+     392
+    ]
+   },
+   "summary_range_claim_lines": [
+    152
+   ],
+   "note": "feature files are read in bulk; only the summary JSON is hashed",
+   "pass": true,
+   "description": "Exp 1: every feature has 0 edges at L6; edges per feature nearly constant",
+   "seconds": 1.59
+  },
+  "V07": {
+   "experiment2": {
+    "n_triplets": 4,
+    "rows": []
+   },
+   "experiment2_v2": {
+    "n_triplets": 4,
+    "rows": [
+     {
+      "triplet": 0,
+      "A:B:C": [
+       3.569,
+       0.706,
+       1.0
+      ],
+      "AC_obs": 0.2189,
+      "AC_pred": 0.2189,
+      "threeway_obs": 0.1896,
+      "threeway_pred": 0.1896,
+      "marg_obs": 0.2938,
+      "marg_pred": 0.2938,
+      "n_targets_with_effect": 2980,
+      "n_superadditive": 0
+     },
+     {
+      "triplet": 1,
+      "A:B:C": [
+       3.569,
+       0.706,
+       1.0
+      ],
+      "AC_obs": 0.2189,
+      "AC_pred": 0.2189,
+      "threeway_obs": 0.1896,
+      "threeway_pred": 0.1896,
+      "marg_obs": 0.2938,
+      "marg_pred": 0.2938,
+      "n_targets_with_effect": 2980,
+      "n_superadditive": 0
+     },
+     {
+      "triplet": 2,
+      "A:B:C": [
+       3.566,
+       0.706,
+       1.0
+      ],
+      "AC_obs": 0.219,
+      "AC_pred": 0.219,
+      "threeway_obs": 0.1897,
+      "threeway_pred": 0.1897,
+      "marg_obs": 0.2938,
+      "marg_pred": 0.2938,
+      "n_targets_with_effect": 2979,
+      "n_superadditive": 0
+     },
+     {
+      "triplet": 3,
+      "A:B:C": [
+       3.563,
+       0.707,
+       1.0
+      ],
+      "AC_obs": 0.2191,
+      "AC_pred": 0.2192,
+      "threeway_obs": 0.1897,
+      "threeway_pred": 0.1898,
+      "marg_obs": 0.293,
+      "marg_pred": 0.2929,
+      "n_targets_with_effect": 2977,
+      "n_superadditive": 0
+     }
+    ]
+   },
+   "summary_not_a_code_bug_line": [
+    185
+   ],
+   "pass": true,
+   "description": "Triplets: 4 triplets; 2,980 = targets; ratios follow exactly from ABC=C, AB=B, AC=C, BC=C",
+   "seconds": 0.0
+  },
+  "V08": {
+   "alpha5_over_alpha2": {
+    "L0": 0.9994495165093115,
+    "L3": 1.0044507042253523,
+    "L6": 1.0089434010476555,
+    "L9": 0.9947000211999152,
+    "L11": 1.0467188179052587
+   },
+   "per_feature": {
+    "L0": [
+     {
+      "feature": 40,
+      "direction": "negative",
+      "ds_a5": 0.095751,
+      "ds_a2": 0.096138,
+      "top_gene_a5": "SOD3"
+     },
+     {
+      "feature": 1657,
+      "direction": "positive",
+      "ds_a5": 0.09616,
+      "ds_a2": 0.096262,
+      "top_gene_a5": "SOD3"
+     },
+     {
+      "feature": 4797,
+      "direction": "negative",
+      "ds_a5": 0.096766,
+      "ds_a2": 0.096437,
+      "top_gene_a5": "KITLG"
+     }
+    ],
+    "L3": [
+     {
+      "feature": 4071,
+      "direction": "positive",
+      "ds_a5": 0.017851,
+      "ds_a2": 0.017759,
+      "top_gene_a5": "C1QTNF3-AMACR"
+     },
+     {
+      "feature": 2080,
+      "direction": "positive",
+      "ds_a5": 0.017903,
+      "ds_a2": 0.017764,
+      "top_gene_a5": "C1QTNF3-AMACR"
+     },
+     {
+      "feature": 2546,
+      "direction": "negative",
+      "ds_a5": 0.017734,
+      "ds_a2": 0.017728,
+      "top_gene_a5": "C1QTNF3-AMACR"
+     }
+    ],
+    "L6": [
+     {
+      "feature": 4138,
+      "direction": "negative",
+      "ds_a5": -0.007919,
+      "ds_a2": -0.00784,
+      "top_gene_a5": "C1QB"
+     },
+     {
+      "feature": 4888,
+      "direction": "negative",
+      "ds_a5": -0.007877,
+      "ds_a2": -0.007817,
+      "top_gene_a5": "C1QB"
+     },
+     {
+      "feature": 42,
+      "direction": "negative",
+      "ds_a5": -0.007896,
+      "ds_a2": -0.007823,
+      "top_gene_a5": "C1QB"
+     }
+    ],
+    "L9": [
+     {
+      "feature": 1014,
+      "direction": "negative",
+      "ds_a5": 0.013909,
+      "ds_a2": 0.014104,
+      "top_gene_a5": "PAQR3"
+     },
+     {
+      "feature": 1228,
+      "direction": "negative",
+      "ds_a5": 0.014137,
+      "ds_a2": 0.01417,
+      "top_gene_a5": "PAQR3"
+     },
+     {
+      "feature": 1765,
+      "direction": "negative",
+      "ds_a5": 0.014182,
+      "ds_a2": 0.014179,
+      "top_gene_a5": "PAQR3"
+     }
+    ],
+    "L11": [
+     {
+      "feature": 3924,
+      "direction": "negative",
+      "ds_a5": 0.004435,
+      "ds_a2": 0.004477,
+      "top_gene_a5": "FTL"
+     },
+     {
+      "feature": 284,
+      "direction": "negative",
+      "ds_a5": 0.004277,
+      "ds_a2": 0.00443,
+      "top_gene_a5": "FTL"
+     },
+     {
+      "feature": 1949,
+      "direction": "positive",
+      "ds_a5": 0.00574,
+      "ds_a2": 0.004898,
+      "top_gene_a5": "FTL"
+     }
+    ]
+   },
+   "max_spread_within_layer_a5": {
+    "L0": 0.001015000000000002,
+    "L3": 0.000168999999999999,
+    "L6": 4.200000000000037e-05,
+    "L9": 0.00027300000000000067,
+    "L11": 0.0014629999999999999
+   },
+   "L0_over_L3": 5.397161927197263,
+   "L0_over_L11": 19.97633381772888,
+   "signature_keys": [
+    "pseudotime",
+    "early_mask",
+    "late_mask",
+    "g_early_expr",
+    "g_late_expr",
+    "g_early_logits",
+    "g_late_logits",
+    "clean_logits_per_cell"
+   ],
+   "cos_g_early_g_late": 0.8809554420144107,
+   "summary_0.999_line": [
+    159
+   ],
+   "experiment3_file_time_window_minutes": 4323.275833336512,
+   "summary_4min_line": [
+    165
+   ],
+   "pass": true,
+   "description": "Steering: delta_s identical across 3 features per layer and across alpha 2 vs 5",
+   "seconds": 0.04
+  },
+  "V09": {
+   "function_line": 221,
+   "n_iter_setting_lines": [
+    54
+   ],
+   "_k562": {
+    "n_trrust_edges": 66,
+    "n_tf_rows_scored": 8,
+    "identical_full_matrix": 49,
+    "identical_on_scored_rows": 49,
+    "reported_curveball": {
+     "n_iter": 50,
+     "null_mean": 0.4830524817945928,
+     "null_std": 0.0011101252755224532,
+     "z": -0.14285714285717888
+    }
+   },
+   "_rpe1": {
+    "n_trrust_edges": 173,
+    "n_tf_rows_scored": 16,
+    "identical_full_matrix": 31,
+    "identical_on_scored_rows": 37,
+    "reported_curveball": {
+     "n_iter": 50,
+     "null_mean": 0.6042610585799945,
+     "null_std": 0.0014507864229425084,
+     "z": 0.17450772810533197
+    }
+   },
+   "_adamson": {
+    "n_trrust_edges": 281,
+    "n_tf_rows_scored": 32,
+    "identical_full_matrix": 10,
+    "identical_on_scored_rows": 10,
+    "reported_curveball": {
+     "n_iter": 50,
+     "null_mean": 0.5190074843703448,
+     "null_std": 0.0030645971963002114,
+     "z": 0.1628936403129697
+    }
+   },
+   "_k562_1b": {
+    "n_trrust_edges": 96,
+    "n_tf_rows_scored": 12,
+    "identical_full_matrix": 41,
+    "identical_on_scored_rows": 46,
+    "reported_curveball": {
+     "n_iter": 50,
+     "null_mean": 0.5554297959542589,
+     "null_std": 0.0006714484211579831,
+     "z": -0.04476624984613271
+    }
+   },
+   "pass": true,
+   "description": "Curveball null: count draws identical to the observed TRRUST matrix (exact deployed function and seeds)",
+   "seconds": 5.2
+  },
+  "V10": {
+   "verdicts": {
+    "k562": {
+     "C3_pass": false,
+     "C3_fraction": -13421.31450945372,
+     "C1_beats": [
+      [
+       "gene_variance",
+       false,
+       4.033241487529801e-10
+      ],
+      [
+       "gene_mean_expr",
+       false,
+       2.3143168153472657e-08
+      ],
+      [
+       "gene_one_minus_dropout",
+       false,
+       5.583271429239233e-06
+      ]
+     ]
+    },
+    "rpe1": {
+     "C3_pass": false,
+     "C3_fraction": -0.0747012473468443,
+     "C1_beats": [
+      [
+       "gene_variance",
+       false,
+       1.5101869275475733e-51
+      ],
+      [
+       "gene_mean_expr",
+       true,
+       7.250678712111557e-08
+      ],
+      [
+       "gene_one_minus_dropout",
+       true,
+       4.062396167728511e-36
+      ]
+     ]
+    },
+    "adamson": {
+     "C3_pass": true,
+     "C3_fraction": 1.0346230510881125,
+     "C1_beats": [
+      [
+       "gene_variance",
+       false,
+       1.3788178247632366e-10
+      ],
+      [
+       "gene_mean_expr",
+       false,
+       1.3788178247632366e-10
+      ],
+      [
+       "gene_one_minus_dropout",
+       false,
+       1.3788178247632366e-10
+      ]
+     ]
+    },
+    "k562_1b": {
+     "C3_pass": true,
+     "C3_fraction": 0.7838830113938295,
+     "C1_beats": [
+      [
+       "gene_variance",
+       false,
+       9.474399865292244e-05
+      ],
+      [
+       "gene_mean_expr",
+       false,
+       0.0003918986878324
+      ],
+      [
+       "gene_one_minus_dropout",
+       false,
+       0.007093246990928
+      ]
+     ]
+    }
+   },
+   "summary_lines": {
+    "row_1b_C3_FAIL": [
+     12
+    ],
+    "collapses_every_run": [
+     109
+    ],
+    "no_run_beats_any": [
+     36
+    ],
+    "pvals_2e-52_5e-11": [
+     32,
+     33
+    ],
+    "five_x": [
+     16
+    ],
+    "crispra": [
+     11,
+     16,
+     100
+    ],
+    "loader_crispra": [
+     96
+    ],
+    "phase0_any_model_name": [
+     209
+    ],
+    "rpe1_report_k562_scope": [
+     93
+    ],
+    "adamson_report_k562_scope": [
+     93
+    ]
+   },
+   "phase0_1b_config": {
+    "n_ctrl": 200,
+    "model": "MaxToki-217M-HF",
+    "device": "mps"
+   },
+   "pass": true,
+   "description": "Attention verdict files vs FINAL_SUMMARY text (1B C3, Adamson C3, RPE1 baselines, p-values, 5x, CRISPRa)",
+   "seconds": 0.01
+  },
+  "V11": {
+   "n_tfs": 48,
+   "tfs_sorted_alphabetically": true,
+   "first_last": [
+    "AATF",
+    "PDCD11"
+   ],
+   "tfs_with_responding_features": [
+    [
+     "CDC5L",
+     1
+    ],
+    [
+     "GATA1",
+     5
+    ],
+    [
+     "MED1",
+     3
+    ]
+   ],
+   "ctrl_from_phase0_layer_file_line": [
+    390
+   ],
+   "perturbed_hidden_plus1_line": [
+    418,
+    606
+   ],
+   "ctrl_first_10000_rows_line": [
+    438
+   ],
+   "a8_hidden_plus1_lines": [
+    139,
+    201
+   ],
+   "a8_ctrl_10000_lines": [
+    222
+   ],
+   "gata1_effects": {
+    "628": {
+     "p": 0.0,
+     "effect": 0.7923579216003418
+    },
+    "1334": {
+     "p": 0.0,
+     "effect": 1.8716859817504883
+    },
+    "2006": {
+     "p": 0.0,
+     "effect": 1.6554694175720215
+    },
+    "2610": {
+     "p": 0.0,
+     "effect": 0.5001083612442017
+    },
+    "2627": {
+     "p": 0.0,
+     "effect": 0.8818221688270569
+    }
+   },
+   "above_random_true_with_p_gt_0.05": [
+    [
+     "ChIP-seq",
+     2,
+     0.602
+    ],
+    [
+     "ChIP-seq",
+     3,
+     0.252
+    ],
+    [
+     "ChIP-seq",
+     4,
+     0.096
+    ]
+   ],
+   "sae_trained_on_hidden_layer_idx_line": [
+    141
+   ],
+   "pass": true,
+   "description": "Phase 8t: TFs with any responding feature; alphabetical TF choice; layer mismatch; ~5 control cells",
+   "seconds": 0.01
+  },
+  "V12": {
+   "sae_layer_line": [
+    36
+   ],
+   "hidden_plus1_line": [
+    127
+   ],
+   "sae_ckpt_line": [
+    47
+   ],
+   "sae_training_extract_line": [
+    107
+   ],
+   "pass": true,
+   "description": "Phase 6 patching applies the layer-5 SAE to hidden_states[6]",
+   "seconds": 0.0
+  },
+  "V13": {
+   "gates_frozen": {
+    "trustworthiness_min": 0.8,
+    "random_holdout_correlation_min": 0.2,
+    "donor_holdout_correlation_min": 0.2,
+    "clade_branch_holdout_correlation_min": 0.2,
+    "blocked_permutation_p_max": 0.001,
+    "n_permutations_min": 2000
+   },
+   "promotion_rules": [
+    "A positive branch must pass ALL five gates on the internal panel before Phase 5 training proceeds.",
+    "A positive branch must pass ALL four gates on the strict non-overlap external panel before Phase 8.",
+    "The paired null branch MUST fail at least one of the four numeric gates with a margin (failure within rounding does not count).",
+    "Adjusting any gate threshold downward to make a failing branch pass is a forbidden pipeline violation. Such a violation invalidates the entire run.",
+    "All rescue operations must expand internal coverage (more donors, more cell types, more tissues). The external panel is read-only after Phase 1."
+   ],
+   "verdict": "POSITIVE: H65 passes all four gates and null fails at least one",
+   "null": {
+    "trustworthiness": 0.7985001506737268,
+    "random_holdout": 0.7985932357123123,
+    "donor_holdout": 0.7071285065298346,
+    "branch_holdout": -0.0010123536030740103,
+    "passes": false
+   },
+   "null_passes": {
+    "random_holdout": true,
+    "donor_holdout": true,
+    "branch_holdout": false,
+    "trust": false
+   },
+   "scripts_computing_permutation_gate": [],
+   "research_plan_fail_all_four_line": [
+    29
+   ],
+   "research_plan_fail_at_least_one_line": [
+    54
+   ],
+   "pass": true,
+   "description": "Manifold: five frozen gates vs four computed; permutation gate never computed; null passes two gates",
+   "seconds": 0.03
+  },
+  "V14": {
+   "lung_trust": 0.7995555555555556,
+   "lung_trust_below_0.80": true,
+   "summary_trust_passes_weakly_lines": {
+    "summaries": [
+     90
+    ],
+    "runs": [
+     82
+    ]
+   },
+   "summary_fails_3_4_lines": {
+    "summaries": [
+     151
+    ],
+    "runs": [
+     143
+    ]
+   },
+   "n_zs_donors": 12,
+   "n_ext_donors": 13,
+   "zs_subset_of_ext": true,
+   "zs_internal_overlap": 0,
+   "zs_tissues": 45,
+   "zs_tissues_shared_with_ext": 41,
+   "summary_disjoint_lines": {
+    "summaries": [
+     38,
+     94
+    ],
+    "runs": [
+     38,
+     86
+    ]
+   },
+   "internal_anchor_count_by_donor_top": {
+    "TSP2": 187,
+    "TSP4": 32,
+    "TSP20": 17
+   },
+   "h103_zeroshot": {
+    "branch": "H103_b_cell_maturation_zeroshot",
+    "n_zs_anchors_kept": 18,
+    "n_zs_donors": 9,
+    "trustworthiness_k5": 0.8566666666666667,
+    "global_correlation": 0.8645442578333183,
+    "note": "Used k=5 for trustworthiness because only 18 B-lineage anchors in zero-shot panel"
+   },
+   "h103_summary_7_donors_lines": [
+    282
+   ],
+   "bootstrap_method": {
+    "n_bootstrap": 200,
+    "bootstrap_method": "subsample 80% of anchors without replacement",
+    "subsample_size": 480
+   },
+   "pass": true,
+   "description": "Manifold: lung control trust < 0.80; zero-shot donors inside external donors; H103 zero-shot k=5; bootstrap method",
+   "seconds": 0.02
+  },
+  "V15": {
+   "cka_L0": {
+    "layer": 0.0,
+    "cka_42_43": 1.0,
+    "cka_42_44": 1.0,
+    "cka_43_44": 1.0,
+    "cka_mean": 1.0
+   },
+   "n_total_cells": 592317,
+   "overlap_intersect1d": {
+    "42-43": 6,
+    "42-44": 8,
+    "43-44": 8
+   },
+   "overlap_sets": {
+    "42-43": 6,
+    "42-44": 8,
+    "43-44": 8
+   },
+   "sample_code_lines": {
+    "phase0": [
+     65
+    ],
+    "phase8": [
+     103
+    ]
+   },
+   "summary_disjoint_lines": [
+    227
+   ],
+   "phase9b_docstring_with_replacement": [
+    4
+   ],
+   "phase9b_replace_false": [
+    87
+   ],
+   "feature_shuffle_null_lines": [
+    5,
+    134,
+    136,
+    141,
+    144,
+    147,
+    150,
+    151
+   ],
+   "pass": true,
+   "description": "Spectral: CKA at L0 equals 1; 'disjoint' samples overlap; Phase 9b CI uses 80% subsample without replacement",
+   "seconds": 0.67
+  },
+  "V16": {
+   "model_line": [
+    1
+   ],
+   "rc124_valid_true": [
+    7
+   ],
+   "abort_line": [
+    14
+   ],
+   "pass": true,
+   "description": "Spectral autoloop ran Claude Sonnet; a timed-out executor (rc=124) passed validation; stop rule counts crashes",
+   "seconds": 0.0
+  },
+  "V17": {
+   "aggregate_means": {
+    "h123_motif": 0.6454004746658818,
+    "triangle_defect": 0.27468303303544284,
+    "euclidean": 0.5609922767975909
+   },
+   "synthetic": {
+    "h123_motif_cross_layer_pearson": -0.0011506188584175302,
+    "triangle_defect_cross_layer_pearson": 0.0004794077909329867,
+    "euclidean_cross_layer_pearson": 0.0005555140582588144,
+    "construction": "12 'layers' on 200-gene 4-community synthetic, with noise SD ranging 0.5 \u2192 6.0"
+   },
+   "verdict_says_all_above_0.6": true,
+   "dual_axis": {
+    "min": 0.4478887168902649,
+    "max": 0.4756664946680427,
+    "n_layers_below_0.5": 12,
+    "n_test_pairs": [
+     76
+    ]
+   },
+   "phase10_n_null_line": [
+    57
+   ],
+   "autoloop_code_decisions": "{\"n_iterations\": 6, \"per_iter\": [{\"iteration\": \"iter_01_ollivier_ricci\", \"hypothesis_id\": \"H-orc\", \"description\": \"Ollivier-Ricci curvature direction (high curvature = less regulatory)\", \"n_rows\": 36, \"decision\": \"INCONCLUSIVE\", \"brief\": \"36 rows, mean \\u0394_vs_null=-0.027, positive 10/36, by-domain {'mean': {'external_lung': -0.05747698812366517, 'immune': -0.005951813595808699, 'lung': -0.017822069905403245}, 'count': {'external_lung': 12, 'immune': 12, 'lung': 12}}\"}, {\"iteration\": \"iter_02_gromov_hyperbolicity\", \"hypothesis_id\": \"H-hyp\", \"description\": \"4-point Gromov hyperbolicity per la",
+   "manual_review_novel_positive_lines": [
+    6,
+    49,
+    54
+   ],
+   "stop_rule_lines": [
+    5,
+    517,
+    535,
+    537,
+    538,
+    539
+   ],
+   "pass": true,
+   "description": "Topology: iter_04 replication verdict text vs numbers; synthetic check ~0; dual-axis AUROC below 0.5; N_NULL=8; manual relabels",
+   "seconds": 0.02
+  },
+  "V18": {
+   "specs": {
+    "attention-grn-extraction-and-evaluation.md": {
+     "has_code_references": false,
+     "n_h2": 10
+    },
+    "residual-stream-spectral-geometry.md": {
+     "has_code_references": false,
+     "n_h2": 10
+    },
+    "topology-geometry-141-hypotheses.md": {
+     "has_code_references": false,
+     "n_h2": 10
+    },
+    "manifold-discovery-extraction-compactification.md": {
+     "has_code_references": false,
+     "n_h2": 10
+    },
+    "longevity-mechinterp-donor-aware.md": {
+     "has_code_references": true,
+     "n_h2": 11
+    },
+    "sparse-autoencoders/01-sae-atlas.md": {
+     "has_code_references": false,
+     "n_h2": 10
+    },
+    "sparse-autoencoders/02-causal-circuit-tracing.md": {
+     "has_code_references": false,
+     "n_h2": 10
+    },
+    "sparse-autoencoders/03-exhaustive-mapping-and-steering.md": {
+     "has_code_references": false,
+     "n_h2": 10
+    }
+   },
+   "n_missing_code_references": 7,
+   "spec_curveball_200_lines": [
+    213,
+    757
+   ],
+   "pass": true,
+   "description": "Deployed specs: section headings vs the ten-section template",
+   "seconds": 0.05
+  },
+  "V19": {
+   "files_scanned": 144,
+   "files_with_term": {
+    "mps": 38,
+    "cuda": 0,
+    "a100": 0
+   },
+   "pass": true,
+   "description": "Hardware: device strings in run logs and configs (mps vs cuda/A100)",
+   "seconds": 5.21
+  },
+  "V20": {
+   "v2_matrix_lines": [
+    188,
+    189,
+    190
+   ],
+   "integer_splits_matching_68_26_6": [
+    [
+     54,
+     21,
+     5
+    ]
+   ],
+   "v0_line": [
+    188
+   ],
+   "v2_line": [
+    190
+   ],
+   "zero_untouched_line": [
+    183
+   ],
+   "pass": true,
+   "description": "Audit v2 matrix: only two lines give v1/v2 cell counts; v1 split not an integer count",
+   "seconds": 0.0
+  },
+  "V21": {
+   "top4": 0.18252924533058643,
+   "top10": 0.3759426205393003,
+   "summary_top10_33pct_lines": [
+    136
+   ],
+   "summaries_copy_nt_rows": [
+    278
+   ],
+   "runs_copy_h38_backfill_rows": [
+    245
+   ],
+   "h38_zeroshot_trust": 0.7865437361620568,
+   "pass": true,
+   "description": "Manifold summary copies: stale 'n/t' rows, top-10 factor share, H38 zero-shot fail",
+   "seconds": 0.0
+  },
+  "V22": {
+   "longevity_every_pipeline_L5_lines": [
+    61
+   ],
+   "attention_primary_layer_default_8": [
+    53
+   ],
+   "pass": true,
+   "description": "Longevity summary says every other pipeline used L5; attention-grn primary layer is L8",
+   "seconds": 0.01
+  },
+  "V23": {
+   "has_both_labels_lines": [
+    134,
+    138,
+    139,
+    145,
+    171,
+    207
+   ],
+   "tmp_atlas_path_lines": [
+    78
+   ],
+   "a2_edge_filter_lines": [
+    45,
+    48
+   ],
+   "pass": true,
+   "description": "Circuit Phase 11 original record set used labelled edges only; corrected set used all edges",
+   "seconds": 0.0
+  }
+ },
+ "inputs_sha256": {
+  "<REPO_ROOT>/projects/maxtoki/runs/circuit-tracing-217M/scripts/remaining_phases.py": "9e9e42f4648ad2218c691c6c16ebcfb78b2412a6da6ed81260f8e5ccf7f89057",
+  "<REPO_ROOT>/projects/maxtoki/runs/circuit-tracing-217M/outputs/phase11_crispri_validation.json": "9911ddc51e803ccb1dc04c6069a226213942dfff9e3ae354bc95e038769db7e4",
+  "<REPO_ROOT>/projects/maxtoki/runs/circuit-tracing-217M/outputs/groupkfold_crispri/per_pair.parquet": "71e9cb52ca1a0813db24f00f68affcc2210e4a437181ad6d631fc72573cc95b8",
+  "<REPO_ROOT>/projects/maxtoki/runs/circuit-tracing-217M/outputs/groupkfold_crispri/summary.json": "fe0d1a933f30de670a42be27db9571a7fd0922b7c3ad0eeba834139ebf160f03",
+  "<REPO_ROOT>/projects/maxtoki/summaries/circuit-tracing-217M-FINAL_SUMMARY.md": "bc7ceeb149cb65c1520250d675c39b1269e59efe197703c1a4c2dbf5c5c4d94a",
+  "<REPO_ROOT>/projects/maxtoki/audits/audit-20260507-completion-v2.md": "e93093aff5d3254d7462846381e380344292e35cfdf5dac41d41a74fc0f2cd80",
+  "<REPO_ROOT>/projects/maxtoki/runs/circuit-tracing-217M/scripts/audit_a2_groupkfold_crispri.py": "1a3c96aa61c63689be77ce8347175d61bb14a428863c47b4c1b1ca18fd8e5d5f",
+  "<REPO_ROOT>/projects/maxtoki/runs/circuit-tracing-217M/outputs/circuit_edges.csv": "2d19cdfac232d0de1e27ce41cf53b8067c2f0df830a89a3a2e3fb12f3a02d467",
+  "<REPO_ROOT>/projects/maxtoki/runs/circuit-tracing-217M/scripts/circuit_trace.py": "6a65e769afc4a63d9494ae7b5b40fe0a86d37498042d1f50a27bf6642bb4b591",
+  "<REPO_ROOT>/projects/maxtoki/runs/exhaustive-mapping-217M/outputs/experiment1/exhaustive_summary.json": "55ca1665d3b7b23c6df242ceb71d123ab9b5514eb229da5166290592ff8afcb9",
+  "<REPO_ROOT>/projects/maxtoki/runs/exhaustive-mapping-217M/scripts/experiment1_exhaustive.py": "4895f5ccd8127688c2dd33b9f39e804175b82dc07234b863b4ed7dc32623420b",
+  "<REPO_ROOT>/projects/maxtoki/runs/exhaustive-mapping-217M/scripts/experiment2_rerun.py": "16267ac6d8e43f557625c1a6e4d1a8d44598ded36ca36da08b719654c173a23b",
+  "<REPO_ROOT>/projects/maxtoki/runs/exhaustive-mapping-217M/scripts/experiment3_rerun.py": "c6982f14f1e7c1fea69c6a827f13350514ae297026f2e415bdc7b259aa1ecf86",
+  "<REPO_ROOT>/projects/maxtoki/runs/exhaustive-mapping-217M/scripts/experiments_2_3.py": "9453f0476240e1b72320aa51c13e8ffa50e0cb6e15c442ffd813610afb10b5e4",
+  "<REPO_ROOT>/projects/maxtoki/summaries/exhaustive-mapping-217M-FINAL_SUMMARY.md": "469fb5b1d9701f6f4ffc56d2cabd5b232fbd56c974fe0ec06807bb9796dc8166",
+  "<REPO_ROOT>/projects/maxtoki/runs/exhaustive-mapping-217M/outputs/experiment2/combinatorial_summary.json": "e65a9504753db6019de497a72f9275a51eb637bc86e66c67c01e910cb6a5331e",
+  "<REPO_ROOT>/projects/maxtoki/runs/exhaustive-mapping-217M/outputs/experiment2_v2/combinatorial_summary.json": "3df2637889af8fdc68540e3bc3c4d3c5d251352f2ca9278d1c6e7dfbcb08d931",
+  "<REPO_ROOT>/projects/maxtoki/runs/exhaustive-mapping-217M/outputs/experiment3/steering_summary.json": "700fabac1cebe9a217f0759541b498111a6e97e05e7fd4a9de44be4ec77cb3ba",
+  "<REPO_ROOT>/projects/maxtoki/runs/exhaustive-mapping-217M/outputs/experiment3/state_signatures.npz": "d4d56b31b7103bea17eefe0b73bf10ce7ac4a8b6b1a85a7851c5308746fa1b1c",
+  "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/scripts/phase3_residualization.py": "e07ad311aa3bb613848ecf08b8b580fd6af166a855e516aa2fac10274b70c6ed",
+  "<DATA_ROOT>/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv": "9b909319ccc8e36588b5a1bd3640e0dfba03936c6fc154cc4304d742bec11bed",
+  "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/phase0/gene_features.csv": "31a904d79fb9719d708ed25bc893f1f66c2f3a597c7aec76507f1e9ab844a695",
+  "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/phase3/null_results.json": "ffc089b5eb21e439354c09b3a68b0ec059eb727eca1dc3ba046fb455a5d24d5b",
+  "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/phase0_rpe1/gene_features.csv": "1949d2af2fa2d8fc8c30c716eb5a9370c1d43116a915face3bcef4e38a29251f",
+  "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/phase3_rpe1/null_results.json": "0cfa5236d863fc176fc1e53a81945a0a37465b909702e2a6e872d08a87810750",
+  "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/phase0_adamson/gene_features.csv": "21f87f747a4a52d4d4fa1b53558b5300952229908cd4e4b365af51d71e974d00",
+  "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/phase3_adamson/null_results.json": "6266f46398dec10fb040cf178de89f2265ee823ea1c593926827eabf3e1b4f4d",
+  "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/phase0_k562_1b/gene_features.csv": "dfedc68371d3f7dd7e63f86b5297174bdbaeeebadd43fd0b655b921cfb83232b",
+  "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/phase3_k562_1b/null_results.json": "31da2ddd0e6d5f9995ddc480259138361465eac36acfd2a6281999cfc2d9a5b4",
+  "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/phase12_verdict.json": "5150b7e78a6ba1a7150db173e58925cc24fb0266702472addccc9087d6b3a09e",
+  "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/phase12_verdict_rpe1.json": "93c3fa971635436e8908ad4842005ce7c438823bde38219e4d2886a9f054f0da",
+  "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/phase12_verdict_adamson.json": "f68205838e6affe4805be6b640db5afb0ed439c003ee7947ff6612ea8c32da95",
+  "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/phase12_verdict_k562_1b.json": "307785ee5c79457faeae43cbc95af8446deb3f1e0f495febaee0ddf5ea52fe85",
+  "<REPO_ROOT>/projects/maxtoki/summaries/attention-grn-217M-FINAL_SUMMARY.md": "10528949d6bf54ae9779f454ea22cae3a8d067785593b98f08639b4f51340b3d",
+  "<REPO_ROOT>/projects/maxtoki/setup/dataset_loader.py": "775ddc078582face58b235bb5e973b0b837859e7180f396cb7b8c39deea87d1c",
+  "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/scripts/phase0_any.py": "b6663b0a4bed5806d4c7dcddc48d549eccbff13ebc427a22a0b0245074b464ad",
+  "<REPO_ROOT>/projects/maxtoki/summaries/attention-grn-217M-rpe1-report.md": "3fc59d5ae323334b8f5c1bff3dca842274aefe0c77a75d80bb3ac5d2fdb3d95e",
+  "<REPO_ROOT>/projects/maxtoki/summaries/attention-grn-217M-adamson-report.md": "2478423e677156a4c0b403407befd02af941f2d25077d0219ffc8085598edfe5",
+  "<REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/phase0_k562_1b/run_config.json": "48b2f7d62ccc9e8b9a6d53d7c7fdd5fd3963dfd45f42c4fc260f5b1a58bee2ab",
+  "<REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/outputs/phase8_true/perturbation_response.csv": "a7160e6c15a1fd61dfd373973c76aa1afcd926b650577e0ba5c50bf4c68032ee",
+  "<REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/outputs/phase8t_positive_tf_rerun/per_tf_response.json": "f0362157755549f65e814a3cdfde216b9ac318eb8f3098e72c4d925e3a2e8234",
+  "<REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/outputs/phase8t_positive_tf_rerun/specificity_with_null.csv": "14ea4fefa8048e5baea25d589d11a4f133bfb8a028dc652667d3258773ecc9ed",
+  "<REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/scripts/remaining_phases.py": "56ce27d7589228df60b1565744cd10988ad15b7613dcaaeb0b0586d0bf98fd6a",
+  "<REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/scripts/audit_a8_rerun_phase8t_targeted.py": "f856545cf6f9e3a04b00609f627a6dde19496b3b9dbd139eeeab5ac05b9009f9",
+  "<REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/scripts/full_12layer_pipeline.py": "8db0051ac358a7f6167ad2abc3b493ffb3b48e2a5ee40879ec17d9caa537a994",
+  "<REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/scripts/phase6_patching.py": "0a3ff258a0c6e47e8d67e31dbf31563153b7d84b351c8effba7252de26715fd0",
+  "<REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/scripts/phase0_extract_positions.py": "8f0b40b59f1f2353d504cc19437b5729b3ed285059278bd40539a88aba2e047d",
+  "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/reports/quality_gates_spec.json": "878e3143ba273bec2fe83d5d0b2a667151d935d89c0dc41bc8e3d9bee44f6293",
+  "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/reports/quality_gates_let_anchor.json": "b964a4456d02cbcc7c147d93ba5caa9aeabcaa1dd02cfee28583245a22edf607",
+  "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/._v2_00_reproduce.py": "1ab597c9db9c3308e5823d0fad4785e0db351c0824cbb840765e7b9394b69030",
+  "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/._v2_02_refit_pool.py": "1ab597c9db9c3308e5823d0fad4785e0db351c0824cbb840765e7b9394b69030",
+  "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/._v2_common.py": "1ab597c9db9c3308e5823d0fad4785e0db351c0824cbb840765e7b9394b69030",
+  "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase10_compaction_chain.py": "5623528b9a7e29cfe8be1df39a67f8a771fc4c46b13707a0bdc17cc57517080a",
+  "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase11_factor_ablation.py": "722ad8ad648a286a0435aa71ac1a17448541a4a13e4fe1e3b4ed8da8ee636e54",
+  "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase12_anchor_benchmark_lite.py": "f744881e3fadebc30c3b1bbacf2dcc925cb5510805d1dfc0f403f84508432dc4",
+  "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase13_h38_lite.py": "89667c63b83b43d59dc69d0c2069ce9666d4b2f9d37a120f366278ad2a2b9cae",
+  "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase14_sweep3.py": "a4b215bfd2ba176cb97eaa0d6d01b88f19aaaeac1809d46062cc171b625a38a4",
+  "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase15_validate_candidate.py": "3dd569867bfea78af8837f270a9f8869ecf7cb306217bbed95a3f2713b79f6db",
+  "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase16_graph_dag_rescue.py": "83ce6399b4ca060aece48dd1560cd4158992354581c727faa86cdb8797f4facb",
+  "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase17_cross_axis_h65_h95.py": "4803536097851fccec357678799c8101080e5e64ffbff21ccb57173de3496c32",
+  "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase1a_lung_nonhema_panel.py": "72dcd9f0417d77f677387c59dff32ef8a152ac50e28f6dffdbd550a89ef9a3ae",
+  "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase1a_subsample_and_tokenize.py": "5749fda920fcf19a49f985dea2d67e5791ff05dfb4beb6ba5ec2271173af9644",
+  "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase1bc_hidden_states_and_centroids.py": "30dca6d79c8827d5595b7f5e265a91079a1a732f555960f73c41f99498b6cd58",
+  "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase3a_manifold_sweep.py": "54015329122c03c43a9ddc128bf5e5953c7109710d0732298ab828e96e2bb472",
+  "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase3a_revaluate_3gate.py": "4f3184ffe0cf7b1a97f26cf7c6a88e6905d06f0020462d27f50bf0af8566a8c9",
+  "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase3a_sweep2_ordinal.py": "9350a20ec0494eabfd4a5f8a2452797eee8ebbe1d324c095d7eedc1a69e4936b",
+  "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase4_export_operators.py": "c531f7e556927f6e4674453872fbf2ffc88bdce55caff39c61afb8278e4cd765",
+  "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py": "cee0d86bc8a9ddb4b07b5a10984f2af6720e4d09da4fb218dcdab82258f7b860",
+  "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase6_task_probes.py": "b7ed6a386d8c8bf3a74b540d8772b284c099ad7b0c20f4b13a34efbc95c4ffaf",
+  "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase7_external_validation.py": "35b29c64658ea6187d9c09d5985841360c7951a10d3f3a1889bd315b0514717a",
+  "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase7_h103_external.py": "8e49b050c5e33b66fbd4aedd0873876737f618a09db7d577f85fb222b711d5bd",
+  "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase8_zeroshot_transfer.py": "f796b285e296848da24c5ade70343ec3b7c39c31d90ec7b78c07c8b8ba7dd5a2",
+  "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase9_head_attribution.py": "40cc3386bcd3cd84c69358e20c77db8684dd70d23ea3ef439a199470e6672401",
+  "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/v2_00_reproduce.py": "01dd1351b63d1d1019a44350c028191b9afb880c277fbbbea0c20e6e67f4bbd1",
+  "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/v2_02_refit_pool.py": "9dcec516bb64dd444f99378a01ece079a6ebef88bbcba611007d950bae9cfc2b",
+  "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/v2_common.py": "f243fdf342e957f70b12b94f5bfc85dc64836ef07270548ee0044d690eb698fd",
+  "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/planning/research_plan.md": "c376fb5c5e1122c8f3f7645acc7cb44776632fb9c0dce1cc16829e84e2ad1f80",
+  "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/reports/external_validation_lung_nonhema.json": "07c9eff789d0b59b5f029cdc86677bb65f78ab18304b0b0fa40f22fd72892ad3",
+  "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/artifacts/anchors/anchor_meta_external.csv": "85436fada49d034ae1f048b56b7dba394b0650ccb09e0c58e62b710365806011",
+  "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/artifacts/anchors/anchor_meta_zeroshot.csv": "6b6bae3162bacf37a21aa213794c3693ec4db9544905af59e302db9027c9ade2",
+  "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/artifacts/anchors/anchor_meta_internal.csv": "9b8c5686d7d87497e5b973693dbbd2bf2bb865872d3c27b8e50622a3e7a784ca",
+  "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/reports/zeroshot_h103.json": "820d220f43af49305f9f8defb471a004986d92c65b1ce6450e1823bc5d2ffa09",
+  "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/reports/external_validation_external_bootstrap.json": "f9b13378250c73414880d01606241b371d6eb95af9728fa61435bdaafe50e906",
+  "<REPO_ROOT>/projects/maxtoki/summaries/manifold-discovery-217M-FINAL_SUMMARY.md": "10e5b8f89d814eff1f701c6c72bbd4bd24d7f3e1f5b353e7137577c28672772a",
+  "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/FINAL_SUMMARY.md": "671af4358bc3ac3d2d8108f8d4cb7ccbd2919efad380808858f599c1c00e2be5",
+  "<REPO_ROOT>/projects/maxtoki/runs/spectral-geometry-217M/outputs/phase8/cka_per_layer.csv": "d5e99d6c369f7d64e0e6ed1568e00ebe0ec320989577ebcf5e7bf720872915a3",
+  "<DATA_ROOT>/biodyn-work/single_cell_mechinterp/data/raw/tabula_sapiens_immune.h5ad": "not-hashed(19.8GB; only obs index length read)",
+  "<REPO_ROOT>/projects/maxtoki/runs/spectral-geometry-217M/scripts/phase0_extract.py": "397294259b3601058a27b9f284184688713cb45c6e36dce7af0087e230f6a4fd",
+  "<REPO_ROOT>/projects/maxtoki/runs/spectral-geometry-217M/scripts/phase8_stability.py": "e7749d929b9103f1a1ff0af1959dba9059bac9417e07aaeccfc224d80bfd7299",
+  "<REPO_ROOT>/projects/maxtoki/summaries/spectral-geometry-217M-FINAL_SUMMARY.md": "4f793897848bb0fa013e8ba0fcfe356cc8c740e273d1364420ebd6dc3bab2028",
+  "<REPO_ROOT>/projects/maxtoki/runs/spectral-geometry-217M/scripts/audit_a3_bootstrap_cross_model_pearson.py": "87e27fb1fc48ba14f79449ca03a0810caa5a3bd5e32b84c250c3ba28f4dd5921",
+  "<REPO_ROOT>/projects/maxtoki/runs/spectral-geometry-217M/scripts/phase1_svd.py": "2aaba31931a2ae55d1958811506d65b0ad76ec9d1986824fc766766e71c2c1ef",
+  "<REPO_ROOT>/projects/maxtoki/runs/spectral-geometry-217M/autoloop/runtime/driver.log": "6fd0d88f24c0123175b3ef9e5206a0abeab99cfb93a1a072f84dd8206c3ec7cf",
+  "<REPO_ROOT>/projects/maxtoki/runs/topology-141-217M/outputs/phase11_autoloop/iter_04_replication/summary.json": "4c154335330f4f42373e73fe8f2a9ca9929d9a4a1fcb2c95cd17db4b38d12490",
+  "<REPO_ROOT>/projects/maxtoki/runs/topology-141-217M/outputs/groupkfold_h123/by_layer.csv": "ec1803b435ed0a0eabef18c52c295230a42f81b5ef1d6f9fef2bc2307467f8a4",
+  "<REPO_ROOT>/projects/maxtoki/runs/topology-141-217M/outputs/phase11_autoloop/autoloop_summary.json": "c58c848c4a472987ef527ba2a6a0399a8e24d37a836512f8dff4255c8df76b38",
+  "<REPO_ROOT>/projects/maxtoki/runs/topology-141-217M/scripts/phase10_h139_sectional_anisotropy.py": "d8b8b80cefb07c0ce46ea20a054c04fc0de5ea5cba28baa01efa2b57375856cf",
+  "<REPO_ROOT>/projects/maxtoki/runs/topology-141-217M/outputs/phase11_autoloop/MANUAL_REVIEW.md": "51a1b221c509871255c0a1105e5c0960965c0e8bf415849b50ed638c55a3fa39",
+  "<REPO_ROOT>/projects/maxtoki/runs/topology-141-217M/scripts/phase11_autoloop.py": "a15a5d0b40c329c80947523e87b9156e49c7b2d0ed01704f539164f44b3c40a0",
+  "<REPO_ROOT>/pipelines/attention-grn-extraction-and-evaluation.md": "ca00ada7240cc13ce550cda5a1f044e57bf55f16aa3f52e80161239a8405bb4a",
+  "<REPO_ROOT>/pipelines/residual-stream-spectral-geometry.md": "8ce2e7be8106877c175f4f92d323b88b465107e86f8f8b8ccd436252c1cb7b1b",
+  "<REPO_ROOT>/pipelines/topology-geometry-141-hypotheses.md": "43731ef3e65ba8fb4a0f995cb5c461f648b3b0ade810399ab63f691c0e83c44a",
+  "<REPO_ROOT>/pipelines/manifold-discovery-extraction-compactification.md": "c5fa1f6d459eecbed350c1e7fdca2c2039c03f1fcfa672b2cdeff4336ae52d95",
+  "<REPO_ROOT>/pipelines/longevity-mechinterp-donor-aware.md": "fe782547b75d1b5a3d866cbd06db520882c9c3b978ca5578387ba30f20ddf2cb",
+  "<REPO_ROOT>/pipelines/sparse-autoencoders/01-sae-atlas.md": "daf7414b239e60f023db554c6469340d5cde7274f513f5345a6a46f1e566edd4",
+  "<REPO_ROOT>/pipelines/sparse-autoencoders/02-causal-circuit-tracing.md": "3a2048b6f1e249b55a3cbae4fb8a34cf3fa4ffcc6a839b2f15d67dc12f899585",
+  "<REPO_ROOT>/pipelines/sparse-autoencoders/03-exhaustive-mapping-and-steering.md": "bff319943dd338344669349ac791e286a1e58abce7442a6710d8f2eb285fbe51",
+  "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/reports/factor_ablation.json": "f642c138b7078b66761fa53a01ee5d88c464bd7f4512aebc40a273429a58d2c5",
+  "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/reports/zeroshot_H38_lite.json": "9802a442acc5841ac9efb5d9d40f2a1cfd60d2780a467cf9b72ff3d70ab06a6d",
+  "<REPO_ROOT>/projects/maxtoki/runs/longevity-mechinterp-217M/FINAL_SUMMARY.md": "9bdb23a6631ed0a0263dbb82d0f57174d0592b040a21f06a4d141ac5c66e6c67"
+ },
+ "wall_seconds": 0.0
+}

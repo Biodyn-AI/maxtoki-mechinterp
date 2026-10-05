@@ -1,0 +1,233 @@
+{
+  "item": "V3-5 spectral geometry with correct inputs and a random-initialised control",
+  "time": "2026-10-02T21:33:52",
+  "env": {
+    "device": "cpu",
+    "torch": "2.11.0",
+    "transformers": "5.5.4",
+    "python": "3.12.9",
+    "platform": "macOS-26.3-arm64-arm-64bit",
+    "hooks_v2_sha256": "1ba6fda5ad761b1f82041a7b1397fa9332fa7438e13db955a00d751c4b440f54",
+    "model_dir": "<REPO_ROOT>/projects/maxtoki/setup/MaxToki-217M-HF",
+    "model_dtype": "float32",
+    "timestamp": "2026-10-02T17:17:53"
+  },
+  "folders": {
+    "prepare": "cells, panels, tokens, order agreement with the deployed tokens",
+    "extract/<job>": "per-job block sums of hidden states (MPS forward passes)",
+    "analysis": "metrics, CKA, split-half CKA, bootstraps, jackknife intervals, report tables",
+    "verify": "second-way checks (V1-V7)",
+    "code_versions": "exact copies of scripts/v3_spectral.py for each sha256 used by an extraction job"
+  },
+  "seeds": {
+    "deployed_sample_seeds": {
+      "A": 42,
+      "B": 43,
+      "C": 44
+    },
+    "refill_seeds": {
+      "B": 20261002,
+      "C": 20261003
+    },
+    "block_seed": 20261005,
+    "n_blocks": 10
+  },
+  "random_init_seeds": [
+    0,
+    1,
+    2
+  ],
+  "boot_seed": 20261006,
+  "jackknife_seed": 20261007,
+  "samples": {
+    "A": {
+      "n": 2000,
+      "counts_sha256": "df698c695e070c63ed36169c54876a63083c3252e8d1e0e88b30d5ec48148e92",
+      "tokens_sha256": "3c75953b106f5fdf483ca40e232de5cb3db5541309794ed3754bc1b6d4935934"
+    },
+    "B": {
+      "n": 2000,
+      "counts_sha256": "554f29c2fed0db313e7f5e2f52cc6e7f4186c930acd58af428d7b912285c29cb",
+      "tokens_sha256": "703f9401bb93547400c49751acf84c08e1ca94ef12ffdf46a8206288df21e565"
+    },
+    "C": {
+      "n": 2000,
+      "counts_sha256": "d3a99e966cc0e9763111559fa289e52534ced1fdd99993a1109b72e4b6246e2c",
+      "tokens_sha256": "3e6cb89dda830a6d761b6a4fd5e3de8f0b2e5ba97774332eaf331dbeffed4ad8"
+    }
+  },
+  "deployed_sample_overlaps": {
+    "AB": 6,
+    "AC": 8,
+    "BC": 8
+  },
+  "jobs": {
+    "trained_A": {
+      "model": {
+        "kind": "trained",
+        "model_dir": "<REPO_ROOT>/projects/maxtoki/setup/MaxToki-217M-HF",
+        "attn_implementation": "eager"
+      },
+      "sample": "A",
+      "n_cells": 2000,
+      "script_sha256": "4da5124cd17511be42525b4ee9276ae09e35cb47e84538e47d9feb6d1981d160",
+      "wall_seconds_total": 2068.0,
+      "n_chunks": 6,
+      "min_free_gb": 3.77,
+      "max_mps_driver_gb": 4.35,
+      "encoding_check": "tokenize_counts(check=True) + assert_encoding_batch on every 50-cell batch; 2000 cells in 40 batches passed; tokens equal prepare/cells_A.npz"
+    },
+    "rand0_A": {
+      "model": {
+        "kind": "random_init",
+        "init_seed": 0,
+        "init": "transformers default (LlamaForCausalLM(config))",
+        "initializer_range": 0.02,
+        "attn_implementation": "eager",
+        "state_dict_sha256_cpu": "6e6c47a7571367d25f2d41f70be6c9598c1ca42acd680553cfc1b82d5db97720",
+        "param_std": {
+          "model.embed_tokens.weight": 0.01999765820801258,
+          "model.layers.0.self_attn.q_proj.weight": 0.019985176622867584,
+          "model.layers.10.mlp.down_proj.weight": 0.02001946046948433
+        }
+      },
+      "sample": "A",
+      "n_cells": 2000,
+      "script_sha256": "4da5124cd17511be42525b4ee9276ae09e35cb47e84538e47d9feb6d1981d160",
+      "wall_seconds_total": 1139.0,
+      "n_chunks": 4,
+      "min_free_gb": 5.2,
+      "max_mps_driver_gb": 4.35,
+      "encoding_check": "tokenize_counts(check=True) + assert_encoding_batch on every 50-cell batch; 2000 cells in 40 batches passed; tokens equal prepare/cells_A.npz"
+    },
+    "rand1_A": {
+      "model": {
+        "kind": "random_init",
+        "init_seed": 1,
+        "init": "transformers default (LlamaForCausalLM(config))",
+        "initializer_range": 0.02,
+        "attn_implementation": "eager",
+        "state_dict_sha256_cpu": "b2c94cca6e130bf5754a2309eb16d0259d892b2aeefee125d11cb46cbf02c7b3",
+        "param_std": {
+          "model.embed_tokens.weight": 0.01999865099787712,
+          "model.layers.0.self_attn.q_proj.weight": 0.01998857967555523,
+          "model.layers.10.mlp.down_proj.weight": 0.02000686340034008
+        }
+      },
+      "sample": "A",
+      "n_cells": 2000,
+      "script_sha256": "4da5124cd17511be42525b4ee9276ae09e35cb47e84538e47d9feb6d1981d160",
+      "wall_seconds_total": 1152.2,
+      "n_chunks": 3,
+      "min_free_gb": 5.04,
+      "max_mps_driver_gb": 4.36,
+      "encoding_check": "tokenize_counts(check=True) + assert_encoding_batch on every 50-cell batch; 2000 cells in 40 batches passed; tokens equal prepare/cells_A.npz"
+    },
+    "rand2_A": {
+      "model": {
+        "kind": "random_init",
+        "init_seed": 2,
+        "init": "transformers default (LlamaForCausalLM(config))",
+        "initializer_range": 0.02,
+        "attn_implementation": "eager",
+        "state_dict_sha256_cpu": "0bb668826298bf6bb4361afb71c130aa96929d79b46af1479a6f7c116b0d3040",
+        "param_std": {
+          "model.embed_tokens.weight": 0.019998418167233467,
+          "model.layers.0.self_attn.q_proj.weight": 0.02000352554023266,
+          "model.layers.10.mlp.down_proj.weight": 0.019996605813503265
+        }
+      },
+      "sample": "A",
+      "n_cells": 2000,
+      "script_sha256": "4da5124cd17511be42525b4ee9276ae09e35cb47e84538e47d9feb6d1981d160",
+      "wall_seconds_total": 1143.6,
+      "n_chunks": 3,
+      "min_free_gb": 5.14,
+      "max_mps_driver_gb": 4.36,
+      "encoding_check": "tokenize_counts(check=True) + assert_encoding_batch on every 50-cell batch; 2000 cells in 40 batches passed; tokens equal prepare/cells_A.npz"
+    },
+    "trained_B": {
+      "model": {
+        "kind": "trained",
+        "model_dir": "<REPO_ROOT>/projects/maxtoki/setup/MaxToki-217M-HF",
+        "attn_implementation": "eager"
+      },
+      "sample": "B",
+      "n_cells": 2000,
+      "script_sha256": "1c41677de72c0dff769c3c4322ef29e99047df50233cb84ecfeb44dfdd30f1da",
+      "wall_seconds_total": 1158.7,
+      "n_chunks": 4,
+      "min_free_gb": 6.03,
+      "max_mps_driver_gb": 5.43,
+      "encoding_check": "tokenize_counts(check=True) + assert_encoding_batch on every 50-cell batch; 2000 cells in 40 batches passed; tokens equal prepare/cells_B.npz"
+    },
+    "trained_C": {
+      "model": {
+        "kind": "trained",
+        "model_dir": "<REPO_ROOT>/projects/maxtoki/setup/MaxToki-217M-HF",
+        "attn_implementation": "eager"
+      },
+      "sample": "C",
+      "n_cells": 2000,
+      "script_sha256": "1c41677de72c0dff769c3c4322ef29e99047df50233cb84ecfeb44dfdd30f1da",
+      "wall_seconds_total": 1139.9,
+      "n_chunks": 3,
+      "min_free_gb": 5.91,
+      "max_mps_driver_gb": 2.23,
+      "encoding_check": "tokenize_counts(check=True) + assert_encoding_batch on every 50-cell batch; 2000 cells in 40 batches passed; tokens equal prepare/cells_C.npz"
+    },
+    "rand0_B": {
+      "model": {
+        "kind": "random_init",
+        "init_seed": 0,
+        "init": "transformers default (LlamaForCausalLM(config))",
+        "initializer_range": 0.02,
+        "attn_implementation": "eager",
+        "state_dict_sha256_cpu": "6e6c47a7571367d25f2d41f70be6c9598c1ca42acd680553cfc1b82d5db97720",
+        "param_std": {
+          "model.embed_tokens.weight": 0.01999765820801258,
+          "model.layers.0.self_attn.q_proj.weight": 0.019985176622867584,
+          "model.layers.10.mlp.down_proj.weight": 0.02001946046948433
+        }
+      },
+      "sample": "B",
+      "n_cells": 2000,
+      "script_sha256": "1c41677de72c0dff769c3c4322ef29e99047df50233cb84ecfeb44dfdd30f1da",
+      "wall_seconds_total": 1067.1,
+      "n_chunks": 3,
+      "min_free_gb": 7.14,
+      "max_mps_driver_gb": 2.22,
+      "encoding_check": "tokenize_counts(check=True) + assert_encoding_batch on every 50-cell batch; 2000 cells in 40 batches passed; tokens equal prepare/cells_B.npz"
+    },
+    "rand0_C": {
+      "model": {
+        "kind": "random_init",
+        "init_seed": 0,
+        "init": "transformers default (LlamaForCausalLM(config))",
+        "initializer_range": 0.02,
+        "attn_implementation": "eager",
+        "state_dict_sha256_cpu": "6e6c47a7571367d25f2d41f70be6c9598c1ca42acd680553cfc1b82d5db97720",
+        "param_std": {
+          "model.embed_tokens.weight": 0.01999765820801258,
+          "model.layers.0.self_attn.q_proj.weight": 0.019985176622867584,
+          "model.layers.10.mlp.down_proj.weight": 0.02001946046948433
+        }
+      },
+      "sample": "C",
+      "n_cells": 2000,
+      "script_sha256": "1c41677de72c0dff769c3c4322ef29e99047df50233cb84ecfeb44dfdd30f1da",
+      "wall_seconds_total": 1265.7,
+      "n_chunks": 4,
+      "min_free_gb": 7.12,
+      "max_mps_driver_gb": 2.22,
+      "encoding_check": "tokenize_counts(check=True) + assert_encoding_batch on every 50-cell batch; 2000 cells in 40 batches passed; tokens equal prepare/cells_C.npz"
+    }
+  },
+  "mps_wall_seconds_total": 10134.2,
+  "code": {
+    "v3_spectral.py": "1c41677de72c0dff769c3c4322ef29e99047df50233cb84ecfeb44dfdd30f1da",
+    "v3_spectral_intervals.py": "986fb16a30ecce8cbde219f5bf3e95d857690d8e73a606af224affb1092153c9",
+    "inputs_v3.py": "019e38346748c027a55ce3d32c33c9096f9e60b9434e51e51b1d836a6bfc3707",
+    "hooks_v2.py": "1ba6fda5ad761b1f82041a7b1397fa9332fa7438e13db955a00d751c4b440f54"
+  }
+}

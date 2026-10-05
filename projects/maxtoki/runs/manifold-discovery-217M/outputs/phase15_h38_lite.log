@@ -1,0 +1,50 @@
+======================================================================
+PHASE 15 — frozen-head transfer for H38_LITE_signalling
+======================================================================
+  internal anchors kept: 279/290
+[1] Training anchor LET head on internal panel...
+  [H38_LITE_signalling_internal] trained 1500 epochs in 10.0s
+
+[2] External panel...
+{
+  "panel": "external",
+  "n_anchors_kept": 580,
+  "n_donors": 13,
+  "n_categories": 7,
+  "ruler_max": 5.0,
+  "trustworthiness": 0.8827922573722116,
+  "random_holdout": 0.8027689124567582,
+  "donor_holdout": 0.7588308836487697,
+  "category_holdout": 0.5939387887806408,
+  "global_correlation": 0.8044501515832144,
+  "pass_trust": true,
+  "pass_random": true,
+  "pass_donor": true,
+  "pass_category": true,
+  "n_gates_passing": 4,
+  "verdict": "POSITIVE_external"
+}
+  → <REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/reports/external_validation_H38_lite.json
+
+[3] Zero-shot panel...
+{
+  "panel": "zeroshot",
+  "n_anchors_kept": 154,
+  "n_donors": 12,
+  "n_categories": 7,
+  "ruler_max": 5.0,
+  "trustworthiness": 0.7865437361620568,
+  "random_holdout": 0.7468825111989683,
+  "donor_holdout": 0.5907064673942526,
+  "category_holdout": 0.5852414322226771,
+  "global_correlation": 0.7427088166982272,
+  "pass_trust": false,
+  "pass_random": true,
+  "pass_donor": true,
+  "pass_category": true,
+  "n_gates_passing": 3,
+  "verdict": "FAIL_zeroshot"
+}
+  → <REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/reports/zeroshot_H38_lite.json
+
+Total time: 11.2s

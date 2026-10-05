@@ -1,0 +1,94 @@
+======================================================================
+CIRCUIT TRACING — Remaining phases (7, 9, 10, 11, 12)
+======================================================================
+  loaded 2144011 circuit edges
+  annotations loaded for 39128 features, genes for 56702
+
+[Phase 7] PMI validation...
+  no overlapping layer pairs for PMI validation
+
+[Phase 9] Biological knowledge extraction...
+  annotated edges (both endpoints): 1416229/2144011
+  shared ontology: 511466/1416229 (36.1%)
+  domain-pair meta-graph: 2131 domains, 180821 unique pairs
+  feedback loops: 3569
+
+  Top 20 domain pairs by mean |d|:
+    Activation Of ATR In Response To Re → Multivesicular Body Sorting Pathway  n=    2  |d|=12.99  inh=100%
+    Presynaptic Phase Of Homologous DNA → Multivesicular Body Sorting Pathway  n=    2  |d|=12.97  inh=100%
+    DNA-templated DNA Replication (GO:0 → Multivesicular Body Sorting Pathway  n=    2  |d|=12.89  inh=100%
+    Dual Incision In GG-NER R-HSA-56964 → Multivesicular Body Sorting Pathway  n=    2  |d|=12.44  inh=100%
+    Cell Cycle, Mitotic R-HSA-69278     → Multivesicular Body Sorting Pathway  n=    2  |d|=12.22  inh=100%
+    Oncogene Induced Senescence R-HSA-2 → Multivesicular Body Sorting Pathway  n=    2  |d|=12.14  inh=100%
+    DNA Replication R-HSA-69306         → Multivesicular Body Sorting Pathway  n=    2  |d|=11.82  inh=100%
+    Transcription Of HIV Genome R-HSA-1 → Multivesicular Body Sorting Pathway  n=    2  |d|=11.82  inh=100%
+    MAPK signaling pathway              → Multivesicular Body Sorting Pathway  n=    2  |d|=11.81  inh=100%
+    Removal Of Flap Intermediate R-HSA- → Multivesicular Body Sorting Pathway  n=    2  |d|=11.81  inh=100%
+    DNA Strand Elongation R-HSA-69190   → Multivesicular Body Sorting Pathway  n=    2  |d|=11.65  inh=100%
+    Signaling By NOTCH R-HSA-157118     → Multivesicular Body Sorting Pathway  n=    2  |d|=11.62  inh=100%
+    PIWI-interacting RNA (piRNA) Biogen → Multivesicular Body Sorting Pathway  n=    2  |d|=11.52  inh=100%
+    Nuclear Events Mediated By NFE2L2 R → Multivesicular Body Sorting Pathway  n=    2  |d|=11.44  inh=100%
+    Regulation Of Protein Localization  → Multivesicular Body Sorting Pathway  n=    2  |d|=11.43  inh=100%
+    Resolution Of Sister Chromatid Cohe → Multivesicular Body Sorting Pathway  n=    4  |d|=11.43  inh=100%
+    UCH Proteinases R-HSA-5689603       → Multivesicular Body Sorting Pathway  n=    2  |d|=11.42  inh=100%
+    Kaposi sarcoma-associated herpesvir → Multivesicular Body Sorting Pathway  n=    2  |d|=11.42  inh=100%
+    SARS-CoV-2 Activates/Modulates Inna → Multivesicular Body Sorting Pathway  n=    2  |d|=11.42  inh=100%
+    Inflammatory mediator regulation of → Multivesicular Body Sorting Pathway  n=    2  |d|=11.42  inh=100%
+
+  Early-layer domains (mean layer < 2):
+    L0.0: Inflammatory mediator regulation of TRP channels
+    L0.0: Presynaptic Phase Of Homologous DNA Pairing And Strand Excha
+    L0.0: DNA Replication R-HSA-69306
+    L0.0: Ca-dependent Events R-HSA-111996
+    L0.0: Double-Strand Break Repair Via Break-Induced Replication (GO
+    L0.0: Removal Of Flap Intermediate R-HSA-69166
+    L0.1: Transcription Of HIV Genome R-HSA-167172
+    L0.1: SARS-CoV-2 Activates/Modulates Innate And Adaptive Immune Re
+    L0.1: Attachment Of Mitotic Spindle Microtubules To Kinetochore (G
+    L0.1: DNA Strand Elongation R-HSA-69190
+
+  Late-layer domains (mean layer > 8):
+    L11.0: Human cytomegalovirus infection
+    L11.0: Regulation Of Keratinocyte Differentiation (GO:0045616)
+    L11.0: Signaling By SCF-KIT R-HSA-1433557
+    L11.0: FCGR3A-mediated Phagocytosis R-HSA-9664422
+    L11.0: Regulation Of Cellular Component Biogenesis (GO:0044087)
+    L11.0: Intracellular Glucose Homeostasis (GO:0001678)
+    L11.0: CLEC7A (Dectin-1) Signaling R-HSA-5607764
+    L11.0: Downregulation Of SMAD2/3:SMAD4 Transcriptional Activity R-H
+    L11.0: Signaling By ERBB2 R-HSA-1227986
+    L11.0: Gland Development (GO:0048732)
+  (88s)
+
+[Phase 10] Gene-level predictions...
+  raw gene pairs: 141,592,172
+  filtered (evidence>=2 or |d|>2): 5,442,818
+  match TRRUST: 361 (0.01%)
+  (237s)
+
+[Phase 11] CRISPRi directional validation...
+  computing pseudobulk LFC for 966 source genes...
+  validated pairs: 1,458,016
+  directional accuracy: 54.6% (paper: 56.4%)
+  (111s)
+
+[Phase 12] Disease-relevant circuit mapping...
+  disease-associated domains: 469/2131 (22.0%)
+  centrality: disease median=388  non-disease median=360  Mann-Whitney p=3.83e-01
+
+  Disease category circuit involvement:
+                category  n_domains  n_edges
+     Cell cycle / cancer         87   174209
+Transcription regulation        104   136242
+         Immune response         51   107052
+    Oncogenic signalling         93   104601
+ Protein quality control         51    66482
+     DNA damage / repair         37    52839
+               Apoptosis         27    40637
+  Metastasis / migration         28    17207
+              Metabolism         28    11091
+            Angiogenesis         12     9772
+
+======================================================================
+ALL REMAINING PHASES COMPLETE
+======================================================================

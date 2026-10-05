@@ -1,0 +1,76 @@
+{
+  "panels": {
+    "internal": {
+      "n_anchors": 290,
+      "n_cells": 11804,
+      "n_donors": 11,
+      "n_tissues": 39,
+      "n_cell_types": 28,
+      "n_stages": 24,
+      "max_seq_len": 4096,
+      "median_seq_len": 2043,
+      "tokens_path": "outputs/phase1/cells_internal.npz"
+    },
+    "external": {
+      "n_anchors": 600,
+      "n_cells": 30000,
+      "n_donors": 13,
+      "n_tissues": 46,
+      "n_cell_types": 28,
+      "n_stages": 25,
+      "max_seq_len": 4096,
+      "median_seq_len": 2161,
+      "tokens_path": "outputs/phase1/cells_external.npz"
+    },
+    "zeroshot": {
+      "n_anchors": 160,
+      "n_cells": 7796,
+      "n_donors": 12,
+      "n_tissues": 45,
+      "n_cell_types": 28,
+      "n_stages": 23,
+      "max_seq_len": 4096,
+      "median_seq_len": 2096,
+      "tokens_path": "outputs/phase1/cells_zeroshot.npz"
+    },
+    "lung_control": {
+      "n_anchors": 51,
+      "n_cells": 2124,
+      "n_donors": 4,
+      "n_tissues": 1,
+      "n_cell_types": 14,
+      "n_stages": 12,
+      "max_seq_len": 4096,
+      "median_seq_len": 2219,
+      "tokens_path": "outputs/phase1/cells_lung_control.npz"
+    }
+  },
+  "donors_internal": [
+    "TSP12",
+    "TSP15",
+    "TSP17",
+    "TSP2",
+    "TSP20",
+    "TSP28",
+    "TSP3",
+    "TSP30",
+    "TSP4",
+    "TSP5",
+    "TSP9"
+  ],
+  "donors_external": [
+    "TSP1",
+    "TSP10",
+    "TSP11",
+    "TSP13",
+    "TSP14",
+    "TSP19",
+    "TSP21",
+    "TSP25",
+    "TSP26",
+    "TSP27",
+    "TSP6",
+    "TSP7",
+    "TSP8"
+  ]
+}

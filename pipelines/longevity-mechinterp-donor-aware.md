@@ -23,8 +23,8 @@ The source-paper instantiation produced one positive cell-type-local result (AID
 
 ## 2. Source
 
-- **Paper:** , "Inflammation-Linked Aging Signals in Frozen Single-Cell Foundation Models: Donor-Aware Detection and Robustness Testing", 2026 — [`references/biogerontology_manuscript.pdf`](../references/biogerontology_manuscript.pdf)
-- **Code repo:** [`repos/longevity-mechinterp/`](../repos/longevity-mechinterp/) @ commit `5a61464632a3c3e8bebd396eb1ab17bce1dc2493` (2026-04-01; "Polish manuscript for journal submission"). Public companion at [`Biodyn-AI/longevity-mechinterp`](https://github.com/Biodyn-AI/longevity-mechinterp).
+- **Paper:** Kendiukhov, "Inflammation-Linked Aging Signals in Frozen Single-Cell Foundation Models: Donor-Aware Detection and Robustness Testing", *Biogerontology* 27(4):132, 2026, doi:[10.1007/s10522-026-10471-8](https://doi.org/10.1007/s10522-026-10471-8).
+- **Code repo:** `repos/longevity-mechinterp/` (a clone of the code repository; not part of this release) @ commit `5a61464632a3c3e8bebd396eb1ab17bce1dc2493` (2026-04-01; "Polish manuscript for journal submission"). Public companion at [`Biodyn-AI/longevity-mechinterp`](https://github.com/Biodyn-AI/longevity-mechinterp).
 - **Author project plan:** `repos/longevity-mechinterp/planning/research_plan.md` (working principles, decision gates G1–G4, fine-tuning policy — read first).
 - **Repo README:** `repos/longevity-mechinterp/README.md`.
 - **Stage output README:** `repos/longevity-mechinterp/implementation/outputs/README.md`.

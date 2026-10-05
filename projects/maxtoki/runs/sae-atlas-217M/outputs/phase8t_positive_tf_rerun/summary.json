@@ -1,0 +1,46 @@
+{
+  "scope": "Phase 8t re-run targeted at GATA1/MYC/TAL1 with responding-feature IDs saved",
+  "device": "mps",
+  "n_cells_max": 50,
+  "per_tf_response": {
+    "GATA1": {
+      "detected": true,
+      "n_cells": 50,
+      "responding_feature_ids": [
+        628,
+        1334,
+        2006,
+        2610,
+        2627
+      ],
+      "n_responding": 5
+    },
+    "MYC": {
+      "detected": false,
+      "n_cells": 0,
+      "responding_feature_ids": [],
+      "n_responding": 0
+    },
+    "TAL1": {
+      "detected": false,
+      "n_cells": 0,
+      "responding_feature_ids": [],
+      "n_responding": 0
+    }
+  },
+  "verdict_at_threshold_2": {
+    "GATA1": {
+      "TRRUST": false,
+      "ChIP-seq": true
+    },
+    "MYC": {
+      "TRRUST": false,
+      "ChIP-seq": false
+    },
+    "TAL1": {
+      "TRRUST": false,
+      "ChIP-seq": false
+    }
+  },
+  "interpretation": "See specificity_with_null.csv for full results. The is_specific column at each threshold reports whether \u22651 responding feature has \u2265threshold of its top-20 in the TF's target set. The p_null_specific_>=1 column gives the probability of this happening by random feature draw at the same K. A meaningful 'specific' verdict requires is_specific=True AND n_specific significantly exceeds null_mean."
+}

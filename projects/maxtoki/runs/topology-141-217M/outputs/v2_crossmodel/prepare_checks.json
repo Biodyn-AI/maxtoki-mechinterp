@@ -1,0 +1,477 @@
+{
+  "tensor_keys": {
+    "maxtoki": "model.embed_tokens.weight",
+    "maxtoki_shape": [
+      20275,
+      1232
+    ],
+    "geneformer": "bert.embeddings.word_embeddings.weight",
+    "geneformer_shape": [
+      20275,
+      1152
+    ]
+  },
+  "scgpt_table": {
+    "shape": [
+      60697,
+      512
+    ],
+    "n_vocab": 60697,
+    "n_keys_whose_dict_position_equals_index_value": 1,
+    "first_5_keys_with_index_values": [
+      [
+        "RP5-973N23.5",
+        60693
+      ],
+      [
+        "RP11-182N22.10",
+        60689
+      ],
+      [
+        "CTB-53D8.3",
+        60687
+      ],
+      [
+        "RP11-348N17.2",
+        60685
+      ],
+      [
+        "RP11-205M20.8",
+        60682
+      ]
+    ],
+    "n_upper_case_collisions_in_vocab": 0
+  },
+  "scgpt_checkpoint": {
+    "embedding_key": "encoder.embedding.weight",
+    "raw_equals_checkpoint_max_abs_diff": 0.0,
+    "enc_norm_keys": [
+      "encoder.enc_norm.weight",
+      "encoder.enc_norm.bias"
+    ],
+    "normed_equals_layernorm_raw_max_abs_diff": 1.430511474609375e-06
+  },
+  "scgpt_sanity_pairs": {
+    "pairs": [
+      {
+        "pair": "RPL3-RPL5",
+        "cos_fixed": 0.468757688999176,
+        "cos_deployed": 0.09838143736124039,
+        "deployed_row_is_gene": [
+          "RP11-404P21.3",
+          "RNU2-57P"
+        ]
+      },
+      {
+        "pair": "RPS3-RPS6",
+        "cos_fixed": 0.5990650653839111,
+        "cos_deployed": 0.13601604104042053,
+        "deployed_row_is_gene": [
+          "snoZ196",
+          "RP13-349O20.2"
+        ]
+      },
+      {
+        "pair": "CD3D-CD3E",
+        "cos_fixed": 0.6245484352111816,
+        "cos_deployed": 0.272491991519928,
+        "deployed_row_is_gene": [
+          "RCC2P6",
+          "RP11-1094M14.5"
+        ]
+      },
+      {
+        "pair": "CD79A-CD79B",
+        "cos_fixed": 0.48672813177108765,
+        "cos_deployed": -0.02677251771092415,
+        "deployed_row_is_gene": [
+          "MIR3973",
+          "RNU6-456P"
+        ]
+      },
+      {
+        "pair": "HBA1-HBB",
+        "cos_fixed": 0.5728061199188232,
+        "cos_deployed": -0.054645195603370667,
+        "deployed_row_is_gene": [
+          "RP11-739G5.1",
+          "RP4-657D16.6"
+        ]
+      },
+      {
+        "pair": "STAT1-STAT2",
+        "cos_fixed": 0.19078028202056885,
+        "cos_deployed": 0.10728858411312103,
+        "deployed_row_is_gene": [
+          "RP11-419C5.3",
+          "JARID2-AS1"
+        ]
+      },
+      {
+        "pair": "TP53-GAPDH",
+        "cos_fixed": -0.08518092334270477,
+        "cos_deployed": 0.0485306940972805,
+        "deployed_row_is_gene": [
+          "MIR4768",
+          "RP11-467N20.8"
+        ]
+      }
+    ],
+    "random_pair_cos_mean_sd": [
+      0.08902216702699661,
+      0.10384857654571533
+    ]
+  },
+  "panel_gene_overlap": {
+    "lung|immune": {
+      "shared": 75,
+      "jaccard": 0.1141552511415525
+    },
+    "lung|external_lung": {
+      "shared": 168,
+      "jaccard": 0.2828282828282828
+    },
+    "immune|external_lung": {
+      "shared": 77,
+      "jaccard": 0.11791730474732007
+    },
+    "shared_by_all_three": 36,
+    "union": 828
+  },
+  "domains": {
+    "lung": {
+      "n_rows_gene_features": 382,
+      "maxtoki_token_id_matches_token_dictionary": 382,
+      "n_gf": 382,
+      "gf_token_id_equals_maxtoki_token_id": 382,
+      "n_scgpt": 382,
+      "scgpt_fixed_lookup_exact_case": 382,
+      "scgpt_fixed_available_for_all_deployed_genes": true,
+      "scgpt_deployed_row_equals_fixed_row": 0,
+      "scgpt_deployed_examples_symbol_to_gene_actually_read": [
+        [
+          "PDK4",
+          "IQUB"
+        ],
+        [
+          "KMT2E",
+          "PSMD2"
+        ],
+        [
+          "MYCBP2",
+          "LINC00500"
+        ],
+        [
+          "LAMP2",
+          "ZNF620"
+        ],
+        [
+          "RALA",
+          "RP11-124D2.3"
+        ],
+        [
+          "PAFAH1B1",
+          "RP11-429J17.4"
+        ],
+        [
+          "JARID2",
+          "RPS27AP6"
+        ],
+        [
+          "SEC62",
+          "RN7SL818P"
+        ]
+      ],
+      "scgpt_fixed_rows_vs_npz_max_abs_diff": 0.0,
+      "scgpt_fixed_rows_checked_vs_npz": 382
+    },
+    "immune": {
+      "n_rows_gene_features": 350,
+      "maxtoki_token_id_matches_token_dictionary": 350,
+      "n_gf": 350,
+      "gf_token_id_equals_maxtoki_token_id": 350,
+      "n_scgpt": 350,
+      "scgpt_fixed_lookup_exact_case": 350,
+      "scgpt_fixed_available_for_all_deployed_genes": true,
+      "scgpt_deployed_row_equals_fixed_row": 0,
+      "scgpt_deployed_examples_symbol_to_gene_actually_read": [
+        [
+          "CREBBP",
+          "RP5-966M1.4"
+        ],
+        [
+          "JARID2",
+          "RPS27AP6"
+        ],
+        [
+          "HIVEP2",
+          "PPP4R3B"
+        ],
+        [
+          "ZMYND11",
+          "SNORD113-5"
+        ],
+        [
+          "RUNX3",
+          "RN7SKP96"
+        ],
+        [
+          "RB1CC1",
+          "LGALS8-AS1"
+        ],
+        [
+          "POU2F2",
+          "IGKV1D-8"
+        ],
+        [
+          "PIAS1",
+          "Y_RNA_ENSG00000199936"
+        ]
+      ],
+      "scgpt_fixed_rows_vs_npz_max_abs_diff": 0.0,
+      "scgpt_fixed_rows_checked_vs_npz": 350
+    },
+    "external_lung": {
+      "n_rows_gene_features": 380,
+      "maxtoki_token_id_matches_token_dictionary": 380,
+      "n_gf": 380,
+      "gf_token_id_equals_maxtoki_token_id": 380,
+      "n_scgpt": 380,
+      "scgpt_fixed_lookup_exact_case": 380,
+      "scgpt_fixed_available_for_all_deployed_genes": true,
+      "scgpt_deployed_row_equals_fixed_row": 0,
+      "scgpt_deployed_examples_symbol_to_gene_actually_read": [
+        [
+          "C3",
+          "TMEM273"
+        ],
+        [
+          "TGOLN2",
+          "GUSBP17"
+        ],
+        [
+          "GNAI2",
+          "RP11-1348G14.8"
+        ],
+        [
+          "LAPTM4A",
+          "ENSG00000201592.1"
+        ],
+        [
+          "KRT18",
+          "NNMT"
+        ],
+        [
+          "DNAJC3",
+          "RNU6-557P"
+        ],
+        [
+          "LGALS3",
+          "OPRM1"
+        ],
+        [
+          "TMCO1",
+          "MIR5189"
+        ]
+      ],
+      "scgpt_fixed_rows_vs_npz_max_abs_diff": 0.0,
+      "scgpt_fixed_rows_checked_vs_npz": 380
+    }
+  },
+  "reproduction_of_deployed": {
+    "lung/gf": {
+      "n": 382,
+      "d_align": 30,
+      "cca_mean_r": 0.7831083136328606,
+      "deployed_cca_mean_r": 0.7831083136328606,
+      "cca_top_r": 0.9528233700010664,
+      "deployed_cca_top_r": 0.9528233700010664,
+      "cca_all_r": [
+        0.9528233700010664,
+        0.9073650749547447,
+        0.8709423741507578,
+        0.7937813826151098,
+        0.7699480330189106,
+        0.7625413664971554,
+        0.7219739217758556,
+        0.7041349785445974,
+        0.6906548393847378,
+        0.656917795385669
+      ],
+      "cca_convergence_warnings": 0,
+      "pairwise_pearson": 0.3979362112536353,
+      "deployed_pairwise_pearson": 0.3979362101701208,
+      "pairwise_spearman": 0.3523027950087112,
+      "deployed_pairwise_spearman": 0.3523027968920456,
+      "top1": 0.450261780104712,
+      "deployed_top1": 0.450261780104712,
+      "max_abs_diff_vs_deployed": 1.8833343773394517e-09
+    },
+    "lung/scgpt_deployed": {
+      "n": 382,
+      "d_align": 30,
+      "cca_mean_r": 0.40108044687701455,
+      "deployed_cca_mean_r": 0.4010804468770145,
+      "cca_top_r": 0.47567612855063096,
+      "deployed_cca_top_r": 0.4756761285506309,
+      "cca_all_r": [
+        0.47567612855063096,
+        0.4655347440992111,
+        0.4428970782810537,
+        0.4225998670418033,
+        0.4031343471692156,
+        0.40246090247785643,
+        0.3869038244020537,
+        0.35674322617453186,
+        0.339228130612183,
+        0.3156262199616061
+      ],
+      "cca_convergence_warnings": 1,
+      "pairwise_pearson": -0.008399487606902865,
+      "deployed_pairwise_pearson": -0.0083994860202791,
+      "pairwise_spearman": -0.007124138676013587,
+      "deployed_pairwise_spearman": -0.0071241409764198,
+      "top1": 0.049738219895287955,
+      "deployed_top1": 0.0497382198952879,
+      "max_abs_diff_vs_deployed": 2.3004062136081083e-09
+    },
+    "immune/gf": {
+      "n": 350,
+      "d_align": 30,
+      "cca_mean_r": 0.7757347694928558,
+      "deployed_cca_mean_r": 0.7757347694928558,
+      "cca_top_r": 0.9035268050838029,
+      "deployed_cca_top_r": 0.9035268050838028,
+      "cca_all_r": [
+        0.9035268050838029,
+        0.866001586001037,
+        0.8330633841936754,
+        0.8140519279974874,
+        0.7939261484746641,
+        0.7614259174687854,
+        0.732817404531109,
+        0.6948685989882598,
+        0.6928731148179533,
+        0.6647928073717841
+      ],
+      "cca_convergence_warnings": 1,
+      "pairwise_pearson": 0.4003279654067243,
+      "deployed_pairwise_pearson": 0.4003279636874686,
+      "pairwise_spearman": 0.3666568884963597,
+      "deployed_pairwise_spearman": 0.366656881550212,
+      "top1": 0.4657142857142857,
+      "deployed_top1": 0.4657142857142857,
+      "max_abs_diff_vs_deployed": 6.9461477125720705e-09
+    },
+    "immune/scgpt_deployed": {
+      "n": 350,
+      "d_align": 30,
+      "cca_mean_r": 0.4381780902651185,
+      "deployed_cca_mean_r": 0.4381780902651185,
+      "cca_top_r": 0.5472513123687882,
+      "deployed_cca_top_r": 0.5472513123687882,
+      "cca_all_r": [
+        0.5472513123687882,
+        0.5113343279715351,
+        0.4924421403026757,
+        0.4608186230314353,
+        0.43155423603807874,
+        0.42115402622139947,
+        0.4063490044760318,
+        0.400494132226018,
+        0.36481505315209434,
+        0.34556804686312875
+      ],
+      "cca_convergence_warnings": 0,
+      "pairwise_pearson": -0.018784157507688113,
+      "deployed_pairwise_pearson": -0.0187841543434248,
+      "pairwise_spearman": -0.018442342054522415,
+      "deployed_pairwise_spearman": -0.0184423314810516,
+      "top1": 0.06571428571428571,
+      "deployed_top1": 0.0657142857142857,
+      "max_abs_diff_vs_deployed": 1.0573470814179142e-08
+    },
+    "external_lung/gf": {
+      "n": 380,
+      "d_align": 30,
+      "cca_mean_r": 0.7661705028380451,
+      "deployed_cca_mean_r": 0.7661705028380451,
+      "cca_top_r": 0.9583008916577042,
+      "deployed_cca_top_r": 0.9583008916577042,
+      "cca_all_r": [
+        0.9583008916577042,
+        0.8865156161891902,
+        0.8274625172945844,
+        0.8075113483642621,
+        0.7865472947469689,
+        0.7446254164591419,
+        0.7238648737118017,
+        0.6967210499702653,
+        0.6256414741966136,
+        0.6045145457899191
+      ],
+      "cca_convergence_warnings": 0,
+      "pairwise_pearson": 0.3873742025480153,
+      "deployed_pairwise_pearson": 0.3873742039695625,
+      "pairwise_spearman": 0.3507439295352744,
+      "deployed_pairwise_spearman": 0.3507439558298275,
+      "top1": 0.3815789473684211,
+      "deployed_top1": 0.3815789473684211,
+      "max_abs_diff_vs_deployed": 2.6294553090444595e-08
+    },
+    "external_lung/scgpt_deployed": {
+      "n": 380,
+      "d_align": 30,
+      "cca_mean_r": 0.40574059184960853,
+      "deployed_cca_mean_r": 0.4057405918496085,
+      "cca_top_r": 0.5056818869380715,
+      "deployed_cca_top_r": 0.5056818869380715,
+      "cca_all_r": [
+        0.5056818869380715,
+        0.47714960487390284,
+        0.44844427386946734,
+        0.4335573056994407,
+        0.40416725335774656,
+        0.391254605840062,
+        0.3843923968812415,
+        0.3554293508417762,
+        0.34221412718430233,
+        0.31511511301007483
+      ],
+      "cca_convergence_warnings": 0,
+      "pairwise_pearson": -0.004658742750740023,
+      "deployed_pairwise_pearson": -0.0046587425605321,
+      "pairwise_spearman": -0.002968614287724799,
+      "deployed_pairwise_spearman": -0.0029686328076906,
+      "top1": 0.07631578947368421,
+      "deployed_top1": 0.0763157894736842,
+      "max_abs_diff_vs_deployed": 1.8519965800951194e-08
+    }
+  },
+  "timing_seconds": {
+    "lung/gf": {
+      "pca_s": 0.0948781967163086,
+      "cca_s": 0.05218005180358887
+    },
+    "lung/scgpt_deployed": {
+      "pca_s": 0.051009178161621094,
+      "cca_s": 0.08386683464050293
+    },
+    "immune/gf": {
+      "pca_s": 0.05148625373840332,
+      "cca_s": 0.0861368179321289
+    },
+    "immune/scgpt_deployed": {
+      "pca_s": 0.04136085510253906,
+      "cca_s": 0.06667804718017578
+    },
+    "external_lung/gf": {
+      "pca_s": 0.04395604133605957,
+      "cca_s": 0.05564522743225098
+    },
+    "external_lung/scgpt_deployed": {
+      "pca_s": 0.026546001434326172,
+      "cca_s": 0.03229713439941406
+    }
+  }
+}

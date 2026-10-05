@@ -1,0 +1,43 @@
+{
+  "without_TSP2_H65": {
+    "per_branch": {
+      "T_lineage": {
+        "n_test": 39,
+        "n_stages": 3,
+        "rho": -0.058834733313572814
+      },
+      "macrophage": {
+        "n_test": 24,
+        "n_stages": 1,
+        "rho": null
+      },
+      "B_lineage": {
+        "n_test": 15,
+        "n_stages": 3,
+        "rho": 0.39233704734893665
+      },
+      "monocyte": {
+        "n_test": 8,
+        "n_stages": 1,
+        "rho": null
+      },
+      "granulocyte": {
+        "n_test": 9,
+        "n_stages": 2,
+        "rho": 0.8448515439259914
+      },
+      "NK": {
+        "n_test": 4,
+        "n_stages": 1,
+        "rho": null
+      }
+    },
+    "mean": 0.3927846193204518,
+    "n_scored": 3,
+    "sd_across_branches": 0.45184330487269353,
+    "t_ci95_over_branches": [
+      -0.7296563741157078,
+      1.5152256127566115
+    ]
+  }
+}

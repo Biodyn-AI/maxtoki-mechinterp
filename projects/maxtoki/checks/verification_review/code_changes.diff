@@ -1,0 +1,380 @@
+--- original/numtext.py
++++ fixed/numtext.py
+@@ -103,7 +103,10 @@
+                   r"(?:\[[^\]]*\])?(?:\{[^{}]*(?:\{[^{}]*\}[^{}]*)*\})*")
+     t = _blank(t, r"\\begin\{(?:longtable|tabular\*?|tabularx|table\*?|figure\*?)\}(?:\[[^\]]*\])?(?:\{[^{}]*(?:\{[^{}]*\}[^{}]*)*\})*")
+     t = _blank(t, r"[pmb]\{\s*[\d.]+\s*\\(?:linewidth|textwidth|columnwidth)\s*\}")
+-    t = _blank(t, r"[\d.]+\s*(?:pt|cm|mm|in|em|ex|bp)\b")
++    # LaTeX lengths are written attached ("0.2in", "4pt"). No whitespace allowed here: with "\s*" a
++    # number followed by the English word "in" (e.g. "0.190, against 0.59\nin the source study") was
++    # blanked as if it were a length (fixed in the 2026-10-01 verification pass; see CHECKER_REPORT.md).
++    t = _blank(t, r"(?<![\w.])[\d.]+(?:pt|cm|mm|in|em|ex|bp)\b")
+     t = _blank(t, r"[\d.]+\s*\\(?:linewidth|textwidth|columnwidth|baselineskip)")
+     t = _blank(t, r"\\(?:tabcolsep|arraystretch)\S*")
+     t = _blank(t, r"\\[a-zA-Z]+\d+")                                                      # macros with digits
+--- original/run_manifest_check.py
++++ fixed/run_manifest_check.py
+@@ -18,7 +18,10 @@
+ M2  Gate recomputation. Every JSON object that stores a pass/fail flag together with thresholds (or
+     that sits in a run with a frozen gates file) is re-evaluated from its own numbers. Flags:
+     recorded flag disagrees with the recomputed one; a declared gate has no value (never computed);
+-    a value within 0.005 of its threshold ("boundary").
++    a value within 0.005 of its threshold ("boundary"). Which declared gates are required depends on
++    the panel when the frozen file says so (manifold: five gates on the internal panel, four on the
++    external panel); a panel the frozen rules do not name gets GATE_SET_FOR_PANEL_UNSTATED (a pointer
++    for a human, not blocking).
+ M3  Phase coverage: phases named in the spec's Methodology vs a machine-readable `phases_run` list
+     in the run outputs (if any).
+ M4  Reproducibility records: seeds set in scripts that use randomness; a pinned environment file;
+@@ -242,6 +245,7 @@
+     run_dir = PROJ / "runs" / run
+     jfiles = run_files(run_dir, ".json")
+     frozen, frozen_proto = None, None
++    four_gate_outside_internal = False   # frozen promotion rule: only four gates on the external panel
+     for jp in jfiles:
+         if re.search(r"gates?_spec", jp.name):
+             try:
+@@ -249,6 +253,8 @@
+                 if isinstance(obj.get("gates"), dict):
+                     frozen = (rel(jp), obj["gates"])
+                     frozen_proto = obj.get("evaluation_protocol")
++                    rules = " ".join(map(str, obj.get("promotion_rules", [])))
++                    four_gate_outside_internal = bool(re.search(r"four gates on the [\w\s-]*external panel", rules, re.I))
+             except (OSError, ValueError):
+                 pass
+     rows = []
+@@ -321,7 +327,21 @@
+                     if abs(v - float(thr[gk])) < 0.005 and not gk.startswith("n_"):
+                         boundary.append(f"{mk}={v:.4f} vs {thr[gk]}")
+             declared = [g for g in thr if g.endswith(("_min", "_max"))]
+-            missing = [g for g in declared if g not in used]
++            # Which gates does the frozen file require for THIS panel? (added in the 2026-10-01 verification
++            # pass). The manifold gate file says: all five gates on the internal panel, all four gates on the
++            # external panel. An object with no panel key, or panel "internal", needs every declared gate.
++            panel = d.get("panel", obj.get("panel") if isinstance(obj, dict) else None)
++            perm_gates = [g for g in declared if g in ("blocked_permutation_p_max", "n_permutations_min")]
++            panel_rule = "all declared gates (internal panel or no panel key)"
++            not_required, rule_unstated = [], False
++            if four_gate_outside_internal and isinstance(panel, str) and panel != "internal":
++                if "external" in panel or "expected_to_fail" in d:
++                    not_required = perm_gates
++                    panel_rule = f"panel '{panel}': frozen rule requires four gates outside the internal panel"
++                else:
++                    rule_unstated = True
++                    panel_rule = f"panel '{panel}': the frozen rules name only the internal and external panels"
++            missing = [g for g in declared if g not in used and g not in not_required]
+             recomputed = all(results) if results else None
+             rec = d[pk]
+             # protocol check: metric keys that encode a neighbour count different from the frozen protocol
+@@ -334,6 +354,8 @@
+                 status = "NOT_RECOMPUTED"
+             elif rec != recomputed:
+                 status = "INCONSISTENT"
++            elif rec and missing and rule_unstated:
++                status = "CONSISTENT; GATE_SET_FOR_PANEL_UNSTATED"
+             elif rec and missing:
+                 status = "PASS_WITH_UNCOMPUTED_GATES"
+             else:
+@@ -344,7 +366,8 @@
+                 status += f"; PROTOCOL_K_DIFFERS({kdev} vs k={proto_k})"
+             rows.append(dict(run=run, file=rel(jp), object=path or "(root)", pattern="named metrics",
+                              recorded_pass=rec, recomputed_pass=recomputed, status=status,
+-                             detail=f"thresholds from {thr_src}; " + ", ".join(f"{k}={v:.4f}" for k, v in metrics.items()),
++                             detail=f"thresholds from {thr_src}; " + ", ".join(f"{k}={v:.4f}" for k, v in metrics.items())
++                             + f"; required gates: {panel_rule}",
+                              missing_gates=";".join(missing), boundary=";".join(boundary)))
+     return rows, frozen
+ 
+--- original/summarize_results.py
++++ fixed/summarize_results.py
+@@ -110,6 +110,40 @@
+         untraced_not_in_spec=sum(r["traced"] == "False" and r["also_in_spec"] == "False" for r in rs),
+         interval_note="Wilson over numbers; bootstrap = 2,000 resamples of numbers (rows pooled over the 13 FINAL_SUMMARY documents; a number written in two copies of a summary counts twice)",
+         docs=nt["docs"], paper=nt["paper"], classes=nt["classes"])
++    # Distinct numbers per run (added in the 2026-10-01 verification pass). The pooled rows above count a
++    # number twice when it is written in two copies of the same run summary (summaries/ and the run folder).
++    # Here each (run, value, half-width, %) counts once. Intervals: Wilson over distinct numbers;
++    # percentile bootstrap over distinct numbers (2,000 resamples); and a run-level cluster bootstrap
++    # (2,000 resamples of the 8 runs, numbers kept together), because numbers in one run share one corpus.
++    dmap = {}
++    for r in rs:
++        dmap.setdefault((r["run"], round(float(r["value"]), 12), round(float(r["half_width"]), 15), r["pct"]), r)
++    du = list(dmap.values())
++    dtr = np.array([r["traced"] == "True" for r in du], float)
++    dch = np.array([float(r["chance_rate"]) for r in du])
++    dex = dtr - dch
++    didx = np.random.default_rng(SEED).integers(0, len(du), size=(2000, len(du)))
++    druns = sorted({r["run"] for r in du})
++    by_run = {R: np.array([i for i, r in enumerate(du) if r["run"] == R]) for R in druns}
++    crng = np.random.default_rng(SEED)
++    cl = []
++    for _ in range(2000):
++        ii = np.concatenate([by_run[druns[j]] for j in crng.integers(0, len(druns), len(druns))])
++        cl.append((dtr[ii].mean(), dch[ii].mean(), dex[ii].mean()))
++    cl = np.array(cl)
++    pc = lambda a: [round(float(np.percentile(a, 2.5)), 4), round(float(np.percentile(a, 97.5)), 4)]
++    out["number_trace"]["distinct_per_run"] = dict(
++        n_numbers=len(du), traced=int(dtr.sum()), traced_share=round(float(dtr.mean()), 4),
++        traced_wilson=wilson(int(dtr.sum()), len(du)), traced_cluster_ci=pc(cl[:, 0]),
++        weak=sum(r["weak"] == "True" for r in du),
++        mean_chance=round(float(dch.mean()), 4), mean_chance_ci=pc(dch[didx].mean(1)), mean_chance_cluster_ci=pc(cl[:, 1]),
++        excess=round(float(dex.mean()), 4), excess_ci=pc(dex[didx].mean(1)), excess_cluster_ci=pc(cl[:, 2]),
++        untraced=len(du) - int(dtr.sum()),
++        untraced_not_in_spec=sum(r["traced"] == "False" and r["also_in_spec"] == "False" for r in du),
++        n_runs=len(druns), n_rows_pooled=pooled_n, n_rows_that_repeat_a_number=pooled_n - len(du),
++        interval_note="unit = distinct number per run (run, value, half-width, %); Wilson over numbers; "
++                      "'_ci' = percentile bootstrap over numbers (2,000); '_cluster_ci' = percentile bootstrap "
++                      "over the 8 runs (2,000), which keeps the numbers of one run together")
+     pap = load_csv("number_trace_paper_numbers.csv")
+     out["number_trace"]["paper_not_chain"] = [dict(line=r["line"], raw=r["raw"], in_summaries=r["in_summaries"],
+                                                    traced=r["traced"], context=r["context"][:100]) for r in pap if r["chain_trace"] == "False"]
+@@ -160,7 +194,10 @@
+         interval_lines_naming_method=sum(int(r["interval_lines_naming_method"]) for r in cis),
+         interval_lines_naming_method_and_unit=sum(int(r["interval_lines_naming_method_and_unit"]) for r in cis),
+         docs_with_scope_heading=sum(r["scope_or_limitation_heading_lines"] != "none" for r in cis),
+-        p9_word_lines=sum(int(r["n_lines"]) for r in wd),
++        p9_word_lines=sum(int(r["n_lines"]) for r in wd),   # term-line hits: a line with two terms counts twice
++        # distinct lines (added in the verification pass); exact because no term has more than 15 lines per document
++        p9_distinct_lines=len({(r["doc"], ln) for r in wd for ln in r["lines"].split(";") if ln}),
++        p9_max_lines_per_term=max((int(r["n_lines"]) for r in wd), default=0),
+     )
+     md.append("\n## run_manifest_check: flagged parameter deviations\n")
+     md.append("| run | spec parameter | value(s) used | spec default | spec range | status | reason written down? |")
+@@ -215,8 +252,12 @@
+                        action=("reason is written down; human approves or orders a re-run" if d["reason"] else
+                                "write the reason; human approves or orders a re-run"), owner="human"))
+     for g in out["run_manifest"]["gate_flags"]:
++        if g["status"] == "CONSISTENT; GATE_SET_FOR_PANEL_UNSTATED":
++            action, owner = "decide which frozen gates apply to this panel (the gate file names only internal and external)", "human"
++        else:
++            action, owner = "compute the missing gate or correct the recorded verdict", "agent (compute) + human (accept)"
+         rq.append(dict(check="run_manifest M2", target=g["run"], location=f"{g['file']}:{g['object']}", finding=g["status"],
+-                       action="compute the missing gate or correct the recorded verdict", owner="agent (compute) + human (accept)"))
++                       action=action, owner=owner))
+     with open(RESULTS / "repair_queue.csv", "w", newline="") as fh:
+         w = csv.DictWriter(fh, fieldnames=["check", "target", "location", "finding", "action", "owner"])
+         w.writeheader()
+--- original/requirements_table.py
++++ fixed/requirements_table.py
+@@ -16,8 +16,10 @@
+ HERE = Path(__file__).resolve().parent
+ S = json.loads((HERE / "results" / "checker_summary.json").read_text())
+ L, N, M = S["spec_lint"], S["number_trace"], S["run_manifest"]
++D = N["distinct_per_run"]
+ M4, M5 = M["m4_totals"], M["m5_totals"]
+-X = S.get("crosscheck_manual_audit", {}).get("by_manual_status", {})
++XC = S.get("crosscheck_manual_audit", {})
++X = XC.get("by_manual_status", {})
+ wrong = X.get("MISMATCH", {}).get("n", 0) + X.get("DIFFERENT ENDPOINT", {}).get("n", 0)
+ wrong_traced = X.get("MISMATCH", {}).get("traced_any_run", 0) + X.get("DIFFERENT ENDPOINT", {}).get("traced_any_run", 0)
+ paper_union = next(r for r in N["paper"] if r["scope"].startswith("paper_vs_union_of"))
+@@ -121,15 +123,18 @@
+     dict(id="A6", group="Wording", requirement="No causal / mechanistic overreach (P9)",
+          source="audit P9",
+          deployment="Audit P9 by reading; verb swaps in summaries.",
+-         deployment_result=f"{M5['p9_word_lines']} lines in the 13 FINAL_SUMMARY files contain a word from the P9 list (pointers only).",
++         deployment_result=f"{M5['p9_distinct_lines']} distinct lines in the 13 FINAL_SUMMARY files contain a word from the P9 list ({M5['p9_word_lines']} term hits; pointers only).",
+          checked_by=CODE + " (word list) + " + JUDG + " + " + HUMAN + " (final wording)",
+          detection="run_manifest_wording.csv lists term and line.", repair_trigger="Reader decides; no automatic repair.",
+          not_established="Whether a flagged word is wrong in context; overreach without the listed words."),
+     dict(id="A7", group="Gates", requirement="Pre-registered gates computed from artefacts; never loosened; all declared gates evaluated",
+          source="manifold spec 'Critical design rules'; runs/manifold-discovery-217M/reports/quality_gates_spec.json",
+          deployment="Manifold: a frozen gate file (agent-written) and pass flags computed by run scripts. Attention: phase12_verdict.py computed C1-C4 by code. Nothing re-checked the flags.",
+-         deployment_result=(f"{gate_unc} manifold objects record PASS while the declared permutation gate was never computed; the lung_control negative control passed; "
+-                            "H103 used k=5 for trustworthiness vs the frozen k=15; attention K562 C3 stores a 'fraction' of -13,421."),
++         deployment_result=(f"{gate_unc} manifold internal-panel objects record PASS while the declared permutation gate (required on the internal panel) was never computed; "
++                            "the external-panel verdicts need only four gates under the frozen rules; the first lung negative control (lung_control) "
++                            "passed, and the run itself rebuilt it as lung_nonhema, which failed as expected (FINAL_SUMMARY lines 39-40); "
++                            "H103 used k=5 for trustworthiness vs the frozen k=15 (reason written in the file: 18 anchors); "
++                            "attention K562 C3 stores a 'fraction' of -13,421."),
+          checked_by=CODE, detection="run_manifest_gates.csv status INCONSISTENT / PASS_WITH_UNCOMPUTED_GATES / NEGATIVE_CONTROL_PASSED / PROTOCOL_K_DIFFERS / IMPLAUSIBLE_FRACTION; --strict exits 1.",
+          repair_trigger="repair_queue row: agent computes the missing gate or corrects the verdict; human accepts.",
+          not_established="Gates stored in prose or in non-standard JSON; the attention C4 object is ambiguous and not recomputed."),
+@@ -144,12 +149,15 @@
+     dict(id="N1", group="Number provenance", requirement="Every number in a run summary comes from that run's outputs",
+          source="Paper main.tex:652-656 (human spot-check); audit pitfall 2",
+          deployment="Claimed human spot-checks; no record of any [inv:audit_history]. The audit 'stopped at the markdown layer'.",
+-         deployment_result=(f"{N['traced']} of {N['summary_rows_all_docs']} summary numbers are found within rounding (Wilson 95% CI {N['traced_wilson'][0]:.3f}-{N['traced_wilson'][1]:.3f}); "
+-                            f"but random numbers of the same format are found {N['mean_chance']:.2f} of the time (95% CI {N['mean_chance_ci'][0]:.2f}-{N['mean_chance_ci'][1]:.2f}). "
+-                            f"{N['untraced_not_in_spec']} numbers that are not spec quotes are untraced."),
++         deployment_result=(f"{D['traced']} of {D['n_numbers']} distinct summary numbers (per run) are found within rounding (Wilson 95% CI {D['traced_wilson'][0]:.3f}-{D['traced_wilson'][1]:.3f}); "
++                            f"but random numbers of the same format are found {D['mean_chance']:.2f} of the time (95% CI over runs {D['mean_chance_cluster_ci'][0]:.2f}-{D['mean_chance_cluster_ci'][1]:.2f}); "
++                            f"excess over chance {D['excess']:.2f} (95% CI over runs {D['excess_cluster_ci'][0]:.2f}-{D['excess_cluster_ci'][1]:.2f}). "
++                            f"{D['untraced_not_in_spec']} distinct numbers that are not spec quotes are untraced."),
+          checked_by=CODE, detection="number_trace_numbers.csv traced=False; WEAK flag when the number's own chance rate >= 0.5; --strict exits 1.",
+          repair_trigger="repair_queue row per untraced number; agent traces it or corrects the text.",
+-         not_established=f"Correctness or meaning. {wrong_traced} of {wrong} paper numbers that a manual audit judged wrong in meaning are still 'found' in the outputs."),
++         not_established=(f"Correctness or meaning. {wrong_traced} of {wrong} paper number mentions "
++                          f"({XC.get('n_distinct_values_wrong_in_meaning_traced', '?')} of {XC.get('n_distinct_values_wrong_in_meaning', '?')} distinct values) "
++                          "that a manual audit judged wrong in meaning are still 'found' in the outputs.")),
+     dict(id="N2", group="Number provenance", requirement="Every number in the paper matches a run summary and that run's outputs",
+          source="Revision plan section 7 (RESULTS_MAP)",
+          deployment="None.",
+--- original/README.md
++++ fixed/README.md
+@@ -83,7 +83,9 @@
+    rate. A traced number with chance rate ≥ 0.5 is flagged WEAK.
+ 5. Intervals: traced share — Wilson 95% interval, unit = distinct number in a document. Mean chance
+    rate and "excess" (traced − chance, paired per number) — percentile bootstrap 95%, 2,000
+-   resamples of numbers, seed 20261001.
++   resamples of numbers, seed 20261001. Pooled over runs, `summarize_results.py` counts each number
++   once per run (two copies of the same summary are not double-counted) and adds a run-level
++   bootstrap (2,000 resamples of the 8 runs), because numbers from one run share one corpus.
+ 
+ `--strict`: exit 1 if any FINAL_SUMMARY number that is not also written in the spec is untraced.
+ 
+@@ -105,7 +107,7 @@
+ | id | What it checks | Blocking under `--strict` |
+ |---|---|---|
+ | M1 | For each spec Parameters row: value(s) used vs the parsed default and range → MATCH_DEFAULT, IN_RANGE_NOT_DEFAULT, OUT_OF_RANGE, DIFFERS_NO_RANGE_GIVEN, SPEC_NOT_MACHINE_READABLE, DESCRIPTOR_NOT_JUDGED, NO_EVIDENCE_FOUND. Recorded JSON values outrank script constants. For a deviation, looks for a line in the run's scripts/README naming both values and a reason word. | a deviation with no written reason |
+-| M2 | Gate recomputation: JSON objects with a pass flag are re-evaluated from their own numbers against thresholds in the same file or the run's frozen gates file. Flags INCONSISTENT, PASS_WITH_UNCOMPUTED_GATES (a declared gate has no value), NEGATIVE_CONTROL_PASSED (`expected_to_fail: true` but passed), PROTOCOL_K_DIFFERS (metric key encodes a different k than the frozen protocol), IMPLAUSIBLE_FRACTION, boundary values within 0.005. | INCONSISTENT, PASS_WITH_UNCOMPUTED_GATES, NEGATIVE_CONTROL_PASSED, IMPLAUSIBLE_FRACTION |
++| M2 | Gate recomputation: JSON objects with a pass flag are re-evaluated from their own numbers against thresholds in the same file or the run's frozen gates file. Flags INCONSISTENT, PASS_WITH_UNCOMPUTED_GATES (a gate required for that object's panel has no value), NEGATIVE_CONTROL_PASSED (`expected_to_fail: true` but passed), PROTOCOL_K_DIFFERS (metric key encodes a different k than the frozen protocol), IMPLAUSIBLE_FRACTION, boundary values within 0.005. Required gates follow the frozen file's panel rule where it states one (manifold: five on the internal panel, four on the external panel); a panel the rule does not name gets GATE_SET_FOR_PANEL_UNSTATED (pointer for a human). | INCONSISTENT, PASS_WITH_UNCOMPUTED_GATES, NEGATIVE_CONTROL_PASSED, IMPLAUSIBLE_FRACTION |
+ | M3 | Phases named in the spec vs a machine-readable `phases_run` list, if the run wrote one. | no |
+ | M4 | Reproducibility records: seed set in scripts that use randomness; environment file and pinning; device recorded; checkpoint loads with a revision pin, download refs, recorded weight hash; script paths cited in summaries resolve; timing fields; decision/retirement logs; manual reclassification files; run manifest. | no |
+ | M5 | Pointers for a reader: lines with an interval and whether they name a method and a resampling unit; scope/limitation headings; causal/mechanistic words from the audit checklist's P9 list. | no |
+@@ -133,7 +135,7 @@
+ | `verify_spec_lint.py` | Missing sections; validation-item counts | Plain string tests on `## ` lines; also compares with the prototype linter from the investigation (`projects/maxtoki/verification/contract/`). |
+ | `verify_number_trace.py` | Traced / untraced for every plain decimal and integer in the run summaries | Different tokeniser; formats each artefact value to the written decimals as a string (Python rounding) instead of the interval test. |
+ | `verify_chance_rate.py` | Chance rate per number | Exact share over all grid points in [0.5x, 1.5x] instead of 50 random ones. |
+-| `crosscheck_manual_audit.py` | Tracer result for paper numbers the manual audits (`numbers_A/B/C.md`) judged | Compares with human-style judgments of meaning (MATCH / MISMATCH / DIFFERENT ENDPOINT / NOT FOUND). |
++| `crosscheck_manual_audit.py` | Tracer result for paper numbers the manual audits (`numbers_A/B/C.md`) judged | Compares with human-style judgments of meaning (MATCH / MISMATCH / DIFFERENT ENDPOINT / NOT FOUND). Column positions are read from each table's header; a manual number joins to the tracer's number at any line where that number occurs in the paper. |
+ | `verify_manifest_deviations.py` | Every value behind a flagged parameter deviation | Raw-text regex on the cited script line or JSON file instead of `ast`/`json`. |
+ 
+ ## Other files
+@@ -148,6 +150,9 @@
+ - Each main script writes `<name>_run_config.json`: tool hash, time, Python version, seed and the
+   sha256 of every input file (files over 200 MB: size and date only, stated in the record).
+ 
++`verification_review/` holds the independent re-derivation written by the verifying agent
++(`independent_recount.py` -> `results.json`, `run_config.json`); run it after `run_all.sh`.
++
+ Not part of this package: `DEPLOYMENT_FACTS.md`, `deployment_facts.json` and `d12_deployment_facts/`
+ in this folder were written by a separate task (the hardware/compute ledger).
+ 
+--- original/verify/crosscheck_manual_audit.py
++++ fixed/verify/crosscheck_manual_audit.py
+@@ -1,12 +1,18 @@
+ #!/usr/bin/env python3
+ """Compare number_trace.py's paper results with the manual number audits (read-only).
+ 
+-The investigation reports numbers_A.md, numbers_B.md and numbers_C.md hold hand-made tables:
+-| Paper line | Claim | Value in paper | Source | Value in source | Status |. Status is one of MATCH,
+-MISMATCH, NOT FOUND, DIFFERENT ENDPOINT, AMBIGUOUS (plus free text). This script joins every numeric
+-"Value in paper" to the tracer's paper rows (same value within rounding, paper line within +-3 of the
+-row's line range) and cross-tabulates the manual status against the tracer's flags.
++The investigation reports numbers_A.md, numbers_B.md and numbers_C.md hold hand-made tables with
++columns "Paper line", "Value in paper" and "Status" (numbers_C has an extra leading "#" column and a
++trailing "Notes" column). Status is one of MATCH, MISMATCH, NOT FOUND, DIFFERENT ENDPOINT, AMBIGUOUS
++(plus free text). This script reads the column positions from each table's header row, joins every
++numeric "Value in paper" to a number the tracer extracted from main.tex at ANY occurrence line within
+++-3 of the row's line range (same value within rounding), and cross-tabulates the manual status
++against the tracer's flags for that number.
+ 
++Changed in the 2026-10-01 verification pass: the first version took columns 0/2/last for every table
++(wrong for numbers_C, whose rows were therefore never joined) and matched only the first line on
++which a number occurs in the paper (so repeated numbers mostly failed to join).
++
+ It answers two questions: does "found in the outputs" agree with a human's MATCH; and how many
+ numbers a human judged wrong (MISMATCH / DIFFERENT ENDPOINT) still look fine to a presence check?
+ Output: results/crosscheck_manual_audit.json and .csv
+@@ -20,7 +26,7 @@
+ 
+ HERE = Path(__file__).resolve().parent
+ sys.path.insert(0, str(HERE.parent))
+-from common import PROJ, RESULTS, write_json  # noqa: E402
++from common import PAPER, PROJ, RESULTS, write_json  # noqa: E402
+ from numtext import extract  # noqa: E402
+ 
+ INV = PROJ / "paper-plos-one" / "revision" / "investigation"
+@@ -33,32 +39,54 @@
+     return min(pos)[1] if pos else "OTHER"
+ 
+ 
++def _cells(ln):
++    return [c.strip() for c in ln.strip().strip("|").split("|")]
++
++
+ def main():
+     paper = list(csv.DictReader(open(RESULTS / "number_trace_paper_numbers.csv")))
+-    joined, unjoined = [], 0
++    prow = {(round(float(p["value"]), 12), round(float(p["half_width"]), 15), p["pct"] == "True"): p for p in paper}
++    occ = {}
++    for n in extract(PAPER.read_text(encoding="utf-8"), "latex"):
++        if not n.excluded:
++            occ.setdefault(n.line, []).append(n)
++    joined, unjoined, no_number_rows, rows_read = [], 0, 0, 0
+     for fn in ("numbers_A.md", "numbers_B.md", "numbers_C.md"):
++        cols = None
+         for ln in (INV / fn).read_text(encoding="utf-8").splitlines():
+-            if not re.match(r"^\|\s*L?\d", ln):
++            if not ln.lstrip().startswith("|"):
++                cols = None          # a table ends at the first non-table line
+                 continue
+-            cells = [c.strip() for c in ln.strip().strip("|").split("|")]
+-            if len(cells) < 6:
++            cells = _cells(ln)
++            low = [c.lower() for c in cells]
++            if any(c.startswith("paper line") for c in low) and any(c.startswith("value in paper") for c in low):
++                cols = dict(line=next(i for i, c in enumerate(low) if c.startswith("paper line")),
++                            value=next(i for i, c in enumerate(low) if c.startswith("value in paper")),
++                            status=next(i for i, c in enumerate(low) if c.startswith("status")))
+                 continue
+-            lines = [int(x) for x in re.findall(r"\d+", cells[0])[:2]]
+-            lo, hi = (lines[0], lines[-1]) if lines else (None, None)
+-            if lo is None or hi < lo or hi - lo > 200:
++            if cols is None or re.match(r"^\|\s*:?-{2,}", ln.strip()) or len(cells) <= max(cols.values()):
+                 continue
+-            status = status_of(cells[-1])
+-            nums = [n for n in extract(cells[2], "markdown") if not n.excluded]
++            lines = [int(x) for x in re.findall(r"\d+", cells[cols["line"]])[:2]]
++            if not lines:
++                continue
++            lo, hi = lines[0], lines[-1]
++            if hi < lo or hi - lo > 200:
++                continue
++            rows_read += 1
++            status = status_of(cells[cols["status"]])
++            nums = [n for n in extract(cells[cols["value"]], "markdown") if not n.excluded]
++            if not nums:
++                no_number_rows += 1
+             for n in nums:
+-                m = [p for p in paper if lo - 3 <= int(p["line"]) <= hi + 3
+-                     and abs(float(p["value"]) - n.value) <= max(float(p["half_width"]), n.h) + 1e-12]
+-                if not m:
++                cand = [m for L in range(lo - 3, hi + 4) for m in occ.get(L, [])
++                        if abs(m.value - n.value) <= max(m.h, n.h) + 1e-12]
++                p = prow.get(cand[0].key()) if cand else None
++                if p is None:
+                     unjoined += 1
+                     continue
+-                p = m[0]
+-                joined.append(dict(report=fn, paper_line=p["line"], value=p["raw"], manual_status=status,
++                joined.append(dict(report=fn, paper_line=cand[0].line, value=p["raw"], manual_status=status,
+                                    traced_any_run=p["traced"], chain=p["chain_trace"], in_summaries=p["in_summaries"],
+-                                   chance_union=p["chance_rate"], manual_text=cells[-1][:120]))
++                                   chance_union=p["chance_rate"], manual_text=cells[cols["status"]][:120]))
+     # dedupe by (paper line, value, status)
+     seen, rows = set(), []
+     for r in joined:
+@@ -80,12 +108,19 @@
+             w.writeheader()
+             w.writerows(rows)
+     write_json(RESULTS / "crosscheck_manual_audit.json",
+-               dict(n_joined=len(rows), n_manual_numbers_not_joined=unjoined, by_manual_status=tab,
++               dict(n_joined=len(rows), n_manual_numbers_not_joined=unjoined, n_manual_rows_read=rows_read,
++                    n_manual_rows_without_a_number=no_number_rows,
++                    n_distinct_values_wrong_in_meaning=len({r["value"] for r in rows
++                                                            if r["manual_status"] in ("MISMATCH", "DIFFERENT ENDPOINT")}),
++                    n_distinct_values_wrong_in_meaning_traced=len({r["value"] for r in rows
++                                                                   if r["manual_status"] in ("MISMATCH", "DIFFERENT ENDPOINT")
++                                                                   and r["traced_any_run"] == "True"}),
++                    by_manual_status=tab,
+                     note="traced = present in outputs within rounding; it does not test meaning. A number the "
+                          "manual audit marks MISMATCH or DIFFERENT ENDPOINT can still be present in the outputs."))
+     for k, t in sorted(tab.items()):
+         print(f"{k:20s} n={t['n']:3d} traced_any_run={t['traced_any_run']:3d} chain={t['chain']:3d} in_summaries={t['in_summaries']:3d}")
+-    print(f"joined={len(rows)} manual numbers not joined={unjoined}")
++    print(f"rows read={rows_read} (without a number: {no_number_rows}) joined={len(rows)} manual numbers not joined={unjoined}")
+ 
+ 
+ if __name__ == "__main__":

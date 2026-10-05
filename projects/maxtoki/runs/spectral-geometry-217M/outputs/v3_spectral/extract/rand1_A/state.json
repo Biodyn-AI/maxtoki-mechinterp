@@ -1,0 +1,58 @@
+{
+  "job": "rand1_A",
+  "next": 2000,
+  "done": true,
+  "chunks": [
+    {
+      "start": "2026-10-02T18:34:12",
+      "cells": [
+        0,
+        550
+      ],
+      "wall_s": 346.7,
+      "min_free_gb": 5.16,
+      "peak_rss_gb": 2.85,
+      "mps_driver_peak_gb": 4.35,
+      "stopped": "time"
+    },
+    {
+      "start": "2026-10-02T18:46:17",
+      "cells": [
+        550,
+        1350
+      ],
+      "wall_s": 441.3,
+      "min_free_gb": 5.36,
+      "peak_rss_gb": 2.41,
+      "mps_driver_peak_gb": 4.36,
+      "stopped": "time"
+    },
+    {
+      "start": "2026-10-02T18:54:10",
+      "cells": [
+        1350,
+        2000
+      ],
+      "wall_s": 364.2,
+      "min_free_gb": 5.04,
+      "peak_rss_gb": 2.93,
+      "mps_driver_peak_gb": 4.34,
+      "stopped": ""
+    }
+  ],
+  "batches_checked": 40,
+  "cells_checked": 2000,
+  "model_info": {
+    "kind": "random_init",
+    "init_seed": 1,
+    "init": "transformers default (LlamaForCausalLM(config))",
+    "initializer_range": 0.02,
+    "attn_implementation": "eager",
+    "state_dict_sha256_cpu": "b2c94cca6e130bf5754a2309eb16d0259d892b2aeefee125d11cb46cbf02c7b3",
+    "param_std": {
+      "model.embed_tokens.weight": 0.01999865099787712,
+      "model.layers.0.self_attn.q_proj.weight": 0.01998857967555523,
+      "model.layers.10.mlp.down_proj.weight": 0.02000686340034008
+    }
+  }
+}

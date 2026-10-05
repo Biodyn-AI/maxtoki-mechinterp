@@ -1,0 +1,42 @@
+{
+  "synthetic_design": {
+    "n_genes": 200,
+    "n_communities_planted": 4,
+    "n_per_community": 50,
+    "n_tfs": 20,
+    "n_targets_per_tf": 10,
+    "fraction_within_community_targets": 0.7,
+    "sign_planted_within_community": "+1 (activator)",
+    "sign_planted_across_community": "\u22121 (repressor)",
+    "centroid_separation_scale": 4.0,
+    "noise_sd": 1.0,
+    "knn_k": 12
+  },
+  "louvain_recovery": {
+    "n_communities_found": 4,
+    "adjusted_rand_index": 1.0,
+    "passes_threshold_ari_>_0.9": true
+  },
+  "h123_degree_stratified": {
+    "auc_motif": 1.0,
+    "auc_triangle_baseline": 0.332,
+    "auc_combined": 0.8444,
+    "null_combo_mean": 0.44520675,
+    "null_combo_p95": 0.48245,
+    "delta_combo_vs_null_p95": 0.36195000000000005,
+    "delta_motif_vs_null_p95": 0.38
+  },
+  "h116_simple_shuffle": {
+    "auc_motif": 1.0,
+    "auc_combined": 0.8444,
+    "delta_combo_vs_null_p95": 0.35473125000000005,
+    "delta_motif_vs_null_p95": 0.36
+  },
+  "decision_thresholds": {
+    "auc_motif_>_0.7": true,
+    "delta_combo_vs_null_p95_>_0.05": true,
+    "louvain_ari_>_0.9": true
+  },
+  "verdict": "POSITIVE \u2014 pipeline detects planted signal",
+  "interpretation": "Planted-signal positive control on a 4-community 200-gene synthetic graph with H123-consistent signed motifs. AUC_motif = 1.000, \u0394_combo_vs_null_p95 = +0.362. Louvain ARI = 1.000. The H123 implementation in phase78_community_signed_motif.py DETECTS planted signal at meaningful SNR, confirming the 0\u20131/12 layers result on MaxToki is a property of the model's representations, not a pipeline bug."
+}

@@ -1,0 +1,73 @@
+{
+ "layer": 4,
+ "n_alive": 4928,
+ "N_universe": 6325,
+ "n_terms": 2377,
+ "n_tests": 11713856,
+ "A_deployed": 3255,
+ "A2_biosae": 3162,
+ "B_perfeature": 81,
+ "B_ge3": 33,
+ "B2_perfeature_ovl2": 2888,
+ "C_global": 3,
+ "Bu_perfeature": 81,
+ "Cu_global": 3,
+ "deployed_summary": {
+  "layer": 4,
+  "n_alive": 4928,
+  "n_annotated": 3255,
+  "annotation_rate": 0.6605,
+  "total_enrichments": 27029
+ },
+ "deployed_kept_tests": 33261,
+ "rows_mine": 27029,
+ "rows_deployed": 27029,
+ "rows_missing": 0,
+ "rows_extra": 0,
+ "max_abs_p_diff": 9.974659986866641e-17,
+ "overlap_col_match": true,
+ "n_col_match": true,
+ "K_col_match": true,
+ "N_col_match": true,
+ "max_abs_q_diff": 9.84455572616838e-17,
+ "deployed_max_raw_p_sig": 0.0390821735587719,
+ "deployed_share_overlap2": 0.8191572015242887,
+ "B_rows": 597,
+ "B_rows_share_overlap2": 0.5025125628140703,
+ "B_rows_overlap2_full20": 298,
+ "B_rows_overlap2_short": 2,
+ "B_rows_overlap1": 0,
+ "B_rate": 0.016436688311688312,
+ "B_wilson": [
+  0.01324484946706088,
+  0.02038183139959258
+ ],
+ "A_rate": 0.6605113636363636,
+ "A2_rate": 0.6416396103896104,
+ "B2_rate": 0.586038961038961,
+ "list_sizes_lt20": 29,
+ "global_features": [
+  {
+   "feature_id": 2260,
+   "n_terms_global": 9,
+   "n_terms_perfeature": 10,
+   "min_p": 2.0466267896315934e-11,
+   "best_term": "Reactome:Mitochondrial Translation Termination R-HSA-5419276"
+  },
+  {
+   "feature_id": 4071,
+   "n_terms_global": 1,
+   "n_terms_perfeature": 21,
+   "min_p": 7.600175764424856e-08,
+   "best_term": "Reactome:Metabolism Of RNA R-HSA-8953854"
+  },
+  {
+   "feature_id": 4734,
+   "n_terms_global": 12,
+   "n_terms_perfeature": 28,
+   "min_p": 3.8504256305631435e-12,
+   "best_term": "GO_BP:Cholesterol Biosynthetic Process (GO:0006695)"
+  }
+ ],
+ "seconds": 6.8
+}

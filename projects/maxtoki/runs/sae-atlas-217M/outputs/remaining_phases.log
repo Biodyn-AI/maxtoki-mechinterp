@@ -1,0 +1,50 @@
+======================================================================
+SAE REMAINING PHASES (6, 7, 8t, 10, 11)
+======================================================================
+
+[Phase 6] Causal feature patching at L5...
+  richly annotated features (≥3 enrichments): 50
+  Phase 6 skipped (SKIP_PHASE6=1 or insufficient features)
+
+[Phase 7] Cross-layer information highways...
+  computing cross-layer PMI L0→L5...
+    highways: 2498/2498 (100.0%)  mean max PMI: 5.66  (79.6s)
+  computing cross-layer PMI L5→L11...
+    highways: 4915/4927 (99.8%)  mean max PMI: 6.39  (80.8s)
+
+[Phase 8t] True CRISPRi perturbation response...
+Loading weights:   0%|          | 0/102 [00:00<?, ?it/s]Loading weights:  58%|█████▊    | 59/102 [00:00<00:00, 580.37it/s]Loading weights: 100%|██████████| 102/102 [00:00<00:00, 902.47it/s]
+  perturbation targets with ≥20 K562 cells: 1383
+  selected: 48 TFs + 52 non-TFs = 100
+    20/100 targets processed
+    40/100 targets processed
+    60/100 targets processed
+    80/100 targets processed
+    100/100 targets processed
+  TRUE CRISPRi detection: 4/100 (4.0%)
+  TRUE CRISPRi TF specificity: 0/48 (0.0%)
+
+[Phase 10] Unannotated feature characterisation...
+  L0: 482/2498 unannotated (19.3%)
+    Jaccard clusters (≥3 members): 0 with 0 features
+    guilt-by-association: 481/482 co-activate with annotated (99.8%)  isolated: 1
+  L5: 1588/4928 unannotated (32.2%)
+    Jaccard clusters (≥3 members): 36 with 135 features
+    guilt-by-association: 1588/1588 co-activate with annotated (100.0%)  isolated: 0
+  L11: 1884/4924 unannotated (38.3%)
+    Jaccard clusters (≥3 members): 0 with 0 features
+    guilt-by-association: 1884/1884 co-activate with annotated (100.0%)  isolated: 0
+
+[Phase 11] Cell-type enrichment mapping...
+  loading Tabula Sapiens immune...
+  extracting L5 activations on 1000 TS cells...
+Loading weights:   0%|          | 0/102 [00:00<?, ?it/s]Loading weights: 100%|██████████| 102/102 [00:00<00:00, 1101.38it/s]
+    200/1000 cells...
+    400/1000 cells...
+    600/1000 cells...
+    800/1000 cells...
+    1000/1000 cells...
+  TS positions: 1,755,348
+  cell types: 32
+<HOMEBREW_PREFIX>/Cellar/python@3.12/3.12.9/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/resource_tracker.py:255: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '

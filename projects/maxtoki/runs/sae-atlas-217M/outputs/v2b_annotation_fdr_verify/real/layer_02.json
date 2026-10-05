@@ -1,0 +1,58 @@
+{
+ "layer": 2,
+ "F": 4928,
+ "N": 6325,
+ "T": 2377,
+ "n_tests": 11713856,
+ "n_lt20": 2,
+ "deployed": {
+  "kept": 36008,
+  "sig_rows": 29566,
+  "annot": 3503,
+  "ge3": 2509
+ },
+ "biosae": {
+  "kept": 45609,
+  "sig_rows": 27835,
+  "annot": 3441,
+  "ge3": 2432
+ },
+ "perfeature": {
+  "sig_rows": 770,
+  "annot": 85,
+  "ge3": 44,
+  "annot_le": 85,
+  "rows_check": 770,
+  "frac_rows_overlap2": 0.5142857142857142,
+  "rows_overlap2_with_n20": 396,
+  "rows_overlap2_with_n_lt20": 0,
+  "wilson95": [
+   0.013971372128280115,
+   0.021277420909914784
+  ]
+ },
+ "global": {
+  "sig_rows": 51,
+  "annot": 8,
+  "ge3": 5,
+  "p_cut": 1.8503720917968378e-07,
+  "k_le": 51
+ },
+ "own_p_vs_scipy_max_rel_diff": 2.4962162062457853e-11,
+ "repro": {
+  "dep_annot": 3503,
+  "dep_rows": 29566,
+  "dep_alive": 4928,
+  "only_dep": 0,
+  "only_mine": 0,
+  "max_rel_p": 2.3403762845313308e-11,
+  "max_abs_q": 9.091338792899251e-13,
+  "csv_N": [
+   6325
+  ],
+  "csv_max_p": 0.0390821735587719,
+  "csv_frac_overlap2": 0.8262531285936549
+ },
+ "min_p_overlap2_n20": 9.4461860687749e-05,
+ "seconds": 2.5
+}

@@ -1,0 +1,20 @@
+======================================================================
+Phase 6 — Causal feature patching at L5
+======================================================================
+  richly annotated features: 50
+Loading weights:   0%|          | 0/102 [00:00<?, ?it/s]Loading weights: 100%|██████████| 102/102 [00:00<00:00, 1789.45it/s]
+  cells: 50  device: mps
+
+  Patching 50 features × 50 cells...
+    10/50 features done
+    20/50 features done
+    30/50 features done
+    40/50 features done
+    50/50 features done
+
+  median specificity: 1.01×
+  >2×: 0.0%  >10×: 0.0%
+  mean target Δ: 1.4140
+  mean other Δ: 1.3948
+
+Phase 6 COMPLETE — outputs: <REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/outputs/phase6

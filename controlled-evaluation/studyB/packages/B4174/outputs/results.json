@@ -1,0 +1,382 @@
+{
+  "question": "for a pair of cysteines (i, j) in one protein, is this the bonded pair?",
+  "metric": "average precision over all candidate cysteine pairs of a split, pooled over proteins; no-skill value = base rate (fraction of pairs bonded)",
+  "selection": "candidate with the highest SELECT-split AP; its TEST-split AP is reported",
+  "null": "bond labels permuted within each test protein; used for the expected maximum over candidates",
+  "seed": 42,
+  "data": {
+    "select": {
+      "n_pairs": 4419,
+      "n_bonded": 313,
+      "n_proteins": 113,
+      "base_rate": 0.07083050463905861
+    },
+    "test": {
+      "n_pairs": 7463,
+      "n_bonded": 366,
+      "n_proteins": 123,
+      "base_rate": 0.04904194023850998
+    }
+  },
+  "arms": {
+    "sequence_separation": {
+      "chosen_candidate": "abs_separation:-",
+      "chosen_select_ap": 0.12828388319020484,
+      "test_ap": 0.1132803732739744,
+      "test_ap_minus_base_rate": 0.06423843303546442,
+      "test_ap_over_base_rate": 2.309867283452653,
+      "test_max_ap_any_candidate": 0.1132803732739744,
+      "test_max_minus_chosen": 0.0,
+      "test_max_ap_expected_under_null": 0.0665376701350745,
+      "test_max_minus_null_expectation": 0.0467427031388999,
+      "n_candidates": 4,
+      "n_candidates_test_ap_at_least_2x_base_rate": 1,
+      "bootstrap_ci_test_ap": {
+        "mean": 0.11596230238860991,
+        "lo": 0.09849125780232974,
+        "hi": 0.1337898947382894,
+        "n_boot": 200,
+        "n_proteins": 123
+      },
+      "per_protein_test": {
+        "n_proteins_with_a_bond": 123,
+        "mean_per_protein_ap": 0.33066363629856976,
+        "mean_precision_at_1": 0.2073170731707317,
+        "mean_precision_at_n_bonds": 0.2304021633289926,
+        "median_candidate_pairs_per_protein": 28.0
+      }
+    },
+    "attention_esm2": {
+      "chosen_candidate": "L32H13",
+      "chosen_select_ap": 0.7420441043649071,
+      "test_ap": 0.7179436958061409,
+      "test_ap_minus_base_rate": 0.668901755567631,
+      "test_ap_over_base_rate": 14.639381972134508,
+      "test_max_ap_any_candidate": 0.7447273905917782,
+      "test_max_minus_chosen": 0.026783694785637246,
+      "test_max_ap_expected_under_null": 0.08690611029746305,
+      "test_max_minus_null_expectation": 0.6578212802943151,
+      "n_candidates": 661,
+      "n_candidates_test_ap_at_least_2x_base_rate": 192,
+      "bootstrap_ci_test_ap": {
+        "mean": 0.7224309126613739,
+        "lo": 0.6643201347004144,
+        "hi": 0.7815196134631018,
+        "n_boot": 200,
+        "n_proteins": 123
+      },
+      "per_protein_test": {
+        "n_proteins_with_a_bond": 123,
+        "mean_per_protein_ap": 0.8123140989896729,
+        "mean_precision_at_1": 0.8048780487804879,
+        "mean_precision_at_n_bonds": 0.7341299170567462,
+        "median_candidate_pairs_per_protein": 28.0
+      }
+    },
+    "mean_all_heads": {
+      "select_ap": 0.1679567058109656,
+      "test_ap": 0.14104948066880454,
+      "test_ap_over_base_rate": 2.8760991099215527,
+      "bootstrap_ci_test_ap": {
+        "mean": 0.14520567611306237,
+        "lo": 0.11444651620170798,
+        "hi": 0.1765001888545113,
+        "n_boot": 200,
+        "n_proteins": 123
+      },
+      "per_protein_test": {
+        "n_proteins_with_a_bond": 123,
+        "mean_per_protein_ap": 0.382547983170851,
+        "mean_precision_at_1": 0.3170731707317073,
+        "mean_precision_at_n_bonds": 0.2672579453067258,
+        "median_candidate_pairs_per_protein": 28.0
+      },
+      "note": "single candidate, no selection"
+    }
+  },
+  "attention_per_layer": [
+    {
+      "layer": 0,
+      "best_head_by_select": "L0H0",
+      "its_test_ap": 0.13240059704032198,
+      "max_test_ap": 0.13240059704032198,
+      "n_heads_test_ap_at_least_2x_base_rate": 3
+    },
+    {
+      "layer": 1,
+      "best_head_by_select": "L1H17",
+      "its_test_ap": 0.12238885462661493,
+      "max_test_ap": 0.12620720694880017,
+      "n_heads_test_ap_at_least_2x_base_rate": 3
+    },
+    {
+      "layer": 2,
+      "best_head_by_select": "L2H19",
+      "its_test_ap": 0.10971698046304566,
+      "max_test_ap": 0.10971698046304566,
+      "n_heads_test_ap_at_least_2x_base_rate": 4
+    },
+    {
+      "layer": 3,
+      "best_head_by_select": "L3H17",
+      "its_test_ap": 0.13326740330178435,
+      "max_test_ap": 0.13326740330178435,
+      "n_heads_test_ap_at_least_2x_base_rate": 4
+    },
+    {
+      "layer": 4,
+      "best_head_by_select": "L4H18",
+      "its_test_ap": 0.10321996241282505,
+      "max_test_ap": 0.13249205751026685,
+      "n_heads_test_ap_at_least_2x_base_rate": 5
+    },
+    {
+      "layer": 5,
+      "best_head_by_select": "L5H3",
+      "its_test_ap": 0.1638717823299976,
+      "max_test_ap": 0.1638717823299976,
+      "n_heads_test_ap_at_least_2x_base_rate": 5
+    },
+    {
+      "layer": 6,
+      "best_head_by_select": "L6H12",
+      "its_test_ap": 0.11513724544502027,
+      "max_test_ap": 0.11692094028450721,
+      "n_heads_test_ap_at_least_2x_base_rate": 5
+    },
+    {
+      "layer": 7,
+      "best_head_by_select": "L7H7",
+      "its_test_ap": 0.16694239510880993,
+      "max_test_ap": 0.16694239510880993,
+      "n_heads_test_ap_at_least_2x_base_rate": 5
+    },
+    {
+      "layer": 8,
+      "best_head_by_select": "L8H19",
+      "its_test_ap": 0.11516760769602148,
+      "max_test_ap": 0.14200770122837766,
+      "n_heads_test_ap_at_least_2x_base_rate": 7
+    },
+    {
+      "layer": 9,
+      "best_head_by_select": "L9H16",
+      "its_test_ap": 0.12149663927786812,
+      "max_test_ap": 0.12149663927786812,
+      "n_heads_test_ap_at_least_2x_base_rate": 2
+    },
+    {
+      "layer": 10,
+      "best_head_by_select": "L10H12",
+      "its_test_ap": 0.13751030056690192,
+      "max_test_ap": 0.14567397409341096,
+      "n_heads_test_ap_at_least_2x_base_rate": 7
+    },
+    {
+      "layer": 11,
+      "best_head_by_select": "L11H6",
+      "its_test_ap": 0.23896462286401612,
+      "max_test_ap": 0.23896462286401612,
+      "n_heads_test_ap_at_least_2x_base_rate": 6
+    },
+    {
+      "layer": 12,
+      "best_head_by_select": "L12H8",
+      "its_test_ap": 0.13463551590259137,
+      "max_test_ap": 0.14390911356826525,
+      "n_heads_test_ap_at_least_2x_base_rate": 5
+    },
+    {
+      "layer": 13,
+      "best_head_by_select": "L13H13",
+      "its_test_ap": 0.1281958167251339,
+      "max_test_ap": 0.1281958167251339,
+      "n_heads_test_ap_at_least_2x_base_rate": 4
+    },
+    {
+      "layer": 14,
+      "best_head_by_select": "L14H17",
+      "its_test_ap": 0.16109904731279492,
+      "max_test_ap": 0.16109904731279492,
+      "n_heads_test_ap_at_least_2x_base_rate": 5
+    },
+    {
+      "layer": 15,
+      "best_head_by_select": "L15H1",
+      "its_test_ap": 0.115858535866571,
+      "max_test_ap": 0.115858535866571,
+      "n_heads_test_ap_at_least_2x_base_rate": 2
+    },
+    {
+      "layer": 16,
+      "best_head_by_select": "L16H14",
+      "its_test_ap": 0.13180744083811038,
+      "max_test_ap": 0.16238181852893394,
+      "n_heads_test_ap_at_least_2x_base_rate": 5
+    },
+    {
+      "layer": 17,
+      "best_head_by_select": "L17H14",
+      "its_test_ap": 0.17935486554998006,
+      "max_test_ap": 0.17935486554998006,
+      "n_heads_test_ap_at_least_2x_base_rate": 5
+    },
+    {
+      "layer": 18,
+      "best_head_by_select": "L18H1",
+      "its_test_ap": 0.15129445790666446,
+      "max_test_ap": 0.15129445790666446,
+      "n_heads_test_ap_at_least_2x_base_rate": 4
+    },
+    {
+      "layer": 19,
+      "best_head_by_select": "L19H13",
+      "its_test_ap": 0.18558363867562855,
+      "max_test_ap": 0.18558363867562855,
+      "n_heads_test_ap_at_least_2x_base_rate": 6
+    },
+    {
+      "layer": 20,
+      "best_head_by_select": "L20H2",
+      "its_test_ap": 0.12361914791043783,
+      "max_test_ap": 0.12361914791043783,
+      "n_heads_test_ap_at_least_2x_base_rate": 6
+    },
+    {
+      "layer": 21,
+      "best_head_by_select": "L21H10",
+      "its_test_ap": 0.14245240142651272,
+      "max_test_ap": 0.14245240142651272,
+      "n_heads_test_ap_at_least_2x_base_rate": 5
+    },
+    {
+      "layer": 22,
+      "best_head_by_select": "L22H14",
+      "its_test_ap": 0.15702445380266616,
+      "max_test_ap": 0.15702445380266616,
+      "n_heads_test_ap_at_least_2x_base_rate": 4
+    },
+    {
+      "layer": 23,
+      "best_head_by_select": "L23H6",
+      "its_test_ap": 0.5268293448357734,
+      "max_test_ap": 0.5268293448357734,
+      "n_heads_test_ap_at_least_2x_base_rate": 7
+    },
+    {
+      "layer": 24,
+      "best_head_by_select": "L24H0",
+      "its_test_ap": 0.18823276010932055,
+      "max_test_ap": 0.18823276010932055,
+      "n_heads_test_ap_at_least_2x_base_rate": 9
+    },
+    {
+      "layer": 25,
+      "best_head_by_select": "L25H15",
+      "its_test_ap": 0.2000225109993271,
+      "max_test_ap": 0.2000225109993271,
+      "n_heads_test_ap_at_least_2x_base_rate": 6
+    },
+    {
+      "layer": 26,
+      "best_head_by_select": "L26H16",
+      "its_test_ap": 0.39107104070321475,
+      "max_test_ap": 0.39107104070321475,
+      "n_heads_test_ap_at_least_2x_base_rate": 7
+    },
+    {
+      "layer": 27,
+      "best_head_by_select": "L27H15",
+      "its_test_ap": 0.23896968918638248,
+      "max_test_ap": 0.23896968918638248,
+      "n_heads_test_ap_at_least_2x_base_rate": 6
+    },
+    {
+      "layer": 28,
+      "best_head_by_select": "L28H13",
+      "its_test_ap": 0.32158362298604204,
+      "max_test_ap": 0.32158362298604204,
+      "n_heads_test_ap_at_least_2x_base_rate": 6
+    },
+    {
+      "layer": 29,
+      "best_head_by_select": "L29H18",
+      "its_test_ap": 0.7447273905917782,
+      "max_test_ap": 0.7447273905917782,
+      "n_heads_test_ap_at_least_2x_base_rate": 10
+    },
+    {
+      "layer": 30,
+      "best_head_by_select": "L30H1",
+      "its_test_ap": 0.5954459289562362,
+      "max_test_ap": 0.5954459289562362,
+      "n_heads_test_ap_at_least_2x_base_rate": 10
+    },
+    {
+      "layer": 31,
+      "best_head_by_select": "L31H17",
+      "its_test_ap": 0.6386615519214341,
+      "max_test_ap": 0.6386615519214341,
+      "n_heads_test_ap_at_least_2x_base_rate": 8
+    },
+    {
+      "layer": 32,
+      "best_head_by_select": "L32H13",
+      "its_test_ap": 0.7179436958061409,
+      "max_test_ap": 0.7179436958061409,
+      "n_heads_test_ap_at_least_2x_base_rate": 15
+    }
+  ],
+  "attention_top10_heads_by_select_ap": [
+    {
+      "head": "L32H13",
+      "select_ap": 0.7420441043649071,
+      "test_ap": 0.7179436958061409
+    },
+    {
+      "head": "L29H18",
+      "select_ap": 0.7208778065808381,
+      "test_ap": 0.7447273905917782
+    },
+    {
+      "head": "L31H17",
+      "select_ap": 0.6614710046471405,
+      "test_ap": 0.6386615519214341
+    },
+    {
+      "head": "L30H1",
+      "select_ap": 0.5735750019726151,
+      "test_ap": 0.5954459289562362
+    },
+    {
+      "head": "L23H6",
+      "select_ap": 0.5246562391474477,
+      "test_ap": 0.5268293448357734
+    },
+    {
+      "head": "L30H13",
+      "select_ap": 0.46550097565738346,
+      "test_ap": 0.49483940017281014
+    },
+    {
+      "head": "L30H0",
+      "select_ap": 0.4651248121979511,
+      "test_ap": 0.4528487626000992
+    },
+    {
+      "head": "L32H18",
+      "select_ap": 0.4646863212270433,
+      "test_ap": 0.45634040469304654
+    },
+    {
+      "head": "L26H16",
+      "select_ap": 0.4544966482381788,
+      "test_ap": 0.39107104070321475
+    },
+    {
+      "head": "L29H12",
+      "select_ap": 0.3864187970785371,
+      "test_ap": 0.37309683437193214
+    }
+  ]
+}

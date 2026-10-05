@@ -1,0 +1,80 @@
+======================================================================
+PHASE 13 LITE — H38 second-manifold with curated signalling ruler
+======================================================================
+  d_target shape=(290, 290)  min=0.0 median=2.0 max=5.0
+  cell_types with no category: 11/290
+  kept 279/290 anchors with at least one category
+
+[1] Training H38 anchor LET head...
+  [H38_pos] trained 1500 epochs in 7.5s
+
+[2] Trustworthiness, random/donor/branch holdouts...
+  [rand-holdout] trained 1500 epochs in 6.8s
+  [rand-holdout] trained 1500 epochs in 6.7s
+  [rand-holdout] trained 1500 epochs in 6.6s
+  [rand-holdout] trained 1500 epochs in 6.5s
+  [rand-holdout] trained 1500 epochs in 6.8s
+  [rand-holdout] trained 1500 epochs in 6.5s
+  [rand-holdout] trained 1500 epochs in 6.6s
+  [rand-holdout] trained 1500 epochs in 6.7s
+  [rand-holdout] trained 1500 epochs in 6.6s
+  [rand-holdout] trained 1500 epochs in 6.6s
+  [h38-donor] groups: 11
+  [h38-donor-TSP2] trained 1500 epochs in 2.8s
+  [h38-donor-TSP20] trained 1500 epochs in 7.1s
+  [h38-donor-TSP9] trained 1500 epochs in 7.2s
+  [h38-donor-TSP4] trained 1500 epochs in 7.2s
+  [h38-donor-TSP17] trained 1500 epochs in 7.4s
+  [h38-donor-TSP5] trained 1500 epochs in 7.7s
+  [h38-donor-TSP15] trained 1500 epochs in 7.6s
+  [h38-donor-TSP28] trained 1500 epochs in 7.9s
+  [h38-donor-TSP3] trained 1500 epochs in 7.8s
+  [h38-cat] groups: 7
+  [h38-cat-chemo] trained 1500 epochs in 7.1s
+  [h38-cat-cyto] trained 1500 epochs in 6.6s
+  [h38-cat-antigen] trained 1500 epochs in 6.6s
+  [h38-cat-cytotox] trained 1500 epochs in 7.1s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [h38-cat-prog] trained 1500 epochs in 7.9s
+  [h38-cat-ab] trained 1500 epochs in 7.9s
+  [h38-cat-lipid] trained 1500 epochs in 7.9s
+  H38   trust=0.814  rand=0.760  donor=0.673  category-holdout=0.293
+
+[3] Null: shuffled categories...
+  [H38_null] trained 1500 epochs in 8.3s
+  [rand-holdout] trained 1500 epochs in 7.2s
+  [rand-holdout] trained 1500 epochs in 7.1s
+  [rand-holdout] trained 1500 epochs in 7.2s
+  [rand-holdout] trained 1500 epochs in 7.0s
+  [rand-holdout] trained 1500 epochs in 7.2s
+  [rand-holdout] trained 1500 epochs in 7.0s
+  [rand-holdout] trained 1500 epochs in 7.0s
+  [rand-holdout] trained 1500 epochs in 6.7s
+  [rand-holdout] trained 1500 epochs in 7.2s
+  [rand-holdout] trained 1500 epochs in 6.9s
+  [h38-donor-null] groups: 11
+  [h38-donor-null-TSP2] trained 1500 epochs in 3.1s
+  [h38-donor-null-TSP20] trained 1500 epochs in 7.6s
+  [h38-donor-null-TSP9] trained 1500 epochs in 8.0s
+  [h38-donor-null-TSP4] trained 1500 epochs in 7.5s
+  [h38-donor-null-TSP17] trained 1500 epochs in 7.8s
+  [h38-donor-null-TSP5] trained 1500 epochs in 8.1s
+  [h38-donor-null-TSP15] trained 1500 epochs in 7.9s
+  [h38-donor-null-TSP28] trained 1500 epochs in 7.9s
+  [h38-donor-null-TSP3] trained 1500 epochs in 7.9s
+  [h38-cat-null] groups: 7
+  [h38-cat-null-antigen] trained 1500 epochs in 6.8s
+  [h38-cat-null-chemo] trained 1500 epochs in 7.2s
+  [h38-cat-null-cytotox] trained 1500 epochs in 7.3s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [h38-cat-null-cyto] trained 1500 epochs in 6.8s
+  [h38-cat-null-prog] trained 1500 epochs in 7.9s
+  [h38-cat-null-lipid] trained 1500 epochs in 8.1s
+  [h38-cat-null-ab] trained 1500 epochs in 7.8s
+  null  trust=0.590  rand=0.012  donor=-0.005  category-holdout=0.026
+
+======================================================================
+VERDICT: POSITIVE: H38 LITE passes all gates and shuffled null fails
+Total time: 385.2s

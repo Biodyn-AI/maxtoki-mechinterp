@@ -1,0 +1,1737 @@
+[
+  {
+    "spec": "pipelines/attention-grn-extraction-and-evaluation.md",
+    "run": "attention-grn-217M",
+    "deployed_on_maxtoki": true,
+    "chars": 96040,
+    "verdicts": {
+      "S1": "FAIL",
+      "S2": "PASS",
+      "S3": "WARN",
+      "S4": "FAIL",
+      "S5": "PASS",
+      "S6": "FAIL",
+      "S7": "FAIL"
+    },
+    "template_verdict": "REJECT",
+    "sections": {
+      "S1": "FAIL",
+      "present": [
+        "Overview",
+        "Source",
+        "Inputs",
+        "Outputs",
+        "Dependencies",
+        "Methodology",
+        "Parameters",
+        "Validation",
+        "Known pitfalls"
+      ],
+      "missing": [
+        "Code references"
+      ],
+      "in_order": true,
+      "heading_number_mismatches": [
+        {
+          "title": "7. Parameters",
+          "written_number": 7,
+          "template_position": 8
+        },
+        {
+          "title": "8. Validation",
+          "written_number": 8,
+          "template_position": 9
+        },
+        {
+          "title": "9. Known pitfalls",
+          "written_number": 9,
+          "template_position": 10
+        }
+      ],
+      "extra_sections": [
+        "10. Quick-start for new-model evaluation"
+      ],
+      "extra_sections_before_section_10": [],
+      "S2": "PASS",
+      "short_sections": [],
+      "tbd_sections": [],
+      "section_chars": {
+        "Overview": 3452,
+        "Source": 2485,
+        "Inputs": 4503,
+        "Outputs": 4857,
+        "Dependencies": 1221,
+        "Methodology": 61348,
+        "Parameters": 3163,
+        "Validation": 4177,
+        "Known pitfalls": 6841
+      }
+    },
+    "pin": {
+      "S3": "WARN",
+      "status": "TEXT_MATCH_ONLY_NO_GIT",
+      "hashes": [
+        {
+          "hash": "40e6da0ae21a768dbbcb2bfa62539845f0ef7c88",
+          "pinned_commit_txt_in": [
+            "biomechinterp-framework"
+          ],
+          "git_present": false,
+          "commit_in_clone": null,
+          "head": null,
+          "head_equals_pin": null,
+          "modified_tracked_files": null
+        }
+      ],
+      "clones_named_in_source": [
+        "biomechinterp-framework"
+      ]
+    },
+    "code_refs": {
+      "n_refs": 22,
+      "by_form": {
+        "repos_path_no_line": 3,
+        "bare_path": 19
+      },
+      "by_resolve_status": {
+        "ok": 22
+      },
+      "n_required_form": 0,
+      "n_exists": 22,
+      "n_exists_as_written": 22,
+      "missing": [],
+      "n_pattern_unchecked": 0,
+      "n_with_line": 0,
+      "n_line_in_range": 0,
+      "lines_out_of_range": [],
+      "n_symbols_checked": 25,
+      "n_symbols_found_in_file": 21,
+      "symbols_not_found": [
+        "run_incremental_value",
+        "run_residualization",
+        "permutation_test_contrast",
+        "bootstrap_stability"
+      ],
+      "n_symbol_line_checks": 0,
+      "n_symbol_at_cited_line": 0,
+      "symbol_line_mismatches": [],
+      "n_in_code_reference_section": 0,
+      "n_resolved_in_clone_without_git": 22,
+      "S4": "FAIL"
+    },
+    "code_ref_bases": [
+      "repos/biomechinterp-framework"
+    ],
+    "parameters": {
+      "S5": "PASS",
+      "n_tables": 1,
+      "headers": [
+        [
+          "parameter",
+          "default (primary k562)",
+          "alternate / scan range",
+          "used in"
+        ]
+      ],
+      "n_rows": 36,
+      "has_range_column": true,
+      "duplicate_names": [],
+      "non_snake_case_names": [
+        "cssi_K"
+      ],
+      "n_default_machine_readable": 28,
+      "n_range_machine_readable": 11,
+      "n_nonnegotiable": 0
+    },
+    "validation": {
+      "S6": "FAIL",
+      "n_items": 13,
+      "numeric-threshold": 12,
+      "numeric-mention": 1,
+      "qualitative": 0,
+      "n_source_anchored": 3,
+      "n_if_broken_rule": 2,
+      "n_threshold_not_source_anchored": 10,
+      "machine_readable_block": false,
+      "framed_as_source_replication": true
+    },
+    "slots": {
+      "null_model": {
+        "mentions": 57,
+        "labelled_slot_lines": [
+          197,
+          213,
+          369,
+          718,
+          782,
+          785
+        ],
+        "has_labelled_slot": true
+      },
+      "trivial_baseline": {
+        "mentions": 8,
+        "labelled_slot_lines": [
+          146
+        ],
+        "has_labelled_slot": true
+      },
+      "positive_control": {
+        "mentions": 1,
+        "labelled_slot_lines": [],
+        "has_labelled_slot": false
+      },
+      "scope_statement": {
+        "mentions": 1,
+        "labelled_slot_lines": [
+          403
+        ],
+        "has_labelled_slot": true
+      },
+      "S7": "FAIL"
+    }
+  },
+  {
+    "spec": "pipelines/residual-stream-spectral-geometry.md",
+    "run": "spectral-geometry-217M",
+    "deployed_on_maxtoki": true,
+    "chars": 67787,
+    "verdicts": {
+      "S1": "FAIL",
+      "S2": "PASS",
+      "S3": "WARN",
+      "S4": "FAIL",
+      "S5": "PASS",
+      "S6": "FAIL",
+      "S7": "FAIL"
+    },
+    "template_verdict": "REJECT",
+    "sections": {
+      "S1": "FAIL",
+      "present": [
+        "Overview",
+        "Source",
+        "Inputs",
+        "Outputs",
+        "Dependencies",
+        "Methodology",
+        "Parameters",
+        "Validation",
+        "Known pitfalls"
+      ],
+      "missing": [
+        "Code references"
+      ],
+      "in_order": true,
+      "heading_number_mismatches": [
+        {
+          "title": "7. Parameters",
+          "written_number": 7,
+          "template_position": 8
+        },
+        {
+          "title": "8. Validation",
+          "written_number": 8,
+          "template_position": 9
+        },
+        {
+          "title": "9. Known pitfalls",
+          "written_number": 9,
+          "template_position": 10
+        }
+      ],
+      "extra_sections": [
+        "10. Quick-start for new-model evaluation"
+      ],
+      "extra_sections_before_section_10": [],
+      "S2": "PASS",
+      "short_sections": [],
+      "tbd_sections": [],
+      "section_chars": {
+        "Overview": 4826,
+        "Source": 1665,
+        "Inputs": 3765,
+        "Outputs": 3552,
+        "Dependencies": 898,
+        "Methodology": 36289,
+        "Parameters": 3080,
+        "Validation": 4410,
+        "Known pitfalls": 5588
+      }
+    },
+    "pin": {
+      "S3": "WARN",
+      "status": "TEXT_MATCH_ONLY_NO_GIT",
+      "hashes": [
+        {
+          "hash": "42ac179697c4dd938c57a40142356e8763b9fcc1",
+          "pinned_commit_txt_in": [
+            "topology-biomechinterp1"
+          ],
+          "git_present": false,
+          "commit_in_clone": null,
+          "head": null,
+          "head_equals_pin": null,
+          "modified_tracked_files": null
+        }
+      ],
+      "clones_named_in_source": [
+        "topology-biomechinterp1"
+      ]
+    },
+    "code_refs": {
+      "n_refs": 28,
+      "by_form": {
+        "repos_path_no_line": 8,
+        "bare_path": 19,
+        "name_only": 1
+      },
+      "by_resolve_status": {
+        "ok": 13,
+        "ok_by_suffix": 7,
+        "pattern": 7,
+        "ok_by_name": 1
+      },
+      "n_required_form": 0,
+      "n_exists": 21,
+      "n_exists_as_written": 13,
+      "missing": [],
+      "n_pattern_unchecked": 7,
+      "n_with_line": 0,
+      "n_line_in_range": 0,
+      "lines_out_of_range": [],
+      "n_symbols_checked": 0,
+      "n_symbols_found_in_file": 0,
+      "symbols_not_found": [],
+      "n_symbol_line_checks": 0,
+      "n_symbol_at_cited_line": 0,
+      "symbol_line_mismatches": [],
+      "n_in_code_reference_section": 0,
+      "n_resolved_in_clone_without_git": 21,
+      "S4": "FAIL"
+    },
+    "code_ref_bases": [
+      "repos/topology-biomechinterp1"
+    ],
+    "parameters": {
+      "S5": "PASS",
+      "n_tables": 1,
+      "headers": [
+        [
+          "parameter",
+          "default",
+          "alternate / scan range",
+          "used in"
+        ]
+      ],
+      "n_rows": 38,
+      "has_range_column": true,
+      "duplicate_names": [],
+      "non_snake_case_names": [
+        "copole_K"
+      ],
+      "n_default_machine_readable": 27,
+      "n_range_machine_readable": 9,
+      "n_nonnegotiable": 0
+    },
+    "validation": {
+      "S6": "FAIL",
+      "n_items": 22,
+      "numeric-threshold": 15,
+      "numeric-mention": 7,
+      "qualitative": 0,
+      "n_source_anchored": 6,
+      "n_if_broken_rule": 5,
+      "n_threshold_not_source_anchored": 10,
+      "machine_readable_block": false,
+      "framed_as_source_replication": true
+    },
+    "slots": {
+      "null_model": {
+        "mentions": 58,
+        "labelled_slot_lines": [
+          138,
+          153,
+          238,
+          338,
+          343,
+          344,
+          505,
+          515,
+          531,
+          532
+        ],
+        "has_labelled_slot": true
+      },
+      "trivial_baseline": {
+        "mentions": 0,
+        "labelled_slot_lines": [],
+        "has_labelled_slot": false
+      },
+      "positive_control": {
+        "mentions": 0,
+        "labelled_slot_lines": [],
+        "has_labelled_slot": false
+      },
+      "scope_statement": {
+        "mentions": 0,
+        "labelled_slot_lines": [],
+        "has_labelled_slot": false
+      },
+      "S7": "FAIL"
+    }
+  },
+  {
+    "spec": "pipelines/topology-geometry-141-hypotheses.md",
+    "run": "topology-141-217M",
+    "deployed_on_maxtoki": true,
+    "chars": 71590,
+    "verdicts": {
+      "S1": "FAIL",
+      "S2": "PASS",
+      "S3": "WARN",
+      "S4": "FAIL",
+      "S5": "PASS",
+      "S6": "FAIL",
+      "S7": "FAIL"
+    },
+    "template_verdict": "REJECT",
+    "sections": {
+      "S1": "FAIL",
+      "present": [
+        "Overview",
+        "Source",
+        "Inputs",
+        "Outputs",
+        "Dependencies",
+        "Methodology",
+        "Parameters",
+        "Validation",
+        "Known pitfalls"
+      ],
+      "missing": [
+        "Code references"
+      ],
+      "in_order": true,
+      "heading_number_mismatches": [
+        {
+          "title": "7. Parameters",
+          "written_number": 7,
+          "template_position": 8
+        },
+        {
+          "title": "8. Validation",
+          "written_number": 8,
+          "template_position": 9
+        },
+        {
+          "title": "9. Known pitfalls",
+          "written_number": 9,
+          "template_position": 10
+        }
+      ],
+      "extra_sections": [
+        "10. Quick-start for new-model evaluation"
+      ],
+      "extra_sections_before_section_10": [],
+      "S2": "PASS",
+      "short_sections": [],
+      "tbd_sections": [],
+      "section_chars": {
+        "Overview": 7636,
+        "Source": 3699,
+        "Inputs": 2784,
+        "Outputs": 3997,
+        "Dependencies": 1409,
+        "Methodology": 35647,
+        "Parameters": 2585,
+        "Validation": 4234,
+        "Known pitfalls": 5004
+      }
+    },
+    "pin": {
+      "S3": "WARN",
+      "status": "TEXT_MATCH_ONLY_NO_GIT",
+      "hashes": [
+        {
+          "hash": "32ec76d816b7b4ded3e9aa16a87624e1cd404f3c",
+          "pinned_commit_txt_in": [
+            "topology-biomechinterp2"
+          ],
+          "git_present": false,
+          "commit_in_clone": null,
+          "head": null,
+          "head_equals_pin": null,
+          "modified_tracked_files": null
+        }
+      ],
+      "clones_named_in_source": [
+        "topology-biomechinterp2"
+      ]
+    },
+    "code_refs": {
+      "n_refs": 22,
+      "by_form": {
+        "name_only": 2,
+        "repos_path_no_line": 8,
+        "bare_path": 12
+      },
+      "by_resolve_status": {
+        "missing": 1,
+        "ok": 18,
+        "ok_by_suffix": 2,
+        "ok_by_name": 1
+      },
+      "n_required_form": 0,
+      "n_exists": 21,
+      "n_exists_as_written": 18,
+      "missing": [
+        "`run_claude_topology_autoloop.py`"
+      ],
+      "n_pattern_unchecked": 0,
+      "n_with_line": 0,
+      "n_line_in_range": 0,
+      "lines_out_of_range": [],
+      "n_symbols_checked": 0,
+      "n_symbols_found_in_file": 0,
+      "symbols_not_found": [],
+      "n_symbol_line_checks": 0,
+      "n_symbol_at_cited_line": 0,
+      "symbol_line_mismatches": [],
+      "n_in_code_reference_section": 0,
+      "n_resolved_in_clone_without_git": 21,
+      "S4": "FAIL"
+    },
+    "code_ref_bases": [
+      "repos/topology-biomechinterp2"
+    ],
+    "parameters": {
+      "S5": "PASS",
+      "n_tables": 1,
+      "headers": [
+        [
+          "parameter",
+          "default",
+          "alternate / sensitivity",
+          "used in"
+        ]
+      ],
+      "n_rows": 30,
+      "has_range_column": true,
+      "duplicate_names": [],
+      "non_snake_case_names": [],
+      "n_default_machine_readable": 19,
+      "n_range_machine_readable": 16,
+      "n_nonnegotiable": 0
+    },
+    "validation": {
+      "S6": "FAIL",
+      "n_items": 13,
+      "numeric-threshold": 10,
+      "numeric-mention": 3,
+      "qualitative": 0,
+      "n_source_anchored": 4,
+      "n_if_broken_rule": 6,
+      "n_threshold_not_source_anchored": 6,
+      "machine_readable_block": false,
+      "framed_as_source_replication": true
+    },
+    "slots": {
+      "null_model": {
+        "mentions": 138,
+        "labelled_slot_lines": [
+          99,
+          100,
+          161,
+          165,
+          167,
+          168,
+          169,
+          170,
+          174,
+          239
+        ],
+        "has_labelled_slot": true
+      },
+      "trivial_baseline": {
+        "mentions": 0,
+        "labelled_slot_lines": [],
+        "has_labelled_slot": false
+      },
+      "positive_control": {
+        "mentions": 0,
+        "labelled_slot_lines": [],
+        "has_labelled_slot": false
+      },
+      "scope_statement": {
+        "mentions": 0,
+        "labelled_slot_lines": [],
+        "has_labelled_slot": false
+      },
+      "S7": "FAIL"
+    }
+  },
+  {
+    "spec": "pipelines/manifold-discovery-extraction-compactification.md",
+    "run": "manifold-discovery-217M",
+    "deployed_on_maxtoki": true,
+    "chars": 78654,
+    "verdicts": {
+      "S1": "FAIL",
+      "S2": "PASS",
+      "S3": "WAIVER",
+      "S4": "FAIL",
+      "S5": "PASS",
+      "S6": "FAIL",
+      "S7": "FAIL"
+    },
+    "template_verdict": "REJECT",
+    "sections": {
+      "S1": "FAIL",
+      "present": [
+        "Overview",
+        "Source",
+        "Inputs",
+        "Outputs",
+        "Dependencies",
+        "Methodology",
+        "Parameters",
+        "Validation",
+        "Known pitfalls"
+      ],
+      "missing": [
+        "Code references"
+      ],
+      "in_order": true,
+      "heading_number_mismatches": [
+        {
+          "title": "7. Parameters",
+          "written_number": 7,
+          "template_position": 8
+        },
+        {
+          "title": "8. Validation",
+          "written_number": 8,
+          "template_position": 9
+        },
+        {
+          "title": "9. Known pitfalls",
+          "written_number": 9,
+          "template_position": 10
+        }
+      ],
+      "extra_sections": [
+        "10. Quick-start for new-model and new-system application"
+      ],
+      "extra_sections_before_section_10": [],
+      "S2": "PASS",
+      "short_sections": [],
+      "tbd_sections": [],
+      "section_chars": {
+        "Overview": 8073,
+        "Source": 5607,
+        "Inputs": 5119,
+        "Outputs": 4552,
+        "Dependencies": 2457,
+        "Methodology": 33062,
+        "Parameters": 3727,
+        "Validation": 3381,
+        "Known pitfalls": 6969
+      }
+    },
+    "pin": {
+      "S3": "WAIVER",
+      "status": "NONE_WITH_REASON",
+      "hashes": [],
+      "clones_named_in_source": []
+    },
+    "code_refs": {
+      "n_refs": 7,
+      "by_form": {
+        "repos_path_no_line": 7
+      },
+      "by_resolve_status": {
+        "ok": 7
+      },
+      "n_required_form": 0,
+      "n_exists": 7,
+      "n_exists_as_written": 7,
+      "missing": [],
+      "n_pattern_unchecked": 0,
+      "n_with_line": 0,
+      "n_line_in_range": 0,
+      "lines_out_of_range": [],
+      "n_symbols_checked": 0,
+      "n_symbols_found_in_file": 0,
+      "symbols_not_found": [],
+      "n_symbol_line_checks": 0,
+      "n_symbol_at_cited_line": 0,
+      "symbol_line_mismatches": [],
+      "n_in_code_reference_section": 0,
+      "n_resolved_in_clone_without_git": 7,
+      "S4": "FAIL"
+    },
+    "code_ref_bases": [],
+    "parameters": {
+      "S5": "PASS",
+      "n_tables": 1,
+      "headers": [
+        [
+          "parameter",
+          "default",
+          "alternate / sensitivity",
+          "used in"
+        ]
+      ],
+      "n_rows": 39,
+      "has_range_column": true,
+      "duplicate_names": [],
+      "non_snake_case_names": [],
+      "n_default_machine_readable": 29,
+      "n_range_machine_readable": 3,
+      "n_nonnegotiable": 5
+    },
+    "validation": {
+      "S6": "FAIL",
+      "n_items": 16,
+      "numeric-threshold": 3,
+      "numeric-mention": 13,
+      "qualitative": 0,
+      "n_source_anchored": 4,
+      "n_if_broken_rule": 3,
+      "n_threshold_not_source_anchored": 0,
+      "machine_readable_block": false,
+      "framed_as_source_replication": true
+    },
+    "slots": {
+      "null_model": {
+        "mentions": 20,
+        "labelled_slot_lines": [
+          118,
+          159,
+          550,
+          577
+        ],
+        "has_labelled_slot": true
+      },
+      "trivial_baseline": {
+        "mentions": 0,
+        "labelled_slot_lines": [],
+        "has_labelled_slot": false
+      },
+      "positive_control": {
+        "mentions": 0,
+        "labelled_slot_lines": [],
+        "has_labelled_slot": false
+      },
+      "scope_statement": {
+        "mentions": 0,
+        "labelled_slot_lines": [],
+        "has_labelled_slot": false
+      },
+      "S7": "FAIL"
+    }
+  },
+  {
+    "spec": "pipelines/longevity-mechinterp-donor-aware.md",
+    "run": "longevity-mechinterp-217M",
+    "deployed_on_maxtoki": true,
+    "chars": 47914,
+    "verdicts": {
+      "S1": "PASS",
+      "S2": "PASS",
+      "S3": "PASS",
+      "S4": "FAIL",
+      "S5": "PASS",
+      "S6": "FAIL",
+      "S7": "FAIL"
+    },
+    "template_verdict": "ACCEPT",
+    "sections": {
+      "S1": "PASS",
+      "present": [
+        "Overview",
+        "Source",
+        "Inputs",
+        "Outputs",
+        "Dependencies",
+        "Methodology",
+        "Code references",
+        "Parameters",
+        "Validation",
+        "Known pitfalls"
+      ],
+      "missing": [],
+      "in_order": true,
+      "heading_number_mismatches": [],
+      "extra_sections": [
+        "11. Porting to a new target model"
+      ],
+      "extra_sections_before_section_10": [],
+      "S2": "PASS",
+      "short_sections": [],
+      "tbd_sections": [],
+      "section_chars": {
+        "Overview": 2920,
+        "Source": 850,
+        "Inputs": 3100,
+        "Outputs": 3235,
+        "Dependencies": 1916,
+        "Methodology": 22679,
+        "Code references": 4166,
+        "Parameters": 1720,
+        "Validation": 2681,
+        "Known pitfalls": 2816
+      }
+    },
+    "pin": {
+      "S3": "PASS",
+      "status": "VERIFIED_GIT_HEAD",
+      "hashes": [
+        {
+          "hash": "5a61464632a3c3e8bebd396eb1ab17bce1dc2493",
+          "pinned_commit_txt_in": [
+            "longevity-mechinterp"
+          ],
+          "git_present": true,
+          "commit_in_clone": true,
+          "head": "5a61464632a3c3e8bebd396eb1ab17bce1dc2493",
+          "head_equals_pin": true,
+          "modified_tracked_files": 70
+        }
+      ],
+      "clones_named_in_source": [
+        "longevity-mechinterp"
+      ]
+    },
+    "code_refs": {
+      "n_refs": 46,
+      "by_form": {
+        "repos_path_no_line": 3,
+        "bare_path": 14,
+        "name_only": 29
+      },
+      "by_resolve_status": {
+        "ok": 15,
+        "ok_by_name": 29,
+        "pattern": 2
+      },
+      "n_required_form": 0,
+      "n_exists": 44,
+      "n_exists_as_written": 15,
+      "missing": [],
+      "n_pattern_unchecked": 2,
+      "n_with_line": 13,
+      "n_line_in_range": 13,
+      "lines_out_of_range": [],
+      "n_symbols_checked": 31,
+      "n_symbols_found_in_file": 31,
+      "symbols_not_found": [],
+      "n_symbol_line_checks": 31,
+      "n_symbol_at_cited_line": 31,
+      "symbol_line_mismatches": [],
+      "n_in_code_reference_section": 14,
+      "n_resolved_in_clone_without_git": 0,
+      "S4": "FAIL"
+    },
+    "code_ref_bases": [
+      "repos/longevity-mechinterp"
+    ],
+    "parameters": {
+      "S5": "PASS",
+      "n_tables": 1,
+      "headers": [
+        [
+          "name",
+          "stage",
+          "default",
+          "valid range / notes"
+        ]
+      ],
+      "n_rows": 30,
+      "has_range_column": true,
+      "duplicate_names": [],
+      "non_snake_case_names": [
+        "donor_bootstrap_B"
+      ],
+      "n_default_machine_readable": 28,
+      "n_range_machine_readable": 19,
+      "n_nonnegotiable": 0
+    },
+    "validation": {
+      "S6": "FAIL",
+      "n_items": 14,
+      "numeric-threshold": 5,
+      "numeric-mention": 3,
+      "qualitative": 6,
+      "n_source_anchored": 2,
+      "n_if_broken_rule": 2,
+      "n_threshold_not_source_anchored": 4,
+      "machine_readable_block": false,
+      "framed_as_source_replication": false
+    },
+    "slots": {
+      "null_model": {
+        "mentions": 8,
+        "labelled_slot_lines": [],
+        "has_labelled_slot": false
+      },
+      "trivial_baseline": {
+        "mentions": 1,
+        "labelled_slot_lines": [],
+        "has_labelled_slot": false
+      },
+      "positive_control": {
+        "mentions": 4,
+        "labelled_slot_lines": [
+          264
+        ],
+        "has_labelled_slot": true
+      },
+      "scope_statement": {
+        "mentions": 1,
+        "labelled_slot_lines": [],
+        "has_labelled_slot": false
+      },
+      "S7": "FAIL"
+    }
+  },
+  {
+    "spec": "pipelines/sparse-autoencoders/01-sae-atlas.md",
+    "run": "sae-atlas-217M",
+    "deployed_on_maxtoki": true,
+    "chars": 76940,
+    "verdicts": {
+      "S1": "FAIL",
+      "S2": "PASS",
+      "S3": "WARN",
+      "S4": "FAIL",
+      "S5": "FAIL",
+      "S6": "FAIL",
+      "S7": "FAIL"
+    },
+    "template_verdict": "REJECT",
+    "sections": {
+      "S1": "FAIL",
+      "present": [
+        "Overview",
+        "Source",
+        "Inputs",
+        "Outputs",
+        "Dependencies",
+        "Methodology",
+        "Parameters",
+        "Validation",
+        "Known pitfalls"
+      ],
+      "missing": [
+        "Code references"
+      ],
+      "in_order": true,
+      "heading_number_mismatches": [
+        {
+          "title": "7. Parameters",
+          "written_number": 7,
+          "template_position": 8
+        },
+        {
+          "title": "8. Validation",
+          "written_number": 8,
+          "template_position": 9
+        },
+        {
+          "title": "9. Known pitfalls",
+          "written_number": 9,
+          "template_position": 10
+        }
+      ],
+      "extra_sections": [
+        "10. Quick-start for new-model evaluation"
+      ],
+      "extra_sections_before_section_10": [],
+      "S2": "PASS",
+      "short_sections": [],
+      "tbd_sections": [],
+      "section_chars": {
+        "Overview": 2783,
+        "Source": 2281,
+        "Inputs": 3308,
+        "Outputs": 5139,
+        "Dependencies": 1894,
+        "Methodology": 43465,
+        "Parameters": 3009,
+        "Validation": 4403,
+        "Known pitfalls": 5768
+      }
+    },
+    "pin": {
+      "S3": "WARN",
+      "status": "TEXT_MATCH_ONLY_NO_GIT",
+      "hashes": [
+        {
+          "hash": "9277f5daec682cd34027172b04993833dfeb17e1",
+          "pinned_commit_txt_in": [
+            "bio-sae"
+          ],
+          "git_present": false,
+          "commit_in_clone": null,
+          "head": null,
+          "head_equals_pin": null,
+          "modified_tracked_files": null
+        }
+      ],
+      "clones_named_in_source": [
+        "bio-sae"
+      ]
+    },
+    "code_refs": {
+      "n_refs": 52,
+      "by_form": {
+        "repos_path_no_line": 40,
+        "name_only": 7,
+        "bare_path": 5
+      },
+      "by_resolve_status": {
+        "ok": 45,
+        "ok_by_name": 7
+      },
+      "n_required_form": 0,
+      "n_exists": 52,
+      "n_exists_as_written": 45,
+      "missing": [],
+      "n_pattern_unchecked": 0,
+      "n_with_line": 0,
+      "n_line_in_range": 0,
+      "lines_out_of_range": [],
+      "n_symbols_checked": 1,
+      "n_symbols_found_in_file": 1,
+      "symbols_not_found": [],
+      "n_symbol_line_checks": 0,
+      "n_symbol_at_cited_line": 0,
+      "symbol_line_mismatches": [],
+      "n_in_code_reference_section": 0,
+      "n_resolved_in_clone_without_git": 52,
+      "S4": "FAIL"
+    },
+    "code_ref_bases": [
+      "repos/bio-sae"
+    ],
+    "parameters": {
+      "S5": "FAIL",
+      "n_tables": 1,
+      "headers": [
+        [
+          "parameter",
+          "default",
+          "alternate / sensitivity range",
+          "used in"
+        ]
+      ],
+      "n_rows": 36,
+      "has_range_column": true,
+      "duplicate_names": [
+        "n_cells_training"
+      ],
+      "non_snake_case_names": [
+        "d_SAE_expansion"
+      ],
+      "n_default_machine_readable": 26,
+      "n_range_machine_readable": 8,
+      "n_nonnegotiable": 1
+    },
+    "validation": {
+      "S6": "FAIL",
+      "n_items": 15,
+      "numeric-threshold": 14,
+      "numeric-mention": 1,
+      "qualitative": 0,
+      "n_source_anchored": 5,
+      "n_if_broken_rule": 5,
+      "n_threshold_not_source_anchored": 9,
+      "machine_readable_block": false,
+      "framed_as_source_replication": true
+    },
+    "slots": {
+      "null_model": {
+        "mentions": 12,
+        "labelled_slot_lines": [
+          269,
+          350,
+          415
+        ],
+        "has_labelled_slot": true
+      },
+      "trivial_baseline": {
+        "mentions": 0,
+        "labelled_slot_lines": [],
+        "has_labelled_slot": false
+      },
+      "positive_control": {
+        "mentions": 0,
+        "labelled_slot_lines": [],
+        "has_labelled_slot": false
+      },
+      "scope_statement": {
+        "mentions": 0,
+        "labelled_slot_lines": [],
+        "has_labelled_slot": false
+      },
+      "S7": "FAIL"
+    }
+  },
+  {
+    "spec": "pipelines/sparse-autoencoders/02-causal-circuit-tracing.md",
+    "run": "circuit-tracing-217M",
+    "deployed_on_maxtoki": true,
+    "chars": 83252,
+    "verdicts": {
+      "S1": "FAIL",
+      "S2": "PASS",
+      "S3": "WARN",
+      "S4": "FAIL",
+      "S5": "PASS",
+      "S6": "FAIL",
+      "S7": "FAIL"
+    },
+    "template_verdict": "REJECT",
+    "sections": {
+      "S1": "FAIL",
+      "present": [
+        "Overview",
+        "Source",
+        "Inputs",
+        "Outputs",
+        "Dependencies",
+        "Methodology",
+        "Parameters",
+        "Validation",
+        "Known pitfalls"
+      ],
+      "missing": [
+        "Code references"
+      ],
+      "in_order": true,
+      "heading_number_mismatches": [
+        {
+          "title": "7. Parameters",
+          "written_number": 7,
+          "template_position": 8
+        },
+        {
+          "title": "8. Validation",
+          "written_number": 8,
+          "template_position": 9
+        },
+        {
+          "title": "9. Known pitfalls",
+          "written_number": 9,
+          "template_position": 10
+        }
+      ],
+      "extra_sections": [
+        "10. Quick-start for new-model evaluation"
+      ],
+      "extra_sections_before_section_10": [],
+      "S2": "PASS",
+      "short_sections": [],
+      "tbd_sections": [],
+      "section_chars": {
+        "Overview": 6045,
+        "Source": 2123,
+        "Inputs": 4578,
+        "Outputs": 6841,
+        "Dependencies": 1418,
+        "Methodology": 44477,
+        "Parameters": 2387,
+        "Validation": 4798,
+        "Known pitfalls": 5589
+      }
+    },
+    "pin": {
+      "S3": "WARN",
+      "status": "TEXT_MATCH_ONLY_NO_GIT; other clones named in Source without their commit in this spec: ['bio-sae']",
+      "hashes": [
+        {
+          "hash": "4f6bfb4a2193c1104611db89f8c7263e1c96797d",
+          "pinned_commit_txt_in": [
+            "bio-sae-circuits"
+          ],
+          "git_present": false,
+          "commit_in_clone": null,
+          "head": null,
+          "head_equals_pin": null,
+          "modified_tracked_files": null
+        }
+      ],
+      "clones_named_in_source": [
+        "bio-sae",
+        "bio-sae-circuits"
+      ]
+    },
+    "code_refs": {
+      "n_refs": 27,
+      "by_form": {
+        "repos_path_no_line": 6,
+        "bare_path": 4,
+        "repos_path_line": 5,
+        "bare_path_line": 12
+      },
+      "by_resolve_status": {
+        "ok": 27
+      },
+      "n_required_form": 5,
+      "n_exists": 27,
+      "n_exists_as_written": 27,
+      "missing": [],
+      "n_pattern_unchecked": 0,
+      "n_with_line": 17,
+      "n_line_in_range": 17,
+      "lines_out_of_range": [],
+      "n_symbols_checked": 18,
+      "n_symbols_found_in_file": 18,
+      "symbols_not_found": [],
+      "n_symbol_line_checks": 14,
+      "n_symbol_at_cited_line": 14,
+      "symbol_line_mismatches": [],
+      "n_in_code_reference_section": 0,
+      "n_resolved_in_clone_without_git": 27,
+      "S4": "FAIL"
+    },
+    "code_ref_bases": [
+      "repos/bio-sae-circuits",
+      "repos/bio-sae"
+    ],
+    "parameters": {
+      "S5": "PASS",
+      "n_tables": 1,
+      "headers": [
+        [
+          "parameter",
+          "default",
+          "alternate / sensitivity",
+          "used in"
+        ]
+      ],
+      "n_rows": 22,
+      "has_range_column": true,
+      "duplicate_names": [],
+      "non_snake_case_names": [],
+      "n_default_machine_readable": 7,
+      "n_range_machine_readable": 3,
+      "n_nonnegotiable": 1
+    },
+    "validation": {
+      "S6": "FAIL",
+      "n_items": 15,
+      "numeric-threshold": 10,
+      "numeric-mention": 5,
+      "qualitative": 0,
+      "n_source_anchored": 10,
+      "n_if_broken_rule": 6,
+      "n_threshold_not_source_anchored": 4,
+      "machine_readable_block": false,
+      "framed_as_source_replication": true
+    },
+    "slots": {
+      "null_model": {
+        "mentions": 8,
+        "labelled_slot_lines": [
+          619
+        ],
+        "has_labelled_slot": true
+      },
+      "trivial_baseline": {
+        "mentions": 0,
+        "labelled_slot_lines": [],
+        "has_labelled_slot": false
+      },
+      "positive_control": {
+        "mentions": 0,
+        "labelled_slot_lines": [],
+        "has_labelled_slot": false
+      },
+      "scope_statement": {
+        "mentions": 0,
+        "labelled_slot_lines": [],
+        "has_labelled_slot": false
+      },
+      "S7": "FAIL"
+    }
+  },
+  {
+    "spec": "pipelines/sparse-autoencoders/03-exhaustive-mapping-and-steering.md",
+    "run": "exhaustive-mapping-217M",
+    "deployed_on_maxtoki": true,
+    "chars": 71881,
+    "verdicts": {
+      "S1": "FAIL",
+      "S2": "PASS",
+      "S3": "WARN",
+      "S4": "FAIL",
+      "S5": "PASS",
+      "S6": "FAIL",
+      "S7": "FAIL"
+    },
+    "template_verdict": "REJECT",
+    "sections": {
+      "S1": "FAIL",
+      "present": [
+        "Overview",
+        "Source",
+        "Inputs",
+        "Outputs",
+        "Dependencies",
+        "Methodology",
+        "Parameters",
+        "Validation",
+        "Known pitfalls"
+      ],
+      "missing": [
+        "Code references"
+      ],
+      "in_order": true,
+      "heading_number_mismatches": [
+        {
+          "title": "7. Parameters",
+          "written_number": 7,
+          "template_position": 8
+        },
+        {
+          "title": "8. Validation",
+          "written_number": 8,
+          "template_position": 9
+        },
+        {
+          "title": "9. Known pitfalls",
+          "written_number": 9,
+          "template_position": 10
+        }
+      ],
+      "extra_sections": [
+        "10. Quick-start for new-model evaluation"
+      ],
+      "extra_sections_before_section_10": [],
+      "S2": "PASS",
+      "short_sections": [],
+      "tbd_sections": [],
+      "section_chars": {
+        "Overview": 4973,
+        "Source": 3226,
+        "Inputs": 3671,
+        "Outputs": 7365,
+        "Dependencies": 1361,
+        "Methodology": 33544,
+        "Parameters": 2218,
+        "Validation": 4590,
+        "Known pitfalls": 6155
+      }
+    },
+    "pin": {
+      "S3": "WARN",
+      "status": "TEXT_MATCH_ONLY_NO_GIT",
+      "hashes": [
+        {
+          "hash": "6406f07cd4e13ffede2bc9981cda5579e615f2b9",
+          "pinned_commit_txt_in": [
+            "sae-biological-map"
+          ],
+          "git_present": false,
+          "commit_in_clone": null,
+          "head": null,
+          "head_equals_pin": null,
+          "modified_tracked_files": null
+        }
+      ],
+      "clones_named_in_source": [
+        "sae-biological-map"
+      ]
+    },
+    "code_refs": {
+      "n_refs": 26,
+      "by_form": {
+        "name_only": 6,
+        "repos_path_no_line": 6,
+        "bare_path": 14
+      },
+      "by_resolve_status": {
+        "ok_by_name": 6,
+        "missing": 1,
+        "ok": 18,
+        "pattern": 1
+      },
+      "n_required_form": 0,
+      "n_exists": 24,
+      "n_exists_as_written": 18,
+      "missing": [
+        "../../repos/bio-sae-circuits/results/circuit_analysis.json"
+      ],
+      "n_pattern_unchecked": 1,
+      "n_with_line": 0,
+      "n_line_in_range": 0,
+      "lines_out_of_range": [],
+      "n_symbols_checked": 1,
+      "n_symbols_found_in_file": 1,
+      "symbols_not_found": [],
+      "n_symbol_line_checks": 0,
+      "n_symbol_at_cited_line": 0,
+      "symbol_line_mismatches": [],
+      "n_in_code_reference_section": 0,
+      "n_resolved_in_clone_without_git": 24,
+      "S4": "FAIL"
+    },
+    "code_ref_bases": [
+      "repos/sae-biological-map"
+    ],
+    "parameters": {
+      "S5": "PASS",
+      "n_tables": 1,
+      "headers": [
+        [
+          "parameter",
+          "default",
+          "range",
+          "used in"
+        ]
+      ],
+      "n_rows": 27,
+      "has_range_column": true,
+      "duplicate_names": [],
+      "non_snake_case_names": [],
+      "n_default_machine_readable": 13,
+      "n_range_machine_readable": 11,
+      "n_nonnegotiable": 2
+    },
+    "validation": {
+      "S6": "FAIL",
+      "n_items": 14,
+      "numeric-threshold": 11,
+      "numeric-mention": 3,
+      "qualitative": 0,
+      "n_source_anchored": 2,
+      "n_if_broken_rule": 4,
+      "n_threshold_not_source_anchored": 9,
+      "machine_readable_block": false,
+      "framed_as_source_replication": true
+    },
+    "slots": {
+      "null_model": {
+        "mentions": 1,
+        "labelled_slot_lines": [],
+        "has_labelled_slot": false
+      },
+      "trivial_baseline": {
+        "mentions": 0,
+        "labelled_slot_lines": [],
+        "has_labelled_slot": false
+      },
+      "positive_control": {
+        "mentions": 0,
+        "labelled_slot_lines": [],
+        "has_labelled_slot": false
+      },
+      "scope_statement": {
+        "mentions": 1,
+        "labelled_slot_lines": [
+          659
+        ],
+        "has_labelled_slot": true
+      },
+      "S7": "FAIL"
+    }
+  },
+  {
+    "spec": "pipelines/audit-recurring-review-issues.md",
+    "run": null,
+    "deployed_on_maxtoki": false,
+    "chars": 39143,
+    "verdicts": {
+      "S1": "PASS",
+      "S2": "PASS",
+      "S3": "WAIVER",
+      "S4": "FAIL",
+      "S5": "FAIL",
+      "S6": "FAIL",
+      "S7": "FAIL"
+    },
+    "template_verdict": "ACCEPT",
+    "sections": {
+      "S1": "PASS",
+      "present": [
+        "Overview",
+        "Source",
+        "Inputs",
+        "Outputs",
+        "Dependencies",
+        "Methodology",
+        "Code references",
+        "Parameters",
+        "Validation",
+        "Known pitfalls"
+      ],
+      "missing": [],
+      "in_order": true,
+      "heading_number_mismatches": [],
+      "extra_sections": [],
+      "extra_sections_before_section_10": [],
+      "S2": "PASS",
+      "short_sections": [],
+      "tbd_sections": [],
+      "section_chars": {
+        "Overview": 2016,
+        "Source": 985,
+        "Inputs": 1428,
+        "Outputs": 1009,
+        "Dependencies": 813,
+        "Methodology": 25524,
+        "Code references": 1446,
+        "Parameters": 1432,
+        "Validation": 1277,
+        "Known pitfalls": 2928
+      }
+    },
+    "pin": {
+      "S3": "WAIVER",
+      "status": "NONE_WITH_REASON",
+      "hashes": [],
+      "clones_named_in_source": []
+    },
+    "code_refs": {
+      "n_refs": 10,
+      "by_form": {
+        "bare_path": 7,
+        "name_only": 1,
+        "repos_path_no_line": 2
+      },
+      "by_resolve_status": {
+        "pattern": 3,
+        "missing": 3,
+        "ok": 3,
+        "ok_by_name": 1
+      },
+      "n_required_form": 0,
+      "n_exists": 4,
+      "n_exists_as_written": 3,
+      "missing": [
+        "`scripts/phase12_strict_max_null.py`",
+        "repos/topology-biomechinterp2/iterations/iter_0009/run_iter0009_screen.py",
+        "repos/longevity-mechinterp/.../stage10_*"
+      ],
+      "n_pattern_unchecked": 3,
+      "n_with_line": 0,
+      "n_line_in_range": 0,
+      "lines_out_of_range": [],
+      "n_symbols_checked": 0,
+      "n_symbols_found_in_file": 0,
+      "symbols_not_found": [],
+      "n_symbol_line_checks": 0,
+      "n_symbol_at_cited_line": 0,
+      "symbol_line_mismatches": [],
+      "n_in_code_reference_section": 7,
+      "n_resolved_in_clone_without_git": 0,
+      "S4": "FAIL"
+    },
+    "code_ref_bases": [],
+    "parameters": {
+      "S5": "FAIL",
+      "n_tables": 1,
+      "headers": [
+        [
+          "parameter",
+          "default",
+          "rationale",
+          "used in pattern"
+        ]
+      ],
+      "n_rows": 10,
+      "has_range_column": false,
+      "duplicate_names": [],
+      "non_snake_case_names": [
+        "repo_+_doi"
+      ],
+      "n_default_machine_readable": 5,
+      "n_range_machine_readable": 0,
+      "n_nonnegotiable": 0
+    },
+    "validation": {
+      "S6": "FAIL",
+      "n_items": 6,
+      "numeric-threshold": 0,
+      "numeric-mention": 0,
+      "qualitative": 6,
+      "n_source_anchored": 0,
+      "n_if_broken_rule": 1,
+      "n_threshold_not_source_anchored": 0,
+      "machine_readable_block": false,
+      "framed_as_source_replication": false
+    },
+    "slots": {
+      "null_model": {
+        "mentions": 34,
+        "labelled_slot_lines": [
+          146,
+          397,
+          671
+        ],
+        "has_labelled_slot": true
+      },
+      "trivial_baseline": {
+        "mentions": 4,
+        "labelled_slot_lines": [
+          195
+        ],
+        "has_labelled_slot": true
+      },
+      "positive_control": {
+        "mentions": 8,
+        "labelled_slot_lines": [
+          397
+        ],
+        "has_labelled_slot": true
+      },
+      "scope_statement": {
+        "mentions": 2,
+        "labelled_slot_lines": [],
+        "has_labelled_slot": false
+      },
+      "S7": "FAIL"
+    }
+  },
+  {
+    "spec": "pipelines/sparse-autoencoders/04-atlas-deployment.md",
+    "run": null,
+    "deployed_on_maxtoki": false,
+    "chars": 12154,
+    "verdicts": {
+      "S1": "FAIL",
+      "S2": "PASS",
+      "S3": "FAIL",
+      "S4": "FAIL",
+      "S5": "FAIL",
+      "S6": "FAIL",
+      "S7": "FAIL"
+    },
+    "template_verdict": "REJECT",
+    "sections": {
+      "S1": "FAIL",
+      "present": [
+        "Overview",
+        "Source",
+        "Inputs",
+        "Validation",
+        "Known pitfalls"
+      ],
+      "missing": [
+        "Outputs",
+        "Dependencies",
+        "Methodology",
+        "Code references",
+        "Parameters"
+      ],
+      "in_order": true,
+      "heading_number_mismatches": [
+        {
+          "title": "7. Validation",
+          "written_number": 7,
+          "template_position": 9
+        },
+        {
+          "title": "8. Known pitfalls",
+          "written_number": 8,
+          "template_position": 10
+        }
+      ],
+      "extra_sections": [
+        "4. JSON Data File Schema",
+        "5. Atlas Architecture",
+        "6. Deployment Steps"
+      ],
+      "extra_sections_before_section_10": [
+        "4. JSON Data File Schema",
+        "5. Atlas Architecture",
+        "6. Deployment Steps"
+      ],
+      "S2": "PASS",
+      "short_sections": [],
+      "tbd_sections": [],
+      "section_chars": {
+        "Overview": 1498,
+        "Source": 443,
+        "Inputs": 1534,
+        "Validation": 598,
+        "Known pitfalls": 1107
+      }
+    },
+    "pin": {
+      "S3": "FAIL",
+      "status": "MISSING",
+      "hashes": [],
+      "clones_named_in_source": []
+    },
+    "code_refs": {
+      "n_refs": 1,
+      "by_form": {
+        "bare_path": 1
+      },
+      "by_resolve_status": {
+        "ok": 1
+      },
+      "n_required_form": 0,
+      "n_exists": 1,
+      "n_exists_as_written": 1,
+      "missing": [],
+      "n_pattern_unchecked": 0,
+      "n_with_line": 0,
+      "n_line_in_range": 0,
+      "lines_out_of_range": [],
+      "n_symbols_checked": 0,
+      "n_symbols_found_in_file": 0,
+      "symbols_not_found": [],
+      "n_symbol_line_checks": 0,
+      "n_symbol_at_cited_line": 0,
+      "symbol_line_mismatches": [],
+      "n_in_code_reference_section": 0,
+      "n_resolved_in_clone_without_git": 0,
+      "S4": "FAIL"
+    },
+    "code_ref_bases": [],
+    "parameters": {
+      "S5": "FAIL",
+      "reason": "no Parameters section",
+      "rows": []
+    },
+    "validation": {
+      "S6": "FAIL",
+      "n_items": 9,
+      "numeric-threshold": 0,
+      "numeric-mention": 1,
+      "qualitative": 8,
+      "n_source_anchored": 0,
+      "n_if_broken_rule": 0,
+      "n_threshold_not_source_anchored": 0,
+      "machine_readable_block": false,
+      "framed_as_source_replication": false
+    },
+    "slots": {
+      "null_model": {
+        "mentions": 0,
+        "labelled_slot_lines": [],
+        "has_labelled_slot": false
+      },
+      "trivial_baseline": {
+        "mentions": 0,
+        "labelled_slot_lines": [],
+        "has_labelled_slot": false
+      },
+      "positive_control": {
+        "mentions": 0,
+        "labelled_slot_lines": [],
+        "has_labelled_slot": false
+      },
+      "scope_statement": {
+        "mentions": 0,
+        "labelled_slot_lines": [],
+        "has_labelled_slot": false
+      },
+      "S7": "FAIL"
+    }
+  }
+]

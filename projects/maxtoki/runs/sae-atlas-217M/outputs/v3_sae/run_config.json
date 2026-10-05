@@ -1,0 +1,1712 @@
+{
+  "pipeline": "sae-atlas-217M / v3_sae",
+  "item": "V3-1: retrain the 12 layer SAEs on correctly encoded inputs",
+  "prepare": {
+    "env": {
+      "device": "cpu",
+      "torch": "2.11.0",
+      "transformers": "5.5.4",
+      "python": "3.12.9",
+      "platform": "macOS-26.3-arm64-arm-64bit",
+      "hooks_v2_sha256": "1ba6fda5ad761b1f82041a7b1397fa9332fa7438e13db955a00d751c4b440f54",
+      "model_dir": "<REPO_ROOT>/projects/maxtoki/setup/MaxToki-217M-HF",
+      "model_dtype": "float32",
+      "timestamp": "2026-10-01T17:31:15"
+    },
+    "encoding": {
+      "inputs_module": "<REPO_ROOT>/projects/maxtoki/setup/inputs_v3.py",
+      "inputs_v3_sha256": "1225194cfd0a9fa28f1d05f4603d8e884e6ac66eff23a1915092788e342e0af5",
+      "dataset": "k562",
+      "file": {
+        "path": "<DATA_ROOT>/biodyn-nmi-paper/src/02_cssi_method/crispri_validation/data/replogle_concat.h5ad",
+        "size": 30010775846,
+        "mtime": "2026-02-14T23:33:00",
+        "sha256_head_tail_16MB": "ef45fd6a820bf4f2795ab091c1f22ac25fb5f39daae1712804d902b9680bb995"
+      },
+      "count_source": "expm1_X",
+      "count_source_description": "expm1(X) (X = log1p(CP10k)), checked per row to be whole-number multiples of the cell's smallest non-zero value; by default divided by that value and rounded (= integer counts up to one per-cell factor; expm1_mode='integer')",
+      "encoding": "counts / row total * 1e4 / Geneformer gc104M gene median, ranked high->low, first max_len-2 genes, <bos>=2 ... <eos>=3 (maxtoki_adapter.tokenize_cell)",
+      "gene_median_pkl": "<DATA_ROOT>/biodyn-nmi-paper/src/02_cssi_method/crispri_validation/data/gene_median_dictionary_gc104M.pkl",
+      "token_dictionary": "<REPO_ROOT>/projects/maxtoki/setup/token_dictionary.json",
+      "rows": [
+        282046,
+        282311,
+        282433,
+        282941,
+        283577,
+        284267,
+        284298,
+        284726,
+        284933,
+        284957,
+        285079,
+        285083,
+        285379,
+        285456,
+        286638,
+        286648,
+        287568,
+        288127,
+        288217,
+        288882,
+        289249,
+        289288,
+        289295,
+        291777,
+        292787,
+        292839,
+        293147,
+        293510,
+        294796,
+        295063,
+        295104,
+        295257,
+        295510,
+        295567,
+        295910,
+        296603,
+        296609,
+        296913,
+        297020,
+        297116,
+        297208,
+        297608,
+        297772,
+        297894,
+        298127,
+        298162,
+        298470,
+        299165,
+        299265,
+        299655,
+        299678,
+        299679,
+        299818,
+        301050,
+        301190,
+        301253,
+        301685,
+        301757,
+        302021,
+        302257,
+        302372,
+        303374,
+        303444,
+        303626,
+        303760,
+        303811,
+        304122,
+        304304,
+        305229,
+        305585,
+        305749,
+        305774,
+        306068,
+        306074,
+        306081,
+        306649,
+        306737,
+        307643,
+        307817,
+        307858,
+        308227,
+        308908,
+        309531,
+        309811,
+        309851,
+        309902,
+        309972,
+        310608,
+        310885,
+        310942,
+        311213,
+        311446,
+        312078,
+        312511,
+        312555,
+        312630,
+        313036,
+        313078,
+        314426,
+        314735,
+        315662,
+        315833,
+        316434,
+        316738,
+        317231,
+        317581,
+        317595,
+        318258,
+        320060,
+        320666,
+        321596,
+        321903,
+        322073,
+        322501,
+        322907,
+        323302,
+        323689,
+        323938,
+        324337,
+        324925,
+        325157,
+        325547,
+        326288,
+        327172,
+        328151,
+        328653,
+        329002,
+        329252,
+        329469,
+        330662,
+        330891,
+        330892,
+        331127,
+        331838,
+        331873,
+        332218,
+        332257,
+        332404,
+        332526,
+        332630,
+        332684,
+        332895,
+        333602,
+        334182,
+        334302,
+        334597,
+        334749,
+        334783,
+        334916,
+        335370,
+        335467,
+        335997,
+        336382,
+        336467,
+        336572,
+        336591,
+        336724,
+        336929,
+        337500,
+        337893,
+        337968,
+        338154,
+        338317,
+        338515,
+        339716,
+        340247,
+        340763,
+        340818,
+        341165,
+        341189,
+        341901,
+        342140,
+        342973,
+        343572,
+        343918,
+        344779,
+        346881,
+        346940,
+        346977,
+        347252,
+        347530,
+        348009,
+        348242,
+        348571,
+        349167,
+        349483,
+        349816,
+        350250,
+        351157,
+        352485,
+        352993,
+        354911,
+        355530,
+        356250,
+        356314,
+        356372,
+        356417,
+        356652,
+        356658,
+        357149,
+        357193,
+        357470,
+        357753,
+        358407,
+        358725,
+        359314,
+        359467,
+        360230,
+        360662,
+        361465,
+        361817,
+        362090,
+        362379,
+        362468,
+        362731,
+        362930,
+        363230,
+        363495,
+        363844,
+        363983,
+        364018,
+        364394,
+        364647,
+        364673,
+        364874,
+        365271,
+        365393,
+        365437,
+        365801,
+        365911,
+        365969,
+        366745,
+        366801,
+        366955,
+        367019,
+        367103,
+        367873,
+        367999,
+        368749,
+        369005,
+        369132,
+        369202,
+        369392,
+        369647,
+        370127,
+        370301,
+        370943,
+        370983,
+        371322,
+        371529,
+        371537,
+        371638,
+        372235,
+        372313,
+        372422,
+        372442,
+        372750,
+        373399,
+        373795,
+        374194,
+        374414,
+        374620,
+        374690,
+        374840,
+        374974,
+        375969,
+        376083,
+        377378,
+        378018,
+        379834,
+        380102,
+        380116,
+        380688,
+        380726,
+        380948,
+        381578,
+        381951,
+        382034,
+        383189,
+        383211,
+        383293,
+        383713,
+        384104,
+        384231,
+        384691,
+        384755,
+        385334,
+        385831,
+        385928,
+        385974,
+        386317,
+        386650,
+        387403,
+        387424,
+        387541,
+        387913,
+        388090,
+        388250,
+        388538,
+        388878,
+        388999,
+        389214,
+        389336,
+        392427,
+        392721,
+        392749,
+        392931,
+        393795,
+        394685,
+        394909,
+        396239,
+        396353,
+        396415,
+        397189,
+        398497,
+        398888,
+        399325,
+        399712,
+        400240,
+        400441,
+        400498,
+        401194,
+        401401,
+        401896,
+        402457,
+        402790,
+        402862,
+        403298,
+        403768,
+        404060,
+        404157,
+        404276,
+        404459,
+        404521,
+        405109,
+        405864,
+        405965,
+        406904,
+        407307,
+        408229,
+        408890,
+        409058,
+        409681,
+        410009,
+        410462,
+        410576,
+        410774,
+        410906,
+        411463,
+        412080,
+        412434,
+        412705,
+        413068,
+        413272,
+        413299,
+        414182,
+        414306,
+        414511,
+        414556,
+        414610,
+        414768,
+        415223,
+        415409,
+        415651,
+        415656,
+        416601,
+        416618,
+        416888,
+        417189,
+        417311,
+        417518,
+        417706,
+        419060,
+        419888,
+        420151,
+        420814,
+        420938,
+        421010,
+        421370,
+        421876,
+        421941,
+        422379,
+        422661,
+        422761,
+        423715,
+        423821,
+        423895,
+        424336,
+        424460,
+        424525,
+        424598,
+        424788,
+        424998,
+        425790,
+        425864,
+        426406,
+        426451,
+        426546,
+        426717,
+        426864,
+        426944,
+        427137,
+        428002,
+        428196,
+        428959,
+        429246,
+        429254,
+        429354,
+        430093,
+        430321,
+        430617,
+        430738,
+        430825,
+        431689,
+        431766,
+        432402,
+        432477,
+        432906,
+        433139,
+        433291,
+        434070,
+        434236,
+        435475,
+        436106,
+        436999,
+        437022,
+        437067,
+        437234,
+        437509,
+        437922,
+        438880,
+        439469,
+        439509,
+        440097,
+        440165,
+        440415,
+        440662,
+        442601,
+        442622,
+        443264,
+        443500,
+        443750,
+        443993,
+        444276,
+        445628,
+        446640,
+        447695,
+        447892,
+        448043,
+        448104,
+        448127,
+        448746,
+        448880,
+        448943,
+        448987,
+        449027,
+        449160,
+        449240,
+        449307,
+        450615,
+        450861,
+        451288,
+        451545,
+        451928,
+        452092,
+        453151,
+        453432,
+        453551,
+        453831,
+        454054,
+        454507,
+        454922,
+        455002,
+        455387,
+        455496,
+        456037,
+        456760,
+        457046,
+        457071,
+        457102,
+        457335,
+        457638,
+        457998,
+        458960,
+        459250,
+        459536,
+        460517,
+        461880,
+        461909,
+        462109,
+        462288,
+        463090,
+        463311,
+        463949,
+        464880,
+        465646,
+        466154,
+        466871,
+        467868,
+        468272
+      ],
+      "counts_sha256": "f0601e15897738e9950af5e150c6398c4859a695eed8ba9a13a636dcbdadc830",
+      "encoding_check": {
+        "label": "v3 500 cells",
+        "n_checked": 500,
+        "n_cells": 500,
+        "all_pass": true,
+        "max_order_violations": 0,
+        "n_positions_tie_reordered": 68,
+        "check": "inputs_v3.check_encoding (token order == counts/median order; counts count-like)"
+      }
+    },
+    "seeds": {
+      "cell_sampling": 42,
+      "sae_init_and_shuffle": 42,
+      "bootstrap": 20261001
+    },
+    "code_sha256": {
+      "v3_sae.py": "aa39201ae87aff04710b2547a80963f178cd683d99f9e69beb0ea200c7307817",
+      "inputs_v3.py": "1225194cfd0a9fa28f1d05f4603d8e884e6ac66eff23a1915092788e342e0af5",
+      "hooks_v2.py": "1ba6fda5ad761b1f82041a7b1397fa9332fa7438e13db955a00d751c4b440f54",
+      "topk_sae.py": "621e7f350d0939979f3cac2c2cd271aea299231d745f2e28a386da2365922bb9",
+      "maxtoki_adapter.py": "cab725dfc391ec74d6b9c2930ffd87b53badff47f5f04e93d29977b7a771540a",
+      "dataset_loader.py": "775ddc078582face58b235bb5e973b0b837859e7180f396cb7b8c39deea87d1c",
+      "deployed full_12layer_pipeline.py": "8db0051ac358a7f6167ad2abc3b493ffb3b48e2a5ee40879ec17d9caa537a994"
+    },
+    "summary": {
+      "layout": {
+        "n_cells": 500,
+        "n_total": 1019996,
+        "split": 917996,
+        "n_train": 917996,
+        "n_eval": 102000,
+        "first_eval_cell": 450,
+        "first_eval_cell_positions_in_eval": 1648,
+        "first_eval_cell_length": 2048,
+        "n_eval_cells": 50,
+        "n_fully_held_out_cells": 49,
+        "mean_tokens_per_cell": 2039.992,
+        "n_cells_cut_at_2046_genes": 489
+      },
+      "count_checks": {
+        "n": 500,
+        "all_expected_ok": true,
+        "kinds": [
+          "integer_multiple"
+        ],
+        "max_dev": 0.0002679378867469495
+      },
+      "old_tokens_fail_check": "500 of 500",
+      "deployed_token_reproduction": {
+        "file": "<REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/outputs/phase0/layer_00/gene_names.json",
+        "n_positions_deployed": 1019996,
+        "n_positions_rebuilt": 1019996,
+        "identical": true,
+        "n_mismatch": 0
+      },
+      "tokens_v3_sha256": "c827437a2fb29ac17db398e21ae8fbf71a3f89d533490d3da6563911a4f993dc",
+      "tokens_deployed_sha256": "5e631772084c9966d3e60ef5c451ebc87d6b68f949d25ae0d5c33233c384f169",
+      "counts_sha256": "f0601e15897738e9950af5e150c6398c4859a695eed8ba9a13a636dcbdadc830"
+    },
+    "wall_seconds": 9.522573232650757
+  },
+  "last_updated": "2026-10-02T03:43:59",
+  "extract": {
+    "env": {
+      "device": "mps",
+      "torch": "2.11.0",
+      "transformers": "5.5.4",
+      "python": "3.12.9",
+      "platform": "macOS-26.3-arm64-arm-64bit",
+      "hooks_v2_sha256": "1ba6fda5ad761b1f82041a7b1397fa9332fa7438e13db955a00d751c4b440f54",
+      "model_dir": "<REPO_ROOT>/projects/maxtoki/setup/MaxToki-217M-HF",
+      "model_dtype": "float32",
+      "timestamp": "2026-10-01T17:50:08"
+    },
+    "model": {
+      "n_layers": 11,
+      "hidden_size": 1232
+    },
+    "site": "hidden_states[l] from output_hidden_states (as deployed full_12layer_pipeline.py:140-141)",
+    "n_positions": 1019996,
+    "file_bytes_each": 5026540416,
+    "total_GB": 60.32,
+    "encoding_check": "inputs_v3.assert_encoding_batch on every cell of every 25-cell batch before its forward passes (see chunks.json)",
+    "chunks": [
+      {
+        "step": "extract",
+        "cells": [
+          0,
+          274
+        ],
+        "wall_seconds": 442.2681152820587,
+        "encoding_checks": [
+          {
+            "cells": [
+              0,
+              24
+            ],
+            "all_pass": true,
+            "n_checked": 25,
+            "mem_gb": 4.83
+          },
+          {
+            "cells": [
+              25,
+              49
+            ],
+            "all_pass": true,
+            "n_checked": 25,
+            "mem_gb": 7.32
+          },
+          {
+            "cells": [
+              50,
+              74
+            ],
+            "all_pass": true,
+            "n_checked": 25,
+            "mem_gb": 4.62
+          },
+          {
+            "cells": [
+              75,
+              99
+            ],
+            "all_pass": true,
+            "n_checked": 25,
+            "mem_gb": 7.26
+          },
+          {
+            "cells": [
+              100,
+              124
+            ],
+            "all_pass": true,
+            "n_checked": 25,
+            "mem_gb": 5.6
+          },
+          {
+            "cells": [
+              125,
+              149
+            ],
+            "all_pass": true,
+            "n_checked": 25,
+            "mem_gb": 4.6
+          },
+          {
+            "cells": [
+              150,
+              174
+            ],
+            "all_pass": true,
+            "n_checked": 25,
+            "mem_gb": 4.99
+          },
+          {
+            "cells": [
+              175,
+              199
+            ],
+            "all_pass": true,
+            "n_checked": 25,
+            "mem_gb": 5.34
+          },
+          {
+            "cells": [
+              200,
+              224
+            ],
+            "all_pass": true,
+            "n_checked": 25,
+            "mem_gb": 4.75
+          },
+          {
+            "cells": [
+              225,
+              249
+            ],
+            "all_pass": true,
+            "n_checked": 25,
+            "mem_gb": 7.05
+          },
+          {
+            "cells": [
+              250,
+              274
+            ],
+            "all_pass": true,
+            "n_checked": 25,
+            "mem_gb": 6.68
+          }
+        ],
+        "timestamp": "2026-10-01T17:39:07"
+      },
+      {
+        "step": "extract",
+        "cells": [
+          275,
+          449
+        ],
+        "wall_seconds": 493.998575925827,
+        "encoding_checks": [
+          {
+            "cells": [
+              275,
+              299
+            ],
+            "all_pass": true,
+            "n_checked": 25,
+            "mem_gb": 7.39
+          },
+          {
+            "cells": [
+              300,
+              324
+            ],
+            "all_pass": true,
+            "n_checked": 25,
+            "mem_gb": 5.31
+          },
+          {
+            "cells": [
+              325,
+              349
+            ],
+            "all_pass": true,
+            "n_checked": 25,
+            "mem_gb": 6.42
+          },
+          {
+            "cells": [
+              350,
+              374
+            ],
+            "all_pass": true,
+            "n_checked": 25,
+            "mem_gb": 7.27
+          },
+          {
+            "cells": [
+              375,
+              399
+            ],
+            "all_pass": true,
+            "n_checked": 25,
+            "mem_gb": 7.57
+          },
+          {
+            "cells": [
+              400,
+              424
+            ],
+            "all_pass": true,
+            "n_checked": 25,
+            "mem_gb": 5.75
+          },
+          {
+            "cells": [
+              425,
+              449
+            ],
+            "all_pass": true,
+            "n_checked": 25,
+            "mem_gb": 6.64
+          }
+        ],
+        "timestamp": "2026-10-01T17:47:48"
+      },
+      {
+        "step": "extract",
+        "cells": [
+          450,
+          499
+        ],
+        "wall_seconds": 113.30856013298035,
+        "encoding_checks": [
+          {
+            "cells": [
+              450,
+              474
+            ],
+            "all_pass": true,
+            "n_checked": 25,
+            "mem_gb": 7.01
+          },
+          {
+            "cells": [
+              475,
+              499
+            ],
+            "all_pass": true,
+            "n_checked": 25,
+            "mem_gb": 8.39
+          }
+        ],
+        "timestamp": "2026-10-01T17:50:08"
+      }
+    ]
+  },
+  "train": {
+    "env": {
+      "device": "mps",
+      "torch": "2.11.0",
+      "transformers": "5.5.4",
+      "python": "3.12.9",
+      "platform": "macOS-26.3-arm64-arm-64bit",
+      "hooks_v2_sha256": "1ba6fda5ad761b1f82041a7b1397fa9332fa7438e13db955a00d751c4b440f54",
+      "model_dir": "<REPO_ROOT>/projects/maxtoki/setup/MaxToki-217M-HF",
+      "model_dtype": "float32",
+      "timestamp": "2026-10-02T03:15:52"
+    },
+    "hyperparameters": {
+      "d_model": 1232,
+      "d_sae": 4928,
+      "k": 32,
+      "lr": 0.0003,
+      "batch_size": 4096,
+      "n_epochs": 4,
+      "n_train_cap": 1000000,
+      "n_eval_cap": 100000,
+      "seed": 42,
+      "optimizer": "Adam",
+      "loss": "MSE",
+      "decoder": "unit-norm columns after each step"
+    },
+    "split": {
+      "n_total": 1019996,
+      "split": 917996,
+      "n_train": 917996,
+      "n_eval": 102000
+    },
+    "chunks": [
+      {
+        "layer": 0,
+        "wall_seconds": 24.465412855148315,
+        "resumed_from_epoch": 4,
+        "timestamp": "2026-10-01T18:04:33"
+      },
+      {
+        "layer": 1,
+        "wall_seconds": 243.28255605697632,
+        "resumed_from_epoch": 0,
+        "timestamp": "2026-10-01T18:08:36"
+      },
+      {
+        "layer": 2,
+        "wall_seconds": 233.71876788139343,
+        "resumed_from_epoch": 0,
+        "timestamp": "2026-10-01T18:13:01"
+      },
+      {
+        "layer": 3,
+        "wall_seconds": 280.11573791503906,
+        "resumed_from_epoch": 1,
+        "timestamp": "2026-10-01T18:20:11"
+      },
+      {
+        "layer": 4,
+        "wall_seconds": 373.92416310310364,
+        "train_rows_source": "memmap copy on internal SSD",
+        "resumed_from_epoch": 1,
+        "timestamp": "2026-10-01T18:34:21"
+      },
+      {
+        "layer": 5,
+        "wall_seconds": 160.32125806808472,
+        "train_rows_source": "pread of a sha256-checked copy on the internal SSD",
+        "resumed_from_epoch": 2,
+        "timestamp": "2026-10-01T18:46:30"
+      },
+      {
+        "layer": 6,
+        "wall_seconds": 183.57178020477295,
+        "train_rows_source": "pread of a sha256-checked copy on the internal SSD",
+        "resumed_from_epoch": 2,
+        "timestamp": "2026-10-01T18:56:51"
+      },
+      {
+        "layer": 7,
+        "wall_seconds": 195.98527598381042,
+        "train_rows_source": "pread of a sha256-checked copy on the internal SSD",
+        "resumed_from_epoch": 0,
+        "timestamp": "2026-10-01T19:02:25"
+      },
+      {
+        "layer": 8,
+        "wall_seconds": 69.07033109664917,
+        "train_rows_source": "pread of a sha256-checked copy on the internal SSD",
+        "resumed_from_epoch": 3,
+        "timestamp": "2026-10-02T03:01:05"
+      },
+      {
+        "layer": 9,
+        "wall_seconds": 284.9061918258667,
+        "train_rows_source": "pread of a sha256-checked copy on the internal SSD",
+        "resumed_from_epoch": 0,
+        "timestamp": "2026-10-02T03:05:50"
+      },
+      {
+        "layer": 10,
+        "wall_seconds": 263.61136388778687,
+        "train_rows_source": "pread of a sha256-checked copy on the internal SSD",
+        "resumed_from_epoch": 0,
+        "timestamp": "2026-10-02T03:10:50"
+      },
+      {
+        "layer": 11,
+        "wall_seconds": 183.5963499546051,
+        "train_rows_source": "pread of a sha256-checked copy on the internal SSD",
+        "resumed_from_epoch": 1,
+        "timestamp": "2026-10-02T03:15:52"
+      }
+    ],
+    "per_layer": {
+      "layer_00": {
+        "d_model": 1232,
+        "d_sae": 4928,
+        "k": 32,
+        "n_train": 917996,
+        "n_eval": 102000,
+        "n_epochs": 4,
+        "lr": 0.0003,
+        "batch_size": 4096,
+        "variance_explained": 0.699656946840679,
+        "n_alive": 2497,
+        "n_dead": 2431,
+        "dead_rate": 0.49330357142857145,
+        "mean_abs_decoder_cosine": 0.024208573604933916,
+        "total_train_seconds": 673.1540400981903,
+        "training_log": [
+          {
+            "epoch": 0,
+            "loss": 0.0003145304884916792,
+            "steps": 225,
+            "seconds": 433.82734990119934
+          },
+          {
+            "epoch": 1,
+            "loss": 0.00020769041581338065,
+            "steps": 450,
+            "seconds": 487.1164376735687
+          },
+          {
+            "epoch": 2,
+            "loss": 0.00016666251170035037,
+            "steps": 675,
+            "seconds": 573.723760843277
+          },
+          {
+            "epoch": 3,
+            "loss": 0.00014117124270544284,
+            "steps": 900,
+            "seconds": 665.7781677246094
+          }
+        ],
+        "mean_l0_eval": 32.0,
+        "input_encoding": "v3: counts = round(expm1(X)/unit) via setup/inputs_v3.py (checked)",
+        "train_mean_seconds": 15.650181770324707,
+        "device": "mps",
+        "counts_on_cpu": true,
+        "recount_note": "recounted on CPU after an MPS bool-sum bug; first values {'variance_explained': 0.699656946840679, 'n_alive': 2497, 'n_dead': 2431, 'mean_l0_eval': 32.0}"
+      },
+      "layer_01": {
+        "d_model": 1232,
+        "d_sae": 4928,
+        "k": 32,
+        "n_train": 917996,
+        "n_eval": 102000,
+        "n_epochs": 4,
+        "lr": 0.0003,
+        "batch_size": 4096,
+        "variance_explained": 0.9105024484239517,
+        "n_alive": 4928,
+        "n_dead": 0,
+        "dead_rate": 0.0,
+        "mean_abs_decoder_cosine": 0.04156798432441428,
+        "total_train_seconds": 231.46334195137024,
+        "training_log": [
+          {
+            "epoch": 0,
+            "loss": 0.04231541570689943,
+            "steps": 225,
+            "seconds": 57.27709078788757
+          },
+          {
+            "epoch": 1,
+            "loss": 0.016038890079491667,
+            "steps": 450,
+            "seconds": 109.12526082992554
+          },
+          {
+            "epoch": 2,
+            "loss": 0.012215747642848227,
+            "steps": 675,
+            "seconds": 163.69172310829163
+          },
+          {
+            "epoch": 3,
+            "loss": 0.010593506929775079,
+            "steps": 900,
+            "seconds": 224.49169397354126
+          }
+        ],
+        "mean_l0_eval": 32.0,
+        "input_encoding": "v3: counts = round(expm1(X)/unit) via setup/inputs_v3.py (checked)",
+        "train_mean_seconds": 10.916917562484741,
+        "device": "mps",
+        "counts_on_cpu": true,
+        "recount_note": "recounted on CPU after an MPS bool-sum bug; first values {'variance_explained': 0.9105024484239517, 'n_alive': 4928, 'n_dead': 0, 'mean_l0_eval': 32.0}"
+      },
+      "layer_02": {
+        "d_model": 1232,
+        "d_sae": 4928,
+        "k": 32,
+        "n_train": 917996,
+        "n_eval": 102000,
+        "n_epochs": 4,
+        "lr": 0.0003,
+        "batch_size": 4096,
+        "variance_explained": 0.9278175082595812,
+        "n_alive": 4928,
+        "n_dead": 0,
+        "dead_rate": 0.0,
+        "mean_abs_decoder_cosine": 0.036751351234968754,
+        "total_train_seconds": 223.16640901565552,
+        "training_log": [
+          {
+            "epoch": 0,
+            "loss": 0.08284986594484912,
+            "steps": 225,
+            "seconds": 59.65020704269409
+          },
+          {
+            "epoch": 1,
+            "loss": 0.02368589052723514,
+            "steps": 450,
+            "seconds": 113.83840107917786
+          },
+          {
+            "epoch": 2,
+            "loss": 0.016970298252999783,
+            "steps": 675,
+            "seconds": 162.72909379005432
+          },
+          {
+            "epoch": 3,
+            "loss": 0.014604402888152334,
+            "steps": 900,
+            "seconds": 217.7354519367218
+          }
+        ],
+        "mean_l0_eval": 32.0,
+        "input_encoding": "v3: counts = round(expm1(X)/unit) via setup/inputs_v3.py (checked)",
+        "train_mean_seconds": 9.937984943389893,
+        "device": "mps",
+        "counts_on_cpu": true,
+        "recount_note": "recounted on CPU after an MPS bool-sum bug; first values {'variance_explained': 0.9278175082595812, 'n_alive': 4928, 'n_dead': 0, 'mean_l0_eval': 32.0}"
+      },
+      "layer_03": {
+        "d_model": 1232,
+        "d_sae": 4928,
+        "k": 32,
+        "n_train": 917996,
+        "n_eval": 102000,
+        "n_epochs": 4,
+        "lr": 0.0003,
+        "batch_size": 4096,
+        "variance_explained": 0.9121814085372211,
+        "n_alive": 4928,
+        "n_dead": 0,
+        "dead_rate": 0.0,
+        "mean_abs_decoder_cosine": 0.03950075365928933,
+        "total_train_seconds": 366.3610849380493,
+        "training_log": [
+          {
+            "epoch": 0,
+            "loss": 0.10685703188180923,
+            "steps": 225,
+            "seconds": 99.67768716812134
+          },
+          {
+            "epoch": 1,
+            "loss": 0.0356519941571686,
+            "steps": 450,
+            "seconds": 172.45461082458496
+          },
+          {
+            "epoch": 2,
+            "loss": 0.02550319957236449,
+            "steps": 675,
+            "seconds": 269.71148800849915
+          },
+          {
+            "epoch": 3,
+            "loss": 0.022208155824078455,
+            "steps": 900,
+            "seconds": 358.6387310028076
+          }
+        ],
+        "mean_l0_eval": 32.0,
+        "input_encoding": "v3: counts = round(expm1(X)/unit) via setup/inputs_v3.py (checked)",
+        "train_mean_seconds": 11.345975160598755,
+        "device": "mps",
+        "counts_on_cpu": true,
+        "recount_note": "recounted on CPU after an MPS bool-sum bug; first values {'variance_explained': 0.9121814085372211, 'n_alive': 4928, 'n_dead': 0, 'mean_l0_eval': 32.0}"
+      },
+      "layer_04": {
+        "d_model": 1232,
+        "d_sae": 4928,
+        "k": 32,
+        "n_train": 917996,
+        "n_eval": 102000,
+        "n_epochs": 4,
+        "lr": 0.0003,
+        "batch_size": 4096,
+        "variance_explained": 0.8999476708000153,
+        "n_alive": 4928,
+        "n_dead": 0,
+        "dead_rate": 0.0,
+        "mean_abs_decoder_cosine": 0.036789002551697196,
+        "total_train_seconds": 613.8186542987823,
+        "training_log": [
+          {
+            "epoch": 0,
+            "loss": 0.1287586156030496,
+            "steps": 225,
+            "seconds": 309.38412523269653
+          },
+          {
+            "epoch": 1,
+            "loss": 0.04710145110885302,
+            "steps": 450,
+            "seconds": 490.6291811466217
+          },
+          {
+            "epoch": 2,
+            "loss": 0.03455321699380875,
+            "steps": 675,
+            "seconds": 527.1758553981781
+          },
+          {
+            "epoch": 3,
+            "loss": 0.02981606192058987,
+            "steps": 900,
+            "seconds": 607.6059613227844
+          }
+        ],
+        "mean_l0_eval": 32.0,
+        "input_encoding": "v3: counts = round(expm1(X)/unit) via setup/inputs_v3.py (checked)",
+        "train_mean_seconds": 67.03910493850708,
+        "device": "mps",
+        "counts_on_cpu": true,
+        "recount_note": "recounted on CPU after an MPS bool-sum bug; first values {'variance_explained': 0.8999476708000153, 'n_alive': 4928, 'n_dead': 0, 'mean_l0_eval': 32.0}"
+      },
+      "layer_05": {
+        "d_model": 1232,
+        "d_sae": 4928,
+        "k": 32,
+        "n_train": 917996,
+        "n_eval": 102000,
+        "n_epochs": 4,
+        "lr": 0.0003,
+        "batch_size": 4096,
+        "variance_explained": 0.8623862034938105,
+        "n_alive": 4928,
+        "n_dead": 0,
+        "dead_rate": 0.0,
+        "mean_abs_decoder_cosine": 0.035870464667677876,
+        "total_train_seconds": 535.1236431598663,
+        "training_log": [
+          {
+            "epoch": 0,
+            "loss": 0.16949232406086392,
+            "steps": 225,
+            "seconds": 129.80667209625244
+          },
+          {
+            "epoch": 1,
+            "loss": 0.07720773978365793,
+            "steps": 450,
+            "seconds": 387.1998710632324
+          },
+          {
+            "epoch": 2,
+            "loss": 0.05885407257411215,
+            "steps": 675,
+            "seconds": 459.7858850955963
+          },
+          {
+            "epoch": 3,
+            "loss": 0.05126626900500721,
+            "steps": 900,
+            "seconds": 527.0227560997009
+          }
+        ],
+        "mean_l0_eval": 32.0,
+        "input_encoding": "v3: counts = round(expm1(X)/unit) via setup/inputs_v3.py (checked)",
+        "train_mean_seconds": 10.00777006149292,
+        "device": "mps",
+        "counts_on_cpu": true,
+        "recount_note": "recounted on CPU after an MPS bool-sum bug; first values {'variance_explained': 0.8623862034938105, 'n_alive': 4928, 'n_dead': 0, 'mean_l0_eval': 32.84196078431373}"
+      },
+      "layer_06": {
+        "d_model": 1232,
+        "d_sae": 4928,
+        "k": 32,
+        "n_train": 917996,
+        "n_eval": 102000,
+        "n_epochs": 4,
+        "lr": 0.0003,
+        "batch_size": 4096,
+        "variance_explained": 0.8472180782787122,
+        "n_alive": 4928,
+        "n_dead": 0,
+        "dead_rate": 0.0,
+        "mean_abs_decoder_cosine": 0.0376575564048253,
+        "total_train_seconds": 317.2593321800232,
+        "training_log": [
+          {
+            "epoch": 0,
+            "loss": 0.22916127926773494,
+            "steps": 225,
+            "seconds": 61.90006494522095
+          },
+          {
+            "epoch": 1,
+            "loss": 0.11619152334001329,
+            "steps": 450,
+            "seconds": 141.03644680976868
+          },
+          {
+            "epoch": 2,
+            "loss": 0.08830342494779163,
+            "steps": 675,
+            "seconds": 211.49174404144287
+          },
+          {
+            "epoch": 3,
+            "loss": 0.07624529490868251,
+            "steps": 900,
+            "seconds": 300.4181098937988
+          }
+        ],
+        "mean_l0_eval": 32.0,
+        "counts_on_cpu": true,
+        "input_encoding": "v3: counts = round(expm1(X)/unit) via setup/inputs_v3.py (checked)",
+        "train_mean_seconds": 5.336432218551636,
+        "device": "mps"
+      },
+      "layer_07": {
+        "d_model": 1232,
+        "d_sae": 4928,
+        "k": 32,
+        "n_train": 917996,
+        "n_eval": 102000,
+        "n_epochs": 4,
+        "lr": 0.0003,
+        "batch_size": 4096,
+        "variance_explained": 0.8472406701727256,
+        "n_alive": 4923,
+        "n_dead": 5,
+        "dead_rate": 0.0010146103896103895,
+        "mean_abs_decoder_cosine": 0.0368223873982206,
+        "total_train_seconds": 187.84844613075256,
+        "training_log": [
+          {
+            "epoch": 0,
+            "loss": 0.30754693925380705,
+            "steps": 225,
+            "seconds": 49.12449097633362
+          },
+          {
+            "epoch": 1,
+            "loss": 0.15922603382004633,
+            "steps": 450,
+            "seconds": 105.77184820175171
+          },
+          {
+            "epoch": 2,
+            "loss": 0.12215657267305587,
+            "steps": 675,
+            "seconds": 146.6135711669922
+          },
+          {
+            "epoch": 3,
+            "loss": 0.10486044261190626,
+            "steps": 900,
+            "seconds": 180.46448826789856
+          }
+        ],
+        "mean_l0_eval": 32.0,
+        "counts_on_cpu": true,
+        "input_encoding": "v3: counts = round(expm1(X)/unit) via setup/inputs_v3.py (checked)",
+        "train_mean_seconds": 6.451708078384399,
+        "device": "mps"
+      },
+      "layer_08": {
+        "d_model": 1232,
+        "d_sae": 4928,
+        "k": 32,
+        "n_train": 917996,
+        "n_eval": 102000,
+        "n_epochs": 4,
+        "lr": 0.0003,
+        "batch_size": 4096,
+        "variance_explained": 0.8420642726527598,
+        "n_alive": 4910,
+        "n_dead": 18,
+        "dead_rate": 0.0036525974025974025,
+        "mean_abs_decoder_cosine": 0.033574463888071476,
+        "total_train_seconds": 151.68505692481995,
+        "training_log": [
+          {
+            "epoch": 0,
+            "loss": 0.5423494931062063,
+            "steps": 225,
+            "seconds": 30.71073579788208
+          },
+          {
+            "epoch": 1,
+            "loss": 0.28578927013609146,
+            "steps": 450,
+            "seconds": 61.04754686355591
+          },
+          {
+            "epoch": 2,
+            "loss": 0.22080878184901342,
+            "steps": 675,
+            "seconds": 88.38218188285828
+          },
+          {
+            "epoch": 3,
+            "loss": 0.1920826816558838,
+            "steps": 900,
+            "seconds": 142.45437264442444
+          }
+        ],
+        "mean_l0_eval": 32.0,
+        "counts_on_cpu": true,
+        "input_encoding": "v3: counts = round(expm1(X)/unit) via setup/inputs_v3.py (checked)",
+        "train_mean_seconds": 3.526067018508911,
+        "device": "mps"
+      },
+      "layer_09": {
+        "d_model": 1232,
+        "d_sae": 4928,
+        "k": 32,
+        "n_train": 917996,
+        "n_eval": 102000,
+        "n_epochs": 4,
+        "lr": 0.0003,
+        "batch_size": 4096,
+        "variance_explained": 0.8588208433859796,
+        "n_alive": 4916,
+        "n_dead": 12,
+        "dead_rate": 0.002435064935064935,
+        "mean_abs_decoder_cosine": 0.033200415703468024,
+        "total_train_seconds": 252.52175784111023,
+        "training_log": [
+          {
+            "epoch": 0,
+            "loss": 0.6636713817384507,
+            "steps": 225,
+            "seconds": 59.68963670730591
+          },
+          {
+            "epoch": 1,
+            "loss": 0.3458605436484019,
+            "steps": 450,
+            "seconds": 120.3754768371582
+          },
+          {
+            "epoch": 2,
+            "loss": 0.2695164284441206,
+            "steps": 675,
+            "seconds": 187.0428159236908
+          },
+          {
+            "epoch": 3,
+            "loss": 0.23153698391384547,
+            "steps": 900,
+            "seconds": 245.4633719921112
+          }
+        ],
+        "mean_l0_eval": 32.0,
+        "counts_on_cpu": true,
+        "input_encoding": "v3: counts = round(expm1(X)/unit) via setup/inputs_v3.py (checked)",
+        "train_mean_seconds": 31.144846200942993,
+        "device": "mps"
+      },
+      "layer_10": {
+        "d_model": 1232,
+        "d_sae": 4928,
+        "k": 32,
+        "n_train": 917996,
+        "n_eval": 102000,
+        "n_epochs": 4,
+        "lr": 0.0003,
+        "batch_size": 4096,
+        "variance_explained": 0.869320255104334,
+        "n_alive": 4924,
+        "n_dead": 4,
+        "dead_rate": 0.0008116883116883117,
+        "mean_abs_decoder_cosine": 0.03174931445065886,
+        "total_train_seconds": 237.7817087173462,
+        "training_log": [
+          {
+            "epoch": 0,
+            "loss": 0.7947633937994639,
+            "steps": 225,
+            "seconds": 59.46636176109314
+          },
+          {
+            "epoch": 1,
+            "loss": 0.40400986658202276,
+            "steps": 450,
+            "seconds": 115.25137996673584
+          },
+          {
+            "epoch": 2,
+            "loss": 0.32130307568444144,
+            "steps": 675,
+            "seconds": 170.26403665542603
+          },
+          {
+            "epoch": 3,
+            "loss": 0.27623941315544975,
+            "steps": 900,
+            "seconds": 228.68242979049683
+          }
+        ],
+        "mean_l0_eval": 32.0,
+        "counts_on_cpu": true,
+        "input_encoding": "v3: counts = round(expm1(X)/unit) via setup/inputs_v3.py (checked)",
+        "train_mean_seconds": 23.87888813018799,
+        "device": "mps"
+      },
+      "layer_11": {
+        "d_model": 1232,
+        "d_sae": 4928,
+        "k": 32,
+        "n_train": 917996,
+        "n_eval": 102000,
+        "n_epochs": 4,
+        "lr": 0.0003,
+        "batch_size": 4096,
+        "variance_explained": 0.871430502555565,
+        "n_alive": 4924,
+        "n_dead": 4,
+        "dead_rate": 0.0008116883116883117,
+        "mean_abs_decoder_cosine": 0.03307968792552128,
+        "total_train_seconds": 233.38600707054138,
+        "training_log": [
+          {
+            "epoch": 0,
+            "loss": 2.1745776738060845,
+            "steps": 225,
+            "seconds": 56.32316493988037
+          },
+          {
+            "epoch": 1,
+            "loss": 1.1080928778648376,
+            "steps": 450,
+            "seconds": 114.3507969379425
+          },
+          {
+            "epoch": 2,
+            "loss": 0.8892661539713541,
+            "steps": 675,
+            "seconds": 171.1421091556549
+          },
+          {
+            "epoch": 3,
+            "loss": 0.7667488108740913,
+            "steps": 900,
+            "seconds": 225.1615059375763
+          }
+        ],
+        "mean_l0_eval": 32.0,
+        "counts_on_cpu": true,
+        "input_encoding": "v3: counts = round(expm1(X)/unit) via setup/inputs_v3.py (checked)",
+        "train_mean_seconds": 4.574805021286011,
+        "device": "mps"
+      }
+    }
+  },
+  "evaluate": {
+    "env": {
+      "device": "mps",
+      "torch": "2.11.0",
+      "transformers": "5.5.4",
+      "python": "3.12.9",
+      "platform": "macOS-26.3-arm64-arm-64bit",
+      "hooks_v2_sha256": "1ba6fda5ad761b1f82041a7b1397fa9332fa7438e13db955a00d751c4b440f54",
+      "model_dir": "<REPO_ROOT>/projects/maxtoki/setup/MaxToki-217M-HF",
+      "model_dtype": "float32",
+      "timestamp": "2026-10-02T03:30:17"
+    },
+    "meta": {
+      "layer_00": {
+        "activations_data_sha256": "cca6c03cb320cbdfb581e2eb95c7168de5574238f52aa7f37c674abf49dc4d02",
+        "eval_rows_sha256": "66919c0be753bd21e45370957651bfa5020f88b348c32e7cd3b783cd81580b75",
+        "v3_sae_sha256": "ca27925c9a8c49b37a806921561ae2a900bc013056d0c302faa1d05fc05bb8bc",
+        "deployed_sae_sha256": "c77045d5ebfd14cddc7e988fcd7675633250f515b5bf9252a993176c28909843",
+        "seconds": 93.67873311042786
+      },
+      "layer_01": {
+        "activations_data_sha256": "18dc844530397b5f848001406a27f67efb9ba16670f14f5ee6eebf0b3cd51ff9",
+        "eval_rows_sha256": "629f5a25b03f40ccff9d7d2bad0b1a986b7af78344095aebcb494f7037eae64b",
+        "v3_sae_sha256": "7dbc487d407036e895c44c5283896d53f823840d082b17815b2ba2f6dbf9c5ab",
+        "deployed_sae_sha256": "f9885624675ac58079a3455ccafd81794e812d4fe8e45403f05d70c1ccf695ac",
+        "seconds": 91.45705819129944
+      },
+      "layer_02": {
+        "activations_data_sha256": "a3c09942b0de4b16646e2d70492ce1b4a349ae2beda1bef816b3a1b8ef2be07e",
+        "eval_rows_sha256": "6c0081265d9aaf13d9db7f981efd5917f80fa643c8ef38ea89ed122b9ffbe38a",
+        "v3_sae_sha256": "bd5857cab7e486ee48ad4dc8963913b84e9d69782e0d316da0acff599e3fbdd3",
+        "deployed_sae_sha256": "b5f3ba23db88c485509191a9efd1b48dbb50b15328cf89ae07a0291e54ef4481",
+        "seconds": 100.74229717254639
+      },
+      "layer_03": {
+        "activations_data_sha256": "a4a4f13e7557607abf879c0620ef29d97b12322321352f9b799f4fc25c825cb2",
+        "eval_rows_sha256": "0c1b543ea04d637eb583291f9ff043a3fd43baf90c353fb583b2f2c6646567ea",
+        "v3_sae_sha256": "58957f48e35a536074945c16a10967a2a8f84992a23eb340ffb5298fc48597ed",
+        "deployed_sae_sha256": "a61ba730c29150f714e30f0aed8a932fbdf924588d527ea482eec4904489e621",
+        "seconds": 58.16408014297485
+      },
+      "layer_04": {
+        "activations_data_sha256": "393fefcdfcfd3966f382ef70cd75fe1d9a5878b59a7226cb69023fc9227fdd66",
+        "eval_rows_sha256": "2eae59cdde787d75fb75d0de7723588cdc7bd64dfca1e2f9c91aebdd778bda02",
+        "v3_sae_sha256": "18cf71c2b676bcc63bfedd48d85f3bf67d0e573e19d5ef651c80297b65545746",
+        "deployed_sae_sha256": "a82666f5c8e849fbac2b47fb06c81c922cea88c6e9950e3b720c701462fa6208",
+        "seconds": 47.67968487739563
+      },
+      "layer_05": {
+        "activations_data_sha256": "cfa555ae18b5f750436532f9d14a3de3ab62351549481e2ac58bd9f86bb8a58e",
+        "eval_rows_sha256": "b7451ce7334d17d3819c1258730628f4fd3720ae4965e9debd031475ca95441c",
+        "v3_sae_sha256": "aff63f2744474945df50cac688b8fd402f50c8434a56fac5b670051b3cc05a25",
+        "deployed_sae_sha256": "9405f2f266771a74a13fbcba7a041a706c543271ab4c66101f043e3df65613a6",
+        "seconds": 48.42315220832825
+      },
+      "layer_06": {
+        "activations_data_sha256": "5270fd3141c74286e24f3e911df3e757dc67ce69f299c33ac0504b80366c9ca5",
+        "eval_rows_sha256": "e02d1b4c7b94da35b672bb91f2c30eda4ed6c58c2bbd954776ef4eba526885c5",
+        "v3_sae_sha256": "694bc5711a3c87e3ed386ae94116324da3e6e3123978a3ab70dc6ff0758cd37f",
+        "deployed_sae_sha256": "679536028f494efd056843c653a010773c63f127ff2a4d077168875a935d279a",
+        "seconds": 49.9151029586792
+      },
+      "layer_07": {
+        "activations_data_sha256": "d351bbe2c535118e0e50ea9e5126555582197dfa2b0bd7bcce3b5dc0a3ddb9ca",
+        "eval_rows_sha256": "47cc170f4cf99a782559157f82a9d4566068080f8fc34977ce7f57b20e328fba",
+        "v3_sae_sha256": "d04730570bebd0204d1c1eecc46378d6ab92be481eca06301b85e2eab899288f",
+        "deployed_sae_sha256": "8abeb06846788b2669bb8e7a5ff752885d2783df9b080d814f6f4a139776105f",
+        "seconds": 48.89993715286255
+      },
+      "layer_08": {
+        "activations_data_sha256": "31648cb6d0c32fd659daf4946ec35a72dd4b9593b70b0501577cd97dd5a9fa93",
+        "eval_rows_sha256": "0ef2c38ff5f9bb693b30d8756fa5cee659ae23b56187296d1455d9e03b647586",
+        "v3_sae_sha256": "b21fb84e85e7d50cc01c11d4d4f0c0c1214c75d7fe017e414492a614847737d4",
+        "deployed_sae_sha256": "63729bef054476b3137cfe95192fc4db2836d36784da4d4d7d22a539e784ea65",
+        "seconds": 71.08375310897827
+      },
+      "layer_09": {
+        "activations_data_sha256": "40dbdb65226a9a9214257627d360bafaddec41de6b5749a116027cadf5c50900",
+        "eval_rows_sha256": "b5755807b9819a76109a7919f0a17415409e734f9506f9db27702661c05f87c7",
+        "v3_sae_sha256": "ee0da1c9a3908b4d0f3083a688272ac892fb393680aec13556eb90c368a9d0ad",
+        "deployed_sae_sha256": "d70bd05e3c80f048853b48bcd6140052b8645959f3aa981560fea1b6d9e51713",
+        "seconds": 68.77373099327087
+      },
+      "layer_10": {
+        "activations_data_sha256": "9f0c010cf96ad0b5051a22fe03cf46e1d59fffe8f743d5bde5cdce8c02d65fc0",
+        "eval_rows_sha256": "b32dabd5e4cb8aae87707797b70530cb5a80a914c8c489405cee2d36de4526a4",
+        "v3_sae_sha256": "93b389495723178ed50f9570baf03a215299a7f93aba4dac69a161645e023c1d",
+        "deployed_sae_sha256": "07d6d9f37211b23a16d9b4423f7f21febf6a64c1462665c347bcd45e2398e66b",
+        "seconds": 60.38747215270996
+      },
+      "layer_11": {
+        "activations_data_sha256": "6f486ad7cc56ee887bf6a1c066736a96b03c10653a93344330a7258e4d185c69",
+        "eval_rows_sha256": "40bc984f53e2f926d48eadabd911348d3c081b4bfc71b5435e64134a289ec859",
+        "v3_sae_sha256": "f47762d692183a1f84913f908e6bed1e05335286f208b6ed1d1c50ea3dbf43cf",
+        "deployed_sae_sha256": "059f553588d124b7214401cb3143bbf93240b8e9ddf4785464d15eabe3b2055a",
+        "seconds": 56.80957102775574
+      }
+    },
+    "held_out": {
+      "positions": [
+        917996,
+        1019996
+      ],
+      "cells": [
+        450,
+        499
+      ]
+    }
+  },
+  "hooks_check": {
+    "pass": true,
+    "max_rel_diff_live_vs_stored": 0.0,
+    "max_sse_rel_diff": 3.391324956969154e-09,
+    "ablate_all_layer5": {
+      "max_abs_diff": 9.5367431640625e-07,
+      "max_abs_pre": 351.9488830566406
+    },
+    "encoding_check": {
+      "label": "hooks_check",
+      "n_checked": 3,
+      "n_cells": 3,
+      "all_pass": true,
+      "max_order_violations": 0,
+      "n_positions_tie_reordered": 0,
+      "check": "inputs_v3.check_encoding (token order == counts/median order; counts count-like)"
+    },
+    "wall_seconds": 24.12078285217285
+  },
+  "summarize": {
+    "bootstrap": "cluster bootstrap over the 50 held-out cells (the first is only partly held out), 2000 resamples, seed 20261001, 95% percentile CI",
+    "table": "<REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/outputs/v3_sae/eval/table.csv"
+  },
+  "cleanup": {
+    "activation_files": [
+      "<REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/outputs/v3_sae/activations/layer_00.npy",
+      "<REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/outputs/v3_sae/activations/layer_01.npy",
+      "<REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/outputs/v3_sae/activations/layer_02.npy",
+      "<REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/outputs/v3_sae/activations/layer_03.npy",
+      "<REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/outputs/v3_sae/activations/layer_04.npy",
+      "<REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/outputs/v3_sae/activations/layer_05.npy",
+      "<REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/outputs/v3_sae/activations/layer_06.npy",
+      "<REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/outputs/v3_sae/activations/layer_07.npy",
+      "<REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/outputs/v3_sae/activations/layer_08.npy",
+      "<REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/outputs/v3_sae/activations/layer_09.npy",
+      "<REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/outputs/v3_sae/activations/layer_10.npy",
+      "<REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/outputs/v3_sae/activations/layer_11.npy"
+    ],
+    "total_GB": 60.32,
+    "threshold_GB": 20.0,
+    "deleted": false
+  },
+  "final": {
+    "code_sha256_at_end": {
+      "v3_sae.py": "25e7fcc48e9ea863b6df4bc0706da182e24c6c8ce7d3df7cf25eee8bf1861ef3",
+      "inputs_v3.py": "1225194cfd0a9fa28f1d05f4603d8e884e6ac66eff23a1915092788e342e0af5",
+      "hooks_v2.py": "1ba6fda5ad761b1f82041a7b1397fa9332fa7438e13db955a00d751c4b440f54",
+      "topk_sae.py": "621e7f350d0939979f3cac2c2cd271aea299231d745f2e28a386da2365922bb9",
+      "maxtoki_adapter.py": "cab725dfc391ec74d6b9c2930ffd87b53badff47f5f04e93d29977b7a771540a",
+      "dataset_loader.py": "775ddc078582face58b235bb5e973b0b837859e7180f396cb7b8c39deea87d1c",
+      "deployed full_12layer_pipeline.py": "8db0051ac358a7f6167ad2abc3b493ffb3b48e2a5ee40879ec17d9caa537a994",
+      "v3_sae_verify.py": "443e9d1de8c9e33a6711decb55019137f1e6dfddbaecd1e1fa88614690d3abe6"
+    },
+    "note_code_sha": "prepare/extract ran with an earlier v3_sae.py (sha in 'prepare'); the only later edits were in train/eval (float64 sums moved to CPU after an MPS float64 error; active-feature counts moved to CPU). Layers 0-5 were recounted on CPU with the final code (results.json 'recount_note').",
+    "v3_sae_final_pt_sha256": {
+      "layer_00": "ca27925c9a8c49b37a806921561ae2a900bc013056d0c302faa1d05fc05bb8bc",
+      "layer_01": "7dbc487d407036e895c44c5283896d53f823840d082b17815b2ba2f6dbf9c5ab",
+      "layer_02": "bd5857cab7e486ee48ad4dc8963913b84e9d69782e0d316da0acff599e3fbdd3",
+      "layer_03": "58957f48e35a536074945c16a10967a2a8f84992a23eb340ffb5298fc48597ed",
+      "layer_04": "18cf71c2b676bcc63bfedd48d85f3bf67d0e573e19d5ef651c80297b65545746",
+      "layer_05": "aff63f2744474945df50cac688b8fd402f50c8434a56fac5b670051b3cc05a25",
+      "layer_06": "694bc5711a3c87e3ed386ae94116324da3e6e3123978a3ab70dc6ff0758cd37f",
+      "layer_07": "d04730570bebd0204d1c1eecc46378d6ab92be481eca06301b85e2eab899288f",
+      "layer_08": "b21fb84e85e7d50cc01c11d4d4f0c0c1214c75d7fe017e414492a614847737d4",
+      "layer_09": "ee0da1c9a3908b4d0f3083a688272ac892fb393680aec13556eb90c368a9d0ad",
+      "layer_10": "93b389495723178ed50f9570baf03a215299a7f93aba4dac69a161645e023c1d",
+      "layer_11": "f47762d692183a1f84913f908e6bed1e05335286f208b6ed1d1c50ea3dbf43cf"
+    },
+    "feature_ids": "all 4,928 features per layer (0..4927); no feature selection in this item",
+    "cells": "500 K562 non-targeting rows in cells.npz['rows'] / prepare.json (same rule and seed as deployed; deployed token file reproduced exactly from these rows)",
+    "input_encoding_check": {
+      "prepare": "500/500 cells pass inputs_v3.check_encoding; old tokens fail 500/500",
+      "extract": "every cell of every 25-cell batch checked before its forward pass (500/500 pass)",
+      "hooks_check": "3/3 pass"
+    },
+    "verification_outputs": {
+      "recompute": "<REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/outputs/v3_sae/verify/recompute.json",
+      "l0_protocol": "<REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/outputs/v3_sae/verify/l0_protocol_compare.json",
+      "hooks_check": "<REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/outputs/v3_sae/hooks_check.json"
+    },
+    "activations_kept": "60.32 GB in activations/ (> 20 GB threshold) NOT deleted by the agent: deleting files is left to the user. Command: .venv/bin/python runs/sae-atlas-217M/scripts/v3_sae.py cleanup --yes",
+    "timestamp": "2026-10-02T03:43:59"
+  }
+}

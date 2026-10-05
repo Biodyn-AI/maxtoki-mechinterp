@@ -1,0 +1,331 @@
+{
+  "layer": 0,
+  "feature": 1657,
+  "switch_score": 0.6933,
+  "direction": "positive",
+  "hook_layer": 0,
+  "alpha_results": {
+    "2": {
+      "n_steered": 50,
+      "frac_positive_direction": 0.96,
+      "frac_positive_maturity": 0.98,
+      "mean_logit_delta_scalar": 0.420024,
+      "mean_delta_s": 0.096262,
+      "top_upregulated": [
+        {
+          "token_id": 3648,
+          "gene": "SOD3",
+          "mean_logit_delta": 9.166845
+        },
+        {
+          "token_id": 652,
+          "gene": "KITLG",
+          "mean_logit_delta": 9.151861
+        },
+        {
+          "token_id": 6144,
+          "gene": "APOE",
+          "mean_logit_delta": 8.744952
+        },
+        {
+          "token_id": 511,
+          "gene": "TMSB10",
+          "mean_logit_delta": 8.6365
+        },
+        {
+          "token_id": 7452,
+          "gene": "SEMA6D",
+          "mean_logit_delta": 8.619982
+        },
+        {
+          "token_id": 4471,
+          "gene": "RND3",
+          "mean_logit_delta": 8.426238
+        },
+        {
+          "token_id": 16459,
+          "gene": "LYPD2",
+          "mean_logit_delta": 8.384604
+        },
+        {
+          "token_id": 10702,
+          "gene": "LRRTM1",
+          "mean_logit_delta": 8.35882
+        },
+        {
+          "token_id": 8180,
+          "gene": "TINAGL1",
+          "mean_logit_delta": 8.187202
+        },
+        {
+          "token_id": 18295,
+          "gene": "AQP1",
+          "mean_logit_delta": 8.173484
+        },
+        {
+          "token_id": 10044,
+          "gene": "CLSTN2",
+          "mean_logit_delta": 7.984293
+        },
+        {
+          "token_id": 14466,
+          "gene": "PENK",
+          "mean_logit_delta": 7.984251
+        },
+        {
+          "token_id": 13207,
+          "gene": "SNCG",
+          "mean_logit_delta": 7.971123
+        },
+        {
+          "token_id": 1100,
+          "gene": "FGF10",
+          "mean_logit_delta": 7.807492
+        },
+        {
+          "token_id": 2212,
+          "gene": "TIMP3",
+          "mean_logit_delta": 7.792005
+        }
+      ],
+      "top_downregulated": [
+        {
+          "token_id": 5169,
+          "gene": "CXCR4",
+          "mean_logit_delta": -12.929805
+        },
+        {
+          "token_id": 18676,
+          "gene": "EEF1G",
+          "mean_logit_delta": -12.874115
+        },
+        {
+          "token_id": 5856,
+          "gene": "KLF2",
+          "mean_logit_delta": -12.073105
+        },
+        {
+          "token_id": 6498,
+          "gene": "JCHAIN",
+          "mean_logit_delta": -12.047045
+        },
+        {
+          "token_id": 17430,
+          "gene": "DEFA1",
+          "mean_logit_delta": -11.274041
+        },
+        {
+          "token_id": 11903,
+          "gene": "LALBA",
+          "mean_logit_delta": -11.115544
+        },
+        {
+          "token_id": 1525,
+          "gene": "PTPRC",
+          "mean_logit_delta": -10.520752
+        },
+        {
+          "token_id": 18665,
+          "gene": "INS",
+          "mean_logit_delta": -10.391747
+        },
+        {
+          "token_id": 2049,
+          "gene": "HSP90AB1",
+          "mean_logit_delta": -10.265459
+        },
+        {
+          "token_id": 2974,
+          "gene": "CD37",
+          "mean_logit_delta": -10.247865
+        },
+        {
+          "token_id": 16262,
+          "gene": "HBG2",
+          "mean_logit_delta": -10.104526
+        },
+        {
+          "token_id": 17447,
+          "gene": "HBA1",
+          "mean_logit_delta": -10.031681
+        },
+        {
+          "token_id": 6599,
+          "gene": "CHRM3",
+          "mean_logit_delta": -9.856755
+        },
+        {
+          "token_id": 18104,
+          "gene": "PHGR1",
+          "mean_logit_delta": -9.679697
+        },
+        {
+          "token_id": 14606,
+          "gene": "P2RY8",
+          "mean_logit_delta": -9.676647
+        }
+      ]
+    },
+    "5": {
+      "n_steered": 50,
+      "frac_positive_direction": 0.96,
+      "frac_positive_maturity": 0.98,
+      "mean_logit_delta_scalar": 0.413437,
+      "mean_delta_s": 0.09616,
+      "top_upregulated": [
+        {
+          "token_id": 3648,
+          "gene": "SOD3",
+          "mean_logit_delta": 9.187339
+        },
+        {
+          "token_id": 652,
+          "gene": "KITLG",
+          "mean_logit_delta": 9.134952
+        },
+        {
+          "token_id": 6144,
+          "gene": "APOE",
+          "mean_logit_delta": 8.783642
+        },
+        {
+          "token_id": 511,
+          "gene": "TMSB10",
+          "mean_logit_delta": 8.700021
+        },
+        {
+          "token_id": 7452,
+          "gene": "SEMA6D",
+          "mean_logit_delta": 8.597574
+        },
+        {
+          "token_id": 4471,
+          "gene": "RND3",
+          "mean_logit_delta": 8.458271
+        },
+        {
+          "token_id": 10702,
+          "gene": "LRRTM1",
+          "mean_logit_delta": 8.363368
+        },
+        {
+          "token_id": 16459,
+          "gene": "LYPD2",
+          "mean_logit_delta": 8.323724
+        },
+        {
+          "token_id": 18295,
+          "gene": "AQP1",
+          "mean_logit_delta": 8.228778
+        },
+        {
+          "token_id": 8180,
+          "gene": "TINAGL1",
+          "mean_logit_delta": 8.183149
+        },
+        {
+          "token_id": 10044,
+          "gene": "CLSTN2",
+          "mean_logit_delta": 7.967041
+        },
+        {
+          "token_id": 13207,
+          "gene": "SNCG",
+          "mean_logit_delta": 7.960187
+        },
+        {
+          "token_id": 14466,
+          "gene": "PENK",
+          "mean_logit_delta": 7.936566
+        },
+        {
+          "token_id": 2212,
+          "gene": "TIMP3",
+          "mean_logit_delta": 7.796834
+        },
+        {
+          "token_id": 5039,
+          "gene": "TGFBI",
+          "mean_logit_delta": 7.783718
+        }
+      ],
+      "top_downregulated": [
+        {
+          "token_id": 5169,
+          "gene": "CXCR4",
+          "mean_logit_delta": -12.967112
+        },
+        {
+          "token_id": 18676,
+          "gene": "EEF1G",
+          "mean_logit_delta": -12.820043
+        },
+        {
+          "token_id": 6498,
+          "gene": "JCHAIN",
+          "mean_logit_delta": -12.060777
+        },
+        {
+          "token_id": 5856,
+          "gene": "KLF2",
+          "mean_logit_delta": -12.015737
+        },
+        {
+          "token_id": 17430,
+          "gene": "DEFA1",
+          "mean_logit_delta": -11.295382
+        },
+        {
+          "token_id": 11903,
+          "gene": "LALBA",
+          "mean_logit_delta": -11.247829
+        },
+        {
+          "token_id": 1525,
+          "gene": "PTPRC",
+          "mean_logit_delta": -10.606202
+        },
+        {
+          "token_id": 18665,
+          "gene": "INS",
+          "mean_logit_delta": -10.51322
+        },
+        {
+          "token_id": 2974,
+          "gene": "CD37",
+          "mean_logit_delta": -10.327672
+        },
+        {
+          "token_id": 2049,
+          "gene": "HSP90AB1",
+          "mean_logit_delta": -10.277328
+        },
+        {
+          "token_id": 16262,
+          "gene": "HBG2",
+          "mean_logit_delta": -10.23314
+        },
+        {
+          "token_id": 17447,
+          "gene": "HBA1",
+          "mean_logit_delta": -10.116964
+        },
+        {
+          "token_id": 6599,
+          "gene": "CHRM3",
+          "mean_logit_delta": -9.900645
+        },
+        {
+          "token_id": 18104,
+          "gene": "PHGR1",
+          "mean_logit_delta": -9.758062
+        },
+        {
+          "token_id": 14606,
+          "gene": "P2RY8",
+          "mean_logit_delta": -9.73616
+        }
+      ]
+    }
+  }
+}

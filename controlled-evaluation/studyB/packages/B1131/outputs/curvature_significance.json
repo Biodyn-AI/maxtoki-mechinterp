@@ -1,0 +1,182 @@
+{
+ "settings": {
+  "seed": 0,
+  "n_folds": 5,
+  "alphas": [
+   0.001,
+   0.01,
+   0.1,
+   1.0,
+   10.0,
+   100.0,
+   1000.0,
+   10000.0
+  ],
+  "n_null": 200,
+  "n_boot": 1000
+ },
+ "results": {
+  "geneformer_lung": {
+   "model": "geneformer",
+   "tissue": "lung",
+   "species": "human",
+   "n_cells": 1500,
+   "dim": 1152,
+   "linear_r2": 0.9352955871511064,
+   "poly2_r2": 0.9533285574815832,
+   "curvature": 0.018032970330476794,
+   "alpha_linear": 0.1,
+   "alpha_poly": 0.1,
+   "null": {
+    "p_value": 0.004975124378109453,
+    "null_mean": -0.017543078999240524,
+    "null_sd": 0.007329450635044445,
+    "null_p95": -0.005443405873766928,
+    "z": 4.853849366931133,
+    "above_null_p95": true,
+    "q_bh": 0.004975124378109453
+   },
+   "bootstrap": {
+    "mean": 0.018153995710848983,
+    "ci_lo": 0.01459231359497199,
+    "ci_hi": 0.021587208330476768,
+    "frac_below_zero": 0.0
+   }
+  },
+  "scgpt_lung": {
+   "model": "scgpt",
+   "tissue": "lung",
+   "species": "human",
+   "n_cells": 1500,
+   "dim": 512,
+   "linear_r2": 0.9657445177673328,
+   "poly2_r2": 0.9733682283786228,
+   "curvature": 0.007623710611289969,
+   "alpha_linear": 0.01,
+   "alpha_poly": 0.1,
+   "null": {
+    "p_value": 0.004975124378109453,
+    "null_mean": -0.011927732920680617,
+    "null_sd": 0.00418054544628732,
+    "null_p95": -0.006306146184917511,
+    "z": 4.676768564890775,
+    "above_null_p95": true,
+    "q_bh": 0.004975124378109453
+   },
+   "bootstrap": {
+    "mean": 0.007706524185365127,
+    "ci_lo": 0.0050838751795931805,
+    "ci_hi": 0.010829821606418306,
+    "frac_below_zero": 0.0
+   }
+  },
+  "geneformer_gut": {
+   "model": "geneformer",
+   "tissue": "gut",
+   "species": "human",
+   "n_cells": 1500,
+   "dim": 1152,
+   "linear_r2": 0.7586717584885226,
+   "poly2_r2": 0.7993660545328063,
+   "curvature": 0.04069429604428365,
+   "alpha_linear": 0.1,
+   "alpha_poly": 0.1,
+   "null": {
+    "p_value": 0.004975124378109453,
+    "null_mean": -0.01432051138022618,
+    "null_sd": 0.013799788397247045,
+    "null_p95": 0.0012187066467099694,
+    "z": 3.986641377160409,
+    "above_null_p95": true,
+    "q_bh": 0.004975124378109453
+   },
+   "bootstrap": {
+    "mean": 0.04066778047422225,
+    "ci_lo": 0.03002044464429128,
+    "ci_hi": 0.05134468809265523,
+    "frac_below_zero": 0.0
+   }
+  },
+  "scgpt_gut": {
+   "model": "scgpt",
+   "tissue": "gut",
+   "species": "human",
+   "n_cells": 1500,
+   "dim": 512,
+   "linear_r2": 0.8605752376612814,
+   "poly2_r2": 0.8780155925620585,
+   "curvature": 0.01744035490077711,
+   "alpha_linear": 0.1,
+   "alpha_poly": 0.1,
+   "null": {
+    "p_value": 0.004975124378109453,
+    "null_mean": -0.015313006398610511,
+    "null_sd": 0.006682238897241165,
+    "null_p95": -0.006934579865818754,
+    "z": 4.901554972542009,
+    "above_null_p95": true,
+    "q_bh": 0.004975124378109453
+   },
+   "bootstrap": {
+    "mean": 0.017377970053470658,
+    "ci_lo": 0.00832183822632746,
+    "ci_hi": 0.02699182930781401,
+    "frac_below_zero": 0.0
+   }
+  },
+  "geneformer_pancreas": {
+   "model": "geneformer",
+   "tissue": "pancreas",
+   "species": "mouse",
+   "n_cells": 1500,
+   "dim": 1152,
+   "linear_r2": 0.945506506438045,
+   "poly2_r2": 0.9476195005726343,
+   "curvature": 0.002112994134589319,
+   "alpha_linear": 0.1,
+   "alpha_poly": 1.0,
+   "null": {
+    "p_value": 0.004975124378109453,
+    "null_mean": -0.027291654656349303,
+    "null_sd": 0.011989034504918991,
+    "null_p95": -0.011437747176516208,
+    "z": 2.4526285896017344,
+    "above_null_p95": true,
+    "q_bh": 0.004975124378109453
+   },
+   "bootstrap": {
+    "mean": 0.0021240228034799884,
+    "ci_lo": 2.3031454123337323e-05,
+    "ci_hi": 0.0041607524905071325,
+    "frac_below_zero": 0.024
+   }
+  },
+  "scgpt_pancreas": {
+   "model": "scgpt",
+   "tissue": "pancreas",
+   "species": "mouse",
+   "n_cells": 1500,
+   "dim": 512,
+   "linear_r2": 0.9726347295952569,
+   "poly2_r2": 0.9749916973526979,
+   "curvature": 0.0023569677574409864,
+   "alpha_linear": 0.1,
+   "alpha_poly": 1.0,
+   "null": {
+    "p_value": 0.004975124378109453,
+    "null_mean": -0.011985526887220637,
+    "null_sd": 0.0041083832525893186,
+    "null_p95": -0.0066770942712790085,
+    "z": 3.4910313277446057,
+    "above_null_p95": true,
+    "q_bh": 0.004975124378109453
+   },
+   "bootstrap": {
+    "mean": 0.002392136077113088,
+    "ci_lo": 0.0011818330921144677,
+    "ci_hi": 0.0035923127665229565,
+    "frac_below_zero": 0.0
+   }
+  }
+ }
+}

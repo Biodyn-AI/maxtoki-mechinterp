@@ -1,0 +1,47 @@
+{
+  "phase": "9b",
+  "models": {
+    "model_a": {
+      "name": "MaxToki-217M-HF",
+      "d": 1232,
+      "n_layers": 11
+    },
+    "model_b": {
+      "name": "Geneformer V2-316M",
+      "d": 1152,
+      "n_layers": 18
+    },
+    "shared_vocab_size": 20275,
+    "n_hvg_compared": 1500
+  },
+  "cross_model_cosine_alignment": {
+    "n_hvg_shared": 1500,
+    "pearson_off_diag": 0.382,
+    "spearman_off_diag": 0.3448,
+    "null_mean": -0.0,
+    "null_sd": 0.001,
+    "p_empirical": 0.0,
+    "n_perm": 500,
+    "verdict": "alignment significantly above shuffled null"
+  },
+  "geneformer_static_ppi_best_axis": {
+    "observed_rate": 0.011848,
+    "null_mean": 0.002294,
+    "null_std": 0.001899,
+    "z": 5.032,
+    "p_empirical": 0.0,
+    "n_pairs": 844,
+    "axis": "SV3"
+  },
+  "maxtoki_layer0_ppi_max_z": 5.62,
+  "ppi_convergent_across_architectures": true,
+  "geneformer_static_bcell_prec10": {
+    "n_markers_in_hvg": 11,
+    "mean_precision_at_10": 0.2727,
+    "null_mean": 0.0061,
+    "null_std": 0.0099,
+    "z": 26.96
+  },
+  "interpretation": "Both models share the 20,275-token Ensembl-ID vocabulary (token dictionaries identical). Cross-model alignment is therefore a clean test of architecture-vs-shared-prior: does the Llama-style decoder (MaxToki) and BERT-style encoder (Geneformer) converge on the same biological geometry from a shared vocabulary?",
+  "wall_clock_seconds": 16.5
+}

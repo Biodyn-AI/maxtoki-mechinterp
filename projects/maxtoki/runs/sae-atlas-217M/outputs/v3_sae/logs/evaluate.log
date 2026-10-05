@@ -1,0 +1,21 @@
+<REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/scripts/v3_sae.py:755: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at /Users/runner/work/pytorch/pytorch/pytorch/torch/csrc/utils/tensor_numpy.cpp:219.)
+  xb = torch.from_numpy(np.ascontiguousarray(X[a:b], dtype=np.float32)).to(dev)
+03:17:57 evaluate L0 done (94s)
+03:19:28 evaluate L1 done (91s)
+03:21:09 evaluate L2 done (101s)
+03:22:07 evaluate L3 done (58s)
+03:22:07 time budget used; run again
+<REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/scripts/v3_sae.py:755: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at /Users/runner/work/pytorch/pytorch/pytorch/torch/csrc/utils/tensor_numpy.cpp:219.)
+  xb = torch.from_numpy(np.ascontiguousarray(X[a:b], dtype=np.float32)).to(dev)
+03:23:08 evaluate L4 done (48s)
+03:23:57 evaluate L5 done (48s)
+03:24:46 evaluate L6 done (50s)
+03:25:35 evaluate L7 done (49s)
+03:26:47 evaluate L8 done (71s)
+03:27:55 evaluate L9 done (69s)
+03:27:55 time budget used; run again
+<REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/scripts/v3_sae.py:755: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at /Users/runner/work/pytorch/pytorch/pytorch/torch/csrc/utils/tensor_numpy.cpp:219.)
+  xb = torch.from_numpy(np.ascontiguousarray(X[a:b], dtype=np.float32)).to(dev)
+03:29:21 evaluate L10 done (60s)
+03:30:17 evaluate L11 done (57s)
+03:30:18 evaluate DONE

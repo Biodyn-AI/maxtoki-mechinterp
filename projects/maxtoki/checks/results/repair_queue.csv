@@ -1,0 +1,96 @@
+check,target,location,finding,action,owner
+spec_lint S1,pipelines/attention-grn-extraction-and-evaluation.md,section headings,missing: ['Code references']; numbering mismatches: 3,add the missing section in a versioned copy of the spec,agent (edit) + human (approve)
+spec_lint S3,pipelines/attention-grn-extraction-and-evaluation.md,Source section,TEXT_MATCH_ONLY_NO_GIT,restore .git in the clone or record a content hash,agent
+spec_lint S4,pipelines/attention-grn-extraction-and-evaluation.md,code references,22 of 22 not in repos/<name>/path:LINE form,rewrite as repos/<name>/path:LINE,agent
+spec_lint S4,pipelines/attention-grn-extraction-and-evaluation.md,run_incremental_value,named function not defined in the cited file,point to the file that defines it,agent
+spec_lint S4,pipelines/attention-grn-extraction-and-evaluation.md,run_residualization,named function not defined in the cited file,point to the file that defines it,agent
+spec_lint S4,pipelines/attention-grn-extraction-and-evaluation.md,permutation_test_contrast,named function not defined in the cited file,point to the file that defines it,agent
+spec_lint S4,pipelines/attention-grn-extraction-and-evaluation.md,bootstrap_stability,named function not defined in the cited file,point to the file that defines it,agent
+spec_lint S6,pipelines/attention-grn-extraction-and-evaluation.md,Validation,no machine-readable validation block,add a validation block with kind/artefact/field/op/value/on_fail,agent (draft) + human (thresholds)
+spec_lint S7,pipelines/attention-grn-extraction-and-evaluation.md,whole spec,no labelled slot for ['positive_control'],add labelled slots,agent (draft) + human (content)
+spec_lint S1,pipelines/residual-stream-spectral-geometry.md,section headings,missing: ['Code references']; numbering mismatches: 3,add the missing section in a versioned copy of the spec,agent (edit) + human (approve)
+spec_lint S3,pipelines/residual-stream-spectral-geometry.md,Source section,TEXT_MATCH_ONLY_NO_GIT,restore .git in the clone or record a content hash,agent
+spec_lint S4,pipelines/residual-stream-spectral-geometry.md,code references,28 of 28 not in repos/<name>/path:LINE form,rewrite as repos/<name>/path:LINE,agent
+spec_lint S6,pipelines/residual-stream-spectral-geometry.md,Validation,no machine-readable validation block,add a validation block with kind/artefact/field/op/value/on_fail,agent (draft) + human (thresholds)
+spec_lint S7,pipelines/residual-stream-spectral-geometry.md,whole spec,"no labelled slot for ['trivial_baseline', 'positive_control', 'scope_statement']",add labelled slots,agent (draft) + human (content)
+spec_lint S1,pipelines/topology-geometry-141-hypotheses.md,section headings,missing: ['Code references']; numbering mismatches: 3,add the missing section in a versioned copy of the spec,agent (edit) + human (approve)
+spec_lint S3,pipelines/topology-geometry-141-hypotheses.md,Source section,TEXT_MATCH_ONLY_NO_GIT,restore .git in the clone or record a content hash,agent
+spec_lint S4,pipelines/topology-geometry-141-hypotheses.md,code references,22 of 22 not in repos/<name>/path:LINE form,rewrite as repos/<name>/path:LINE,agent
+spec_lint S4,pipelines/topology-geometry-141-hypotheses.md,`run_claude_topology_autoloop.py`,path does not resolve in the pinned clone,fix the path,agent
+spec_lint S6,pipelines/topology-geometry-141-hypotheses.md,Validation,no machine-readable validation block,add a validation block with kind/artefact/field/op/value/on_fail,agent (draft) + human (thresholds)
+spec_lint S7,pipelines/topology-geometry-141-hypotheses.md,whole spec,"no labelled slot for ['trivial_baseline', 'positive_control', 'scope_statement']",add labelled slots,agent (draft) + human (content)
+spec_lint S1,pipelines/manifold-discovery-extraction-compactification.md,section headings,missing: ['Code references']; numbering mismatches: 3,add the missing section in a versioned copy of the spec,agent (edit) + human (approve)
+spec_lint S3,pipelines/manifold-discovery-extraction-compactification.md,Source section,NONE_WITH_REASON,human approves the no-repository waiver,human
+spec_lint S4,pipelines/manifold-discovery-extraction-compactification.md,code references,7 of 7 not in repos/<name>/path:LINE form,rewrite as repos/<name>/path:LINE,agent
+spec_lint S6,pipelines/manifold-discovery-extraction-compactification.md,Validation,no machine-readable validation block,add a validation block with kind/artefact/field/op/value/on_fail,agent (draft) + human (thresholds)
+spec_lint S7,pipelines/manifold-discovery-extraction-compactification.md,whole spec,"no labelled slot for ['trivial_baseline', 'positive_control', 'scope_statement']",add labelled slots,agent (draft) + human (content)
+spec_lint S4,pipelines/longevity-mechinterp-donor-aware.md,code references,46 of 46 not in repos/<name>/path:LINE form,rewrite as repos/<name>/path:LINE,agent
+spec_lint S6,pipelines/longevity-mechinterp-donor-aware.md,Validation,no machine-readable validation block,add a validation block with kind/artefact/field/op/value/on_fail,agent (draft) + human (thresholds)
+spec_lint S7,pipelines/longevity-mechinterp-donor-aware.md,whole spec,"no labelled slot for ['null_model', 'trivial_baseline', 'scope_statement']",add labelled slots,agent (draft) + human (content)
+spec_lint S1,pipelines/sparse-autoencoders/01-sae-atlas.md,section headings,missing: ['Code references']; numbering mismatches: 3,add the missing section in a versioned copy of the spec,agent (edit) + human (approve)
+spec_lint S3,pipelines/sparse-autoencoders/01-sae-atlas.md,Source section,TEXT_MATCH_ONLY_NO_GIT,restore .git in the clone or record a content hash,agent
+spec_lint S4,pipelines/sparse-autoencoders/01-sae-atlas.md,code references,52 of 52 not in repos/<name>/path:LINE form,rewrite as repos/<name>/path:LINE,agent
+spec_lint S6,pipelines/sparse-autoencoders/01-sae-atlas.md,Validation,no machine-readable validation block,add a validation block with kind/artefact/field/op/value/on_fail,agent (draft) + human (thresholds)
+spec_lint S7,pipelines/sparse-autoencoders/01-sae-atlas.md,whole spec,"no labelled slot for ['trivial_baseline', 'positive_control', 'scope_statement']",add labelled slots,agent (draft) + human (content)
+spec_lint S1,pipelines/sparse-autoencoders/02-causal-circuit-tracing.md,section headings,missing: ['Code references']; numbering mismatches: 3,add the missing section in a versioned copy of the spec,agent (edit) + human (approve)
+spec_lint S3,pipelines/sparse-autoencoders/02-causal-circuit-tracing.md,Source section,TEXT_MATCH_ONLY_NO_GIT; other clones named in Source without their commit in this spec: ['bio-sae'],restore .git in the clone or record a content hash,agent
+spec_lint S4,pipelines/sparse-autoencoders/02-causal-circuit-tracing.md,code references,22 of 27 not in repos/<name>/path:LINE form,rewrite as repos/<name>/path:LINE,agent
+spec_lint S6,pipelines/sparse-autoencoders/02-causal-circuit-tracing.md,Validation,no machine-readable validation block,add a validation block with kind/artefact/field/op/value/on_fail,agent (draft) + human (thresholds)
+spec_lint S7,pipelines/sparse-autoencoders/02-causal-circuit-tracing.md,whole spec,"no labelled slot for ['trivial_baseline', 'positive_control', 'scope_statement']",add labelled slots,agent (draft) + human (content)
+spec_lint S1,pipelines/sparse-autoencoders/03-exhaustive-mapping-and-steering.md,section headings,missing: ['Code references']; numbering mismatches: 3,add the missing section in a versioned copy of the spec,agent (edit) + human (approve)
+spec_lint S3,pipelines/sparse-autoencoders/03-exhaustive-mapping-and-steering.md,Source section,TEXT_MATCH_ONLY_NO_GIT,restore .git in the clone or record a content hash,agent
+spec_lint S4,pipelines/sparse-autoencoders/03-exhaustive-mapping-and-steering.md,code references,26 of 26 not in repos/<name>/path:LINE form,rewrite as repos/<name>/path:LINE,agent
+spec_lint S4,pipelines/sparse-autoencoders/03-exhaustive-mapping-and-steering.md,../../repos/bio-sae-circuits/results/circuit_analysis.json,path does not resolve in the pinned clone,fix the path,agent
+spec_lint S6,pipelines/sparse-autoencoders/03-exhaustive-mapping-and-steering.md,Validation,no machine-readable validation block,add a validation block with kind/artefact/field/op/value/on_fail,agent (draft) + human (thresholds)
+spec_lint S7,pipelines/sparse-autoencoders/03-exhaustive-mapping-and-steering.md,whole spec,"no labelled slot for ['null_model', 'trivial_baseline', 'positive_control']",add labelled slots,agent (draft) + human (content)
+number_trace,projects/maxtoki/summaries/attention-grn-217M-FINAL_SUMMARY.md,line 16: 217,number not found in this run's outputs within rounding,trace to a file or correct the text,agent
+number_trace,projects/maxtoki/summaries/attention-grn-217M-FINAL_SUMMARY.md,"line 148: 2,980",number not found in this run's outputs within rounding,trace to a file or correct the text,agent
+number_trace,projects/maxtoki/runs/attention-grn-217M/outputs/FINAL_SUMMARY.md,line 16: 217,number not found in this run's outputs within rounding,trace to a file or correct the text,agent
+number_trace,projects/maxtoki/summaries/spectral-geometry-217M-FINAL_SUMMARY.md,line 243: 175,number not found in this run's outputs within rounding,trace to a file or correct the text,agent
+number_trace,projects/maxtoki/runs/topology-141-217M/FINAL_SUMMARY.md,line 1: 217,number not found in this run's outputs within rounding,trace to a file or correct the text,agent
+number_trace,projects/maxtoki/runs/topology-141-217M/FINAL_SUMMARY.md,"line 330: 10,000",number not found in this run's outputs within rounding,trace to a file or correct the text,agent
+number_trace,projects/maxtoki/runs/longevity-mechinterp-217M/FINAL_SUMMARY.md,line 21: 0.0565,number not found in this run's outputs within rounding,trace to a file or correct the text,agent
+number_trace,projects/maxtoki/runs/longevity-mechinterp-217M/FINAL_SUMMARY.md,line 21: 5.65%,number not found in this run's outputs within rounding,trace to a file or correct the text,agent
+number_trace,projects/maxtoki/runs/longevity-mechinterp-217M/FINAL_SUMMARY.md,line 45: 10.3%,number not found in this run's outputs within rounding,trace to a file or correct the text,agent
+number_trace,projects/maxtoki/runs/longevity-mechinterp-217M/FINAL_SUMMARY.md,line 85: 0.34,number not found in this run's outputs within rounding,trace to a file or correct the text,agent
+number_trace,projects/maxtoki/runs/longevity-mechinterp-217M/FINAL_SUMMARY.md,line 85: 0.36,number not found in this run's outputs within rounding,trace to a file or correct the text,agent
+number_trace,projects/maxtoki/runs/longevity-mechinterp-217M/FINAL_SUMMARY.md,line 86: 0.55,number not found in this run's outputs within rounding,trace to a file or correct the text,agent
+number_trace,projects/maxtoki/runs/longevity-mechinterp-217M/FINAL_SUMMARY.md,line 142: 24,number not found in this run's outputs within rounding,trace to a file or correct the text,agent
+number_trace,projects/maxtoki/runs/longevity-mechinterp-217M/FINAL_SUMMARY.md,line 154: 70,number not found in this run's outputs within rounding,trace to a file or correct the text,agent
+number_trace,projects/maxtoki/summaries/sae-atlas-217M-FINAL_SUMMARY.md,line 17: 76.8,number not found in this run's outputs within rounding,trace to a file or correct the text,agent
+number_trace,projects/maxtoki/summaries/circuit-tracing-217M-FINAL_SUMMARY.md,line 15: 52,number not found in this run's outputs within rounding,trace to a file or correct the text,agent
+number_trace,projects/maxtoki/summaries/circuit-tracing-217M-FINAL_SUMMARY.md,"line 27: 17,867",number not found in this run's outputs within rounding,trace to a file or correct the text,agent
+number_trace,projects/maxtoki/summaries/circuit-tracing-217M-FINAL_SUMMARY.md,"line 48: 4,928",number not found in this run's outputs within rounding,trace to a file or correct the text,agent
+number_trace,projects/maxtoki/summaries/circuit-tracing-217M-FINAL_SUMMARY.md,"line 48: 54,208",number not found in this run's outputs within rounding,trace to a file or correct the text,agent
+number_trace,projects/maxtoki/summaries/circuit-tracing-217M-FINAL_SUMMARY.md,line 132: 975,number not found in this run's outputs within rounding,trace to a file or correct the text,agent
+number_trace,projects/maxtoki/summaries/circuit-tracing-217M-FINAL_SUMMARY.md,line 154: 0.165,number not found in this run's outputs within rounding,trace to a file or correct the text,agent
+number_trace,projects/maxtoki/summaries/circuit-tracing-217M-FINAL_SUMMARY.md,line 154: 0.190,number not found in this run's outputs within rounding,trace to a file or correct the text,agent
+number_trace,projects/maxtoki/summaries/circuit-tracing-217M-FINAL_SUMMARY.md,line 155: 0.324,number not found in this run's outputs within rounding,trace to a file or correct the text,agent
+number_trace,projects/maxtoki/summaries/circuit-tracing-217M-FINAL_SUMMARY.md,line 155: 0.0003,number not found in this run's outputs within rounding,trace to a file or correct the text,agent
+number_trace,projects/maxtoki/summaries/circuit-tracing-217M-FINAL_SUMMARY.md,line 155: 0.219,number not found in this run's outputs within rounding,trace to a file or correct the text,agent
+number_trace,projects/maxtoki/summaries/exhaustive-mapping-217M-FINAL_SUMMARY.md,"line 34: 2,144,011",number not found in this run's outputs within rounding,trace to a file or correct the text,agent
+number_trace,projects/maxtoki/summaries/exhaustive-mapping-217M-FINAL_SUMMARY.md,line 146: 4928,number not found in this run's outputs within rounding,trace to a file or correct the text,agent
+number_trace,projects/maxtoki/summaries/exhaustive-mapping-217M-FINAL_SUMMARY.md,line 153: 694,number not found in this run's outputs within rounding,trace to a file or correct the text,agent
+number_trace,projects/maxtoki/summaries/exhaustive-mapping-217M-FINAL_SUMMARY.md,line 153: 443,number not found in this run's outputs within rounding,trace to a file or correct the text,agent
+number_trace,projects/maxtoki/summaries/exhaustive-mapping-217M-FINAL_SUMMARY.md,line 153: 256,number not found in this run's outputs within rounding,trace to a file or correct the text,agent
+number_trace,projects/maxtoki/summaries/exhaustive-mapping-217M-FINAL_SUMMARY.md,line 159: 0.999,number not found in this run's outputs within rounding,trace to a file or correct the text,agent
+number_trace,projects/maxtoki/summaries/exhaustive-mapping-217M-FINAL_SUMMARY.md,line 183: 0.0002,number not found in this run's outputs within rounding,trace to a file or correct the text,agent
+number_trace,projects/maxtoki/summaries/exhaustive-mapping-217M-FINAL_SUMMARY.md,line 185: 0.0003,number not found in this run's outputs within rounding,trace to a file or correct the text,agent
+run_manifest M1,attention-grn-217M,n_ctrl,"used 200;2000 vs spec 2000 (range {500, 2000, 10000})",write the reason; human approves or orders a re-run,human
+run_manifest M1,attention-grn-217M,hvg,"used 1500 vs spec {2000, 3309} (range {1000, 2000, 5000})",write the reason; human approves or orders a re-run,human
+run_manifest M1,attention-grn-217M,intervention_cells_fidelity,used 2000;300 vs spec 2000 (range not machine-readable),write the reason; human approves or orders a re-run,human
+run_manifest M1,attention-grn-217M,degree_null_n_curveball,used 50 vs spec 200 (range not machine-readable),reason is written down; human approves or orders a re-run,human
+run_manifest M1,spectral-geometry-217M,autoloop_iterations,used 8 vs spec 63 (range 40–80),write the reason; human approves or orders a re-run,human
+run_manifest M1,topology-141-217M,null_label_permutation_replicates,used 100;50;8 vs spec 100–200 (range 100–1000),write the reason; human approves or orders a re-run,human
+run_manifest M1,topology-141-217M,null_rewiring_replicates,used 12;8 vs spec 24 (range ≥ 24),write the reason; human approves or orders a re-run,human
+run_manifest M1,sae-atlas-217M,n_cells_training,used 500 vs spec 2000 (range not machine-readable),write the reason; human approves or orders a re-run,human
+run_manifest M1,sae-atlas-217M,n_cells_training,used 500 vs spec 3000 (range not machine-readable),write the reason; human approves or orders a re-run,human
+run_manifest M1,sae-atlas-217M,causal_patching_cells,used 50 vs spec 200 (range not machine-readable),write the reason; human approves or orders a re-run,human
+run_manifest M1,exhaustive-mapping-217M,n_cells_per_condition,used 50 vs spec 200 (range 100–500),write the reason; human approves or orders a re-run,human
+run_manifest M2,attention-grn-217M,phase12_verdict.json:criteria.C3_residualized_retains_signal,CONSISTENT; IMPLAUSIBLE_FRACTION,compute the missing gate or correct the recorded verdict,agent (compute) + human (accept)
+run_manifest M2,attention-grn-217M,phase12_verdict.json:criteria.C4_top_heads_causal,AMBIGUOUS_NOT_RECOMPUTED,compute the missing gate or correct the recorded verdict,agent (compute) + human (accept)
+run_manifest M2,manifold-discovery-217M,external_validation_lung_control.json:(root),CONSISTENT; NEGATIVE_CONTROL_PASSED,compute the missing gate or correct the recorded verdict,agent (compute) + human (accept)
+run_manifest M2,manifold-discovery-217M,h38_lite_quality_gates.json:positive,PASS_WITH_UNCOMPUTED_GATES,compute the missing gate or correct the recorded verdict,agent (compute) + human (accept)
+run_manifest M2,manifold-discovery-217M,quality_gates_let_anchor.json:positive,PASS_WITH_UNCOMPUTED_GATES,compute the missing gate or correct the recorded verdict,agent (compute) + human (accept)
+run_manifest M2,manifold-discovery-217M,zeroshot_h103.json:(root),PROTOCOL_K_DIFFERS(['trustworthiness_k5'] vs k=15),compute the missing gate or correct the recorded verdict,agent (compute) + human (accept)
+run_manifest M2,manifold-discovery-217M,zeroshot_transfer_anchor_head.json:(root),CONSISTENT; GATE_SET_FOR_PANEL_UNSTATED,decide which frozen gates apply to this panel (the gate file names only internal and external),human

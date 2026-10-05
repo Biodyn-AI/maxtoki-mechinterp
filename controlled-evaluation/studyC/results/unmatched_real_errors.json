@@ -1,0 +1,1109 @@
+[
+ {
+  "arm": "deployed",
+  "rep": 1,
+  "fid": "F03",
+  "sev": "critical",
+  "loc": "runs/sae-atlas-217M/scripts/phases2_to_8.py:~176-197 (p<0.1 prefilter, fdr_bh on retained rows); runs/sae-atlas-217M/scripts/full_12layer_pipeline.py:245-251",
+  "desc": "The hypergeometric enrichment keeps only tests with raw p<0.1 (and overlap \u22652), then applies BH to that pre-filtered subset. The BH denominator therefore excludes millions of tests, and FDR control is lost. The reported annotation rates (80.7% L0, 67.8% L5, 61.7% L11; ~69% across 12 layers, a 'U-shaped profile') and 'MaxToki features are more interpretable than Geneformer' do not survive correct c",
+  "reason": "Confirmed in phases2_to_8.py and full_12layer_pipeline.py: only tests with overlap>=2 and raw p<0.1 are kept, then BH runs on that subset. The spec (01-sae-atlas.md:182) calls for BH across all terms for each feature. Accepted rows have raw p up to 0.042. I recomputed from significant_enrichments.cs"
+ },
+ {
+  "arm": "deployed",
+  "rep": 1,
+  "fid": "F14",
+  "sev": "minor",
+  "loc": "setup/maxtoki_adapter.py (causal LlamaForCausalLM); runs/attention-grn-217M/scripts/phase0_extract.py:~283-300 (accumulation incl. zeros); scripts/phase1_trivial_baselines.py (row_attn = attn_primary[pert_hvg,:]); README.md:85",
+  "desc": "MaxToki attention is causal (lower-triangular) over a rank-ordered sequence. The edge pert\u2192target, and TF\u2192target for TRRUST, is read only from the query=source row, so it is structurally zero whenever the target ranks below the source in a cell. Averaging over cells (including those zeros) turns the 'attention edge' largely into a measure of relative expression rank. The README says the pipeline '",
+  "reason": "Confirmed. phase0_extract.py adds the full k\u00d7k slice of the causal attention matrix, so upper-triangular zeros are included, and divides by pair_counts over every cell that has both genes. phase1 reads only attn_primary[pert_hvg,:], the query=source row. The edge is therefore partly a measure of rel"
+ },
+ {
+  "arm": "deployed",
+  "rep": 1,
+  "fid": "F16",
+  "sev": "minor",
+  "loc": "runs/topology-141-217M/outputs/phase15_cross_domain/cross_domain_alignment.csv (layer 0 rows); phase15_summary.json; EXTENDED_FINDINGS.md:18,44-51,76",
+  "desc": "The 'STRONG POSITIVE (novel)' finding that 'MaxToki encodes a tissue-invariant gene geometry' (mean Pearson 0.74\u20130.86) is largely true by construction. Layer 0 is the context-free token embedding, so its cross-tissue Pearson is exactly 1.0, and it is included in the 12-layer mean and reported as best_layer. Invariance actually decreases with depth, so the transformer reduces rather than creates ti",
+  "reason": "Confirmed. The layer-0 Pearson is 0.99999999998 or higher for all three pairs, it is included in the 12-layer mean, and best_layer=0 everywhere. Invariance then falls with depth (lung-extlung 0.795 at L1 to 0.608 at L10; immune-extlung 0.45 at L10), which contradicts the text's 'transformer doesn't "
+ },
+ {
+  "arm": "deployed",
+  "rep": 1,
+  "fid": "F17",
+  "sev": "minor",
+  "loc": "runs/topology-141-217M/scripts/phase16_lineage_hub_depth.py:55-90,132-175; outputs/phase16_extended/h_lineage_marker_purity.csv; h_hub_tf_degree.csv; EXTENDED_FINDINGS.md:19,21,58-65,89-91",
+  "desc": "Both nulls ignore expression and co-expression: H-lineage compares against random gene sets of the same size, and H-hub against a TF-degree permutation. Lineage markers are co-expressed and TRRUST hubs are well-studied and highly expressed. The ext-lung '4/4 lineages sig (all z>3)' includes a B-cell result whose observed purity equals the null p95, which is not significant. The z-scores come from ",
+  "reason": "Confirmed from the CSVs. The ext-lung B-cell result (3 markers, obs 0.0556 = null_p95 0.0556, i.e. a single kNN hit) is reported as significant with z=3.05, so '4/4 lineages sig' should be 3/4. The nulls are random gene sets of the same size and a plain TF-degree permutation, with no matching on exp"
+ },
+ {
+  "arm": "deployed",
+  "rep": 1,
+  "fid": "F22",
+  "sev": "minor",
+  "loc": "runs/spectral-geometry-217M/scripts/phases_67.py:211-248; outputs/phase7/lineage_twonn_by_layer.csv; outputs/FINAL_SUMMARY.md:32-33,105-110,137-142",
+  "desc": "Lineage-specific TwoNN intrinsic dimension is estimated from 6 B-cell and 9 T-cell marker genes in 1,232 dimensions. That is far too few points; for example, it estimates ID=101 from 6 points. The resulting claims are unsupported:\n- B-cell compression 'replicated' (\u03c1=\u22120.867).\n- T-cell compression 'divergent'.\n- The interpretation that 'MaxToki compresses all lineages generically \u2026 its geometry enc",
+  "reason": "Confirmed. lineage_twonn_by_layer.csv has B cell n=6 (TwoNN 101 at L0 to 6.2 at L11), T cell n=9 and Myeloid n=1 (NaN). With F<0.9 the fit uses only about 5 points, and the estimates follow the global 102\u21926.7 decline. There is no size-matched random-set null. The spec itself uses about 7-12 markers,"
+ },
+ {
+  "arm": "deployed",
+  "rep": 1,
+  "fid": "F23",
+  "sev": "minor",
+  "loc": "summaries/spectral-geometry-217M-FINAL_SUMMARY.md:244-261,290-294,334; runs/spectral-geometry-217M/outputs/phase9b/summary.json",
+  "desc": "The run declares that the paper's negative findings 'fail to replicate': it calls cross-model alignment 'IS significant (p=0.0)' against the paper's p>0.3. But the paper's null was a shared-vocabulary null, while this run uses a gene-label shuffle, which is much weaker. MaxToki and Geneformer V2 share the identical 20,275-token dictionary, and that shared token prior was never controlled. The clai",
+  "reason": "Confirmed. phase9b uses a gene-label-shuffle null (null sd 0.001) on the off-diagonal Pearson of cosine matrices. The spec's paper result is a raw-cosine test with p>0.3 under a 'shared-vocabulary null'. These are different statistics and different nulls, so calling them 'two clean non-replications'"
+ },
+ {
+  "arm": "deployed",
+  "rep": 1,
+  "fid": "F24",
+  "sev": "major",
+  "loc": "runs/sae-atlas-217M/scripts/phases2_to_8.py:~355-385; outputs/phases2_to_8.log:78-93; summaries/sae-atlas-217M-FINAL_SUMMARY.md:48-58,84; summaries/sae-atlas-217M-FINAL_SUMMARY_12layer.md",
+  "desc": "'10 modules at 99.9\u2013100% coverage matches [the paper] precisely' is set by a parameter. leidenalg was not installed, so the code fell back to SpectralClustering with n_clusters=min(10, n_alive). That always gives 10 modules and labels every alive feature. The fallback also clusters pmi_pos[:n_alive,:n_alive] (the first n_alive indices, not the alive features) and writes labels to alive_idx, so lab",
+  "reason": "Confirmed. The log says 'leidenalg not installed'. The fallback is SpectralClustering(n_clusters=min(10,n_alive)), so 10 modules covering every alive feature is guaranteed, and all 12 layers in the 12-layer run report exactly 10. In phases2_to_8.py the fallback also clusters pmi_pos[:n_alive,:n_aliv"
+ },
+ {
+  "arm": "deployed",
+  "rep": 1,
+  "fid": "F25",
+  "sev": "minor",
+  "loc": "runs/sae-atlas-217M/scripts/phases2_to_8.py:222-261; summaries/sae-atlas-217M-FINAL_SUMMARY.md:29-37,81",
+  "desc": "'99.9\u2013100% of features are invisible to SVD \u2014 massive superposition confirmed' is the expected outcome for any dictionary. A feature counts as 'aligned' only if its max cosine with one of the top-50 SVD directions exceeds 0.7. With 4,928 atoms in 1,232 dimensions, a random direction's max cosine with 50 orthonormal vectors is about 0.1, so nearly every atom of any dictionary, including a random on",
+  "reason": "Confirmed by simulation: 4,928 random unit vectors in 1232-D against 50 orthonormal directions give a mean max |cos| of 0.072 and a maximum of 0.127, with 0 above 0.7. Any dictionary would therefore come out about 100% 'novel', and 'massive superposition confirmed' has no control behind it. The metr"
+ },
+ {
+  "arm": "deployed",
+  "rep": 1,
+  "fid": "F27",
+  "sev": "minor",
+  "loc": "summaries/sae-atlas-217M-FINAL_SUMMARY.md:94,166,174-181; summaries/circuit-tracing-217M-FINAL_SUMMARY.md:102-108",
+  "desc": "The SAEs are trained on 500 K562 control cells (an immortalised cancer line), with a single SAE seed and only 3 layers in the main analysis. The circuit tracing uses 200 K562 cells under a single condition. Even so, the summaries generalise to 'single-cell foundation models, regardless of architecture (Geneformer, scGPT, MaxToki), have not internalised causal regulatory wiring' and 'the limitation",
+  "reason": "Scope as stated is correct: 500 K562 cells, one SAE seed, 3 layers; circuit tracing uses 200 K562 cells, K562/K562 only, with phases 8 and 13 skipped. The interpretation still generalises to 'single-cell foundation models, regardless of architecture ... have not internalised causal regulatory wiring"
+ },
+ {
+  "arm": "deployed",
+  "rep": 1,
+  "fid": "F28",
+  "sev": "minor",
+  "loc": "summaries/sae-atlas-217M-FINAL_SUMMARY.md:39-46,82-83; summaries/sae-atlas-217M-FINAL_SUMMARY_12layer.md:26-35,47-50",
+  "desc": "The 3-layer summary says 'Features are overwhelmingly layer-specific \u2014 no persistent scaffold. Replicates.' (L0\u2192L5 2.5%). The 12-layer summary says 'MaxToki has dramatically higher cross-layer persistence than Geneformer (21.5% peak) \u2026 differs from paper' (L0\u2192L8 13.3%). Both are listed as replication results. Persistence is measured by decoder cosine >0.7 between independently trained SAEs, with n",
+  "reason": "Confirmed. The 3-layer summary says 'Features are overwhelmingly layer-specific \u2014 no persistent scaffold. Replicates' and 'Annotation declining with depth'. The 12-layer summary (same SAEs; L0\u2192L5 = 125 in both logs) reports L6\u2192L7 21.5% and L0\u2192L8 13.3%, calls this 'differs from paper', and describes "
+ },
+ {
+  "arm": "deployed",
+  "rep": 1,
+  "fid": "F29",
+  "sev": "minor",
+  "loc": "summaries/exhaustive-mapping-217M-FINAL_SUMMARY.md (Exp 3 switch features, pseudotime); runs/exhaustive-mapping-217M/scripts/experiment3_rerun.py",
+  "desc": "'5,767 switch features \u2026 MaxToki was trained on trajectories, so temporal information permeates every layer' rests on several weak choices:\n- Pseudotime is PC1 of log1p counts over 200 TS immune cells, which likely tracks cell type or library size rather than maturation, and is not validated.\n- The switch criterion was relaxed from the spec's Cohen's d>0.9 to |\u03c1|>0.3, p<0.01, uncorrected across ~4",
+  "reason": "Confirmed from experiments_2_3.py. Pseudotime is PC1 of log1p over 200 randomly sampled TS immune cells of mixed types, so it likely tracks cell type. The switch criterion is |\u03c1|>0.3, p<0.01, applied to K562-trained SAEs, and cos(g_early,g_late)\u22480.999. The headline 'temporal information permeates ev"
+ },
+ {
+  "arm": "deployed",
+  "rep": 1,
+  "fid": "F30",
+  "sev": "minor",
+  "loc": "runs/manifold-discovery-217M/FINAL_SUMMARY.md:14-17,148,158-178; reports/phase12_anchor_benchmark_lite.csv; reports/phase12_anchor_benchmark_lite_pairwise.csv",
+  "desc": "The headline says MaxToki-217M 'internally encodes' a hematopoietic developmental manifold and calls this 'the first affirmative deployable result'. The run's own trivial-baseline benchmark shows that PCA-10 on expression recovers the same structure at least as well. The extracted head does not beat PCA-10, SVD-10 or frozen MaxToki avg-pool on any endpoint; it beats only raw log1p, which is degene",
+  "reason": "Numbers confirmed. Mean branch balanced accuracy is pca10 0.844, svd10 0.837, avgpool 0.792, drift 0.829, z10 0.756, raw 0.142, and z10\u2212pca10 \u0394=\u22120.088 (q=0.26). The headline ('internally encodes', 'first affirmative deployable result') and the multi-axis-hub claims about H38/H95/H103 are never quali"
+ },
+ {
+  "arm": "deployed",
+  "rep": 1,
+  "fid": "F31",
+  "sev": "major",
+  "loc": "runs/manifold-discovery-217M/scripts/phase9_head_attribution.py:9-11,67-76; scripts/phase4_export_operators.py:70-90; FINAL_SUMMARY.md:96-117",
+  "desc": "The per-head 'operator' features are x_l @ A_{l,h}^T, where x_l is the anchor-centroid residual after layer l and A is the head's o_proj slice. This projects the residual stream onto the head's write subspace; it is not what the head computes, since heads read through q/k/v and write through o_proj. So 'top-1 L10H6 \u2026 H65 information concentrated in late layers' and 'compressible by 2,400\u00d7 to a 7.7",
+  "reason": "Confirmed. phase9 uses features = centroids[:, li+1, :] @ A.T, with A = o_proj.weight[:, h*154:(h+1)*154].T. That is a projection of the post-layer residual onto the head's o_proj write directions, not anything the head computes. For L10, centroid index 11 is the HF final post-RMSNorm hidden state. "
+ },
+ {
+  "arm": "deployed",
+  "rep": 1,
+  "fid": "F35",
+  "sev": "minor",
+  "loc": "runs/manifold-discovery-217M/FINAL_SUMMARY.md \u00a717.3; reports/phase17_cross_axis_h65_h95.json",
+  "desc": "'PARTIALLY_ORTHOGONAL \u2026 the H95 head finds H95-specific latent structure that the H65 head does not see' is inferred from the cross-head correlation (0.642) being lower than the ruler overlap (0.814). But imperfect fits alone lower the cross-head correlation: with self-fits of 0.986 and 0.825, the expected value from attenuation alone is \u22480.986\u00d70.814\u00d70.825 \u22480.66, essentially the observed 0.642. Th",
+  "reason": "Confirmed from phase17_cross_axis_h65_h95.json: ruler overlap 0.814, self-fits 0.986 and 0.825, cross-head 0.642. Under independent fit error, attenuation alone predicts 0.986\u00d70.814\u00d70.825 = 0.662, close to the observed 0.642. The scrambled-ruler null (0.022) does not address this. So 'actively rotat"
+ },
+ {
+  "arm": "deployed",
+  "rep": 2,
+  "fid": "F04",
+  "sev": "critical",
+  "loc": "runs/sae-atlas-217M/scripts/phases2_to_8.py:166-200 (L187 'if p < 0.1', L195 fdr_bh); full_12layer_pipeline.py:246-251; outputs/phase2/layer_*/significant_enrichments.csv",
+  "desc": "Annotation enrichments are recorded only when the raw hypergeometric p < 0.1, and BH is then applied to this pre-filtered subset rather than to all feature \u00d7 term tests. That inflates discoveries massively: almost every nominal p < 0.04 becomes 'significant'. The reported annotation rates, the 'more interpretable than Geneformer' claim, the U-shaped depth profile and the annotated/unannotated spli",
+  "reason": "Confirmed in both phases2_to_8.py and full_12layer_pipeline.py: enrichments are kept only when x>=2 and p<0.1, and fdr_bh is then run on that pre-filtered subset only. I recomputed from the saved significant_enrichments.csv (max saved p is about 0.04). Using full-family BH (m = n_alive x 2369, from "
+ },
+ {
+  "arm": "deployed",
+  "rep": 2,
+  "fid": "F09",
+  "sev": "major",
+  "loc": "runs/topology-141-217M/scripts/phase15_cross_domain_tissue.py:73 (loop includes layer 0); outputs/phase15_cross_domain/*; EXTENDED_FINDINGS.md:18,44-51,76",
+  "desc": "'STRONG POSITIVE (novel): MaxToki encodes a tissue-invariant gene geometry' is not supported.\n- The means include layer 0, the context-free token embedding, which is identical across tissues by construction (Pearson=1.000, top-1=1.000, best_layer=0 for all pairs).\n- The null shuffles gene labels, which any residual-stream model beats trivially because each gene's state contains its token embedding",
+  "reason": "Confirmed. cross_domain_alignment.csv has L0 Pearson 1.000 and top-1 1.0 for all three pairs, and best_layer=0 in phase15_summary.json. Excluding L0, the mean Pearson is 0.849, 0.746 and 0.717. Top-1 at L11 is 0.667, 0.250 and 0.299. The only null is a gene-label shuffle (z 6.6-100), and the script "
+ },
+ {
+  "arm": "deployed",
+  "rep": 2,
+  "fid": "F10",
+  "sev": "major",
+  "loc": "runs/topology-141-217M/outputs/phase0/immune/run_config.json; outputs/phase0/immune/gene_features.csv; README.md:36",
+  "desc": "The 'immune' domain was not extracted with the lung pool-selection rule. It reuses 350 genes from the spectral-geometry pool, which was annotation-biased toward TRRUST TFs, and 343/350 (98%) are TRRUST TFs. Lung has 87/382 TFs and external-lung 86/380. The three 'domains' therefore differ in gene composition, not just tissue. Immune-specific results are confounded by this: H123 1/12, H141 2/12 str",
+  "reason": "Confirmed. immune run_config.json has reused=true, with the spectral-geometry phase0 as source. The immune-reuse code ranks TFs first when capping at 350 and has no cap on TF count, while select_topology_gene_pool for lung and external-lung caps TFs at 80. As a result immune gene_features has is_trr"
+ },
+ {
+  "arm": "deployed",
+  "rep": 2,
+  "fid": "F11",
+  "sev": "minor",
+  "loc": "runs/topology-141-217M/scripts/phase123_splits_nulls.py:60-117 (build_pair_table)",
+  "desc": "In the pair table, positives are TRRUST pairs, which always contain a TF. Negatives are random non-TRRUST pairs, mostly without a TF, plus every STRING-only pair labelled as a negative. Any geometric feature that tracks TF identity, degree or PPI proximity shifts the AUROC regardless of regulatory structure. STRING-labelled negatives are likely to be geometrically close, which pushes similarity-ba",
+  "reason": "The code matches the description: positives are TRRUST pairs, STRING-only pairs are labelled 0, and negatives are random. In the pair tables, 100% of positives contain a TF, against 41% (lung) and 39% (external-lung) of random negatives. Only 48, 24 and 61 negatives are STRING-only. The spec itself "
+ },
+ {
+  "arm": "deployed",
+  "rep": 2,
+  "fid": "F13",
+  "sev": "minor",
+  "loc": "runs/topology-141-217M/scripts/phase16_lineage_hub_depth.py:130-176; outputs/phase16_extended/h_hub_tf_degree.csv; EXTENDED_FINDINGS.md:21,58-65,77",
+  "desc": "'High-degree regulatory hubs sit at higher kNN centrality' is called the 'strongest new result', yet it rests on:\n- z = 1.31 / 2.34 / 2.36 from 100 label permutations;\n- one layer (L6) and one k (12);\n- no correction across domains or across the batch of exploratory hypotheses;\n- no control for expression or token frequency, which correlates with both TRRUST degree (literature bias) and graph cent",
+  "reason": "The numbers are confirmed: Spearman 0.060, 0.118 and 0.115; z 1.31, 2.34 and 2.36; 100 permutations; L6 and k=12 only; no correction and no expression or literature-degree control. In lung and external-lung, non-TFs get degree 0, so the statistic partly measures TF versus non-TF identity. Calling it"
+ },
+ {
+  "arm": "deployed",
+  "rep": 2,
+  "fid": "F14",
+  "sev": "minor",
+  "loc": "runs/topology-141-217M/scripts/phase16_lineage_hub_depth.py:179-228; outputs/phase16_extended/h23_forman.csv; EXTENDED_FINDINGS.md:22,78",
+  "desc": "'DIRECTIONAL REPLICATES across all 3 domains ... Validates the spec implementation' rests on AUROCs computed over 52\u2013123 kNN-graph edges with 11\u201322 positives, with no confidence interval. A pass is declared simply when AUROC < 0.45. When reproduced with a bootstrap, every CI includes 0.5, so the check neither replicates the paper nor validates the implementation.",
+  "reason": "Reproduced exactly from pair_table.csv and the L6 PCA-20 embeddings. Lung: 62 edges, 13 positive, AUROC 0.352, bootstrap 95% CI [0.183, 0.530]. Immune: 123 edges, 22 positive, AUROC 0.416, CI [0.289, 0.542]. External-lung: 52 edges, 11 positive, AUROC 0.340, CI [0.159, 0.545]. The code declares repl"
+ },
+ {
+  "arm": "deployed",
+  "rep": 2,
+  "fid": "F17",
+  "sev": "minor",
+  "loc": "runs/spectral-geometry-217M/scripts/phase9b_cross_model.py:114-160; outputs/phase9b/cross_model_cosine.json; summaries/spectral-geometry-217M-FINAL_SUMMARY.md:241-260,292-294",
+  "desc": "'The paper's null does NOT replicate \u2014 alignment IS significant' is reached with a gene-label shuffle null, which any nonzero alignment beats. The paper's negative was against a shared-vocabulary null. Only static embeddings are compared. The second 'non-replication' (Geneformer static B-cell prec@10 = 0.273) uses an annotation-biased, marker-enriched HVG set, not the paper's gene set.",
+  "reason": "Confirmed. phase9b_cross_model.py compares a Pearson of off-diagonal similarity matrices (0.382) with a gene-label-shuffle null (mean -0.000, sd 0.001, p=0, n=500). The spec describes the paper's p>0.3 as reflecting a 'shared-vocabulary null', and its 0.825 is a raw cosine, so both the statistic and"
+ },
+ {
+  "arm": "deployed",
+  "rep": 2,
+  "fid": "F18",
+  "sev": "minor",
+  "loc": "runs/spectral-geometry-217M/scripts/phases_67.py:212-245; outputs/phase7/lineage_twonn_by_layer.csv, depth_correlations.json; summaries/spectral-geometry-217M-FINAL_SUMMARY.md:32-33,105-110,334-337",
+  "desc": "Lineage-specific intrinsic dimension is estimated by TwoNN on 6 B-cell and 9 T-cell marker points in 1232 dimensions. With so few points the estimates (101 \u2192 6) are noise-level, and they are not normalised against the global compression (effective rank 561\u219294) using random gene sets of the same size. 'B-cell compression replicated' and 'T-cell also compresses, likely due to trajectory training' ar",
+  "reason": "Confirmed. lineage_twonn_by_layer.csv has n_markers 6 (B) and 9 (T), and TwoNN with the F<0.9 mask uses about 5-8 ratios. The B-cell estimates (101 to 6.2) almost exactly track the global TwoNN (102 to 6.7), so this is global compression, not a lineage effect, and there is no random-set normalisatio"
+ },
+ {
+  "arm": "deployed",
+  "rep": 2,
+  "fid": "F20",
+  "sev": "major",
+  "loc": "runs/sae-atlas-217M/scripts/phases2_to_8.py:310-388 (L373 n_clusters=min(10,n_alive), L376 pmi_pos[:n_alive,:n_alive]); full_12layer_pipeline.py:299-312; outputs/phases2_to_8.log:78",
+  "desc": "leidenalg was not installed, so the code silently fell back to SpectralClustering with n_clusters=10, which assigns every alive feature to a cluster. '10 modules per layer at 99.9\u2013100% coverage \u2014 matches the paper precisely (6\u201312 modules, 96\u201399.5%)' is therefore hard-coded, and it is repeated in all 12 layers ('120 modules'). In the 3-layer script the fallback also clusters pmi_pos[:n_alive,:n_ali",
+  "reason": "Confirmed. The phases2_to_8.log says 'leidenalg not installed', and both scripts fall back to SpectralClustering(n_clusters=min(10, n_alive)), so every layer gets exactly 10 modules and covers all alive features by construction. Some modules have only 2 features (L0 sizes include 2 and 2). The summa"
+ },
+ {
+  "arm": "deployed",
+  "rep": 2,
+  "fid": "F21",
+  "sev": "major",
+  "loc": "runs/sae-atlas-217M/scripts/phases2_to_8.py:222-262 (L242 'alive' is a file-shape boolean), 286-300 (L292 n_src_alive by decoder norm); outputs/phase3/svd_comparison.csv, phase4/cross_layer_tracking.csv; summaries/sae-atlas-217M-FINAL_SUMMARY.md:29-46,96-103; summaries/sae-atlas-217M-FINAL_SUMMARY_12layer.md:28-37; summaries/sae-atlas-crosslayer-analysis.log",
+  "desc": "Dead features are counted in two places. At L0, 2430 dead features count as 'novel' (4928/4928 = 100%) and as the persistence denominator (125/4928 = 2.5%; per alive feature it is 125/2498 = 5.0%). '99.9% invisible to SVD \u2014 massive superposition confirmed' is near-guaranteed by construction (|cos| > 0.7 against only 50 SVD directions) and does not test superposition. For persistence, the main summ",
+  "reason": "Confirmed. svd_comparison.csv has L0 n_novel=4928 (dead features included), and cross_layer_tracking.csv has n_src_alive=4928 at L0, set by decoder norm. The main summary matches L0 to L5 (2.5%) against the paper's L0 to L1 and says features are 'layer-specific \u2014 replicates'. The 12-layer summary sa"
+ },
+ {
+  "arm": "deployed",
+  "rep": 2,
+  "fid": "F32",
+  "sev": "minor",
+  "loc": "runs/longevity-mechinterp-217M/FINAL_SUMMARY.md:42-47,68-77; outputs/stage1_20260505/probe_aggregate.csv, sampled_obs.csv, extraction_stats.json",
+  "desc": "The summary claims 'MaxToki L5 does beat HVG-PCA-50 (+10.3 pp) \u2014 it is encoding something beyond raw expression PCA', but both probes are below chance (balanced accuracy 1/3 for 3 classes; the permutation null mean is 0.332). Comparing two below-chance numbers says nothing about what is encoded. Age is a donor-level label: the 17 donors fall 10/4/3 across the bins, so 5-fold donor CV leaves at mos",
+  "reason": "Confirmed. probe_aggregate.csv gives MaxToki 0.2755 and HVG-PCA 0.1722, both below 1/3 chance, with null mean 0.332. sampled_obs.csv has 17 donors, one age bin per donor, and bin counts 10/4/3. Comparing two below-chance balanced accuracies cannot show that MaxToki is 'encoding something beyond raw "
+ },
+ {
+  "arm": "deployed",
+  "rep": 2,
+  "fid": "F35",
+  "sev": "minor",
+  "loc": "runs/topology-141-217M/FINAL_SUMMARY.md:15,18,39-55,61; vs README.md:17-31 and EXTENDED_FINDINGS.md",
+  "desc": "FINAL_SUMMARY still says Phase 4 cross-model CCA, the Phase 11 autoloop and the H124-H138 chain were 'SKIPPED' and that 'Layer 1 cannot be evaluated'. The README and EXTENDED_FINDINGS report all three as run and Layer 1 as 'partially replicates'. Two numbers in the TL;DR are also wrong:\n- 'Eucl \u2248 Geo (\u22480)', but the Layer-3 row of the same file gives euclidean \u22120.035 and geodesic \u22120.035.\n- 'H91 \u0394 \u2248",
+  "reason": "Confirmed. The run-folder FINAL_SUMMARY.md still lists Phase 4 CCA, the Phase 11 autoloop and the H124-H138 chain as SKIPPED, and Layer 1 as 'cannot be evaluated'. README.md lists them as included or run, and EXTENDED_FINDINGS reports Layer 1 as partially replicating. The TL;DR says 'Eucl \u2248 Geo (\u22480)"
+ },
+ {
+  "arm": "deployed",
+  "rep": 2,
+  "fid": "F38",
+  "sev": "minor",
+  "loc": "runs/topology-141-217M/scripts/phase16_lineage_hub_depth.py:54-92; outputs/phase16_extended/h_lineage_marker_purity.csv; EXTENDED_FINDINGS.md:19",
+  "desc": "'Ext-lung 4/4 lineages sig (all z > 3)' includes B-cell, which has 3 markers and an observed purity (0.0556) equal to the null p95 (0.0556). Its 'significance' comes from a Gaussian z (3.05) applied to a discrete, skewed null. Lineages with very few markers (3-8) make purity estimates rest on one or two neighbours.",
+  "reason": "Confirmed. In h_lineage_marker_purity.csv, external-lung B_cell has n_markers=3, obs_purity 0.0556 equal to null_p95 0.0556, and z=3.05. With 3 markers and k=12, this purity is just 2 of 36 neighbour slots, and the null is discrete and skewed, so a Gaussian z is inappropriate. The empirical one-side"
+ },
+ {
+  "arm": "deployed",
+  "rep": 3,
+  "fid": "F04",
+  "sev": "critical",
+  "loc": "runs/sae-atlas-217M/scripts/phases2_to_8.py:176-200 (p<0.1 prefilter at 187, BH at 195); summaries/sae-atlas-217M-FINAL_SUMMARY.md:19-27,79,92; summaries/sae-atlas-217M-FINAL_SUMMARY_12layer.md:9-31",
+  "desc": "Feature annotation runs 4,928 features \u00d7 2,369 terms (about 11.7M hypergeometric tests per layer). Only tests with x\u22652 and p<0.1 are kept, and BH is applied to that pre-selected subset only, which makes the correction far too lenient. The headline annotation rates (80.7% / 67.8% / 61.7%) and the U-shaped 12-layer profile collapse under a valid correction. So do the claims that 'MaxToki's features ",
+  "reason": "Confirmed. phases2_to_8.py:184-195 (and full_12layer_pipeline.py:246-251) keeps only tests with x>=2 and p<0.1, then runs BH on that pooled subset. The spec (01-sae-atlas.md:182) requires BH 'across all terms tested for that feature'. The largest p_raw among the reported 'significant' enrichments is"
+ },
+ {
+  "arm": "deployed",
+  "rep": 3,
+  "fid": "F16",
+  "sev": "major",
+  "loc": "runs/sae-atlas-217M/scripts/phases2_to_8.py:308-388 (line 373); runs/sae-atlas-217M/outputs/phases2_to_8.log; summaries/sae-atlas-217M-FINAL_SUMMARY.md:48-58,84,138",
+  "desc": "'10 co-activation modules per layer at 99.9\u2013100% coverage \u2014 matches [paper's 6\u201312, 96\u201399.5%] precisely' is an artefact of the fallback code. leidenalg was not installed, so the script used SpectralClustering(n_clusters=10), which always returns 10 clusters and assigns every alive feature. Module count and coverage are not measured properties of MaxToki.",
+  "reason": "Confirmed. phases2_to_8.log says 'leidenalg not installed \u2014 skipping Leiden'. The fallback is SpectralClustering(n_clusters=min(10,n_alive)), which forces exactly 10 clusters and labels every alive feature. The full_12layer_pipeline.py except-ImportError branch does the same, and every one of the 12"
+ },
+ {
+  "arm": "deployed",
+  "rep": 3,
+  "fid": "F22",
+  "sev": "major",
+  "loc": "runs/manifold-discovery-217M/FINAL_SUMMARY.md:13-28,139-147,149-180,227-235; reports/phase12_anchor_benchmark_lite_pairwise.csv; pipelines/manifold-discovery-extraction-compactification.md:600",
+  "desc": "The headline ('MaxToki-217M internally encodes a hematopoietic developmental manifold \u2026 first affirmative deployable result') is not qualified by the run's own trivial-baseline comparison. PCA-10 on expression matches or beats the extracted manifold on branch, stage and pseudotime with no significant difference, and the frozen average-pooled MaxToki embedding also matches it. 'Extracted beats raw'",
+  "reason": "Confirmed from phase12_anchor_benchmark_lite(.csv/_pairwise.csv). Mean branch accuracy: pca10 0.844, extracted_z10 0.756, avgpool 0.792. Pseudotime: 0.509, 0.262, 0.537. Every pairwise comparison against PCA/SVD/avgpool is n.s. (q\u22650.26), and the only wins are against degenerate raw_log1p (branch 0.1"
+ },
+ {
+  "arm": "deployed",
+  "rep": 3,
+  "fid": "F24",
+  "sev": "major",
+  "loc": "runs/manifold-discovery-217M/scripts/phase17_cross_axis_h65_h95.py:110-175; reports/phase17_cross_axis_h65_h95.json; FINAL_SUMMARY.md:347-375",
+  "desc": "The 'PARTIALLY_ORTHOGONAL \u2026 first quantitative support for the multi-axis-hub claim' reading is not supported. The cross-head correlation (0.642) being below the ruler overlap (0.814) is what imperfect self-fits alone produce: 0.814\u00d70.986\u00d70.825 \u2248 0.662. The 'null check' cannot show that H95 is 'genuinely encoded': the scrambled-ruler head fits its meaningless target exactly as well as the real hea",
+  "reason": "Confirmed. phase17 json: null_self_fit 0.8247876 equals self_fit_h95 0.8247876 to 7 decimals. The LET head therefore fits a scrambled ruler exactly as well as the real one, so in-sample self-fit is at the tie ceiling and does not discriminate. A cross-head \u03c1 (0.642) below the ruler overlap (0.814) i"
+ },
+ {
+  "arm": "deployed",
+  "rep": 3,
+  "fid": "F09",
+  "sev": "major",
+  "loc": "runs/topology-141-217M/scripts/phase15_cross_domain_tissue.py:40-145; outputs/phase15_cross_domain/cross_domain_alignment.csv; runs/topology-141-217M/EXTENDED_FINDINGS.md:18,44-51,76",
+  "desc": "The 'STRONG POSITIVE (novel)' cross-tissue invariance averages 12 layer states. Layer 0 (the static token embedding) is identical across tissues by construction (Pearson 1.000, top-1 1.000) and is included in the mean, and the only null is a gene-label shuffle. The data actually show cross-tissue similarity declining with depth: top-1 retrieval falls from 1.0 to 0.25\u20130.30 at L11, and Pearson to 0.",
+  "reason": "Data confirmed. Layer-0 Pearson and top-1 are 1.000 for all pairs. lung_vs_external_lung top-1 falls 1.0\u21920.97\u21920.70\u21920.49\u21920.42\u21920.35\u21920.25 from L6 to L11. immune_vs_ext Pearson is 0.448 at L10. The only null is a gene-label shuffle. The interpretation that the 'trained transformer doesn't appear to intr"
+ },
+ {
+  "arm": "deployed",
+  "rep": 3,
+  "fid": "F07",
+  "sev": "major",
+  "loc": "runs/spectral-geometry-217M/scripts/phases_67.py:211-248; runs/spectral-geometry-217M/outputs/phase7/lineage_twonn_by_layer.csv; summaries/spectral-geometry-217M-FINAL_SUMMARY.md:32-33,105-110,137-142,157-158,337",
+  "desc": "The lineage-specific TwoNN intrinsic dimension, which underlies 'B-cell compression \u03c1=\u22120.867 \u2705 replicated', 'T-cell compression \u03c1=\u22120.895 \u274c (MaxToki compresses both)' and the interpretation 'MaxToki's geometry encodes time rather than lineage identity', is computed on 6 B-cell and 9 T-cell marker genes. TwoNN on 6\u20139 points is not a meaningful estimate. There is no comparison with random gene sets o",
+  "reason": "Confirmed. lineage_twonn_by_layer.csv uses n_markers 6 (B) and 9 (T), and the _twonn fit uses F<0.9, so only about 5 points enter the regression. Values such as 101\u219234\u219234\u219262\u219234 are noise. There is no matched random-gene-set null, even though global TwoNN falls 102\u21926.7, so any subset would appear to "
+ },
+ {
+  "arm": "deployed",
+  "rep": 3,
+  "fid": "F18",
+  "sev": "major",
+  "loc": "summaries/sae-atlas-217M-FINAL_SUMMARY.md:11-13,23-27,39-46,82,137,150,185-189; summaries/sae-atlas-217M-FINAL_SUMMARY_12layer.md:28-41,47-52; runs/sae-atlas-217M/outputs/phase4/*",
+  "desc": "The two SAE summaries contradict each other and the outputs. (1) The 3-layer scorecard marks 'features overwhelmingly layer-specific \u2014 no persistent scaffold \u2705 replicates' (L0\u2192L5 2.5%). The 12-layer summary of the same SAEs reports 'dramatically higher cross-layer persistence than Geneformer (21.5% peak)\u2026 differs from paper'. The \u2705 was never revised. (2) The 3-layer text calls annotation 'declinin",
+  "reason": "Confirmed. The 3-layer scorecard marks persistence/layer-specificity \u2705 by comparing L0\u2192L5 (2.5%) with the paper's adjacent L0\u2192L1. The crosslayer log for the same SAEs gives adjacent L0\u2192L1 0.0%, L6\u2192L7 21.5% and L0\u2192L8 13.3%, and the 12-layer summary calls this 'differs from paper', so the \u2705 verdict is"
+ },
+ {
+  "arm": "deployed",
+  "rep": 3,
+  "fid": "F30",
+  "sev": "major",
+  "loc": "summaries/spectral-geometry-217M-FINAL_SUMMARY.md:28,34,73-81,131-135,173-176,269,296,325,334; outputs/phase5/tf_vs_target_classifier.csv; outputs/phase4/ppi_copole_per_axis_per_layer.csv; outputs/phase7/depth_correlations.json, b_cell_attractor_trajectory.csv",
+  "desc": "Multiple numeric claims disagree with the outputs or with each other.\n- **TF-vs-target depth claim:** 'SV2-SV7 jumps to 0.62 at L11 after being ~0.53 at L0' underpins 'peak at different depth' and 'the depth-regime hypothesis is scGPT-specific'. In fact L0 = 0.596 (perm p=0.0099, significant), L6 0.610, L11 0.620, so the profile is flat with a dip, not a late peak. Only 100 permutations were run a",
+  "reason": "Each item verified. tf_vs_target_classifier.csv joint AUROC at L0 is 0.596 (perm p=0.0099), not '~0.53'. SV3 PPI: BH q<0.05 holds only at L7, L9, L10 (pairs_900) and L11 (pairs_700), i.e. 4 layers, while the summary reports '3/12' in one place and '10/12' in another. dist_BATF_to_PAX5 \u03c1=+0.979 means"
+ },
+ {
+  "arm": "deployed",
+  "rep": 3,
+  "fid": "F29",
+  "sev": "minor",
+  "loc": "runs/spectral-geometry-217M/outputs/phase6/cell_type_clustering_auroc.csv; outputs/remaining/phase6_l2_norm_regression.csv; summaries/spectral-geometry-217M-FINAL_SUMMARY.md:8-10,31,51-54,201-202,279-281",
+  "desc": "'Cell-type marker clustering is strong \u2026 replicated (0.779 vs paper 0.851)' uses layer 0, the static, context-independent token embedding. All contextual layers are 0.54\u20130.66. The L2-norm control is misreported. '0.580' is the mean over all 12 layers of the post-regression AUROC, compared against the L0 raw 0.779; at L0 the residual is 0.648. '~25% of signal is magnitude-driven' uses the wrong den",
+  "reason": "Numbers confirmed. Raw AUROC is 0.779 at L0 and 0.542\u20130.657 at L1\u2013L11. After L2 regression, L0 is 0.648 and the 12-layer mean is 0.5799. So the summary's '0.580 (down from 0.779)' compares a 12-layer mean with the L0 raw value, and '~25%' uses the raw AUROC rather than above-chance signal as denomin"
+ },
+ {
+  "arm": "deployed",
+  "rep": 3,
+  "fid": "F17",
+  "sev": "minor",
+  "loc": "runs/sae-atlas-217M/scripts/phases2_to_8.py:243-256; summaries/sae-atlas-217M-FINAL_SUMMARY.md:29-37,80-81,92",
+  "desc": "'99.9\u2013100% of features invisible to SVD \u2014 massive superposition confirmed' uses the criterion that a decoder direction counts as 'SVD-aligned' only if |cos| > 0.7 with one of the top-50 singular vectors in 1,232-d space. Almost any direction fails this test: a random unit vector's expected maximum |cos| with 50 orthonormal vectors is about 0.1. So ~100% 'novel' is expected for any dictionary, incl",
+  "reason": "Confirmed. I simulated random unit vectors in 1232-d against 50 orthonormal vectors: mean max |cos| 0.072, max 0.13, and 0% exceed 0.7. A random dictionary would therefore also be about 100% 'novel', so this metric cannot show 'massive superposition'. Rated minor because the code reproduces the pape"
+ },
+ {
+  "arm": "deployed",
+  "rep": 3,
+  "fid": "F12",
+  "sev": "minor",
+  "loc": "runs/topology-141-217M/outputs/phase16_extended/h_lineage_marker_purity.csv, h_hub_tf_degree.csv, h23_forman.csv; scripts/phase16_lineage_hub_depth.py:54-91,130-175; runs/topology-141-217M/EXTENDED_FINDINGS.md:19,21-22,58-65,78-79,88-91",
+  "desc": "(a) H-lineage z-scores come from discrete, zero-heavy nulls with only 3\u20138 markers in the pool. The ext-lung B-cell 'significant' lineage has observed purity equal to the null p95 (0.0556), so the '4/4 lineages sig' claim does not hold empirically. The null is random gene sets; it does not control for co-expression or expression level, although lineage markers are co-expressed. (b) H-hub, called th",
+  "reason": "Partly confirmed. For ext-lung B_cell, n_markers=3, obs purity 0.0556 equals null_p95 0.0556, so '4/4 lineages sig' depends on a z-score from a discrete, zero-heavy null; the other three ext-lung lineages clear p95. H-hub \u03c1 values are 0.060, 0.118 and 0.115 (z 1.3/2.34/2.36). The immune pool has n_t"
+ },
+ {
+  "arm": "deployed",
+  "rep": 3,
+  "fid": "F34",
+  "sev": "minor",
+  "loc": "summaries/attention-grn-217M-FINAL_SUMMARY.md:40-44,61-65; runs/attention-grn-217M/outputs/phase0b/vw_per_layer_per_pert_auroc.csv; outputs/phase0b.log; runs/attention-grn-217M/README.md:22-31",
+  "desc": "Phase 0b reports 'At primary L8, VW per-pert AUROC = 0.513 vs raw attention 0.532'; the outputs show 0.493 vs 0.512 (\u0394 \u22120.019, p=0.012 is correct). The 'architectural asymmetry' compares raw attention's per-pert AUROC (L1 0.553) with VW's TRRUST AUROC (L9\u2013L10 \u22480.59), which are different endpoints; VW per-pert peaks at 0.515 (L9). The README still lists 0b and 5\u201311 as skipped, although the final su",
+  "reason": "Confirmed. vw_per_layer_per_pert_auroc.csv L8 is 0.4933 and phase0b.log reports VW 0.4933 vs attention 0.5119. The summary says 0.513 vs 0.532 and contradicts its own CSSI table (baseline 0.5119). The \u0394 (\u22120.019) and p (0.012) are correct, so the conclusion stands. The 'asymmetry' compares raw-attent"
+ },
+ {
+  "arm": "deployed",
+  "rep": 3,
+  "fid": "F35",
+  "sev": "minor",
+  "loc": "runs/topology-141-217M/FINAL_SUMMARY.md:15,29-31,39-55,70-97; runs/topology-141-217M/outputs/phase12/h141_strict_margins.csv; outputs/phase11_autoloop/MANUAL_REVIEW.md:47-48; runs/topology-141-217M/EXTENDED_FINDINGS.md:27",
+  "desc": "The run-folder FINAL_SUMMARY has several stale or incorrect statements:\n- **Stale scope:** it says Phase 4 cross-model, Phase 11 autoloop and the H124\u2013H138 chain were SKIPPED; README and EXTENDED_FINDINGS report all three as run.\n- **'Eucl \u2248 Geo (\u22480)':** the computed means are \u22120.035 for both.\n- **Diffusion on lung:** said to fail the strict max-null audit, but it passes at L6 (strict margin +0.02",
+  "reason": "Mostly confirmed. The run-folder FINAL_SUMMARY lists Phase 4, Phase 11 and H124\u2013H138 as SKIPPED, but EXTENDED_FINDINGS reports them as run. Line 15 says 'Eucl \u2248 Geo (\u22480)', while L3 shows \u22120.035 for both. Lung diffusion passes strict at L6 (margin +0.026, passes_strict=1). The Phase-0 JSON block omit"
+ },
+ {
+  "arm": "checklist",
+  "rep": 1,
+  "fid": "F07",
+  "sev": "major",
+  "loc": "runs/sae-atlas-217M/scripts/phases2_to_8.py:180-196 ('if p < 0.1:' prefilter, then BH on the retained subset); summaries/sae-atlas-217M-FINAL_SUMMARY.md (Phase 2)",
+  "desc": "The BH-FDR correction is applied only to tests that already passed raw p<0.1 (and overlap\u22652), not to all feature\u00d7term tests. Discarding the null mass makes BH far too lenient, which inflates the annotation rates (62-81%). Those inflated rates drive the claims that 'MaxToki's rates are higher than Geneformer (52.4%), suggesting MaxToki's features are more biologically interpretable' and the depth t",
+  "reason": "Confirmed in phases2_to_8.py:182-196 and in full_12layer_pipeline.py:245-251. Rows are kept only if p<0.1, and BH is then run on that pooled subset across all features. The spec (01-sae-atlas.md:182) asks for per-feature BH over all terms tested. Log: 4928 features x 2369 terms (~11.7M tests at L5, "
+ },
+ {
+  "arm": "checklist",
+  "rep": 1,
+  "fid": "F08",
+  "sev": "major",
+  "loc": "runs/sae-atlas-217M/scripts/phases2_to_8.py:236-262 (max_cos > 0.7 vs top-50 SVs; 'alive' line 242 is always True), 282-300",
+  "desc": "'99.9-100% of features are invisible to SVD \u2014 massive superposition confirmed' uses a criterion that any direction meets. A random unit vector in 1,232 dimensions has a maximum |cos| of about 0.1 with 50 orthonormal SVs, far below the 0.7 threshold. There is no random-dictionary null.\n- The 'alive' flag is always True (array shape > 0), so the 2,430 dead L0 features are counted as 'novel'.\n- In th",
+  "reason": "Confirmed. Line 242 sets `alive` from an array shape > 0, so it is always True and never used. Decoders are unit-normalised after every step (setup/topk_sae.py:7,38), so the `norm<1e-8` check never excludes dead features. svd_comparison.csv: L0 0 aligned + 4928 novel, although only 2498 are alive. c"
+ },
+ {
+  "arm": "checklist",
+  "rep": 1,
+  "fid": "F09",
+  "sev": "major",
+  "loc": "summaries/sae-atlas-217M-FINAL_SUMMARY.md (Phase 4 'no persistent scaffold. Replicates'; scorecard) vs summaries/sae-atlas-217M-FINAL_SUMMARY_12layer.md ('dramatically higher cross-layer persistence'); summaries/sae-atlas-crosslayer-analysis.log",
+  "desc": "The two SAE-atlas summaries contradict each other.\n- The 3-layer summary scores 'features are layer-specific \u2014 no persistent scaffold' as a replication. That rests on non-adjacent pairs (L0\u2192L5 2.5%, L5\u2192L11 0.5%).\n- The 12-layer analysis finds adjacent persistence up to 21.5% (L6\u2192L7) and 13.3% L0\u2192L8, and calls it 'dramatically higher than Geneformer'.\n- The annotation profile is described as 'decli",
+  "reason": "Confirmed. The 3-layer summary says 'Features are overwhelmingly layer-specific \u2014 no persistent scaffold. Replicates' (scorecard \u2705) using only L0\u2192L5 and L5\u2192L11. The 12-layer summary and crosslayer log show L6\u2192L7 1059/4928 (21.5%), L8\u2192L9 18.0% and L0\u2192L8 13.3%, and call this 'dramatically higher than "
+ },
+ {
+  "arm": "checklist",
+  "rep": 1,
+  "fid": "F11",
+  "sev": "major",
+  "loc": "summaries/sae-atlas-217M-FINAL_SUMMARY.md (Cross-reference \u2014 Stage 3 section); summaries/circuit-tracing-217M-FINAL_SUMMARY.md (Cross-reference section)",
+  "desc": "The cross-reference section makes claims its own numbers do not support.\n- It says unannotated features 'carry a disproportionate share of downstream causal influence' and that annotation-driven selection 'systematically excludes ~45% of the highest-edge-count features'. Its own test is non-significant (Fisher n.s.): top-20 hubs are 55% annotated vs a 50% pool, and Exp 1 sampled exactly 50% unanno",
+  "reason": "Confirmed against exhaustive_summary.json: top20_annotation_rate 0.55 vs overall 0.5, by design 500/500; the summary reports Fisher n.s. Unannotated features are therefore 45% of hubs vs 50% of the pool, which is at or below parity, not a 'disproportionate share'. Top-100 hubs are 55% unannotated, a"
+ },
+ {
+  "arm": "checklist",
+  "rep": 1,
+  "fid": "F15",
+  "sev": "major",
+  "loc": "runs/attention-grn-217M/scripts/phase4_causal_ablation.py:80-130, 255-285; outputs/phase4/ablation_results.csv; FINAL_SUMMARY.md:85-96",
+  "desc": "The ablation cannot show that 'regulatory heads are not a causal bottleneck'.\n- The top-5 heads (layers 1, 2, 4) are masked at their o_proj input. This leaves their own attention patterns intact.\n- The readout is the TRRUST AUROC of layer-mean L8 attention, which is already below chance (0.440). Nothing measures the model's output or prediction quality.\n- There is no positive control.\n- It uses 30",
+  "reason": "Confirmed. Heads are masked through o_proj forward-pre-hooks (setup/maxtoki_adapter.py:215-243). The readout is TRRUST AUROC of layer-mean L8 attention, whose baseline is 0.4399, below chance, so there is no signal to degrade. run_config n_ctrl=300. There is one draw per condition and no CI; random-"
+ },
+ {
+  "arm": "checklist",
+  "rep": 1,
+  "fid": "F17",
+  "sev": "minor",
+  "loc": "runs/attention-grn-217M/outputs/FINAL_SUMMARY.md:40-46 vs outputs/phase0b/run_config.json",
+  "desc": "The Phase 0b numbers are misquoted. The summary gives 'VW per-pert 0.513 vs raw attention 0.532'; the actual values are 0.4933 vs 0.5119. The summary concludes this 'rules out both attention-pattern and value-pathway explanations'. Yet VW TRRUST AUROC at L9-L10 (0.588/0.587, the highest attention-derived TRRUST values in the run) was never tested against the curveball or label nulls.\nThe 'architec",
+  "reason": "Confirmed. FINAL_SUMMARY:42 says 'VW per-pert AUROC = 0.513 vs raw attention 0.532'. phase0b/run_config.json gives mean_auc_vw 0.4933 and mean_auc_attn 0.5119; \u0394 \u22120.0186 and p 0.012 are quoted correctly, so the direction holds. VW TRRUST AUROC at L9/L10 (0.588/0.587) has no curveball or label null, "
+ },
+ {
+  "arm": "checklist",
+  "rep": 1,
+  "fid": "F18",
+  "sev": "minor",
+  "loc": "runs/attention-grn-217M/scripts/phase0_extract.py:281-300 (lower-triangular causal attention averaged over all co-occurring pairs); phase1_trivial_baselines.py:265-275 (row = attn[pert_hvg, :])",
+  "desc": "In a causal decoder fed rank-ordered genes, attn[A\u2192B] is structurally zero whenever B is ranked below A in a cell. The edge average divides by pair_counts over all co-occurrences, so the edge score is mechanically driven by how often B outranks A, i.e. by relative expression. The pipeline uses only one direction: the perturbed gene's row (query = perturbed gene, key = target). This ties attention ",
+  "reason": "The mechanism is confirmed in code. phase0_extract.py adds attention over all ordered (A,B) HVG position pairs, which under the causal mask are non-zero only when key B precedes query A in rank order, and divides by pair_counts over all co-occurrences. Phase 1 scores attn[pert_hvg,:]. Each edge ther"
+ },
+ {
+  "arm": "checklist",
+  "rep": 1,
+  "fid": "F20",
+  "sev": "minor",
+  "loc": "runs/attention-grn-217M/outputs/phase6_cssi/run_config.json; FINAL_SUMMARY.md:48-61",
+  "desc": "The CSSI test of the 'constructive remedy' is degenerate. KMeans K=10 produced 4 singleton clusters and 2 clusters of 3 and 14 cells. The 'oracle cluster max' takes a maximum over clusters with n=1. 'CSSI fails to rescue attention signal' therefore says little about the remedy.",
+  "reason": "Confirmed. cluster_sizes are [814,1,261,1,1,1,3,14,310,594]. per_cluster_trrust.csv shows oracle_cluster_max 0.5017 coming from cluster 3 (size 1). CSSI-max (max over clusters) and CSSI-mean (unweighted mean) both give singleton clusters full weight, which likely explains why they are 'significantly"
+ },
+ {
+  "arm": "checklist",
+  "rep": 1,
+  "fid": "F21",
+  "sev": "minor",
+  "loc": "runs/attention-grn-217M/outputs/FINAL_SUMMARY.md:73-81",
+  "desc": "Two architectural claims go beyond the evidence. 'Depth-wise attention hierarchy is not the Geneformer pattern \u2014 it is specific to bidirectional BERT-style encoders' and 'likely specific to causal Llama decoders' are generalisations from one decoder model, with no encoder run in this project.",
+  "reason": "Confirmed. FINAL_SUMMARY states that the depth hierarchy 'is specific to bidirectional BERT-style encoders' and that the VW asymmetry is 'likely specific to causal Llama decoders'. Only MaxToki-217M and 1B were run, and phase1_k562_1b peaks at L4-L5 (0.580/0.581), not at L1. These are generalisation"
+ },
+ {
+  "arm": "checklist",
+  "rep": 1,
+  "fid": "F23",
+  "sev": "major",
+  "loc": "runs/topology-141-217M/EXTENDED_FINDINGS.md:18, 44-50; outputs/phase15_cross_domain/cross_domain_alignment.csv; summaries/topology-141-217M-FINAL_SUMMARY.md (Positives #2)",
+  "desc": "The 'STRONG POSITIVE (novel): MaxToki encodes a tissue-invariant gene geometry' is weaker than it looks.\n- The mean Pearson averages over all 12 layer states, including layer 0 (static token embeddings), which is 1.0 by construction.\n- The only null is a gene-label shuffle. There is no static-embedding floor and no within-tissue resampling baseline.\n- The per-layer data show similarity DECREASING ",
+  "reason": "Confirmed in cross_domain_alignment.csv. Layer 0 Pearson is 1.0 for every pair and is included in the 12-layer mean; phase15_summary best_layer is 0 for all pairs. Excluding L0 lowers the means to about 0.85, 0.75 and 0.72. Similarity falls with depth (lung-vs-ext 0.795 at L1 \u2192 0.61-0.69 at L10-11; "
+ },
+ {
+  "arm": "checklist",
+  "rep": 1,
+  "fid": "F26",
+  "sev": "minor",
+  "loc": "runs/topology-141-217M/outputs/phase0/immune/gene_features.csv vs outputs/phase0/lung/gene_features.csv, outputs/phase0/external_lung/gene_features.csv; outputs/phase16_extended/h_hub_tf_degree.csv",
+  "desc": "The immune domain reuses a 350-gene pool from spectral-geometry that is 98% TRRUST TFs (343/350), while the lung and external-lung pools have about 87 TFs out of 380. The pool was built for another pipeline's annotation-biased HVG selection. Cross-domain statements are confounded by pool composition, including 'replicates across all 3 domains', 'immune 1/12 vs lung 0/12', the H-hub test (343 vs 87",
+  "reason": "Confirmed. In gene_features.csv, immune has is_trrust_tf 343/350 and is_marker 6, lung 87/382 and 43, external_lung 86/380 and 39. The immune run_config shows reused=true from spectral-geometry phase0. h_hub n_tfs_in_pool is 87/343/86. Comparisons between domains (immune vs lung H123 counts, H139 'o"
+ },
+ {
+  "arm": "checklist",
+  "rep": 1,
+  "fid": "F27",
+  "sev": "minor",
+  "loc": "runs/topology-141-217M/scripts/phase16_lineage_hub_depth.py:130-175; EXTENDED_FINDINGS.md:21, 58-65",
+  "desc": "H-hub is presented as a headline positive ('POSITIVE 2/3 domains (novel)', 'the strongest new result'), but the evidence is weak.\n- It is nominal z\u22482.3 in 2 of 3 domains, from 100 permutations, with no multiplicity correction across domains or the 6 exploratory hypotheses.\n- The null shuffles TF degree uniformly, so expression, token frequency and embedding norm are not controlled. These likely dr",
+  "reason": "Confirmed. phase16_lineage_hub_depth.py uses n_perm=100 and a uniform permutation of TF degree, with no stratification or residualisation by expression, token frequency or norm. h_hub_tf_degree.csv: z 1.31, 2.34, 2.36 (\u03c1 0.06-0.12). In immune the 'TF' set is 343/350 genes. It is presented as 'POSITI"
+ },
+ {
+  "arm": "checklist",
+  "rep": 1,
+  "fid": "F29",
+  "sev": "minor",
+  "loc": "runs/topology-141-217M/FINAL_SUMMARY.md:39-61 vs README.md (Phase 4 'included', annotation chain added) and EXTENDED_FINDINGS.md; summaries/topology-141-217M-FINAL_SUMMARY.md (Layer-1 'SKIPPED' row vs 'PARTIALLY REPLICATES')",
+  "desc": "The run FINAL_SUMMARY still says Phase 4 cross-model CCA is SKIPPED, the annotation-degradation chain is SKIPPED, and Layer 1 'cannot be evaluated'. The README and EXTENDED_FINDINGS report both as run. The summaries/ copy says 'PARTIALLY REPLICATES' in the text and 'SKIPPED' in its own table.",
+  "reason": "Confirmed. The run FINAL_SUMMARY.md says Phase 4 cross-model CCA is SKIPPED, Phase 11 is SKIPPED, the annotation chain is SKIPPED and 'Layer 1 cannot be evaluated'. README and EXTENDED_FINDINGS report Phase 14/Phase 4 vs Geneformer and scGPT, the Phase 11 substitute and the H124-H138 chain as done. "
+ },
+ {
+  "arm": "checklist",
+  "rep": 1,
+  "fid": "F33",
+  "sev": "minor",
+  "loc": "runs/spectral-geometry-217M/outputs/phase5/tf_vs_target_classifier.csv; summaries/spectral-geometry-217M-FINAL_SUMMARY.md:6-9, 28-30, 59-64",
+  "desc": "'TF-vs-target classification is above-chance at 5/12 layers (mean 0.572, peak 0.620)' has four problems.\n- It is anchored to 0.5, but the permutation null mean is about 0.54 (in-sample classifier inflation), so the mean margin over the null is about 0.03.\n- p-values come from 100 permutations (minimum 0.0099) with no correction across 12 layers.\n- There is no control for expression level or token ",
+  "reason": "Partly confirmed. tf_vs_target_classifier.csv shows null_mean 0.539-0.546 on every layer, from an in-sample centroid classifier (phases_345.py). The headline mean 0.572 is therefore only ~0.03 above the null, and the summary compares it with 0.5 and with the paper's 0.744. The 5/12 count (L0, L6, L7"
+ },
+ {
+  "arm": "checklist",
+  "rep": 1,
+  "fid": "F34",
+  "sev": "minor",
+  "loc": "summaries/spectral-geometry-217M-FINAL_SUMMARY.md:260, 269, 293, 325 vs runs/spectral-geometry-217M/outputs/phase4/ppi_copole_per_axis_per_layer.csv",
+  "desc": "The PPI significance counts are inconsistent.\n- The main text says 'SV3 3/12 significant'.\n- The updated table and the \u00a78 audit say 'SV3 10/12 sig'. That number comes from counting uncorrected z>2 in the hub-confound analysis.\n- Cross-model convergence cites 'MaxToki SV1 z=5.62 at layer 0'. The L0 maximum z=5.62 is on SV7 (pairs_900); SV1's maximum over all layers is 3.34.",
+  "reason": "Confirmed in ppi_copole_per_axis_per_layer.csv. For SV3 pairs_700, 3/12 are BH-significant and 9/12 nominal. The '10/12 sig' in the updated table and the \u00a78 audit matches remaining/phase4_hub_confound.csv 'all' group with z>2 at 10 layers (uncorrected). The L0 maximum z=5.62 is on SV7 pairs_900, whi"
+ },
+ {
+  "arm": "checklist",
+  "rep": 1,
+  "fid": "F35",
+  "sev": "minor",
+  "loc": "summaries/spectral-geometry-217M-FINAL_SUMMARY.md:349; runs/spectral-geometry-217M/autoloop/iterations/iter_0002-0005",
+  "desc": "The summary states Phase 10 (autonomous loop) was 'NOT run ... deferred pending authorization'. The run folder contains autoloop iterations 0002-0005 with executed hypothesis tests and decisions (for example H3-BC 'PROMISING', H3-DEL, H3-G). Their results are neither reported nor reconciled. The iteration reports also make strong interpretations from tiny strata, e.g. 'early' category N=14.",
+  "reason": "Partly confirmed. The summary says Phase 10 'NOT run... deferred pending explicit user authorization'. autoloop_master_log.md shows a run on 2026-05-05: iter_0002 and iter_0003 completed with results (H01/H02/H03; H3-BC 'PROMISING' built on an 'early' stratum of N=14, H3-DEL, H3-G). These are not re"
+ },
+ {
+  "arm": "checklist",
+  "rep": 1,
+  "fid": "F38",
+  "sev": "major",
+  "loc": "runs/manifold-discovery-217M/FINAL_SUMMARY.md:13-27, 140-147 vs \u00a711 Phase 12 LITE (reports/phase12_anchor_benchmark_lite.json)",
+  "desc": "The headline 'MaxToki-217M internally encodes a hematopoietic developmental manifold' and the 'first affirmative deployable result' are not separated from simple expression baselines. The only baseline-comparison tables show:\n- PCA-10 on expression is at least as good as the extracted head on branch (0.844 vs 0.756), and SVD-10 and frozen avg-pool are comparable.\n- The extracted head beats only ra",
+  "reason": "Confirmed in phase12_anchor_benchmark_lite.json. Branch: pca10 0.844, svd10 0.837, avgpool 0.792, extracted_z10 0.756, raw_log1p 0.142. Pseudotime: z10 0.262 vs pca10 0.509. In the pairwise BH tests, z10 beats only raw_log1p and has no significant difference against PCA, SVD or avg-pool, mostly tren"
+ },
+ {
+  "arm": "checklist",
+  "rep": 1,
+  "fid": "F44",
+  "sev": "minor",
+  "loc": "runs/manifold-discovery-217M/FINAL_SUMMARY.md:345-370; reports/phase17_cross_axis_h65_h95.json",
+  "desc": "'The H95 head ... actively rotates AWAY from the H65 axis by 0.173' compares the cross-head correlation (0.642) with the ruler overlap (0.814). There is no estimate of how much two heads trained on the SAME ruler with different seeds or splits would disagree. Imperfect self-fit (0.825) alone lowers cross-head correlation.",
+  "reason": "Confirmed. phase17_cross_axis_h65_h95.json gives ruler overlap 0.814, H95 self-fit 0.825, H65 self-fit 0.986 and cross-head 0.642 from a single training run per head. If the H95 head's error were independent of the H65 axis, attenuation alone would predict a cross-head \u03c1 of about 0.814\u00d70.825\u00d70.986 \u2248"
+ },
+ {
+  "arm": "checklist",
+  "rep": 1,
+  "fid": "F48",
+  "sev": "minor",
+  "loc": "summaries/exhaustive-mapping-217M-FINAL_SUMMARY.md (Experiment 3 interpretation; validation row 12); summaries/attention-grn-217M-FINAL_SUMMARY.md:144",
+  "desc": "The gene annotations used to support the steering story are wrong or unsupported.\n- FTL (ferritin light chain) is called 'a terminal erythroid marker' and offered as evidence that steering is 'biologically coherent ... push toward maturity'. FTL is a ubiquitous iron-storage gene, very high in macrophages and myeloid cells, and not an erythroid-maturation marker; the cells are Tabula Sapiens immune",
+  "reason": "Confirmed. In steering_F0284_L11.json the top upregulated genes are FTL, then MT-CO3, MT-ND1, MT-CO2, MT-CO1, FTH1, PABPC1, UBC: a generic list of highly expressed housekeeping and mitochondrial genes. FTL is a ubiquitous iron-storage gene, highest in macrophages, not a terminal erythroid marker, an"
+ },
+ {
+  "arm": "checklist",
+  "rep": 2,
+  "fid": "F09",
+  "sev": "critical",
+  "loc": "runs/sae-atlas-217M/scripts/phases2_to_8.py:180-195; runs/sae-atlas-217M/scripts/full_12layer_pipeline.py:244-251; summaries/sae-atlas-217M-FINAL_SUMMARY.md:19-27; summaries/sae-atlas-217M-FINAL_SUMMARY_12layer.md",
+  "desc": "Feature-annotation BH-FDR is applied only to the tests that already passed raw p<0.1 (and overlap\u22652), not to all feature\u00d7term tests. The effective threshold becomes about raw p<0.04 with no multiplicity control. The reported annotation rates are therefore grossly inflated: L0 80.7%, L5 67.8%, L11 61.7%, a mean of ~69% across 12 layers, and 'MaxToki more interpretable than Geneformer'. Everything b",
+  "reason": "Confirmed in both phases2_to_8.py and full_12layer_pipeline.py: only tests with overlap>=2 and raw p<0.1 enter ann_df, and BH is applied to that subset. The spec (01-sae-atlas.md step 3) instead requires BH across all terms tested per feature. Recomputed from significant_enrichments.csv: max raw p i"
+ },
+ {
+  "arm": "checklist",
+  "rep": 2,
+  "fid": "F12",
+  "sev": "minor",
+  "loc": "runs/sae-atlas-217M/scripts/phase0_extract_positions.py:40-42; summaries/sae-atlas-217M-FINAL_SUMMARY.md:11-15,27; summaries/sae-atlas-217M-FINAL_SUMMARY_12layer.md:3-6,24-27; summaries/circuit-tracing-217M-FINAL_SUMMARY.md:47-55,103",
+  "desc": "'L0' is the static token-embedding output (hidden_states[0]). It is a deterministic function of the gene token, with no cell context, but it is interpreted as a computational layer. L0 SAE features are partitions of gene identity. The 49% dead rate follows from only about 6.3k distinct input vectors. The interpretations 'early layers = molecular machinery', 'L0 features are globally necessary broa",
+  "reason": "Confirmed: L0 is hidden_states[0], the embedding output (phase0 comment 'L0 = post-embedding'; config num_hidden_layers=11). It is a function of token ID alone, with about 6.3k distinct vectors (N=6325). The circuit-tracing scope says '12 layers'. The spec's Geneformer L0-L17 are 18 transformer-bloc"
+ },
+ {
+  "arm": "checklist",
+  "rep": 2,
+  "fid": "F13",
+  "sev": "major",
+  "loc": "runs/sae-atlas-217M/scripts/phases2_to_8.py:311-378; runs/sae-atlas-217M/scripts/full_12layer_pipeline.py:298-315; runs/sae-atlas-217M/outputs/phases2_to_8.log:78",
+  "desc": "'10 co-activation modules per layer with 99.9-100% coverage' is hard-coded. leidenalg was not installed, so the code fell back to SpectralClustering(n_clusters=10), which always returns 10 clusters covering every alive feature. The claim 'matches precisely' the paper's 6-12 modules is an artefact. The 3-layer fallback also clusters pmi[:n_alive, :n_alive] (the first n_alive feature indices, not th",
+  "reason": "Confirmed: the log says 'leidenalg not installed'. Both pipelines fall back to SpectralClustering(n_clusters=min(10, n_alive)), so 10 modules per layer is fixed by construction (full_12layer.log shows modules=10 for every layer), and every alive feature is labelled. The claim 'matches precisely' the"
+ },
+ {
+  "arm": "checklist",
+  "rep": 2,
+  "fid": "F15",
+  "sev": "major",
+  "loc": "summaries/sae-atlas-217M-FINAL_SUMMARY.md:39-46,82-84,96-103; summaries/sae-atlas-217M-FINAL_SUMMARY_12layer.md:24-34",
+  "desc": "There are contradictory and unanchored structural claims.\n- Cross-layer persistence: the 3-layer summary says features are 'overwhelmingly layer-specific \u2014 no persistent scaffold. Replicates'. The project's own 12-layer analysis reports 'dramatically higher cross-layer persistence than Geneformer' (21.5% adjacent peak; L0\u2192L8 13.3%).\n- '99.9-100% of features invisible to SVD, massive superposition ",
+  "reason": "Confirmed. The 3-layer summary scorecards say 'Features are overwhelmingly layer-specific ... Replicates \u2705'. The project's own 12-layer tracking (crosslayer_full.log) shows L6->L7 at 21.5% and L0->L8 at 13.3% versus the paper's 0.2%, and the 12-layer summary says 'MUCH higher than Geneformer'. The t"
+ },
+ {
+  "arm": "checklist",
+  "rep": 2,
+  "fid": "F31",
+  "sev": "major",
+  "loc": "runs/topology-141-217M/outputs/phase15_cross_domain/cross_domain_alignment.csv; runs/topology-141-217M/outputs/phase15_cross_domain/phase15_summary.json; runs/topology-141-217M/EXTENDED_FINDINGS.md:18,44-51,76",
+  "desc": "'STRONG POSITIVE (novel): MaxToki encodes a tissue-invariant gene geometry' averages over all 12 states, including L0, where the static embeddings are identical across tissues (Pearson 0.99999, top-1 1.0, chosen as 'best_layer'). Against the trivial L0 floor, the contextual layers show progressive tissue-specific divergence. This contradicts the stated interpretation that 'the trained transformer ",
+  "reason": "Confirmed in cross_domain_alignment.csv: L0 Pearson is 0.99999 with top-1 1.0 for every pair, and best_layer=0 in the summary JSON. Late layers fall: lung_vs_external_lung L10 0.608 and L11 0.689 (top-1 0.25); immune_vs_external_lung L10 0.448 (top-1 0.30-0.49). This contradicts EXTENDED_FINDINGS' s"
+ },
+ {
+  "arm": "checklist",
+  "rep": 2,
+  "fid": "F21",
+  "sev": "major",
+  "loc": "runs/attention-grn-217M/scripts/phase4_causal_ablation.py:107-160,251-271; runs/attention-grn-217M/scripts/phase12_verdict.py:104-129; runs/attention-grn-217M/outputs/FINAL_SUMMARY.md:83-96",
+  "desc": "The C4 'causal head ablation' measures whether masking the o_proj contribution of heads in L1/L2/L4 changes the TRRUST AUROC of attention patterns at L8, which is itself below chance (0.440). This does not test whether the heads are causally needed for model behaviour or regulatory prediction. Masked heads' own attention patterns are unchanged by o_proj masking. The null is only 3 random 5-head dr",
+  "reason": "Confirmed in phase4_causal_ablation.py and ablation_results.csv. The readout is TRRUST AUROC of layer-mean attention at L8 (baseline 0.440, below chance). The masked heads are at L1/L2/L4, and masking happens via an o_proj pre-hook. The spec's Phase 4 endpoint is perturbation-prediction AUROC. There"
+ },
+ {
+  "arm": "checklist",
+  "rep": 2,
+  "fid": "F19",
+  "sev": "minor",
+  "loc": "runs/attention-grn-217M/scripts/phase3_residualization.py:107-113,200-208; runs/attention-grn-217M/scripts/phase12_verdict.py:89-102; runs/attention-grn-217M/outputs/phase3*/run_config.json",
+  "desc": "TRRUST-based conclusions (C3, C4, curveball, CSSI) rest on very few TFs: 8 TFs and 66 edges in K562, 16/173 in RPE1, 32/281 in Adamson, 12/96 in 1B. Edges sharing a TF are pooled as if independent. The label-shuffle null SD is up to 0.043, so differences of 0.01-0.04 are noise. The C3 statistic (auc\u22120.5)/(baseline\u22120.5) is undefined when the baseline is below 0.5. In K562 (baseline 0.483) it equals",
+  "reason": "Confirmed. run_config gives n_tfs_evaluated 8/16/32/12 and edges 66/173/281/96. The K562 label-shuffle null SD is 0.043. The C3 statistic (auc-0.5)/max(baseline-0.5,1e-6) gives -13421 and -2957 for a K562 baseline of 0.483, so that C3 FAIL is forced by construction. Pairs from all TFs are pooled int"
+ },
+ {
+  "arm": "checklist",
+  "rep": 2,
+  "fid": "F26",
+  "sev": "minor",
+  "loc": "runs/spectral-geometry-217M/scripts/phases_345.py:243-290; runs/spectral-geometry-217M/outputs/phase5/tf_vs_target_classifier.csv; summaries/spectral-geometry-217M-FINAL_SUMMARY.md:27-28,73-77",
+  "desc": "The TF-vs-target 'joint SV2-SV7 AUROC 0.572 (peak 0.620)' comes from a centroid classifier fit and scored on the same genes. The in-sample permutation null mean is about 0.54, but the summary anchors to 0.5 ('non-trivially represented'). No gene-level baseline is given: one expression statistic separates TFs from target-only genes about as well. The SV1 axis correlates with mean expression (|r| 0.",
+  "reason": "Confirmed. The centroid classifier is fit and scored in-sample, and the permutation null means are 0.539-0.546 (the spec says the paper's null was about 0.50). On the same 343 TFs vs 595 target-only genes I recomputed AUROC 0.565 for 1-dropout and 0.549 for mean_expr. |r(SV1, mean_expr)| is 0.44 at "
+ },
+ {
+  "arm": "checklist",
+  "rep": 2,
+  "fid": "F27",
+  "sev": "minor",
+  "loc": "summaries/spectral-geometry-217M-FINAL_SUMMARY.md:25,79-81,251-252,269,325; runs/spectral-geometry-217M/outputs/phase4/ppi_copole_per_axis_per_layer.csv",
+  "desc": "The PPI encoding significance is misreported. The updated status table and spec audit claim 'SV3 10/12 significant', but under the run's own BH correction (168 tests) SV3 is significant in only 3/12 layers (pairs_700: L7, L9, L11). 'MaxToki layer-0 SV1 STRING PPI max z=5.62' is actually SV7. The 'PPI axis' (SV3) was chosen post hoc as the best of 7 axes, with no correction for that selection. The ",
+  "reason": "Confirmed in ppi_copole_per_axis_per_layer.csv (168 BH tests). SV3 pairs_700 is BH-significant only at L7, L9 and L11 (raw 9/12), yet lines 269 and 325 say 'SV3 10/12 sig'. The layer-0 maximum z=5.62 is SV7 pairs_900, not SV1 as stated on lines 251, 260 and 293 (SV1 at L0 has z=3.34). The headline t"
+ },
+ {
+  "arm": "checklist",
+  "rep": 2,
+  "fid": "F29",
+  "sev": "minor",
+  "loc": "runs/spectral-geometry-217M/scripts/phase9b_cross_model.py:114-165; summaries/spectral-geometry-217M-FINAL_SUMMARY.md:241-260,339",
+  "desc": "MaxToki-Geneformer static-embedding alignment (Pearson 0.382) is declared a non-replication of the paper's null ('the paper's null was architecture- or gene-set-specific'). But both models share the same Ensembl tokenizer and a closely related pretraining corpus and rank-value encoding (the Geneformer gene-median file is even reused). Significance is tested only against a gene-label shuffle (null ",
+  "reason": "Confirmed. The null is only a gene-label shuffle (null_sd 0.001). The adapter reuses Geneformer's gene_median_dictionary_gc104M, and the tokenizers are identical (1500/1500 token agreement). The paper's null (scGPT vs Geneformer, different tokenizers, raw cosine, 'shared-vocabulary null') is a diffe"
+ },
+ {
+  "arm": "checklist",
+  "rep": 3,
+  "fid": "F05",
+  "sev": "critical",
+  "loc": "runs/sae-atlas-217M/scripts/phases2_to_8.py:182-198; full_12layer_pipeline.py:239-252; summaries/sae-atlas-217M-FINAL_SUMMARY.md:19-27,79,92; summaries/sae-atlas-217M-FINAL_SUMMARY_12layer.md",
+  "desc": "Hypergeometric tests are kept only if p<0.1, and BH is then applied to that pre-filtered subset. The BH denominator becomes the ~27\u201334k surviving tests instead of the ~6\u201312 million features\u00d7terms tested. This inflates annotation rates by orders of magnitude. Claims built on these rates are unsupported: annotation 80.7/67.8/61.7%, 'declining/U-shaped with depth', 'MaxToki features more biologically",
+  "reason": "Confirmed in phases2_to_8.py:182-198 and full_12layer_pipeline.py:239-252. Only tests with x>=2 and p<0.1 are kept, and BH is then applied to that subset. I recomputed from significant_enrichments.csv. The implied BH m is 26,998 (L0), 34,207 (L5) and 26,361 (L11), against 2,498/4,928/4,924 features "
+ },
+ {
+  "arm": "checklist",
+  "rep": 3,
+  "fid": "F08",
+  "sev": "major",
+  "loc": "runs/sae-atlas-217M/scripts/phases2_to_8.py:311-386; outputs/phases2_to_8.log ('leidenalg not installed'); full_12layer_pipeline.py:296-316; summaries/sae-atlas-217M-FINAL_SUMMARY.md:48-58,84",
+  "desc": "leidenalg was not installed, so module detection fell back to SpectralClustering(n_clusters=10). The '10 modules per layer' in all 12 layers is therefore a hard-coded parameter. The summary's '10 modules at 99.9\u2013100% coverage matches [paper's 6\u201312] precisely' counts this as a replicated finding. In the 3-layer script the fallback also clusters pmi_pos[:n_alive,:n_alive] (the first n_alive feature ",
+  "reason": "phases2_to_8.log says 'leidenalg not installed', and spectral clustering warns 'Graph is not fully connected'. Both scripts fall back to SpectralClustering(n_clusters=min(10,n_alive)), so every layer gets exactly 10 modules (full_12layer.log: modules=10 for L0-L11). The '10 modules ... matches preci"
+ },
+ {
+  "arm": "checklist",
+  "rep": 3,
+  "fid": "F13",
+  "sev": "major",
+  "loc": "runs/attention-grn-217M/outputs/phase4/ablation_results.csv; per_head_trrust_auroc_ranking.csv; scripts/phase4_causal_ablation.py:98-155; summaries/attention-grn-217M-FINAL_SUMMARY.md:83-96",
+  "desc": "C4 ablates the 'top-5 TRRUST heads' (L1\u2013L4) and reads out the TRRUST AUROC of L8 attention. That is an indirect, model-internal endpoint, and the baseline is below chance (0.440 on 300 cells, 8 TFs). Deltas of \u00b10.005\u20130.018 come without a CI. The head ranking was chosen on the same 8 TFs. The same run shows a much higher TRRUST AUROC at L1 (0.684), never reported or null-tested. The primary layer L",
+  "reason": "Confirmed. In run_config the n_ctrl is 300, phase3 run_config gives n_tfs_evaluated=8, and the baseline L8 TRRUST AUROC is 0.4399. Best layer is L1 at 0.684, which is never reported. The top-5 heads (L1-L4) are ranked on the same 8 TFs. The script reads out TRRUST AUROC of L8 attention. The spec's P"
+ },
+ {
+  "arm": "checklist",
+  "rep": 3,
+  "fid": "F14",
+  "sev": "minor",
+  "loc": "runs/attention-grn-217M/scripts/ (no synthetic phase); summaries/attention-grn-217M-FINAL_SUMMARY.md:3-16",
+  "desc": "The verdict 'FAIL on all four runs' is a null result. There is no evidence that this pipeline can detect planted regulatory signal: no synthetic planted-edge graph, and no real-data positive control (e.g. ChIP-validated K562 GATA1/TAL1/MYC targets). Combined with the inert curveball null (F06) and the 8-TF TRRUST set, a pipeline unable to detect signal would produce the same outcome.",
+  "reason": "The verdict scope_notes confirm the spec's detectability (Phase 8) and synthetic ground-truth validation (spec Phase 10) were skipped, so the pipeline never shows it can detect planted regulatory signal. The finding overstates the impact, though. The same per-perturbation harness clearly detects gen"
+ },
+ {
+  "arm": "checklist",
+  "rep": 3,
+  "fid": "F16",
+  "sev": "minor",
+  "loc": "summaries/attention-grn-217M-FINAL_SUMMARY.md:42,63,142; outputs/phase0b/run_config.json; outputs/phase6_cssi/per_cluster_trrust.csv",
+  "desc": "Several numbers and citations are misreported:\n- Phase 0b: the summary gives VW 0.513 vs raw 0.532. The outputs give 0.4933 vs 0.5119 (same \u0394 \u22120.019).\n- 'Phase-11 CRISPRi 54.6%' is credited to this pipeline. Phase 11 was never run here; the number comes from circuit-tracing (and is itself invalid, F07).\n- The CSSI 'oracle_cluster_max' upper bound is a 1-cell cluster, and 6/10 KMeans clusters have ",
+  "reason": "phase0b run_config gives mean_auc_vw 0.4933 and mean_auc_attn 0.5119. The summary's 0.513 vs 0.532 is wrong, though \u0394 \u22120.019 and p 0.012 are right. '54.6%' comes from circuit-tracing Phase 11, and the attention-grn verdict lists phase 11 as skipped. per_cluster_trrust.csv shows the oracle max 0.5017"
+ },
+ {
+  "arm": "checklist",
+  "rep": 3,
+  "fid": "F17",
+  "sev": "major",
+  "loc": "runs/sae-atlas-217M/scripts/phase6_patching.py:131-140; outputs/phase6/causal_patching.csv; summaries/sae-atlas-217M-FINAL_SUMMARY.md:148-154,185-189",
+  "desc": "Separately from the layer bug (F04), Phase 6 replaces the whole hidden state with the SAE reconstruction minus feature f. It does not add back the reconstruction error (~11% unexplained variance) and has no reconstruction-only baseline. The logit change at every position is then dominated by reconstruction error, so target/off-target ratios are forced to \u22481. The specificity metric is also mismatch",
+  "reason": "phase6_patching.py replaces layer 5's output with sae.decode(z with f zeroed). The reconstruction error is never added back, and there is no reconstruction-only baseline. causal_patching.csv shows mean_other_delta of about 1.394-1.396 for every feature, with target deltas about 1.39-1.44, so the log"
+ },
+ {
+  "arm": "checklist",
+  "rep": 3,
+  "fid": "F18",
+  "sev": "major",
+  "loc": "summaries/sae-atlas-217M-FINAL_SUMMARY.md:39-46,82-83; summaries/sae-atlas-217M-FINAL_SUMMARY_12layer.md (Cross-Layer Persistence); runs/sae-atlas-217M/scripts/phases2_to_8.py:292-297; outputs/crosslayer_full.log",
+  "desc": "The main summary says features are 'overwhelmingly layer-specific \u2014 no persistent scaffold. Replicates' (L0\u2192L5 2.5%). The 12-layer summary says 'MaxToki has dramatically higher cross-layer persistence than Geneformer (21.5% peak)' and 'differs from paper'. Both sit in the deliverables without reconciliation. Persistence denominators also count all 4,928 decoder columns, including 2,430 dead L0 fea",
+  "reason": "The main summary says 'overwhelmingly layer-specific \u2014 no persistent scaffold. Replicates' (L0\u2192L5 2.5%). The 12-layer summary says 'dramatically higher cross-layer persistence than Geneformer (21.5% peak)'. Both are unreconciled deliverables. crosslayer_full.log shows L0\u2192L1 0/4928, L1\u2192L2 8/4928 and "
+ },
+ {
+  "arm": "checklist",
+  "rep": 3,
+  "fid": "F19",
+  "sev": "major",
+  "loc": "runs/sae-atlas-217M/scripts/phases2_to_8.py:242-256; remaining_phases.py (Phase 7 :~300-330, Phase 10, Phase 11 :634-658); summaries/sae-atlas-217M-FINAL_SUMMARY.md:29-37,96-103,114-127",
+  "desc": "Several 'replications' come from criteria that pass almost by construction, with no null:\n- '99.9\u2013100% novel vs SVD': max |cos| >0.7 against only 50 SVD directions in 1,232-d. The count includes dead features, and the alive variable is computed but unused.\n- 'Information highways 99.8\u2013100%': \u22651 of 4,928 targets with PMI>3, no minimum co-occurrence count, so rare features give huge PMI.\n- 'Unannota",
+  "reason": "Verified in code:\n- Phase 3 counts every decoder column, including the 2,430 dead L0 features (4928/4928 novel), against only 50 SVD directions in 1,232-d. The 'alive' variable is a meaningless unused bool. Random vectors would almost never reach |cos|>0.7, so near-100% novelty is expected by constr"
+ },
+ {
+  "arm": "checklist",
+  "rep": 3,
+  "fid": "F20",
+  "sev": "minor",
+  "loc": "summaries/circuit-tracing-217M-FINAL_SUMMARY.md:18,55,95,98; runs/circuit-tracing-217M/scripts/circuit_trace.py:319-341",
+  "desc": "'Biological coherence 36.1% vs paper 52.9%' (share of edges whose source and target features share any annotation term) has no chance baseline. With features carrying many terms (inflated by F05), the expected overlap for random feature pairs is unknown. 'Lower coherence \u2192 broader, less specific features' and the 0.01% TRRUST match are interpreted without a null.",
+  "reason": "circuit_trace.py Phase 6 computes the share of annotated edges whose endpoints share any term (36.1%) with no permutation or random-pair baseline, and remaining_phases.py has none either. As a quick check, random pairs of annotated features across layers share terms about 10-13% of the time. Source "
+ },
+ {
+  "arm": "checklist",
+  "rep": 3,
+  "fid": "F23",
+  "sev": "major",
+  "loc": "summaries/exhaustive-mapping-217M-FINAL_SUMMARY.md:21-37,155; summaries/sae-atlas-217M-FINAL_SUMMARY.md:185-189; summaries/circuit-tracing-217M-FINAL_SUMMARY.md:115",
+  "desc": "Claims that 'selective tracing systematically missed the most important hubs' and that unannotated features 'carry a disproportionate share of downstream causal influence' do not follow from the data:\n- The traced pool is 50% annotated by design (500+500), and top-20 hubs are 55% annotated with Fisher n.s.\n- Hub ranks differ by <10% in edge count (CV 0.5%, artefact F02).\n- 'Per-feature density is ",
+  "reason": "exhaustive_summary.json gives overall_annotation_rate 0.5 (by the 500+500 design) and top-20 0.55, with Fisher n.s.\n- Unannotated features make up 45% of hubs vs 50% of the pool, which is not 'a disproportionate share'.\n- 'Systematically missed the most important hubs' does not follow, because annot"
+ },
+ {
+  "arm": "checklist",
+  "rep": 3,
+  "fid": "F26",
+  "sev": "minor",
+  "loc": "runs/spectral-geometry-217M/outputs/phase9b/summary.json; scripts/phase9b_cross_model.py:114-160; summaries/spectral-geometry-217M-FINAL_SUMMARY.md:241-260,292-294",
+  "desc": "The cross-model alignment (MaxToki vs Geneformer static embeddings, Pearson 0.382) is declared 'IS significant ... not an artefact of vocabulary order' against a gene-label-shuffle null only. That null is centred at 0 with SD 0.001 and is trivially beaten. Both models share the same tokenizer and rank-value input statistics, so the relevant confounds (token frequency, expression level, gene-median",
+  "reason": "phase9b_cross_model.py uses only a gene-label permutation of the Geneformer similarity matrix (null mean 0, SD 0.001). Any shared structure beats this null, and it does not control for shared tokenizer, token-frequency or rank-value confounds. That is the kind of 'shared-vocabulary null' under which"
+ },
+ {
+  "arm": "checklist",
+  "rep": 3,
+  "fid": "F27",
+  "sev": "minor",
+  "loc": "summaries/spectral-geometry-217M-FINAL_SUMMARY.md:25,79-81,269,325; runs/spectral-geometry-217M/outputs/phase4/ppi_copole_per_axis_per_layer.csv; scripts/phase0_extract.py:84-150",
+  "desc": "STRING PPI significance is reported inconsistently: 'SV3 3/12 significant' in the headline vs 'SV3 10/12 sig' in the updated table and the spec audit. BH-adjusted outputs support 3/12. SV3 was picked post hoc as 'MaxToki's PPI axis' from 7 axes \u00d7 12 layers \u00d7 2 pair sets. The HVG panel was chosen to prioritize TRRUST/STRING genes, the same databases then used for evaluation. The summary notes this ",
+  "reason": "Recomputed from ppi_copole_per_axis_per_layer.csv. SV3 pairs_700 has p_bh<0.05 at only 3/12 layers (L7, L9, L11), p_raw<0.05 at 9/12, and z>1.96 at 10/12, with mean z 3.12. The summary reports both '3/12' (lines 80, 151) and '10/12 sig' (lines 269, 325) without saying they use different criteria. SV"
+ },
+ {
+  "arm": "checklist",
+  "rep": 3,
+  "fid": "F28",
+  "sev": "minor",
+  "loc": "summaries/spectral-geometry-217M-FINAL_SUMMARY.md:73-77,131-133; runs/spectral-geometry-217M/outputs/phase5/tf_vs_target_classifier.csv",
+  "desc": "The summary says TF-vs-target 'jumps to 0.62 at L11 after being ~0.53 at L0'. L0 is actually 0.596 and significant (perm p=0.0099). Its permutation null mean is 0.54, not 0.5, so effects should be stated relative to about 0.54. The 'late-layer peak' interpretation also uses the post-norm L11 tap (F24).",
+  "reason": "tf_vs_target_classifier.csv shows L0 joint SV2-SV7 AUROC 0.596 (perm p=0.0099) and L6 0.610, with null_mean about 0.54 at every layer. The summary's '~0.53 at L0 ... jumps to 0.62 at L11' is wrong (0.53 matches only the SV2_SV4 column). The 'late layers peak' depth narrative is therefore not support"
+ },
+ {
+  "arm": "checklist",
+  "rep": 3,
+  "fid": "F32",
+  "sev": "major",
+  "loc": "runs/topology-141-217M/EXTENDED_FINDINGS.md:18,44-51,76; outputs/phase15_cross_domain/phase15_summary.json",
+  "desc": "'Cross-tissue invariance \u2014 STRONG POSITIVE (novel): MaxToki encodes a tissue-invariant gene geometry' is tested only against a gene-shuffle null. The comparison includes L0 static embeddings, which are identical across tissues by construction (the text concedes this: 'of course the static layer is tissue-invariant'). Per-gene embeddings averaged over cells are dominated by token identity. No basel",
+  "reason": "cross_domain_alignment.csv shows L0 Pearson = 1.0000 for every domain pair, which is trivial for static embeddings, and L0 is reported as best_layer. The mean Pearson 0.74-0.86 includes these values, and later layers fall to 0.45-0.78. The only null is a gene shuffle (null mean about 0). EXTENDED_FI"
+ },
+ {
+  "arm": "checklist",
+  "rep": 3,
+  "fid": "F34",
+  "sev": "major",
+  "loc": "summaries/manifold-discovery-217M-FINAL_SUMMARY.md:13-28,140-147,151-170,251-259; runs/manifold-discovery-217M/reports/phase12_anchor_benchmark_lite.json",
+  "desc": "The headline ('MaxToki internally encodes a hematopoietic developmental manifold ... first affirmative deployable result', 'multi-axis biological hub') is not compared with simple baselines in the headline. Phase 12 LITE shows PCA-10 or SVD-10 on expression matches or beats the extracted 10-D head on branch, and the extracted head is not significantly better on any endpoint. The manifold is theref",
+  "reason": "phase12_anchor_benchmark_lite.json gives these means:\n- Branch: PCA-10 0.844, SVD-10 0.837, avg-pool 0.792, extracted_z10 0.756.\n- Pseudotime: PCA-10 0.509 vs extracted_z10 0.262 and extracted_drift \u22120.022.\n- Pairwise tests: no BH-significant advantage over PCA/SVD/avg-pool.\nOnly reports/phase12_* m"
+ },
+ {
+  "arm": "checklist",
+  "rep": 3,
+  "fid": "F41",
+  "sev": "minor",
+  "loc": "summaries/attention-grn-217M-FINAL_SUMMARY.md:44,81; summaries/spectral-geometry-217M-FINAL_SUMMARY.md:105-110,117-142; summaries/sae-atlas-217M-FINAL_SUMMARY.md:94; runs/topology-141-217M/EXTENDED_FINDINGS.md:99-103",
+  "desc": "Several summaries attribute differences to architecture or training regime from a single model with no out-of-family comparison:\n- attention-GRN: 'likely specific to causal Llama decoders'; 'specific to bidirectional BERT-style encoders'.\n- spectral: 'geometry encodes time rather than lineage identity'; 'consequence of decoder-only training on trajectories'.\n- SAE: 'regardless of architecture ... ",
+  "reason": "The quoted statements exist: attention-grn L44 'likely specific to causal Llama decoders' and L81 'it is specific to bidirectional BERT-style encoders'; spectral L105-110 and L139-142 ('consequence of decoder-only training', 'encodes time rather than lineage identity'); SAE L94 'regardless of archit"
+ },
+ {
+  "arm": "generic",
+  "rep": 1,
+  "fid": "F05",
+  "sev": "critical",
+  "loc": "runs/sae-atlas-217M/scripts/phases2_to_8.py:178-198; full_12layer_pipeline.py:246-254",
+  "desc": "Benjamini\u2013Hochberg is applied only to tests that already passed overlap>=2 AND raw p<0.1. That is a small fraction of the ~4,928 features x 2,369 terms tested per layer, so the correction is nearly void (every 'significant' test has raw p<=0.042). The annotation rates (62-81%), the claim that MaxToki is 'more biologically interpretable than Geneformer', the U-shaped depth profile and the 333,623 e",
+  "reason": "Confirmed in phases2_to_8.py and full_12layer_pipeline.py. Tests are kept only if overlap>=2 and p<0.1, and BH is then applied to that pooled survivor set only. The spec (pipelines/sparse-autoencoders/01-sae-atlas.md step 3) asks for BH across all terms tested per feature. I recomputed from signific"
+ },
+ {
+  "arm": "generic",
+  "rep": 1,
+  "fid": "F06",
+  "sev": "major",
+  "loc": "runs/sae-atlas-217M/scripts/phases2_to_8.py:311-386; full_12layer_pipeline.py:299-312; outputs/phases2_to_8.log",
+  "desc": "leidenalg was not installed (the log says so). The fallback SpectralClustering uses n_clusters=min(10, n_alive), so '10 modules' per layer is the hard-coded parameter. The headline '10 modules/layer, 120 modules, matches paper 6-12 precisely' is therefore an artefact. 'Coverage' just equals the alive fraction, since every clustered feature gets a label. In the 3-layer script the fallback also clus",
+  "reason": "phases2_to_8.log says 'leidenalg not installed'. Every layer in both the 3-layer and 12-layer logs reports modules=10, which is exactly the SpectralClustering n_clusters=min(10,n_alive) fallback. The spec requires Leiden and says 6-12 modules is non-trivial only under Leiden. 3-layer coverage is 0.5"
+ },
+ {
+  "arm": "generic",
+  "rep": 1,
+  "fid": "F32",
+  "sev": "major",
+  "loc": "summaries/sae-atlas-217M-FINAL_SUMMARY_12layer.md; summaries/sae-atlas-crosslayer-analysis.log:16-26; summaries/sae-atlas-217M-FINAL_SUMMARY.md (Phase 4)",
+  "desc": "Cross-layer persistence is reported inconsistently and on a flawed denominator. The 12-layer summary gives L0\u2192L1 0.5%, L1\u2192L2 3.3% and L2\u2192L3 1.6%, but the log shows 0/4928, 8/4928 (0.2%) and 45/4928 (0.9%). Denominators include dead features (all 4,928 at L0). The same pipeline concludes both 'features are overwhelmingly layer-specific \u2014 replicates' (3-layer summary) and 'MaxToki has dramatically h",
+  "reason": "The 12-layer summary lists L0->L1 0.5%, L1->L2 3.3% and L2->L3 1.6%. crosslayer_full.log and sae-atlas-crosslayer-analysis.log show 0/4928, 8/4928 (0.2%) and 45/4928 (0.9%). The denominator is decoder-norm>1e-8, so all 4,928 features count, including the 2,430 dead L0 features. With alive features o"
+ },
+ {
+  "arm": "generic",
+  "rep": 1,
+  "fid": "F33",
+  "sev": "major",
+  "loc": "runs/sae-atlas-217M/scripts/remaining_phases.py:272-334,576-660; summaries/sae-atlas-crosslayer-analysis.log",
+  "desc": "Several 'replicates' claims use metrics that are near-saturated by construction and have no null. Phase 7 'information highways' (99.6-100%) takes the max PMI over 4,928 targets with no minimum co-occurrence count, which is trivially >3 for sparse codes on a shared residual stream. Phase 11's '95.9% of features cell-type-enriched' runs Fisher tests on ~2M token positions from 1,000 cells (position",
+  "reason": "Confirmed in remaining_phases.py. Phase 7 sets PMI to 0 only when cooc==0 and has no minimum count, then takes the max over ~4,928 targets with threshold >3. There is no null, and the rates are 99.6-100%. Phase 11 runs Fisher tests on token positions, which share their cell's type (pseudo-replicatio"
+ },
+ {
+  "arm": "generic",
+  "rep": 1,
+  "fid": "F12",
+  "sev": "major",
+  "loc": "summaries/manifold-discovery-217M-FINAL_SUMMARY.md (Headline, \u00a75, \u00a710, \u00a711 Phase 12 LITE); runs/manifold-discovery-217M/scripts/phase1a_lung_nonhema_panel.py:80-91",
+  "desc": "The headline 'MaxToki-217M internally encodes a hematopoietic developmental manifold' is not specific to the model. The anchors are donor x tissue x cell-type centroids, and the ruler is a deterministic function of cell type. In the project's own Phase 12 LITE, PCA-10 of raw expression matches or beats the extracted features (branch 0.844 vs 0.756 for extracted_z10, with no significant differences",
+  "reason": "Valid: phase1a_lung_nonhema_panel.py line 91 assigns rng.choice(STAGE_NODES) uniformly at random to non-hema anchors, so any feature set would fail the control. It cannot support 'gates aren't too loose' or 'not generic tissue covariance' (summary \u00a75 and \u00a710). No model-free (raw-expression) baseline"
+ },
+ {
+  "arm": "generic",
+  "rep": 1,
+  "fid": "F31",
+  "sev": "minor",
+  "loc": "runs/sae-atlas-217M/scripts/phases2_to_8.py:224-268; full_12layer_pipeline.py:362-366,546-552",
+  "desc": "The 'superposition' result ('99.9-100% of features invisible to SVD \u2014 massive superposition confirmed') holds by construction: at most a few of 4,928 unit vectors can have |cos|>0.7 with one of only 50 SVD directions. In addition, the 'alive' check is a no-op (line 242 is always True), so dead features are counted as 'novel' (L0: 2,430 dead). The 12-layer pipeline hard-codes n_svd_aligned=0, n_nov",
+  "reason": "Confirmed. At line 242, 'alive = (np.load(...).shape[0] > 0)' is never used, so all 4,928 L0 features (2,430 dead) are counted as novel. full_12layer_pipeline.py hard-codes n_svd_aligned=0 and n_novel=n_alive (comment 'computed below', never computed) and writes svd_comparison.json with 0 aligned. R"
+ },
+ {
+  "arm": "generic",
+  "rep": 1,
+  "fid": "F14",
+  "sev": "minor",
+  "loc": "runs/attention-grn-217M/scripts/phase1_trivial_baselines.py:77-90,233; phase0_extract.py:291-301",
+  "desc": "MaxToki is a causal decoder over rank-ordered genes. A query position can only attend to keys ranked above it (more highly expressed relative to the median). The edge score for perturbation P to target T is attn[P(query), T(key)]. It is non-zero only in cells where T outranks P, and its direction is opposite to the natural causal-LM direction for 'P influences T' (T attending to P). The edge is th",
+  "reason": "Confirmed. MaxToki is LlamaForCausalLM with genes rank-ordered by expression/median (maxtoki_adapter.tokenize_cell). phase0 accumulates attn[query=A, key=B] and divides by pair_counts over all co-present cells, so attn[P,T] is structurally zero whenever T ranks below P. Phase 1 uses only the row att"
+ },
+ {
+  "arm": "generic",
+  "rep": 1,
+  "fid": "F21",
+  "sev": "minor",
+  "loc": "runs/spectral-geometry-217M/outputs/phase7/lineage_twonn_by_layer.csv; phase7/depth_correlations.json; summaries/spectral-geometry-217M-FINAL_SUMMARY.md (Phase 7 rows, spec audit #16, #19)",
+  "desc": "The lineage-specific TwoNN 'compression' is estimated from 6 B-cell and 9 T-cell marker genes. TwoNN on 6 points in 1,232 dimensions is unstable: L0 gives 101 and L3 gives 62. There is no size-matched random-gene-set null, and the global TwoNN falls from 102 to 6.7 for all genes. 'B-cell compression replicated (\u03c1=-0.867)' and 'T-cell also compresses (divergent)' are therefore not interpretable. Th",
+  "reason": "Confirmed. lineage_twonn_by_layer.csv has n_markers = 6 (B) and 9 (T). The TwoNN fit runs on 5 points after the F<0.9 mask, and values jump around (B: 101, 34, 34, 62, ...). There is no size-matched random-gene null while global TwoNN falls 102->6.7. Spec audit row #16 says 'distance metrics replica"
+ },
+ {
+  "arm": "generic",
+  "rep": 1,
+  "fid": "F22",
+  "sev": "minor",
+  "loc": "summaries/spectral-geometry-217M-FINAL_SUMMARY.md (headline vs updated table); runs/spectral-geometry-217M/outputs/phases_345.log:21-28; remaining.log:108-117",
+  "desc": "STRING PPI significance is reported inconsistently: '3/12 significant layers' (BH) in the headline and '10/12 sig' (uncorrected z>2) in the updated table and spec audit. SV3 was chosen post hoc as the strongest of 7 axes. The hub-confound and physical-vs-functional comparisons use uncorrected z>2 counts.",
+  "reason": "phases_345.log gives SV3 significant_layers=3/12 using p_bh<0.05, and that is what summary \u00a77 reports. remaining.log gives 'SV3 all sig_layers(z>2)=10/12', which the scorecard (line 269) and spec audit (line 325) report. The hub-degree and GO-split comparisons also use uncorrected z>2 counts. SV3 wa"
+ },
+ {
+  "arm": "generic",
+  "rep": 1,
+  "fid": "F37",
+  "sev": "minor",
+  "loc": "summaries/attention-grn-217M-FINAL_SUMMARY.md (Phase 0b); runs/attention-grn-217M/outputs/phase0b.log",
+  "desc": "The Phase 0b numbers are misreported. The summary states 'VW per-pert AUROC = 0.513 vs raw attention 0.532'. The log shows VW 0.4933 vs attention 0.5119 (\u0394=-0.0186, p=0.012). Value-weighted (VW) TRRUST AUROCs (peak 0.588) are also compared with an attention TRRUST AUROC (0.483) that rests on ~66 edges (null SD 0.043), which does not support the 'architectural asymmetry' interpretation.",
+  "reason": "phase0b.log shows VW primary 0.4933 vs attention primary 0.5119 (delta -0.0186, p=0.0125). The summary states 0.513 vs 0.532 (delta and p are correct). The 'architectural asymmetry' line compares VW TRRUST AUROC (peak 0.588) with attention per-perturbation AUROC (L1 0.553), which are different metri"
+ },
+ {
+  "arm": "generic",
+  "rep": 1,
+  "fid": "F25",
+  "sev": "minor",
+  "loc": "runs/topology-141-217M/scripts/phase15_cross_domain_tissue.py:45-141; logs/phase15.log",
+  "desc": "The 'cross-tissue invariance (STRONG POSITIVE, novel)' averages over 12 layers including layer 0. Layer 0 holds static token embeddings that are identical across tissues by construction (Pearson 1, top-1 100%), and best_layer=0 in every pair. The gene-label-shuffle null only tests that genes are matched. Per-gene mean contextual embeddings are dominated by token identity, so high similarity is exp",
+  "reason": "phase15.log shows max Pearson = 1.000 and best_layer = 0 for all three pairs, so L0 static embeddings are included in the 12-layer mean. The only null is a gene-label shuffle, with no within-tissue split-half or model-free baseline. EXTENDED_FINDINGS concedes 'of course the static layer is tissue-in"
+ },
+ {
+  "arm": "generic",
+  "rep": 1,
+  "fid": "F26",
+  "sev": "minor",
+  "loc": "runs/topology-141-217M/logs/phase16.log; summaries/topology-141-217M-FINAL_SUMMARY.md (Positives #3, H23 sanity)",
+  "desc": "'TF-hub centrality' is declared positive from a single pre-chosen layer (L6) with z\u22482.3 in 2 of 3 domains. There is no multiplicity correction and no control for gene expression or token frequency (TFs with many TRRUST targets are well-studied and broadly expressed). The H23 Forman direction is described as 'exactly in range 0.34-0.39' although the immune value of 0.42 is outside it. The immune po",
+  "reason": "phase16 log: H-hub z = 1.31 / 2.34 / 2.36 at the fixed layer L6, with 100 permutations and no expression or frequency control. The FINAL_SUMMARY says Forman AUROCs 0.34/0.42/0.35 are 'exactly in range' 0.34-0.39, but immune 0.42 is outside. The immune pool is described as 1,500 cells, but spectral-g"
+ },
+ {
+  "arm": "generic",
+  "rep": 2,
+  "fid": "F05",
+  "sev": "major",
+  "loc": "runs/exhaustive-mapping-217M/scripts/experiment3_rerun.py:110-130; summaries/exhaustive-mapping-217M-FINAL_SUMMARY.md:57-66,103,160-163",
+  "desc": "'Pseudotime' is PC1 of log1p expression over 200 random Tabula Sapiens immune cells of mixed lineages, rescaled to [0,1]. 'Early' and 'late' are PC1 quartiles. This axis mostly reflects cell-type composition, not differentiation. The early and late logit signatures are nearly identical (cos \u2248 0.999), so \u0394s is a difference of nearly collinear vectors. 5,767 'switch features' come from |rho| > 0.3 w",
+  "reason": "Confirmed in experiment3_rerun.py:125-131 and experiments_2_3.py:280-287. 'Pseudotime' is PC1 of log1p expression over 200 randomly drawn cells from tabula_sapiens_immune.h5ad, rescaled to [0,1], with early/late taken as quartiles. Over mixed immune lineages this axis mostly tracks composition. Even"
+ },
+ {
+  "arm": "generic",
+  "rep": 2,
+  "fid": "F10",
+  "sev": "major",
+  "loc": "runs/sae-atlas-217M/scripts/phases2_to_8.py:317,370-381; scripts/full_12layer_pipeline.py:299-310; outputs/phases2_to_8.log:78; summaries/sae-atlas-217M-FINAL_SUMMARY.md:50-58; summaries/sae-atlas-217M-FINAL_SUMMARY_12layer.md:17-31,47",
+  "desc": "leidenalg was not installed, so the code fell back to SpectralClustering(n_clusters=min(10, n_alive)). Every layer therefore has exactly 10 modules by construction. The claims '10 modules ... matches [paper's 6-12] precisely' and '120 modules / 10 per layer' are artifacts. In addition, the fallback clusters pmi_pos[:n_alive, :n_alive] (the first n_alive feature indices, not the alive features) and",
+  "reason": "Confirmed. phases2_to_8.log:78 says 'leidenalg not installed'. Both phases2_to_8.py:370-381 and full_12layer_pipeline.py:299-310 fall back to SpectralClustering(n_clusters=min(10, n_alive)). full_12layer.log reports modules = 10 for all 12 layers, so '10 modules ... matches precisely' and '120 modul"
+ },
+ {
+  "arm": "generic",
+  "rep": 2,
+  "fid": "F11",
+  "sev": "major",
+  "loc": "runs/sae-atlas-217M/scripts/phases2_to_8.py:176-200 (p<0.1 prefilter at 187); scripts/full_12layer_pipeline.py:241-251; summaries/sae-atlas-217M-FINAL_SUMMARY.md:19-27",
+  "desc": "BH-FDR is applied only to feature x term tests that already had p<0.1 and overlap >=2. The BH denominator therefore excludes most of the tests performed, which makes the significance threshold far too lenient and inflates annotation rates. There is no shuffled-gene-set null. The claim 'MaxToki's rates are higher than Geneformer's (52.4%), suggesting MaxToki's features are more biologically interpr",
+  "reason": "Confirmed in code: only tests with p < 0.1 and overlap >= 2 enter the BH correction. In significant_enrichments.csv the largest 'significant' raw p is 0.042 at L0, 0.040 at L5 and 0.039 at L11. That implies about 27k to 34k prefiltered tests, of which about 85% pass, so the correction is effectively"
+ },
+ {
+  "arm": "generic",
+  "rep": 2,
+  "fid": "F12",
+  "sev": "major",
+  "loc": "runs/sae-atlas-217M/scripts/phases2_to_8.py:242 (alive always True), 292 (n_src_alive = all decoder columns); summaries/sae-atlas-217M-FINAL_SUMMARY.md:29-46; summaries/sae-atlas-217M-FINAL_SUMMARY_12layer.md:25-41",
+  "desc": "Dead features (2,430 at L0, whose decoder vectors are effectively random normalised directions) are counted as 'novel/invisible to SVD' (L0: 4,928/4,928 novel). They are also included in the cross-layer-persistence denominators. The two summaries interpret the same metric in opposite ways. The 3-layer summary says 'Features are overwhelmingly layer-specific \u2014 no persistent scaffold. Replicates'. T",
+  "reason": "Code confirmed. In phases2_to_8.py:242 'alive' is a scalar True and is never used. At line 292 n_src_alive counts nonzero-norm decoder columns, which gives 4,928 even though only 2,498 L0 features are alive. The novelty percentages are unchanged, because 0 L0 features are SVD-aligned and so 100% of "
+ },
+ {
+  "arm": "generic",
+  "rep": 2,
+  "fid": "F13",
+  "sev": "minor",
+  "loc": "runs/sae-atlas-217M/scripts/remaining_phases.py:275-335; summaries/sae-atlas-217M-FINAL_SUMMARY.md:98-103; summaries/sae-atlas-217M-FINAL_SUMMARY_12layer.md:37-41",
+  "desc": "A 'highway' is a source feature whose maximum PMI across 4,928 target features exceeds 3, measured on co-activation at the same token position in two layers. There is no null and no minimum co-occurrence count. For low-frequency features, the maximum of thousands of noisy PMI values easily exceeds 3, and same-token identity drives co-activation across layers. The 99.6-100% rate is therefore close ",
+  "reason": "Confirmed in remaining_phases.py: n_highways = (max_pmi_per_src > 3).sum(), with no null and no minimum co-occurrence. For rare features a single co-occurrence already gives PMI > 3, and same-position residual continuity inflates cross-layer PMI. The metric and threshold do follow the spec (01-sae-a"
+ },
+ {
+  "arm": "generic",
+  "rep": 2,
+  "fid": "F18",
+  "sev": "minor",
+  "loc": "runs/attention-grn-217M/outputs/phase3*.log ('TFs with >= 3 TRRUST targets'); outputs/phase4/ablation_results.csv; scripts/phase4_causal_ablation.py:42,139-147,180-182; outputs/FINAL_SUMMARY.md:85-99",
+  "desc": "All TRRUST-based conclusions rest on very few TFs: 8 TFs with 66 edges (K562), 16 (RPE1), 32 (Adamson) and 12 (1B). The label-shuffle null SD is 0.043 for K562. Phase 4 used 300 cells, and the code comment claiming these are 'the same cells as Phase 0' is wrong because the choice size differs. Baseline TRRUST AUROC at L8 moves from 0.483 (2,000 cells) to 0.440 (300 cells), a sampling shift larger ",
+  "reason": "Confirmed: K562 has 8 TFs and 66 edges (phase3.log); the other runs have 32 (Adamson), 16 (RPE1) and 12 (1B), so the finding's dataset mapping is slightly off. The label-shuffle null SD is 0.0429. The Phase 4 baseline is 0.440 vs 0.483 in Phase 0. The ablation deltas run from \u22120.005 to +0.018, with "
+ },
+ {
+  "arm": "generic",
+  "rep": 2,
+  "fid": "F21",
+  "sev": "minor",
+  "loc": "runs/attention-grn-217M/outputs/FINAL_SUMMARY.md:40-44,73-81; outputs/phase0b/run_config.json",
+  "desc": "The summary misreports the Phase 0b numbers. It also compares raw attention's per-perturbation AUROC peak (L1, 0.553) with the value-weighted TRRUST AUROC peak (L9-L10, \u22480.59) and calls the difference an 'architectural asymmetry'. It claims the shallow-layer peak is 'specific to bidirectional BERT-style encoders' without any comparison model.",
+  "reason": "Confirmed. phase0b/run_config.json gives value-weighted (VW) per-perturbation AUROC 0.4933 vs attention 0.5119 at L8; the summary says 0.513 vs 0.532. The delta (\u22120.019) and p (0.012) are correct. vw_per_layer_per_pert_auroc.csv shows VW below 0.5 at L0-L8 (0.458-0.493), peaking at 0.515 at L9. The "
+ },
+ {
+  "arm": "generic",
+  "rep": 2,
+  "fid": "F22",
+  "sev": "minor",
+  "loc": "runs/attention-grn-217M/outputs/phase6_cssi/run_config.json; outputs/FINAL_SUMMARY.md:46-58",
+  "desc": "The K=10 KMeans produced 4 singleton clusters and 2 tiny ones. Per-cluster attention edges from one cell dominate the CSSI-max and CSSI-mean aggregations, and TRRUST evaluation uses 8 TFs. 'Two of three aggregations significantly worse' and 'CSSI fails to rescue' reflect a degenerate stratification, not a test of the method.",
+  "reason": "Confirmed: cluster_sizes = [814, 1, 261, 1, 1, 1, 3, 14, 310, 594]. CSSI-max and CSSI-mean are unweighted max/mean over the 10 clusters (phase6_cssi.py:165-166), so single-cell clusters dominate. The 'oracle' 0.5017 comes from a singleton cluster. The summary does acknowledge the skew and the homoge"
+ },
+ {
+  "arm": "generic",
+  "rep": 2,
+  "fid": "F26",
+  "sev": "minor",
+  "loc": "runs/spectral-geometry-217M/outputs/phase7/lineage_twonn_by_layer.csv; outputs/phase7/depth_correlations.json; outputs/FINAL_SUMMARY.md:32-35,100-112,141-142",
+  "desc": "The lineage 'TwoNN compression' is computed on 6 B-cell marker genes and 9 T-cell markers; Myeloid has 1, which gives NaN. A TwoNN intrinsic-dimension estimate from 6 points is meaningless; the values jump 101 -> 34 -> 34 -> 62 -> 35. There is no size-matched random gene-set control, although global TwoNN itself falls from 102 to 6.7, so any gene set will 'compress'. T cells do too (rho = \u22120.895).",
+  "reason": "Confirmed. lineage_twonn_by_layer.csv has n_markers B = 6, T = 9 and Myeloid = 1 (all NaN), and B-cell values jump 101\u219234\u219234\u219262\u219235. phases_67.py uses its own _twonn, which lowers the minimum to 3 fit points; the Phase 1 version needs 10 and would return NaN here. There is no size-matched random-set "
+ },
+ {
+  "arm": "generic",
+  "rep": 2,
+  "fid": "F27",
+  "sev": "minor",
+  "loc": "runs/spectral-geometry-217M/outputs/FINAL_SUMMARY.md:25-26,72-78,136-143,166-172,208-215,228; outputs/phase5/tf_vs_target_classifier.csv; outputs/phase4/ppi_copole_per_axis_per_layer.csv",
+  "desc": "Several smaller problems:\n- The depth-semantics claim says TF-vs-target 'jumps to 0.62 at L11 after being ~0.53 at L0', but L0 joint AUROC is 0.596 (perm p = 0.0099), comparable to L6 and L11.\n- The permutation null mean is 0.54, not 0.5, so the mean of 0.572 cannot be compared with the paper's 0.744.\n- SV3 PPI is reported as 3/12 significant layers in one table and 10/12 in another; BH<0.05 holds",
+  "reason": "Confirmed from tf_vs_target_classifier.csv. L0 joint AUROC is 0.596 (perm p = 0.0099), not '~0.53', and is comparable to L6 (0.610) and L11 (0.620), which undercuts the 'late layers peak' depth-semantics claim. The null mean is about 0.542 and the actual mean of the joint column is 0.567, not 0.572."
+ },
+ {
+  "arm": "generic",
+  "rep": 2,
+  "fid": "F28",
+  "sev": "major",
+  "loc": "runs/manifold-discovery-217M/FINAL_SUMMARY.md:15-28,140-149,151-176,253-262; reports/phase12_anchor_benchmark_lite.csv",
+  "desc": "Anchors are cell-type centroids, and every ruler (H65 stage DAG, H95, H103, H38 categories) is a deterministic function of cell-type labels. Any representation that separates cell types will therefore pass the gates. Raw-expression PCA/HVG features or a random-init model were never passed through the same LET-head and gate pipeline. The project's own anchor-level benchmark shows PCA-10 of raw expr",
+  "reason": "Confirmed. Anchors are donor\u00d7tissue\u00d7cell_type centroids (phase1bc script), and the H65/H95/H103/H38-lite rulers are functions of cell-type labels. No PCA/HVG or random-init features were run through the Phase 5/7/8 gates. In the project's own Phase 12 LITE benchmark, mean branch balanced accuracy is"
+ },
+ {
+  "arm": "generic",
+  "rep": 2,
+  "fid": "F30",
+  "sev": "minor",
+  "loc": "runs/manifold-discovery-217M/scripts/phase4_export_operators.py:4-11,74-88; scripts/phase9_head_attribution.py:9,70-78; FINAL_SUMMARY.md:36-41,92-100",
+  "desc": "The 'per-head operators' are slices of o_proj (W_O). The single-head feature is x_l @ W_O[:, h-block], a fixed linear projection of the residual-stream centroid onto the output-projection columns of head h. No attention pattern, Q/K or V of the head is involved. 'Head/layer attribution', 'H65 information is concentrated in late-layer heads (L10H6)' and the contrast with scGPT's L2H5 do not describ",
+  "reason": "Confirmed. phase4 exports A = o_proj.weight[:, h-block].T; the summary \u00a72 wrongly calls these 'value-projection operators'. phase9 computes features = x_{l+1} @ A.T, a fixed projection of the post-layer residual centroid onto head h's W_O columns, with no Q/K/V or attention pattern involved. 'Late-l"
+ },
+ {
+  "arm": "generic",
+  "rep": 2,
+  "fid": "F36",
+  "sev": "minor",
+  "loc": "runs/topology-141-217M/EXTENDED_FINDINGS.md:19-21,56-66",
+  "desc": "'H-hub' (TF degree vs kNN eigenvector centrality) gives z = 2.34 and 2.36 in 2 of 3 domains (lung n.s.). This is among at least 10 exploratory hypotheses with no multiple-testing correction, and TF degree is not controlled for expression or token frequency. It is nonetheless called 'the strongest new result'. 'H-depth' is labelled 'non-trivial' although it is not significant against its null.",
+  "reason": "Confirmed in EXTENDED_FINDINGS.md. H-hub has z = 2.34 (immune) and 2.36 (ext-lung), with lung non-significant (z = 1.3). It sits among more than 10 exploratory tests (6 in the table plus Phase 4, H139, the H124 chain, H-cross and 4 autoloop tests) with no FDR correction, and there is no expression o"
+ },
+ {
+  "arm": "generic",
+  "rep": 3,
+  "fid": "F06",
+  "sev": "minor",
+  "loc": "runs/exhaustive-mapping-217M/scripts/experiment3_rerun.py:117-131; summaries/exhaustive-mapping-217M-FINAL_SUMMARY.md:55-60,103,132,163",
+  "desc": "Even apart from F05, the biology is misdescribed. 'Pseudotime' is PC1 of log-expression for 200 random Tabula Sapiens immune cells of mixed cell types, so 'early' and 'late' quartiles are mainly cell-type groups, not a progenitor\u2192mature axis. The 5,767 'switch features' come from |\u03c1|>0.3, p<0.01 across 4,928 features \u00d7 5 layers with no multiple-testing correction. FTL is described as a 'terminal e",
+  "reason": "Mostly correct, but one sub-claim is wrong. Correct parts: experiments_2_3.py and experiment3_rerun.py define 'pseudotime' as PC1 of log1p expression over 200 random cells from tabula_sapiens_immune.h5ad, a dataset of mixed cell types (Phase 11 of the SAE atlas lists 32 types). The early/late quarti"
+ },
+ {
+  "arm": "generic",
+  "rep": 3,
+  "fid": "F07",
+  "sev": "critical",
+  "loc": "runs/sae-atlas-217M/scripts/phases2_to_8.py:183-197; runs/sae-atlas-217M/scripts/full_12layer_pipeline.py:246-251; runs/sae-atlas-217M/outputs/phase2/layer_*/significant_enrichments.csv; summaries/sae-atlas-217M-FINAL_SUMMARY.md:21-29,92; summaries/sae-atlas-217M-FINAL_SUMMARY_12layer.md",
+  "desc": "The feature annotation rates are inflated by invalid multiple-testing correction. Hypergeometric p-values are kept only when overlap \u22652 and p<0.1, and BH is then applied to this pre-filtered subset instead of all feature\u00d7term tests (4,928 \u00d7 2,369 \u2248 11.7M at L5). This is strongly anticonservative. The claims of 61.7\u201380.7% annotated features, 'excellent biological annotation', 'higher than Geneforme",
+  "reason": "Confirmed. In phases2_to_8.py lines 183-197 and full_12layer_pipeline.py lines 240-251, tests are kept only if overlap\u22652 and p<0.1, and BH is then pooled over this filtered subset. The spec (01-sae-atlas.md line 182) requires BH over all terms tested per feature. The log confirms 2,369 terms per fea"
+ },
+ {
+  "arm": "generic",
+  "rep": 3,
+  "fid": "F10",
+  "sev": "major",
+  "loc": "runs/sae-atlas-217M/scripts/phases2_to_8.py:440-520; runs/sae-atlas-217M/outputs/phase8/perturbation_summary.json; summaries/sae-atlas-217M-FINAL_SUMMARY.md:60-72,85,141",
+  "desc": "The Phase 8 'perturbation response' proxy is not a perturbation test. For each target gene G it compares SAE activations at positions where token G itself appears against random other positions. This detects token identity and is guaranteed to 'respond'. It runs 4,928 uncorrected Mann-Whitney tests at p<0.05 per target. The resulting '100% detection (60/60)' is reported as replicating the paper's ",
+  "reason": "Confirmed. Phase 8 in phases2_to_8.py takes h_ctrl at the positions of token G itself and compares them with random other positions. This tests token identity, not a perturbation. It runs 4,928 uncorrected Mann-Whitney tests per target (p<0.05, |effect|>0.1), so detection is near-guaranteed. perturb"
+ },
+ {
+  "arm": "generic",
+  "rep": 3,
+  "fid": "F11",
+  "sev": "major",
+  "loc": "runs/sae-atlas-217M/scripts/phases2_to_8.py:310-317,360-385; runs/sae-atlas-217M/scripts/full_12layer_pipeline.py:297-312; runs/sae-atlas-217M/outputs/phases2_to_8.log:78; summaries/sae-atlas-217M-FINAL_SUMMARY.md:50-58",
+  "desc": "'10 co-activation modules per layer, matching the paper's 6\u201312 precisely' is hard-coded. leidenalg was not installed, so the fallback SpectralClustering(n_clusters=min(10, n_alive)) always returns exactly 10 clusters and assigns every alive feature (100% coverage by construction). The fallback also clusters pmi_pos[:n_alive, :n_alive], the first n_alive feature indices rather than the alive ones, ",
+  "reason": "Confirmed. phases2_to_8.log reports 'leidenalg not installed'. The fallback is SpectralClustering(n_clusters=min(10, n_alive)), which forces 10 modules and assigns every alive feature. As a result all 12 layers report n_modules=10 in the global summary, so the claim '10 modules ... matches precisely"
+ },
+ {
+  "arm": "generic",
+  "rep": 3,
+  "fid": "F17",
+  "sev": "minor",
+  "loc": "summaries/attention-grn-217M-FINAL_SUMMARY.md:40-46; summaries/attention-grn-cross-dataset-report.md:22; runs/attention-grn-217M/outputs/phase0b/run_config.json",
+  "desc": "Several numbers in the attention-GRN summaries are misreported or compared across different metrics. (1) The Phase 0b text says 'VW per-pert AUROC = 0.513 vs raw attention 0.532'; the actual values are 0.493 vs 0.512. (2) 'Raw attention peaks at L1 (0.553), VW peaks at L9\u2013L10 (\u22480.59)' compares per-perturbation AUROC with TRRUST AUROC; VW per-pert actually peaks at 0.515 (L9) and is below 0.5 at L0",
+  "reason": "All three discrepancies are confirmed. (1) run_config.json has mean_auc_vw 0.4933 and mean_auc_attn 0.5119; the summary says 0.513 vs 0.532. The delta (\u22120.019) and p (0.012) are right. (2) 'Raw attention peaks L1 (0.553)' is per-perturbation AUROC, while 'VW \u22480.59 at L9-L10' is TRRUST AUROC. VW per-"
+ },
+ {
+  "arm": "generic",
+  "rep": 3,
+  "fid": "F21",
+  "sev": "minor",
+  "loc": "runs/spectral-geometry-217M/scripts/phase9b_cross_model.py:141-163,244-310; runs/spectral-geometry-217M/outputs/phase9b/summary.json; summaries/spectral-geometry-217M-FINAL_SUMMARY.md:245-266",
+  "desc": "'The paper's alignment null does NOT replicate' relies on a weaker null. A gene-label shuffle gives Pearson \u2248 0 and p = 0 for any two embeddings with even slight shared structure, whereas the paper's null controlled for shared-vocabulary structure. 'PPI convergent across architectures' takes the post-hoc maximum z over SV axes (Geneformer SV3) and over axes \u00d7 pair-sets for MaxToki ('max z = 5.62')",
+  "reason": "Partly valid. Still stands: the 'paper's alignment null does NOT replicate' claim compares different tests. Under the gene-label-shuffle Mantel null used here (null SD 0.001), a raw similarity of 0.825 could never give p>0.3, so the paper's test was necessarily a different procedure. 'Non-replicatio"
+ },
+ {
+  "arm": "generic",
+  "rep": 3,
+  "fid": "F22",
+  "sev": "major",
+  "loc": "runs/spectral-geometry-217M/scripts/phases_67.py:212-248; runs/spectral-geometry-217M/outputs/phase7/lineage_twonn_by_layer.csv; summaries/spectral-geometry-217M-FINAL_SUMMARY.md:33,104-110",
+  "desc": "The lineage-specific TwoNN results ('B-cell compression replicates \u03c1=\u22120.867; T-cell also compresses \u03c1=\u22120.895, lineage specificity does not transfer') estimate intrinsic dimension from 6 B-cell and 9 T-cell marker points. TwoNN on 6 points is a line fit through 5 values and is meaningless, as shown by L0 estimates of 101 and 81 for 6 and 9 points. A global depth trend affects any gene subset, and m",
+  "reason": "Confirmed. lineage_twonn_by_layer.csv shows n_markers 6 (B cell) and 9 (T cell). With 6 points, _twonn fits a line through the 5 values with F<0.9. That yields impossible estimates such as an intrinsic dimension of 101 from 6 points at L0, and 81-119 from 9 points for T cells. Myeloid has 1 marker ("
+ },
+ {
+  "arm": "generic",
+  "rep": 3,
+  "fid": "F24",
+  "sev": "minor",
+  "loc": "summaries/spectral-geometry-217M-FINAL_SUMMARY.md:20,61-63,269,296,342; runs/spectral-geometry-217M/outputs/phase4/ppi_copole_per_axis_per_layer.csv; runs/spectral-geometry-217M/outputs/remaining/phase4_hub_confound.csv",
+  "desc": "The spectral-geometry summary contains several internal inconsistencies and one underpowered claim:\n- SV3 PPI significance is given as both '3/12 significant layers' and 'SV3 10/12 sig'.\n- The 29-row table's tally ('11 \u2705 / 5 \u26a0\ufe0f / 13 \u274c') does not match its rows.\n- The 22-row audit tally ('6/7/6/3') does not match its rows.\n- Extracellular-space enrichment is called z=5.21 in one place and OR=5.21 i",
+  "reason": "All points are confirmed by recount. SV3 pairs_700 has 3/12 BH<0.05 and 9/12 raw p<0.05, so lines 80 and 151 ('3/12') contradict lines 269 and 325 ('10/12'). Counting the 29-row table gives 10 \u2705/5 \u26a0\ufe0f/14 \u274c, not 11/5/13. Counting the 22-row audit gives 5 \u2705/8 \u26a0\ufe0f/7 \u274c/2 \ud83d\udd35, not 6/7/6/3. Phase 3's sv1_go_c"
+ },
+ {
+  "arm": "generic",
+  "rep": 3,
+  "fid": "F26",
+  "sev": "minor",
+  "loc": "runs/topology-141-217M/scripts/phase15_cross_domain_tissue.py:45-141; runs/topology-141-217M/outputs/phase15_cross_domain/{cross_domain_alignment.csv,phase15_summary.json}; runs/topology-141-217M/EXTENDED_FINDINGS.md:18,48-55",
+  "desc": "'Cross-tissue invariance \u2014 STRONG POSITIVE (novel); MaxToki encodes a tissue-invariant gene geometry' is largely tautological. Per-gene embeddings at L0 are static token embeddings, identical in every tissue, and the residual stream at later layers is dominated by the token embedding. The mean over 12 layers includes the trivial L0 = 1.0, and the 'best layer' is 0 for every pair. The only null is ",
+  "reason": "Confirmed. cross_domain_alignment.csv shows L0 Pearson \u22481.0 and top-1 = 1.0 for all pairs; these are static token embeddings and identical by construction. best_layer is 0 for all three pairs, and the 12-layer means include these trivial L0 values. The only null is a gene-label shuffle, with no L0 b"
+ },
+ {
+  "arm": "generic",
+  "rep": 3,
+  "fid": "F27",
+  "sev": "major",
+  "loc": "runs/topology-141-217M/scripts/phase6_manifold_distances.py:228-252; pipelines/topology-geometry-141-hypotheses.md:278,547,573; runs/topology-141-217M/FINAL_SUMMARY.md:15,28-31",
+  "desc": "Two problems in the manifold-distance hierarchy (Phase 6). (1) The diffusion time t is chosen by the best raw AUROC on the same evaluation pairs in every domain, including external-lung, which the spec forbids. This in-sample selection inflates the 'single relative positive' (diffusion on lung +0.023). (2) The triangle-defect spectrum is collapsed into a signed scalar sum across k with an assumed ",
+  "reason": "Confirmed. (1) phase6_manifold_distances.py picks diffusion t by the highest raw TRRUST AUROC on the same evaluation pairs in every domain, including external_lung. Spec pitfall 14 forbids this, and since coexpression AUROC does not depend on t, picking the best raw AUROC directly maximizes the repo"
+ },
+ {
+  "arm": "generic",
+  "rep": 3,
+  "fid": "F28",
+  "sev": "minor",
+  "loc": "runs/topology-141-217M/FINAL_SUMMARY.md:36-55,62; runs/topology-141-217M/README.md:16-27; summaries/topology-141-217M-FINAL_SUMMARY.md",
+  "desc": "The run-folder FINAL_SUMMARY is stale and contradicts the README, EXTENDED_FINDINGS and the summaries/ copy. It marks Phase 4 cross-model CCA, the Phase 11 autoloop and the H124\u2013H138 annotation chain as SKIPPED, and Layer 1 as 'cannot be evaluated'; the other documents report all of these as run, with results. Its TL;DR also understates H91 (says '\u0394 \u2248 +0.01 over chance'; external-lung is +0.045). ",
+  "reason": "Confirmed. runs/topology-141-217M/FINAL_SUMMARY.md marks Phase 4 CCA, Phase 11 and the H124-H138 chain as SKIPPED and says 'Layer 1 cannot be evaluated'. The README and EXTENDED_FINDINGS say all of these were run (Phase 14 CCA r=0.78, scGPT r=0.40, autoloop, phase8_extensions). The TL;DR's '\u0394 \u2248 +0.0"
+ },
+ {
+  "arm": "generic",
+  "rep": 3,
+  "fid": "F31",
+  "sev": "major",
+  "loc": "runs/manifold-discovery-217M/reports/phase12_anchor_benchmark_lite{,_pairwise}.csv; runs/manifold-discovery-217M/FINAL_SUMMARY.md:13-26,147,150-172",
+  "desc": "The headline that 'MaxToki-217M internally encodes a hematopoietic developmental manifold ... first affirmative deployable result' is not shown to depend on MaxToki. The quality gates were never applied to an expression-only representation. In the run's own Phase 12 LITE benchmark, the extracted 10-D head trends below PCA-10 of raw expression on every endpoint and below frozen avg-pool on most. It",
+  "reason": "Mostly confirmed. The headline ('MaxToki-217M internally encodes ... first affirmative deployable result') never applies the quality gates to an expression-only representation. In phase12_anchor_benchmark_lite_pairwise.csv, extracted_z10 vs pca10 differs by \u22120.088 (branch), \u22120.045 (stage), \u22120.030 (m"
+ },
+ {
+  "arm": "generic",
+  "rep": 3,
+  "fid": "F34",
+  "sev": "minor",
+  "loc": "runs/manifold-discovery-217M/FINAL_SUMMARY.md:150-200,228-262,355-375; runs/manifold-discovery-217M/scripts/phase13_h38_lite.py; runs/manifold-discovery-217M/scripts/phase17_cross_axis_h65_h95.py",
+  "desc": "The 'multi-axis biological hub' claim rests on rulers (H38 LITE signalling categories, H95 effector modality, H93/H94/H97 etc.) that are deterministic functions of cell-type labels, evaluated on cell-type-aggregated anchors. Any representation that separates cell types will pass them, and the nulls (global label shuffles) only test that. The Phase 17 'partially orthogonal, H95 head rotates away fr",
+  "reason": "Confirmed. Anchors are donor\u00d7tissue\u00d7cell_type centroids (phase1bc). The H38-LITE, H92 and H95 rulers are lookup functions of cell_type (h38_lite_categories.csv; cat_h95 in phase3a_manifold_sweep.py). The null is a global shuffle of those labels, so any representation that separates cell types would "
+ }
+]

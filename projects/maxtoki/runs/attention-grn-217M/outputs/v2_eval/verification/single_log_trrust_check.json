@@ -1,0 +1,32 @@
+{
+ "217M_K562": {
+  "variance_single_log_auroc": 0.6380048919766004,
+  "variance_deployed_auroc": 0.7252141402304624,
+  "attention_auroc": 0.48289389246951814,
+  "gap_single_log_variance_minus_attention_ci95": [
+   0.014832515610594581,
+   0.296721059610411
+  ],
+  "spearman_var_single_vs_deployed": 0.47127148318069734
+ },
+ "217M_Adamson": {
+  "variance_single_log_auroc": 0.6249897911645104,
+  "variance_deployed_auroc": 0.5242268094317567,
+  "attention_auroc": 0.5195066877637431,
+  "gap_single_log_variance_minus_attention_ci95": [
+   0.05875957112123424,
+   0.1555989713994562
+  ],
+  "spearman_var_single_vs_deployed": 0.6161208569426031
+ },
+ "1B_K562": {
+  "variance_single_log_auroc": 0.6817934003417966,
+  "variance_deployed_auroc": 0.6292415860283912,
+  "attention_auroc": 0.5553997377264785,
+  "gap_single_log_variance_minus_attention_ci95": [
+   0.059653944503153096,
+   0.20315718249048478
+  ],
+  "spearman_var_single_vs_deployed": 0.5310282089841681
+ }
+}

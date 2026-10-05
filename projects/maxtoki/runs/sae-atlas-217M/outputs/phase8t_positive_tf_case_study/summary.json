@@ -1,0 +1,63 @@
+{
+  "scope": "GATA1, MYC, TAL1 in K562 \u2014 power analysis of the Phase 8t test under ChIP-seq direct-target ground truth",
+  "method": "feasibility / power simulation; original Phase 8t responding-feature IDs were not saved",
+  "blocker_for_full_case_study": "Phase 8t recorded only counts (n_responding) per TF, not feature IDs. MYC and TAL1 were not in the 100 selected perturbation targets. Re-running with feature-ID capture is required for the actual case study; this script characterises the test's *power* given current Phase 8t scope.",
+  "chip_seq_target_set_sizes": {
+    "GATA1": 470,
+    "MYC": 478,
+    "TAL1": 471
+  },
+  "trrust_target_set_sizes": {
+    "GATA1": 57,
+    "MYC": 100,
+    "TAL1": 10
+  },
+  "n_features_with_>=2_chip_overlap": {
+    "GATA1": 828,
+    "MYC": 963,
+    "TAL1": 561
+  },
+  "n_features_with_>=2_trrust_overlap": {
+    "GATA1": 3,
+    "MYC": 63,
+    "TAL1": 0
+  },
+  "power_curve_chipseq": {
+    "GATA1": {
+      "1": 0.175,
+      "2": 0.276,
+      "3": 0.452,
+      "5": 0.609,
+      "7": 0.707,
+      "10": 0.842,
+      "15": 0.931,
+      "20": 0.981
+    },
+    "MYC": {
+      "1": 0.192,
+      "2": 0.367,
+      "3": 0.498,
+      "5": 0.677,
+      "7": 0.796,
+      "10": 0.894,
+      "15": 0.973,
+      "20": 0.98
+    },
+    "TAL1": {
+      "1": 0.126,
+      "2": 0.202,
+      "3": 0.294,
+      "5": 0.438,
+      "7": 0.568,
+      "10": 0.67,
+      "15": 0.847,
+      "20": 0.895
+    }
+  },
+  "power_at_gata1_k=5": {
+    "chipseq": 0.621,
+    "trrust": 0.004
+  },
+  "interpretation": "At GATA1's actual responding-feature count (K=5), the test's power against random 5-feature draws is 0.621 under ChIP-seq targets and 0.004 under TRRUST targets. The ChIP-seq target set is much larger than TRRUST for GATA1, so the test has higher power against ChIP-seq ground truth \u2014 but the chance of a random feature draw passing the threshold is also higher, so a positive ChIP-seq result wouldn't necessarily be more meaningful than a positive TRRUST result. What matters is whether GATA1's ACTUAL responding features show overlap ABOVE this random baseline. Without the responding-feature IDs, we can't answer that question. Recommend re-running Phase 8t with feature-ID capture.",
+  "recommended_followup": "Patch `remaining_phases.py` Phase 8t loop (line ~462) to save responding feature IDs alongside counts: change `pert_results.append({...})` to include `responding_feature_ids: responding[:]`. Re-run on GATA1, MYC, TAL1 (adding MYC and TAL1 to the target list at line ~370). Then evaluate specificity under ChIP-seq targets and compare to a 1000-resample random-feature null."
+}

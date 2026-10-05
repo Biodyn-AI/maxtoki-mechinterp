@@ -1,0 +1,17 @@
+{
+  "script": "<REPO_ROOT>/projects/maxtoki/runs/circuit-tracing-217M/scripts/v2_circuit_lfc.py",
+  "script_sha256": "0d80c0ddd80c6fbf6068fb75d79ea2df966224d4651a1212aa74d2f825191793",
+  "device": "cpu",
+  "dataset": "<DATA_ROOT>/biodyn-nmi-paper/src/02_cssi_method/crispri_validation/data/replogle_concat.h5ad",
+  "seeds": {
+    "control_sample": 42
+  },
+  "n_control_cells": 3000,
+  "control_rows_file": "control_rows.npy",
+  "min_cells_per_guide": 10,
+  "numpy": "1.26.4",
+  "pandas": "2.3.3",
+  "h5py": "3.16.0",
+  "timestamp": "2026-10-01T05:07:06",
+  "wall_seconds_last_chunk": 45.2
+}

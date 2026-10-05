@@ -1,0 +1,388 @@
+{
+ "n_candidate_pairs": 62958,
+ "n_positive_pairs": 173,
+ "n_TFs": 42,
+ "n_target_genes": 104,
+ "confirmatory_tests": {
+  "attn_vs_target_variance": {
+   "p": 0.0745,
+   "q_BH": 0.130375
+  },
+  "attn_vs_target_mean": {
+   "p": 0.0165,
+   "q_BH": 0.0385
+  },
+  "attn_vs_target_1_minus_dropout": {
+   "p": 0.0055,
+   "q_BH": 0.01925
+  },
+  "label_shuffle": {
+   "p": 0.000999000999000999,
+   "q_BH": 0.006993006993006993
+  },
+  "degree_preserving_null": {
+   "p": 0.14427860696517414,
+   "q_BH": 0.20199004975124382
+  },
+  "incremental_LR_crossTF": {
+   "p": 0.5934999999999999,
+   "q_BH": 0.6924166666666666
+  },
+  "incremental_GBDT_crossTF": {
+   "p": 0.7314999999999999,
+   "q_BH": 0.7314999999999999
+  }
+ },
+ "estimates": [
+  {
+   "name": "AUROC_attn_tf_to_target",
+   "value": 0.5947755460533494,
+   "ci_low": 0.5031039325305064,
+   "ci_high": 0.6834641301863217,
+   "method_of_uncertainty": "two-way pigeonhole bootstrap (2000 resamples): TFs (n=42) and candidate target genes (n=1500) resampled independently with replacement, pair weight = product of multiplicities; percentile 95% CI"
+  },
+  {
+   "name": "AUROC_attn_target_to_tf",
+   "value": 0.5180117853340214,
+   "ci_low": 0.3997035817828212,
+   "ci_high": 0.6384509004082678,
+   "method_of_uncertainty": "two-way pigeonhole bootstrap (2000 resamples): TFs (n=42) and candidate target genes (n=1500) resampled independently with replacement, pair weight = product of multiplicities; percentile 95% CI"
+  },
+  {
+   "name": "AUROC_attn_symmetric_mean",
+   "value": 0.6064692746739607,
+   "ci_low": 0.5187005398279413,
+   "ci_high": 0.6888075289953761,
+   "method_of_uncertainty": "two-way pigeonhole bootstrap (2000 resamples): TFs (n=42) and candidate target genes (n=1500) resampled independently with replacement, pair weight = product of multiplicities; percentile 95% CI"
+  },
+  {
+   "name": "AUROC_attn_double_centred",
+   "value": 0.5406785520454473,
+   "ci_low": 0.4553739656859651,
+   "ci_high": 0.6203369947627444,
+   "method_of_uncertainty": "two-way pigeonhole bootstrap (2000 resamples): TFs (n=42) and candidate target genes (n=1500) resampled independently with replacement, pair weight = product of multiplicities; percentile 95% CI"
+  },
+  {
+   "name": "AUROC_target_variance",
+   "value": 0.6942433140716483,
+   "ci_low": 0.6039440246043748,
+   "ci_high": 0.7678120627371585,
+   "method_of_uncertainty": "two-way pigeonhole bootstrap (2000 resamples): TFs (n=42) and candidate target genes (n=1500) resampled independently with replacement, pair weight = product of multiplicities; percentile 95% CI"
+  },
+  {
+   "name": "AUROC_target_mean",
+   "value": 0.4538956002248245,
+   "ci_low": 0.32865012705569974,
+   "ci_high": 0.5847559675655558,
+   "method_of_uncertainty": "two-way pigeonhole bootstrap (2000 resamples): TFs (n=42) and candidate target genes (n=1500) resampled independently with replacement, pair weight = product of multiplicities; percentile 95% CI"
+  },
+  {
+   "name": "AUROC_target_1_minus_dropout",
+   "value": 0.4181136100307454,
+   "ci_low": 0.2932987466258142,
+   "ci_high": 0.5448447827963667,
+   "method_of_uncertainty": "two-way pigeonhole bootstrap (2000 resamples): TFs (n=42) and candidate target genes (n=1500) resampled independently with replacement, pair weight = product of multiplicities; percentile 95% CI"
+  },
+  {
+   "name": "delta_AUROC_attn_minus_target_variance",
+   "value": -0.09946776801829893,
+   "ci_low": -0.21467093134044152,
+   "ci_high": 0.012853146124161448,
+   "method_of_uncertainty": "two-way pigeonhole bootstrap (2000 resamples): TFs (n=42) and candidate target genes (n=1500) resampled independently with replacement, pair weight = product of multiplicities; percentile 95% CI (paired); two-sided bootstrap p = 0.0745"
+  },
+  {
+   "name": "delta_AUROC_attn_minus_target_mean",
+   "value": 0.14087994582852487,
+   "ci_low": 0.028111240404187925,
+   "ci_high": 0.2480877899456227,
+   "method_of_uncertainty": "two-way pigeonhole bootstrap (2000 resamples): TFs (n=42) and candidate target genes (n=1500) resampled independently with replacement, pair weight = product of multiplicities; percentile 95% CI (paired); two-sided bootstrap p = 0.0165"
+  },
+  {
+   "name": "delta_AUROC_attn_minus_target_1_minus_dropout",
+   "value": 0.176661936022604,
+   "ci_low": 0.06313840507761123,
+   "ci_high": 0.2859198787834109,
+   "method_of_uncertainty": "two-way pigeonhole bootstrap (2000 resamples): TFs (n=42) and candidate target genes (n=1500) resampled independently with replacement, pair weight = product of multiplicities; percentile 95% CI (paired); two-sided bootstrap p = 0.0055"
+  },
+  {
+   "name": "AUPRC_attn_tf_to_target",
+   "value": 0.005964180752212797,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "point estimate only; base rate = 173/62958 = 0.00275"
+  },
+  {
+   "name": "AUROC_attn_tf_to_target_TFonly_bootstrap",
+   "value": 0.5947755460533494,
+   "ci_low": 0.5379818859799353,
+   "ci_high": 0.645070388795552,
+   "method_of_uncertainty": "cluster bootstrap over TFs only (2000 resamples), percentile 95% CI"
+  },
+  {
+   "name": "label_shuffle_null_mean_AUROC",
+   "value": 0.5005039087426076,
+   "ci_low": 0.46002098408137504,
+   "ci_high": 0.543507722703547,
+   "method_of_uncertainty": "1000 label permutations; interval = central 95% of the null distribution"
+  },
+  {
+   "name": "label_shuffle_z",
+   "value": 4.413433035481115,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "z of observed AUROC vs 1000-permutation null; one-sided permutation p = 0.000999"
+  },
+  {
+   "name": "degree_null_mean_AUROC",
+   "value": 0.5791008561652506,
+   "ci_low": 0.5531702005329685,
+   "ci_high": 0.6089088599915023,
+   "method_of_uncertainty": "curveball null preserving TF out-degree and target in-degree (200 draws, 1000 trades each); interval = central 95% of the null distribution"
+  },
+  {
+   "name": "degree_null_sd_AUROC",
+   "value": 0.014030655982381707,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "SD of curveball null distribution"
+  },
+  {
+   "name": "degree_null_z",
+   "value": 1.117174414922683,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "z of observed AUROC vs curveball null; one-sided p = 0.1443"
+  },
+  {
+   "name": "AUROC_degree_confound_component",
+   "value": 0.07910085616525064,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "curveball-null mean minus 0.5 (decomposition, point)"
+  },
+  {
+   "name": "AUROC_excess_over_degree_null",
+   "value": 0.015674689888098725,
+   "ci_low": -0.01413331393815298,
+   "ci_high": 0.041605345520380865,
+   "method_of_uncertainty": "observed minus curveball-null mean; interval = observed minus null 97.5/2.5 percentiles"
+  },
+  {
+   "name": "approx_min_detectable_excess_over_degree_null",
+   "value": 0.03488722610019211,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "(z_0.95 + z_0.80) x null SD; one-sided alpha 0.05, 80% power, normal approximation"
+  },
+  {
+   "name": "degree_null_z_within_TF",
+   "value": 0.9022106107571289,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "within-TF pooled AUROC vs curveball null; one-sided p = 0.2189"
+  },
+  {
+   "name": "degree_null_z_attn_target_to_tf",
+   "value": 1.7664850181403537,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "sensitivity score vs the same curveball null draws; observed AUROC 0.518, null mean 0.492, one-sided p = 0.04478"
+  },
+  {
+   "name": "degree_null_z_attn_symmetric_mean",
+   "value": 2.0698632162325796,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "sensitivity score vs the same curveball null draws; observed AUROC 0.606, null mean 0.572, one-sided p = 0.00995"
+  },
+  {
+   "name": "degree_null_z_attn_double_centred",
+   "value": 1.4741288856034356,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "sensitivity score vs the same curveball null draws; observed AUROC 0.541, null mean 0.513, one-sided p = 0.06468"
+  },
+  {
+   "name": "AUROC_within_TF_attn_tf_to_target",
+   "value": 0.575589340621797,
+   "ci_low": 0.4637623402909607,
+   "ci_high": 0.6855339348032422,
+   "method_of_uncertainty": "two-way pigeonhole bootstrap (2000 resamples): TFs (n=42) and candidate target genes (n=1500) resampled independently with replacement, pair weight = product of multiplicities; percentile 95% CI"
+  },
+  {
+   "name": "AUROC_within_TF_target_variance",
+   "value": 0.6950453458396745,
+   "ci_low": 0.5674208217181358,
+   "ci_high": 0.7850606683036129,
+   "method_of_uncertainty": "two-way pigeonhole bootstrap (2000 resamples): TFs (n=42) and candidate target genes (n=1500) resampled independently with replacement, pair weight = product of multiplicities; percentile 95% CI"
+  },
+  {
+   "name": "mean_per_TF_AUROC_TFs_ge3_targets",
+   "value": 0.5866704658777739,
+   "ci_low": 0.5402049871340375,
+   "ci_high": 0.6389722197658859,
+   "method_of_uncertainty": "bootstrap over the 16 TFs with >=3 targets (2000 resamples; ignores target sharing); Wilcoxon vs 0.5 p = 0.00214"
+  },
+  {
+   "name": "n_TFs_ge3_targets_with_CI_above_0.5",
+   "value": 3.0,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "count out of 16 TFs; per-TF stratified bootstrap of positives and negatives (2000 resamples)"
+  },
+  {
+   "name": "AUROC_attn_tf_to_target_direction_known",
+   "value": 0.6029218721262587,
+   "ci_low": 0.4915334114181316,
+   "ci_high": 0.7093075339641035,
+   "method_of_uncertainty": "two-way pigeonhole bootstrap (2000 resamples): TFs (n=42) and candidate target genes (n=1500) resampled independently with replacement, pair weight = product of multiplicities; percentile 95% CI; 106 Activation/Repression pairs, 32 TFs, Unknown-only pairs excluded"
+  },
+  {
+   "name": "residual_R2_OLS",
+   "value": 0.08029685515763085,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "cross-fitted (5-fold) out-of-fold R^2 of log attention on covariates; point estimate"
+  },
+  {
+   "name": "AUROC_residualised_attn_OLS",
+   "value": 0.5433807732692678,
+   "ci_low": 0.4509904426060099,
+   "ci_high": 0.6355054706986158,
+   "method_of_uncertainty": "two-way pigeonhole bootstrap (2000 resamples): TFs (n=42) and candidate target genes (n=1500) resampled independently with replacement, pair weight = product of multiplicities; percentile 95% CI (residuals held fixed)"
+  },
+  {
+   "name": "signal_retained_fraction_OLS",
+   "value": 0.45772116411599123,
+   "ci_low": -1.812610009735788,
+   "ci_high": 0.9466532051955838,
+   "method_of_uncertainty": "two-way pigeonhole bootstrap (2000 resamples): TFs (n=42) and candidate target genes (n=1500) resampled independently with replacement, pair weight = product of multiplicities; percentile 95% CI; ratio (AUROC_resid - 0.5)/(AUROC_raw - 0.5), paired (unstable when raw AUROC near 0.5)"
+  },
+  {
+   "name": "residual_R2_GBDT",
+   "value": 0.39216595836386503,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "cross-fitted (5-fold) out-of-fold R^2 of log attention on covariates; point estimate"
+  },
+  {
+   "name": "AUROC_residualised_attn_GBDT",
+   "value": 0.5429090284717871,
+   "ci_low": 0.4617274288979392,
+   "ci_high": 0.6196623861986378,
+   "method_of_uncertainty": "two-way pigeonhole bootstrap (2000 resamples): TFs (n=42) and candidate target genes (n=1500) resampled independently with replacement, pair weight = product of multiplicities; percentile 95% CI (residuals held fixed)"
+  },
+  {
+   "name": "signal_retained_fraction_GBDT",
+   "value": 0.4527436692122411,
+   "ci_low": -1.2901935758041998,
+   "ci_high": 1.5252522616658992,
+   "method_of_uncertainty": "two-way pigeonhole bootstrap (2000 resamples): TFs (n=42) and candidate target genes (n=1500) resampled independently with replacement, pair weight = product of multiplicities; percentile 95% CI; ratio (AUROC_resid - 0.5)/(AUROC_raw - 0.5), paired (unstable when raw AUROC near 0.5)"
+  },
+  {
+   "name": "residual_R2_OLS_plus_log_pair_count",
+   "value": 0.08897990746400342,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "cross-fitted (5-fold) out-of-fold R^2 of log attention on covariates; point estimate"
+  },
+  {
+   "name": "AUROC_residualised_attn_OLS_plus_log_pair_count",
+   "value": 0.5481768453769884,
+   "ci_low": 0.4478813021329942,
+   "ci_high": 0.6472824773489022,
+   "method_of_uncertainty": "two-way pigeonhole bootstrap (2000 resamples): TFs (n=42) and candidate target genes (n=1500) resampled independently with replacement, pair weight = product of multiplicities; percentile 95% CI (residuals held fixed)"
+  },
+  {
+   "name": "signal_retained_fraction_OLS_plus_log_pair_count",
+   "value": 0.5083256956374543,
+   "ci_low": -1.937365123513633,
+   "ci_high": 1.0669106317840753,
+   "method_of_uncertainty": "two-way pigeonhole bootstrap (2000 resamples): TFs (n=42) and candidate target genes (n=1500) resampled independently with replacement, pair weight = product of multiplicities; percentile 95% CI; ratio (AUROC_resid - 0.5)/(AUROC_raw - 0.5), paired (unstable when raw AUROC near 0.5)"
+  },
+  {
+   "name": "AUROC_gene_only_LR_crossTF",
+   "value": 0.710896761634001,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "out-of-fold AUROC, point estimate"
+  },
+  {
+   "name": "delta_AUROC_gene_plus_attn_minus_gene_LR_crossTF",
+   "value": 0.009561486327548718,
+   "ci_low": -0.022622178575045174,
+   "ci_high": 0.0430289970016003,
+   "method_of_uncertainty": "two-way pigeonhole bootstrap (2000 resamples): TFs (n=42) and candidate target genes (n=1500) resampled independently with replacement, pair weight = product of multiplicities; percentile 95% CI on out-of-fold predictions (paired); two-sided bootstrap p = 0.593"
+  },
+  {
+   "name": "AUROC_gene_only_LR_crossGene",
+   "value": 0.7282505992328163,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "out-of-fold AUROC, point estimate"
+  },
+  {
+   "name": "delta_AUROC_gene_plus_attn_minus_gene_LR_crossGene",
+   "value": -0.006488424345677424,
+   "ci_low": -0.042447978335767446,
+   "ci_high": 0.023688052072810994,
+   "method_of_uncertainty": "two-way pigeonhole bootstrap (2000 resamples): TFs (n=42) and candidate target genes (n=1500) resampled independently with replacement, pair weight = product of multiplicities; percentile 95% CI on out-of-fold predictions (paired); two-sided bootstrap p = 0.637"
+  },
+  {
+   "name": "AUROC_gene_only_LR_joint",
+   "value": 0.6907150820194299,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "out-of-fold AUROC, point estimate"
+  },
+  {
+   "name": "delta_AUROC_gene_plus_attn_minus_gene_LR_joint",
+   "value": -0.011131877500163978,
+   "ci_low": -0.08656569619664653,
+   "ci_high": 0.06619352159583022,
+   "method_of_uncertainty": "two-way pigeonhole bootstrap (2000 resamples): TFs (n=42) and candidate target genes (n=1500) resampled independently with replacement, pair weight = product of multiplicities; percentile 95% CI on out-of-fold predictions (paired); two-sided bootstrap p = 0.778"
+  },
+  {
+   "name": "AUROC_gene_only_GBDT_crossTF",
+   "value": 0.758740421136266,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "out-of-fold AUROC, point estimate"
+  },
+  {
+   "name": "delta_AUROC_gene_plus_attn_minus_gene_GBDT_crossTF",
+   "value": -0.003032691159526424,
+   "ci_low": -0.027266404308410798,
+   "ci_high": 0.022639769186842337,
+   "method_of_uncertainty": "two-way pigeonhole bootstrap (2000 resamples): TFs (n=42) and candidate target genes (n=1500) resampled independently with replacement, pair weight = product of multiplicities; percentile 95% CI on out-of-fold predictions (paired); two-sided bootstrap p = 0.731"
+  },
+  {
+   "name": "AUROC_gene_only_GBDT_crossGene",
+   "value": 0.7504564849028316,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "out-of-fold AUROC, point estimate"
+  },
+  {
+   "name": "delta_AUROC_gene_plus_attn_minus_gene_GBDT_crossGene",
+   "value": -0.0004990422862498622,
+   "ci_low": -0.02464864321385321,
+   "ci_high": 0.020142378591809493,
+   "method_of_uncertainty": "two-way pigeonhole bootstrap (2000 resamples): TFs (n=42) and candidate target genes (n=1500) resampled independently with replacement, pair weight = product of multiplicities; percentile 95% CI on out-of-fold predictions (paired); two-sided bootstrap p = 0.978"
+  },
+  {
+   "name": "AUROC_gene_only_GBDT_joint",
+   "value": 0.6197865433798938,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "out-of-fold AUROC, point estimate"
+  },
+  {
+   "name": "delta_AUROC_gene_plus_attn_minus_gene_GBDT_joint",
+   "value": 0.022020179309181875,
+   "ci_low": -0.0653574285408068,
+   "ci_high": 0.12382721049444352,
+   "method_of_uncertainty": "two-way pigeonhole bootstrap (2000 resamples): TFs (n=42) and candidate target genes (n=1500) resampled independently with replacement, pair weight = product of multiplicities; percentile 95% CI on out-of-fold predictions (paired); two-sided bootstrap p = 0.66"
+  }
+ ]
+}

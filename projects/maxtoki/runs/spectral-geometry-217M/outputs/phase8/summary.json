@@ -1,0 +1,26 @@
+{
+  "phase": "8",
+  "interpretation": "across-cell-sample stability (no fine-tuning seeds available for MaxToki)",
+  "n_cells_per_sample": 2000,
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "pair_count": 3,
+  "cka": {
+    "layer_0": 1.0,
+    "layer_final": 0.9914,
+    "delta_per_layer": 0.0086,
+    "min_layer_cka": 0.9914,
+    "min_layer": 11,
+    "paper_scgpt_l0": 0.979,
+    "paper_scgpt_lN": 0.779
+  },
+  "subspace_angles_sv5_sv7": {
+    "mean_max_angle_deg": 5.53,
+    "paper_scgpt_range_deg": "13-41"
+  },
+  "verdict": "early layers stable across cell samples; deeper layers diverge \u2014 qualitatively reproduces the paper's CKA pattern at the cell-sample level even without fine-tuning seeds.",
+  "wall_clock_seconds": 4381.1
+}

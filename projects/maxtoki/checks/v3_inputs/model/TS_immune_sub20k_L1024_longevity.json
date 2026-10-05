@@ -1,0 +1,77 @@
+{
+ "group": "TS_immune_sub20k_L1024_longevity",
+ "dataset": "ts_immune_sub20k",
+ "max_len": 1024,
+ "rows": [
+  9632,
+  11044,
+  13460,
+  17641,
+  19356
+ ],
+ "encoding_check": {
+  "label": "TS_immune_sub20k_L1024_longevity",
+  "n_checked": 5,
+  "n_cells": 5,
+  "all_pass": true,
+  "max_order_violations": 0,
+  "n_positions_tie_reordered": 0,
+  "check": "inputs_v3.check_encoding (token order == counts/median order; counts count-like)"
+ },
+ "cells": [
+  {
+   "row": 9632,
+   "assay": "10x 3' v3",
+   "n_tokens": 1024,
+   "finite": true,
+   "nll_mean": 3.6529366970062256,
+   "nll_first200": 4.940224647521973,
+   "top1": 0.15557730197906494,
+   "top1_first200": 0.06499999761581421
+  },
+  {
+   "row": 11044,
+   "assay": "10x 3' v3",
+   "n_tokens": 1024,
+   "finite": true,
+   "nll_mean": 3.561660051345825,
+   "nll_first200": 4.524857044219971,
+   "top1": 0.17123287916183472,
+   "top1_first200": 0.08500000089406967
+  },
+  {
+   "row": 13460,
+   "assay": "10x 3' v3",
+   "n_tokens": 1024,
+   "finite": true,
+   "nll_mean": 3.7066681385040283,
+   "nll_first200": 5.004739284515381,
+   "top1": 0.13894325494766235,
+   "top1_first200": 0.08500000089406967
+  },
+  {
+   "row": 17641,
+   "assay": "10x 3' v3",
+   "n_tokens": 354,
+   "finite": true,
+   "nll_mean": 3.659003257751465,
+   "nll_first200": 4.010528087615967,
+   "top1": 0.2130681872367859,
+   "top1_first200": 0.20999999344348907
+  },
+  {
+   "row": 19356,
+   "assay": "10x 5' v2",
+   "n_tokens": 1024,
+   "finite": true,
+   "nll_mean": 3.604724645614624,
+   "nll_first200": 5.0351667404174805,
+   "top1": 0.1340508759021759,
+   "top1_first200": 0.07000000029802322
+  }
+ ],
+ "zero_delta_max_abs_logit_diff": null,
+ "pass": true,
+ "wall_s": 2.3387551307678223,
+ "free_gb_before": 6.046859264
+}

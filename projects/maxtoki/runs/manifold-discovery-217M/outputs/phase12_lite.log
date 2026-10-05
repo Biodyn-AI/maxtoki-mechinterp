@@ -1,0 +1,180 @@
+======================================================================
+PHASE 12 (lite) — anchor-level benchmark vs simple baselines
+======================================================================
+  features: avg_pool (290, 1232), pca10 (290, 10), svd10 (290, 10), drift (290, 2464)
+  donors (splits): ['TSP12', 'TSP15', 'TSP17', 'TSP2', 'TSP20', 'TSP28', 'TSP3', 'TSP30', 'TSP4', 'TSP5', 'TSP9']
+  skipping donor TSP12: n_test=2
+  [split-1] trained 1500 epochs in 7.0s
+<CONDA_ROOT>/lib/python3.11/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<CONDA_ROOT>/lib/python3.11/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<CONDA_ROOT>/lib/python3.11/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<CONDA_ROOT>/lib/python3.11/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<CONDA_ROOT>/lib/python3.11/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<CONDA_ROOT>/lib/python3.11/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<CONDA_ROOT>/lib/python3.11/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<CONDA_ROOT>/lib/python3.11/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<CONDA_ROOT>/lib/python3.11/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<CONDA_ROOT>/lib/python3.11/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<CONDA_ROOT>/lib/python3.11/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+  split 2/11 (donor TSP15, n_test=13) done
+  [split-2] trained 1500 epochs in 7.1s
+<CONDA_ROOT>/lib/python3.11/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<CONDA_ROOT>/lib/python3.11/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<CONDA_ROOT>/lib/python3.11/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<CONDA_ROOT>/lib/python3.11/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+  split 3/11 (donor TSP17, n_test=14) done
+  [split-3] trained 1500 epochs in 2.8s
+  split 4/11 (donor TSP2, n_test=187) done
+  [split-4] trained 1500 epochs in 7.0s
+<CONDA_ROOT>/lib/python3.11/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<CONDA_ROOT>/lib/python3.11/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<CONDA_ROOT>/lib/python3.11/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<CONDA_ROOT>/lib/python3.11/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+  split 5/11 (donor TSP20, n_test=17) done
+  [split-5] trained 1500 epochs in 7.0s
+<CONDA_ROOT>/lib/python3.11/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<CONDA_ROOT>/lib/python3.11/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<CONDA_ROOT>/lib/python3.11/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<CONDA_ROOT>/lib/python3.11/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<CONDA_ROOT>/lib/python3.11/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<CONDA_ROOT>/lib/python3.11/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+  split 6/11 (donor TSP28, n_test=4) done
+  [split-6] trained 1500 epochs in 7.2s
+<CONDA_ROOT>/lib/python3.11/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<CONDA_ROOT>/lib/python3.11/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<CONDA_ROOT>/lib/python3.11/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<CONDA_ROOT>/lib/python3.11/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<CONDA_ROOT>/lib/python3.11/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<CONDA_ROOT>/lib/python3.11/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<CONDA_ROOT>/lib/python3.11/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+  split 7/11 (donor TSP3, n_test=5) done
+  skipping donor TSP30: n_test=2
+  [split-8] trained 1500 epochs in 6.4s
+<CONDA_ROOT>/lib/python3.11/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<CONDA_ROOT>/lib/python3.11/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<CONDA_ROOT>/lib/python3.11/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<CONDA_ROOT>/lib/python3.11/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<CONDA_ROOT>/lib/python3.11/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<CONDA_ROOT>/lib/python3.11/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<CONDA_ROOT>/lib/python3.11/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<CONDA_ROOT>/lib/python3.11/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+  split 9/11 (donor TSP4, n_test=32) done
+  [split-9] trained 1500 epochs in 7.0s
+<CONDA_ROOT>/lib/python3.11/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<CONDA_ROOT>/lib/python3.11/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<CONDA_ROOT>/lib/python3.11/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<CONDA_ROOT>/lib/python3.11/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<CONDA_ROOT>/lib/python3.11/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<CONDA_ROOT>/lib/python3.11/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<CONDA_ROOT>/lib/python3.11/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<CONDA_ROOT>/lib/python3.11/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<CONDA_ROOT>/lib/python3.11/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<CONDA_ROOT>/lib/python3.11/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<CONDA_ROOT>/lib/python3.11/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<CONDA_ROOT>/lib/python3.11/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+  split 10/11 (donor TSP5, n_test=7) done
+  [split-10] trained 1500 epochs in 7.0s
+<CONDA_ROOT>/lib/python3.11/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<CONDA_ROOT>/lib/python3.11/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<CONDA_ROOT>/lib/python3.11/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<CONDA_ROOT>/lib/python3.11/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+<CONDA_ROOT>/lib/python3.11/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+  split 11/11 (donor TSP9, n_test=7) done
+
+=== MEAN ± STD per baseline × endpoint (over splits) ===
+                           branch_balanced_acc        stage_balanced_acc        cd_auroc        mm_auroc        pseudotime_spearman       
+                                          mean    std               mean    std     mean    std     mean    std                mean    std
+baseline                                                                                                                                  
+extracted_let_drift_anchor               0.829  0.175              0.639  0.265    0.905  0.088    0.786  0.191              -0.022  0.547
+extracted_let_z10                        0.756  0.157              0.551  0.212    0.790  0.078    0.918  0.116               0.262  0.337
+frozen_maxtoki_avgpool                   0.792  0.164              0.665  0.213    0.874  0.051    0.960  0.090               0.537  0.388
+pca10                                    0.844  0.173              0.595  0.275    0.735  0.086    0.948  0.116               0.509  0.454
+raw_log1p                                0.142  0.158              0.081  0.075    0.619  0.104    0.763  0.252               0.085  0.558
+svd10                                    0.837  0.190              0.635  0.251    0.693  0.050    0.949  0.114               0.500  0.464
+
+=== PAIRED WILCOXON (extracted_let_z10 vs each baseline), BH-FDR ===
+           endpoint                   baseline  n_paired  delta_mean        p     bh_q  sig_at_05
+branch_balanced_acc                  raw_log1p         9    0.614817 0.003906 0.048828       True
+branch_balanced_acc                      pca10         9   -0.087643 0.062500 0.260417      False
+branch_balanced_acc                      svd10         9   -0.080089 0.156250 0.341797      False
+branch_balanced_acc     frozen_maxtoki_avgpool         9   -0.035143 0.125000 0.341797      False
+branch_balanced_acc extracted_let_drift_anchor         9   -0.072906 0.062500 0.260417      False
+ stage_balanced_acc                  raw_log1p         9    0.469414 0.003906 0.048828       True
+ stage_balanced_acc                      pca10         9   -0.044872 0.734375 0.798234      False
+ stage_balanced_acc                      svd10         9   -0.084715 0.140625 0.341797      False
+ stage_balanced_acc     frozen_maxtoki_avgpool         9   -0.114004 0.015625 0.097656      False
+ stage_balanced_acc extracted_let_drift_anchor         9   -0.088754 0.250000 0.367647      False
+           cd_auroc                  raw_log1p         3    0.170363 0.250000 0.367647      False
+           cd_auroc                      pca10         3    0.054976 0.500000 0.595238      False
+           cd_auroc                      svd10         3    0.096566 0.250000 0.367647      False
+           cd_auroc     frozen_maxtoki_avgpool         3   -0.084594 0.500000 0.595238      False
+           cd_auroc extracted_let_drift_anchor         3   -0.115942 0.250000 0.367647      False
+           mm_auroc                  raw_log1p         5    0.154926 0.500000 0.595238      False
+           mm_auroc                      pca10         5   -0.030499 1.000000 1.000000      False
+           mm_auroc                      svd10         5   -0.031511 1.000000 1.000000      False
+           mm_auroc     frozen_maxtoki_avgpool         5   -0.042240 0.500000 0.595238      False
+           mm_auroc extracted_let_drift_anchor         5    0.131309 0.625000 0.710227      False
+pseudotime_spearman                  raw_log1p         9    0.176974 0.128906 0.341797      False
+pseudotime_spearman                      pca10         9   -0.246936 0.164062 0.341797      False
+pseudotime_spearman                      svd10         9   -0.238238 0.097656 0.341797      False
+pseudotime_spearman     frozen_maxtoki_avgpool         9   -0.275247 0.007812 0.065104      False
+pseudotime_spearman extracted_let_drift_anchor         9    0.284646 0.250000 0.367647      False
+
+Phase 12 (lite) complete in 100.5s

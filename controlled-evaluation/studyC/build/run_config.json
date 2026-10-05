@@ -1,0 +1,32 @@
+{
+ "task": "Study C pre-audit snapshot",
+ "cutoff_local_time": "2026-05-07T16:57",
+ "source_roots": [
+  "<REPO_ROOT>/projects/maxtoki",
+  "<REPO_ROOT>/pipelines",
+  "<DATA_ROOT> (reference_data only)"
+ ],
+ "snapshot": "<EVAL_ROOT>/studyC/snapshot/maxtoki",
+ "snapshot_files": 1862,
+ "snapshot_bytes": 221724556,
+ "seeds": "none (no random steps)",
+ "scripts_sha256": {
+  "build_snapshot.py": "a6b4a16e4cfb76af8ec79d8cd0b466f031d9a80d415b37a2f3584f9d6a7b347f",
+  "leak_scan.py": "9a07e88508a8db65e81e433d9119e76d70511a1a4833b6dbfcf9c163446f2bf1",
+  "build_manifest.py": "6e40ed880f1ce303fd874b2b33ec75041f2201c591542b4e920050b81aeacec0"
+ },
+ "outputs_sha256": {
+  "snapshot_inventory.json": "2c22b60dd139251ebef7d4476ff9eac5161b5896466627d2df25140bdb6b033c",
+  "leak_scan_results.json": "2f314d07250f4e53941f587c7245d7a1df304e49d53e4f80e66539ab1ef9ff1c",
+  "snapshot_files_sha256.tsv": "5f72174073d9491804a0d72fc629fa34ca6dca9d59981f71c92bdb874e8fb7da"
+ },
+ "reconstructed_sources_sha256": {
+  "<REPO_ROOT>/projects/maxtoki/runs/topology-141-217M/FINAL_SUMMARY.md": "13b028abd0db9c62d0b515df3d8bf6486e7dc4d6f1af17628c336aba97d48864",
+  "<REPO_ROOT>/projects/maxtoki/runs/longevity-mechinterp-217M/FINAL_SUMMARY.md": "9bdb23a6631ed0a0263dbb82d0f57174d0592b040a21f06a4d141ac5c66e6c67",
+  "<REPO_ROOT>/projects/maxtoki/summaries/circuit-tracing-217M-FINAL_SUMMARY.md": "bc7ceeb149cb65c1520250d675c39b1269e59efe197703c1a4c2dbf5c5c4d94a",
+  "<REPO_ROOT>/projects/maxtoki/summaries/sae-atlas-217M-FINAL_SUMMARY.md": "4e4d3f485bc215b00db1932e87c3c2cfe23ce995a65ebb860aeb33824ca4e4fb",
+  "<REPO_ROOT>/projects/maxtoki/summaries/manifold-discovery-217M-FINAL_SUMMARY.md": "10e5b8f89d814eff1f701c6c72bbd4bd24d7f3e1f5b353e7137577c28672772a",
+  "<REPO_ROOT>/projects/maxtoki/summaries/spectral-geometry-217M-FINAL_SUMMARY.md": "4f793897848bb0fa013e8ba0fcfe356cc8c740e273d1364420ebd6dc3bab2028"
+ },
+ "note": "Copied files keep their source bytes; their sha256 is listed in snapshot_files_sha256.tsv."
+}

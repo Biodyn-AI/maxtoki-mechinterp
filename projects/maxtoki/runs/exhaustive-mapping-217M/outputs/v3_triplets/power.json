@@ -1,0 +1,172 @@
+{
+  "per_target_power": {
+    "constant_kappa0.05": {
+      "triplets_any_target_BH_within": 64,
+      "triplets_any_target_BH_across_64": 64,
+      "targets_BH_across_64_total": 235664,
+      "n_triplets": 64
+    },
+    "constant_kappa0.1": {
+      "triplets_any_target_BH_within": 64,
+      "triplets_any_target_BH_across_64": 64,
+      "targets_BH_across_64_total": 238975,
+      "n_triplets": 64
+    },
+    "constant_kappa0.2": {
+      "triplets_any_target_BH_within": 64,
+      "triplets_any_target_BH_across_64": 64,
+      "targets_BH_across_64_total": 246734,
+      "n_triplets": 64
+    },
+    "constant_kappa0.3": {
+      "triplets_any_target_BH_within": 64,
+      "triplets_any_target_BH_across_64": 64,
+      "targets_BH_across_64_total": 254575,
+      "n_triplets": 64
+    },
+    "constant_kappa0.5": {
+      "triplets_any_target_BH_within": 64,
+      "triplets_any_target_BH_across_64": 64,
+      "targets_BH_across_64_total": 266831,
+      "n_triplets": 64
+    },
+    "constant_kappa1.0": {
+      "triplets_any_target_BH_within": 64,
+      "triplets_any_target_BH_across_64": 64,
+      "targets_BH_across_64_total": 284312,
+      "n_triplets": 64
+    },
+    "proportional_kappa0.05": {
+      "triplets_any_target_BH_within": 64,
+      "triplets_any_target_BH_across_64": 64,
+      "targets_BH_across_64_total": 12063,
+      "n_triplets": 64
+    },
+    "proportional_kappa0.1": {
+      "triplets_any_target_BH_within": 64,
+      "triplets_any_target_BH_across_64": 64,
+      "targets_BH_across_64_total": 12516,
+      "n_triplets": 64
+    },
+    "proportional_kappa0.2": {
+      "triplets_any_target_BH_within": 64,
+      "triplets_any_target_BH_across_64": 64,
+      "targets_BH_across_64_total": 13662,
+      "n_triplets": 64
+    },
+    "proportional_kappa0.3": {
+      "triplets_any_target_BH_within": 64,
+      "triplets_any_target_BH_across_64": 64,
+      "targets_BH_across_64_total": 14730,
+      "n_triplets": 64
+    },
+    "proportional_kappa0.5": {
+      "triplets_any_target_BH_within": 64,
+      "triplets_any_target_BH_across_64": 64,
+      "targets_BH_across_64_total": 16302,
+      "n_triplets": 64
+    },
+    "proportional_kappa1.0": {
+      "triplets_any_target_BH_within": 64,
+      "triplets_any_target_BH_across_64": 64,
+      "targets_BH_across_64_total": 17962,
+      "n_triplets": 64
+    }
+  },
+  "per_target_power_note": "constant: kappa x (cell-mean joint effect) added to every cell; proportional: kappa x (that cell's own joint effect) added to each cell. t-test over 20 cells, BH at q<0.05. Same 64 triplets as the analyze power check.",
+  "aggregate_signflip_power_proportional_plant": {
+    "0.05": {
+      "detected_p05": 64,
+      "detected_BH05_within_64": 64,
+      "n_triplets": 64
+    },
+    "0.1": {
+      "detected_p05": 64,
+      "detected_BH05_within_64": 64,
+      "n_triplets": 64
+    },
+    "0.2": {
+      "detected_p05": 64,
+      "detected_BH05_within_64": 64,
+      "n_triplets": 64
+    },
+    "0.3": {
+      "detected_p05": 64,
+      "detected_BH05_within_64": 64,
+      "n_triplets": 64
+    },
+    "0.5": {
+      "detected_p05": 64,
+      "detected_BH05_within_64": 64,
+      "n_triplets": 64
+    },
+    "1.0": {
+      "detected_p05": 64,
+      "detected_BH05_within_64": 64,
+      "n_triplets": 64
+    }
+  },
+  "targets_with_BH_significant_effect_per_triplet(t-test, q<0.05 within triplet)": {
+    "A": {
+      "n": 512,
+      "mean": 446.0,
+      "std": 186.69447188308106,
+      "min": 246.0,
+      "p05": 246.0,
+      "p25": 353.75,
+      "median": 415.0,
+      "p75": 464.25,
+      "p95": 890.0,
+      "max": 890.0
+    },
+    "B": {
+      "n": 512,
+      "mean": 277.25,
+      "std": 178.58955994056643,
+      "min": 0.0,
+      "p05": 0.0,
+      "p25": 141.5,
+      "median": 283.5,
+      "p75": 399.5,
+      "p95": 577.0,
+      "max": 577.0
+    },
+    "C": {
+      "n": 512,
+      "mean": 1476.875,
+      "std": 149.42546198304157,
+      "min": 1150.0,
+      "p05": 1150.0,
+      "p25": 1427.5,
+      "median": 1502.0,
+      "p75": 1571.75,
+      "p95": 1672.0,
+      "max": 1672.0
+    },
+    "ABC": {
+      "n": 512,
+      "mean": 317.533203125,
+      "std": 203.5857014592223,
+      "min": 21.0,
+      "p05": 89.0,
+      "p25": 181.0,
+      "median": 273.5,
+      "p75": 370.0,
+      "p95": 829.45,
+      "max": 897.0
+    },
+    "I": {
+      "n": 512,
+      "mean": 0.0078125,
+      "std": 0.08812850872947202,
+      "min": 0.0,
+      "p05": 0.0,
+      "p25": 0.0,
+      "median": 0.0,
+      "p75": 0.0,
+      "p95": 0.0,
+      "max": 1.0
+    }
+  },
+  "wall_seconds": 19.9
+}

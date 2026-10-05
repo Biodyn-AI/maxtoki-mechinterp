@@ -1,0 +1,77 @@
+{
+ "group": "TS_immune_L2048",
+ "dataset": "ts_immune",
+ "max_len": 2048,
+ "rows": [
+  2987,
+  284398,
+  332632,
+  454307,
+  461830
+ ],
+ "encoding_check": {
+  "label": "TS_immune_L2048",
+  "n_checked": 5,
+  "n_cells": 5,
+  "all_pass": true,
+  "max_order_violations": 0,
+  "n_positions_tie_reordered": 0,
+  "check": "inputs_v3.check_encoding (token order == counts/median order; counts count-like)"
+ },
+ "cells": [
+  {
+   "row": 2987,
+   "assay": "Smart-seq2",
+   "n_tokens": 1422,
+   "finite": true,
+   "nll_mean": 7.655220985412598,
+   "nll_first200": 8.505455017089844,
+   "top1": 0.01267605647444725,
+   "top1_first200": 0.004999999888241291
+  },
+  {
+   "row": 284398,
+   "assay": "10x 3' v3",
+   "n_tokens": 2048,
+   "finite": true,
+   "nll_mean": 3.304506540298462,
+   "nll_first200": 5.294156074523926,
+   "top1": 0.17253176867961884,
+   "top1_first200": 0.08500000089406967
+  },
+  {
+   "row": 332632,
+   "assay": "10x 3' v3",
+   "n_tokens": 1444,
+   "finite": true,
+   "nll_mean": 3.020979881286621,
+   "nll_first200": 4.344282627105713,
+   "top1": 0.2295423001050949,
+   "top1_first200": 0.10999999940395355
+  },
+  {
+   "row": 454307,
+   "assay": "10x 3' v3",
+   "n_tokens": 1417,
+   "finite": true,
+   "nll_mean": 3.484240770339966,
+   "nll_first200": 5.10659122467041,
+   "top1": 0.18586573004722595,
+   "top1_first200": 0.07500000298023224
+  },
+  {
+   "row": 461830,
+   "assay": "10x 3' v3",
+   "n_tokens": 2048,
+   "finite": true,
+   "nll_mean": 3.5240066051483154,
+   "nll_first200": 5.1636857986450195,
+   "top1": 0.1671554297208786,
+   "top1_first200": 0.05999999865889549
+  }
+ ],
+ "zero_delta_max_abs_logit_diff": null,
+ "pass": true,
+ "wall_s": 4.520378828048706,
+ "free_gb_before": 6.26221056
+}

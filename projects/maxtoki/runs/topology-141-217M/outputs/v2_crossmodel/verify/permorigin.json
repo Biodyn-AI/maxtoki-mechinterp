@@ -1,0 +1,27 @@
+{
+  "gf/lung": {
+    "randomized": {
+      "max_absdiff_exactCCA_rowperm_vs_pca_refit": 0.006663975366796582,
+      "sklearn_cca": 0.7831083123039129,
+      "exact_cca": 0.7831088077225744
+    },
+    "full": {
+      "max_absdiff_exactCCA_rowperm_vs_pca_refit": 4.440892098500626e-16,
+      "sklearn_cca": 0.7938625292113128,
+      "exact_cca": 0.7938629931481674
+    }
+  },
+  "scgpt_fixed/lung": {
+    "randomized": {
+      "max_absdiff_exactCCA_rowperm_vs_pca_refit": 0.006487717975989737,
+      "sklearn_cca": 0.7222652404791867,
+      "exact_cca": 0.7222655236663735
+    },
+    "full": {
+      "max_absdiff_exactCCA_rowperm_vs_pca_refit": 3.885780586188048e-16,
+      "sklearn_cca": 0.7295062728382228,
+      "exact_cca": 0.7295066377956287
+    }
+  },
+  "_wall_seconds": 19.089644193649292
+}

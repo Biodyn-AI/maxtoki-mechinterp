@@ -1,0 +1,80 @@
+{
+ "pairs": [
+  {
+   "query_gene": "GLUL",
+   "key_gene": "JUN",
+   "n_pair": 6,
+   "C": 2,
+   "layer8_saved": 0.00021734568872489035,
+   "layer8_rebuilt": 0.00021734568629957116,
+   "max_abs_diff_all_layers": 1.940255367396254e-11,
+   "max_rel_diff_all_layers": 9.875478116017667e-08
+  },
+  {
+   "query_gene": "TMSB10",
+   "key_gene": "RAC3",
+   "n_pair": 6,
+   "C": 6,
+   "layer8_saved": 9.59504468482919e-05,
+   "layer8_rebuilt": 9.595044260398329e-05,
+   "max_abs_diff_all_layers": 1.9402553619752433e-11,
+   "max_rel_diff_all_layers": 7.666563659243766e-08
+  },
+  {
+   "query_gene": "DDIT4",
+   "key_gene": "MT-ATP8",
+   "n_pair": 5,
+   "C": 1,
+   "layer8_saved": 0.0005513894138857722,
+   "layer8_rebuilt": 0.0005513895303010941,
+   "max_abs_diff_all_layers": 1.8626451509656805e-10,
+   "max_rel_diff_all_layers": 2.1113086123022997e-07
+  },
+  {
+   "query_gene": "TMSB10",
+   "key_gene": "KIF11",
+   "n_pair": 4,
+   "C": 4,
+   "layer8_saved": 7.495905447285622e-05,
+   "layer8_rebuilt": 7.495905083487742e-05,
+   "max_abs_diff_all_layers": 8.185452315956354e-12,
+   "max_rel_diff_all_layers": 9.557277998874195e-08
+  },
+  {
+   "query_gene": "JUN",
+   "key_gene": "SH3BGRL3",
+   "n_pair": 6,
+   "C": 5,
+   "layer8_saved": 0.0017171836225315928,
+   "layer8_rebuilt": 0.001717183554622655,
+   "max_abs_diff_all_layers": 2.716357507849543e-10,
+   "max_rel_diff_all_layers": 9.273335941464393e-08
+  },
+  {
+   "query_gene": "NFIA",
+   "key_gene": "CST3",
+   "n_pair": 5,
+   "C": 1,
+   "layer8_saved": 7.37453083274886e-05,
+   "layer8_rebuilt": 7.374531705863773e-05,
+   "max_abs_diff_all_layers": 1.8626451509656805e-10,
+   "max_rel_diff_all_layers": 1.5420259904890448e-07
+  }
+ ],
+ "n_cells_run": 24,
+ "encoding_check": {
+  "label": "verify pairs",
+  "n_checked": 24,
+  "n_cells": 24,
+  "all_pass": true,
+  "max_order_violations": 0,
+  "n_positions_tie_reordered": 4,
+  "check": "inputs_v3.check_encoding (token order == counts/median order; counts count-like)"
+ },
+ "max_abs_diff_rebuilt_vs_saved_any_pair_any_layer": 2.716357507849543e-10,
+ "max_rel_diff_rebuilt_vs_saved": 2.1113086123022997e-07,
+ "max_abs_row_sum_minus_1": 4.76837158203125e-07,
+ "max_attention_above_diagonal": 0.0,
+ "cpu_vs_mps_max_abs_diff_head_mean_attention_one_cell": 1.7881393432617188e-06,
+ "seconds": 31.98609495162964
+}

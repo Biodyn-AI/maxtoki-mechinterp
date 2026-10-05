@@ -1,0 +1,152 @@
+{
+  "pipeline": "sparse-autoencoders/03-exhaustive-mapping-and-steering",
+  "model": "MaxToki-217M-HF",
+  "experiment1_exhaustive_tracing": {
+    "source_layer": 5,
+    "downstream_layers": [
+      6,
+      8,
+      11
+    ],
+    "n_features_traced": 1000,
+    "n_cells_per_feature": 20,
+    "total_edges": 4970096,
+    "mean_edges_per_feature": 4970.1,
+    "n_features_with_gt_1000_edges": 1000,
+    "n_zero_edge_features": 0,
+    "top20_hub_annotation_rate": 0.55,
+    "overall_annotation_rate": 0.5,
+    "paper_comparison": {
+      "paper_features": 4065,
+      "paper_total_edges": 1393850,
+      "paper_top20_annotated": 0.6,
+      "paper_hub_class_pct": 0.018
+    },
+    "interpretation": "Uniformly dense circuit \u2014 100% of traced features have >1000 edges, vs paper's 1.8% heavy-tail hub class. Annotation bias replicates: top-20 hubs 55% annotated vs overall 50%, no significant enrichment."
+  },
+  "experiment2_combinatorial_ablation": {
+    "v1_greedy_selector": {
+      "n_triplets": 4,
+      "triplet_layers": [
+        0,
+        5,
+        9
+      ],
+      "measurement_layer": 11,
+      "mean_pairwise_ratio": 0.1654,
+      "mean_threeway_ratio": 0.1897,
+      "mean_pct_superadditive": 0.0,
+      "known_issue": "all 4 triplets share (L0_F0, L5_F0) base; ratios are 4x replicates of the same underlying triplet"
+    },
+    "v2_diversified_selector": {
+      "n_triplets": 4,
+      "triplet_layers": [
+        0,
+        5,
+        9
+      ],
+      "measurement_layer": 11,
+      "mean_pairwise_ratio_AB_AC_BC": 0.3235,
+      "std_pairwise_ratio": 0.0,
+      "mean_threeway_ratio": 0.1896,
+      "std_threeway_ratio": 0.0001,
+      "mean_pct_superadditive": 0.0,
+      "per_pair_means": {
+        "L0xL5_AB": 0.1653,
+        "L0xL9_AC": 0.219,
+        "L5xL9_BC": 0.586
+      },
+      "pathways_sampled": [
+        "Reactome:Post-translational Protein Modification R-HSA-597592",
+        "Reactome:Gene Expression (Transcription) R-HSA-74160",
+        "Reactome:Immune System R-HSA-168256",
+        "Reactome:Cell Cycle Checkpoints R-HSA-69620"
+      ],
+      "feature_invariance_finding": "Across 4 triplets with fully distinct L0/L5/L9 features and 4 distinct biological pathways, pairwise and three-way ratios are identical to 3-4 decimal places (std<0.0001). The per-pair spread (AB=0.165, AC=0.219, BC=0.586) confirms per-pair behaviour is not trivially fixed \u2014 it is across-triplet feature-invariance that emerges, consistent with Exp 1's uniformly dense circuit (100% of features exceed 1000 edges)."
+    },
+    "paper_comparison": {
+      "paper_pairwise_ratio": 0.74,
+      "paper_threeway_ratio": 0.59,
+      "paper_pct_superadditive": 0.0014
+    },
+    "interpretation": "MaxToki redundancy (pairwise mean 0.323 across AB/AC/BC, three-way 0.190) is deeper than Geneformer's (pairwise 0.74, three-way 0.59). Zero higher-order synergy replicates (0/2980 targets superadditive across all v1 and v2 triplets). V2 further shows per-pair ratios are nearly independent of which specific feature at each layer is chosen \u2014 MaxToki features at a given layer have approximately uniform aggregate causal magnitude."
+  },
+  "experiment3_trajectory_steering": {
+    "n_switch_features_total": 5767,
+    "n_steered_features": 15,
+    "steering_layers": [
+      0,
+      3,
+      6,
+      9,
+      11
+    ],
+    "alphas": [
+      2,
+      5
+    ],
+    "n_cells": 200,
+    "n_early_cells": 50,
+    "per_layer_summary_alpha5": {
+      "L0": {
+        "n_features": 3,
+        "mean_frac_positive_direction": 0.34,
+        "mean_frac_positive_maturity": 0.98,
+        "mean_delta_s": 0.096226,
+        "mean_abs_logit_delta": 0.421232
+      },
+      "L3": {
+        "n_features": 3,
+        "mean_frac_positive_direction": 0.4,
+        "mean_frac_positive_maturity": 1.0,
+        "mean_delta_s": 0.017829,
+        "mean_abs_logit_delta": 0.117776
+      },
+      "L6": {
+        "n_features": 3,
+        "mean_frac_positive_direction": 0.26,
+        "mean_frac_positive_maturity": 0.0,
+        "mean_delta_s": -0.007897,
+        "mean_abs_logit_delta": 0.0432
+      },
+      "L9": {
+        "n_features": 3,
+        "mean_frac_positive_direction": 0.64,
+        "mean_frac_positive_maturity": 1.0,
+        "mean_delta_s": 0.014076,
+        "mean_abs_logit_delta": 0.03797
+      },
+      "L11": {
+        "n_features": 3,
+        "mean_frac_positive_direction": 0.6667,
+        "mean_frac_positive_maturity": 0.7933,
+        "mean_delta_s": 0.004817,
+        "mean_abs_logit_delta": 1.07466
+      }
+    },
+    "paper_comparison": {
+      "paper_n_switch_features": 14,
+      "paper_L17_frac_positive": 1.0,
+      "paper_L0_mean_frac_positive": 0.34
+    },
+    "interpretation": "5767 switch features (paper 14) \u2014 MaxToki's trajectory training makes pseudotemporal information permeate every layer. Layer-dependent directionality: see per_layer_summary_alpha5 for MaxToki's frac_positive_direction and frac_positive_maturity values across L0/L3/L6/L9/L11."
+  },
+  "headline_findings": [
+    "Annotation bias reproduces: MaxToki hubs are not annotation-enriched (top-20 55% annotated vs overall 50%, Fisher n.s.).",
+    "Redundancy is deeper in MaxToki than Geneformer (pairwise mean 0.323 vs 0.74, three-way 0.190 vs 0.59) and zero-synergy at third order replicates.",
+    "Across-triplet feature invariance of ablation magnitudes: diversified v2 run with distinct L0/L5/L9 features across 4 triplets produces ratios identical to \u00b10.0001, consistent with the uniformly dense circuit finding of Exp 1.",
+    "Switch-feature density is vastly higher in MaxToki (5767 vs 14) \u2014 trajectory-training spreads temporal information throughout the stack.",
+    "Trajectory steering is \u03b1-insensitive: \u03b1=2 and \u03b1=5 produce near-identical \u0394s and logit-delta metrics at every layer, pointing to saturation of single-feature steering magnitude by the final RMSNorm + lm_head path.",
+    "Layer-dependent directionality is non-monotonic (unlike Geneformer's monotone L0\u2192L17): L0/L3/L9/L11 push toward maturity, L6 counter-differentiates (frac_mat = 0.00)."
+  ],
+  "deviations_from_spec": {
+    "target_model": "MaxToki-217M-HF (Llama, 11 layers) vs Geneformer V2-316M (18 layers) \u2014 all layer indices re-mapped.",
+    "n_features_traced": "1000 (500 annotated + 500 random unannotated) vs paper's 4065 \u2014 scope reduction for compute budget.",
+    "downstream_layers": "{6, 8, 11} vs paper's {6, 11, 17} \u2014 11 is the final residual for MaxToki.",
+    "n_triplets": "4 vs paper's 8; all share the same L0-L5 base (greedy selector) so triplet diversity is lower.",
+    "triplet_layers": "{L0, L5, L9} vs paper's {L0, L5, L11} \u2014 L11 used as the measurement layer instead.",
+    "switch_feature_criterion": "|rho|>0.3, p<0.01 (Spearman with PC1 pseudotime) vs paper's Cohen's d>0.9 on early-vs-late activation distributions.",
+    "steering_layers": "{L0, L3, L6, L9, L11} vs paper's {L0, L5, L11, L17}.",
+    "hook_layer_final_residual": "For steering at L11 (final residual tap), the hook is attached to model.layers[10] (= last block) since model.layers[11] does not exist for an 11-layer Llama. This replaces the output of the last block with the SAE-steered residual, which then flows through final norm + lm_head unchanged."
+  }
+}

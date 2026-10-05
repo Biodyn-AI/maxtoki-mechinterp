@@ -1,0 +1,26 @@
+{
+  "n_proteins": 600,
+  "n_residues": 197279,
+  "n_residues_split_a": 99373,
+  "n_residues_split_b": 97906,
+  "n_features": 5120,
+  "n_features_scored": 5035,
+  "n_concepts_scored": 21,
+  "gate": {
+    "min_f1": 0.5,
+    "min_margin": 0.1
+  },
+  "n_concepts_passing": 6,
+  "concepts_passing": [
+    "SIGNAL",
+    "DISULFID",
+    "REPEAT",
+    "COILED",
+    "DNA_BIND",
+    "ZN_FING"
+  ],
+  "mean_best_f1": 0.36044667645445067,
+  "median_best_f1": 0.3,
+  "mean_best_margin": 0.34173049168352765,
+  "n_concepts_margin_above_0.1": 19
+}

@@ -1,0 +1,28 @@
+import json, numpy as np, pandas as pd, h5py, collections
+RUN="<REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/outputs"
+cat=json.load(open(f"{RUN}/phase2/layer_05/feature_catalog.json"))
+print("n features in catalog", len(cat))
+lens=collections.Counter(len(c["top20_genes"]) for c in cat); print("top20 lengths", sorted(lens.items())[:5], "...", lens.get(20))
+gn=json.load(open(f"{RUN}/phase0/layer_05/gene_names.json"))
+print("n positions", len(gn))
+uni=set(g.upper() for g in gn); print("unique tokens in universe incl <special>", len(uni), "<special>" in uni)
+cnt=collections.Counter(g.upper() for g in gn)
+# check <special> in top20
+nspec=sum(1 for c in cat if "<SPECIAL>" in [g.upper() for g in c["top20_genes"]])
+print("features with <special> in top20", nspec)
+chip=pd.read_csv("<DATA_ROOT>/biodyn-work/single_cell_mechinterp/external/networks/dorothea_chipseq_human.tsv",sep="\t")
+chip["source"]=chip.source.str.upper(); chip["target"]=chip.target.str.upper()
+dor=pd.read_csv("<DATA_ROOT>/biodyn-work/single_cell_mechinterp/external/networks/dorothea_human.tsv",sep="\t")
+print("dorothea_human cols", dor.columns.tolist(), len(dor)); print(dor.head(3))
+print("chip conf counts", chip.confidence.value_counts().to_dict(), "n sources", chip.source.nunique())
+g=chip[chip.source=="GATA1"]; print("GATA1 chip rows", len(g), "unique targets", g.target.nunique(), g.confidence.value_counts().to_dict())
+gset=set(g.target); print("GATA1 chip targets in universe", len(gset & uni))
+tr=pd.read_csv("<DATA_ROOT>/biodyn-nmi-paper/src/02_cssi_method/cssi_real_data/results/trrust_human.tsv",sep="\t",header=None,names=["tf","target","mode","pmid"])
+tr["tf"]=tr.tf.str.upper(); tr["target"]=tr.target.str.upper()
+tg=set(tr[tr.tf=="GATA1"].target); print("GATA1 trrust", len(tg), "in universe", len(tg&uni), "overlap with chip", len(tg&gset))
+f2610=[c for c in cat if c["feature_id"]==2610][0]; print("2610", f2610)
+for fid in [628,1334,2006,2610,2627]:
+    c=[c for c in cat if c["feature_id"]==fid][0]; t=set(x.upper() for x in c["top20_genes"])
+    print(fid, "freq", round(c["activation_frequency"],5), "max", round(c["max_activation"],3), "chip ov", len(t&gset), sorted(t&gset), "trrust ov", len(t&tg))
+    print("   top20:", c["top20_genes"])
+    print("   counts in universe:", [cnt[x.upper()] for x in c["top20_genes"]])

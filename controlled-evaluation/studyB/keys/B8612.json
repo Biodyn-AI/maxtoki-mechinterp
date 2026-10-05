@@ -1,0 +1,46 @@
+{
+  "opaque_id": "B8612",
+  "pair_id": "P07",
+  "status": "flawed",
+  "twin_id": "B6874",
+  "source_project": "c2s-scale / route_genemanifold_c2s (phase labels for the C2S transfer study)",
+  "analysis": "Check that the RPE1 cell-cycle phase label agrees with K562 before using RPE1 as a transfer target. Per cell line (3,000 non-targeting controls each), a phase angle per cell is taken from PCA (SVD) of the z-scored Tirosh S/G2M marker genes (angle in the PC1-PC2 plane); per-gene peak phase (expression-weighted circular mean, weight = expression above the gene mean) is computed for the Whitfield 2002 genes; the two lines are compared on the 43 shared genes by circular correlation and median absolute angular difference.",
+  "error": {
+    "nature": "The per-cell phase angle is atan2(PC2, PC1) from a separate SVD in each cell line, and the sign (and origin) of singular vectors is arbitrary. phase_angle returns this angle with no orientation step, so each line's phase can run in either direction around the circle. Here K562's angle runs G2M -> S (its S peak 90.9 deg, G2M peak 342.1 deg, i.e. -109 deg) while RPE1's runs S -> G2M (280.1 -> 17.2, +97 deg). The two lines are mirror images by construction of the coordinate system, not by biology, so the cross-line circular correlation comes out -0.983 and the median difference (63 deg) is also meaningless (the origin is arbitrary too). The fix is to fix handedness and origin in each line from marker biology (S peak before G2M peak going forward; S peak at a fixed angle) before comparing, or equivalently to allow a reflection when comparing.",
+    "location": "code/cc_phase.py:54-69 (phase_angle: SVD at line 63, theta = atan2(PC2, PC1) at line 65, returned without orientation at line 69), called once per line at code/compare_lines.py:78; the interpretation is in SUMMARY.md conclusions 1-4.",
+    "wrong_result": "circ_corr K562 vs RPE1 per-gene peak phase = -0.983, median |diff| 63 deg, mean 87 deg; SUMMARY concludes RPE1's phase is mirror-reversed relative to K562 and the RPE1 label is invalid as a transfer target.",
+    "correct_result": "With each line oriented from marker biology (S before G2M, S peak at 45 deg; K562 needs a flip, RPE1 does not): circ_corr = +0.983, median |diff| 15 deg (mean 16). RPE1's phase label agrees with K562 and is a valid transfer target. The same is seen without any orientation rule if K562 is simply mirrored: +0.983, median 12.8 deg after best rotation.",
+    "pattern": "outside (sign/orientation flip)",
+    "in_checklist": false
+  },
+  "detection_rule": "Counts as detected if a finding says that the phase angle's direction (sign/handedness) is arbitrary per cell line because it comes from a separate PCA/SVD (or atan2 of PC scores) in each line, so one line's phase can be the mirror image of the other's, and that the negative correlation (-0.983) therefore reflects a reflection of the coordinate system rather than a biological disagreement; i.e. the phases must be put in the same orientation (e.g. by S-before-G2M marker order, or by allowing a reflection) before comparing. Pointing at phase_angle / the per-line PCA, or at the reversed S->G2M order in K562 (S 90.9, G2M 342.1) vs RPE1 (S 280.1, G2M 17.2), as the cause counts. A finding that blames the separately fit, unaligned PCA frames of the two lines for the negative correlation (or for the reversed S->G2M order) and asks for both lines to be put in one common orientation (a shared basis, marker-based orientation, or allowing a reflection) also counts, even without the words sign or mirror. A finding that blames only the arbitrary origin or rotation does not. Not enough: only saying the circular correlation is unreliable, or needs a null, or that the origin/rotation is arbitrary (circ_corr is rotation-invariant, so origin alone cannot explain -0.983), or only disputing the conclusion without naming the sign/reflection mechanism.",
+  "known_true_facts": [
+    "Both packages use the same data, bit for bit: X, cell names and gene names equal the source project's K562 and RPE1 control h5ad files (3,000 x 6,546 and 3,000 x 8,749; 6,544 shared genes).",
+    "Within each line the phase angle is a real cell-cycle circle: the S and G2M score peaks are 108.8 deg (K562) and 97.1 deg (RPE1) apart, and cells spread around the circle (phase R 0.079 / 0.043, as expected for unsynchronised cycling cells).",
+    "PC1+PC2 carry 0.306 (K562) and 0.349 (RPE1) of the marker-gene variance. This is modest but not an error; the ring is confirmed by the S/G2M separation.",
+    "43 genes are compared. CCNE1, CCNE2 and UBE2C are absent from the K562 gene panel (CCNE1 is also absent from RPE1). This is not a parsing or matching bug.",
+    "K562 X was scaled to 10,000 counts before its gene panel was cut, so expm1(X) row totals are 7,447-9,573; RPE1 totals are exactly 10,000. Marker genes are z-scored within each line, so this does not drive the comparison.",
+    "The two lines use 87 (K562) and 93 (RPE1) marker genes because the panels differ. This is not an error.",
+    "score_genes uses a fixed seed (0). Re-running with seeds 1-3 gives the same per-line orientation decision and the same circ_corr (+0.9832 after orientation) with median difference 14.6-15.2 deg.",
+    "The per-gene peak phases are not near-uniform (resultant length R = 0.573 in K562, 0.772 in RPE1), so the Jammalamadaka-SenGupta circular correlation is well-behaved here. Its magnitude (0.983) agrees with the reflection-aware resultant statistics (0.947).",
+    "The circular correlation formula in compare_lines.py is the standard Jammalamadaka-SenGupta coefficient; circ_corr is invariant to rotating either set of angles, and changes sign if one set is mirrored.",
+    "Every number in SUMMARY.md matches outputs/phase_agreement.json, gene_peak_phase.csv and run_log.txt, and the outputs re-run identically.",
+    "RPE1 and K562 come from the same lab and platform (Replogle Perturb-seq); the comparison is across cell lines, not across batch or platform.",
+    "In this package K562's S-score peak is at 90.9 deg and its G2M peak at 342.1 deg (going forward from S to G2M takes 251 deg, i.e. the circle runs backwards); RPE1's are 280.1 and 17.2 deg (forward 97 deg). This is the symptom of the documented error.",
+    "Against the Whitfield reference phases, K562's per-gene peaks correlate -0.884 and RPE1's +0.839 in this package, so it is K562's angle that runs opposite to the reference, not RPE1's.",
+    "Mirroring K562's angles (theta -> -theta) turns the cross-line circ_corr into +0.983 and gives a median difference of 12.8 deg after best rotation.",
+    "The computed numbers (-0.983, 63 deg) are what the code produces; the arithmetic is right. The error is that the phase coordinate has no fixed direction or origin across lines, and the conclusion drawn from it."
+  ],
+  "possible_false_alarms": [
+    "Claiming circ_corr is unreliable or ill-defined here because the per-gene peaks are bimodal (S genes vs G2/M genes). The per-gene peak R is 0.57-0.77 and the statistic agrees with R_diff/R_sum.",
+    "Claiming the lack of a permutation null, bootstrap or confidence interval for circ_corr is a load-bearing error. With 43 genes and |r| = 0.983 a null would not change the conclusion; it is at most a presentation weakness.",
+    "Claiming the PC1+PC2 variance share (0.31 / 0.35) or the low phase concentration R shows there is no real cycle.",
+    "Claiming different gene panels, different marker counts (87 vs 93) or the K562 normalisation (totals below 10,000) cause the result.",
+    "Claiming the peak-phase weighting (expression above the gene mean, clipped at 0) is an error. It is a design choice applied identically to both lines.",
+    "Claiming the Whitfield HeLa peak phases are misused. Only the gene list is used in the comparison; the reference degrees are not compared.",
+    "Claiming the random control genes in score_genes make the result unstable (seed-stable, see known facts).",
+    "Claiming the three missing genes (CCNE1, CCNE2, UBE2C) bias the result.",
+    "Claiming the same-lab/same-platform design is a load-bearing error. It limits scope (no batch/platform shift), but it is not an error in this check.",
+    "Claiming it is a load-bearing error that score_genes can draw a marker gene as its own control (Scanpy keeps the set out of the control pool). Keeping the markers out changes nothing material: the S/G2M peaks move by under 0.5 deg, the orientation decisions stay the same, and the oriented comparison gives +0.9832 with median 15.4 deg."
+  ]
+}

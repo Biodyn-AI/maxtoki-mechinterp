@@ -1,0 +1,68 @@
+===== k562 =====
+[data] k562: 592 knocked-down TFs x 2746 genes
+[prior] fraction of all responses in this matrix that are NEGATIVE: 0.4913
+[db] 20,048 signed DoRothEA edges (16,609 activating, 3,439 inhibiting)
+[map] 8,358 signed edges with a measured response (6,903 activating, 1,455 inhibiting; 429 TFs, 2690 targets)
+
+stratum         predictor               balanced acc            95% CI    act    inh       n  bal(up/down)
+----------------------------------------------------------------------------------------------------------
+all             DATABASE sign                 0.4988   [0.4855,0.5134]  0.499  0.498   8,358        0.4993
+all             always-down (prior)           0.5005   [0.4862,0.5140]  0.499  0.502   8,358        0.5000
+all             random                        0.5004   [0.4864,0.5147]  0.501  0.500   8,358        0.5010
+
+|dE| top 50%    DATABASE sign                 0.5106   [0.4906,0.5296]  0.498  0.524   4,179        0.5058
+|dE| top 50%    always-down (prior)           0.4870   [0.4658,0.5072]  0.498  0.476   4,179        0.5000
+|dE| top 50%    random                        0.4982   [0.4770,0.5184]  0.504  0.493   4,179        0.5019
+
+|dE| top 10%    DATABASE sign                 0.5988   [0.5529,0.6450]* 0.496  0.702     836        0.5467
+|dE| top 10%    always-down (prior)           0.3970   [0.3518,0.4434]  0.496  0.298     836        0.5000
+|dE| top 10%    random                        0.4534   [0.4030,0.5007]  0.468  0.439     836        0.4638
+
+2x2 tables (database class x observed direction), odds ratio, nulls
+stratum            act up/down   inh up/down     OR  Fisher p  shuf-all med       p  shuf-TF med       p     TF-boot 95%   TFs
+------------------------------------------------------------------------------------------------------------------------------
+all                3456/3447      725/730      0.99      0.89          1.00  0.5682         1.04  0.8751     [0.87,1.13]   429
+|dE| top 50%       1759/1742      355/323      1.09      0.31          0.99  0.1594         1.14  0.7296     [0.90,1.31]   333
+|dE| top 10%        364/358        80/34       2.31   7.7e-05          1.02  0.0005         1.76  0.0650     [1.51,3.57]   151
+
+DoRothEA confidence level, |dE| top 10% (levels with >= 30 edges)
+   level A: balanced 0.6294  act 0.559  inh 0.700  n=267 (act 247, inh 20, TFs 60)  OR 2.95
+   level B: balanced 0.8438  act 0.688  inh 1.000  n=36 (act 32, inh 4, TFs 21)  OR 19.29
+   level C: balanced 0.6581  act 0.516  inh 0.800  n=36 (act 31, inh 5, TFs 26)  OR 4.27
+   level D: balanced 0.5621  act 0.442  inh 0.682  n=497 (act 412, inh 85, TFs 131)  OR 1.70
+wrote sign_k562.json, edges_k562.csv
+
+===== rpe1 =====
+[data] rpe1: 70 knocked-down TFs x 1301 genes
+[prior] fraction of all responses in this matrix that are NEGATIVE: 0.5456
+[db] 20,048 signed DoRothEA edges (16,609 activating, 3,439 inhibiting)
+[map] 1,866 signed edges with a measured response (1,622 activating, 244 inhibiting; 58 TFs, 1269 targets)
+
+stratum         predictor               balanced acc            95% CI    act    inh       n  bal(up/down)
+----------------------------------------------------------------------------------------------------------
+all             DATABASE sign                 0.5416   [0.5075,0.5734]* 0.583  0.500   1,866        0.5193
+all             always-down (prior)           0.5416   [0.5065,0.5747]* 0.583  0.500   1,866        0.5000
+all             random                        0.4788   [0.4451,0.5137]  0.494  0.463   1,866        0.4916
+
+|dE| top 50%    DATABASE sign                 0.5342   [0.4886,0.5818]  0.638  0.431     933        0.5176
+|dE| top 50%    always-down (prior)           0.6034   [0.5578,0.6481]* 0.638  0.569     933        0.5000
+|dE| top 50%    random                        0.5003   [0.4524,0.5465]  0.501  0.500     933        0.5001
+
+|dE| top 10%    DATABASE sign                 0.6671   [0.5635,0.7627]* 0.626  0.708     187        0.5769
+|dE| top 10%    always-down (prior)           0.4587   [0.3649,0.5574]  0.626  0.292     187        0.5000
+|dE| top 10%    random                        0.4059   [0.3073,0.5107]  0.479  0.333     187        0.4674
+
+2x2 tables (database class x observed direction), odds ratio, nulls
+stratum            act up/down   inh up/down     OR  Fisher p  shuf-all med       p  shuf-TF med       p     TF-boot 95%   TFs
+------------------------------------------------------------------------------------------------------------------------------
+all                 676/946       122/122      1.40     0.015          0.99  0.0095         0.97  0.0035     [0.79,2.42]    58
+|dE| top 50%        291/512        56/74       1.33      0.14          1.03  0.0880         0.91  0.0180     [0.56,2.57]    46
+|dE| top 10%         61/102        17/7        4.06    0.0033          1.00  0.0025         1.47  0.0025    [0.71,14.25]    26
+
+DoRothEA confidence level, |dE| top 10% (levels with >= 30 edges)
+   level A: balanced 0.8629  act 0.726  inh 1.000  n=69 (act 62, inh 7, TFs 15)  OR 39.00
+   level D: balanced 0.5641  act 0.513  inh 0.615  n=91 (act 78, inh 13, TFs 22)  OR 1.68
+wrote sign_rpe1.json, edges_rpe1.csv
+
+balanced accuracy = mean of (accuracy on activating edges, accuracy on inhibiting edges); chance = 0.5. bal(up/down) = the same, averaged over the observed up and down classes.
+OR = odds(up | inhibition) / odds(up | activation); 1 = no association.

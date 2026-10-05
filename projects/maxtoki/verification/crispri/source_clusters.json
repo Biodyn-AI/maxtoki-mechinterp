@@ -1,0 +1,26 @@
+{
+  "n_sources": 248,
+  "n_source_features_total": 120,
+  "n_source_features_touching_the_248": 110,
+  "source_features_per_gene_quantiles": {
+    "0.0": 1.0,
+    "0.25": 1.0,
+    "0.5": 1.0,
+    "0.75": 1.0,
+    "1.0": 4.0
+  },
+  "n_distinct_exact_membership_sets": 139,
+  "n_connected_components": 54,
+  "largest_component_size": 95,
+  "cluster_bootstrap_exact_groups": {
+    "n_groups": 139,
+    "pooled_acc_minus_always_dec_ci95": [
+      -0.017289870053773453,
+      -0.005817466628229314
+    ],
+    "pooled_balanced_acc_minus_half_ci95": [
+      -0.005355500891587156,
+      0.0016452633756547455
+    ]
+  }
+}

@@ -1,0 +1,61 @@
+{
+ "n_rows_read": 86056,
+ "count_check_rows_failing": 0,
+ "count_check_max_dev_from_whole_multiple": 0.0004732875877380138,
+ "n_control_cells_available": 10691,
+ "n_control_cells_used": 5000,
+ "variants": {
+  "v3_primary": {
+   "gene_set": "new (single-log variance)",
+   "normalisation": "expm1(X) (= counts up to a per-cell factor), scaled to 1e4 over the 1,500 genes, log1p (single log; RPE1 rule)",
+   "n_candidate_perturbations": 446,
+   "skipped_before_test": {
+    "lt30": 0,
+    "no_ens": 35,
+    "not_in_geneset": 902
+   },
+   "dropped_lt3_positives_or_negatives": 252,
+   "n_perturbations_evaluated": 194,
+   "n_positive_pairs": 8714,
+   "median_positives_per_perturbation": 17.0
+  },
+  "v3_storedX": {
+   "gene_set": "new (single-log variance)",
+   "normalisation": "stored X (log1p of CP10k over the full transcriptome), restricted to the 1,500 genes; no rescale",
+   "n_candidate_perturbations": 446,
+   "skipped_before_test": {
+    "lt30": 0,
+    "no_ens": 35,
+    "not_in_geneset": 902
+   },
+   "dropped_lt3_positives_or_negatives": 379,
+   "n_perturbations_evaluated": 67,
+   "n_positive_pairs": 720,
+   "median_positives_per_perturbation": 7.0
+  },
+  "deployed_genes_single_log": {
+   "gene_set": "deployed",
+   "normalisation": "expm1(X) (= counts up to a per-cell factor), scaled to 1e4 over the 1,500 genes, log1p (single log; RPE1 rule)",
+   "n_candidate_perturbations": 376,
+   "skipped_before_test": {
+    "lt30": 0,
+    "no_ens": 35,
+    "not_in_geneset": 972
+   },
+   "dropped_lt3_positives_or_negatives": 194,
+   "n_perturbations_evaluated": 182,
+   "n_positive_pairs": 10410,
+   "median_positives_per_perturbation": 20.0
+  }
+ },
+ "rule": {
+  "lfc_abs_min": 0.5,
+  "bh_q_max": 0.05,
+  "min_cells": 30,
+  "min_pos_and_neg": 3,
+  "n_ctrl_cap": 5000,
+  "ctrl_seed": 42,
+  "test": "Welch t (scipy ttest_ind equal_var=False), BH over the 1,500 genes per perturbation"
+ },
+ "seconds": 36.44553327560425
+}

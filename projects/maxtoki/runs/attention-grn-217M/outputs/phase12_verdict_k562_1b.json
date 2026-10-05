@@ -1,0 +1,78 @@
+{
+  "criteria": {
+    "C1_attention_beats_trivial_baselines": {
+      "pass": false,
+      "details": {
+        "attention_mean_auroc": 0.5398362497364162,
+        "beat_baselines": [
+          {
+            "baseline": "gene_variance",
+            "baseline_auroc": 0.596080029636302,
+            "attention_won": false,
+            "wilcoxon_p_bh": 9.474399865292244e-05,
+            "significant": false
+          },
+          {
+            "baseline": "gene_mean_expr",
+            "baseline_auroc": 0.5723720568702793,
+            "attention_won": false,
+            "wilcoxon_p_bh": 0.0003918986878324,
+            "significant": false
+          },
+          {
+            "baseline": "gene_one_minus_dropout",
+            "baseline_auroc": 0.5603583974949601,
+            "attention_won": false,
+            "wilcoxon_p_bh": 0.007093246990928,
+            "significant": false
+          }
+        ]
+      }
+    },
+    "C2_incremental_value_over_gene_features": {
+      "pass": false,
+      "delta_auroc": 0.0020353527881746,
+      "threshold": 0.005,
+      "split": "cross_pert",
+      "model": "logreg"
+    },
+    "C3_residualized_retains_signal": {
+      "pass": true,
+      "fraction_above_chance_retained": 0.7838830113938295,
+      "threshold": 0.5,
+      "baseline_auroc": 0.5553997377264785,
+      "residualized_auroc": 0.5434269132394604
+    }
+  },
+  "overall": {
+    "criteria_evaluated": 3,
+    "criteria_total": 4,
+    "all_pass": false,
+    "verdict": "FAIL \u2014 at least one mandatory criterion failed"
+  },
+  "scope_notes": {
+    "phases_run": [
+      "0a",
+      "1",
+      "2",
+      "3",
+      "4",
+      "12"
+    ],
+    "phases_skipped": [
+      "0b (value-weighted edges)",
+      "5 (cross-context replication \u2014 RPE1, Adamson, Dixit, Shifrut, Tian)",
+      "6 (CSSI)",
+      "7 (biological characterization \u2014 STRING, Reactome, KEGG, GO)",
+      "8 (detectability)",
+      "9 (ortholog transfer)",
+      "10 (pseudotime)",
+      "11 (batch leakage, calibration, TRRUST circularity, HVG protocol, mediation)"
+    ],
+    "dataset": "Replogle K562 non-targeting controls only",
+    "reference_network": "TRRUST only (no STRING/Reactome/KEGG/GO)",
+    "n_ctrl": 200,
+    "n_hvg": 1500,
+    "curveball_null_iters": 50
+  }
+}

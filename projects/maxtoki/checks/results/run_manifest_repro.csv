@@ -1,0 +1,9 @@
+run,n_scripts,scripts_using_randomness,scripts_using_randomness_with_seed,scripts_random_without_seed,run_level_env_file,project_requirements_pinning,devices_recorded,json_files_with_timing,scripts_loading_hf_checkpoints,hf_loads_with_revision_pin,summary_py_paths_ok,summary_py_paths_missing,machine_readable_decision_log,manual_reclassification_files,run_manifest_file
+attention-grn-217M,11,9,9,,,71/71 lines use ==,mps,5,0,0,0,,none,,none
+spectral-geometry-217M,16,13,13,,,71/71 lines use ==,mps,4,0,0,2,,none,,none
+topology-141-217M,20,16,16,,,71/71 lines use ==,mps,6,0,0,3,,none,projects/maxtoki/runs/topology-141-217M/outputs/phase11_autoloop/MANUAL_REVIEW.md,none
+manifold-discovery-217M,23,18,18,,,71/71 lines use ==,cpu;mps,20,1,0,2,,none,,none
+longevity-mechinterp-217M,4,1,1,,,71/71 lines use ==,,1,0,0,0,,none,,none
+sae-atlas-217M,12,10,10,,,71/71 lines use ==,mps,13,0,0,0,,none,,none
+circuit-tracing-217M,4,4,4,,,71/71 lines use ==,,1,0,0,0,,none,,none
+exhaustive-mapping-217M,6,4,4,,,71/71 lines use ==,,0,0,0,8,,none,,none

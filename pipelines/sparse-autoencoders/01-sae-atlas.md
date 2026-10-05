@@ -12,12 +12,12 @@ Stage 1 produces the **foundation** for Stages 2 and 3 of the SAE mega-pipeline.
 
 ## 2. Source
 
-- **Paper:** Anonymous, (2026). *Sparse autoencoders reveal organized biological knowledge but minimal regulatory logic in single-cell foundation models: a comparative atlas of Geneformer and scGPT.* arXiv:2603.02952 [q-bio.GN], 3 Mar 2026. 28 pages (15 pages main + 5 pages references + 8 pages supplementary material with 10 tables and 4 figures).
-- **Local PDF:** `../../references/2603.02952_anon_SAE_atlas.pdf`
+- **Paper:** Kendiukhov, I. (2026). *Sparse autoencoders reveal organized biological knowledge but minimal regulatory logic in single-cell foundation models: a comparative atlas of Geneformer and scGPT.* arXiv:2603.02952 [q-bio.GN], 3 Mar 2026. 28 pages (15 pages main + 5 pages references + 8 pages supplementary material with 10 tables and 4 figures).
+- **Local PDF:** `../../references/2603.02952_Kendiukhov_SAE_atlas.pdf`
 - **GitHub repo:** https://github.com/Biodyn-AI/bio-sae — pinned commit `9277f5daec682cd34027172b04993833dfeb17e1` (2026-04-14, "Add BMC Genomics revision: reviewer-driven experiments and manuscript update"). Local clone at `../../repos/bio-sae/`.
 - **Interactive web atlases (live):** https://biodyn-ai.github.io/geneformer-atlas/ (82,525 features × 18 layers), https://biodyn-ai.github.io/scgpt-atlas/ (24,527 features × 12 layers). Source: https://github.com/Biodyn-AI/geneformer-atlas, https://github.com/Biodyn-AI/scgpt-atlas.
 - **Companion papers** (direct extensions, already in this repo):
-  - `../attention-grn-extraction-and-evaluation.md` — attention-based interpretability audit (the prior work, arXiv:2602.17532). The feature-level perturbation specificity null (6.2%) in this Stage 1 pipeline and the component-level null in the companion paper are two ends of the same boundary.
+  - `../attention-grn-extraction-and-evaluation.md` — attention-based interpretability audit (Kendiukhov 2026, arXiv:2602.17532). The feature-level perturbation specificity null (6.2%) in this Stage 1 pipeline and the component-level null in the companion paper are two ends of the same boundary.
   - `02-causal-circuit-tracing.md` — Stage 2 of the SAE mega-pipeline, directly consuming the atlas this pipeline produces.
   - `03-exhaustive-mapping-and-steering.md` — Stage 3.
 - **Key foundational references:** Makhzani & Frey 2013 (k-sparse autoencoders), Sharkey et al. 2022 / Cunningham et al. 2023 / Bricken et al. 2023 / Templeton et al. 2024 (SAEs for language model interpretability), Gao et al. 2024 (TopK SAE architecture used here), Elhage et al. 2022 (superposition hypothesis), Olshausen & Field 1997 (sparse coding in V1), Theodoris et al. 2023 (Geneformer), Cui et al. 2024 (scGPT), Replogle et al. 2022 (genome-scale Perturb-seq used as ground truth), Tabula Sapiens Consortium 2022, Han et al. 2018 (TRRUST v2), Szklarczyk et al. 2023 (STRING), Ashburner et al. 2000 (Gene Ontology), Kanehisa & Goto 2000 (KEGG), Jassal et al. 2020 (Reactome), Traag et al. 2019 (Leiden), Manning & Schütze 1999 (PMI), Subramanian et al. 2005 (GSEA pattern).

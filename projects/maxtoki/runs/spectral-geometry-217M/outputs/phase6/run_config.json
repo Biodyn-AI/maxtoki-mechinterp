@@ -1,0 +1,58 @@
+{
+  "marker_sets": {
+    "B cell": [
+      "CD19",
+      "CD79A",
+      "MS4A1",
+      "BLK",
+      "VPREB3",
+      "FCRL1",
+      "PAX5"
+    ],
+    "T cell": [
+      "CD3D",
+      "CD3E",
+      "CD3G",
+      "CD4",
+      "CD8A",
+      "CD8B",
+      "LCK",
+      "ZAP70",
+      "TCF7",
+      "LEF1",
+      "TBX21",
+      "GATA3"
+    ],
+    "NK cell": [
+      "NCAM1",
+      "KLRD1",
+      "KLRF1",
+      "NKG7",
+      "GNLY"
+    ],
+    "Macrophage": [
+      "CD68",
+      "CD163",
+      "MRC1",
+      "MSR1",
+      "MERTK"
+    ],
+    "Monocyte": [
+      "CD14",
+      "LYZ",
+      "VCAN",
+      "S100A8",
+      "S100A9"
+    ]
+  },
+  "marker_sizes_in_vocab": {
+    "B cell": 6,
+    "T cell": 9,
+    "NK cell": 3,
+    "Macrophage": 3,
+    "Monocyte": 5
+  },
+  "mean_auc": 0.6182556211192102,
+  "max_auc": 0.7787226657410622,
+  "best_layer": 0
+}

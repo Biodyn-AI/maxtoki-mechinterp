@@ -1,0 +1,87 @@
+======================================================================
+PHASE 9b — cross-model alignment (MaxToki vs Geneformer V2-316M)
+======================================================================
+
+[1] Loading Geneformer static embeddings...
+  Geneformer embed: (20275, 1152) dtype=float32
+
+[2] Loading MaxToki static embeddings...
+  MaxToki embed:    (20275, 1232) dtype=float32
+  HVG token-id agreement (MaxToki ↔ Geneformer): 1500/1500
+  shared HVG static embeddings: MaxToki (1500, 1232)  Geneformer (1500, 1152)
+
+[3] Cross-model cosine alignment...
+  Pearson  (similarity matrices, off-diag): 0.3820
+  Spearman (similarity matrices, off-diag): 0.3448
+  null mean: -0.0000  null SD: 0.0010  empirical p: 0.0000
+
+[4] Geneformer static SVD + STRING PPI co-pole test...
+  SVD top-7 singular values: [7.7210875 6.1714797 5.657289  5.288536  5.159709  5.021115  4.914004 ]
+  available STRING pair sets: ['pairs_700', 'pairs_900']
+  using pairs_700 with 2747 pairs
+  PPI pairs intersected with HVG: 844
+ observed_rate  null_mean  null_std      z  p_empirical  n_pairs axis
+      0.004739   0.002294  0.001899  1.288        0.136      844  SV1
+      0.001185   0.002294  0.001899 -0.584        0.822      844  SV2
+      0.011848   0.002294  0.001899  5.032        0.000      844  SV3
+      0.000000   0.002294  0.001899 -1.208        1.000      844  SV4
+      0.007109   0.002294  0.001899  2.536        0.030      844  SV5
+      0.001185   0.002294  0.001899 -0.584        0.822      844  SV6
+      0.003555   0.002294  0.001899  0.664        0.316      844  SV7
+  Geneformer best static axis: SV3  z=5.032  p=0.0
+
+[5] Geneformer static B-cell marker precision@10...
+  B-cell markers in HVG: 11 → ['PRDM1', 'CD79A', 'BACH2', 'BCL6', 'VPREB3', 'BLK', 'IRF4', 'IRF8', 'MS4A1', 'FCRL1', 'PAX5']
+  Geneformer B-cell prec@10: {'n_markers_in_hvg': 11, 'mean_precision_at_10': 0.2727, 'null_mean': 0.0061, 'null_std': 0.0099, 'z': 26.96}
+
+======================================================================
+SUMMARY:
+{
+  "phase": "9b",
+  "models": {
+    "model_a": {
+      "name": "MaxToki-217M-HF",
+      "d": 1232,
+      "n_layers": 11
+    },
+    "model_b": {
+      "name": "Geneformer V2-316M",
+      "d": 1152,
+      "n_layers": 18
+    },
+    "shared_vocab_size": 20275,
+    "n_hvg_compared": 1500
+  },
+  "cross_model_cosine_alignment": {
+    "n_hvg_shared": 1500,
+    "pearson_off_diag": 0.382,
+    "spearman_off_diag": 0.3448,
+    "null_mean": -0.0,
+    "null_sd": 0.001,
+    "p_empirical": 0.0,
+    "n_perm": 500,
+    "verdict": "alignment significantly above shuffled null"
+  },
+  "geneformer_static_ppi_best_axis": {
+    "observed_rate": 0.011848,
+    "null_mean": 0.002294,
+    "null_std": 0.001899,
+    "z": 5.032,
+    "p_empirical": 0.0,
+    "n_pairs": 844,
+    "axis": "SV3"
+  },
+  "maxtoki_layer0_ppi_max_z": 5.62,
+  "ppi_convergent_across_architectures": true,
+  "geneformer_static_bcell_prec10": {
+    "n_markers_in_hvg": 11,
+    "mean_precision_at_10": 0.2727,
+    "null_mean": 0.0061,
+    "null_std": 0.0099,
+    "z": 26.96
+  },
+  "interpretation": "Both models share the 20,275-token Ensembl-ID vocabulary (token dictionaries identical). Cross-model alignment is therefore a clean test of architecture-vs-shared-prior: does the Llama-style decoder (MaxToki) and BERT-style encoder (Geneformer) converge on the same biological geometry from a shared vocabulary?",
+  "wall_clock_seconds": 16.5
+}
+
+PHASE 9b COMPLETE — 16.5s

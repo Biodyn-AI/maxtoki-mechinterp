@@ -1,0 +1,34 @@
+{
+ "which": "nll",
+ "rng": "default_rng(20261003)",
+ "ss2=False": {
+  "n": 41,
+  "nll_v3_mean": 3.0877227201694395,
+  "nll_deployed_mean": 4.033042948420455,
+  "diff_mean": -0.9453202282510152,
+  "diff_ci95_cells": [
+   -1.182044487755473,
+   -0.7300355571072277
+  ],
+  "share_v3_lower": 1.0,
+  "top1_v3_mean": 0.20793072297805693,
+  "top1_deployed_mean": 0.162205160027597
+ },
+ "ss2=True": {
+  "n": 4,
+  "nll_v3_mean": 7.818099021911621,
+  "nll_deployed_mean": 8.313716292381287,
+  "diff_mean": -0.4956172704696655,
+  "diff_ci95_cells": [
+   -0.6920521259307861,
+   -0.2731400728225708
+  ],
+  "share_v3_lower": 1.0,
+  "top1_v3_mean": 0.011885027401149273,
+  "top1_deployed_mean": 0.006999847828410566
+ },
+ "all_tokens_equal_up_to_ties": true,
+ "state_max_abs_diff_max": 3.814697265625e-06,
+ "uniform_guess_nll": 9.917143878983614,
+ "seconds": 121.83739590644836
+}

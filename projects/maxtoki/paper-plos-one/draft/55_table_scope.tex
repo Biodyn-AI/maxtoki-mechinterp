@@ -1,0 +1,62 @@
+%% ---------------------------------------------------------------- tab:scope
+{\footnotesize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.15}
+\begin{longtable}{@{}p{0.15\linewidth}p{0.20\linewidth}p{0.18\linewidth}p{0.20\linewidth}p{0.24\linewidth}@{}}
+\caption{\textbf{Scope of the MaxToki-217M results.}}
+\label{tab:scope}\\
+\toprule
+\textbf{Analysis} & \textbf{Cells} & \textbf{Judged against} &
+\textbf{Conclusion depends on} & \textbf{Result} \\
+\midrule
+\endfirsthead
+\multicolumn{5}{@{}l}{\footnotesize\emph{Table \thetable\ continued from previous page.}}\\
+\toprule
+\textbf{Analysis} & \textbf{Cells} & \textbf{Judged against} &
+\textbf{Conclusion depends on} & \textbf{Result} \\
+\midrule
+\endhead
+\midrule
+\multicolumn{5}{r@{}}{\footnotesize\emph{continued on next page}}\\
+\endfoot
+\bottomrule
+\endlastfoot
+Attention, RPE1 & 2,000 RPE1 control cells; layer~8; 1,500 genes &
+RPE1 knockdown responses (325 knockdowns); TRRUST (16 factors) &
+Causal attention mask; few TRRUST factors per cell line &
+Below the target-variance baseline; symmetric score beats the network
+null but not co-expression \\
+Attention, K562 & 2,000 K562 control cells; layer~8; 1,500 genes & K562 knockdown responses (194 knockdowns); TRRUST (16 factors) & Causal attention mask; one factor (MYC) carries the regulator-to-target signal; which genes enter the test & At chance on knockdowns; ties co-expression on TRRUST; no score beats the network null after correction \\
+Factor-specific SAE features & 9,200 K562 cells (87 knocked-down
+factors); layer-5 SAE & DoRothEA ChIP-seq targets (20 factors); TRRUST &
+SAE dictionary; top-20-gene summary of a feature; target-set coverage &
+No factor passes after Benjamini--Hochberg correction under four nulls;
+16 factors pass a fifth null that does not match the number of
+responding features. GATA1: a feature
+with 8 of 20 top genes among its targets, as the deployment reported, is
+ruled out; one with 4 of 20 is not \\
+Circuits and knockdown direction & 200 K562 control cells; 120 source
+features; 248 silenced genes & K562 CRISPR-interference fold-changes &
+SAE features at four layers; edge thresholds; noisy fold-changes &
+No skill beyond constant rules; below a no-model rule by 8.3 points \\
+Feature triplets & 20 K562 control cells; 512 triplets & Additive
+model; planted interaction & Small edits (about 2\% of the residual
+norm) & Additive; no three-way interaction \\
+Steering & 50 Tabula Sapiens bone-marrow HSCs from two held-out donors; layers 0, 3, 6, 9 and 11 & Erythroid maturity score checked on held-out donors; 20 random features per layer & Sparse autoencoders trained on K562 cells; a score built from the model's output; one lineage; 47 of 50 cells from one donor & 14 of 15 candidates no better than random; one feature that marks erythroid cells moves the score 3.5\% of the span \\
+Developmental order & Tabula Sapiens immune cells: 290 cell groups (11 donors) to fit, 600 and 160 groups from other donors to test & Curated 34-stage blood tree; structured null that keeps cell-type classes; cell-type label code, gene expression and input-token features & Deployed read-out head and pass marks; only the T lineage has graded stages; one head seed for most numbers & No order beyond cell type; in cross-lineage order, a small lead over one bag of input tokens on the zero-shot panel (a tie on the external panel over head seeds) and a tie with a second bag built from the deployed gene order \\
+Spectral geometry & Three disjoint samples of 2,000 Tabula Sapiens immune cells; 1,500 genes; all layers & Three randomly initialised copies of the model; split halves of each sample & Per-gene averages over cells; one atlas and gene panel; default random initialisation & Effective rank falls with depth with random weights too; gap of cross-sample CKA from 1 is mostly sampling noise \\
+Cross-model alignment & None (input embedding tables); three panels of
+350--382 genes & scGPT and Geneformer~V2-316M tables; shuffled genes &
+Input tables only, not internal layers & Aligned with both; more with
+Geneformer \\
+\end{longtable}
+\begin{flushleft}
+Every analysis gave
+the model one cell per sequence, ranked by counts divided by each gene's
+median (rank-value encoding). HSC, hematopoietic stem cell; SAE, sparse
+autoencoder; CKA, centred kernel alignment, a similarity of two sets of
+gene vectors (1 means the same geometry). The span is the mean maturity
+score of erythrocytes minus that of HSCs. A bag of input tokens describes
+each cell group by the genes in its cells' model input and uses no model.
+\end{flushleft}
+}

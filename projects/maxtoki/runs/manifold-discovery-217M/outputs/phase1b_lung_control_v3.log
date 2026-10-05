@@ -1,0 +1,67 @@
+======================================================================
+PHASE 1B+C — panel=lung_control  device=mps
+======================================================================
+  cells (full): 2124  anchors: 51  L_cap: 4096
+  seq_len  median: 2219  mean: 2395.8  max: 4096
+
+[1] Loading MaxToki-217M on mps...
+  n_layers=11 hidden=1232  loaded in 6.2s
+
+[2] Running forward passes (mean-pool hidden states across gene-token positions)...
+    cell 42/2124  elapsed 37.8s  eta 1875.4s
+    cell 84/2124  elapsed 57.2s  eta 1389.8s
+    cell 126/2124  elapsed 75.3s  eta 1193.8s
+    cell 168/2124  elapsed 97.6s  eta 1135.9s
+    cell 210/2124  elapsed 111.6s  eta 1016.9s
+    cell 252/2124  elapsed 123.8s  eta 919.4s
+    cell 294/2124  elapsed 136.3s  eta 848.4s
+    cell 336/2124  elapsed 150.6s  eta 801.3s
+    cell 378/2124  elapsed 167.7s  eta 774.5s
+    cell 420/2124  elapsed 197.7s  eta 802.2s
+    cell 462/2124  elapsed 221.7s  eta 797.5s
+    cell 504/2124  elapsed 254.8s  eta 819.1s
+    cell 546/2124  elapsed 284.2s  eta 821.3s
+    cell 588/2124  elapsed 322.8s  eta 843.3s
+    cell 630/2124  elapsed 366.6s  eta 869.5s
+    cell 672/2124  elapsed 396.0s  eta 855.7s
+    cell 714/2124  elapsed 415.6s  eta 820.8s
+    cell 756/2124  elapsed 448.4s  eta 811.4s
+    cell 798/2124  elapsed 466.2s  eta 774.6s
+    cell 840/2124  elapsed 484.9s  eta 741.2s
+    cell 882/2124  elapsed 503.6s  eta 709.2s
+    cell 924/2124  elapsed 526.8s  eta 684.2s
+    cell 966/2124  elapsed 541.1s  eta 648.6s
+    cell 1008/2124  elapsed 566.1s  eta 626.8s
+    cell 1050/2124  elapsed 593.4s  eta 607.0s
+    cell 1092/2124  elapsed 625.3s  eta 591.0s
+    cell 1134/2124  elapsed 657.9s  eta 574.4s
+    cell 1176/2124  elapsed 694.7s  eta 560.0s
+    cell 1218/2124  elapsed 745.3s  eta 554.4s
+    cell 1260/2124  elapsed 798.2s  eta 547.3s
+    cell 1302/2124  elapsed 836.9s  eta 528.4s
+    cell 1344/2124  elapsed 859.1s  eta 498.6s
+    cell 1386/2124  elapsed 882.6s  eta 469.9s
+    cell 1428/2124  elapsed 923.1s  eta 449.9s
+    cell 1470/2124  elapsed 938.6s  eta 417.6s
+    cell 1512/2124  elapsed 957.4s  eta 387.5s
+    cell 1554/2124  elapsed 987.6s  eta 362.2s
+    cell 1596/2124  elapsed 1028.4s  eta 340.2s
+    cell 1638/2124  elapsed 1101.2s  eta 326.7s
+    cell 1680/2124  elapsed 1154.9s  eta 305.2s
+    cell 1722/2124  elapsed 1189.0s  eta 277.6s
+    cell 1764/2124  elapsed 1233.0s  eta 251.6s
+    cell 1806/2124  elapsed 1274.0s  eta 224.3s
+    cell 1848/2124  elapsed 1301.4s  eta 194.4s
+    cell 1890/2124  elapsed 1326.0s  eta 164.2s
+    cell 1932/2124  elapsed 1358.9s  eta 135.0s
+    cell 1974/2124  elapsed 1390.9s  eta 105.7s
+    cell 2016/2124  elapsed 1416.6s  eta 75.9s
+    cell 2058/2124  elapsed 1473.6s  eta 47.3s
+    cell 2100/2124  elapsed 1531.5s  eta 17.5s
+  done in 1565.6s  per_cell shape=(2124, 12, 1232)
+
+[3] Aggregating to anchor centroids...
+  centroids saved → artifacts/anchors/centroids_lung_control.npy
+  anchor cell counts: min 6, median 50, max 50
+
+Phase 1B+C (lung_control) complete in 1573.7s

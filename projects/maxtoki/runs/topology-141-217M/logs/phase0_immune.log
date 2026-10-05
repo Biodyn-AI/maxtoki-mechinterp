@@ -1,0 +1,18 @@
+[init] TRRUST TFs: 795 targets: 2492  STRING symbols: 1185
+[init] MaxToki vocab: 20271 genes
+[immune-reuse]   spectral-geometry full embeddings: (12, 1500, 1232)
+[immune-reuse]   topology pool: 350 genes
+[immune-reuse]   re-extracting log-expression for coexpression null ...
+
+[phase 0 done] domains: immune
+{
+  "immune": {
+    "reused": true,
+    "n_gene_pool": 350,
+    "n_layer_states": 12,
+    "hidden_size": 1232,
+    "n_genes_with_obs": 350,
+    "pca_dim": 20,
+    "source": "<REPO_ROOT>/projects/maxtoki/runs/spectral-geometry-217M/outputs/phase0"
+  }
+}

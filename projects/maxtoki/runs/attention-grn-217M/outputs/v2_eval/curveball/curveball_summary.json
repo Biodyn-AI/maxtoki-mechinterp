@@ -1,0 +1,236 @@
+{
+ "217M_K562": {
+  "n_tfs": 8,
+  "n_edges": 45,
+  "n_columns_with_edges": 35,
+  "observed_pooled_auroc": 0.48289389246951814,
+  "observed_per_tf_mean_auroc": 0.4881295566772196,
+  "curveball": {
+   "n_draws": 1000,
+   "n_trades_per_draw": 5000,
+   "null_mean": 0.46618175460134115,
+   "null_sd": 0.035525827618199786,
+   "null_q025_q975": [
+    0.3918854338141607,
+    0.5353152348799792
+   ],
+   "z": 0.47042219671232677,
+   "p_one_sided_phipson_smyth": 0.3226773226773227,
+   "per_tf_mean_statistic": {
+    "null_mean": 0.4571686010178902,
+    "null_sd": 0.04289071869810262,
+    "z": 0.721856769928619,
+    "p": 0.23776223776223776,
+    "p_bh_across_4_runs": 0.24175824175824176
+   },
+   "draws_identical_to_observed": 0,
+   "draws_failing_margin_or_structural_zero_check": 0,
+   "mean_jaccard_distance_from_observed": 0.8757975484965177,
+   "min_jaccard_distance_from_observed": 0.7323943661971831,
+   "variance_baseline_auroc_observed": 0.7252141402304623,
+   "variance_baseline_auroc_null_max_abs_change": 0.0,
+   "p_bh_across_4_runs": 0.3226773226773227
+  },
+  "checkerboard_check": {
+   "n_draws": 1000,
+   "accepted_swaps_per_draw": 1350,
+   "null_mean": 0.4695234907880174,
+   "null_sd": 0.037052596791053945,
+   "z": 0.36084924781112504,
+   "p": 0.3646353646353646,
+   "per_tf_mean_null_mean": 0.45951742162854314,
+   "mean_jaccard_distance_from_observed": 0.8743845497425718,
+   "draws_failing_margin_or_structural_zero_check": 0
+  },
+  "deployed_null_rerun": {
+   "n_draws": 50,
+   "n_iter": 330,
+   "matrix": "full 1,500 x 1,500 TRRUST matrix",
+   "draws_identical_on_evaluated_rows": 49,
+   "draws_identical_whole_matrix": 49,
+   "self_loops_created_total": 0,
+   "null_mean": 0.4830524817945928,
+   "null_sd_ddof0": 0.0011101252755224454,
+   "z_as_deployed": -0.14285714285717988
+  },
+  "seconds": 86.95815086364746
+ },
+ "217M_RPE1": {
+  "n_tfs": 16,
+  "n_edges": 138,
+  "n_columns_with_edges": 87,
+  "observed_pooled_auroc": 0.6045142320226283,
+  "observed_per_tf_mean_auroc": 0.5866704658777739,
+  "curveball": {
+   "n_draws": 1000,
+   "n_trades_per_draw": 5000,
+   "null_mean": 0.5739393894640368,
+   "null_sd": 0.016823633781198503,
+   "null_q025_q975": [
+    0.5427742036157129,
+    0.607011722714714
+   ],
+   "z": 1.8173744719027891,
+   "p_one_sided_phipson_smyth": 0.04595404595404595,
+   "per_tf_mean_statistic": {
+    "null_mean": 0.5694240573258391,
+    "null_sd": 0.023008177803721205,
+    "z": 0.7495773328536035,
+    "p": 0.22477522477522477,
+    "p_bh_across_4_runs": 0.24175824175824176
+   },
+   "draws_identical_to_observed": 0,
+   "draws_failing_margin_or_structural_zero_check": 0,
+   "mean_jaccard_distance_from_observed": 0.8766054931261593,
+   "min_jaccard_distance_from_observed": 0.8205128205128205,
+   "variance_baseline_auroc_observed": 0.6863779906574432,
+   "variance_baseline_auroc_null_max_abs_change": 0.0,
+   "p_bh_across_4_runs": 0.13986013986013987
+  },
+  "checkerboard_check": {
+   "n_draws": 1000,
+   "accepted_swaps_per_draw": 4140,
+   "null_mean": 0.5742957862467742,
+   "null_sd": 0.017123290557843077,
+   "z": 1.764756935810621,
+   "p": 0.04695304695304695,
+   "per_tf_mean_null_mean": 0.5693886331636973,
+   "mean_jaccard_distance_from_observed": 0.8761424313310816,
+   "draws_failing_margin_or_structural_zero_check": 0
+  },
+  "deployed_null_rerun": {
+   "n_draws": 50,
+   "n_iter": 865,
+   "matrix": "full 1,500 x 1,500 TRRUST matrix",
+   "draws_identical_on_evaluated_rows": 37,
+   "draws_identical_whole_matrix": 31,
+   "self_loops_created_total": 0,
+   "null_mean": 0.6042610585799946,
+   "null_sd_ddof0": 0.0014507864229425357,
+   "z_as_deployed": 0.1745077281053287
+  },
+  "seconds": 140.06541275978088
+ },
+ "217M_Adamson": {
+  "n_tfs": 32,
+  "n_edges": 236,
+  "n_columns_with_edges": 130,
+  "observed_pooled_auroc": 0.5195066877637431,
+  "observed_per_tf_mean_auroc": 0.5226099572765862,
+  "curveball": {
+   "n_draws": 1000,
+   "n_trades_per_draw": 5000,
+   "null_mean": 0.4959272886344946,
+   "null_sd": 0.015684847055019772,
+   "null_q025_q975": [
+    0.4663307290298091,
+    0.5263448276535515
+   ],
+   "z": 1.503323497292386,
+   "p_one_sided_phipson_smyth": 0.06993006993006994,
+   "per_tf_mean_statistic": {
+    "null_mean": 0.49698328605236486,
+    "null_sd": 0.019457268257633106,
+    "z": 1.317074467232469,
+    "p": 0.0939060939060939,
+    "p_bh_across_4_runs": 0.24175824175824176
+   },
+   "draws_identical_to_observed": 0,
+   "draws_failing_margin_or_structural_zero_check": 0,
+   "mean_jaccard_distance_from_observed": 0.9349916275432072,
+   "min_jaccard_distance_from_observed": 0.8946135831381733,
+   "variance_baseline_auroc_observed": 0.5242268094317567,
+   "variance_baseline_auroc_null_max_abs_change": 0.0,
+   "p_bh_across_4_runs": 0.13986013986013987
+  },
+  "checkerboard_check": {
+   "n_draws": 1000,
+   "accepted_swaps_per_draw": 7080,
+   "null_mean": 0.4969673147708889,
+   "null_sd": 0.015828541715357285,
+   "z": 1.4239702809126042,
+   "p": 0.07592407592407592,
+   "per_tf_mean_null_mean": 0.49907398197717784,
+   "mean_jaccard_distance_from_observed": 0.9345393904817049,
+   "draws_failing_margin_or_structural_zero_check": 0
+  },
+  "deployed_null_rerun": {
+   "n_draws": 50,
+   "n_iter": 1405,
+   "matrix": "full 1,500 x 1,500 TRRUST matrix",
+   "draws_identical_on_evaluated_rows": 10,
+   "draws_identical_whole_matrix": 10,
+   "self_loops_created_total": 2,
+   "null_mean": 0.5190074843703448,
+   "null_sd_ddof0": 0.003064597196300211,
+   "z_as_deployed": 0.1628936403129697
+  },
+  "seconds": 124.04441404342651
+ },
+ "1B_K562": {
+  "n_tfs": 12,
+  "n_edges": 73,
+  "n_columns_with_edges": 50,
+  "observed_pooled_auroc": 0.5553997377264785,
+  "observed_per_tf_mean_auroc": 0.5594896398448767,
+  "curveball": {
+   "n_draws": 1000,
+   "n_trades_per_draw": 5000,
+   "null_mean": 0.5385069861866729,
+   "null_sd": 0.022016516223824226,
+   "null_q025_q975": [
+    0.49665030643181846,
+    0.5821248934274867
+   ],
+   "z": 0.7672763196534184,
+   "p_one_sided_phipson_smyth": 0.21678321678321677,
+   "per_tf_mean_statistic": {
+    "null_mean": 0.5399029424001258,
+    "null_sd": 0.02842366567953165,
+    "z": 0.689098220672344,
+    "p": 0.24175824175824176,
+    "p_bh_across_4_runs": 0.24175824175824176
+   },
+   "draws_identical_to_observed": 0,
+   "draws_failing_margin_or_structural_zero_check": 0,
+   "mean_jaccard_distance_from_observed": 0.8724852252919251,
+   "min_jaccard_distance_from_observed": 0.7833333333333333,
+   "variance_baseline_auroc_observed": 0.6292415860283913,
+   "variance_baseline_auroc_null_max_abs_change": 0.0,
+   "p_bh_across_4_runs": 0.289044289044289
+  },
+  "checkerboard_check": {
+   "n_draws": 1000,
+   "accepted_swaps_per_draw": 2190,
+   "null_mean": 0.5404097824964922,
+   "null_sd": 0.022188628055334975,
+   "z": 0.6755692687535144,
+   "p": 0.24075924075924077,
+   "per_tf_mean_null_mean": 0.5429883260456357,
+   "mean_jaccard_distance_from_observed": 0.8719787494909242,
+   "draws_failing_margin_or_structural_zero_check": 0
+  },
+  "deployed_null_rerun": {
+   "n_draws": 50,
+   "n_iter": 480,
+   "matrix": "full 1,500 x 1,500 TRRUST matrix",
+   "draws_identical_on_evaluated_rows": 46,
+   "draws_identical_whole_matrix": 41,
+   "self_loops_created_total": 3,
+   "null_mean": 0.5554297959542589,
+   "null_sd_ddof0": 0.0006714484211579831,
+   "z_as_deployed": -0.04476624984613271
+  },
+  "seconds": 172.83495211601257
+ },
+ "_method": {
+  "seeds": {
+   "curveball": 20261601,
+   "checkerboard": 20261701,
+   "mixing": 20261651
+  },
+  "p": "Phipson-Smyth (1 + #null >= obs) / (1 + n), one-sided upper",
+  "z": "(obs - null mean) / null SD (ddof=1)",
+  "bh": "across the 4 runs"
+ }
+}

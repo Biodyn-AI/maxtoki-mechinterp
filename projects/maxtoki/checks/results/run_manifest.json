@@ -1,0 +1,381 @@
+{
+  "summary": {
+    "attention-grn-217M": {
+      "param_rows": 36,
+      "rows_with_evidence": 9,
+      "linked_by_param_map": 9,
+      "linked_by_exact_name": 0,
+      "status_counts": {
+        "DIFFERS_NO_RANGE_GIVEN": 2,
+        "IN_RANGE_NOT_DEFAULT": 1,
+        "MATCH_DEFAULT": 4,
+        "NO_EVIDENCE_FOUND": 27,
+        "OUT_OF_RANGE": 2
+      },
+      "deviations": [
+        "n_ctrl: used 200;2000 vs spec 2000 (range {500, 2000, 10000}) [no reason found]",
+        "hvg: used 1500 vs spec {2000, 3309} (range {1000, 2000, 5000}) [no reason found]",
+        "intervention_cells_fidelity: used 2000;300 vs spec 2000 (range not machine-readable) [no reason found]",
+        "degree_null_n_curveball: used 50 vs spec 200 (range not machine-readable) [reason noted at projects/maxtoki/runs/attention-grn-217M/README.md:32]"
+      ],
+      "gate_objects": 9,
+      "gate_status_counts": {
+        "AMBIGUOUS_NOT_RECOMPUTED": 1,
+        "CONSISTENT": 7,
+        "CONSISTENT; IMPLAUSIBLE_FRACTION": 1
+      }
+    },
+    "spectral-geometry-217M": {
+      "param_rows": 38,
+      "rows_with_evidence": 5,
+      "linked_by_param_map": 6,
+      "linked_by_exact_name": 0,
+      "status_counts": {
+        "DESCRIPTOR_NOT_JUDGED": 1,
+        "IN_RANGE_NOT_DEFAULT": 1,
+        "MATCH_DEFAULT": 2,
+        "NO_EVIDENCE_FOUND": 33,
+        "OUT_OF_RANGE": 1
+      },
+      "deviations": [
+        "autoloop_iterations: used 8 vs spec 63 (range 40–80) [no reason found]"
+      ],
+      "gate_objects": 0,
+      "gate_status_counts": {}
+    },
+    "topology-141-217M": {
+      "param_rows": 30,
+      "rows_with_evidence": 5,
+      "linked_by_param_map": 5,
+      "linked_by_exact_name": 0,
+      "status_counts": {
+        "IN_RANGE_NOT_DEFAULT": 2,
+        "MATCH_DEFAULT": 1,
+        "NO_EVIDENCE_FOUND": 25,
+        "OUT_OF_RANGE": 2
+      },
+      "deviations": [
+        "null_label_permutation_replicates: used 100;50;8 vs spec 100–200 (range 100–1000) [no reason found]",
+        "null_rewiring_replicates: used 12;8 vs spec 24 (range ≥ 24) [no reason found]"
+      ],
+      "gate_objects": 0,
+      "gate_status_counts": {}
+    },
+    "manifold-discovery-217M": {
+      "param_rows": 39,
+      "rows_with_evidence": 10,
+      "linked_by_param_map": 10,
+      "linked_by_exact_name": 0,
+      "status_counts": {
+        "DESCRIPTOR_NOT_JUDGED": 2,
+        "MATCH_DEFAULT": 8,
+        "NO_EVIDENCE_FOUND": 29
+      },
+      "deviations": [],
+      "gate_objects": 9,
+      "gate_status_counts": {
+        "CONSISTENT": 4,
+        "CONSISTENT; GATE_SET_FOR_PANEL_UNSTATED": 1,
+        "CONSISTENT; NEGATIVE_CONTROL_PASSED": 1,
+        "PASS_WITH_UNCOMPUTED_GATES": 2,
+        "PROTOCOL_K_DIFFERS(['trustworthiness_k5'] vs k=15)": 1
+      }
+    },
+    "longevity-mechinterp-217M": {
+      "param_rows": 30,
+      "rows_with_evidence": 13,
+      "linked_by_param_map": 4,
+      "linked_by_exact_name": 10,
+      "status_counts": {
+        "MATCH_DEFAULT": 13,
+        "NOT_SAME_PARAMETER (suppressed)": 1,
+        "NO_EVIDENCE_FOUND": 16
+      },
+      "deviations": [],
+      "gate_objects": 0,
+      "gate_status_counts": {}
+    },
+    "sae-atlas-217M": {
+      "param_rows": 36,
+      "rows_with_evidence": 9,
+      "linked_by_param_map": 9,
+      "linked_by_exact_name": 0,
+      "status_counts": {
+        "DIFFERS_NO_RANGE_GIVEN": 3,
+        "MATCH_DEFAULT": 6,
+        "NO_EVIDENCE_FOUND": 27
+      },
+      "deviations": [
+        "n_cells_training: used 500 vs spec 2000 (range not machine-readable) [no reason found]",
+        "n_cells_training: used 500 vs spec 3000 (range not machine-readable) [no reason found]",
+        "causal_patching_cells: used 50 vs spec 200 (range not machine-readable) [no reason found]"
+      ],
+      "gate_objects": 0,
+      "gate_status_counts": {}
+    },
+    "circuit-tracing-217M": {
+      "param_rows": 22,
+      "rows_with_evidence": 4,
+      "linked_by_param_map": 4,
+      "linked_by_exact_name": 0,
+      "status_counts": {
+        "MATCH_DEFAULT": 4,
+        "NO_EVIDENCE_FOUND": 18
+      },
+      "deviations": [],
+      "gate_objects": 0,
+      "gate_status_counts": {}
+    },
+    "exhaustive-mapping-217M": {
+      "param_rows": 27,
+      "rows_with_evidence": 11,
+      "linked_by_param_map": 11,
+      "linked_by_exact_name": 1,
+      "status_counts": {
+        "DESCRIPTOR_NOT_JUDGED": 3,
+        "IN_RANGE_NOT_DEFAULT": 2,
+        "MATCH_DEFAULT": 4,
+        "NO_EVIDENCE_FOUND": 16,
+        "OUT_OF_RANGE": 1,
+        "SPEC_NOT_MACHINE_READABLE": 1
+      },
+      "deviations": [
+        "n_cells_per_condition: used 50 vs spec 200 (range 100–500) [no reason found]"
+      ],
+      "gate_objects": 0,
+      "gate_status_counts": {}
+    }
+  },
+  "frozen_gate_files": {
+    "manifold-discovery-217M": "projects/maxtoki/runs/manifold-discovery-217M/reports/quality_gates_spec.json"
+  },
+  "phases": [
+    {
+      "run": "attention-grn-217M",
+      "spec_phases": "0a;0b;1;2;3;4;5;6;7;8;9;10;11;12",
+      "n_spec_phases": 14,
+      "machine_readable_phase_record": true,
+      "recorded_phases": "0a;1;12;2;3;4",
+      "record_files": "projects/maxtoki/runs/attention-grn-217M/outputs/phase12_verdict.json;projects/maxtoki/runs/attention-grn-217M/outputs/phase12_verdict_adamson.json;projects/maxtoki/runs/attention-grn-217M/outputs/phase12_verdict_k562_1b.json",
+      "phases_not_run": "0b;5;6;7;8;9;10;11"
+    },
+    {
+      "run": "spectral-geometry-217M",
+      "spec_phases": "0;1;2;3;4;5;6;7;8;9;10",
+      "n_spec_phases": 11,
+      "machine_readable_phase_record": false,
+      "recorded_phases": "",
+      "record_files": "",
+      "phases_not_run": ""
+    },
+    {
+      "run": "topology-141-217M",
+      "spec_phases": "0;1;2;3;4;5;6;7;8;9;10;11;12;13",
+      "n_spec_phases": 14,
+      "machine_readable_phase_record": false,
+      "recorded_phases": "",
+      "record_files": "",
+      "phases_not_run": ""
+    },
+    {
+      "run": "manifold-discovery-217M",
+      "spec_phases": "0;1;2;3;4;5;6;7;8;9;10;11;12;13",
+      "n_spec_phases": 14,
+      "machine_readable_phase_record": false,
+      "recorded_phases": "",
+      "record_files": "",
+      "phases_not_run": ""
+    },
+    {
+      "run": "longevity-mechinterp-217M",
+      "spec_phases": "0;1;2;3;4;5;6;7;8;9;10;11;12",
+      "n_spec_phases": 13,
+      "machine_readable_phase_record": false,
+      "recorded_phases": "",
+      "record_files": "",
+      "phases_not_run": ""
+    },
+    {
+      "run": "sae-atlas-217M",
+      "spec_phases": "0;1;2;3;4;5;6;7;8;9;10;11;12;13",
+      "n_spec_phases": 14,
+      "machine_readable_phase_record": false,
+      "recorded_phases": "",
+      "record_files": "",
+      "phases_not_run": ""
+    },
+    {
+      "run": "circuit-tracing-217M",
+      "spec_phases": "0;1;2;3;4;5;6;7;8;9;10;11;12;13",
+      "n_spec_phases": 14,
+      "machine_readable_phase_record": false,
+      "recorded_phases": "",
+      "record_files": "",
+      "phases_not_run": ""
+    },
+    {
+      "run": "exhaustive-mapping-217M",
+      "spec_phases": "0;1;2;3;4;5;6;7;8;9;10;11;12;13",
+      "n_spec_phases": 14,
+      "machine_readable_phase_record": false,
+      "recorded_phases": "",
+      "record_files": "",
+      "phases_not_run": ""
+    }
+  ],
+  "repro": [
+    {
+      "run": "attention-grn-217M",
+      "n_scripts": 11,
+      "scripts_using_randomness": 9,
+      "scripts_using_randomness_with_seed": 9,
+      "scripts_random_without_seed": "",
+      "run_level_env_file": "",
+      "project_requirements_pinning": "71/71 lines use ==",
+      "devices_recorded": "mps",
+      "json_files_with_timing": 5,
+      "scripts_loading_hf_checkpoints": 0,
+      "hf_loads_with_revision_pin": 0,
+      "summary_py_paths_ok": 0,
+      "summary_py_paths_missing": "",
+      "machine_readable_decision_log": "none",
+      "manual_reclassification_files": "",
+      "run_manifest_file": "none"
+    },
+    {
+      "run": "spectral-geometry-217M",
+      "n_scripts": 16,
+      "scripts_using_randomness": 13,
+      "scripts_using_randomness_with_seed": 13,
+      "scripts_random_without_seed": "",
+      "run_level_env_file": "",
+      "project_requirements_pinning": "71/71 lines use ==",
+      "devices_recorded": "mps",
+      "json_files_with_timing": 4,
+      "scripts_loading_hf_checkpoints": 0,
+      "hf_loads_with_revision_pin": 0,
+      "summary_py_paths_ok": 2,
+      "summary_py_paths_missing": "",
+      "machine_readable_decision_log": "none",
+      "manual_reclassification_files": "",
+      "run_manifest_file": "none"
+    },
+    {
+      "run": "topology-141-217M",
+      "n_scripts": 20,
+      "scripts_using_randomness": 16,
+      "scripts_using_randomness_with_seed": 16,
+      "scripts_random_without_seed": "",
+      "run_level_env_file": "",
+      "project_requirements_pinning": "71/71 lines use ==",
+      "devices_recorded": "mps",
+      "json_files_with_timing": 6,
+      "scripts_loading_hf_checkpoints": 0,
+      "hf_loads_with_revision_pin": 0,
+      "summary_py_paths_ok": 3,
+      "summary_py_paths_missing": "",
+      "machine_readable_decision_log": "none",
+      "manual_reclassification_files": "projects/maxtoki/runs/topology-141-217M/outputs/phase11_autoloop/MANUAL_REVIEW.md",
+      "run_manifest_file": "none"
+    },
+    {
+      "run": "manifold-discovery-217M",
+      "n_scripts": 23,
+      "scripts_using_randomness": 18,
+      "scripts_using_randomness_with_seed": 18,
+      "scripts_random_without_seed": "",
+      "run_level_env_file": "",
+      "project_requirements_pinning": "71/71 lines use ==",
+      "devices_recorded": "cpu;mps",
+      "json_files_with_timing": 20,
+      "scripts_loading_hf_checkpoints": 1,
+      "hf_loads_with_revision_pin": 0,
+      "summary_py_paths_ok": 2,
+      "summary_py_paths_missing": "",
+      "machine_readable_decision_log": "none",
+      "manual_reclassification_files": "",
+      "run_manifest_file": "none"
+    },
+    {
+      "run": "longevity-mechinterp-217M",
+      "n_scripts": 4,
+      "scripts_using_randomness": 1,
+      "scripts_using_randomness_with_seed": 1,
+      "scripts_random_without_seed": "",
+      "run_level_env_file": "",
+      "project_requirements_pinning": "71/71 lines use ==",
+      "devices_recorded": "",
+      "json_files_with_timing": 1,
+      "scripts_loading_hf_checkpoints": 0,
+      "hf_loads_with_revision_pin": 0,
+      "summary_py_paths_ok": 0,
+      "summary_py_paths_missing": "",
+      "machine_readable_decision_log": "none",
+      "manual_reclassification_files": "",
+      "run_manifest_file": "none"
+    },
+    {
+      "run": "sae-atlas-217M",
+      "n_scripts": 12,
+      "scripts_using_randomness": 10,
+      "scripts_using_randomness_with_seed": 10,
+      "scripts_random_without_seed": "",
+      "run_level_env_file": "",
+      "project_requirements_pinning": "71/71 lines use ==",
+      "devices_recorded": "mps",
+      "json_files_with_timing": 13,
+      "scripts_loading_hf_checkpoints": 0,
+      "hf_loads_with_revision_pin": 0,
+      "summary_py_paths_ok": 0,
+      "summary_py_paths_missing": "",
+      "machine_readable_decision_log": "none",
+      "manual_reclassification_files": "",
+      "run_manifest_file": "none"
+    },
+    {
+      "run": "circuit-tracing-217M",
+      "n_scripts": 4,
+      "scripts_using_randomness": 4,
+      "scripts_using_randomness_with_seed": 4,
+      "scripts_random_without_seed": "",
+      "run_level_env_file": "",
+      "project_requirements_pinning": "71/71 lines use ==",
+      "devices_recorded": "",
+      "json_files_with_timing": 1,
+      "scripts_loading_hf_checkpoints": 0,
+      "hf_loads_with_revision_pin": 0,
+      "summary_py_paths_ok": 0,
+      "summary_py_paths_missing": "",
+      "machine_readable_decision_log": "none",
+      "manual_reclassification_files": "",
+      "run_manifest_file": "none"
+    },
+    {
+      "run": "exhaustive-mapping-217M",
+      "n_scripts": 6,
+      "scripts_using_randomness": 4,
+      "scripts_using_randomness_with_seed": 4,
+      "scripts_random_without_seed": "",
+      "run_level_env_file": "",
+      "project_requirements_pinning": "71/71 lines use ==",
+      "devices_recorded": "",
+      "json_files_with_timing": 0,
+      "scripts_loading_hf_checkpoints": 0,
+      "hf_loads_with_revision_pin": 0,
+      "summary_py_paths_ok": 8,
+      "summary_py_paths_missing": "",
+      "machine_readable_decision_log": "none",
+      "manual_reclassification_files": "",
+      "run_manifest_file": "none"
+    }
+  ],
+  "project_repro": {
+    "setup_scripts": 3,
+    "checkpoint_load_lines": "projects/maxtoki/setup/maxtoki_adapter.py:171;projects/maxtoki/setup/maxtoki_adapter.py:179",
+    "project_requirements_mtime": "2026-05-07 17:52",
+    "revision_pins": "none",
+    "download_refs_in_readmes": "main",
+    "files_mentioning_sha256": "none",
+    "note": "download ref 'main' is a moving branch; no revision= argument and no recorded weight hash means the exact checkpoint cannot be proven from the project files"
+  }
+}

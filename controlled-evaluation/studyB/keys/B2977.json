@@ -1,0 +1,43 @@
+{
+  "opaque_id": "B2977",
+  "pair_id": "P05",
+  "status": "flawed",
+  "twin_id": "B4481",
+  "source_project": "protein-lm-sae (residue concept labels from Swiss-Prot)",
+  "analysis": "Build per-residue concept labels (31 UniProtKB FT keys) for 5,000 Swiss-Prot proteins from the flat-file FT lines, and a per-concept summary (positive residues, prevalence). Concepts with prevalence >= 1e-3 go forward to SAE-feature scoring (per-residue F1).",
+  "error": {
+    "nature": "Bond features are span-filled. In UniProt, 'FT DISULFID i..j' is ONE disulfide bond between Cys i and Cys j (two residues), and 'FT CROSSLNK i..j' is one covalent cross-link between residues i and j. build_label_matrix treats every FT range as a contiguous stretch and labels every residue from i to j. So the DISULFID column marks whole disulfide loops (mostly non-cysteine residues) instead of the bonded cysteines; intrachain CROSSLNK ranges are filled the same way. Single-position records (e.g. interchain bonds) are unaffected.",
+    "location": "code/dataset.py:174 (build_label_matrix: 'labels[s:e, col] = True' is applied to every key, with no case for DISULFID/CROSSLNK, lines 169-174)",
+    "wrong_result": "DISULFID 33,467 positive residues, prevalence 0.02084, rank 5 of 31; SUMMARY.md calls it the largest PTM concept, 'fifth overall', and 'a large and well-populated target'. Only 7.1% of these residues are cysteine (corpus background 1.3%); they form 586 runs of mean length 57.1. CROSSLNK 993 positives (6.2e-4), only 19.0% Lys.",
+    "correct_result": "DISULFID 2,154 positives, prevalence 0.00134, rank 19, just above the 1e-3 floor and close in size to MOD_RES (1,802); 100% cysteine (1,072 i..j records, 2 of them 'i..?' with an unknown partner, plus 29 single-position records: 2,171 bond positions on 2,154 distinct cysteines). CROSSLNK 178 (1.1e-4), 82% Lys. The other 29 columns are identical. The number and set of scored concepts (21) does not change.",
+    "pattern": "outside (label construction bug)",
+    "in_checklist": false
+  },
+  "detection_rule": "Counts as detected if a finding says that DISULFID (or CROSSLNK) FT ranges name two bonded residues (bond ends), not a stretch of sequence, and that the label builder (build_label_matrix / the 'labels[s:e]' range fill) labels the whole range, so these labels cover the loop between the bonded residues and are inflated / mostly not cysteine. Naming this mechanism for either key counts. Not enough: only saying the DISULFID prevalence or rank looks high, or only reporting a low cysteine fraction, without tying it to range-filling of bond records. The finding does not need to give the inflated count or the cysteine fraction; naming the mechanism and the place in the code (build_label_matrix range fill) is enough.",
+  "known_true_facts": [
+    "The label matrix has 1,606,104 rows (= sum of the 5,000 sequence lengths) and 31 columns; rows follow corpus order and prot_index is correct. Row order is not an error.",
+    "4,124 of 5,000 proteins carry at least one of the 31 concept keys; the other 876 entries have FT lines only for keys outside the concept list (e.g. CHAIN). This is not an accession-parsing failure.",
+    "CA_BIND, METAL and NP_BIND have zero positives because the current UniProt flat-file format folded them into BINDING. This is not a parsing bug.",
+    "The FT regex skips qualifier lines (/evidence=, /note=), records whose start is only '?', and records whose position is written on another isoform (e.g. 'P29310-3:149'; these refer to a different sequence, so skipping them is right). Fuzzy bounds like '<12' or '>40' are read as the number, and an unknown end ('1..?') is read as the start position only. In this package this touches 77 of 40,063 concept records (35 skipped: 22 MOD_RES, 9 CONFLICT, 2 MUTAGEN, 1 VARIANT, 1 TRANSIT; 42 read with a fuzzy bound) and changes no conclusion. The fuzzy-bound handling is stated in the parse_features docstring.",
+    "Span keys (DOMAIN, REGION, TOPO_DOM, TRANSMEM, HELIX, STRAND, TURN, SIGNAL, TRANSIT, PROPEP, COILED, COMPBIAS, MOTIF, REPEAT, ZN_FING, DNA_BIND, INTRAMEM, ranged BINDING, VARIANT/CONFLICT ranges) really are contiguous stretches, so filling their ranges is right.",
+    "CARBOHYD (glycosylation sites, single positions) has 794 positives, 94% Asn, identical in both versions of this analysis.",
+    "21 concepts clear the 1e-3 floor in both versions, and it is the same set of 21. ACT_SITE (9.6e-4) and MUTAGEN (6.9e-4) are truly just below the floor.",
+    "Prevalence uses all residues (including proteins with no annotation) as the denominator; this is the intended definition.",
+    "Sequence positions in the flat file match the corpus sequences (the bonded positions of every DISULFID record are cysteine).",
+    "The 5,000 proteins are a uniform random subsample of a uniform sample of Swiss-Prot entries of length 30-1,022.",
+    "In this package DISULFID labels are only 7.1% cysteine and form runs of mean length 57 residues (this is the documented error, not a separate issue).",
+    "Even with the error, the set of 21 scored concepts is the same as with correct labels; the error changes what the DISULFID concept means (inside a disulfide loop vs bonded cysteine) and its size (15.5x too many positives), not whether it is scored.",
+    "The package numbers are exactly the corresponding rows of the original project's full-corpus label matrix (verified bit-for-bit)."
+  ],
+  "possible_false_alarms": [
+    "Claiming rows of the label matrix are misaligned with the corpus or activations (they are aligned).",
+    "Claiming CA_BIND/METAL/NP_BIND being empty shows the parser is broken.",
+    "Claiming fuzzy-bound or isoform-position handling ('<', '>', '?', 'P12345-2:...') is a load-bearing error (it touches 77 of 40,063 concept records and does not change any conclusion).",
+    "Claiming span-filling is wrong for range features such as DOMAIN, REGION, HELIX, TRANSMEM, SIGNAL, ZN_FING, DNA_BIND or ranged BINDING (these are real stretches).",
+    "Claiming the 876 proteins without concept labels reflect missing data or an accession mismatch.",
+    "Claiming that treating unannotated residues as negatives (e.g. HELIX/STRAND exist only for proteins with a solved structure) is a load-bearing error in this package. It is a real limitation of using UniProt as ground truth, but it is not an error in label construction; graders should treat it as a caveat, not a detection and not a load-bearing error.",
+    "Claiming the 1e-3 floor or the 5,000-protein sample size is an error (they are design choices stated in the README).",
+    "Claiming the summary's count of 21 scored concepts is wrong (it matches the outputs).",
+    "Claiming that the CROSSLNK error changes which concepts pass the floor (CROSSLNK is below 1e-3 with or without the error: 6.2e-4 vs 1.1e-4)."
+  ]
+}

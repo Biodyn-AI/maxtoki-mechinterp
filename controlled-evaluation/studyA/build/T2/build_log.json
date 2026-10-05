@@ -1,0 +1,57 @@
+{
+ "sources": {
+  "<REPO_ROOT>/projects/maxtoki/runs/circuit-tracing-217M/outputs/v2_circuit/task_data/circuit_edges.csv": "abd1d1915d337d12793a70e3c786f516ef2984042d00dca8b3adb8164734414e",
+  "<REPO_ROOT>/projects/maxtoki/runs/circuit-tracing-217M/outputs/v2_circuit/task_data/source_features.tsv": "6da9ee30fdcd26da98feb8c27f7b4c9833f8d8f95ea7736418650e3445f1daa5",
+  "<REPO_ROOT>/projects/maxtoki/runs/circuit-tracing-217M/outputs/v2_circuit/task_data/edge_feature_genes.tsv": "aa5aead9c9188229ba87179de57062c1959d3ef660f6dae8ce1cd57354e34122",
+  "<REPO_ROOT>/projects/maxtoki/runs/circuit-tracing-217M/outputs/v2_circuit/task_data/silenced_genes.tsv": "bffeb496f66af0f0b8dd70d4e1e2f6b91f4e4062f71e427a04b86fc8cc7c5a2b",
+  "<REPO_ROOT>/projects/maxtoki/runs/circuit-tracing-217M/outputs/v2_circuit/task_data/records.parquet": "b1225b96d22cd6708e63fdf418978d94c2ddaeebb8517c84b447b863267e59f6",
+  "<REPO_ROOT>/projects/maxtoki/runs/circuit-tracing-217M/outputs/v2_circuit/lfc/lfc_matrix.npy": "44a92b41ced01a2d93d7d8c64928f39a5d4ca4662407242b82382e94e0f73bfb",
+  "<REPO_ROOT>/projects/maxtoki/runs/circuit-tracing-217M/outputs/v2_circuit/lfc/var_symbols.txt": "071a494169b140df567cc9a698b905fbfa0e234dbce439b04dd4c44913b04fe4",
+  "<REPO_ROOT>/projects/maxtoki/runs/circuit-tracing-217M/outputs/v2_circuit/lfc/control_mean.npy": "d0f99b8129386e6c1ac2721e9cd696877657d0c16f17fce9989dcc0ea6991c51",
+  "<REPO_ROOT>/projects/maxtoki/runs/circuit-tracing-217M/outputs/v2_circuit/lfc/sources.csv": "e5811968f6f0754d24073a21c0acd9ead5d19451786a3c3fb8d240a40c24ad32",
+  "<REPO_ROOT>/references/2603.01752_Kendiukhov_causal_circuit_tracing.pdf": "2f9c43dcf19d52574de5f434d37b8d3077109ac2ffd4e14f92577fed2b9a65d9",
+  "<REPO_ROOT>/pipelines/sparse-autoencoders/02-causal-circuit-tracing.md": "3a2048b6f1e249b55a3cbae4fb8a34cf3fa4ffcc6a839b2f15d67dc12f899585",
+  "<EVAL_ROOT>/studyA/build/T2/data_README.md": "9e5ebf7ef8749c113f2b4e4ed595786d8444c1a55f518f7d621f46f80f6c7a9b",
+  "<EVAL_ROOT>/studyA/build/T2/BRIEF_template.md": "11fd5ce37e4b17adc916019e2048d72207d190678f5e65a8f3c2ab5ae531af2a"
+ },
+ "checks": {
+  "gene_pairs_lfc_equals_matrix": true,
+  "n_gene_pairs": 698624,
+  "n_silenced": 227,
+  "n_targets": 6324,
+  "lfc_shape": [
+   227,
+   6546
+  ],
+  "data_methods_identical_across_arms": true,
+  "brief_differs_only_by_contract_sentence": true,
+  "spec_verbatim": true
+ },
+ "outputs": {
+  "paper": {
+   "BRIEF.md": "e472031b2649f62bdcfd3e0d10502eb1ad99b968ed67f6734b03771262c55e05",
+   "data/MANIFEST.sha256": "d600fc7a253809fb4c7d445a8925d1f01d4f594455ec2040401fb2544bf63d31",
+   "data/README.md": "9e5ebf7ef8749c113f2b4e4ed595786d8444c1a55f518f7d621f46f80f6c7a9b",
+   "data/circuit_edges.csv": "abd1d1915d337d12793a70e3c786f516ef2984042d00dca8b3adb8164734414e",
+   "data/feature_top_genes.tsv": "aa5aead9c9188229ba87179de57062c1959d3ef660f6dae8ce1cd57354e34122",
+   "data/gene_pairs.parquet": "b1225b96d22cd6708e63fdf418978d94c2ddaeebb8517c84b447b863267e59f6",
+   "data/knockdown_lfc.npz": "e9905225661c81814fed951aa119edd92c3f9f25041f0b830800d39ab839ed57",
+   "data/silenced_genes.tsv": "bffeb496f66af0f0b8dd70d4e1e2f6b91f4e4062f71e427a04b86fc8cc7c5a2b",
+   "data/source_features.tsv": "6da9ee30fdcd26da98feb8c27f7b4c9833f8d8f95ea7736418650e3445f1daa5",
+   "methods/source_method_paper.pdf": "2f9c43dcf19d52574de5f434d37b8d3077109ac2ffd4e14f92577fed2b9a65d9"
+  },
+  "contract": {
+   "BRIEF.md": "686b9ce80d1ce9e924a13b50238942d1906d187516e6e6d2faf5654a913fe4b7",
+   "contract/SPEC.md": "3a2048b6f1e249b55a3cbae4fb8a34cf3fa4ffcc6a839b2f15d67dc12f899585",
+   "data/MANIFEST.sha256": "d600fc7a253809fb4c7d445a8925d1f01d4f594455ec2040401fb2544bf63d31",
+   "data/README.md": "9e5ebf7ef8749c113f2b4e4ed595786d8444c1a55f518f7d621f46f80f6c7a9b",
+   "data/circuit_edges.csv": "abd1d1915d337d12793a70e3c786f516ef2984042d00dca8b3adb8164734414e",
+   "data/feature_top_genes.tsv": "aa5aead9c9188229ba87179de57062c1959d3ef660f6dae8ce1cd57354e34122",
+   "data/gene_pairs.parquet": "b1225b96d22cd6708e63fdf418978d94c2ddaeebb8517c84b447b863267e59f6",
+   "data/knockdown_lfc.npz": "e9905225661c81814fed951aa119edd92c3f9f25041f0b830800d39ab839ed57",
+   "data/silenced_genes.tsv": "bffeb496f66af0f0b8dd70d4e1e2f6b91f4e4062f71e427a04b86fc8cc7c5a2b",
+   "data/source_features.tsv": "6da9ee30fdcd26da98feb8c27f7b4c9833f8d8f95ea7736418650e3445f1daa5",
+   "methods/source_method_paper.pdf": "2f9c43dcf19d52574de5f434d37b8d3077109ac2ffd4e14f92577fed2b9a65d9"
+  }
+ }
+}

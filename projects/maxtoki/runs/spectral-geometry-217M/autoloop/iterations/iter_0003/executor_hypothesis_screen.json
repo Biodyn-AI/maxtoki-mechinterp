@@ -1,0 +1,73 @@
+{
+  "iteration": "iter_0003",
+  "model": "MaxToki-217M-HF",
+  "hypotheses": [
+    {
+      "id": "H3-BC",
+      "name": "STRING kNN pair persistence vs confidence tier",
+      "family": "graph_topology",
+      "method": "kNN-15 cosine graph per layer (12 layers); STRING-700 pair adjacency tracked as (n_pairs, 12) boolean matrix. Pairs categorized by persistence pattern (always/early/late/L0_only/mixed/never). Spearman(layer_count, is_900_tier) and Mann-Whitney 900+ vs 700-900 tier. Gene-label shuffle null (100 perms). Note: per-channel STRING weights (coexpression/experimental/textmining) not locally available; 700-vs-900 tier split used as confidence proxy.",
+      "status": "tested",
+      "primary_metric": "Spearman_rho_layercount_vs_900tier",
+      "result_value": "rho=0.083, p=0.015; null z(mean_lc)=6.93; 'early' category 93% in 900+ tier (vs 58% in 'never')",
+      "result_direction": "positive",
+      "artifact_paths": [
+        "h3bc_pair_adjacency.npy",
+        "h3bc_pair_categories.csv",
+        "h3bc_decay_confidence.csv",
+        "h3bc_category_channel_stats.csv"
+      ],
+      "decision": "promising",
+      "next_action": "Annotate the 15 'always'+'early' persistent pairs biologically. Retrieve per-channel STRING scores (coexpression/experimental/textmining) from STRING v12.0 full file to test whether 'early'-persisting pairs have higher experimental weights than 'L0_only' pairs.",
+      "novelty_type": "new_method",
+      "lineage": "H03 (iter_0002)",
+      "retired": false,
+      "interpretation": "STRING pairs persist 0.43 layers on average vs 0.17 under gene-shuffle null (z=6.93). The 'early' category (N=14, persist L0-L3 then disappear) is 93% in the 900+ confidence tier vs 58% in the 'never' group. One pair persists all 12 layers (900+ tier). High-confidence pairs are enriched in the topologically persistent tiers, though median layer_count=0 for both tiers means most pairs never co-appear as kNN neighbors. The significant Spearman rho=0.083 (p=0.015) shows a real but small graded confidence-vs-persistence relationship. This is a positive finding on the trajectory of H03 (STRING topology encoding)."
+    },
+    {
+      "id": "H3-DEL",
+      "name": "LID confound regression + Geneformer static LID comparison",
+      "family": "intrinsic_dimensionality",
+      "method": "Sub-D: Spearman(STRING-700 degree, LID_L0/L6/L11); partial Spearman via rank-residual regression (TF/target gap controlling for degree). Sub-E: OLS LID_L6 ~ TF_only + target_only + log(mean_expr) + dropout_rate; report TF_only coefficient significance. Sub-L: Load Geneformer V2-316M word_embeddings (20275, 1152), filter to 1500 HVG token IDs, compute Levina-Bickel LID (k=20, cosine), Mann-Whitney TF_only vs target_only, BH correction.",
+      "status": "tested",
+      "primary_metric": "OLS_TF_only_pval_after_confound_control",
+      "result_value": "Sub-D: Spearman(degree,LID_L11)=-0.269 (p<0.001); TF/target gap survives degree control (p=0.0011). Sub-E: TF_only OLS coef=0.14, p=0.54 — NOT significant after expression+dropout control; target_only coef=0.54, p=0.0004. Sub-L: Geneformer TF_only vs target_only: delta=-1.68, q=0.00019 — same direction, significant.",
+      "result_direction": "mixed",
+      "artifact_paths": [
+        "h3del_degree_lid.csv",
+        "h3del_confound_regression.csv",
+        "h3del_geneformer_lid.csv",
+        "h3del_geneformer_lid_tests.csv",
+        "h3del_summary.csv"
+      ],
+      "decision": "promising",
+      "next_action": "Sub-E confound result is critical: TF_only LID advantage disappears after expression/dropout control, but target_only LID elevation survives. Interpret as: low-expressed TF genes artificially appear low-LID (less data-dense neighborhoods), while target_only gene high-LID is a real biological signal. Sub-L Geneformer cross-architecture agreement (TF<target, q<0.001) is strong independent evidence that the TF/target LID ordering is encoded in the shared vocabulary, not MaxToki-specific architecture.",
+      "novelty_type": "refinement",
+      "lineage": "H02 (iter_0002)",
+      "retired": false,
+      "interpretation": "Three sub-analyses resolve H02's TF/target LID finding. Hub degree is negatively correlated with LID (rho=-0.27 at L11; hubs occupy lower-LID neighborhoods) but does NOT explain the TF/target gap (partial test still significant). The OLS confound regression reveals a critical nuance: TF_only LID advantage is NOT significant after controlling for expression and dropout (p=0.54), suggesting the raw signal was confounded. However, target_only genes have significantly HIGHER LID even after confound control (p=0.0004). The Geneformer Sub-L finding is the strongest positive result: TF<target LID ordering in Geneformer static embeddings (delta=-1.68, q<0.001), cross-architecture at shared-vocabulary level, strongly implicating the gene identity itself (not MaxToki-specific learning) as the driver of this pattern."
+    },
+    {
+      "id": "H3-G",
+      "name": "Cell-type centroid trajectory across MaxToki layers",
+      "family": "trajectory_geometry",
+      "method": "Sample 200 cells per type (B cell, CD4 T, CD8 T, NK, monocyte, macrophage) from Tabula Sapiens immune. Run MaxToki-217M inference (forward_with_hidden_states). Average HVG-position hidden states per cell per layer for centroids (6, 12, 1232). Pairwise cosine distances (15 pairs x 12 layers). Spearman(distance, layer depth) per pair. Bootstrap variance (3 x 100-cell subsamples). Test: related pairs (CD4/CD8, monocyte/macrophage) converge; unrelated pairs stable or diverge.",
+      "status": "partial",
+      "primary_metric": "mean_spearman_rho_related_pairs",
+      "result_value": "pending — inference running (h3g_run.log)",
+      "result_direction": "inconclusive",
+      "artifact_paths": [
+        "h3g_centroids.npy",
+        "h3g_centroid_distances.csv",
+        "h3g_distance_depth_spearman.csv",
+        "h3g_bootstrap_variance.csv",
+        "h3g_summary.json"
+      ],
+      "decision": "inconclusive",
+      "next_action": "Await completion of inference run. If related pairs (CD4/CD8 T cell; monocyte/macrophage) show Spearman rho < 0 (converging) while unrelated pairs do not, this confirms lineage-specific pseudotime geometry. If all pairs converge equally, MaxToki encodes generic cell-identity compression rather than differentiation trajectory.",
+      "novelty_type": "new_family",
+      "lineage": "none",
+      "retired": false
+    }
+  ]
+}

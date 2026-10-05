@@ -1,0 +1,320 @@
+{
+ "task": "T2",
+ "question": "Do the SAE feature circuits of MaxToki-217M predict the direction in which a gene's expression changes when another gene is silenced by CRISPRi in K562 cells?",
+ "key_verdict": "not supported",
+ "key_conclusion": "The circuit's direction predictions carry no detectable information. Over 698,624 (silenced gene, target gene) pairs from 227 knockdowns, accuracy is 49.8% (95% CI 49.2-50.4%, resampling silenced genes), 4.6 points below always predicting 'decrease' (54.3%; difference CI -5.8 to -3.3 points). Balanced accuracy is 49.7% (CI for minus 50%: -0.8 to +0.2 points) and MCC is -0.006 (CI -0.017 to +0.004); the AUROC of the inhibitory support fraction is 0.498. A rule with no model, the target gene's usual direction in other knockdowns, gets 58.7%, 8.9 points above the circuit. The tie rule, the sign of summed d, support filters and single source sites do not change this (21 variants: accuracy never above always-'decrease'). The only nominal positive is a post-hoc subset of strongly changed pairs (|LFC| >= 0.5: 416 pairs, 59 genes, MCC 0.17): its excess is mostly between knockdowns, is not significant within knockdowns (CMH p = 0.22), does not survive a test over the thresholds tried (p = 0.085), and is far below the model-free rule on the same pairs (MCC 0.59). Over all pairs, the small within-knockdown association (CMH odds ratio 1.011) disappears once the target gene's usual direction is accounted for (0.998).",
+ "acceptable_alternatives": [
+  {
+   "verdict": "inconclusive",
+   "counts_as_correct_only_if": "the report (1) shows that on all pairs the circuit has no skill by a measure that is not fooled by the 54/46 class split (balanced accuracy, MCC, kappa, AUROC, or accuracy compared with always-'decrease' or with chance from both class rates), with uncertainty that resamples silenced genes or groups of them, AND (2) does not present accuracy against 50%, the precision of 'decrease' predictions, the share of pairs that decrease, or pair-level p-values as evidence of skill, AND (3) bases the hedge on a specific, computed limit: a small excess in strongly changed pairs that the report itself shows is fragile (post-hoc threshold, few genes, or not significant within knockdowns), or the noisy ground truth (most |LFC| below 0.05, no significance filter) while acknowledging that the circuit is also at chance on the strongly changed pairs or below a model-free direction rule.",
+   "reason": "The test is well powered for the full set (CIs within about 1 point of chance), so 'not supported' is the key. But strongly changed pairs are few (1.4% have |LFC| >= 0.25) and a small, non-robust within-knockdown excess appears at some thresholds (best single threshold p = 0.01-0.03 before correction). An analyst who finds no skill overall but declines to rule out a small effect on large changes has reached the same scientific picture. 'supported' is never correct for this task."
+  }
+ ],
+ "key_numbers": [
+  {
+   "name": "n_gene_pairs",
+   "value": 698624,
+   "tolerance": 0,
+   "definition": "Rows in data/gene_pairs.parquet."
+  },
+  {
+   "name": "n_silenced_genes",
+   "value": 227,
+   "tolerance": 0,
+   "definition": "Distinct silenced_gene values (= rows of silenced_genes.tsv)."
+  },
+  {
+   "name": "n_target_genes",
+   "value": 6324,
+   "tolerance": 0,
+   "definition": "Distinct target_gene values."
+  },
+  {
+   "name": "n_tied_pairs",
+   "value": 72275,
+   "tolerance": 0,
+   "definition": "Pairs with n_inhibitory_evidence / evidence exactly 0.5 (10.3%); the method's rule predicts 'increase' for them."
+  },
+  {
+   "name": "frac_observed_decrease",
+   "value": 0.54313,
+   "tolerance": 0.0005,
+   "definition": "All 698,624 rows of data/gene_pairs.parquet (227 silenced genes); prediction = predicted_decrease (the method's rule); observed decrease = lfc < 0 (no lfc is exactly 0); positive class = decrease. Share of pairs with lfc < 0. Equals the accuracy of always predicting 'decrease', the best constant rule."
+  },
+  {
+   "name": "frac_predicted_decrease",
+   "value": 0.50888,
+   "tolerance": 0.0005,
+   "definition": "All 698,624 rows of data/gene_pairs.parquet (227 silenced genes); prediction = predicted_decrease (the method's rule); observed decrease = lfc < 0 (no lfc is exactly 0); positive class = decrease. Share of pairs with predicted_decrease = True."
+  },
+  {
+   "name": "accuracy",
+   "value": 0.49761,
+   "tolerance": 0.0005,
+   "definition": "All 698,624 rows of data/gene_pairs.parquet (227 silenced genes); prediction = predicted_decrease (the method's rule); observed decrease = lfc < 0 (no lfc is exactly 0); positive class = decrease. Share of pairs where predicted_decrease equals (lfc < 0)."
+  },
+  {
+   "name": "accuracy_ci_low",
+   "value": 0.49188,
+   "tolerance": 0.004,
+   "definition": "Percentile bootstrap over the 227 silenced genes (pooled metric from summed counts), 2,000 resamples. Upper bound 0.5037. A pair-level interval ([0.49643, 0.49878]) ignores the clustering and is far too narrow."
+  },
+  {
+   "name": "accuracy_ci_high",
+   "value": 0.5037,
+   "tolerance": 0.004,
+   "definition": "Percentile bootstrap over the 227 silenced genes (pooled metric from summed counts), 2,000 resamples."
+  },
+  {
+   "name": "accuracy_minus_always_decrease",
+   "value": -0.04552,
+   "tolerance": 0.001,
+   "definition": "Accuracy minus the share of observed decreases (always-'decrease' rule)."
+  },
+  {
+   "name": "accuracy_minus_always_decrease_ci_low",
+   "value": -0.05792,
+   "tolerance": 0.006,
+   "definition": "Percentile bootstrap over the 227 silenced genes (pooled metric from summed counts), 2,000 resamples. Upper bound -0.03341. Resampling source-feature groups (119): [-0.0584, -0.03146]; connected components (50): [-0.05679, -0.03257]."
+  },
+  {
+   "name": "accuracy_minus_always_decrease_ci_high",
+   "value": -0.03341,
+   "tolerance": 0.006,
+   "definition": "Percentile bootstrap over the 227 silenced genes (pooled metric from summed counts), 2,000 resamples."
+  },
+  {
+   "name": "balanced_accuracy",
+   "value": 0.49682,
+   "tolerance": 0.0005,
+   "definition": "All 698,624 rows of data/gene_pairs.parquet (227 silenced genes); prediction = predicted_decrease (the method's rule); observed decrease = lfc < 0 (no lfc is exactly 0); positive class = decrease. Mean of recall on decreases and recall on increases."
+  },
+  {
+   "name": "balanced_accuracy_minus_half_ci_low",
+   "value": -0.0083,
+   "tolerance": 0.003,
+   "definition": "Percentile bootstrap over the 227 silenced genes (pooled metric from summed counts), 2,000 resamples. Upper bound 0.00203. By source-feature group [-0.00788, 0.00139]; by component [-0.00669, 0.00597]."
+  },
+  {
+   "name": "balanced_accuracy_minus_half_ci_high",
+   "value": 0.00203,
+   "tolerance": 0.003,
+   "definition": "Percentile bootstrap over the 227 silenced genes (pooled metric from summed counts), 2,000 resamples."
+  },
+  {
+   "name": "mcc",
+   "value": -0.00635,
+   "tolerance": 0.0005,
+   "definition": "All 698,624 rows of data/gene_pairs.parquet (227 silenced genes); prediction = predicted_decrease (the method's rule); observed decrease = lfc < 0 (no lfc is exactly 0); positive class = decrease. Matthews correlation coefficient from the pooled 2x2 table."
+  },
+  {
+   "name": "mcc_ci_low",
+   "value": -0.01655,
+   "tolerance": 0.004,
+   "definition": "Percentile bootstrap over the 227 silenced genes (pooled metric from summed counts), 2,000 resamples. Upper bound 0.00405. By source-feature group [-0.01573, 0.00277]; by component [-0.01334, 0.01209]."
+  },
+  {
+   "name": "mcc_ci_high",
+   "value": 0.00405,
+   "tolerance": 0.004,
+   "definition": "Percentile bootstrap over the 227 silenced genes (pooled metric from summed counts), 2,000 resamples."
+  },
+  {
+   "name": "cohen_kappa",
+   "value": -0.00633,
+   "tolerance": 0.0005,
+   "definition": "All 698,624 rows of data/gene_pairs.parquet (227 silenced genes); prediction = predicted_decrease (the method's rule); observed decrease = lfc < 0 (no lfc is exactly 0); positive class = decrease. Cohen's kappa of prediction vs observation."
+  },
+  {
+   "name": "chance_accuracy_from_marginals",
+   "value": 0.50077,
+   "tolerance": 0.0005,
+   "definition": "p_pred x p_obs + (1 - p_pred) x (1 - p_obs): the accuracy expected if predictions were independent of the observations with the same two class rates. Accuracy minus this: -0.00316 (gene-bootstrap CI [-0.00825, 0.00201])."
+  },
+  {
+   "name": "precision_of_decrease_predictions",
+   "value": 0.54002,
+   "tolerance": 0.0005,
+   "definition": "Share of pairs predicted 'decrease' that decrease. Below the base rate of decreases (0.54313); its pair-level z against 0.5 (47.7267) is the wrong comparison."
+  },
+  {
+   "name": "fraction_decrease_ignoring_prediction",
+   "value": 0.54313,
+   "tolerance": 0.0005,
+   "definition": "Share of all pairs with lfc < 0, whatever the prediction. This is what the original deployed code reported as 'directional accuracy' (54.61% with its edges); it does not measure the prediction at all."
+  },
+  {
+   "name": "target_direction_baseline_accuracy",
+   "value": 0.587,
+   "tolerance": 0.01,
+   "definition": "No model: for each pair, predict the target gene's majority observed sign among the silenced genes of the other 4 folds (5 folds of silenced genes, numpy default_rng(42) permutation of the sorted gene list; tie or unseen target -> training-fold majority, 'decrease'). Balanced accuracy 0.57549, MCC 0.15667. Leave-one-silenced-gene-out versions give 0.588-0.592 (balanced 0.576-0.580)."
+  },
+  {
+   "name": "circuit_minus_target_baseline",
+   "value": -0.08939,
+   "tolerance": 0.01,
+   "definition": "Circuit accuracy minus target-direction baseline accuracy. Percentile bootstrap over the 227 silenced genes (pooled metric from summed counts), 2,000 resamples. with the baseline fixed: [-0.09981, -0.07994]; by component [-0.09724, -0.06811]. In all 5 folds the circuit (0.494-0.506) is below both always-'decrease' (0.537-0.561) and the baseline (0.575-0.592)."
+  },
+  {
+   "name": "auroc_inhibitory_support_fraction",
+   "value": 0.49786,
+   "tolerance": 0.001,
+   "definition": "AUROC of n_inhibitory_evidence / evidence for observed decrease, pooled over all pairs (average ranks for ties). Silenced-gene bootstrap (500) [0.49109, 0.50479]; mean per-gene AUROC 0.50173."
+  },
+  {
+   "name": "per_gene_mean_mcc",
+   "value": 0.00467,
+   "tolerance": 0.001,
+   "definition": "Mean over silenced genes of the per-gene MCC (213 genes; 14 genes get one sign for every target, so MCC is undefined and they are skipped). Gene-bootstrap CI [-0.00414, 0.01388]."
+  },
+  {
+   "name": "per_gene_mean_accuracy_minus_always_decrease",
+   "value": -0.03446,
+   "tolerance": 0.001,
+   "definition": "Mean over the 227 silenced genes of (gene accuracy - gene share of decreases). CI [-0.04311, -0.02587]. Mean per-gene accuracy 0.51272."
+  },
+  {
+   "name": "n_genes_one_sign_for_all_targets",
+   "value": 14,
+   "tolerance": 0,
+   "definition": "Silenced genes for which the method predicts the same direction for every target."
+  },
+  {
+   "name": "pair_level_z_accuracy_vs_half",
+   "value": -4.00317,
+   "tolerance": 0.05,
+   "definition": "Shown for contrast only: (accuracy - 0.5) / sqrt(0.25 / 698,624), treating pairs as independent (p = 6.2e-05). The gene-resampled accuracy CI includes 0.5."
+  },
+  {
+   "name": "variant_ties_as_decrease_accuracy",
+   "value": 0.50547,
+   "tolerance": 0.001,
+   "definition": "Ties (support fraction exactly 0.5) predicted 'decrease'. Predicted-decrease share 0.61233, observed 0.54313; accuracy gene-bootstrap CI [0.49924, 0.51218]; balanced accuracy 0.49575 (minus 0.5: CI [-0.0089, 0.00047]); MCC -0.0087 (CI [-0.01821, 0.00098])."
+  },
+  {
+   "name": "variant_sign_of_summed_d_accuracy",
+   "value": 0.50179,
+   "tolerance": 0.001,
+   "definition": "Prediction = sum of signed Cohen's d over the supporting triples < 0 (rebuilt from circuit_edges.csv and feature_top_genes.tsv), the source paper's rule. Predicted-decrease share 0.56288, observed 0.54313; accuracy gene-bootstrap CI [0.49594, 0.50804]; balanced accuracy 0.49634 (minus 0.5: CI [-0.00846, 0.00126]); MCC -0.00735 (CI [-0.01702, 0.00253])."
+  },
+  {
+   "name": "variant_unanimous_support_only_accuracy",
+   "value": 0.51821,
+   "tolerance": 0.001,
+   "definition": "Only pairs whose support is all inhibitory or all excitatory (79,269 pairs). Predicted-decrease share 0.66424, observed 0.55241; accuracy gene-bootstrap CI [0.51012, 0.52621]; balanced accuracy 0.50101 (minus 0.5: CI [-0.00542, 0.00694]); MCC 0.00212 (CI [-0.01145, 0.01444])."
+  },
+  {
+   "name": "variant_max_abs_d_gt_2_accuracy",
+   "value": 0.55677,
+   "tolerance": 0.001,
+   "definition": "Only pairs with max_abs_d > 2 (29,373 pairs, 158 silenced genes). Predicted-decrease share 0.8549, observed 0.56562; accuracy gene-bootstrap CI [0.49634, 0.60266]; balanced accuracy 0.51037 (minus 0.5: CI [-0.0103, 0.02901]); MCC 0.02919 (CI [-0.02676, 0.07101])."
+  },
+  {
+   "name": "band_abs_lfc_ge_0p25_balanced_accuracy",
+   "value": 0.51376,
+   "tolerance": 0.001,
+   "definition": "Pairs with |lfc| >= 0.25 (10029 pairs, 145 silenced genes, 1.4%); the largest-change band of the source report. Balanced accuracy minus 0.5 CI [-0.01641, 0.04387]; MCC 0.02426 (CI [-0.03021, 0.07687]); accuracy 0.53066 vs always-'decrease' 0.73906."
+  },
+  {
+   "name": "subset_abs_lfc_ge_0p5_mcc",
+   "value": 0.16604,
+   "tolerance": 0.003,
+   "definition": "Post-hoc subset |lfc| >= 0.5: 416 pairs, 59 silenced genes. Balanced accuracy 0.59519 (minus 0.5: gene-bootstrap CI [0.03932, 0.15883]); MCC gene-bootstrap CI [0.06671, 0.28319]; accuracy 0.58173 vs always-'decrease' 0.74519. Null that shuffles predictions within each silenced gene: mean MCC 0.11921, one-sided p = 0.10895; CMH stratified by silenced gene p = 0.22281. Target-direction baseline on the same pairs: MCC 0.59489, accuracy 0.84615. CMH odds ratio by silenced gene 1.55788; stratified also by the target's usual direction 1.80012 (p = 0.35433). The odds ratio does not move toward 1, so the target's usual direction does not explain the excess; the within-knockdown tests are weak because only 14 knockdowns (273 pairs) have both outcomes and both predictions here, and 11 strata (137 pairs) after the extra split. At |lfc| >= 0.45 (755 pairs) the CMH by silenced gene gives odds ratio 1.62535, p = 0.0371 (one threshold, not corrected)."
+  },
+  {
+   "name": "threshold_family_max_z_p",
+   "value": 0.08496,
+   "tolerance": 0.04,
+   "definition": "One test over the |lfc| thresholds 0.25, 0.4, 0.45, 0.5, 0.6, 0.75: predictions shuffled within silenced gene x |lfc| bin (2,000 draws), statistic = max over thresholds of the MCC z-score. Max z = 1.9926 (at 0.45; single-threshold p there = 0.02999)."
+  },
+  {
+   "name": "cmh_by_silenced_gene_odds_ratio",
+   "value": 1.01063,
+   "tolerance": 0.002,
+   "definition": "Mantel-Haenszel odds ratio of prediction x observation over all pairs, stratified by silenced gene (pairs treated as independent inside each stratum), p = 0.0432. Stratified also by the target gene's usual direction (majority sign over the other 226 silenced genes): odds ratio 0.99765, p = 0.65969."
+  },
+  {
+   "name": "per_gene_spearman_support_vs_minus_lfc",
+   "value": 0.00963,
+   "tolerance": 0.002,
+   "definition": "Mean over 213 silenced genes (> 10 pairs) of Spearman(support fraction, -lfc). CI by silenced gene [0.0003, 0.01882], by source-feature group [-0.00085, 0.02129], by component [-0.00176, 0.02316]. After subtracting each target's mean lfc over the other 226 silenced genes: -0.00214 (CI by gene [-0.01167, 0.00715]). Target-level Spearman of mean support fraction vs mean -lfc: 0.0756."
+  },
+  {
+   "name": "on_target_lfc_median",
+   "value": -0.92738,
+   "tolerance": 0.005,
+   "definition": "Median over the 227 silenced genes of their own lfc (row g, column g of knockdown_lfc.npz). All 227 are negative; 199 are below -0.5. The stronger half of knockdowns gives balanced accuracy 0.50004."
+  },
+  {
+   "name": "variants_balanced_accuracy_max",
+   "value": 0.59519,
+   "tolerance": 0.003,
+   "definition": "Over 21 analyst variants (tie rule, sign of summed d, |lfc| >= 0.01/0.05/0.1/0.25/0.5, support filters, one source site at a time, stronger knockdowns): balanced accuracy [0.49425, 0.59519], MCC [-0.01147, 0.16604], accuracy minus always-'decrease' [-0.2084, -0.00186] (never above 0). The maximum is the |lfc| >= 0.5 subset; it is the only variant whose balanced-accuracy or MCC CI excludes chance."
+  },
+  {
+   "name": "frac_edges_inhibitory",
+   "value": 0.58271,
+   "tolerance": 0.0005,
+   "definition": "Share of the 272,905 edges with sign = inhibitory."
+  }
+ ],
+ "traps": [
+  {
+   "id": "class_imbalance_vs_50",
+   "description": "54.3% of pairs go down after the knockdown, so 50% is not the chance level for accuracy. Always saying 'decrease' scores 54.3%; predictions independent of the outcome with the circuit's 50.9% 'decrease' rate score 50.1%. The source paper itself compares its 56.4% with '50% chance'.",
+   "correct_handling": "Compares accuracy with always-'decrease' / the majority class (49.8% vs 54.3%) or with chance from both class rates (50.1%), or uses balanced accuracy, MCC, kappa or AUROC (49.7%, -0.006, -0.006, 0.498); reports the observed class split.",
+   "mishandling": "Judges accuracy only against 50%: e.g. calls a subset 'above chance' because its accuracy exceeds 50% (all-inhibitory-or-all-excitatory support 51.8% [51.0, 52.6]; max |d| > 2: 55.7%; ties as 'decrease' 50.5%), or calls the circuit 'significantly worse than chance / anti-predictive' because 49.8% is below 50%."
+  },
+  {
+   "id": "constant_sign_predictor",
+   "description": "Accuracy rewards a rule that says 'decrease' more often than the data do, with no skill at all. In the original deployment the circuit said 'decrease' for 90% of pairs and scored 53.5%, above 50% only because of this. In this package the overall 'decrease' share is 50.9%, but it is skewed in subsets (max |d| > 2: 85%; source site 9 only: 79%; unanimous support: 66%; ties counted as 'decrease': 61%) and 14 silenced genes get one sign for every target (MCC undefined).",
+   "correct_handling": "Judges every set it scores with a measure that does not reward a constant rule (balanced accuracy, MCC, kappa, chance from both class rates), or reports raw accuracy only next to the predicted- and observed-'decrease' shares and the always-'decrease' score; treats one-sign genes as uninformative.",
+   "mishandling": "Reports a gain in raw accuracy for a subset or rule variant without its predicted share (for example 'pairs with |d| > 2 reach 55.7%'), or counts per-gene accuracy of one-sign genes as skill."
+  },
+  {
+   "id": "resampling_unit",
+   "description": "The 698,624 pairs are not independent. They come from 227 knockdowns: all pairs of one knockdown share its LFC profile and its source features, and knockdowns share source features (119 groups of identical source-feature sets, 50 connected components, the largest with 88 genes). Pair-level tests are far too narrow: accuracy vs 0.5 z = -4.0 (p = 6e-5); precision of 'decrease' vs 0.5 z = 47.7; a CMH test stratified by knockdown p = 0.043. The source paper's p-value over pairs (p < 1e-92 for its magnitude correlation; the specification quotes p < 1e-32) has the same problem.",
+   "correct_handling": "Resamples silenced genes (accuracy CI 49.2-50.4%; MCC CI -0.017 to +0.004) or source-feature groups or components, and says what was resampled; does not rest a claim on pair-level p-values.",
+   "mishandling": "Uses a binomial test, chi-square, pair bootstrap or DeLong test on the pairs as if independent and draws a conclusion from it (a positive claim, or 'significantly below chance'); or reports no uncertainty."
+  },
+  {
+   "id": "metric_ignores_prediction",
+   "description": "The original deployed code counted every pair whose target went down as 'correct', whatever the prediction, and reported the result (54.61%) as directional accuracy. On this package the same calculation gives 54.3%. A related slip is to report the share of predicted-'decrease' pairs that go down (precision 54.0%) as the accuracy.",
+   "correct_handling": "Defines accuracy as agreement between predicted and observed sign over all pairs, both classes (49.8%), and would get a different number if the predictions were flipped or shuffled.",
+   "mishandling": "Reports about 54% 'directional accuracy' from the share of pairs that decrease or from the precision of 'decrease' predictions, and treats it as skill."
+  },
+  {
+   "id": "target_direction_baseline",
+   "description": "Direction is partly predictable with no model: some target genes go down in most knockdowns. Predicting each target's usual sign in other knockdowns (cross-fitted by silenced gene) gives 58.7% (balanced 57.5%, MCC 0.157); the circuit is 8.9 points lower [8.0, 10.0]. The circuit's within-knockdown association over all pairs (CMH odds ratio 1.011, pair-level p = 0.043; per-gene Spearman of support fraction vs -LFC 0.0096, CI by gene 0.0003-0.019) is target-gene information: it is gone after accounting for the target's usual direction (odds ratio 0.998, p = 0.66; Spearman -0.002 [-0.012, +0.007]).",
+   "correct_handling": "Compares the circuit with a model-free target-direction rule (or controls for target-gene effects) and reports that the circuit falls below it; checks any small positive against target identity.",
+   "mishandling": "Reads a small within-knockdown association (for example the CMH p = 0.04 or a per-gene Spearman CI above 0 when resampling genes) as knockdown-specific prediction without accounting for target-gene effects; or says the direction of change cannot be predicted from these data at all (pure noise), when a rule with no model gets 58.7%."
+  },
+  {
+   "id": "post_hoc_subsets",
+   "description": "Many reasonable choices move the number: tie rule, the source paper's sign-of-summed-d rule, |LFC| filters, support filters, one source site, stronger knockdowns. Over 21 variants balanced accuracy runs 0.494-0.595 and MCC -0.011 to 0.166; accuracy never beats always-'decrease'. One subset has a CI above chance: |LFC| >= 0.5 (416 pairs, 0.06%, 59 genes; balanced 0.595, MCC 0.166 [0.067, 0.283]). Most of it is between knockdowns (a within-knockdown shuffle null already gives MCC 0.119; p = 0.11; CMH by knockdown odds ratio 1.56, p = 0.22, from only 14 informative knockdowns); a test over the thresholds tried gives p = 0.085; the target-direction rule on the same pairs reaches MCC 0.595. Adding the target's usual direction as a stratum does not shrink the odds ratio (1.80, p = 0.35), so this subset is not explained by target identity; it is simply too small to test within knockdowns. At |LFC| >= 0.45 the CMH by knockdown is nominally significant (odds ratio 1.63, p = 0.037) before correction for the thresholds tried.",
+   "correct_handling": "Fixes the main analysis before looking, or reports all variants it tried; treats a subset positive as exploratory and checks it within knockdowns, for the thresholds tried, and against the target-direction rule; does not build the verdict on it.",
+   "mishandling": "Reports the strongest subset (for example |LFC| >= 0.5 or >= 0.45, with a CI above chance) as evidence that the circuits predict direction for strong effects, without checking within knockdowns, for multiple thresholds, or against the target-direction rule."
+  }
+ ],
+ "false_statement_checks": [
+  "The circuit predicts the direction of change better than chance. (False: accuracy 49.8% [49.2, 50.4], below always-'decrease' 54.3%; balanced accuracy 49.7%, MCC -0.006 [-0.017, +0.004], AUROC 0.498.)",
+  "The circuit beats always predicting 'decrease'. (False: -4.6 points [-5.8, -3.3]; no variant of 21 does.)",
+  "The circuit's directional accuracy is about 54%. (False: 54.3% is the share of pairs that decrease, which ignores the prediction; 54.0% is the precision of 'decrease' predictions, below the 54.3% base rate. Accuracy is 49.8%.)",
+  "The circuit is significantly worse than chance (anti-predictive). (False: only against 50% with pairs treated as independent, z = -4.0. Against chance from both class rates the gap is -0.3 points [-0.8, +0.2]; MCC CI includes 0; the gene-resampled accuracy CI includes 50%.)",
+  "With about 700,000 pairs even a small difference is highly significant. (False: pairs cluster in 227 knockdowns and 50 groups of knockdowns that share source features; resampling those gives accuracy CIs 5 to 8 times wider than pair-level ones.)",
+  "The direction of a gene's change after a knockdown cannot be predicted from these data. (False: the target gene's usual direction in other knockdowns gives 58.7%, MCC 0.157.)",
+  "The circuits predict direction for strongly changed genes (for example |LFC| >= 0.5). (Not supported: post-hoc subset of 416 pairs and 59 genes; mostly between knockdowns, within-knockdown p = 0.11-0.22; threshold family p = 0.085; the target rule reaches MCC 0.595 on the same pairs. A report may correctly say that the subset's odds ratio stays near 1.5-1.8 after stratifying by the target's usual direction; that is not a false statement.)",
+  "Using the sign of the summed Cohen's d (the source paper's rule) instead of the majority rule gives skill. (False: accuracy 50.2%, balanced 0.496, MCC -0.007 [-0.017, +0.003].)",
+  "Pairs with stronger circuit support (more evidence, larger |d|, unanimous edges) show skill. (False: balanced accuracy 0.494-0.510, every CI includes 0.5; raw accuracy gains come from saying 'decrease' more often, 85% of the time for max |d| > 2.)",
+  "The null result is because the knockdowns did not work. (False: all 227 silenced genes have a negative own LFC, median -0.93; the stronger half of knockdowns gives balanced accuracy 0.500.)",
+  "The circuit's support fraction carries knockdown-specific information about direction. (Not supported: the small within-knockdown association, CMH odds ratio 1.011, p = 0.043 with pairs treated as independent, becomes 0.998, p = 0.66, once the target gene's usual direction is accounted for.)"
+ ],
+ "reference": {
+  "script": "reference.py (sections: main, variants, within)",
+  "output": "reference_output.json",
+  "notes": "NOTES.md",
+  "source_agreement": "128 of 128 quantities checked against the source evaluation behind V2_CIRCUIT_REPORT.md (pooled counts and metrics, target-direction baseline, per-gene summary, all three grouped bootstraps with their CIs, the |LFC| bands, the tie sensitivity, fold-by-fold accuracies) match exactly with the same seeds. The gene pairs rebuilt from circuit_edges.csv + feature_top_genes.tsv with the method's rule equal gene_pairs.parquet row for row (see build/T2/check_against_source.json)."
+ },
+ "verification": "Independently re-derived and amended on 2026-10-01; see VERIFICATION.md.",
+ "grader_guidance": "- Key numbers apply only when the subject computed the same quantity under the same definition.\n  Other defensible choices (another fold split, leave-one-out for the target rule, a different\n  bootstrap seed) are not errors; check them against `reference_output.json`\n  (`variants.variants`, `variants.target_baseline_alternatives`, `variants.subsets_abs_lfc`).\n- Bootstrap CIs and permutation p-values move with seeds; their tolerances are wider.\n- A subject that never computes a target-direction rule but correctly reports no skill with an\n  imbalance-robust measure and clustered uncertainty has the verdict right; score the\n  `target_direction_baseline` trap as not handled only if the subject claims skill from a small\n  positive or says the direction cannot be predicted at all."
+}

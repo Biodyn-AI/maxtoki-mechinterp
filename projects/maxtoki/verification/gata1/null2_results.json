@@ -1,0 +1,350 @@
+{
+ "spearman_genelength_vs_GATA1chip": [
+  0.2729258790229193,
+  1.6107466960307435e-107
+ ],
+ "genelength_quantile_bins_vs_GATA1chip": [
+  {
+   "len_bin_kb": "0-16",
+   "n": 1568,
+   "frac_GATA1_chip": 0.0013
+  },
+  {
+   "len_bin_kb": "16-36",
+   "n": 1567,
+   "frac_GATA1_chip": 0.0019
+  },
+  {
+   "len_bin_kb": "36-75",
+   "n": 1567,
+   "frac_GATA1_chip": 0.0045
+  },
+  {
+   "len_bin_kb": "75-140",
+   "n": 941,
+   "frac_GATA1_chip": 0.0478
+  },
+  {
+   "len_bin_kb": "140-1288",
+   "n": 627,
+   "frac_GATA1_chip": 0.2584
+  }
+ ],
+ "spearman_genelength_vs_count": [
+  -0.21691307231866055,
+  1.1737882624701042e-67
+ ],
+ "feature2610_top20": [
+  {
+   "gene": "ALDOA",
+   "count_in_500_ctrl_cells": 1,
+   "length_kb": 6.3,
+   "GATA1_chip": false
+  },
+  {
+   "gene": "MBD5",
+   "count_in_500_ctrl_cells": 1,
+   "length_kb": 496.0,
+   "GATA1_chip": true
+  },
+  {
+   "gene": "ZFP36L1",
+   "count_in_500_ctrl_cells": 4,
+   "length_kb": 8.6,
+   "GATA1_chip": false
+  },
+  {
+   "gene": "CLASP2",
+   "count_in_500_ctrl_cells": 3,
+   "length_kb": 222.2,
+   "GATA1_chip": false
+  },
+  {
+   "gene": "STK17A",
+   "count_in_500_ctrl_cells": 3,
+   "length_kb": 68.0,
+   "GATA1_chip": false
+  },
+  {
+   "gene": "IMMP2L",
+   "count_in_500_ctrl_cells": 1,
+   "length_kb": 899.9,
+   "GATA1_chip": true
+  },
+  {
+   "gene": "ARID1B",
+   "count_in_500_ctrl_cells": 9,
+   "length_kb": 435.4,
+   "GATA1_chip": true
+  },
+  {
+   "gene": "RABGAP1L",
+   "count_in_500_ctrl_cells": 1,
+   "length_kb": 836.0,
+   "GATA1_chip": true
+  },
+  {
+   "gene": "R3HDM1",
+   "count_in_500_ctrl_cells": 9,
+   "length_kb": 194.0,
+   "GATA1_chip": false
+  },
+  {
+   "gene": "IQGAP1",
+   "count_in_500_ctrl_cells": 64,
+   "length_kb": 114.0,
+   "GATA1_chip": false
+  },
+  {
+   "gene": "UQCRH",
+   "count_in_500_ctrl_cells": 500,
+   "length_kb": 34.0,
+   "GATA1_chip": false
+  },
+  {
+   "gene": "STAG1",
+   "count_in_500_ctrl_cells": 6,
+   "length_kb": 416.2,
+   "GATA1_chip": true
+  },
+  {
+   "gene": "RALGAPA1",
+   "count_in_500_ctrl_cells": 16,
+   "length_kb": 271.0,
+   "GATA1_chip": false
+  },
+  {
+   "gene": "NFIA",
+   "count_in_500_ctrl_cells": 7,
+   "length_kb": 597.5,
+   "GATA1_chip": true
+  },
+  {
+   "gene": "EVL",
+   "count_in_500_ctrl_cells": 2,
+   "length_kb": 172.8,
+   "GATA1_chip": true
+  },
+  {
+   "gene": "LAPTM4A",
+   "count_in_500_ctrl_cells": 8,
+   "length_kb": 19.4,
+   "GATA1_chip": false
+  },
+  {
+   "gene": "STXBP5",
+   "count_in_500_ctrl_cells": 40,
+   "length_kb": 187.5,
+   "GATA1_chip": true
+  },
+  {
+   "gene": "AEBP2",
+   "count_in_500_ctrl_cells": 3,
+   "length_kb": 316.8,
+   "GATA1_chip": false
+  },
+  {
+   "gene": "EIF4B",
+   "count_in_500_ctrl_cells": 439,
+   "length_kb": 36.0,
+   "GATA1_chip": false
+  },
+  {
+   "gene": "SF3B5",
+   "count_in_500_ctrl_cells": 281,
+   "length_kb": 0.7,
+   "GATA1_chip": false
+  }
+ ],
+ "median_length_kb_2610_top20": 190.7785,
+ "median_length_kb_universe": 35.6645,
+ "median_length_kb_GATA1chip_in_universe": 203.066,
+ "gene_swap_null_count_only": {
+  "expected_overlap_2610": 4.44711,
+  "P(2610_overlap>=8)": 0.04422,
+  "P(max5>=8)": 0.04422,
+  "P(max5>=5)": 0.47424,
+  "expected_overlap_by_feature": {
+   "628": 0.925,
+   "1334": 0.786,
+   "2006": 0.699,
+   "2610": 4.447,
+   "2627": 0.809
+  }
+ },
+ "tf_swap_2610_count_only": {
+  "n_tfs": 291,
+  "GATA1_obs": 8,
+  "GATA1_exp": 4.44,
+  "GATA1_p": 0.043497825108744566,
+  "GATA1_rank_by_p": 46,
+  "n_TFs_p<=GATA1": 46,
+  "GATA1_rank_by_excess": 14,
+  "top10": [
+   {
+    "tf": "ZBTB7A",
+    "n_in_uni": 155,
+    "obs_2610": 5,
+    "exp": 0.838,
+    "p_upper": 0.0013
+   },
+   {
+    "tf": "ZNF589",
+    "n_in_uni": 111,
+    "obs_2610": 4,
+    "exp": 0.6722,
+    "p_upper": 0.0032
+   },
+   {
+    "tf": "FOXJ2",
+    "n_in_uni": 178,
+    "obs_2610": 5,
+    "exp": 1.2194,
+    "p_upper": 0.0047
+   },
+   {
+    "tf": "ZNF644",
+    "n_in_uni": 144,
+    "obs_2610": 5,
+    "exp": 1.215,
+    "p_upper": 0.0053
+   },
+   {
+    "tf": "SMAD1",
+    "n_in_uni": 213,
+    "obs_2610": 7,
+    "exp": 2.4468,
+    "p_upper": 0.0056
+   },
+   {
+    "tf": "TFAP2A",
+    "n_in_uni": 134,
+    "obs_2610": 5,
+    "exp": 1.2975,
+    "p_upper": 0.0071
+   },
+   {
+    "tf": "TFDP1",
+    "n_in_uni": 221,
+    "obs_2610": 4,
+    "exp": 0.8302,
+    "p_upper": 0.0073
+   },
+   {
+    "tf": "ZEB2",
+    "n_in_uni": 185,
+    "obs_2610": 6,
+    "exp": 1.972,
+    "p_upper": 0.0083
+   },
+   {
+    "tf": "MYNN",
+    "n_in_uni": 267,
+    "obs_2610": 4,
+    "exp": 0.9022,
+    "p_upper": 0.0098
+   },
+   {
+    "tf": "ZNF384",
+    "n_in_uni": 288,
+    "obs_2610": 6,
+    "exp": 2.1507,
+    "p_upper": 0.0125
+   }
+  ]
+ },
+ "gene_swap_null_count_x_length": {
+  "expected_overlap_2610": 5.11895,
+  "P(2610_overlap>=8)": 0.0788,
+  "P(max5>=8)": 0.0788,
+  "P(max5>=5)": 0.63866,
+  "expected_overlap_by_feature": {
+   "628": 1.093,
+   "1334": 0.967,
+   "2006": 0.726,
+   "2610": 5.119,
+   "2627": 1.043
+  }
+ },
+ "tf_swap_2610_count_x_length": {
+  "n_tfs": 291,
+  "GATA1_obs": 8,
+  "GATA1_exp": 5.14,
+  "GATA1_p": 0.07874606269686515,
+  "GATA1_rank_by_p": 58,
+  "n_TFs_p<=GATA1": 58,
+  "GATA1_rank_by_excess": 32,
+  "top10": [
+   {
+    "tf": "ZBTB7A",
+    "n_in_uni": 155,
+    "obs_2610": 5,
+    "exp": 0.8121,
+    "p_upper": 0.0008
+   },
+   {
+    "tf": "ZNF589",
+    "n_in_uni": 111,
+    "obs_2610": 4,
+    "exp": 0.7465,
+    "p_upper": 0.0051
+   },
+   {
+    "tf": "FOXJ2",
+    "n_in_uni": 178,
+    "obs_2610": 5,
+    "exp": 1.2985,
+    "p_upper": 0.0051
+   },
+   {
+    "tf": "SMAD1",
+    "n_in_uni": 213,
+    "obs_2610": 7,
+    "exp": 2.5412,
+    "p_upper": 0.0052
+   },
+   {
+    "tf": "TFDP1",
+    "n_in_uni": 221,
+    "obs_2610": 4,
+    "exp": 0.8454,
+    "p_upper": 0.006
+   },
+   {
+    "tf": "MYNN",
+    "n_in_uni": 267,
+    "obs_2610": 4,
+    "exp": 0.8169,
+    "p_upper": 0.0062
+   },
+   {
+    "tf": "SMAD5",
+    "n_in_uni": 373,
+    "obs_2610": 5,
+    "exp": 1.3772,
+    "p_upper": 0.0075
+   },
+   {
+    "tf": "TFAP2A",
+    "n_in_uni": 134,
+    "obs_2610": 5,
+    "exp": 1.4043,
+    "p_upper": 0.0085
+   },
+   {
+    "tf": "ZNF644",
+    "n_in_uni": 144,
+    "obs_2610": 5,
+    "exp": 1.3888,
+    "p_upper": 0.0097
+   },
+   {
+    "tf": "NCOA1",
+    "n_in_uni": 76,
+    "obs_2610": 5,
+    "exp": 1.8276,
+    "p_upper": 0.0139
+   }
+  ]
+ }
+}

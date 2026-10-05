@@ -1,0 +1,128 @@
+======================================================================
+STAGE 2 — Causal Circuit Tracing  N_cells=200
+  source_layers=[0, 3, 6, 9]  features/layer=30
+======================================================================
+
+[Phase 0] Loading SAEs + model...
+  loaded 12 SAEs
+  200 cells tokenized
+Loading weights:   0%|          | 0/102 [00:00<?, ?it/s]Loading weights: 100%|██████████| 102/102 [00:00<00:00, 10730.35it/s]
+
+[Phase 1] Selecting source features...
+<REPO_ROOT>/projects/maxtoki/runs/circuit-tracing-217M/scripts/circuit_trace.py:138: FutureWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  scores = enrich_df.groupby("feature_id").apply(
+  L0: 30 source features selected
+<REPO_ROOT>/projects/maxtoki/runs/circuit-tracing-217M/scripts/circuit_trace.py:138: FutureWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  scores = enrich_df.groupby("feature_id").apply(
+  L3: 30 source features selected
+<REPO_ROOT>/projects/maxtoki/runs/circuit-tracing-217M/scripts/circuit_trace.py:138: FutureWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  scores = enrich_df.groupby("feature_id").apply(
+  L6: 30 source features selected
+<REPO_ROOT>/projects/maxtoki/runs/circuit-tracing-217M/scripts/circuit_trace.py:138: FutureWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  scores = enrich_df.groupby("feature_id").apply(
+  L9: 30 source features selected
+
+==================================================
+  Tracing L0 → [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] (30 features × 200 cells)
+==================================================
+    cell 20/200  passes=620  rate=1.5/s  ETA=64min
+    cell 40/200  passes=1240  rate=1.5/s  ETA=56min
+    cell 60/200  passes=1860  rate=1.5/s  ETA=49min
+    cell 80/200  passes=2480  rate=1.5/s  ETA=42min
+    cell 100/200  passes=3100  rate=1.5/s  ETA=35min
+    cell 120/200  passes=3720  rate=1.4/s  ETA=29min
+    cell 140/200  passes=4340  rate=1.4/s  ETA=21min
+    cell 160/200  passes=4960  rate=1.5/s  ETA=14min
+    cell 180/200  passes=5580  rate=1.5/s  ETA=7min
+    cell 200/200  passes=6200  rate=1.5/s  ETA=0min
+  L0 complete: 1189594 edges in 4270s  (39653 edges/feature)
+
+==================================================
+  Tracing L3 → [4, 5, 6, 7, 8, 9, 10, 11] (30 features × 200 cells)
+==================================================
+    cell 20/200  passes=620  rate=1.6/s  ETA=57min
+    cell 40/200  passes=1240  rate=1.6/s  ETA=50min
+    cell 60/200  passes=1860  rate=1.6/s  ETA=44min
+    cell 80/200  passes=2480  rate=1.6/s  ETA=38min
+    cell 100/200  passes=3100  rate=1.7/s  ETA=31min
+    cell 120/200  passes=3720  rate=1.7/s  ETA=25min
+    cell 140/200  passes=4340  rate=1.7/s  ETA=19min
+    cell 160/200  passes=4960  rate=1.7/s  ETA=13min
+    cell 180/200  passes=5580  rate=1.7/s  ETA=6min
+    cell 200/200  passes=6200  rate=1.7/s  ETA=0min
+  L3 complete: 620045 edges in 3752s  (20668 edges/feature)
+
+==================================================
+  Tracing L6 → [7, 8, 9, 10, 11] (30 features × 200 cells)
+==================================================
+    cell 20/200  passes=620  rate=1.8/s  ETA=51min
+    cell 40/200  passes=1240  rate=1.8/s  ETA=45min
+    cell 60/200  passes=1860  rate=1.8/s  ETA=39min
+    cell 80/200  passes=2480  rate=1.8/s  ETA=34min
+    cell 100/200  passes=3100  rate=1.8/s  ETA=28min
+    cell 120/200  passes=3720  rate=1.8/s  ETA=23min
+    cell 140/200  passes=4340  rate=1.8/s  ETA=17min
+    cell 160/200  passes=4960  rate=1.8/s  ETA=11min
+    cell 180/200  passes=5580  rate=1.8/s  ETA=6min
+    cell 200/200  passes=6200  rate=1.8/s  ETA=0min
+  L6 complete: 255429 edges in 3380s  (8514 edges/feature)
+
+==================================================
+  Tracing L9 → [10, 11] (30 features × 200 cells)
+==================================================
+    cell 20/200  passes=620  rate=2.1/s  ETA=45min
+    cell 40/200  passes=1240  rate=2.1/s  ETA=40min
+    cell 60/200  passes=1860  rate=2.1/s  ETA=35min
+    cell 80/200  passes=2480  rate=2.1/s  ETA=30min
+    cell 100/200  passes=3100  rate=2.1/s  ETA=25min
+    cell 120/200  passes=3720  rate=2.1/s  ETA=20min
+    cell 140/200  passes=4340  rate=2.1/s  ETA=15min
+    cell 160/200  passes=4960  rate=2.1/s  ETA=10min
+    cell 180/200  passes=5580  rate=2.0/s  ETA=5min
+    cell 200/200  passes=6200  rate=2.0/s  ETA=0min
+  L9 complete: 78943 edges in 3071s  (2631 edges/feature)
+
+[Phase 5] Circuit graph + hub analysis...
+  total edges: 2144011
+  inhibitory: 1890426 (88.2%)  excitatory: 253585 (11.8%)
+  mean |d|: 1.836  median: 1.303
+  |d| > 1.0: 60.9%  |d| > 2.0: 35.5%
+
+  Top 10 broadcast hubs (out-degree):
+    L0_F3083: 39676
+    L0_F1727: 39674
+    L0_F968: 39672
+    L0_F1451: 39672
+    L0_F2025: 39670
+    L0_F1745: 39668
+    L0_F3605: 39665
+    L0_F2591: 39659
+    L0_F927: 39658
+    L0_F3582: 39658
+
+  Top 10 convergent targets (in-degree):
+    L11_F2976: 120
+    L11_F3982: 120
+    L11_F1642: 120
+    L11_F426: 120
+    L11_F2381: 120
+    L11_F2380: 120
+    L11_F1653: 120
+    L11_F2379: 120
+    L11_F3991: 120
+    L11_F3084: 120
+
+  unique targets: 42173  coverage: 77.8%
+
+[Phase 6] Biological coherence...
+  annotated edges: 1416229
+  shared ontology: 511466 (36.1%)
+  (paper: ~53% for K562/K562)
+
+======================================================================
+CIRCUIT TRACING COMPLETE
+  total edges: 2144011
+  inhibitory: 88.2%
+  coherence: 36.1%
+  outputs: <REPO_ROOT>/projects/maxtoki/runs/circuit-tracing-217M/outputs
+======================================================================

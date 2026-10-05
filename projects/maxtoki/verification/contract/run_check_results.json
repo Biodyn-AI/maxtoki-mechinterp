@@ -1,0 +1,204 @@
+{
+  "runs": {
+    "attention-grn-217M": {
+      "summary": "summaries/attention-grn-217M-FINAL_SUMMARY.md",
+      "artefact_files_scanned": 98,
+      "summary_numbers": 70,
+      "also_in_spec": 23,
+      "maxtoki_numbers": 47,
+      "traced": 46,
+      "traced_frac": 0.979,
+      "untraced_examples": [
+        "2980"
+      ],
+      "py_paths_ok": 0,
+      "py_paths_missing": []
+    },
+    "spectral-geometry-217M": {
+      "summary": "summaries/spectral-geometry-217M-FINAL_SUMMARY.md",
+      "artefact_files_scanned": 75,
+      "summary_numbers": 107,
+      "also_in_spec": 42,
+      "maxtoki_numbers": 65,
+      "traced": 65,
+      "traced_frac": 1.0,
+      "untraced_examples": [],
+      "py_paths_ok": 2,
+      "py_paths_missing": []
+    },
+    "topology-141-217M": {
+      "summary": "summaries/topology-141-217M-FINAL_SUMMARY.md",
+      "artefact_files_scanned": 102,
+      "summary_numbers": 26,
+      "also_in_spec": 9,
+      "maxtoki_numbers": 17,
+      "traced": 17,
+      "traced_frac": 1.0,
+      "untraced_examples": [],
+      "py_paths_ok": 0,
+      "py_paths_missing": []
+    },
+    "manifold-discovery-217M": {
+      "summary": "summaries/manifold-discovery-217M-FINAL_SUMMARY.md",
+      "artefact_files_scanned": 96,
+      "summary_numbers": 165,
+      "also_in_spec": 21,
+      "maxtoki_numbers": 144,
+      "traced": 144,
+      "traced_frac": 1.0,
+      "untraced_examples": [],
+      "py_paths_ok": 0,
+      "py_paths_missing": []
+    },
+    "longevity-mechinterp-217M": {
+      "summary": "runs/longevity-mechinterp-217M/FINAL_SUMMARY.md",
+      "artefact_files_scanned": 6,
+      "summary_numbers": 18,
+      "also_in_spec": 1,
+      "maxtoki_numbers": 17,
+      "traced": 12,
+      "traced_frac": 0.706,
+      "untraced_examples": [
+        "0.34",
+        "0.36",
+        "0.55",
+        "5.65",
+        "0.0565"
+      ],
+      "py_paths_ok": 0,
+      "py_paths_missing": []
+    },
+    "sae-atlas-217M": {
+      "summary": "summaries/sae-atlas-217M-FINAL_SUMMARY.md",
+      "artefact_files_scanned": 123,
+      "summary_numbers": 30,
+      "also_in_spec": 5,
+      "maxtoki_numbers": 25,
+      "traced": 25,
+      "traced_frac": 1.0,
+      "untraced_examples": [],
+      "py_paths_ok": 0,
+      "py_paths_missing": []
+    },
+    "circuit-tracing-217M": {
+      "summary": "summaries/circuit-tracing-217M-FINAL_SUMMARY.md",
+      "artefact_files_scanned": 12,
+      "summary_numbers": 58,
+      "also_in_spec": 8,
+      "maxtoki_numbers": 50,
+      "traced": 38,
+      "traced_frac": 0.76,
+      "untraced_examples": [
+        "17867",
+        "2980",
+        "4928",
+        "54208",
+        "0.74",
+        "53.55",
+        "0.165",
+        "0.190",
+        "0.219",
+        "0.324",
+        "0.586",
+        "0.0003"
+      ],
+      "py_paths_ok": 0,
+      "py_paths_missing": []
+    },
+    "exhaustive-mapping-217M": {
+      "summary": "summaries/exhaustive-mapping-217M-FINAL_SUMMARY.md",
+      "artefact_files_scanned": 1025,
+      "summary_numbers": 87,
+      "also_in_spec": 20,
+      "maxtoki_numbers": 67,
+      "traced": 64,
+      "traced_frac": 0.955,
+      "untraced_examples": [
+        "2144011",
+        "4928",
+        "0.999"
+      ],
+      "py_paths_ok": 8,
+      "py_paths_missing": []
+    }
+  },
+  "pins": [
+    {
+      "spec": "pipelines/attention-grn-extraction-and-evaluation.md",
+      "source_hash": "40e6da0ae21a768dbbcb2bfa62539845f0ef7c88",
+      "pinned_file_repo": "biomechinterp-framework",
+      "git_head": "no .git (cannot verify tree)",
+      "head_matches": null
+    },
+    {
+      "spec": "pipelines/audit-recurring-review-issues.md",
+      "source_hash": null,
+      "pinned_file_repo": null,
+      "git_head": null,
+      "head_matches": null
+    },
+    {
+      "spec": "pipelines/longevity-mechinterp-donor-aware.md",
+      "source_hash": "5a61464632a3c3e8bebd396eb1ab17bce1dc2493",
+      "pinned_file_repo": "longevity-mechinterp",
+      "git_head": "5a61464632a3c3e8bebd396eb1ab17bce1dc2493",
+      "head_matches": true
+    },
+    {
+      "spec": "pipelines/manifold-discovery-extraction-compactification.md",
+      "source_hash": null,
+      "pinned_file_repo": null,
+      "git_head": null,
+      "head_matches": null
+    },
+    {
+      "spec": "pipelines/residual-stream-spectral-geometry.md",
+      "source_hash": "42ac179697c4dd938c57a40142356e8763b9fcc1",
+      "pinned_file_repo": "topology-biomechinterp1",
+      "git_head": "no .git (cannot verify tree)",
+      "head_matches": null
+    },
+    {
+      "spec": "pipelines/sparse-autoencoders/01-sae-atlas.md",
+      "source_hash": "9277f5daec682cd34027172b04993833dfeb17e1",
+      "pinned_file_repo": "bio-sae",
+      "git_head": "no .git (cannot verify tree)",
+      "head_matches": null
+    },
+    {
+      "spec": "pipelines/sparse-autoencoders/02-causal-circuit-tracing.md",
+      "source_hash": "4f6bfb4a2193c1104611db89f8c7263e1c96797d",
+      "pinned_file_repo": "bio-sae-circuits",
+      "git_head": "no .git (cannot verify tree)",
+      "head_matches": null
+    },
+    {
+      "spec": "pipelines/sparse-autoencoders/03-exhaustive-mapping-and-steering.md",
+      "source_hash": "6406f07cd4e13ffede2bc9981cda5579e615f2b9",
+      "pinned_file_repo": "sae-biological-map",
+      "git_head": "no .git (cannot verify tree)",
+      "head_matches": null
+    },
+    {
+      "spec": "pipelines/sparse-autoencoders/04-atlas-deployment.md",
+      "source_hash": null,
+      "pinned_file_repo": null,
+      "git_head": null,
+      "head_matches": null
+    },
+    {
+      "spec": "pipelines/sparse-autoencoders/README.md",
+      "source_hash": null,
+      "pinned_file_repo": null,
+      "git_head": null,
+      "head_matches": null
+    },
+    {
+      "spec": "pipelines/topology-geometry-141-hypotheses.md",
+      "source_hash": "32ec76d816b7b4ded3e9aa16a87624e1cd404f3c",
+      "pinned_file_repo": "topology-biomechinterp2",
+      "git_head": "no .git (cannot verify tree)",
+      "head_matches": null
+    }
+  ]
+}

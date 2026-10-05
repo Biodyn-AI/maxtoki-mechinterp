@@ -1,0 +1,377 @@
+{
+ "generated": "2026-10-01T01:54:52",
+ "results": {
+  "C1_crispri": {
+   "n_pairs": 1503408,
+   "n_sources": 248,
+   "label_from_lfc_matches_stored": true,
+   "correct_column_matches": true,
+   "accuracy": 0.5347610229558443,
+   "always_decrease": 0.546059353149644,
+   "pred_decrease_rate": 0.8955998637761672,
+   "balanced_accuracy": 0.49830448741689765,
+   "mcc": -0.0055213201737231345,
+   "acc_minus_best_constant_pts": -1.13,
+   "ci95_acc_minus_best_constant_pts": [
+    -1.59,
+    -0.72
+   ],
+   "share_boot_above0_acc": 0.0,
+   "balacc_minus_half_pts": -0.17,
+   "ci95_balacc_minus_half_pts": [
+    -0.51,
+    0.13
+   ],
+   "ci95_acc_minus_independence_pts": [
+    -0.51,
+    0.12
+   ],
+   "bootstrap": {
+    "unit": "silenced (source) gene, n=248",
+    "method": "percentile; multinomial resampling weights (= sampling genes with replacement); pooled confusion counts",
+    "reps": 2000,
+    "seed": 777
+   },
+   "original_phase11_json": {
+    "n_validated": 1458016,
+    "n_correct": 796159,
+    "directional_accuracy": 0.5461,
+    "paper_reference": 0.564
+   },
+   "seconds": 0.9
+  },
+  "C2_circuit_edges": {
+   "n_edges": 2144011,
+   "inhibitory_share": 0.8817,
+   "source_layers_seen": [
+    0,
+    3,
+    6,
+    9
+   ],
+   "edges_at_src_plus_1": {
+    "0": 0,
+    "3": 0,
+    "6": 0,
+    "9": 0
+   },
+   "edges_at_src_plus_2": {
+    "0": 146332,
+    "3": 103673,
+    "6": 71274,
+    "9": 78943
+   },
+   "ratio_to_52116": 41.14,
+   "summary_lines_with_22x": [
+    5
+   ],
+   "seconds": 3.7
+  },
+  "C3_exp1_features": {
+   "n_features": 1000,
+   "n_with_zero_L6": 1000,
+   "edges_L6": 0,
+   "edges_L8": 2532553,
+   "edges_L11": 2437543,
+   "total": 4970096,
+   "mean": 4970.1,
+   "sd": 25.16,
+   "min": 4900,
+   "max": 5400,
+   "note": "per-feature totals recomputed from edges_by_layer, not from total_edges",
+   "seconds": 2.2
+  },
+  "C4_triplets": {
+   "experiment2": {
+    "n_triplets": 4,
+    "note": "v1 file stores only the mean pairwise ratio; overwrite identity not testable",
+    "threeway": [
+     0.1897,
+     0.1897,
+     0.1898,
+     0.1897
+    ],
+    "n_superadditive": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "n_targets_with_effect": [
+     2980,
+     2976,
+     2980,
+     2980
+    ]
+   },
+   "experiment2_v2": {
+    "n_triplets": 4,
+    "rows": [
+     {
+      "triplet": 0,
+      "A": 3.568,
+      "B": 0.706,
+      "abs_residuals": {
+       "pairwise_ratio_BC": 2e-05,
+       "threeway_ratio": 1e-05,
+       "marginal_C_given_AB": 6e-05
+      },
+      "n_targets_with_effect": 2980,
+      "n_superadditive": 0
+     },
+     {
+      "triplet": 1,
+      "A": 3.568,
+      "B": 0.706,
+      "abs_residuals": {
+       "pairwise_ratio_BC": 2e-05,
+       "threeway_ratio": 1e-05,
+       "marginal_C_given_AB": 6e-05
+      },
+      "n_targets_with_effect": 2980,
+      "n_superadditive": 0
+     },
+     {
+      "triplet": 2,
+      "A": 3.566,
+      "B": 0.706,
+      "abs_residuals": {
+       "pairwise_ratio_BC": 1e-05,
+       "threeway_ratio": 3e-05,
+       "marginal_C_given_AB": 4e-05
+      },
+      "n_targets_with_effect": 2979,
+      "n_superadditive": 0
+     },
+     {
+      "triplet": 3,
+      "A": 3.564,
+      "B": 0.707,
+      "abs_residuals": {
+       "pairwise_ratio_BC": 0.0001,
+       "threeway_ratio": 0.0,
+       "marginal_C_given_AB": 0.00036
+      },
+      "n_targets_with_effect": 2977,
+      "n_superadditive": 0
+     }
+    ],
+    "max_abs_residual": 0.00036
+   },
+   "note": "solved from AB and AC (first agent used AB and BC); predicts BC, three-way and marginal",
+   "seconds": 0.0
+  },
+  "C5_steering": {
+   "alpha5_over_alpha2": {
+    "L0": 0.9994,
+    "L3": 1.0045,
+    "L6": 1.0089,
+    "L9": 0.9947,
+    "L11": 1.0467
+   },
+   "max_spread_within_layer_alpha5": {
+    "L0": 0.00102,
+    "L3": 0.00017,
+    "L6": 4e-05,
+    "L9": 0.00027,
+    "L11": 0.00146
+   },
+   "L0_over_L3": 5.397,
+   "L0_over_L11": 19.976,
+   "cos_g_early_g_late_recomputed": 0.881,
+   "cos_in_run_log": "0.8810",
+   "seconds": 0.1
+  },
+  "C6_spectral_overlap": {
+   "n_total_from_log": 592317,
+   "overlap": {
+    "42-43": 6,
+    "42-44": 8,
+    "43-44": 8
+   },
+   "expected_overlap_random": 6.75,
+   "note": "n_total read from the run's own log line, not from the h5ad; draws copy phase0_extract.py:64-65 and phase8_stability.py:102-103",
+   "seconds": 0.0
+  },
+  "C7_curveball": {
+   "function_lines": [
+    221,
+    247
+   ],
+   "_k562": {
+    "n_genes": 1500,
+    "n_edges": 66,
+    "n_nonempty_rows": 27,
+    "n_scored_rows": 8,
+    "identical_on_scored_rows_of_50": 49,
+    "identical_full_matrix_of_50": 49,
+    "reported": {
+     "n_iter": 50,
+     "null_mean": 0.4830524817945928,
+     "null_std": 0.0011101252755224532,
+     "z": -0.14285714285717888
+    }
+   },
+   "_rpe1": {
+    "n_genes": 1500,
+    "n_edges": 173,
+    "n_nonempty_rows": 42,
+    "n_scored_rows": 16,
+    "identical_on_scored_rows_of_50": 37,
+    "identical_full_matrix_of_50": 31,
+    "reported": {
+     "n_iter": 50,
+     "null_mean": 0.6042610585799945,
+     "null_std": 0.0014507864229425084,
+     "z": 0.17450772810533197
+    }
+   },
+   "_adamson": {
+    "n_genes": 1500,
+    "n_edges": 281,
+    "n_nonempty_rows": 68,
+    "n_scored_rows": 32,
+    "identical_on_scored_rows_of_50": 10,
+    "identical_full_matrix_of_50": 10,
+    "reported": {
+     "n_iter": 50,
+     "null_mean": 0.5190074843703448,
+     "null_std": 0.0030645971963002114,
+     "z": 0.1628936403129697
+    }
+   },
+   "_k562_1b": {
+    "n_genes": 1500,
+    "n_edges": 96,
+    "n_nonempty_rows": 31,
+    "n_scored_rows": 12,
+    "identical_on_scored_rows_of_50": 46,
+    "identical_full_matrix_of_50": 41,
+    "reported": {
+     "n_iter": 50,
+     "null_mean": 0.5554297959542589,
+     "null_std": 0.0006714484211579831,
+     "z": -0.04476624984613271
+    }
+   },
+   "seconds": 6.8
+  },
+  "C8_text_facts": {
+   "extended_findings_barely_changing_lines": [
+    26
+   ],
+   "extended_findings_mtime": "2026-05-07T16:37:40",
+   "lung_nonhema_trust": 0.7995555555555556,
+   "null_shuffled": {
+    "trustworthiness": 0.7985001506737268,
+    "random_holdout": 0.7985932357123123,
+    "donor_holdout": 0.7071285065298346,
+    "branch_holdout": -0.0010123536030740103
+   },
+   "seconds": 0.0
+  },
+  "C9_ledger_counts": {
+   "n_rows": 117,
+   "missing_required_columns": [],
+   "layer": {
+    "run_outputs": 82,
+    "paper_text": 35
+   },
+   "severity": {
+    "minor": 62,
+    "major": 46,
+    "critical": 9
+   },
+   "n_pre_audit": 65,
+   "n_pre_audit_crit_or_major": 28,
+   "sweep_on_pre_audit": {
+    "no": 55,
+    "yes": 7,
+    "partly": 3
+   },
+   "sweep_on_pre_audit_crit_major": {
+    "no": 24,
+    "yes": 3,
+    "partly": 1
+   },
+   "critical_pre_audit_ids": [
+    "L001",
+    "L002",
+    "L005",
+    "L011",
+    "L012",
+    "L015"
+   ],
+   "critical_pre_audit_sweep": [
+    "no",
+    "no",
+    "no",
+    "no",
+    "no",
+    "no"
+   ],
+   "first_found_by": {
+    "independent verification (this investigation)": 95,
+    "audit sweep agent": 10,
+    "human (external)": 8,
+    "repair-round agent": 3,
+    "executor agent during run": 1
+   },
+   "repair_status": {
+    "wording only": 79,
+    "pending re-run": 30,
+    "repaired during deployment": 8
+   },
+   "E_numbers_missing": [],
+   "n_rows_without_E_ref": 26,
+   "pending_mps_rows": [
+    "L005",
+    "L011",
+    "L015",
+    "L022",
+    "L027",
+    "L031",
+    "L046"
+   ],
+   "run_outputs_outside_checklist": 26,
+   "paper_text_rows_marked_pre_audit": [
+    [
+     "L107",
+     "partly"
+    ]
+   ],
+   "seconds": 0.0
+  },
+  "C10_snapshot_integrity": {
+   "n_files": 1862,
+   "bytes": 221724556,
+   "n_included": 1806,
+   "n_reconstructed": 6,
+   "n_listings": 50,
+   "stray_files": [],
+   "missing_files": [],
+   "copies_not_byte_identical": [],
+   "copied_sources_at_or_after_cutoff": [],
+   "hash_list_mismatches": [],
+   "listing_rows_pointing_to_post_cutoff_files": [],
+   "listing_file_dates": [
+    "2026-10-01"
+   ],
+   "appledouble_files": [],
+   "seconds": 7.4
+  },
+  "C11_leak_scan": {
+   "files_scanned": 1709,
+   "n_hits": {
+    "audit_event": 0,
+    "later_work": 0,
+    "paper_folders": 0,
+    "known_answers": 0,
+    "hardware_model": 0,
+    "dates_after_audit": 0
+   },
+   "hits": {},
+   "seconds": 62.1
+  }
+ }
+}

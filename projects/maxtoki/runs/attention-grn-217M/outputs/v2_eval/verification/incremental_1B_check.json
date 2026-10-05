@@ -1,0 +1,17 @@
+{
+ "n_pairs": 232345,
+ "n_perturbations": 155,
+ "fold_mean_delta": 0.0020353565227717143,
+ "pooled_oof_delta": 0.002079664471560827,
+ "bootstrap_ci95": [
+  0.0008973354250718935,
+  0.0031059188618092616
+ ],
+ "refit_20_splits": {
+  "mean": 0.0020341033068639993,
+  "sd": 4.868597849688132e-05,
+  "min": 0.0019039409094429027,
+  "max": 0.002122083841862188
+ },
+ "_method": "route 1 explicit-replication bootstrap over perturbations (2000, seed 31), fold models fixed; route 2 refit on 20 random perturbation-grouped 5-fold splits"
+}

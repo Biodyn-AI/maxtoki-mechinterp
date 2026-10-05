@@ -1,0 +1,68 @@
+Loading 12 SAE decoder weight matrices...
+  L0: (1232, 4928)
+  L1: (1232, 4928)
+  L2: (1232, 4928)
+  L3: (1232, 4928)
+  L4: (1232, 4928)
+  L5: (1232, 4928)
+  L6: (1232, 4928)
+  L7: (1232, 4928)
+  L8: (1232, 4928)
+  L9: (1232, 4928)
+  L10: (1232, 4928)
+  L11: (1232, 4928)
+
+[1] Cross-layer tracking (adjacent + long-range)...
+  L0->L1: 0/4928 matches (0.000)
+  L1->L2: 8/4928 matches (0.002)
+  L2->L3: 45/4928 matches (0.009)
+  L3->L4: 52/4928 matches (0.011)
+  L4->L5: 226/4928 matches (0.046)
+  L5->L6: 353/4928 matches (0.072)
+  L6->L7: 1059/4928 matches (0.215)
+  L7->L8: 790/4928 matches (0.160)
+  L8->L9: 887/4928 matches (0.180)
+  L9->L10: 483/4928 matches (0.098)
+  L10->L11: 320/4928 matches (0.065)
+  L0->L1: 0/4928 (0.000)
+  L0->L2: 18/4928 (0.004)
+  L0->L3: 19/4928 (0.004)
+  L0->L4: 40/4928 (0.008)
+  L0->L5: 125/4928 (0.025)
+  L0->L6: 330/4928 (0.067)
+  L0->L7: 423/4928 (0.086)
+  L0->L8: 654/4928 (0.133)
+  L0->L9: 444/4928 (0.090)
+  L0->L10: 247/4928 (0.050)
+  L0->L11: 311/4928 (0.063)
+  saved cross_layer_tracking.json
+
+[2] Cross-layer PMI information highways (all 11 pairs)...
+  500 cells tokenized
+Loading weights:   0%|          | 0/102 [00:00<?, ?it/s]Loading weights:  48%|████▊     | 49/102 [00:00<00:00, 485.83it/s]Loading weights: 100%|██████████| 102/102 [00:00<00:00, 732.15it/s]
+  extracting + encoding cells for cross-layer PMI...
+  L00_L01...
+    highways: 2496/2498 (99.9%)  mean PMI: 4.26
+  L01_L02...
+    highways: 4927/4928 (100.0%)  mean PMI: 5.86
+  L02_L03...
+    highways: 4925/4928 (99.9%)  mean PMI: 5.84
+  L03_L04...
+    highways: 4920/4928 (99.8%)  mean PMI: 6.11
+  L04_L05...
+    highways: 4909/4928 (99.6%)  mean PMI: 6.59
+  L05_L06...
+    highways: 4911/4928 (99.7%)  mean PMI: 6.68
+  L06_L07...
+    highways: 4921/4928 (99.9%)  mean PMI: 6.77
+  L07_L08...
+    highways: 4921/4928 (99.9%)  mean PMI: 6.59
+  L08_L09...
+    highways: 4923/4928 (99.9%)  mean PMI: 6.57
+  L09_L10...
+    highways: 4918/4928 (99.8%)  mean PMI: 6.25
+  L10_L11...
+    highways: 4928/4928 (100.0%)  mean PMI: 6.76
+  saved cross_layer_graph.json
+
+ALL CROSS-LAYER ANALYSES COMPLETE

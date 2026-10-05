@@ -1,0 +1,526 @@
+{
+ "estimates": [
+  {
+   "name": "mean_perTF_AUROC__attn_sym_raw",
+   "value": 0.5532179706226491,
+   "ci_low": 0.4827463145111324,
+   "ci_high": 0.623203328143174,
+   "method_of_uncertainty": "percentile bootstrap, unit of resampling = TF (n=41 TFs, 2000 resamples)"
+  },
+  {
+   "name": "mean_perTF_AUROC__attn_sym_resid_expr_hub",
+   "value": 0.5351094858981916,
+   "ci_low": 0.4599313825605864,
+   "ci_high": 0.6095420160715582,
+   "method_of_uncertainty": "percentile bootstrap, unit of resampling = TF (n=41 TFs, 2000 resamples)"
+  },
+  {
+   "name": "mean_perTF_AUROC__attn_sym_resid_expr",
+   "value": 0.51670209802449,
+   "ci_low": 0.44176272210736894,
+   "ci_high": 0.590072141928348,
+   "method_of_uncertainty": "percentile bootstrap, unit of resampling = TF (n=41 TFs, 2000 resamples)"
+  },
+  {
+   "name": "mean_perTF_AUROC__attn_sym_minus_target_hub",
+   "value": 0.4950363878809899,
+   "ci_low": 0.4211568936968867,
+   "ci_high": 0.5695155881793148,
+   "method_of_uncertainty": "percentile bootstrap, unit of resampling = TF (n=41 TFs, 2000 resamples)"
+  },
+  {
+   "name": "mean_perTF_AUROC__attn_dir_target_attends_tf",
+   "value": 0.5232830679148752,
+   "ci_low": 0.4559351822810798,
+   "ci_high": 0.5916992643839057,
+   "method_of_uncertainty": "percentile bootstrap, unit of resampling = TF (n=41 TFs, 2000 resamples)"
+  },
+  {
+   "name": "mean_perTF_AUROC__attn_dir_tf_attends_target",
+   "value": 0.5264603303029552,
+   "ci_low": 0.4657254737233969,
+   "ci_high": 0.5862398767622855,
+   "method_of_uncertainty": "percentile bootstrap, unit of resampling = TF (n=41 TFs, 2000 resamples)"
+  },
+  {
+   "name": "mean_perTF_AUROC__baseline_target_mean_expr",
+   "value": 0.4452898876346492,
+   "ci_low": 0.3609689868604192,
+   "ci_high": 0.5292219106380648,
+   "method_of_uncertainty": "percentile bootstrap, unit of resampling = TF (n=41 TFs, 2000 resamples)"
+  },
+  {
+   "name": "mean_perTF_AUROC__baseline_target_1minus_dropout",
+   "value": 0.4148018579939322,
+   "ci_low": 0.33202530051903717,
+   "ci_high": 0.4966229299322668,
+   "method_of_uncertainty": "percentile bootstrap, unit of resampling = TF (n=41 TFs, 2000 resamples)"
+  },
+  {
+   "name": "mean_perTF_AUROC__baseline_target_variance",
+   "value": 0.7171573117578942,
+   "ci_low": 0.6614770620602541,
+   "ci_high": 0.7682284723069615,
+   "method_of_uncertainty": "percentile bootstrap, unit of resampling = TF (n=41 TFs, 2000 resamples)"
+  },
+  {
+   "name": "mean_perTF_AUROC__baseline_target_hub",
+   "value": 0.5784252343503437,
+   "ci_low": 0.5099259268468394,
+   "ci_high": 0.6416117311812033,
+   "method_of_uncertainty": "percentile bootstrap, unit of resampling = TF (n=41 TFs, 2000 resamples)"
+  },
+  {
+   "name": "mean_perTF_AUROC__baseline_pair_copresence",
+   "value": 0.42948427182462656,
+   "ci_low": 0.34827357141691023,
+   "ci_high": 0.5074193119059238,
+   "method_of_uncertainty": "percentile bootstrap, unit of resampling = TF (n=41 TFs, 2000 resamples)"
+  },
+  {
+   "name": "edge_weighted_perTF_AUROC__attn_sym_raw",
+   "value": 0.6073833463268087,
+   "ci_low": 0.5426938692533626,
+   "ci_high": 0.668069248042084,
+   "method_of_uncertainty": "percentile bootstrap, unit of resampling = TF (n=41 TFs, 2000 resamples); TFs weighted by number of targets"
+  },
+  {
+   "name": "edge_weighted_perTF_AUROC__attn_sym_resid_expr_hub",
+   "value": 0.5611974400902633,
+   "ci_low": 0.4917986798921362,
+   "ci_high": 0.630468738490245,
+   "method_of_uncertainty": "percentile bootstrap, unit of resampling = TF (n=41 TFs, 2000 resamples); TFs weighted by number of targets"
+  },
+  {
+   "name": "diff_mean_perTF_AUROC__attn_sym_raw_minus_baseline_target_mean_expr",
+   "value": 0.10792808298799995,
+   "ci_low": 0.016284723469398524,
+   "ci_high": 0.2043999226003553,
+   "method_of_uncertainty": "percentile bootstrap, unit of resampling = TF (n=41 TFs, 2000 resamples); paired"
+  },
+  {
+   "name": "diff_mean_perTF_AUROC__attn_sym_raw_minus_baseline_target_hub",
+   "value": -0.025207263727694437,
+   "ci_low": -0.08581737915239099,
+   "ci_high": 0.039766287372059686,
+   "method_of_uncertainty": "percentile bootstrap, unit of resampling = TF (n=41 TFs, 2000 resamples); paired"
+  },
+  {
+   "name": "diff_mean_perTF_AUROC__attn_sym_raw_minus_baseline_target_variance",
+   "value": -0.1639393411352451,
+   "ci_low": -0.25731733715884963,
+   "ci_high": -0.06541178318680116,
+   "method_of_uncertainty": "percentile bootstrap, unit of resampling = TF (n=41 TFs, 2000 resamples); paired"
+  },
+  {
+   "name": "diff_mean_perTF_AUROC__attn_sym_resid_expr_hub_minus_attn_sym_raw",
+   "value": -0.01810848472445761,
+   "ci_low": -0.049640377287409505,
+   "ci_high": 0.014319756174340219,
+   "method_of_uncertainty": "percentile bootstrap, unit of resampling = TF (n=41 TFs, 2000 resamples); paired"
+  },
+  {
+   "name": "wilcoxon_p_perTF_AUROC_vs_0.5__attn_sym_raw",
+   "value": 0.08247574753477238,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "two-sided Wilcoxon signed-rank test across TFs (no CI)"
+  },
+  {
+   "name": "n_TFs_perTF_AUROC_above_0.5__attn_sym_raw",
+   "value": 25.0,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "count out of 41 TFs (no CI)"
+  },
+  {
+   "name": "wilcoxon_p_perTF_AUROC_vs_0.5__attn_sym_resid_expr_hub",
+   "value": 0.33478262717562757,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "two-sided Wilcoxon signed-rank test across TFs (no CI)"
+  },
+  {
+   "name": "n_TFs_perTF_AUROC_above_0.5__attn_sym_resid_expr_hub",
+   "value": 23.0,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "count out of 41 TFs (no CI)"
+  },
+  {
+   "name": "mean_perTF_AUROC_direction_known_edges__attn_sym_raw",
+   "value": 0.6148206531485767,
+   "ci_low": 0.5539895863363544,
+   "ci_high": 0.6731268322436751,
+   "method_of_uncertainty": "percentile bootstrap, unit = TF (n=31 TFs with Activation/Repression edges, 2000 resamples)"
+  },
+  {
+   "name": "mean_perTF_AUROC_direction_known_edges__attn_sym_resid_expr_hub",
+   "value": 0.5780855140522955,
+   "ci_low": 0.5011689512074237,
+   "ci_high": 0.6471225511866356,
+   "method_of_uncertainty": "percentile bootstrap, unit = TF (n=31 TFs with Activation/Repression edges, 2000 resamples)"
+  },
+  {
+   "name": "mean_perTF_AUROC__attn_sym_raw__min_copresence_1",
+   "value": 0.5473186249429887,
+   "ci_low": 0.47908036393525816,
+   "ci_high": 0.6128762832051131,
+   "method_of_uncertainty": "percentile bootstrap, unit = TF (n=42 TFs, 2000 resamples)"
+  },
+  {
+   "name": "mean_perTF_AUROC__attn_sym_raw__min_copresence_50",
+   "value": 0.5475916157182865,
+   "ci_low": 0.4763945162871264,
+   "ci_high": 0.6222067872340775,
+   "method_of_uncertainty": "percentile bootstrap, unit = TF (n=39 TFs, 2000 resamples)"
+  },
+  {
+   "name": "mean_perTarget_AUROC__attn_sym_raw",
+   "value": 0.536811100997992,
+   "ci_low": 0.4791779379667888,
+   "ci_high": 0.5925515027789966,
+   "method_of_uncertainty": "percentile bootstrap, unit = target gene (n=97 targets, 2000 resamples)"
+  },
+  {
+   "name": "pooled_AUROC__attn_sym_raw",
+   "value": 0.6088396504032971,
+   "ci_low": 0.5447095823596189,
+   "ci_high": 0.672671676866639,
+   "method_of_uncertainty": "percentile bootstrap, unit = TF (first 500 of the TF resamples)"
+  },
+  {
+   "name": "pooled_AUROC__attn_sym_resid_expr_hub",
+   "value": 0.5542144050849774,
+   "ci_low": 0.4820697658801339,
+   "ci_high": 0.6233647708253132,
+   "method_of_uncertainty": "percentile bootstrap, unit = TF (first 500 of the TF resamples)"
+  },
+  {
+   "name": "curveball_null_mean_perTF_AUROC__attn_sym_raw",
+   "value": 0.5746747896540036,
+   "ci_low": 0.5179782363446408,
+   "ci_high": 0.6376635473502622,
+   "method_of_uncertainty": "mean and 2.5/97.5 percentiles of 1000 degree-preserving curveball randomisations of the TF-target bipartite graph"
+  },
+  {
+   "name": "excess_over_curveball_null__attn_sym_raw",
+   "value": -0.021456819031354546,
+   "ci_low": -0.0844455767276131,
+   "ci_high": 0.035239734278008306,
+   "method_of_uncertainty": "observed minus null mean; interval = observed minus null 97.5/2.5 percentiles"
+  },
+  {
+   "name": "curveball_p_one_sided__attn_sym_raw",
+   "value": 0.7372627372627373,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "permutation p-value P(null >= observed) (no CI)"
+  },
+  {
+   "name": "curveball_null_mean_perTF_AUROC__attn_sym_resid_expr_hub",
+   "value": 0.5309670672334799,
+   "ci_low": 0.47027100137713007,
+   "ci_high": 0.5937828424060151,
+   "method_of_uncertainty": "mean and 2.5/97.5 percentiles of 1000 degree-preserving curveball randomisations of the TF-target bipartite graph"
+  },
+  {
+   "name": "excess_over_curveball_null__attn_sym_resid_expr_hub",
+   "value": 0.004142418664711767,
+   "ci_low": -0.05867335650782346,
+   "ci_high": 0.06483848452106156,
+   "method_of_uncertainty": "observed minus null mean; interval = observed minus null 97.5/2.5 percentiles"
+  },
+  {
+   "name": "curveball_p_one_sided__attn_sym_resid_expr_hub",
+   "value": 0.44955044955044954,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "permutation p-value P(null >= observed) (no CI)"
+  },
+  {
+   "name": "incremental_mean_perTF_AUROC__gene_level_LR",
+   "value": 0.7255183664705902,
+   "ci_low": 0.6565354654240931,
+   "ci_high": 0.7911497561439795,
+   "method_of_uncertainty": "percentile bootstrap, unit of resampling = TF (n=41 TFs, 2000 resamples); out-of-fold predictions held fixed"
+  },
+  {
+   "name": "incremental_mean_perTF_AUROC__gene_level_plus_attention_LR",
+   "value": 0.7205799372174084,
+   "ci_low": 0.652256263332089,
+   "ci_high": 0.7863802428832734,
+   "method_of_uncertainty": "percentile bootstrap, unit of resampling = TF (n=41 TFs, 2000 resamples); out-of-fold predictions held fixed"
+  },
+  {
+   "name": "incremental_delta_mean_perTF_AUROC__attention_added",
+   "value": -0.004938429253181752,
+   "ci_low": -0.016629653688363607,
+   "ci_high": 0.00805884598076776,
+   "method_of_uncertainty": "percentile bootstrap, unit of resampling = TF (n=41 TFs, 2000 resamples); paired; out-of-fold predictions held fixed"
+  },
+  {
+   "name": "incremental_pooled_AUROC__gene_level_LR",
+   "value": 0.700401759272748,
+   "ci_low": 0.6474078499439277,
+   "ci_high": 0.7585597563181934,
+   "method_of_uncertainty": "percentile bootstrap, unit = TF (500 resamples, out-of-fold predictions held fixed)"
+  },
+  {
+   "name": "incremental_delta_pooled_AUROC__attention_added",
+   "value": 0.0045259462535574,
+   "ci_low": -0.00982351955640037,
+   "ci_high": 0.01711605839735856,
+   "method_of_uncertainty": "percentile bootstrap, unit = TF (500 resamples, paired, out-of-fold predictions held fixed)"
+  },
+  {
+   "name": "residualisation_holdout_R2__expr_hub",
+   "value": 0.5612864620531123,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "R^2 on 100,000 held-out non-TF gene pairs (descriptive, no CI)"
+  },
+  {
+   "name": "residualisation_holdout_R2__expr",
+   "value": 0.4942965299704595,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "R^2 on 100,000 held-out non-TF gene pairs (descriptive, no CI)"
+  },
+  {
+   "name": "n_evaluable_TFs",
+   "value": 41.0,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "count"
+  },
+  {
+   "name": "n_positive_edges_evaluated",
+   "value": 147.0,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "count"
+  },
+  {
+   "name": "n_TRRUST_unique_nonself_edges",
+   "value": 173.0,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "count"
+  },
+  {
+   "name": "n_candidate_pairs",
+   "value": 60526.0,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "count"
+  }
+ ],
+ "per_TF_[n_targets,raw,resid]": {
+  "ID3": [
+   1,
+   0.68,
+   0.809
+  ],
+  "FUBP1": [
+   1,
+   0.083,
+   0.106
+  ],
+  "ILF2": [
+   1,
+   0.268,
+   0.364
+  ],
+  "HDGF": [
+   2,
+   0.497,
+   0.384
+  ],
+  "PARP1": [
+   4,
+   0.892,
+   0.835
+  ],
+  "FHL2": [
+   2,
+   0.903,
+   0.954
+  ],
+  "SSB": [
+   1,
+   0.451,
+   0.289
+  ],
+  "LRRFIP1": [
+   1,
+   0.575,
+   0.682
+  ],
+  "WWTR1": [
+   1,
+   0.264,
+   0.078
+  ],
+  "HNRNPD": [
+   1,
+   0.004,
+   0.012
+  ],
+  "PTTG1": [
+   8,
+   0.53,
+   0.527
+  ],
+  "DEK": [
+   1,
+   0.458,
+   0.731
+  ],
+  "SOX4": [
+   2,
+   0.488,
+   0.509
+  ],
+  "HDAC2": [
+   4,
+   0.478,
+   0.475
+  ],
+  "GTF2I": [
+   1,
+   0.593,
+   0.443
+  ],
+  "HIPK2": [
+   4,
+   0.675,
+   0.707
+  ],
+  "KLF6": [
+   2,
+   0.742,
+   0.836
+  ],
+  "SF1": [
+   1,
+   0.542,
+   0.611
+  ],
+  "FOSL1": [
+   1,
+   0.022,
+   0.094
+  ],
+  "FOXM1": [
+   4,
+   0.8,
+   0.751
+  ],
+  "GTF3A": [
+   1,
+   0.551,
+   0.699
+  ],
+  "TFDP1": [
+   7,
+   0.541,
+   0.495
+  ],
+  "HIF1A": [
+   19,
+   0.75,
+   0.687
+  ],
+  "ZFP36L1": [
+   1,
+   0.396,
+   0.473
+  ],
+  "YY1": [
+   15,
+   0.471,
+   0.421
+  ],
+  "MAZ": [
+   2,
+   0.791,
+   0.632
+  ],
+  "NCOR1": [
+   2,
+   0.644,
+   0.482
+  ],
+  "AATF": [
+   2,
+   0.336,
+   0.237
+  ],
+  "BRCA1": [
+   16,
+   0.552,
+   0.384
+  ],
+  "MBD2": [
+   1,
+   0.855,
+   0.857
+  ],
+  "NFIC": [
+   4,
+   0.824,
+   0.751
+  ],
+  "DNMT1": [
+   6,
+   0.617,
+   0.674
+  ],
+  "ILF3": [
+   2,
+   0.445,
+   0.298
+  ],
+  "NFIX": [
+   1,
+   0.787,
+   0.846
+  ],
+  "KLF2": [
+   1,
+   0.965,
+   0.843
+  ],
+  "JUND": [
+   10,
+   0.757,
+   0.662
+  ],
+  "TRIM28": [
+   1,
+   0.282,
+   0.087
+  ],
+  "CEBPB": [
+   4,
+   0.535,
+   0.544
+  ],
+  "EWSR1": [
+   1,
+   0.564,
+   0.649
+  ],
+  "ATF4": [
+   6,
+   0.713,
+   0.751
+  ],
+  "RBMX": [
+   2,
+   0.36,
+   0.271
+  ]
+ }
+}

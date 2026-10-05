@@ -1,30 +1,36 @@
 cff-version: 1.2.0
-message: "If you use this repository, please cite the accompanying paper."
-title: "maxtoki-mechinterp: Agent-driven mechanistic interpretability pipelines for single-cell foundation models"
+message: "If you use this repository, please cite the accompanying manuscript."
+title: "maxtoki-mechinterp: method specifications, agent records and corrected analyses for agent-run interpretability of MaxToki-217M"
 abstract: >
-  Mechanistic-interpretability pipelines for single-cell foundation models,
-  with a deployment study on MaxToki-217M and a reusable audit framework that
-  codifies recurring peer-reviewer-flagged failure modes. Pipelines are
-  authored as markdown executable specifications consumable by LLM-based
-  research agents.
+  Method specifications for interpretability analyses of single-cell
+  foundation models, written for coding agents. The repository also holds
+  the code, logs and outputs of an agent-run deployment of these
+  specifications on MaxToki-217M; an error ledger of that deployment; the
+  protocol, agent deliverables, reviews and grades of three controlled
+  studies of the specifications and of a ten-item audit checklist; the
+  corrected MaxToki-217M analyses; and a results map that links every
+  number in the manuscript to its source file. Files too large for the
+  repository are listed with checksums in ZENODO_MANIFEST.csv.
 authors:
-  - name: "Anonymous"
+  - family-names: "Kendiukhov"
+    given-names: "Ihor"
+    affiliation: "Institute of Medical Genetics and Applied Genomics, University of Tübingen"
 license: "Apache-2.0"
 repository-code: "https://github.com/Biodyn-AI/maxtoki-mechinterp"
 type: software
-version: "0.1.0"
-date-released: "2026-05-08"
+version: "0.2.0"
 keywords:
   - mechanistic interpretability
   - single-cell foundation models
   - sparse autoencoders
-  - autonomous agents
-  - audit framework
+  - LLM agents
+  - controlled evaluation
+  - reproducibility
 preferred-citation:
-  type: conference-paper
-  title: "An Agent-Driven Pipeline for Mechanistic Interpretability of Single-Cell Foundation Models: Findings on MaxToki-217M and a Reusable Audit Framework"
+  type: article
+  title: "Checking agent-run interpretability of a single-cell foundation model: a controlled evaluation of method specifications and a reviewer-derived audit checklist, with a MaxToki-217M case study"
   authors:
-    - name: "Anonymous"
+    - family-names: "Kendiukhov"
+      given-names: "Ihor"
   year: 2026
-  conference:
-    name: "ICML 2026 Mechanistic Interpretability Workshop"
+  status: submitted

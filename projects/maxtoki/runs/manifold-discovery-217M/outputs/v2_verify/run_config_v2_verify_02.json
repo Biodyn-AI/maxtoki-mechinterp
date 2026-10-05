@@ -1,0 +1,32 @@
+{
+  "script": "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/v2_verify_02_refits.py",
+  "script_sha256": "e238953ebc6f9b75224708eba80f4f38a02919ed3686ffce0f0a9899f8374e9f",
+  "written_at": "2026-10-01 06:41:45",
+  "torch": "2.11.0",
+  "numpy": "1.26.4",
+  "torch_threads": 1,
+  "seeds": {
+    "head": 42,
+    "rand103": "default_rng([8080, i])",
+    "tsp2only103": "default_rng([9090, i])",
+    "boot replay": "default_rng([20261001, r])",
+    "perm replay": "default_rng([777, b])"
+  },
+  "inputs": {
+    "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/artifacts/anchors/centroids_internal.npy": "05f22f34619d0fb776d7e307365d6a854b0f1b350303447845efdc599778808f",
+    "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/artifacts/anchors/centroids_external.npy": "c8446e87cb644dc3c1bd1bd6315d9aa0ae8f818ba06049bf5f5867821d7da038",
+    "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/artifacts/anchors/centroids_zeroshot.npy": "515096f0164dc3873cf8d0c8bb8abf19c1fff07918f240ccf24984898d67d940",
+    "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/artifacts/anchors/d_target_internal.npy": "c42901ad710169c49e2d0328e8a51d8929264dcc8b5040e54404550ea57acb35",
+    "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/artifacts/anchors/anchor_meta_internal.csv": "9b8c5686d7d87497e5b973693dbbd2bf2bb865872d3c27b8e50622a3e7a784ca",
+    "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/artifacts/anchors/anchor_meta_external.csv": "85436fada49d034ae1f048b56b7dba394b0650ccb09e0c58e62b710365806011",
+    "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/artifacts/anchors/anchor_meta_zeroshot.csv": "6b6bae3162bacf37a21aa213794c3693ec4db9544905af59e302db9027c9ade2",
+    "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/artifacts/operators/pooled_drift_components.npz": "278bc09b5f294fed0eb0af8ee25029923ceacb4bf51f49877963b0ec29ecd130",
+    "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/artifacts/operators/operator_index.json": "76139ef1633f6b0822e21a648a2ed7da7bbfc2a760cb441b26e41f2cbb26c247",
+    "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/planning/h65_stage_dag.json": "77f0beaefafe046b6b5b842c44012ee51dababf48c1f2c0394b93854dfe3e7a8",
+    "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase3a_sweep2_ordinal.py": "9350a20ec0494eabfd4a5f8a2452797eee8ebbe1d324c095d7eedc1a69e4936b",
+    "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/outputs/v2_verify/refits.jsonl": "62836ae2778e67683b06215e9588b44f64a532de323f1383201aa4e255a16963",
+    "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/outputs/v2_intervals/refit_pool/results.jsonl": "993eb0af9ddea0219a41b885fde2e5890ce6f3c46c5c0d70eaeaa86b6ccc1c64",
+    "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/outputs/v2_intervals/v2_10_internal_lotdo.json": "f4228115504f7b1bfd0a510afe50abebbb976756e3d77213d452a064dc4317c1",
+    "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/outputs/v2_intervals/v2_05_other_orderings_fit.json": "a77dd237e3a94846032e7987e9f92a6666c132647341d54351cd383a56b6a812"
+  }
+}

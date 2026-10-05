@@ -1,0 +1,86 @@
+{
+  "job": "trained_A",
+  "next": 2000,
+  "done": true,
+  "chunks": [
+    {
+      "start": "2026-10-02T17:18:59",
+      "cells": [
+        0,
+        100
+      ],
+      "wall_s": 155.3,
+      "min_free_gb": 4.07,
+      "peak_rss_gb": 1.41,
+      "mps_driver_peak_gb": 3.28,
+      "stopped": "time"
+    },
+    {
+      "start": "2026-10-02T17:26:30",
+      "cells": [
+        100,
+        450
+      ],
+      "wall_s": 418.6,
+      "min_free_gb": 4.44,
+      "peak_rss_gb": 1.87,
+      "mps_driver_peak_gb": 4.34,
+      "stopped": "time"
+    },
+    {
+      "start": "2026-10-02T17:35:54",
+      "cells": [
+        450,
+        800
+      ],
+      "wall_s": 428.8,
+      "min_free_gb": 3.77,
+      "peak_rss_gb": 1.49,
+      "mps_driver_peak_gb": 3.27,
+      "stopped": "time"
+    },
+    {
+      "start": "2026-10-02T17:44:26",
+      "cells": [
+        800,
+        1150
+      ],
+      "wall_s": 428.8,
+      "min_free_gb": 3.84,
+      "peak_rss_gb": 1.52,
+      "mps_driver_peak_gb": 4.34,
+      "stopped": "time"
+    },
+    {
+      "start": "2026-10-02T17:52:26",
+      "cells": [
+        1150,
+        1650
+      ],
+      "wall_s": 442.4,
+      "min_free_gb": 3.77,
+      "peak_rss_gb": 2.36,
+      "mps_driver_peak_gb": 4.35,
+      "stopped": "time"
+    },
+    {
+      "start": "2026-10-02T18:00:32",
+      "cells": [
+        1650,
+        2000
+      ],
+      "wall_s": 194.1,
+      "min_free_gb": 5.22,
+      "peak_rss_gb": 1.85,
+      "mps_driver_peak_gb": 3.28,
+      "stopped": ""
+    }
+  ],
+  "batches_checked": 40,
+  "cells_checked": 2000,
+  "model_info": {
+    "kind": "trained",
+    "model_dir": "<REPO_ROOT>/projects/maxtoki/setup/MaxToki-217M-HF",
+    "attn_implementation": "eager"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "device": "mps",
+  "torch": "2.11.0",
+  "transformers": "5.5.4",
+  "python": "3.12.9",
+  "platform": "macOS-26.3-arm64-arm-64bit",
+  "hooks_v2_sha256": "1ba6fda5ad761b1f82041a7b1397fa9332fa7438e13db955a00d751c4b440f54",
+  "model_dir": "<REPO_ROOT>/projects/maxtoki/setup/MaxToki-217M-HF",
+  "model_dtype": "float32",
+  "timestamp": "2026-10-01T01:28:48",
+  "script": "<REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/scripts/v2_sae_site_check.py",
+  "script_sha256": "572a20041b4102061ed164114ab93064a36ad152a6843f3da8e122fb99f6fda9",
+  "seeds": {
+    "cell_selection": 42
+  },
+  "cells": {
+    "dataset": "<DATA_ROOT>/biodyn-nmi-paper/src/02_cssi_method/crispri_validation/data/replogle_concat.h5ad",
+    "dataset_rows": [
+      289300,
+      292833,
+      293501,
+      294821,
+      296499
+    ]
+  },
+  "sae_dir": "<REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/outputs/phase1",
+  "wall_seconds": 61.1
+}

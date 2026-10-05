@@ -1,0 +1,16 @@
+{
+  "script": "<REPO_ROOT>/projects/maxtoki/runs/circuit-tracing-217M/scripts/v3_circuit_verify.py",
+  "script_sha256": "dd5333789054e2bf4bce63f315c160da7c5fb94d1a6f8c125821b49facbfcd16",
+  "device": "cpu",
+  "seeds": {
+    "bootstrap": 7,
+    "lfc_gene_pick": 20261002,
+    "control_sample": 42
+  },
+  "all_pass": true,
+  "wall_seconds": 19.3,
+  "inputs": {
+    "edges_sha256": "40f41a74196aa6347662c82c34cf9348d6e53604e67e6f5a23574931c156d92d",
+    "per_pair_sha256": "650394d27f647fc204631976070c450b71cf2feaf66e9d8e5334c126aaf99864"
+  }
+}

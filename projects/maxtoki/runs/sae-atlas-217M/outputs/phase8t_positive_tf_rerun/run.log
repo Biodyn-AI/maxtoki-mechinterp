@@ -1,0 +1,59 @@
+[A8-rerun] device=mps, target_tfs=['GATA1', 'MYC', 'TAL1']
+  TRRUST targets: GATA1=57, MYC=100, TAL1=10
+  ChIP-seq targets: GATA1=470, MYC=478, TAL1=471
+
+[A8-rerun] Loading L5 SAE + feature catalog (control activations extracted on the fly)...
+
+[A8-rerun] Loading MaxToki + Replogle K562 + extracting control activations...
+Loading weights:   0%|          | 0/102 [00:00<?, ?it/s]Loading weights: 100%|██████████| 102/102 [00:00<00:00, 20768.92it/s]
+[A8-rerun] Extracting 200 non-targeting control activations...
+  available NT controls: 10691; using 200
+  extracted 200 cell activations in 192.9s
+  control SAE activations: (408082, 4928)
+
+  [GATA1] 95 cells available, using 50
+  [GATA1] extracted 50 cell activations in 39.9s
+  [GATA1] 5 responding features at p<0.05 ∧ |effect|>0.5
+  MYC: only 0 K562 cells with this perturbation — skipping
+  TAL1: not in K562 perturbation list — skipping
+
+[A8-rerun] Specificity evaluation under TRRUST + ChIP-seq, thresholds {2, 3, 4, 5}...
+
+[A8-rerun] Random-feature null at each (TF, threshold, ground truth)...
+
+[A8-rerun] Wrote <REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/outputs/phase8t_positive_tf_rerun/
+{
+  "GATA1": {
+    "detected": true,
+    "n_cells": 50,
+    "responding_feature_ids": [
+      628,
+      1334,
+      2006,
+      2610,
+      2627
+    ],
+    "n_responding": 5
+  },
+  "MYC": {
+    "detected": false,
+    "n_cells": 0,
+    "responding_feature_ids": [],
+    "n_responding": 0
+  },
+  "TAL1": {
+    "detected": false,
+    "n_cells": 0,
+    "responding_feature_ids": [],
+    "n_responding": 0
+  }
+}
+
+Specificity x null comparison (threshold 2):
+   tf ground_truth  threshold  n_responding  n_specific  is_specific  best_overlap  best_feature_id  K  p_null_specific_>=1  null_mean_n_specific  p_null_specific  above_random
+GATA1       TRRUST          2             5           0        False             0            628.0  5                0.003                 0.003              NaN         False
+GATA1     ChIP-seq          2             5           2         True             8           2610.0  5                0.602                 0.816              NaN          True
+  MYC       TRRUST          2             0           0        False             0              NaN  0                  NaN                   NaN              NaN         False
+  MYC     ChIP-seq          2             0           0        False             0              NaN  0                  NaN                   NaN              NaN         False
+ TAL1       TRRUST          2             0           0        False             0              NaN  0                  NaN                   NaN              NaN         False
+ TAL1     ChIP-seq          2             0           0        False             0              NaN  0                  NaN                   NaN              NaN         False

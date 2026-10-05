@@ -1,0 +1,65 @@
+{
+  "h16": {
+    "external_lung": {
+      "n_layers": 12,
+      "n_layers_above_chance": 0,
+      "mean_auc": 0.4772590254627987
+    },
+    "immune": {
+      "n_layers": 12,
+      "n_layers_above_chance": 5,
+      "mean_auc": 0.4976647603485838
+    },
+    "lung": {
+      "n_layers": 12,
+      "n_layers_above_chance": 4,
+      "mean_auc": 0.4951430224867724
+    }
+  },
+  "h116": {
+    "external_lung": {
+      "n_layers": 12,
+      "mean_delta": -0.05289894476361601,
+      "n_layers_positive_null_gap": 0,
+      "fraction_layers_positive": 0.0,
+      "n_layers_significant": 0
+    },
+    "immune": {
+      "n_layers": 12,
+      "mean_delta": -0.017192146245072093,
+      "n_layers_positive_null_gap": 2,
+      "fraction_layers_positive": 0.16666666666666666,
+      "n_layers_significant": 2
+    },
+    "lung": {
+      "n_layers": 12,
+      "mean_delta": -0.043590746878507315,
+      "n_layers_positive_null_gap": 0,
+      "fraction_layers_positive": 0.0,
+      "n_layers_significant": 0
+    }
+  },
+  "h123": {
+    "external_lung": {
+      "n_layers": 12,
+      "mean_delta": -0.060066661544159926,
+      "n_layers_positive_null_gap": 0,
+      "fraction_layers_positive": 0.0,
+      "n_layers_significant": 0
+    },
+    "immune": {
+      "n_layers": 12,
+      "mean_delta": -0.02008339533730161,
+      "n_layers_positive_null_gap": 1,
+      "fraction_layers_positive": 0.08333333333333333,
+      "n_layers_significant": 1
+    },
+    "lung": {
+      "n_layers": 12,
+      "mean_delta": -0.041426432604818035,
+      "n_layers_positive_null_gap": 0,
+      "fraction_layers_positive": 0.0,
+      "n_layers_significant": 0
+    }
+  }
+}

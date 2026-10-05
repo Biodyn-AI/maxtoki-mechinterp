@@ -1,0 +1,1439 @@
+[
+  {
+    "file": "pipelines/attention-grn-extraction-and-evaluation.md",
+    "deployed_on_maxtoki": true,
+    "chars": 96040,
+    "h2_headings": [
+      "1. Overview",
+      "2. Source",
+      "3. Inputs",
+      "4. Outputs",
+      "5. Dependencies",
+      "6. Methodology",
+      "7. Parameters",
+      "8. Validation",
+      "9. Known pitfalls",
+      "10. Quick-start for new-model evaluation"
+    ],
+    "present": [
+      "Overview",
+      "Source",
+      "Inputs",
+      "Outputs",
+      "Dependencies",
+      "Methodology",
+      "Parameters",
+      "Validation",
+      "Known pitfalls"
+    ],
+    "missing": [
+      "Code references"
+    ],
+    "present_in_order": true,
+    "number_mismatch": [
+      "'7. Parameters' numbered 7, canonical position 8",
+      "'8. Validation' numbered 8, canonical position 9",
+      "'9. Known pitfalls' numbered 9, canonical position 10"
+    ],
+    "extra_sections": [
+      "10. Quick-start for new-model evaluation"
+    ],
+    "short_sections_lt200chars": [],
+    "validation_items": 13,
+    "validation_counts": {
+      "numeric-threshold": 12,
+      "numeric-mention": 1,
+      "qualitative": 0,
+      "source_anchored": 3,
+      "has_if_bug_rule": 2,
+      "threshold_and_not_source_anchored": 10
+    },
+    "validation_item_detail": [
+      [
+        "numeric-threshold",
+        "1. **Replogle K562 CRISPRi primary config** (Phase 1): attention AUROC **0.704**, correlation AUROC **0.703**, variance **0.881**, mean expression **0.851**, 1−",
+        false,
+        false
+      ],
+      [
+        "numeric-threshold",
+        "2. **Incremental value** (Phase 2): ΔAUROC gene+attention vs gene-only ∈ [−0.005, +0.001]; ΔAUROC gene+correlation vs gene-only ∈ [−0.005, +0.001]. Hard-gen pro",
+        false,
+        false
+      ],
+      [
+        "numeric-threshold",
+        "3. **Residualisation** (Phase 3): attention cross-fitted residual AUROC **0.54** (from baseline 0.66, loses ~76%); correlation residual **0.62** (from 0.63, los",
+        false,
+        false
+      ],
+      [
+        "numeric-threshold",
+        "4. **Degree-preserving null** (Phase 3): decomposition 0.50 + 0.19 + 0.07 = 0.757; *z* = 3.63, *p* < 0.005. Per-TF CIs-above-0.5 count: **7/18 (39%)**.",
+        false,
+        false
+      ],
+      [
+        "numeric-threshold",
+        "5. **CSSI on DLPFC brain** (Phase 6): top-*K* TRRUST F1 improvement up to **1.85×** at K = 5–7. Null tests (shuffled/random/gene-permuted labels) produce AUROC ",
+        true,
+        false
+      ],
+      [
+        "numeric-mention",
+        "6. **Scaling signature** (Phase 6 diagnostic / main text §2.2): top-*K* F1 degrades monotonically in **9/9** scGPT kidney tier × seed runs from 200 → 1000 cells",
+        true,
+        false
+      ],
+      [
+        "numeric-threshold",
+        "7. **Causal-ablation null** (Phase 4): top-5 TRRUST-head ablation AUROC within **±0.003** of baseline 0.7035. Random-head ablation at *k* = 20 causes a **larger",
+        false,
+        false
+      ],
+      [
+        "numeric-threshold",
+        "8. **Orthogonal intervention inversion** (Phase 4): MLP zero at L15 / L13–L15 (regulatory layers) produces **exactly baseline** AUROC; MLP zero at random layer ",
+        false,
+        true
+      ],
+      [
+        "numeric-threshold",
+        "9. **HVG protocol confound test** (Phase 5 / 8h): RPE1 restricted to 2000 HVGs (no forced pert. genes) produces **larger** mean per-perturbation attention advan",
+        false,
+        true
+      ],
+      [
+        "numeric-threshold",
+        "10. **Cross-species conservation** (Phase 8c): human–mouse lung Spearman ρ = **0.743**; sign agreement **88.6%**; top-100 fold enrichment **484×**; lineage-spec",
+        false,
+        false
+      ],
+      [
+        "numeric-threshold",
+        "11. **Framework-level** (Phase 12): 153 tests run, 95 confirmatory, BH-corrected at α = 0.05 yields **63 significant (66%)**. Deviation > 5 tests indicates inco",
+        false,
+        false
+      ],
+      [
+        "numeric-threshold",
+        "12. **Calibration** (Phase 8f): raw ECE 0.269–0.469; isotonic-calibrated ECE 0.062–0.079 (4–7× reduction). Conformal α = 0.05 achieves ≥ 95% marginal coverage; ",
+        false,
+        false
+      ],
+      [
+        "numeric-threshold",
+        "13. **Biological characterisation (Phase 7 / Supp Note 17):** PPI signal peak at L0 (STRING ≥ 700 AUROC ≈ 0.640); regulatory signal peak at L15 (TRRUST AUROC ≈ ",
+        true,
+        false
+      ]
+    ],
+    "parameters_table_rows": 36,
+    "parameters_has_range_column": true,
+    "citations": {
+      "repos_form": 3,
+      "repos_form_with_line": 0,
+      "repos_file_missing": [],
+      "repos_line_out_of_range": [],
+      "bare_paths": 21
+    },
+    "verdict": "FAIL"
+  },
+  {
+    "file": "pipelines/residual-stream-spectral-geometry.md",
+    "deployed_on_maxtoki": true,
+    "chars": 67787,
+    "h2_headings": [
+      "1. Overview",
+      "2. Source",
+      "3. Inputs",
+      "4. Outputs",
+      "5. Dependencies",
+      "6. Methodology",
+      "7. Parameters",
+      "8. Validation",
+      "9. Known pitfalls",
+      "10. Quick-start for new-model evaluation"
+    ],
+    "present": [
+      "Overview",
+      "Source",
+      "Inputs",
+      "Outputs",
+      "Dependencies",
+      "Methodology",
+      "Parameters",
+      "Validation",
+      "Known pitfalls"
+    ],
+    "missing": [
+      "Code references"
+    ],
+    "present_in_order": true,
+    "number_mismatch": [
+      "'7. Parameters' numbered 7, canonical position 8",
+      "'8. Validation' numbered 8, canonical position 9",
+      "'9. Known pitfalls' numbered 9, canonical position 10"
+    ],
+    "extra_sections": [
+      "10. Quick-start for new-model evaluation"
+    ],
+    "short_sections_lt200chars": [],
+    "validation_items": 22,
+    "validation_counts": {
+      "numeric-threshold": 15,
+      "numeric-mention": 7,
+      "qualitative": 0,
+      "source_anchored": 6,
+      "has_if_bug_rule": 5,
+      "threshold_and_not_source_anchored": 10
+    },
+    "validation_item_detail": [
+      [
+        "numeric-threshold",
+        "1. **Effective-rank collapse** (Phase 1): 23.6 at layer 0 → **1.6 at layer 11**, monotonic (Spearman ρ = −1.000). Tolerance ±0.2.",
+        false,
+        false
+      ],
+      [
+        "numeric-threshold",
+        "2. **SV1 variance fraction on 195-gene submatrix** (Phase 1): **19% → 77%** across layers 0 → 11. Full-vocabulary: 53.7% → 93.4%. Tolerance ±2%.",
+        false,
+        false
+      ],
+      [
+        "numeric-threshold",
+        "3. **TwoNN intrinsic dim** (Phase 1): **32.6 → 18.1** (44.6% reduction) across 3 seeds. Tolerance ±1.",
+        false,
+        false
+      ],
+      [
+        "numeric-mention",
+        "4. **Feature-shuffle null effective rank at layer 11** (Phase 1): **28.9** (17.6× observed). **If feature-shuffle gives ER near 1.6, the shuffle is not breaking",
+        false,
+        false
+      ],
+      [
+        "numeric-threshold",
+        "5. **SV1 layer-11 extracellular enrichment** (Phase 3): GO:0005615 OR = **6.37**, *p* = 2.6×10⁻⁴. Gene-label-shuffle empirical *p* = **0.004**. Tolerance on OR:",
+        false,
+        false
+      ],
+      [
+        "numeric-mention",
+        "6. **Mitochondrial transient enrichment** (Phase 3): peak OR **23.3 at layer 3**. If no transient mitochondrial peak appears at early layers, SV1 has lost the s",
+        false,
+        false
+      ],
+      [
+        "numeric-threshold",
+        "7. **SV2 PPI co-pole *z*-scores** (Phase 4 / Table S4): all 12 layers significant; layer 1 has the strongest *z* = **6.52**; layer 11 *z* = **5.45**. Tolerance ",
+        true,
+        false
+      ],
+      [
+        "numeric-threshold",
+        "8. **STRING confidence gradient** (Phase 4 step 3 / Table S5): quintile-averaged *z*-scores **1.00 → 1.48 → 2.09 → 3.18 → 5.02**; Spearman ρ = **1.000**, *p* = ",
+        true,
+        false
+      ],
+      [
+        "numeric-threshold",
+        "9. **SV2–SV4 orthogonality** (Phase 4): pairwise Pearson *r* < 0.25 between the three axes. If any pair is strongly correlated, the \"distinct PPI subsets\" claim",
+        false,
+        true
+      ],
+      [
+        "numeric-threshold",
+        "10. **Joint SV2–SV7 TF-vs-target AUROC** (Phase 5 / Table S1): mean across 12 layers **0.744**; peak **0.789 at layer 3**; all layers *p* < 0.01 (null mean ≈ 0.",
+        true,
+        false
+      ],
+      [
+        "numeric-threshold",
+        "11. **Cross-seed robustness** (Phase 8 / Table S3): 3 seeds give mean AUROC 0.744, 0.753, 0.757; cross-seed SD ≈ **0.016**. Min AUROC across any seed × layer ≥ ",
+        true,
+        false
+      ],
+      [
+        "numeric-mention",
+        "12. **SV5–SV7 edge-level AUROC peaks at layer 0 = 0.602** (Phase 5 / Table S2). Monotonic depth decay Spearman ρ = **−0.958**, *p* = 9.5×10⁻⁷. Layer 9 drops bel",
+        true,
+        true
+      ],
+      [
+        "numeric-threshold",
+        "13. **Co-expression residualisation** (Phase 5 step 3):",
+        false,
+        true
+      ],
+      [
+        "numeric-threshold",
+        "14. **Cell-type clustering AUROC** (Phase 6): **0.851** (primary); cross-seed mean **0.789 ± 0.016**. Tolerance ±0.02.",
+        false,
+        false
+      ],
+      [
+        "numeric-mention",
+        "15. **B-cell precision@10 *z*-score** (Phase 7): **7.55**; T-cell and dendritic cell at / below chance.",
+        false,
+        false
+      ],
+      [
+        "numeric-threshold",
+        "16. **GC-TF convergence** (Phase 7): BATF rank 1,510 → 189; BACH2 rank 611 → 146; Spearman ρ < −0.84 for both; PRDM1 Spearman ρ = −1.000. **If BATF starts at ra",
+        false,
+        true
+      ],
+      [
+        "numeric-mention",
+        "17. **GC-plasma angle** (Phase 7 step 6): 77° (L0) → 94° (L11). **Monotonic increase** is required for the \"orthogonal differentiation programs\" claim.",
+        false,
+        false
+      ],
+      [
+        "numeric-mention",
+        "18. **BCL6 metabolic isolation** (Phase 7 step 8): 10/20 BCL6 neighbours are metabolic genes at every layer; zero B-cell markers. **If BCL6 converges into the B",
+        false,
+        true
+      ],
+      [
+        "numeric-mention",
+        "19. **B-cell intrinsic dim lineage-specific compression** (Phase 7 step 7): B-cell 8.2 → 5.1 (ρ = −0.951); T-cell ρ = +0.287 (no compression); myeloid ρ = +0.69",
+        false,
+        false
+      ],
+      [
+        "numeric-threshold",
+        "20. **Persistent homology cautionary tale** (Phase 9a): 11/12 tests *p* < 0.05 under feature-shuffle null; **0/24 tests significant** under degree-preserving re",
+        false,
+        false
+      ],
+      [
+        "numeric-threshold",
+        "21. **Cross-model alignment** (Phase 9b): scGPT × Geneformer raw cosine 0.825; permutation test *p* > 0.3; **Geneformer static embeddings independently encode S",
+        true,
+        false
+      ],
+      [
+        "numeric-threshold",
+        "22. **ER-AUROC confound** (Phase 9e): raw ρ = 0.855; partial ρ = **−0.045** after controlling for layer depth. **If the partial correlation is still > 0.3, the ",
+        false,
+        false
+      ]
+    ],
+    "parameters_table_rows": 38,
+    "parameters_has_range_column": true,
+    "citations": {
+      "repos_form": 8,
+      "repos_form_with_line": 0,
+      "repos_file_missing": [],
+      "repos_line_out_of_range": [],
+      "bare_paths": 19
+    },
+    "verdict": "FAIL"
+  },
+  {
+    "file": "pipelines/topology-geometry-141-hypotheses.md",
+    "deployed_on_maxtoki": true,
+    "chars": 71590,
+    "h2_headings": [
+      "1. Overview",
+      "2. Source",
+      "3. Inputs",
+      "4. Outputs",
+      "5. Dependencies",
+      "6. Methodology",
+      "7. Parameters",
+      "8. Validation",
+      "9. Known pitfalls",
+      "10. Quick-start for new-model evaluation"
+    ],
+    "present": [
+      "Overview",
+      "Source",
+      "Inputs",
+      "Outputs",
+      "Dependencies",
+      "Methodology",
+      "Parameters",
+      "Validation",
+      "Known pitfalls"
+    ],
+    "missing": [
+      "Code references"
+    ],
+    "present_in_order": true,
+    "number_mismatch": [
+      "'7. Parameters' numbered 7, canonical position 8",
+      "'8. Validation' numbered 8, canonical position 9",
+      "'9. Known pitfalls' numbered 9, canonical position 10"
+    ],
+    "extra_sections": [
+      "10. Quick-start for new-model evaluation"
+    ],
+    "short_sections_lt200chars": [],
+    "validation_items": 13,
+    "validation_counts": {
+      "numeric-threshold": 10,
+      "numeric-mention": 3,
+      "qualitative": 0,
+      "source_anchored": 4,
+      "has_if_bug_rule": 6,
+      "threshold_and_not_source_anchored": 6
+    },
+    "validation_item_detail": [
+      [
+        "numeric-threshold",
+        "1. **Cross-model CCA alignment** (Phase 4, H24): mean canonical correlation *r* = **0.80**, pairwise-distance Spearman **0.75**, gene-level top-1 retrieval **72",
+        true,
+        false
+      ],
+      [
+        "numeric-threshold",
+        "2. **Persistent homology significance** (Phase 5, H01/H03): 11/12 scGPT lung layers significant at *p* < 0.01 under feature-shuffle; 12/12 immune, 12/12 externa",
+        true,
+        false
+      ],
+      [
+        "numeric-mention",
+        "3. **Rewiring-null topology vanishing** (Phase 5 step 10): **0/24 layer-tests significant** under degree-preserving kNN rewiring. **If any layer-test is signifi",
+        false,
+        true
+      ],
+      [
+        "numeric-mention",
+        "4. **Manifold distance hierarchy** (Phase 6): Euclidean < Geodesic (+0.013) < Diffusion (+0.017) < Triangle-defect (+0.026). The hierarchy must be monotonic. If",
+        false,
+        true
+      ],
+      [
+        "numeric-threshold",
+        "5. **H91 stability-selected descriptors** (Phase 9): ΔAUROC +0.074, **positive in 72/72 test rows**, 6/6 domain-split null-gap. Jaccard similarity of selected f",
+        false,
+        false
+      ],
+      [
+        "numeric-threshold",
+        "6. **H123 strongest-finding signature** (Phase 8): **ΔAUROC +0.094, 22/22 test rows positive, 6/6 domain-splits surviving null-gap**. **The only hypothesis in t",
+        false,
+        false
+      ],
+      [
+        "numeric-threshold",
+        "7. **Annotation-extension degradation pattern** (Phase 8 step 6): H123 (6/6) → H124 (< 3/6) → H127 (2/9) → H130 (0/9) → H138 (0/9). **The monotonic degradation ",
+        false,
+        true
+      ],
+      [
+        "numeric-mention",
+        "8. **Strict max-null audit** (Phase 12, H141): overall mean strict margin **−0.005**. **Only 3/9 domain-split groups strict-positive**. By domain: immune **+0.0",
+        false,
+        true
+      ],
+      [
+        "numeric-threshold",
+        "9. **Hypothesis outcome distribution** (Phase 13): approximately **27 robust positive, 21 inconclusive/partial, 63 decisively negative**, plus ~30 methodologica",
+        false,
+        true
+      ],
+      [
+        "numeric-threshold",
+        "10. **Cross-model gene-correspondence failure** (Phase 4 step 4): **all 19 methods below 1% top-1 retrieval**. **This is a strong negative diagnostic.** If any ",
+        true,
+        true
+      ],
+      [
+        "numeric-threshold",
+        "11. **Forman curvature directional signature** (Phase 10, H23): AUROC **0.34–0.39** (below chance). The direction is critical — high-curvature edges should be *",
+        false,
+        false
+      ],
+      [
+        "numeric-threshold",
+        "12. **Bifiltration cycle-rank confirmation** (Phase 5 step 9): ΔAUROC **+0.006**, Fisher-significant in 6 domain-splits, 13/24 individual rows with *p* < 0.05.",
+        false,
+        false
+      ],
+      [
+        "numeric-threshold",
+        "13. **Autoloop iteration count** (Phase 11): source paper ran **53 iterations** (1 init failure, 52 productive). For a new model, expect 40–80 iterations before",
+        true,
+        false
+      ]
+    ],
+    "parameters_table_rows": 30,
+    "parameters_has_range_column": false,
+    "citations": {
+      "repos_form": 8,
+      "repos_form_with_line": 0,
+      "repos_file_missing": [],
+      "repos_line_out_of_range": [],
+      "bare_paths": 12
+    },
+    "verdict": "FAIL"
+  },
+  {
+    "file": "pipelines/manifold-discovery-extraction-compactification.md",
+    "deployed_on_maxtoki": true,
+    "chars": 78654,
+    "h2_headings": [
+      "1. Overview",
+      "2. Source",
+      "3. Inputs",
+      "4. Outputs",
+      "5. Dependencies",
+      "6. Methodology",
+      "7. Parameters",
+      "8. Validation",
+      "9. Known pitfalls",
+      "10. Quick-start for new-model and new-system application"
+    ],
+    "present": [
+      "Overview",
+      "Source",
+      "Inputs",
+      "Outputs",
+      "Dependencies",
+      "Methodology",
+      "Parameters",
+      "Validation",
+      "Known pitfalls"
+    ],
+    "missing": [
+      "Code references"
+    ],
+    "present_in_order": true,
+    "number_mismatch": [
+      "'7. Parameters' numbered 7, canonical position 8",
+      "'8. Validation' numbered 8, canonical position 9",
+      "'9. Known pitfalls' numbered 9, canonical position 10"
+    ],
+    "extra_sections": [
+      "10. Quick-start for new-model and new-system application"
+    ],
+    "short_sections_lt200chars": [],
+    "validation_items": 16,
+    "validation_counts": {
+      "numeric-threshold": 3,
+      "numeric-mention": 13,
+      "qualitative": 0,
+      "source_anchored": 4,
+      "has_if_bug_rule": 3,
+      "threshold_and_not_source_anchored": 0
+    },
+    "validation_item_detail": [
+      [
+        "numeric-mention",
+        "1. **H65 Phase-1 discovery:** trustworthiness **0.979**, geodesic-biological correlation **0.835**, blocked-permutation *p* = **0.0005**. Paired null branch (H6",
+        false,
+        false
+      ],
+      [
+        "numeric-mention",
+        "2. **H65 internal holdout gates** (Table 1, internal panel d=10): Trust 0.979, Random 0.495, Donor 0.496, Branch 0.382. All pass the 0.20 / 0.80 thresholds.",
+        false,
+        false
+      ],
+      [
+        "numeric-mention",
+        "3. **Strict non-overlap external validation** (Tabula Sapiens, d=10): Trust **0.985**, Random **0.594**, Donor **0.596**, Branch **0.453**. All pass.",
+        false,
+        false
+      ],
+      [
+        "numeric-mention",
+        "4. **Expected-to-fail negative control** (lung panel, d=6): Trust **0.617** (fails), Random 0.236, Donor 0.687, Branch **0.058** (fails). If the lung panel pass",
+        false,
+        true
+      ],
+      [
+        "numeric-mention",
+        "5. **Multi-donor zero-shot transfer:** 165 anchors, 7 cohorts, Corr **0.500**, Corr_resid **0.476**, Trust **0.993**, Blocked p **0.0005**.",
+        false,
+        false
+      ],
+      [
+        "numeric-threshold",
+        "6. **Robust-V2 88-split benchmark (pseudotime Spearman):** H65 cell head **0.249**, best comparator (H65 hybrid) **0.132**. All 8 comparators (raw, PCA-10, SVD-",
+        true,
+        false
+      ],
+      [
+        "numeric-mention",
+        "7. **Subtype AUROCs:** CD4/CD8 **0.867**, mono/macro **0.951** (cell head, pooled donor means across 88 splits).",
+        false,
+        false
+      ],
+      [
+        "numeric-mention",
+        "8. **Runtime:** full 12-split campaign ~**205 s** (extracted) vs ~**7,074 s** (scGPT avg-pool + 3-layer MLP). 34.5× speedup.",
+        true,
+        false
+      ],
+      [
+        "numeric-threshold",
+        "9. **Trainable parameters:** 5–170 per task (extracted) vs 172,000+ (scGPT-MLP baseline). ~1000× reduction.",
+        true,
+        false
+      ],
+      [
+        "numeric-mention",
+        "10. **Head/layer screen:** L2H5 top-ranked with residualised correlation **0.634**, trustworthiness **0.985**. If L2H5 is not in the top 5, the per-head screen ",
+        false,
+        true
+      ],
+      [
+        "numeric-mention",
+        "11. **Compaction chain:** full drift 17.5 MB → compact top1 (L2H5) 5.9 MB with **0/8 BH losses**. Rank-64 surrogate 0.73 MB with 5/8 BH losses. If the single-he",
+        false,
+        true
+      ],
+      [
+        "numeric-threshold",
+        "12. **Factor-necessity core:** top 4 factors explain **66.2%** of total pooled ablation impact. If the concentration is < 50% or > 85%, the compact operator has",
+        true,
+        false
+      ],
+      [
+        "numeric-mention",
+        "13. **Core sufficiency:** {f00, f01, f02, f03} alone gives branch balanced accuracy **0.572** (vs 0.820 intact), CD4/CD8 AUROC **0.699** (vs 0.846 intact). All ",
+        false,
+        false
+      ],
+      [
+        "numeric-mention",
+        "14. **Subset interactions:** best mono/macro recovery from `{f01, f03}` alone at **0.95× intact**. Best CD4/CD8 recovery from triples centred on f00. All 15 sub",
+        false,
+        false
+      ],
+      [
+        "numeric-mention",
+        "15. **Sparse persistence:** same four-factor core (f00, f01, f02, f03) persists after hard-sparse pruning to 16 factors × 60 genes, explaining **68.9%** of spar",
+        false,
+        false
+      ],
+      [
+        "numeric-mention",
+        "16. **Second-manifold validation (H38, recommended):** internal trustworthiness **0.908**, geodesic correlation **0.828**, blocked *p* **0.0005**. Rescued exter",
+        false,
+        false
+      ]
+    ],
+    "parameters_table_rows": 39,
+    "parameters_has_range_column": false,
+    "citations": {
+      "repos_form": 7,
+      "repos_form_with_line": 0,
+      "repos_file_missing": [],
+      "repos_line_out_of_range": [],
+      "bare_paths": 0
+    },
+    "verdict": "FAIL"
+  },
+  {
+    "file": "pipelines/longevity-mechinterp-donor-aware.md",
+    "deployed_on_maxtoki": true,
+    "chars": 47914,
+    "h2_headings": [
+      "1. Overview",
+      "2. Source",
+      "3. Inputs",
+      "4. Outputs",
+      "5. Dependencies",
+      "6. Methodology",
+      "7. Code references",
+      "8. Parameters",
+      "9. Validation",
+      "10. Known pitfalls",
+      "11. Porting to a new target model"
+    ],
+    "present": [
+      "Overview",
+      "Source",
+      "Inputs",
+      "Outputs",
+      "Dependencies",
+      "Methodology",
+      "Code references",
+      "Parameters",
+      "Validation",
+      "Known pitfalls"
+    ],
+    "missing": [],
+    "present_in_order": true,
+    "number_mismatch": [],
+    "extra_sections": [
+      "11. Porting to a new target model"
+    ],
+    "short_sections_lt200chars": [],
+    "validation_items": 14,
+    "validation_counts": {
+      "numeric-threshold": 5,
+      "numeric-mention": 3,
+      "qualitative": 6,
+      "source_anchored": 2,
+      "has_if_bug_rule": 2,
+      "threshold_and_not_source_anchored": 4
+    },
+    "validation_item_detail": [
+      [
+        "numeric-threshold",
+        "- Stage 1: balanced accuracy > 0.5 on a 3-bin age task is above chance; source paper found 0.30–0.38. Permutation null CI must exclude the observed value.",
+        true,
+        false
+      ],
+      [
+        "numeric-threshold",
+        "- Stage 2: geometry gate explicitly allowed to fail — a 0/5 result is still informative (motivates Stages 9–11).",
+        false,
+        false
+      ],
+      [
+        "numeric-threshold",
+        "- Stage 3: `recon_mse` should stabilize by epoch 20; `frac_active` should be between 0.05–0.5 per feature (too low → dead features, too high → dense). `donor_ag",
+        false,
+        false
+      ],
+      [
+        "numeric-threshold",
+        "- Stage 4: report the distribution of `primary_pathway` across all features — if >80% land in one pathway, the pathway genesets are not diverse enough for this ",
+        false,
+        true
+      ],
+      [
+        "qualitative",
+        "- Stage 5: donor-bootstrap CIs should be asymmetric when signal is marginal. Symmetric CIs with narrow width on a tiny effect often indicate cell-level bootstra",
+        false,
+        false
+      ],
+      [
+        "qualitative",
+        "- Stage 9a: the donor-threshold curve should be **monotonic in sparsity** (stricter threshold → fewer passing rows, or at worst constant). Non-monotonicity indi",
+        false,
+        false
+      ],
+      [
+        "numeric-threshold",
+        "- Stage 10: check `<stem>_diagnostics.csv` — `l1_prop_distance_to_target` should be < 0.05 per bin. Larger L1 means the matching wasn't achieved; report the ach",
+        false,
+        false
+      ],
+      [
+        "numeric-mention",
+        "- Stage 11: explicitly expect some disagreement across seeds. Full agreement (4/4 positive) under composition matching is suspicious — check whether the seeds a",
+        false,
+        false
+      ],
+      [
+        "qualitative",
+        "- A claim that passes Stage 8 strict gate but fails Stage 9b reweighting is **donor-imbalance-driven**.",
+        false,
+        false
+      ],
+      [
+        "qualitative",
+        "- A claim that passes Stage 9b but fails Stage 10 is **cell-composition-driven** (the reweighting was too coarse to capture the composition shift).",
+        false,
+        false
+      ],
+      [
+        "numeric-mention",
+        "- A claim that passes Stage 10 in one seed but fails in 3/4 across Stage 11 is **sampling-realization-driven**.",
+        false,
+        false
+      ],
+      [
+        "numeric-mention",
+        "- **A claim that survives all of 8 → 9a → 9b → 10 → 11 is a mechanism-grade candidate.** In the source paper, no claim reached this bar.",
+        true,
+        false
+      ],
+      [
+        "qualitative",
+        "- `random_push` should produce `delta_expected_age_mean` CIs that include zero. If `random_push` is systematically non-zero, the probe has memorized donor ident",
+        false,
+        true
+      ],
+      [
+        "qualitative",
+        "- The `ablate` intervention should weakly mimic `old_push` for features with positive `donor_age_spearman` (setting a positive-direction feature to zero moves t",
+        false,
+        false
+      ]
+    ],
+    "parameters_table_rows": 30,
+    "parameters_has_range_column": true,
+    "citations": {
+      "repos_form": 3,
+      "repos_form_with_line": 0,
+      "repos_file_missing": [],
+      "repos_line_out_of_range": [],
+      "bare_paths": 0
+    },
+    "verdict": "PASS"
+  },
+  {
+    "file": "pipelines/sparse-autoencoders/01-sae-atlas.md",
+    "deployed_on_maxtoki": true,
+    "chars": 76940,
+    "h2_headings": [
+      "1. Overview",
+      "2. Source",
+      "3. Inputs",
+      "4. Outputs",
+      "5. Dependencies",
+      "6. Methodology",
+      "7. Parameters",
+      "8. Validation",
+      "9. Known pitfalls",
+      "10. Quick-start for new-model evaluation"
+    ],
+    "present": [
+      "Overview",
+      "Source",
+      "Inputs",
+      "Outputs",
+      "Dependencies",
+      "Methodology",
+      "Parameters",
+      "Validation",
+      "Known pitfalls"
+    ],
+    "missing": [
+      "Code references"
+    ],
+    "present_in_order": true,
+    "number_mismatch": [
+      "'7. Parameters' numbered 7, canonical position 8",
+      "'8. Validation' numbered 8, canonical position 9",
+      "'9. Known pitfalls' numbered 9, canonical position 10"
+    ],
+    "extra_sections": [
+      "10. Quick-start for new-model evaluation"
+    ],
+    "short_sections_lt200chars": [],
+    "validation_items": 15,
+    "validation_counts": {
+      "numeric-threshold": 14,
+      "numeric-mention": 1,
+      "qualitative": 0,
+      "source_anchored": 5,
+      "has_if_bug_rule": 5,
+      "threshold_and_not_source_anchored": 9
+    },
+    "validation_item_detail": [
+      [
+        "numeric-threshold",
+        "1. **Training quality** (Phase 1): Geneformer per-layer variance explained **76.8%–85.3%** (mean **81.7%**). Dead features **419/82,944 (0.5%)** total across 18",
+        true,
+        true
+      ],
+      [
+        "numeric-threshold",
+        "2. **Annotation rate U-profile** (Phase 2): highest at L0 (**58.6%**), minimum at **L8 (45.4%)**, recovery to **55–56% at L10–L11**, second decline to **47%–55%",
+        false,
+        false
+      ],
+      [
+        "numeric-threshold",
+        "3. **SVD superposition** (Phase 3): exactly **189 of 82,944 (0.2%) features SVD-aligned** at cos > 0.7 threshold. Novel annotation rate **52.5%** vs SVD-aligned",
+        false,
+        true
+      ],
+      [
+        "numeric-threshold",
+        "4. **Cross-layer persistence decay** (Phase 4): from L0, matches at L1 = **114 (2.5%)**; L4 = 67 (1.5%); L8 = 10 (0.2%); **L12+ = 0 (0%)**. Monotone decay requi",
+        false,
+        true
+      ],
+      [
+        "numeric-threshold",
+        "5. **Co-activation modules** (Phase 5): **141 modules across 18 Geneformer layers**; range **6–12 modules/layer**; peak **12 modules at L5**; **96.0–99.5% featu",
+        true,
+        true
+      ],
+      [
+        "numeric-threshold",
+        "6. **Causal specificity** (Phase 6, Geneformer L11): median **2.36×** specificity, **60% of features > 2×**, **12% > 10×**. Top feature F2035 **114.5×**. Mean t",
+        true,
+        false
+      ],
+      [
+        "numeric-threshold",
+        "7. **Cross-layer highways** (Phase 7): **97.4–99.8%** of Geneformer features form information highways at each of the 3 primary layer pairs. L11 → L17 is denses",
+        true,
+        false
+      ],
+      [
+        "numeric-threshold",
+        "8. **Perturbation specificity (central test)** (Phase 8): **92% detection, 6.2% (3/48) TRRUST TF specificity.** The 6.2% result is the central negative finding;",
+        false,
+        true
+      ],
+      [
+        "numeric-threshold",
+        "9. **Multi-tissue control** (Phase 9): best multi-tissue layer **L11 = 10.4%** (+4.2 percentage points over K562-only), with disjoint gained (ATF5, BRCA1, GATA1",
+        false,
+        false
+      ],
+      [
+        "numeric-threshold",
+        "10. **Unannotated co-membership** (Phase 10): **95.3–98.5% of unannotated features co-activate with annotated features in biological modules**; **only 2.5–3.1% ",
+        false,
+        false
+      ],
+      [
+        "numeric-threshold",
+        "11. **Cell-type coverage** (Phase 11, scGPT): **≥99% of features at any layer enriched for ≥1 cell type**. Immune features → T/B/macrophage/DC; kidney → proxima",
+        true,
+        false
+      ],
+      [
+        "numeric-threshold",
+        "12. **Feature-space quasi-orthogonality** (Phase 12): mean pairwise decoder cosine **0.0007**; within-module vs between-module Cohen's *d* = **0.075**. If withi",
+        false,
+        false
+      ],
+      [
+        "numeric-threshold",
+        "- SVD cos threshold 0.3–0.9 → SVD-aligned count scales predictably; novel features remain majority under all thresholds.",
+        false,
+        false
+      ],
+      [
+        "numeric-threshold",
+        "- Leiden resolution 0.5–2.0 → module count scales predictably; biological coherence (within-module annotation homogeneity) maximised at 1.0.",
+        false,
+        false
+      ],
+      [
+        "numeric-mention",
+        "- Hyperparameter grid 2×/4×/8× × k ∈ {16, 32, 64} → 4×/32 near-optimal.",
+        false,
+        false
+      ]
+    ],
+    "parameters_table_rows": 36,
+    "parameters_has_range_column": true,
+    "citations": {
+      "repos_form": 40,
+      "repos_form_with_line": 0,
+      "repos_file_missing": [],
+      "repos_line_out_of_range": [],
+      "bare_paths": 0
+    },
+    "verdict": "FAIL"
+  },
+  {
+    "file": "pipelines/sparse-autoencoders/02-causal-circuit-tracing.md",
+    "deployed_on_maxtoki": true,
+    "chars": 83252,
+    "h2_headings": [
+      "1. Overview",
+      "2. Source",
+      "3. Inputs",
+      "4. Outputs",
+      "5. Dependencies",
+      "6. Methodology",
+      "7. Parameters",
+      "8. Validation",
+      "9. Known pitfalls",
+      "10. Quick-start for new-model evaluation"
+    ],
+    "present": [
+      "Overview",
+      "Source",
+      "Inputs",
+      "Outputs",
+      "Dependencies",
+      "Methodology",
+      "Parameters",
+      "Validation",
+      "Known pitfalls"
+    ],
+    "missing": [
+      "Code references"
+    ],
+    "present_in_order": true,
+    "number_mismatch": [
+      "'7. Parameters' numbered 7, canonical position 8",
+      "'8. Validation' numbered 8, canonical position 9",
+      "'9. Known pitfalls' numbered 9, canonical position 10"
+    ],
+    "extra_sections": [
+      "10. Quick-start for new-model evaluation"
+    ],
+    "short_sections_lt200chars": [],
+    "validation_items": 15,
+    "validation_counts": {
+      "numeric-threshold": 10,
+      "numeric-mention": 5,
+      "qualitative": 0,
+      "source_anchored": 10,
+      "has_if_bug_rule": 6,
+      "threshold_and_not_source_anchored": 4
+    },
+    "validation_item_detail": [
+      [
+        "numeric-threshold",
+        "1. **K562/K562 Geneformer primary condition** (Phase 8 condition 1): exactly **52,116 significant edges**, 120 source → 26,338 targets, **31.9% coverage**, mean",
+        true,
+        false
+      ],
+      [
+        "numeric-threshold",
+        "2. **scGPT TS/Multi** (Phase 8 condition 4): **31,380 edges**, 90 → 1,960, **95.7% coverage**, mean |d| = **1.40**, median 1.19, **65.2% |d| > 1.0**, **65.5% in",
+        true,
+        false
+      ],
+      [
+        "numeric-threshold",
+        "3. **Top hub feature, Geneformer K562/K562** (Phase 5): **L0_F2905 Golgi Organization, out-degree 8,028**. If top hub has out-degree > 9,000 or < 7,000, the gra",
+        true,
+        false
+      ],
+      [
+        "numeric-mention",
+        "4. **Top hub feature, scGPT** (Phase 5): **L4_F446 Endonucleolytic Cleavage (rRNA), out-degree 6,494** — **the single highest-connectivity feature across either",
+        true,
+        false
+      ],
+      [
+        "numeric-threshold",
+        "5. **Causal effect attenuation, Geneformer** (Phase 5): L0 features maintain ~200–215 significant edges/feature for the first 5 layers (L1–L5), with a slight in",
+        true,
+        true
+      ],
+      [
+        "numeric-threshold",
+        "6. **PMI target overlap, Geneformer K562/K562** (Phase 7): L0 → L5 **90.6%**, L5 → L11 **94.8%**, L11 → L17 **91.7%**. Zero source feature overlap (Phase 7 step",
+        true,
+        true
+      ],
+      [
+        "numeric-threshold",
+        "7. **Biological coherence universal constant** (Phase 6): Geneformer K562/K562 ≈ **52.9%**, scGPT TS/Multi ≈ **53.0%** — these must be within ±2% of each other.",
+        true,
+        true
+      ],
+      [
+        "numeric-threshold",
+        "8. **Cross-model consensus** (Phase 9): exactly **1,142 consensus domain pairs**, **10.6× enrichment** over null (expected 107.3), permutation *p* < 0.001 at 1,",
+        false,
+        false
+      ],
+      [
+        "numeric-mention",
+        "9. **Inhibitory dominance pattern**: K562/K562 **80.1%**, K562/Multi 79.9%, **TS/Multi (Geneformer) 89.4%** (highest), scGPT 65.5%. The TS/Multi > K562/Multi or",
+        true,
+        false
+      ],
+      [
+        "numeric-mention",
+        "10. **Gene-level prediction counts** (Phase 10): **2.58M raw → 975,369 post-filter**. **0.15% match STRING/TRRUST**. **98.7% novel**. **32.8% from cross-model c",
+        false,
+        false
+      ],
+      [
+        "numeric-threshold",
+        "11. **CRISPRi directional accuracy** (Phase 11): **56.4%** on 282,250 gene pairs across 599 overlap targets. **ρ = 0.038** magnitude correlation. **6.0% of targ",
+        false,
+        false
+      ],
+      [
+        "numeric-threshold",
+        "12. **Disease centrality** (Phase 12): disease-associated domains median **14 edges vs 3 non-disease** (Mann-Whitney *p* = **1.2 × 10⁻¹¹**). **3.59× more likely",
+        false,
+        true
+      ],
+      [
+        "numeric-threshold",
+        "13. **Compute budget** (Phase 8 totals): **14.8 hours total wall-clock** across all four conditions on a single Apple Silicon M2 Max, **80,191 total forward pas",
+        false,
+        true
+      ],
+      [
+        "numeric-mention",
+        "14. **DNA damage cascade signature** (Phase 13 step 5): in Geneformer K562/Multi conditions, the L0 DNA Repair → L5 Damage Response → L11 G2/M → L17 G2/M cascad",
+        true,
+        false
+      ],
+      [
+        "numeric-mention",
+        "15. **scGPT strongest individual edge** (Phase 13 step 5): L0 Protein Catabolism (F507) → L1 Chromatin Organization, **|d| = 8.19, 161 shared ontology terms**. ",
+        true,
+        true
+      ]
+    ],
+    "parameters_table_rows": 22,
+    "parameters_has_range_column": false,
+    "citations": {
+      "repos_form": 11,
+      "repos_form_with_line": 5,
+      "repos_file_missing": [],
+      "repos_line_out_of_range": [],
+      "bare_paths": 2
+    },
+    "verdict": "FAIL"
+  },
+  {
+    "file": "pipelines/sparse-autoencoders/03-exhaustive-mapping-and-steering.md",
+    "deployed_on_maxtoki": true,
+    "chars": 71881,
+    "h2_headings": [
+      "1. Overview",
+      "2. Source",
+      "3. Inputs",
+      "4. Outputs",
+      "5. Dependencies",
+      "6. Methodology",
+      "7. Parameters",
+      "8. Validation",
+      "9. Known pitfalls",
+      "10. Quick-start for new-model evaluation"
+    ],
+    "present": [
+      "Overview",
+      "Source",
+      "Inputs",
+      "Outputs",
+      "Dependencies",
+      "Methodology",
+      "Parameters",
+      "Validation",
+      "Known pitfalls"
+    ],
+    "missing": [
+      "Code references"
+    ],
+    "present_in_order": true,
+    "number_mismatch": [
+      "'7. Parameters' numbered 7, canonical position 8",
+      "'8. Validation' numbered 8, canonical position 9",
+      "'9. Known pitfalls' numbered 9, canonical position 10"
+    ],
+    "extra_sections": [
+      "10. Quick-start for new-model evaluation"
+    ],
+    "short_sections_lt200chars": [],
+    "validation_items": 14,
+    "validation_counts": {
+      "numeric-threshold": 11,
+      "numeric-mention": 3,
+      "qualitative": 0,
+      "source_anchored": 2,
+      "has_if_bug_rule": 4,
+      "threshold_and_not_source_anchored": 9
+    },
+    "validation_item_detail": [
+      [
+        "numeric-threshold",
+        "1. **Active feature count at L5** (Phase 1): exactly **4,065** features with activation frequency ≥ 0.001 (out of 4,608 total). Tolerance ±5. If < 3,500 or > 4,",
+        false,
+        false
+      ],
+      [
+        "numeric-threshold",
+        "2. **Total significant edges, exhaustive trace** (Phase 2): **1,393,850** edges across L6 + L11 + L17. Tolerance ±2% (~28K edges). If < 1M, threshold enforcemen",
+        false,
+        true
+      ],
+      [
+        "numeric-threshold",
+        "3. **Per-feature edge distribution** (Phase 3): mean **343**, median **284**, range 0–2,138. **8 features** with 0 significant edges. Right-skewed (mean > media",
+        false,
+        false
+      ],
+      [
+        "numeric-threshold",
+        "4. **Signal attenuation** (Phase 5): **L6: 694,646 (49.8%); L11: 443,381 (31.8%); L17: 255,823 (18.4%)**. 2.7× attenuation from L6 to L17. Tolerance ±3%.",
+        false,
+        false
+      ],
+      [
+        "numeric-threshold",
+        "5. **Heavy-tailed hub distribution** (Phase 3):",
+        false,
+        false
+      ],
+      [
+        "numeric-mention",
+        "6. **Annotation bias** (Phase 4):",
+        false,
+        false
+      ],
+      [
+        "numeric-threshold",
+        "7. **Three-way redundancy ratio** (Phase 7): **0.59 for same-pathway triplets, 0.56 for cross-pathway**, vs pairwise 0.74 baseline. Monotonic deepening 1.00 → 0",
+        true,
+        true
+      ],
+      [
+        "numeric-threshold",
+        "8. **Zero synergy verification** (Phase 8): across 8 triplets × ~5,000 target features, **superadditive 7 instances (0.14%), additive 290 (5.8%), subadditive 4,",
+        false,
+        false
+      ],
+      [
+        "numeric-mention",
+        "9. **Cross-pathway superadditive count** (Phase 8): DDR × Mitosis triplet yields **4 superadditive instances**, the highest of any triplet. If this signature is",
+        false,
+        true
+      ],
+      [
+        "numeric-threshold",
+        "10. **Pseudotime ordering** (Phase 9): on 481 Tabula Sapiens immune cells, early-tertile (bottom 30%) should contain ~144 cells; late-tertile (top 33.3%) ~160 c",
+        false,
+        false
+      ],
+      [
+        "numeric-threshold",
+        "11. **Trajectory steering directionality by layer** (Phase 12):",
+        false,
+        false
+      ],
+      [
+        "numeric-mention",
+        "12. **Gene-level coherence signatures** (Phase 12 step 4):",
+        false,
+        true
+      ],
+      [
+        "numeric-threshold",
+        "13. **Absolute steering magnitude** (Phase 12 step 3): mean **|Δs| ≈ 0.001–0.003 at α=5**. If > 0.1, α is being applied as an absolute multiplier to `h_ℓ` inste",
+        false,
+        false
+      ],
+      [
+        "numeric-threshold",
+        "14. **Compute budget** (Phase 13 totals): **17.7 hours Experiment 1 + 6.5 hours Experiment 2 + 2.1 minutes Experiment 3 = ~24.2 hours + 2 min** on Apple Silicon",
+        true,
+        false
+      ]
+    ],
+    "parameters_table_rows": 30,
+    "parameters_has_range_column": true,
+    "citations": {
+      "repos_form": 6,
+      "repos_form_with_line": 0,
+      "repos_file_missing": [
+        "repos/bio-sae-circuits/results/circuit_analysis.json"
+      ],
+      "repos_line_out_of_range": [],
+      "bare_paths": 13
+    },
+    "verdict": "FAIL"
+  },
+  {
+    "file": "pipelines/audit-recurring-review-issues.md",
+    "deployed_on_maxtoki": false,
+    "chars": 39143,
+    "h2_headings": [
+      "1. Overview",
+      "2. Source",
+      "3. Inputs",
+      "4. Outputs",
+      "5. Dependencies",
+      "6. Methodology — the recurring-issue catalogue",
+      "7. Code references",
+      "8. Parameters",
+      "9. Validation",
+      "10. Known pitfalls"
+    ],
+    "present": [
+      "Overview",
+      "Source",
+      "Inputs",
+      "Outputs",
+      "Dependencies",
+      "Methodology",
+      "Code references",
+      "Parameters",
+      "Validation",
+      "Known pitfalls"
+    ],
+    "missing": [],
+    "present_in_order": true,
+    "number_mismatch": [],
+    "extra_sections": [],
+    "short_sections_lt200chars": [],
+    "validation_items": 6,
+    "validation_counts": {
+      "numeric-threshold": 0,
+      "numeric-mention": 1,
+      "qualitative": 5,
+      "source_anchored": 0,
+      "has_if_bug_rule": 1,
+      "threshold_and_not_source_anchored": 0
+    },
+    "validation_item_detail": [
+      [
+        "qualitative",
+        "1. The audit report exists at `projects/<target>/audits/audit-<YYYYMMDD>.md`",
+        false,
+        false
+      ],
+      [
+        "qualitative",
+        "2. Every **critical** finding has either a re-run scheduled, a re-run",
+        false,
+        false
+      ],
+      [
+        "qualitative",
+        "3. Every **major** finding has a `FINAL_SUMMARY.md` qualification accepted",
+        false,
+        false
+      ],
+      [
+        "qualitative",
+        "4. Every **minor** finding has an action item listed in the relevant",
+        false,
+        false
+      ],
+      [
+        "numeric-mention",
+        "5. Reproducibility scaffolding (P10) reports zero broken script paths and",
+        false,
+        false
+      ],
+      [
+        "qualitative",
+        "6. The audit report's executive summary closes with an explicit statement",
+        false,
+        true
+      ]
+    ],
+    "parameters_table_rows": 10,
+    "parameters_has_range_column": false,
+    "citations": {
+      "repos_form": 2,
+      "repos_form_with_line": 0,
+      "repos_file_missing": [
+        "repos/longevity-mechinterp/.../stage10_*",
+        "repos/topology-biomechinterp2/iterations/iter_0009/run_iter0009_screen.py"
+      ],
+      "repos_line_out_of_range": [],
+      "bare_paths": 4
+    },
+    "verdict": "PASS"
+  },
+  {
+    "file": "pipelines/sparse-autoencoders/04-atlas-deployment.md",
+    "deployed_on_maxtoki": false,
+    "chars": 12154,
+    "h2_headings": [
+      "1. Overview",
+      "2. Source",
+      "3. Inputs",
+      "4. JSON Data File Schema",
+      "5. Atlas Architecture",
+      "6. Deployment Steps",
+      "7. Validation",
+      "8. Known pitfalls"
+    ],
+    "present": [
+      "Overview",
+      "Source",
+      "Inputs",
+      "Validation",
+      "Known pitfalls"
+    ],
+    "missing": [
+      "Outputs",
+      "Dependencies",
+      "Methodology",
+      "Code references",
+      "Parameters"
+    ],
+    "present_in_order": true,
+    "number_mismatch": [
+      "'7. Validation' numbered 7, canonical position 9",
+      "'8. Known pitfalls' numbered 8, canonical position 10"
+    ],
+    "extra_sections": [
+      "4. JSON Data File Schema",
+      "5. Atlas Architecture",
+      "6. Deployment Steps"
+    ],
+    "short_sections_lt200chars": [],
+    "validation_items": 9,
+    "validation_counts": {
+      "numeric-threshold": 0,
+      "numeric-mention": 1,
+      "qualitative": 8,
+      "source_anchored": 0,
+      "has_if_bug_rule": 0,
+      "threshold_and_not_source_anchored": 0
+    },
+    "validation_item_detail": [
+      [
+        "qualitative",
+        "1. **Overview page loads** with correct stat card values",
+        false,
+        false
+      ],
+      [
+        "qualitative",
+        "2. **Layer Explorer** shows UMAP scatter with points, click-to-select works",
+        false,
+        false
+      ],
+      [
+        "qualitative",
+        "3. **Feature detail pages** show gene bars, annotation accordion, causal patching (if available)",
+        false,
+        false
+      ],
+      [
+        "numeric-mention",
+        "4. **Gene Search** autocomplete finds known genes (e.g. TP53, CDK1)",
+        false,
+        false
+      ],
+      [
+        "qualitative",
+        "5. **Ontology Search** finds pathway terms",
+        false,
+        false
+      ],
+      [
+        "qualitative",
+        "6. **Module Explorer** shows module cards with expandable feature lists",
+        false,
+        false
+      ],
+      [
+        "qualitative",
+        "7. **Cross-Layer Flow** shows persistence chart",
+        false,
+        false
+      ],
+      [
+        "qualitative",
+        "8. **Comparisons** shows SVD vs SAE grouped bars",
+        false,
+        false
+      ],
+      [
+        "qualitative",
+        "9. **Mobile layout** is usable (nav collapses, charts resize)",
+        false,
+        false
+      ]
+    ],
+    "parameters_table_rows": 0,
+    "parameters_has_range_column": false,
+    "citations": {
+      "repos_form": 1,
+      "repos_form_with_line": 0,
+      "repos_file_missing": [
+        "repos/OWNER/REPO/pages"
+      ],
+      "repos_line_out_of_range": [],
+      "bare_paths": 0
+    },
+    "verdict": "FAIL"
+  }
+]

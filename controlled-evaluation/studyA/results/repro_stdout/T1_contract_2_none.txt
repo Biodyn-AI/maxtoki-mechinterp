@@ -1,0 +1,1012 @@
+{
+ "estimates": {
+  "n_tfs_evaluable": {
+   "value": 42.0,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "count (no uncertainty)"
+  },
+  "n_positive_pairs": {
+   "value": 173.0,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "count (no uncertainty)"
+  },
+  "n_candidate_pairs": {
+   "value": 62958.0,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "count (no uncertainty)"
+  },
+  "auroc_attention": {
+   "value": 0.5947755460533494,
+   "ci_low": 0.5377227452152056,
+   "ci_high": 0.6448893743406713,
+   "method_of_uncertainty": "TF-cluster bootstrap, percentile 95% CI (10000 resamples of the 42 TRRUST TFs; all candidate pairs of a resampled TF move together)"
+  },
+  "auroc_target_variance": {
+   "value": 0.6942433140716483,
+   "ci_low": 0.6441553221457247,
+   "ci_high": 0.7370644052802741,
+   "method_of_uncertainty": "TF-cluster bootstrap, percentile 95% CI (10000 resamples of the 42 TRRUST TFs; all candidate pairs of a resampled TF move together)"
+  },
+  "auroc_target_mean_expression": {
+   "value": 0.4538956002248245,
+   "ci_low": 0.4001697049034348,
+   "ci_high": 0.49682722187264633,
+   "method_of_uncertainty": "TF-cluster bootstrap, percentile 95% CI (10000 resamples of the 42 TRRUST TFs; all candidate pairs of a resampled TF move together)"
+  },
+  "auroc_target_1_minus_dropout": {
+   "value": 0.4181136100307454,
+   "ci_low": 0.36594981419295286,
+   "ci_high": 0.4646777775732669,
+   "method_of_uncertainty": "TF-cluster bootstrap, percentile 95% CI (10000 resamples of the 42 TRRUST TFs; all candidate pairs of a resampled TF move together)"
+  },
+  "delta_auroc_attention_minus_target_variance": {
+   "value": -0.09946776801829893,
+   "ci_low": -0.17065391461213586,
+   "ci_high": -0.04499561049873954,
+   "method_of_uncertainty": "TF-cluster bootstrap, percentile 95% CI (10000 resamples of the 42 TRRUST TFs; all candidate pairs of a resampled TF move together), paired"
+  },
+  "delta_auroc_attention_minus_target_mean_expression": {
+   "value": 0.14087994582852487,
+   "ci_low": 0.0891706219105451,
+   "ci_high": 0.19602671822866038,
+   "method_of_uncertainty": "TF-cluster bootstrap, percentile 95% CI (10000 resamples of the 42 TRRUST TFs; all candidate pairs of a resampled TF move together), paired"
+  },
+  "delta_auroc_attention_minus_target_1_minus_dropout": {
+   "value": 0.176661936022604,
+   "ci_low": 0.12273418693051354,
+   "ci_high": 0.2340131295228674,
+   "method_of_uncertainty": "TF-cluster bootstrap, percentile 95% CI (10000 resamples of the 42 TRRUST TFs; all candidate pairs of a resampled TF move together), paired"
+  },
+  "auprc_attention": {
+   "value": 0.005964180752212797,
+   "ci_low": 0.0029849964495195776,
+   "ci_high": 0.012524153625336525,
+   "method_of_uncertainty": "TF-cluster bootstrap, percentile 95% CI (1000 resamples of the 42 TFs)"
+  },
+  "auprc_base_rate": {
+   "value": 0.0027478636551351693,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "fixed (no uncertainty)"
+  },
+  "label_shuffle_null_z_attention": {
+   "value": 4.195749109312095,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "z against 1000 label permutations"
+  },
+  "degree_null_mean_auroc_attention": {
+   "value": 0.5812230725003809,
+   "ci_low": 0.5494674987260404,
+   "ci_high": 0.6084948496129327,
+   "method_of_uncertainty": "2.5-97.5 percentiles of 200 curveball null networks (TF out-degree and target in-degree preserved, no self-loops)"
+  },
+  "excess_auroc_over_degree_null_attention": {
+   "value": 0.013552473552968514,
+   "ci_low": -0.013719303559583285,
+   "ci_high": 0.045308047327308976,
+   "method_of_uncertainty": "observed minus null mean; interval = observed minus 97.5/2.5 percentiles of 200 curveball null networks (TF out-degree and target in-degree preserved, no self-loops)"
+  },
+  "degree_null_z_attention": {
+   "value": 0.8485664395747101,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "z against 200 curveball null networks (TF out-degree and target in-degree preserved, no self-loops)"
+  },
+  "degree_null_z_per_tf_macro_attention": {
+   "value": -1.1344235930991562,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "z of macro (mean per-TF) AUROC against 200 curveball null networks (TF out-degree and target in-degree preserved, no self-loops)"
+  },
+  "resid_auroc_ols_attention": {
+   "value": 0.5481949823256816,
+   "ci_low": 0.47774790453313365,
+   "ci_high": 0.6081680610739048,
+   "method_of_uncertainty": "TF-cluster bootstrap, percentile 95% CI (10000 resamples of the 42 TRRUST TFs; all candidate pairs of a resampled TF move together); residuals of cross-fit seed 0 (SD over 10 cross-fit seeds = 0.0003); residualiser not refit within resamples"
+  },
+  "crossfit_r2_ols_attention": {
+   "value": 0.07150634990008084,
+   "ci_low": 0.07135489337009981,
+   "ci_high": 0.07163207036640074,
+   "method_of_uncertainty": "mean, min-max over 10 cross-fit seeds (5-fold)"
+  },
+  "retention_ols_attention": {
+   "value": 0.508517063025441,
+   "ci_low": -0.5418012822126419,
+   "ci_high": 0.8021589431097456,
+   "method_of_uncertainty": "TF-cluster bootstrap, percentile 95% CI (10000 resamples of the 42 TRRUST TFs; all candidate pairs of a resampled TF move together); ratio (resid AUROC-0.5)/(raw AUROC-0.5)"
+  },
+  "delta_auroc_resid_minus_raw_ols_attention": {
+   "value": -0.04658056372766772,
+   "ci_low": -0.07359168139595841,
+   "ci_high": -0.021952351357969975,
+   "method_of_uncertainty": "TF-cluster bootstrap, percentile 95% CI (10000 resamples of the 42 TRRUST TFs; all candidate pairs of a resampled TF move together), paired"
+  },
+  "resid_auroc_gbdt_attention": {
+   "value": 0.5430980394142594,
+   "ci_low": 0.4851926884776017,
+   "ci_high": 0.5925568852168117,
+   "method_of_uncertainty": "TF-cluster bootstrap, percentile 95% CI (10000 resamples of the 42 TRRUST TFs; all candidate pairs of a resampled TF move together); residuals of cross-fit seed 0 (SD over 10 cross-fit seeds = 0.0056); residualiser not refit within resamples"
+  },
+  "crossfit_r2_gbdt_attention": {
+   "value": 0.38727017776069605,
+   "ci_low": 0.3829454355719062,
+   "ci_high": 0.38908086843175804,
+   "method_of_uncertainty": "mean, min-max over 10 cross-fit seeds (5-fold)"
+  },
+  "retention_gbdt_attention": {
+   "value": 0.45473796996114796,
+   "ci_low": -0.3275277860597374,
+   "ci_high": 0.7711210165903882,
+   "method_of_uncertainty": "TF-cluster bootstrap, percentile 95% CI (10000 resamples of the 42 TRRUST TFs; all candidate pairs of a resampled TF move together); ratio (resid AUROC-0.5)/(raw AUROC-0.5)"
+  },
+  "delta_auroc_resid_minus_raw_gbdt_attention": {
+   "value": -0.05167750663908999,
+   "ci_low": -0.08060830726266682,
+   "ci_high": -0.01862965825170292,
+   "method_of_uncertainty": "TF-cluster bootstrap, percentile 95% CI (10000 resamples of the 42 TRRUST TFs; all candidate pairs of a resampled TF move together), paired"
+  },
+  "resid_auroc_ols_attention_extended_covariates": {
+   "value": 0.553458288010142,
+   "ci_low": 0.5068349670894754,
+   "ci_high": 0.5958108685073599,
+   "method_of_uncertainty": "TF-cluster bootstrap, percentile 95% CI (10000 resamples of the 42 TRRUST TFs; all candidate pairs of a resampled TF move together); residuals of cross-fit seed 0 (SD over 3 cross-fit seeds = 0.0008); residualiser not refit within resamples"
+  },
+  "crossfit_r2_ols_attention_extended_covariates": {
+   "value": 0.39554045156073664,
+   "ci_low": 0.3954844640616958,
+   "ci_high": 0.39559150398751686,
+   "method_of_uncertainty": "mean, min-max over 3 cross-fit seeds (5-fold)"
+  },
+  "retention_ols_attention_extended_covariates": {
+   "value": 0.5640514904556727,
+   "ci_low": 0.12611048037309847,
+   "ci_high": 1.0871854320881313,
+   "method_of_uncertainty": "TF-cluster bootstrap, percentile 95% CI (10000 resamples of the 42 TRRUST TFs; all candidate pairs of a resampled TF move together); ratio (resid AUROC-0.5)/(raw AUROC-0.5)"
+  },
+  "delta_auroc_resid_minus_raw_ols_attention_extended_covariates": {
+   "value": -0.041317258043207405,
+   "ci_low": -0.08015662691630572,
+   "ci_high": 0.005088400736274982,
+   "method_of_uncertainty": "TF-cluster bootstrap, percentile 95% CI (10000 resamples of the 42 TRRUST TFs; all candidate pairs of a resampled TF move together), paired"
+  },
+  "resid_auroc_gbdt_attention_extended_covariates": {
+   "value": 0.4932140652497444,
+   "ci_low": 0.44545990512866745,
+   "ci_high": 0.5430521303751925,
+   "method_of_uncertainty": "TF-cluster bootstrap, percentile 95% CI (10000 resamples of the 42 TRRUST TFs; all candidate pairs of a resampled TF move together); residuals of cross-fit seed 0 (SD over 3 cross-fit seeds = 0.0070); residualiser not refit within resamples"
+  },
+  "crossfit_r2_gbdt_attention_extended_covariates": {
+   "value": 0.8047948994207724,
+   "ci_low": 0.8037328251572469,
+   "ci_high": 0.8057203944721183,
+   "method_of_uncertainty": "mean, min-max over 3 cross-fit seeds (5-fold)"
+  },
+  "retention_gbdt_attention_extended_covariates": {
+   "value": -0.07160005964445465,
+   "ci_low": -1.019204532693968,
+   "ci_high": 0.4839464168196543,
+   "method_of_uncertainty": "TF-cluster bootstrap, percentile 95% CI (10000 resamples of the 42 TRRUST TFs; all candidate pairs of a resampled TF move together); ratio (resid AUROC-0.5)/(raw AUROC-0.5)"
+  },
+  "delta_auroc_resid_minus_raw_gbdt_attention_extended_covariates": {
+   "value": -0.10156148080360494,
+   "ci_low": -0.15996442250191803,
+   "ci_high": -0.036261692007851974,
+   "method_of_uncertainty": "TF-cluster bootstrap, percentile 95% CI (10000 resamples of the 42 TRRUST TFs; all candidate pairs of a resampled TF move together), paired"
+  },
+  "gene_only_auroc_lr_cross_tf": {
+   "value": 0.6983161638420133,
+   "ci_low": 0.6250073157308176,
+   "ci_high": 0.7680669935187345,
+   "method_of_uncertainty": "TF-cluster bootstrap, percentile 95% CI (10000 resamples of the 42 TRRUST TFs; all candidate pairs of a resampled TF move together); out-of-fold predictions"
+  },
+  "gene_plus_attention_auroc_lr_cross_tf": {
+   "value": 0.7107913463738301,
+   "ci_low": 0.6480060842846377,
+   "ci_high": 0.7716511375924004,
+   "method_of_uncertainty": "TF-cluster bootstrap, percentile 95% CI (10000 resamples of the 42 TRRUST TFs; all candidate pairs of a resampled TF move together); out-of-fold predictions"
+  },
+  "delta_auroc_incremental_lr_cross_tf": {
+   "value": 0.012475182531816786,
+   "ci_low": -0.007256920054301055,
+   "ci_high": 0.029420001294862278,
+   "method_of_uncertainty": "TF-cluster bootstrap, percentile 95% CI (10000 resamples of the 42 TRRUST TFs; all candidate pairs of a resampled TF move together), paired; out-of-fold predictions"
+  },
+  "delta_auprc_incremental_lr_cross_tf": {
+   "value": 0.000389065362879892,
+   "ci_low": -0.0005494349413547455,
+   "ci_high": 0.001589976850522992,
+   "method_of_uncertainty": "TF-cluster bootstrap, percentile 95% CI (1000 resamples of the 42 TFs), paired"
+  },
+  "gene_only_auroc_gbdt_cross_tf": {
+   "value": 0.7580556362409379,
+   "ci_low": 0.7056112600054436,
+   "ci_high": 0.8083722001477407,
+   "method_of_uncertainty": "TF-cluster bootstrap, percentile 95% CI (10000 resamples of the 42 TRRUST TFs; all candidate pairs of a resampled TF move together); out-of-fold predictions"
+  },
+  "gene_plus_attention_auroc_gbdt_cross_tf": {
+   "value": 0.7447971584833276,
+   "ci_low": 0.6885005980018278,
+   "ci_high": 0.79920726111961,
+   "method_of_uncertainty": "TF-cluster bootstrap, percentile 95% CI (10000 resamples of the 42 TRRUST TFs; all candidate pairs of a resampled TF move together); out-of-fold predictions"
+  },
+  "delta_auroc_incremental_gbdt_cross_tf": {
+   "value": -0.013258477757610243,
+   "ci_low": -0.030490365055167504,
+   "ci_high": 0.005809792497528904,
+   "method_of_uncertainty": "TF-cluster bootstrap, percentile 95% CI (10000 resamples of the 42 TRRUST TFs; all candidate pairs of a resampled TF move together), paired; out-of-fold predictions"
+  },
+  "delta_auprc_incremental_gbdt_cross_tf": {
+   "value": -0.0073335392215361575,
+   "ci_low": -0.022165442815332365,
+   "ci_high": 0.0038904830659841428,
+   "method_of_uncertainty": "TF-cluster bootstrap, percentile 95% CI (1000 resamples of the 42 TFs), paired"
+  },
+  "gene_only_auroc_lr_cross_target": {
+   "value": 0.7269683077536376,
+   "ci_low": 0.6667744267235746,
+   "ci_high": 0.7854223948328162,
+   "method_of_uncertainty": "TF-cluster bootstrap, percentile 95% CI (10000 resamples of the 42 TRRUST TFs; all candidate pairs of a resampled TF move together); out-of-fold predictions"
+  },
+  "gene_plus_attention_auroc_lr_cross_target": {
+   "value": 0.7342201411275566,
+   "ci_low": 0.6798283006951558,
+   "ci_high": 0.7850430524817396,
+   "method_of_uncertainty": "TF-cluster bootstrap, percentile 95% CI (10000 resamples of the 42 TRRUST TFs; all candidate pairs of a resampled TF move together); out-of-fold predictions"
+  },
+  "delta_auroc_incremental_lr_cross_target": {
+   "value": 0.007251833373918992,
+   "ci_low": -0.013275048561245733,
+   "ci_high": 0.02399025160019939,
+   "method_of_uncertainty": "TF-cluster bootstrap, percentile 95% CI (10000 resamples of the 42 TRRUST TFs; all candidate pairs of a resampled TF move together), paired; out-of-fold predictions"
+  },
+  "delta_auprc_incremental_lr_cross_target": {
+   "value": 0.0004814237569611725,
+   "ci_low": -0.0005694634986455631,
+   "ci_high": 0.0034701609302075745,
+   "method_of_uncertainty": "TF-cluster bootstrap, percentile 95% CI (1000 resamples of the 42 TFs), paired"
+  },
+  "gene_only_auroc_gbdt_cross_target": {
+   "value": 0.7746009065712375,
+   "ci_low": 0.7134148414383761,
+   "ci_high": 0.8115422110995432,
+   "method_of_uncertainty": "TF-cluster bootstrap, percentile 95% CI (10000 resamples of the 42 TRRUST TFs; all candidate pairs of a resampled TF move together); out-of-fold predictions"
+  },
+  "gene_plus_attention_auroc_gbdt_cross_target": {
+   "value": 0.7750185627526917,
+   "ci_low": 0.7200244190873909,
+   "ci_high": 0.8116801617171494,
+   "method_of_uncertainty": "TF-cluster bootstrap, percentile 95% CI (10000 resamples of the 42 TRRUST TFs; all candidate pairs of a resampled TF move together); out-of-fold predictions"
+  },
+  "delta_auroc_incremental_gbdt_cross_target": {
+   "value": 0.0004176561814541735,
+   "ci_low": -0.014315537892631182,
+   "ci_high": 0.018281800678041596,
+   "method_of_uncertainty": "TF-cluster bootstrap, percentile 95% CI (10000 resamples of the 42 TRRUST TFs; all candidate pairs of a resampled TF move together), paired; out-of-fold predictions"
+  },
+  "delta_auprc_incremental_gbdt_cross_target": {
+   "value": 0.0017681210742706444,
+   "ci_low": -0.0007975880282911667,
+   "ci_high": 0.005178563076311007,
+   "method_of_uncertainty": "TF-cluster bootstrap, percentile 95% CI (1000 resamples of the 42 TFs), paired"
+  },
+  "gene_only_auroc_lr_joint": {
+   "value": 0.6949952609165788,
+   "ci_low": 0.6003892987208922,
+   "ci_high": 0.7821916039744341,
+   "method_of_uncertainty": "TF-cluster bootstrap, percentile 95% CI (10000 resamples of the 42 TRRUST TFs; all candidate pairs of a resampled TF move together); out-of-fold predictions"
+  },
+  "gene_plus_attention_auroc_lr_joint": {
+   "value": 0.7024924494593671,
+   "ci_low": 0.6214498076973345,
+   "ci_high": 0.7782729816027549,
+   "method_of_uncertainty": "TF-cluster bootstrap, percentile 95% CI (10000 resamples of the 42 TRRUST TFs; all candidate pairs of a resampled TF move together); out-of-fold predictions"
+  },
+  "delta_auroc_incremental_lr_joint": {
+   "value": 0.007497188542788247,
+   "ci_low": -0.01713244153264706,
+   "ci_high": 0.02665911816926742,
+   "method_of_uncertainty": "TF-cluster bootstrap, percentile 95% CI (10000 resamples of the 42 TRRUST TFs; all candidate pairs of a resampled TF move together), paired; out-of-fold predictions"
+  },
+  "delta_auprc_incremental_lr_joint": {
+   "value": 0.0004625620448633263,
+   "ci_low": -0.00047013707801170097,
+   "ci_high": 0.0018525210573879997,
+   "method_of_uncertainty": "TF-cluster bootstrap, percentile 95% CI (1000 resamples of the 42 TFs), paired"
+  },
+  "gene_only_auroc_gbdt_joint": {
+   "value": 0.6485103995146295,
+   "ci_low": 0.5879896414248794,
+   "ci_high": 0.719514508925907,
+   "method_of_uncertainty": "TF-cluster bootstrap, percentile 95% CI (10000 resamples of the 42 TRRUST TFs; all candidate pairs of a resampled TF move together); out-of-fold predictions"
+  },
+  "gene_plus_attention_auroc_gbdt_joint": {
+   "value": 0.6454684557492977,
+   "ci_low": 0.5894904841295133,
+   "ci_high": 0.7138975086950268,
+   "method_of_uncertainty": "TF-cluster bootstrap, percentile 95% CI (10000 resamples of the 42 TRRUST TFs; all candidate pairs of a resampled TF move together); out-of-fold predictions"
+  },
+  "delta_auroc_incremental_gbdt_joint": {
+   "value": -0.003041943765331845,
+   "ci_low": -0.017664805596638525,
+   "ci_high": 0.012089293709764793,
+   "method_of_uncertainty": "TF-cluster bootstrap, percentile 95% CI (10000 resamples of the 42 TRRUST TFs; all candidate pairs of a resampled TF move together), paired; out-of-fold predictions"
+  },
+  "delta_auprc_incremental_gbdt_joint": {
+   "value": 6.0090503083307274e-05,
+   "ci_low": -0.001874368046144295,
+   "ci_high": 0.0014760243115170717,
+   "method_of_uncertainty": "TF-cluster bootstrap, percentile 95% CI (1000 resamples of the 42 TFs), paired"
+  },
+  "auroc_attention_direction_known_only": {
+   "value": 0.6029218721262587,
+   "ci_low": 0.5410802085302675,
+   "ci_high": 0.6610329898606315,
+   "method_of_uncertainty": "TF-cluster bootstrap, percentile 95% CI (10000 resamples of the 32 TFs with direction-known targets)"
+  },
+  "n_positive_pairs_direction_known": {
+   "value": 106.0,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "count (no uncertainty)"
+  },
+  "n_tfs_direction_known": {
+   "value": 32.0,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "count (no uncertainty)"
+  },
+  "per_tf_auroc_mean": {
+   "value": 0.5197315672740276,
+   "ci_low": 0.46289582245852917,
+   "ci_high": 0.5746361805774137,
+   "method_of_uncertainty": "bootstrap over TFs (10000 resamples)"
+  },
+  "per_tf_auroc_median": {
+   "value": 0.5222638227198374,
+   "ci_low": 0.5028301886792453,
+   "ci_high": 0.5766035048293936,
+   "method_of_uncertainty": "bootstrap over TFs (2000 resamples)"
+  },
+  "n_tfs_per_tf_auroc_above_0.5": {
+   "value": 28.0,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "count (no uncertainty)"
+  },
+  "n_tfs_per_tf_ci_above_0.5": {
+   "value": 8.0,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "count; per-TF within-TF stratified bootstrap (2000 resamples), 2.5th percentile > 0.5"
+  },
+  "n_tfs_with_ge3_targets": {
+   "value": 16.0,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "count (no uncertainty)"
+  },
+  "n_tfs_with_ge3_targets_ci_above_0.5": {
+   "value": 3.0,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "count; same per-TF bootstrap, TFs with >=3 evaluable targets"
+  },
+  "auroc_attention_target_to_tf": {
+   "value": 0.5180117853340214,
+   "ci_low": 0.4185907536727444,
+   "ci_high": 0.6214565496040898,
+   "method_of_uncertainty": "TF-cluster bootstrap, percentile 95% CI (10000 resamples of the 42 TRRUST TFs; all candidate pairs of a resampled TF move together)"
+  },
+  "resid_auroc_ols_attention_target_to_tf": {
+   "value": 0.5717629804622713,
+   "ci_low": 0.47385654704215024,
+   "ci_high": 0.6669807311793301,
+   "method_of_uncertainty": "TF-cluster bootstrap, percentile 95% CI (10000 resamples of the 42 TRRUST TFs; all candidate pairs of a resampled TF move together); residuals of cross-fit seed 0 (SD over 3 cross-fit seeds = 0.0002); residualiser not refit within resamples"
+  },
+  "crossfit_r2_ols_attention_target_to_tf": {
+   "value": 0.13198076221895205,
+   "ci_low": 0.13194129639128938,
+   "ci_high": 0.13203940192915675,
+   "method_of_uncertainty": "mean, min-max over 3 cross-fit seeds (5-fold)"
+  },
+  "retention_ols_attention_target_to_tf": {
+   "value": 3.9842236142312064,
+   "ci_low": -17.49640561000867,
+   "ci_high": 18.281014473818257,
+   "method_of_uncertainty": "TF-cluster bootstrap, percentile 95% CI (10000 resamples of the 42 TRRUST TFs; all candidate pairs of a resampled TF move together); ratio (resid AUROC-0.5)/(raw AUROC-0.5)"
+  },
+  "delta_auroc_resid_minus_raw_ols_attention_target_to_tf": {
+   "value": 0.053751195128249885,
+   "ci_low": -0.001798275480464477,
+   "ci_high": 0.11592418513611809,
+   "method_of_uncertainty": "TF-cluster bootstrap, percentile 95% CI (10000 resamples of the 42 TRRUST TFs; all candidate pairs of a resampled TF move together), paired"
+  },
+  "resid_auroc_gbdt_attention_target_to_tf": {
+   "value": 0.5448916639545637,
+   "ci_low": 0.4975928116836667,
+   "ci_high": 0.5963949225005458,
+   "method_of_uncertainty": "TF-cluster bootstrap, percentile 95% CI (10000 resamples of the 42 TRRUST TFs; all candidate pairs of a resampled TF move together); residuals of cross-fit seed 0 (SD over 3 cross-fit seeds = 0.0018); residualiser not refit within resamples"
+  },
+  "crossfit_r2_gbdt_attention_target_to_tf": {
+   "value": 0.5087281781512311,
+   "ci_low": 0.508145689504324,
+   "ci_high": 0.5096822482016374,
+   "method_of_uncertainty": "mean, min-max over 3 cross-fit seeds (5-fold)"
+  },
+  "retention_gbdt_attention_target_to_tf": {
+   "value": 2.492349487963891,
+   "ci_low": -9.953840729824101,
+   "ci_high": 11.744343434804987,
+   "method_of_uncertainty": "TF-cluster bootstrap, percentile 95% CI (10000 resamples of the 42 TRRUST TFs; all candidate pairs of a resampled TF move together); ratio (resid AUROC-0.5)/(raw AUROC-0.5)"
+  },
+  "delta_auroc_resid_minus_raw_gbdt_attention_target_to_tf": {
+   "value": 0.026879878620542308,
+   "ci_low": -0.05172619707149722,
+   "ci_high": 0.11354896372042876,
+   "method_of_uncertainty": "TF-cluster bootstrap, percentile 95% CI (10000 resamples of the 42 TRRUST TFs; all candidate pairs of a resampled TF move together), paired"
+  },
+  "degree_null_mean_auroc_attention_target_to_tf": {
+   "value": 0.4916684287280061,
+   "ci_low": 0.4633562296966296,
+   "ci_high": 0.5196954810917707,
+   "method_of_uncertainty": "2.5-97.5 percentiles of 200 curveball null networks (TF out-degree and target in-degree preserved, no self-loops)"
+  },
+  "excess_auroc_over_degree_null_attention_target_to_tf": {
+   "value": 0.026343356606015278,
+   "ci_low": -0.0016836957577492928,
+   "ci_high": 0.05465555563739177,
+   "method_of_uncertainty": "observed minus null mean; interval = observed minus 97.5/2.5 percentiles of 200 curveball null networks (TF out-degree and target in-degree preserved, no self-loops)"
+  },
+  "degree_null_z_attention_target_to_tf": {
+   "value": 1.837365117153076,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "z against 200 curveball null networks (TF out-degree and target in-degree preserved, no self-loops)"
+  },
+  "degree_null_z_per_tf_macro_attention_target_to_tf": {
+   "value": 0.23030872615557077,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "z of macro (mean per-TF) AUROC against 200 curveball null networks (TF out-degree and target in-degree preserved, no self-loops)"
+  },
+  "auroc_attention_symmetric": {
+   "value": 0.6064692746739607,
+   "ci_low": 0.5500763289395371,
+   "ci_high": 0.6614958294853459,
+   "method_of_uncertainty": "TF-cluster bootstrap, percentile 95% CI (10000 resamples of the 42 TRRUST TFs; all candidate pairs of a resampled TF move together)"
+  },
+  "resid_auroc_ols_attention_symmetric": {
+   "value": 0.582378527325799,
+   "ci_low": 0.5276577071215787,
+   "ci_high": 0.6333220251822017,
+   "method_of_uncertainty": "TF-cluster bootstrap, percentile 95% CI (10000 resamples of the 42 TRRUST TFs; all candidate pairs of a resampled TF move together); residuals of cross-fit seed 0 (SD over 3 cross-fit seeds = 0.0002); residualiser not refit within resamples"
+  },
+  "crossfit_r2_ols_attention_symmetric": {
+   "value": 0.09506864633873864,
+   "ci_low": 0.09485877207654347,
+   "ci_high": 0.09519781907665492,
+   "method_of_uncertainty": "mean, min-max over 3 cross-fit seeds (5-fold)"
+  },
+  "retention_ols_attention_symmetric": {
+   "value": 0.7737305206414293,
+   "ci_low": 0.48375164669797893,
+   "ci_high": 0.9344651158893785,
+   "method_of_uncertainty": "TF-cluster bootstrap, percentile 95% CI (10000 resamples of the 42 TRRUST TFs; all candidate pairs of a resampled TF move together); ratio (resid AUROC-0.5)/(raw AUROC-0.5)"
+  },
+  "delta_auroc_resid_minus_raw_ols_attention_symmetric": {
+   "value": -0.024090747348161745,
+   "ci_low": -0.04336234543660456,
+   "ci_high": -0.005554149689906627,
+   "method_of_uncertainty": "TF-cluster bootstrap, percentile 95% CI (10000 resamples of the 42 TRRUST TFs; all candidate pairs of a resampled TF move together), paired"
+  },
+  "resid_auroc_gbdt_attention_symmetric": {
+   "value": 0.562446665172133,
+   "ci_low": 0.4932152530937243,
+   "ci_high": 0.6220532979680521,
+   "method_of_uncertainty": "TF-cluster bootstrap, percentile 95% CI (10000 resamples of the 42 TRRUST TFs; all candidate pairs of a resampled TF move together); residuals of cross-fit seed 0 (SD over 3 cross-fit seeds = 0.0020); residualiser not refit within resamples"
+  },
+  "crossfit_r2_gbdt_attention_symmetric": {
+   "value": 0.37342614133507496,
+   "ci_low": 0.371915131394558,
+   "ci_high": 0.3749828817012415,
+   "method_of_uncertainty": "mean, min-max over 3 cross-fit seeds (5-fold)"
+  },
+  "retention_gbdt_attention_symmetric": {
+   "value": 0.5865228758565562,
+   "ci_low": -0.11939996572805615,
+   "ci_high": 0.9525987052545292,
+   "method_of_uncertainty": "TF-cluster bootstrap, percentile 95% CI (10000 resamples of the 42 TRRUST TFs; all candidate pairs of a resampled TF move together); ratio (resid AUROC-0.5)/(raw AUROC-0.5)"
+  },
+  "delta_auroc_resid_minus_raw_gbdt_attention_symmetric": {
+   "value": -0.04402260950182768,
+   "ci_low": -0.08345735876261616,
+   "ci_high": -0.004524998640473676,
+   "method_of_uncertainty": "TF-cluster bootstrap, percentile 95% CI (10000 resamples of the 42 TRRUST TFs; all candidate pairs of a resampled TF move together), paired"
+  },
+  "degree_null_mean_auroc_attention_symmetric": {
+   "value": 0.5735989879214366,
+   "ci_low": 0.53870214826173,
+   "ci_high": 0.605386756621022,
+   "method_of_uncertainty": "2.5-97.5 percentiles of 200 curveball null networks (TF out-degree and target in-degree preserved, no self-loops)"
+  },
+  "excess_auroc_over_degree_null_attention_symmetric": {
+   "value": 0.032870286752524125,
+   "ci_low": 0.0010825180529386857,
+   "ci_high": 0.0677671264122307,
+   "method_of_uncertainty": "observed minus null mean; interval = observed minus 97.5/2.5 percentiles of 200 curveball null networks (TF out-degree and target in-degree preserved, no self-loops)"
+  },
+  "degree_null_z_attention_symmetric": {
+   "value": 1.8991393359574107,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "z against 200 curveball null networks (TF out-degree and target in-degree preserved, no self-loops)"
+  },
+  "degree_null_z_per_tf_macro_attention_symmetric": {
+   "value": -1.0113230945099407,
+   "ci_low": null,
+   "ci_high": null,
+   "method_of_uncertainty": "z of macro (mean per-TF) AUROC against 200 curveball null networks (TF out-degree and target in-degree preserved, no self-loops)"
+  }
+ },
+ "bh": {
+  "attention_auroc_gt_0.5 (TF bootstrap)": {
+   "p": 0.00019998000199980003,
+   "q_bh": 0.0008499150084991501
+  },
+  "attention_vs_target_variance": {
+   "p": 0.00019998000199980003,
+   "q_bh": 0.0008499150084991501
+  },
+  "attention_vs_target_mean_expression": {
+   "p": 0.00019998000199980003,
+   "q_bh": 0.0008499150084991501
+  },
+  "attention_vs_target_1_minus_dropout": {
+   "p": 0.00019998000199980003,
+   "q_bh": 0.0008499150084991501
+  },
+  "label_shuffle": {
+   "p": 0.000999000999000999,
+   "q_bh": 0.0028305028305028305
+  },
+  "degree_null_global": {
+   "p": 0.208955223880597,
+   "q_bh": 0.3498559234985592
+  },
+  "degree_null_per_tf_macro": {
+   "p": 0.8557213930348259,
+   "q_bh": 0.9092039800995024
+  },
+  "resid_ols_auroc_gt_0.5": {
+   "p": 0.19818018198180182,
+   "q_bh": 0.3498559234985592
+  },
+  "resid_gbdt_auroc_gt_0.5": {
+   "p": 0.1561843815618438,
+   "q_bh": 0.3498559234985592
+  },
+  "incremental_auroc_lr_cross_tf": {
+   "p": 0.2263773622637736,
+   "q_bh": 0.3498559234985592
+  },
+  "incremental_auroc_gbdt_cross_tf": {
+   "p": 0.17478252174782521,
+   "q_bh": 0.3498559234985592
+  },
+  "incremental_auroc_lr_cross_target": {
+   "p": 0.48655134486551344,
+   "q_bh": 0.6362594509779792
+  },
+  "incremental_auroc_gbdt_cross_target": {
+   "p": 0.9097090290970903,
+   "q_bh": 0.9097090290970903
+  },
+  "incremental_auroc_lr_joint": {
+   "p": 0.5465453454654534,
+   "q_bh": 0.6636622052080506
+  },
+  "incremental_auroc_gbdt_joint": {
+   "p": 0.682931706829317,
+   "q_bh": 0.7739892677398926
+  },
+  "direction_known_auroc_gt_0.5": {
+   "p": 0.0005999400059994001,
+   "q_bh": 0.00203979602039796
+  },
+  "per_tf_wilcoxon_vs_0.5": {
+   "p": 0.2968856065272121,
+   "q_bh": 0.4205879425802171
+  }
+ },
+ "per_tf": [
+  {
+   "tf": "ID3",
+   "n_targets": 1,
+   "auroc": 0.237,
+   "ci": [
+    0.216,
+    0.258
+   ]
+  },
+  {
+   "tf": "JUN",
+   "n_targets": 21,
+   "auroc": 0.667,
+   "ci": [
+    0.559,
+    0.77
+   ]
+  },
+  {
+   "tf": "FUBP1",
+   "n_targets": 1,
+   "auroc": 0.371,
+   "ci": [
+    0.346,
+    0.397
+   ]
+  },
+  {
+   "tf": "ILF2",
+   "n_targets": 1,
+   "auroc": 0.372,
+   "ci": [
+    0.347,
+    0.398
+   ]
+  },
+  {
+   "tf": "HDGF",
+   "n_targets": 2,
+   "auroc": 0.551,
+   "ci": [
+    0.494,
+    0.611
+   ]
+  },
+  {
+   "tf": "PARP1",
+   "n_targets": 5,
+   "auroc": 0.596,
+   "ci": [
+    0.231,
+    0.95
+   ]
+  },
+  {
+   "tf": "FHL2",
+   "n_targets": 2,
+   "auroc": 0.734,
+   "ci": [
+    0.458,
+    0.995
+   ]
+  },
+  {
+   "tf": "SSB",
+   "n_targets": 1,
+   "auroc": 0.563,
+   "ci": [
+    0.539,
+    0.589
+   ]
+  },
+  {
+   "tf": "LRRFIP1",
+   "n_targets": 1,
+   "auroc": 0.509,
+   "ci": [
+    0.483,
+    0.533
+   ]
+  },
+  {
+   "tf": "WWTR1",
+   "n_targets": 1,
+   "auroc": 0.366,
+   "ci": [
+    0.341,
+    0.39
+   ]
+  },
+  {
+   "tf": "HNRNPD",
+   "n_targets": 1,
+   "auroc": 0.005,
+   "ci": [
+    0.002,
+    0.009
+   ]
+  },
+  {
+   "tf": "PTTG1",
+   "n_targets": 8,
+   "auroc": 0.543,
+   "ci": [
+    0.367,
+    0.711
+   ]
+  },
+  {
+   "tf": "DEK",
+   "n_targets": 1,
+   "auroc": 0.608,
+   "ci": [
+    0.584,
+    0.632
+   ]
+  },
+  {
+   "tf": "SOX4",
+   "n_targets": 2,
+   "auroc": 0.516,
+   "ci": [
+    0.09,
+    0.94
+   ]
+  },
+  {
+   "tf": "HDAC2",
+   "n_targets": 4,
+   "auroc": 0.607,
+   "ci": [
+    0.286,
+    0.916
+   ]
+  },
+  {
+   "tf": "GTF2I",
+   "n_targets": 1,
+   "auroc": 0.875,
+   "ci": [
+    0.858,
+    0.891
+   ]
+  },
+  {
+   "tf": "HIPK2",
+   "n_targets": 4,
+   "auroc": 0.519,
+   "ci": [
+    0.264,
+    0.764
+   ]
+  },
+  {
+   "tf": "KLF6",
+   "n_targets": 4,
+   "auroc": 0.855,
+   "ci": [
+    0.697,
+    0.943
+   ]
+  },
+  {
+   "tf": "SF1",
+   "n_targets": 1,
+   "auroc": 0.77,
+   "ci": [
+    0.749,
+    0.792
+   ]
+  },
+  {
+   "tf": "FOSL1",
+   "n_targets": 1,
+   "auroc": 0.111,
+   "ci": [
+    0.095,
+    0.127
+   ]
+  },
+  {
+   "tf": "FOXM1",
+   "n_targets": 4,
+   "auroc": 0.618,
+   "ci": [
+    0.315,
+    0.919
+   ]
+  },
+  {
+   "tf": "GTF3A",
+   "n_targets": 1,
+   "auroc": 0.519,
+   "ci": [
+    0.493,
+    0.547
+   ]
+  },
+  {
+   "tf": "TFDP1",
+   "n_targets": 7,
+   "auroc": 0.522,
+   "ci": [
+    0.375,
+    0.677
+   ]
+  },
+  {
+   "tf": "HIF1A",
+   "n_targets": 19,
+   "auroc": 0.686,
+   "ci": [
+    0.552,
+    0.818
+   ]
+  },
+  {
+   "tf": "ZFP36L1",
+   "n_targets": 1,
+   "auroc": 0.523,
+   "ci": [
+    0.499,
+    0.547
+   ]
+  },
+  {
+   "tf": "YY1",
+   "n_targets": 15,
+   "auroc": 0.503,
+   "ci": [
+    0.347,
+    0.658
+   ]
+  },
+  {
+   "tf": "MAZ",
+   "n_targets": 2,
+   "auroc": 0.404,
+   "ci": [
+    0.112,
+    0.701
+   ]
+  },
+  {
+   "tf": "NCOR1",
+   "n_targets": 2,
+   "auroc": 0.584,
+   "ci": [
+    0.21,
+    0.95
+   ]
+  },
+  {
+   "tf": "AATF",
+   "n_targets": 2,
+   "auroc": 0.336,
+   "ci": [
+    0.089,
+    0.589
+   ]
+  },
+  {
+   "tf": "BRCA1",
+   "n_targets": 16,
+   "auroc": 0.57,
+   "ci": [
+    0.396,
+    0.741
+   ]
+  },
+  {
+   "tf": "MBD2",
+   "n_targets": 1,
+   "auroc": 0.872,
+   "ci": [
+    0.855,
+    0.888
+   ]
+  },
+  {
+   "tf": "NFIC",
+   "n_targets": 5,
+   "auroc": 0.506,
+   "ci": [
+    0.211,
+    0.809
+   ]
+  },
+  {
+   "tf": "DNMT1",
+   "n_targets": 6,
+   "auroc": 0.611,
+   "ci": [
+    0.383,
+    0.879
+   ]
+  },
+  {
+   "tf": "ILF3",
+   "n_targets": 2,
+   "auroc": 0.536,
+   "ci": [
+    0.28,
+    0.792
+   ]
+  },
+  {
+   "tf": "NFIX",
+   "n_targets": 1,
+   "auroc": 0.248,
+   "ci": [
+    0.226,
+    0.27
+   ]
+  },
+  {
+   "tf": "KLF2",
+   "n_targets": 2,
+   "auroc": 0.726,
+   "ci": [
+    0.476,
+    0.967
+   ]
+  },
+  {
+   "tf": "JUND",
+   "n_targets": 10,
+   "auroc": 0.676,
+   "ci": [
+    0.473,
+    0.858
+   ]
+  },
+  {
+   "tf": "TRIM28",
+   "n_targets": 1,
+   "auroc": 0.446,
+   "ci": [
+    0.421,
+    0.472
+   ]
+  },
+  {
+   "tf": "CEBPB",
+   "n_targets": 4,
+   "auroc": 0.459,
+   "ci": [
+    0.049,
+    0.868
+   ]
+  },
+  {
+   "tf": "EWSR1",
+   "n_targets": 1,
+   "auroc": 0.432,
+   "ci": [
+    0.407,
+    0.458
+   ]
+  },
+  {
+   "tf": "ATF4",
+   "n_targets": 6,
+   "auroc": 0.448,
+   "ci": [
+    0.233,
+    0.707
+   ]
+  },
+  {
+   "tf": "RBMX",
+   "n_targets": 2,
+   "auroc": 0.226,
+   "ci": [
+    0.021,
+    0.442
+   ]
+  }
+ ],
+ "criteria": {
+  "a_beats_every_gene_level_baseline": false,
+  "b_incremental_value_all_models_and_splits": false,
+  "c_residual_retention_ge_0.8_and_degree_null_z_gt_3": false,
+  "d_causal_ablation": "not testable with the provided data"
+ }
+}

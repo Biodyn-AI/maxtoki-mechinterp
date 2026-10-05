@@ -1,0 +1,553 @@
+{
+  "n_tasks": 74,
+  "n_missing": 0,
+  "missing": [],
+  "resampling": "leave one of the 11 training donors out; features re-standardised on the remaining anchors; head re-fitted (seed 42); external / zero-shot scored with the re-fitted head, panels not resampled",
+  "observed_all_11_donors": {
+    "trust": 0.810936329588015,
+    "branch_plain": 0.37040378877968805,
+    "branch_anchor_weighted": 0.15346096354532718,
+    "external_trust": 0.895688041594454,
+    "external_branch": 0.34644275347273074,
+    "zeroshot_trust": 0.8267244525547446,
+    "zeroshot_branch": 0.31683028161845
+  },
+  "per_donor": {
+    "TSP12": {
+      "n_anchors_dropped": 2,
+      "n_train": 288,
+      "trust": 0.8374414744933613,
+      "global_in_sample": 0.9859057816919725,
+      "branch_plain": 0.36912672320719286,
+      "branch_anchor_weighted": 0.1509868564654578,
+      "n_branches_scored": 6,
+      "per_branch": {
+        "T_lineage": {
+          "n_test": 101,
+          "rho": 0.032602591816882964
+        },
+        "B_lineage": {
+          "n_test": 45,
+          "rho": 0.12682884848046488
+        },
+        "granulocyte": {
+          "n_test": 25,
+          "rho": 0.7206640246537629
+        },
+        "erythroid": {
+          "n_test": 7,
+          "rho": 0.7833494518006403
+        },
+        "monocyte": {
+          "n_test": 34,
+          "rho": -0.06974358091671294
+        },
+        "stem": {
+          "n_test": 4,
+          "rho": 0.6210590034081188
+        }
+      },
+      "external_trust": 0.8987770075101098,
+      "external_branch": 0.32327816286083677,
+      "zeroshot_trust": 0.8322049878345499,
+      "zeroshot_branch": 0.3086102535098483
+    },
+    "TSP15": {
+      "n_anchors_dropped": 13,
+      "n_train": 277,
+      "trust": 0.8047291471237575,
+      "global_in_sample": 0.9868452133170867,
+      "branch_plain": 0.3578949207158395,
+      "branch_anchor_weighted": 0.16923230498704334,
+      "n_branches_scored": 6,
+      "per_branch": {
+        "T_lineage": {
+          "n_test": 97,
+          "rho": 0.0507450710684461
+        },
+        "B_lineage": {
+          "n_test": 43,
+          "rho": 0.1739710796833229
+        },
+        "erythroid": {
+          "n_test": 6,
+          "rho": 0.8183170883849714
+        },
+        "granulocyte": {
+          "n_test": 24,
+          "rho": 0.723886504024668
+        },
+        "monocyte": {
+          "n_test": 34,
+          "rho": -0.03358955447178389
+        },
+        "stem": {
+          "n_test": 4,
+          "rho": 0.4140393356054126
+        }
+      },
+      "external_trust": 0.89947429231658,
+      "external_branch": 0.3840683962088913,
+      "zeroshot_trust": 0.8342579075425791,
+      "zeroshot_branch": 0.35062244612067023
+    },
+    "TSP17": {
+      "n_anchors_dropped": 14,
+      "n_train": 276,
+      "trust": 0.8084760649978041,
+      "global_in_sample": 0.9871300498515224,
+      "branch_plain": 0.43606111371373174,
+      "branch_anchor_weighted": 0.18907026331533916,
+      "n_branches_scored": 6,
+      "per_branch": {
+        "T_lineage": {
+          "n_test": 99,
+          "rho": 0.07092695144813145
+        },
+        "B_lineage": {
+          "n_test": 43,
+          "rho": 0.20525434276455168
+        },
+        "granulocyte": {
+          "n_test": 23,
+          "rho": 0.6372338335119434
+        },
+        "erythroid": {
+          "n_test": 6,
+          "rho": 0.8183170883849714
+        },
+        "monocyte": {
+          "n_test": 30,
+          "rho": 0.018609062388353664
+        },
+        "stem": {
+          "n_test": 3,
+          "rho": 0.8660254037844387
+        }
+      },
+      "external_trust": 0.8991777392643944,
+      "external_branch": 0.3510126232629547,
+      "zeroshot_trust": 0.8276824817518248,
+      "zeroshot_branch": 0.3417839225510106
+    },
+    "TSP2": {
+      "n_anchors_dropped": 187,
+      "n_train": 103,
+      "trust": 0.7626699029126214,
+      "global_in_sample": 0.9831878564316957,
+      "branch_plain": 0.363076115203162,
+      "branch_anchor_weighted": 0.15072574179968917,
+      "n_branches_scored": 3,
+      "per_branch": {
+        "B_lineage": {
+          "n_test": 15,
+          "rho": 0.41917443495260986
+        },
+        "T_lineage": {
+          "n_test": 39,
+          "rho": -0.09407933289402055
+        },
+        "granulocyte": {
+          "n_test": 9,
+          "rho": 0.7641332435508967
+        }
+      },
+      "external_trust": 0.9098917773926439,
+      "external_branch": 0.4418653023521504,
+      "zeroshot_trust": 0.8257299270072993,
+      "zeroshot_branch": 0.2676831995309034
+    },
+    "TSP20": {
+      "n_anchors_dropped": 17,
+      "n_train": 273,
+      "trust": 0.8034021978021978,
+      "global_in_sample": 0.9872316469477261,
+      "branch_plain": 0.3845275790549662,
+      "branch_anchor_weighted": 0.1818346262330693,
+      "n_branches_scored": 6,
+      "per_branch": {
+        "T_lineage": {
+          "n_test": 93,
+          "rho": 0.041771927822625836
+        },
+        "B_lineage": {
+          "n_test": 39,
+          "rho": 0.28726370014061514
+        },
+        "erythroid": {
+          "n_test": 7,
+          "rho": 0.7833494518006403
+        },
+        "granulocyte": {
+          "n_test": 24,
+          "rho": 0.6013523195743318
+        },
+        "monocyte": {
+          "n_test": 34,
+          "rho": -0.0276309284165348
+        },
+        "stem": {
+          "n_test": 4,
+          "rho": 0.6210590034081188
+        }
+      },
+      "external_trust": 0.8945517042172155,
+      "external_branch": 0.3733020293066072,
+      "zeroshot_trust": 0.8276338199513382,
+      "zeroshot_branch": 0.2844638305019706
+    },
+    "TSP28": {
+      "n_anchors_dropped": 4,
+      "n_train": 286,
+      "trust": 0.8236689799427441,
+      "global_in_sample": 0.9862040489486514,
+      "branch_plain": 0.36407274687815216,
+      "branch_anchor_weighted": 0.1544517127415429,
+      "n_branches_scored": 6,
+      "per_branch": {
+        "T_lineage": {
+          "n_test": 99,
+          "rho": 0.03967958944302425
+        },
+        "B_lineage": {
+          "n_test": 45,
+          "rho": 0.16194015836952344
+        },
+        "erythroid": {
+          "n_test": 7,
+          "rho": 0.7833494518006403
+        },
+        "granulocyte": {
+          "n_test": 25,
+          "rho": 0.6440537323837051
+        },
+        "monocyte": {
+          "n_test": 34,
+          "rho": -0.0656454541360986
+        },
+        "stem": {
+          "n_test": 4,
+          "rho": 0.6210590034081188
+        }
+      },
+      "external_trust": 0.8953731946851531,
+      "external_branch": 0.33346083158550005,
+      "zeroshot_trust": 0.8310705596107055,
+      "zeroshot_branch": 0.33324487864627456
+    },
+    "TSP3": {
+      "n_anchors_dropped": 5,
+      "n_train": 285,
+      "trust": 0.8571840542832909,
+      "global_in_sample": 0.984232796986487,
+      "branch_plain": 0.37185806440927077,
+      "branch_anchor_weighted": 0.17064633910481442,
+      "n_branches_scored": 6,
+      "per_branch": {
+        "B_lineage": {
+          "n_test": 45,
+          "rho": 0.1470584948653195
+        },
+        "T_lineage": {
+          "n_test": 99,
+          "rho": 0.07237016802948576
+        },
+        "erythroid": {
+          "n_test": 7,
+          "rho": 0.7833494518006403
+        },
+        "granulocyte": {
+          "n_test": 25,
+          "rho": 0.6533586261816878
+        },
+        "monocyte": {
+          "n_test": 34,
+          "rho": -0.04604735782962761
+        },
+        "stem": {
+          "n_test": 4,
+          "rho": 0.6210590034081188
+        }
+      },
+      "external_trust": 0.9022840362025804,
+      "external_branch": 0.3720959223195006,
+      "zeroshot_trust": 0.8356903892944039,
+      "zeroshot_branch": 0.31593218020965347
+    },
+    "TSP30": {
+      "n_anchors_dropped": 2,
+      "n_train": 288,
+      "trust": 0.8135936408106219,
+      "global_in_sample": 0.9864844391496549,
+      "branch_plain": 0.36414947699690486,
+      "branch_anchor_weighted": 0.148416186673915,
+      "n_branches_scored": 6,
+      "per_branch": {
+        "T_lineage": {
+          "n_test": 101,
+          "rho": 0.03636974418506519
+        },
+        "B_lineage": {
+          "n_test": 45,
+          "rho": 0.1302936351885618
+        },
+        "erythroid": {
+          "n_test": 7,
+          "rho": 0.7833494518006403
+        },
+        "granulocyte": {
+          "n_test": 25,
+          "rho": 0.701821614712848
+        },
+        "monocyte": {
+          "n_test": 34,
+          "rho": -0.0879965873138051
+        },
+        "stem": {
+          "n_test": 4,
+          "rho": 0.6210590034081188
+        }
+      },
+      "external_trust": 0.8981656075486232,
+      "external_branch": 0.34314284818004115,
+      "zeroshot_trust": 0.831830900243309,
+      "zeroshot_branch": 0.3280867735184178
+    },
+    "TSP4": {
+      "n_anchors_dropped": 32,
+      "n_train": 258,
+      "trust": 0.8146814008466656,
+      "global_in_sample": 0.987326313607757,
+      "branch_plain": 0.3408329742949967,
+      "branch_anchor_weighted": 0.12444809751514294,
+      "n_branches_scored": 6,
+      "per_branch": {
+        "B_lineage": {
+          "n_test": 42,
+          "rho": 0.14844423375937035
+        },
+        "T_lineage": {
+          "n_test": 85,
+          "rho": 0.0038269058264911106
+        },
+        "erythroid": {
+          "n_test": 7,
+          "rho": 0.7833494518006403
+        },
+        "granulocyte": {
+          "n_test": 20,
+          "rho": 0.5286571266289868
+        },
+        "monocyte": {
+          "n_test": 33,
+          "rho": -0.04033887565362711
+        },
+        "stem": {
+          "n_test": 4,
+          "rho": 0.6210590034081188
+        }
+      },
+      "external_trust": 0.8979414596572308,
+      "external_branch": 0.39549308123178256,
+      "zeroshot_trust": 0.8302585158150851,
+      "zeroshot_branch": 0.23991403324065078
+    },
+    "TSP5": {
+      "n_anchors_dropped": 7,
+      "n_train": 283,
+      "trust": 0.8182603968469693,
+      "global_in_sample": 0.9868325358528947,
+      "branch_plain": 0.36533676310069424,
+      "branch_anchor_weighted": 0.16171581931081516,
+      "n_branches_scored": 6,
+      "per_branch": {
+        "T_lineage": {
+          "n_test": 98,
+          "rho": 0.045929134269151725
+        },
+        "B_lineage": {
+          "n_test": 44,
+          "rho": 0.20416612613057852
+        },
+        "erythroid": {
+          "n_test": 7,
+          "rho": 0.7833494518006403
+        },
+        "granulocyte": {
+          "n_test": 25,
+          "rho": 0.6335081860793247
+        },
+        "monocyte": {
+          "n_test": 33,
+          "rho": -0.0959913230836486
+        },
+        "stem": {
+          "n_test": 4,
+          "rho": 0.6210590034081188
+        }
+      },
+      "external_trust": 0.8988293857115348,
+      "external_branch": 0.34602438002148056,
+      "zeroshot_trust": 0.8277737226277373,
+      "zeroshot_branch": 0.32566967818663844
+    },
+    "TSP9": {
+      "n_anchors_dropped": 7,
+      "n_train": 283,
+      "trust": 0.8123647730361512,
+      "global_in_sample": 0.9867591608221989,
+      "branch_plain": 0.3501349325983172,
+      "branch_anchor_weighted": 0.13733643230789658,
+      "n_branches_scored": 6,
+      "per_branch": {
+        "T_lineage": {
+          "n_test": 99,
+          "rho": 0.030735613354388285
+        },
+        "B_lineage": {
+          "n_test": 44,
+          "rho": 0.10176984425231304
+        },
+        "erythroid": {
+          "n_test": 7,
+          "rho": 0.7833494518006403
+        },
+        "granulocyte": {
+          "n_test": 25,
+          "rho": 0.6507222396055928
+        },
+        "monocyte": {
+          "n_test": 32,
+          "rho": -0.08682655683115045
+        },
+        "stem": {
+          "n_test": 4,
+          "rho": 0.6210590034081188
+        }
+      },
+      "external_trust": 0.9014621606008087,
+      "external_branch": 0.3715358352625606,
+      "zeroshot_trust": 0.8319799270072993,
+      "zeroshot_branch": 0.2709223601331469
+    }
+  },
+  "ranges": {
+    "trust": {
+      "min": 0.7626699029126214,
+      "argmin": "TSP2",
+      "max": 0.8571840542832909,
+      "argmax": "TSP3",
+      "n_donors": 11,
+      "jackknife_se": 0.0700149862919703,
+      "t_ci95_around_observed": [
+        0.6549332184095895,
+        0.9669394407664405
+      ],
+      "n_below_gate": 1,
+      "gate": 0.8
+    },
+    "branch_plain": {
+      "min": 0.3408329742949967,
+      "argmin": "TSP4",
+      "max": 0.43606111371373174,
+      "argmax": "TSP17",
+      "n_donors": 11,
+      "jackknife_se": 0.07452560733472038,
+      "t_ci95_around_observed": [
+        0.20435038760932434,
+        0.5364571899500518
+      ],
+      "n_below_gate": 0,
+      "gate": 0.2
+    },
+    "branch_anchor_weighted": {
+      "min": 0.12444809751514294,
+      "argmin": "TSP4",
+      "max": 0.18907026331533916,
+      "argmax": "TSP17",
+      "n_donors": 11,
+      "jackknife_se": 0.05714842440671847,
+      "t_ci95_around_observed": [
+        0.02612633879491713,
+        0.28079558829573725
+      ],
+      "n_below_gate": 11,
+      "gate": 0.2
+    },
+    "external_trust": {
+      "min": 0.8945517042172155,
+      "argmin": "TSP20",
+      "max": 0.9098917773926439,
+      "argmax": "TSP2",
+      "n_donors": 11,
+      "jackknife_se": 0.012292172417439505,
+      "t_ci95_around_observed": [
+        0.8682993746558431,
+        0.923076708533065
+      ],
+      "n_below_gate": 0,
+      "gate": 0.8
+    },
+    "external_branch": {
+      "min": 0.32327816286083677,
+      "argmin": "TSP12",
+      "max": 0.4418653023521504,
+      "argmax": "TSP2",
+      "n_donors": 11,
+      "jackknife_se": 0.10043179230272647,
+      "t_ci95_around_observed": [
+        0.12266677506840987,
+        0.5702187318770516
+      ],
+      "n_below_gate": 0,
+      "gate": 0.2
+    },
+    "zeroshot_trust": {
+      "min": 0.8257299270072993,
+      "argmin": "TSP2",
+      "max": 0.8356903892944039,
+      "argmax": "TSP3",
+      "n_donors": 11,
+      "jackknife_se": 0.009274585580877638,
+      "t_ci95_around_observed": [
+        0.8060593880859195,
+        0.8473895170235697
+      ],
+      "n_below_gate": 0,
+      "gate": 0.8
+    },
+    "zeroshot_branch": {
+      "min": 0.23991403324065078,
+      "argmin": "TSP4",
+      "max": 0.35062244612067023,
+      "argmax": "TSP15",
+      "n_donors": 11,
+      "jackknife_se": 0.10670187457307717,
+      "t_ci95_around_observed": [
+        0.07908368930241044,
+        0.5545768739344896
+      ],
+      "n_below_gate": 0,
+      "gate": 0.2
+    }
+  },
+  "lung_control_v1_frozen": {
+    "n_anchors": 51,
+    "n_donors": 4,
+    "trust_k15": 0.8013071895424837,
+    "random_holdout": 0.8937933113845415,
+    "donor_within_mean": 0.9253112444323854,
+    "branch_within_mean": 0.522474657577425,
+    "n_branches_scored": 5,
+    "global_spearman": 0.9211880106649079,
+    "deployed": {
+      "trustworthiness": 0.8013071895424837,
+      "random_holdout": 0.8937933113845415,
+      "donor_holdout": 0.9253112444323854,
+      "branch_holdout": 0.522474657577425,
+      "global_correlation": 0.9211880106649079,
+      "all_gates_pass": true,
+      "diagnostic": "BAD: negative control passed (gates too loose or pipeline confound)"
+    }
+  }
+}

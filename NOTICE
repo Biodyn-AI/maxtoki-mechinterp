@@ -1,0 +1,282 @@
+maxtoki-mechinterp
+Author: Ihor Kendiukhov (see CITATION.cff)
+
+LICENCE OF THIS REPOSITORY
+--------------------------
+
+The Apache License, Version 2.0 (see LICENSE) covers the code and the text
+written for this repository: the method specifications, prompts, scripts,
+checks, reports, the error ledger, the manuscript source and the release
+tools.
+
+Some files are copies or subsets of public resources, or contain values
+taken from them. Those files keep the licence and terms of their source.
+The Apache licence does not replace them. This applies both to the files in
+the git repository and to the files kept on Zenodo (ZENODO_MANIFEST.csv).
+
+The list below names each kind of third-party file, where it is in this
+repository, and its source. Where the source states a licence, it is given
+with the page it was read from (read on 4 October 2026). Where we could not
+confirm a licence, the entry says "see the source". Check the source before
+any reuse, in particular any commercial reuse.
+
+Some of the files named below are over 2 MB and are kept on Zenodo, not in
+git; ZENODO_MANIFEST.csv lists them. DATASETS.md, CHECKPOINTS.md and
+DATASETS_EVAL_INPUTS.csv give versions, sizes and sha256 values. Each study
+package's README.md says how its data files were made.
+
+The Study C snapshot (controlled-evaluation/studyC/snapshot/) is kept on
+Zenodo, in files_eval_studyC.zip. It holds the project files that the blind
+auditors received. Most of them are copies of files under projects/maxtoki/
+in this repository, and the entries below cover those copies too. It also
+holds copies of MaxToki setup files (see MaxToki in section 1).
+
+The snapshot that the auditors received also held six third-party
+reference files. These six are not deposited on Zenodo. They were in the
+folder
+controlled-evaluation/studyC/snapshot/maxtoki/reference_data/biomechinterp/biodyn-nmi-paper/:
+  - results/biological_impact/reference_edge_sets/go_bp_gene_sets.json
+    (GO biological process gene sets)
+  - results/biological_impact/reference_edge_sets/kegg_gene_sets.json
+    (KEGG gene sets)
+  - results/biological_impact/reference_edge_sets/reactome_gene_sets.json
+    (Reactome gene sets)
+  - results/biological_impact/reference_edge_sets/string_ppi_edges.json
+    (STRING protein pairs)
+  - src/02_cssi_method/cssi_real_data/results/trrust_human.tsv
+    (the TRRUST human TF-target table)
+  - src/02_cssi_method/crispri_validation/data/gene_name_id_dict_gc104M.pkl
+    (a Geneformer gene name to Ensembl id dictionary)
+ZENODO_MANIFEST.csv marks them as not deposited. DATASETS.md and
+CHECKPOINTS.md say where to get them.
+
+
+1. MODEL FILES
+--------------
+
+MaxToki (Hugging Face repository theodoris-lab/MaxToki)
+  Files:   projects/maxtoki/setup/token_dictionary.json (taken from the
+           MaxToki-217M BioNeMo checkpoint, see
+           projects/maxtoki/runs/attention-grn-217M/README.md);
+           projects/maxtoki/setup/MaxToki-217M-HF/config.json and
+           generation_config.json;
+           controlled-evaluation/studyA/tasks/T4-*/data/maxtoki_217m/
+           (config.json, token_dictionary.json);
+           controlled-evaluation/studyC/snapshot/maxtoki/setup/
+           (token_dictionary.json, and config.json and
+           generation_config.json in MaxToki-217M-HF/ and MaxToki-1B-HF/;
+           on Zenodo, in files_eval_studyC.zip).
+  Licence: Apache-2.0 (licence field of the model card,
+           https://huggingface.co/theodoris-lab/MaxToki).
+
+Geneformer V2-316M (Hugging Face repository ctheodoris/Geneformer)
+  Files:   controlled-evaluation/studyA/tasks/T4-*/data/geneformer_v2_316m/
+           (config.json, token_dictionary.json);
+           controlled-evaluation/studyA/tasks/T4-*/data/gene_ids/ensembl_symbol.csv
+           (from the Geneformer file gene_name_id_dict_gc104M.pkl);
+           controlled-evaluation/studyB/packages/B2418/ and B8833/
+           models/geneformer_v2_316m/config.json.
+  Licence: Apache-2.0 (licence field of the model card,
+           https://huggingface.co/ctheodoris/Geneformer).
+
+scGPT whole-human checkpoint (bowang-lab/scGPT)
+  Files:   controlled-evaluation/studyA/tasks/T4-*/data/scgpt_whole_human/
+           (args.json, vocab.json, and encoder_enc_norm.npz, which holds the
+           parameters of one LayerNorm copied from the checkpoint);
+           controlled-evaluation/studyB/packages/B2418/ and B8833/
+           models/scgpt_whole_human/ (args.json, vocab.json).
+  Licence: the scGPT code repository is under the MIT License
+           (https://github.com/bowang-lab/scGPT, LICENSE). Its README gives no
+           separate licence for the pretrained checkpoints. See the source.
+
+STATE SE-600M (Hugging Face repository arcinstitute/SE-600M, revision 5a9a80f4)
+  Files:   controlled-evaluation/studyB/packages/B2418/ and B8833/
+           models/state_se600m/config.yaml (model files), and the model's
+           outputs (cell embeddings) in B2418/ and B8833/
+           data/embeddings/state_gut.npz and B8045/ and B9709/
+           data/state_se_L11.npz.
+  Licence: Arc Research Institute State Model Non-Commercial License
+           (https://huggingface.co/arcinstitute/SE-600M/blob/main/MODEL_LICENSE.md,
+           last updated 23 June 2025). It covers "any other files released by
+           Licensor" and outputs of the model, allows use for non-commercial
+           purposes only, and requires anyone who redistributes these files to
+           include a complete, unaltered copy of that licence. A copy is in
+           each of these four packages (STATE_MODEL_LICENSE.md, and
+           models/state_se600m/MODEL_LICENSE.md next to each config.yaml),
+           with a notice (STATE_MODEL_NOTICE.md). Citation required by the
+           licence: Adduri, A. et al. (2025) Predicting cellular responses to
+           perturbation across diverse contexts with State (published in
+           Cell 2026;189(19):5914-5931.e20, doi:10.1016/j.cell.2026.07.052).
+
+Gene-embedding tables from the three checkpoints above (embed_tokens.npy,
+word_embeddings.npy, encoder_embedding_weight.npy in the Study A T4 task
+folders) are listed in ZENODO_MANIFEST.csv but are not deposited. Re-extract
+them from the checkpoints named in CHECKPOINTS.md.
+
+
+2. SINGLE-CELL DATA
+-------------------
+
+Replogle et al. 2022, genome-scale Perturb-seq (K562, RPE1 and the
+four-cell-line file)
+  Files:   subsets and per-gene or per-cell values in
+           controlled-evaluation/studyA/tasks/T1-*/data/, T2-*/data/ and
+           T3-*/data/;
+           controlled-evaluation/studyB/packages/ B1144, B2101, B4328, B4668,
+           B6874, B7037, B7148, B7392, B8045, B8104, B8612, B9709 (data/);
+           task-data folders of the runs, for example
+           projects/maxtoki/runs/attention-grn-217M/outputs/v2_eval/task_data_rpe1/
+           and projects/maxtoki/runs/sae-atlas-217M/outputs/v3_tf_specificity/task_data/;
+           other per-cell and per-gene tables in the run output folders under
+           projects/maxtoki/runs/.
+  Licence: the processed data on figshare+ (doi:10.25452/figshare.plus.20029387)
+           are under CC BY 4.0 (licence field of the figshare record). The
+           scPerturb copy of the RPE1 file (https://zenodo.org/records/13350497)
+           is under CC BY 4.0. The filtered four-cell-line copy
+           (Hugging Face dataset arcinstitute/State-Replogle-Filtered) states
+           no licence on its page.
+
+Norman et al. 2019, CRISPR activation Perturb-seq in K562 cells
+(scPerturb file NormanWeissman2019_filtered.h5ad)
+  Files:   controlled-evaluation/studyB/packages/B3100/ and B9296/
+           data/norman2019_subset.npz.
+  Licence: CC BY 4.0 (scPerturb record https://zenodo.org/records/13350497).
+
+Adamson et al. 2016, Perturb-seq screen of the unfolded protein response
+(GEO GSE90546; the processed copy is described in DATASETS.md)
+  Files:   per-cell, per-gene and per-perturbation values computed from the
+           data: the output files and folders whose names contain "adamson"
+           or "Adamson" under projects/maxtoki/runs/attention-grn-217M/outputs/,
+           and projects/maxtoki/checks/d12_deployment_facts/out/adamson_target_knockdown.csv.
+  Licence: see the source.
+
+Tabula Sapiens (immune, lung) and the Krasnow lab Human Lung Cell Atlas,
+Smart-seq2 (Travaglini et al. 2020), both from CELLxGENE Discover
+(DATASETS.md); Developing Human Gut, fetal intestinal epithelium, from
+CELLxGENE Discover (controlled-evaluation/studyB/packages/B2418/README.md).
+  Files:   gene panels in controlled-evaluation/studyA/tasks/T4-*/data/panels/;
+           cell-group labels and model outputs in
+           projects/maxtoki/runs/manifold-discovery-217M/outputs/v2_intervals/task_data/;
+           per-cell metadata of the cells the runs used (for example cell
+           type, donor and age group) in the run output folders, for example
+           cell_metadata.csv under
+           projects/maxtoki/runs/spectral-geometry-217M/outputs/phase0/ and
+           projects/maxtoki/runs/topology-141-217M/outputs/phase0/,
+           cells_*_obs.csv under
+           projects/maxtoki/runs/manifold-discovery-217M/outputs/phase1/ and
+           sampled_obs.csv under
+           projects/maxtoki/runs/longevity-mechinterp-217M/outputs/stage1_20260505/;
+           controlled-evaluation/studyB/packages/B1131/ and B1448/ (lung and
+           gut cells); controlled-evaluation/studyB/packages/B2418/ and B8833/
+           (data/raw/gut_epithelium_first200.h5ad, a count subset, and
+           data/embeddings/).
+  Licence: CELLxGENE Discover states that data published there are available
+           under CC BY 4.0
+           (https://cellxgene.cziscience.com/docs/032__Contribute%20and%20Publish%20Data).
+
+Mouse pancreas endocrinogenesis, E15.5 (Bastidas-Ponce et al. 2019)
+  Files:   controlled-evaluation/studyB/packages/B1131/ and B1448/
+           (pancreas files in data/).
+  Licence: see the source.
+
+
+3. REFERENCE NETWORKS AND PROTEIN ANNOTATION
+-------------------------------------------
+
+TRRUST v2 (Han et al. 2018; https://www.grnpedia.org/trrust/)
+  Files:   controlled-evaluation/studyA/tasks/T1-*/data/trrust_edges_in_gene_set.tsv;
+           controlled-evaluation/studyA/tasks/T3-*/data/targets_trrust.tsv;
+           projects/maxtoki/runs/attention-grn-217M/outputs/v2_eval/task_data_rpe1/trrust_edges_in_gene_set.tsv;
+           projects/maxtoki/runs/sae-atlas-217M/outputs/v2_tf_specificity/task_data/targets_trrust.tsv
+           and the same file under v3_tf_specificity/.
+  Licence: the TRRUST page says the work "is licensed under a Creative
+           Commons Attribution-ShareAlike 4.0 International License" and that
+           the network edge information "is freely available for
+           non-commercial research".
+
+DoRothEA (Garcia-Alonso et al. 2019; served by OmniPath)
+  Files:   controlled-evaluation/studyA/tasks/T3-*/data/targets_dorothea.tsv;
+           projects/maxtoki/runs/sae-atlas-217M/outputs/v2_tf_specificity/task_data/targets_dorothea.tsv
+           and the same file under v3_tf_specificity/;
+           controlled-evaluation/studyB/packages/B4668/ and B8104/
+           data/dorothea_omnipath.tsv.gz.
+  Licence: the DoRothEA repository (https://github.com/saezlab/dorothea) says
+           DoRothEA "is intended only for academic use as it contains
+           resources whose licenses don't permit commercial use". Its code is
+           under GPL-3.0.
+
+UniProtKB/Swiss-Prot
+  Files:   controlled-evaluation/studyB/packages/B2977/ and B4481/
+           (data/uniprot/uniprot_sprot_subset.dat.gz, data/corpus/swissprot_5k.jsonl);
+           controlled-evaluation/studyB/packages/B1249/, B4174/, B3954/ and
+           B8827/ (proteins.tsv and residue or pair labels taken from UniProt
+           feature records).
+  Licence: CC BY 4.0 ("Creative Commons Attribution 4.0 International
+           (CC BY 4.0) License", UniProt knowledgebase README,
+           https://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/complete/README).
+           Copyright UniProt Consortium.
+
+STRING, GO, KEGG, Reactome
+  No STRING, GO, KEGG or Reactome file is shipped, in git or on Zenodo. (The
+  copies in the Study C snapshot are not deposited; see the start of this
+  file.) STRING was used to choose genes for the Study A T4 panels and in
+  run analyses. Run outputs (for example the SAE feature annotations) name
+  GO, KEGG and Reactome terms. STRING states that its data are under
+  CC BY 4.0 (https://string-db.org/cgi/access). For GO, KEGG and Reactome,
+  see the source.
+
+
+4. OUTPUTS OF THIRD-PARTY MODELS
+--------------------------------
+
+Many files hold values computed by running public models on the data above:
+activations, embeddings, attention scores and sparse-autoencoder codes. The
+models are MaxToki-217M, Geneformer V2-316M, scGPT whole-human, STATE
+SE-600M, ESM-2 650M (facebook/esm2_t33_650M_UR50D; licence field "mit" on
+its Hugging Face model card) and C2S-Scale-Gemma-2-2B
+(vandijklab/C2S-Scale-Gemma-2-2B; its model card says "The model weights
+shared on Huggingface are CC-by-4.0"). These files are results of this
+project, but the terms of the model and of the input data may also apply.
+See each source.
+
+
+5. JAVASCRIPT LIBRARIES OF THE WEB ATLAS
+----------------------------------------
+
+The built web atlas (projects/maxtoki/runs/sae-atlas-217M/atlas/dist/) is
+not in this release (EXCLUDED.csv). Building it with `npm ci && npm run
+build` in the atlas folder downloads open-source libraries, each under its
+own licence: React and React Router (MIT), plotly.js (MIT,
+https://github.com/plotly/plotly.js) and the libraries plotly.js includes,
+for example MapLibre GL JS (3-Clause BSD). The full dependency list is in
+projects/maxtoki/runs/sae-atlas-217M/atlas/package.json and
+package-lock.json.
+
+
+6. LATEX BIBLIOGRAPHY STYLE
+---------------------------
+
+projects/maxtoki/paper-plos-one/plos2025.bst is the PLOS bibliography style.
+Its header says it is a copy of the Vancouver BibTeX style by Folkert van
+der Beek (https://gitlab.com/fvdbeek/vancouver.bst), with some options
+turned on, and that it may be distributed and changed under the LaTeX
+Project Public License, version 1.3 or later.
+
+
+7. RECORDS FROM PUBLIC WEB SERVICES
+-----------------------------------
+
+projects/maxtoki/checks/d12_deployment_facts/inputs/ and
+projects/maxtoki/checks/d12_deployment_facts/verification/inputs/ hold what
+the Hugging Face and Zenodo web services returned for public repositories
+named in this file: file lists, commit lists and repository details of
+theodoris-lab/MaxToki, ctheodoris/Geneformer and
+arcinstitute/State-Replogle-Filtered on Hugging Face, and details of the
+scPerturb records on Zenodo. The checks read them. They hold no model
+weights and no data values. See the source.
+
+
+8. PUBLISHED PAPERS
+-------------------
+
+Copies of published papers are not included. Cite the papers instead.

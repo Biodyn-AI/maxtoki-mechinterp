@@ -1,0 +1,17 @@
+{
+  "scope": "H123 motif AUROC at 5 Louvain seeds \u00d7 12 layers, immune domain. Tests Louvain-step seed sensitivity given fixed Phase 0 embeddings.",
+  "louvain_seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "per_layer_range_max": 0.03373015873015872,
+  "per_layer_range_mean": 0.019179894179894158,
+  "per_layer_std_mean": 0.006901183424710665,
+  "overall_mean_auc": 0.505026455026455,
+  "overall_std_across_all_seed_x_layer": 0.011029120835170728,
+  "interpretation": "Louvain-seed sensitivity of H123 AUROC: per-layer range averages 0.0192, max 0.0337. Per-layer SD averages 0.0069. LOUVAIN-SEED STABLE \u2014 H123 conclusion is robust to community-detection seed.",
+  "deferred_full_residual_8": "This Louvain-seed test does NOT exercise Phase 0 cell-sampling stochasticity. Full residual #8 would re-run Phase 0 (~15 min per tissue per seed \u00d7 3 tissues \u00d7 2 alternate seeds = ~90 min) and recompute downstream phases. Deferred here for scope; the cell-sample-seed stability is partially addressed by spectral-geometry Phase 8 (CKA across 3 cell-sample seeds: L0\u2192L11 changes by <1%)."
+}

@@ -1,0 +1,141 @@
+{
+  "inputs": {
+    "source_dir": "<REPO_ROOT>/projects/maxtoki/runs/exhaustive-mapping-217M/outputs/v2_triplets",
+    "source_selection": {
+      "0": [
+        810,
+        3147,
+        2137,
+        3526,
+        1107,
+        194,
+        1947,
+        2810
+      ],
+      "5": [
+        3783,
+        3811,
+        2451,
+        1679,
+        2307,
+        4904,
+        4341,
+        735
+      ],
+      "9": [
+        776,
+        4233,
+        1606,
+        234,
+        504,
+        121,
+        2868,
+        1474
+      ]
+    },
+    "source_script_sha256": "9c915b8aae564f43975efa447ac5dd447e858ab381672d394d428b6d62034598"
+  },
+  "script": "<REPO_ROOT>/projects/maxtoki/runs/exhaustive-mapping-217M/scripts/v2_triplets_followup.py",
+  "script_sha256": "4ab0621968d41b482c25bb047e8e4b4251ac5b90c6448d1ed5bbbcdca25ccb8c",
+  "seeds": {
+    "classnull_signflip_seed": 20261011,
+    "power_pick_seed": 20261003,
+    "readout_pick_seed": 20261021
+  },
+  "chunks": [
+    {
+      "stage": "classnull",
+      "end": "2026-10-01T14:21:00",
+      "wall_seconds": 67.4,
+      "script_sha256": "63ddb72dd5ec07c47cacdcd55b39d6112413e39b8c6e7703c7a046446535c833"
+    },
+    {
+      "stage": "align",
+      "end": "2026-10-01T14:24:54",
+      "wall_seconds": 163.5,
+      "script_sha256": "4ab0621968d41b482c25bb047e8e4b4251ac5b90c6448d1ed5bbbcdca25ccb8c"
+    },
+    {
+      "stage": "readout",
+      "start": "2026-10-01T14:25:38",
+      "wall_seconds": 123.7,
+      "free_gb_at_start": 9.95344384,
+      "cells_done": [
+        [
+          0,
+          22.9
+        ],
+        [
+          1,
+          20.5
+        ],
+        [
+          2,
+          24.9
+        ],
+        [
+          3,
+          25.7
+        ]
+      ],
+      "cells_left": 0,
+      "triplets_read": [
+        [
+          810,
+          3811,
+          121
+        ],
+        [
+          3147,
+          4904,
+          121
+        ],
+        [
+          1947,
+          3783,
+          121
+        ],
+        [
+          1947,
+          3811,
+          2868
+        ]
+      ],
+      "script_sha256": "4ab0621968d41b482c25bb047e8e4b4251ac5b90c6448d1ed5bbbcdca25ccb8c"
+    }
+  ],
+  "cells": {
+    "dataset_path": "<DATA_ROOT>/biodyn-nmi-paper/src/02_cssi_method/crispri_validation/data/replogle_concat.h5ad",
+    "rows": [
+      289300,
+      292833,
+      293501,
+      294821
+    ],
+    "barcodes": [
+      "AATCGACAGTAAGAGG-19-k562",
+      "ACAGGGACAACACAAA-36-k562",
+      "ACATGCAGTGTATCCA-44-k562",
+      "ACCCTCAGTACTTCCC-27-k562"
+    ],
+    "note": "first 4 of the 20 v2_triplets cells"
+  },
+  "env": {
+    "device": "mps",
+    "torch": "2.11.0",
+    "transformers": "5.5.4",
+    "python": "3.12.9",
+    "platform": "macOS-26.3-arm64-arm-64bit",
+    "hooks_v2_sha256": "1ba6fda5ad761b1f82041a7b1397fa9332fa7438e13db955a00d751c4b440f54",
+    "model_dir": "<REPO_ROOT>/projects/maxtoki/setup/MaxToki-217M-HF",
+    "model_dtype": "float32",
+    "timestamp": "2026-10-01T14:27:42"
+  },
+  "notes": [
+    "classnull: the sign-flip null for the two classification rules is NOT a valid null. I_c and the additive part share the same condition terms with opposite signs, so they are negatively correlated by construction; flipping I_c makes ABC* noisier than ABC and inflates the superadditive counts of the null. Reported only as context; not used as evidence.",
+    "align: the cosine between I_c and the additive part is negative by construction for the same reason (pure independent jitter gives about -0.93). Not used as evidence of saturation.",
+    "classnull per-target power (constant plant) is optimistic: a constant shift adds no cell-to-cell spread. The proportional plant is the realistic one.",
+    "readout: 4 cells (first 4 of the 20) x 4 seeded triplets x 8 forward passes; full model path; read-out cross-checked against the stored v2_triplets values (max abs diff 8.8e-9).",
+    "Peak memory of the readout stage was not logged by /usr/bin/time (output filtered); free memory at start 9.95 GB, guard 3 GB."
+  ]
+}

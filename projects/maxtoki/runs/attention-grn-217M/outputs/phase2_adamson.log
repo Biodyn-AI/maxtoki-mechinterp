@@ -1,0 +1,50 @@
+======================================================================
+PHASE 2 — Incremental value testing (MaxToki L8)
+======================================================================
+
+[1] Loading artefacts...
+
+[2] Rebuilding DE masks from ADAMSON...
+  loading HVG-only expression (sequential)...
+  loaded HVG matrix: (68603, 1500)  (1.2s)
+  evaluable perturbations: 57  (1.6s)
+
+[3] Building (pert, target) dataset...
+  n pairs: 85,443  positive rate: 0.0519
+  n perturbations: 57
+  n unique targets: 1500
+
+[4] Running GroupKFold incremental-value tests...
+  [cross_pert | logreg | gene_only       ] AUROC=0.8022 ± 0.0129  AUPRC=0.1879
+  [cross_pert | logreg | gene_plus_attn  ] AUROC=0.8022 ± 0.0128  AUPRC=0.1864
+  [cross_pert | logreg | gene_plus_corr  ] AUROC=0.8081 ± 0.0122  AUPRC=0.1936
+  [cross_pert | logreg | gene_plus_both  ] AUROC=0.8080 ± 0.0123  AUPRC=0.1936
+  [cross_pert | logreg | attn_only       ] AUROC=0.5388 ± 0.0129  AUPRC=0.0580
+  [cross_pert | logreg | corr_only       ] AUROC=0.5957 ± 0.0498  AUPRC=0.1050
+  [cross_gene | logreg | gene_only       ] AUROC=0.7971 ± 0.0273  AUPRC=0.1878
+  [cross_gene | logreg | gene_plus_attn  ] AUROC=0.7970 ± 0.0272  AUPRC=0.1847
+  [cross_gene | logreg | gene_plus_corr  ] AUROC=0.8053 ± 0.0245  AUPRC=0.1942
+  [cross_gene | logreg | gene_plus_both  ] AUROC=0.8051 ± 0.0245  AUPRC=0.1941
+  [cross_gene | logreg | attn_only       ] AUROC=0.5399 ± 0.0261  AUPRC=0.0582
+  [cross_gene | logreg | corr_only       ] AUROC=0.5992 ± 0.0074  AUPRC=0.1088
+  [joint      | logreg | gene_only       ] AUROC=0.7998  AUPRC=0.1869
+  [joint      | logreg | gene_plus_attn  ] AUROC=0.7998  AUPRC=0.1853
+  [joint      | logreg | gene_plus_corr  ] AUROC=0.8078  AUPRC=0.1955
+  split time: 7.6s
+
+[5] Delta-AUROC summary (vs gene_only)...
+     split  model    feature_set  gene_only_auroc  new_auroc  delta_auroc
+cross_gene logreg gene_plus_attn         0.797149   0.796976    -0.000173
+cross_gene logreg gene_plus_corr         0.797149   0.805335     0.008186
+cross_gene logreg gene_plus_both         0.797149   0.805113     0.007964
+cross_gene logreg      attn_only         0.797149   0.539864    -0.257285
+cross_gene logreg      corr_only         0.797149   0.599188    -0.197961
+cross_pert logreg gene_plus_attn         0.802237   0.802151    -0.000085
+cross_pert logreg gene_plus_corr         0.802237   0.808102     0.005866
+cross_pert logreg gene_plus_both         0.802237   0.807952     0.005715
+cross_pert logreg      attn_only         0.802237   0.538797    -0.263440
+cross_pert logreg      corr_only         0.802237   0.595731    -0.206505
+     joint logreg gene_plus_attn         0.799850   0.799788    -0.000062
+     joint logreg gene_plus_corr         0.799850   0.807756     0.007906
+
+PHASE 2 COMPLETE — outputs: <REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/phase2_adamson

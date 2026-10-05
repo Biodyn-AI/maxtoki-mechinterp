@@ -1,0 +1,30 @@
+{
+  "branch": "H65_anchor_LET10D",
+  "panel": "internal",
+  "feature": "pooled_drift_2464",
+  "head_variant": "anchor_trained_baseline",
+  "n_anchors": 290,
+  "gates_thresholds": {
+    "trustworthiness_min": 0.8,
+    "random_holdout_correlation_min": 0.2,
+    "donor_holdout_correlation_min": 0.2,
+    "clade_branch_holdout_correlation_min": 0.2,
+    "blocked_permutation_p_max": 0.001,
+    "n_permutations_min": 2000
+  },
+  "positive": {
+    "trustworthiness": 0.810936329588015,
+    "random_holdout": 0.8341080550865551,
+    "donor_holdout": 0.715887968347085,
+    "branch_holdout": 0.37040378877968805,
+    "passes": true
+  },
+  "null_shuffled": {
+    "trustworthiness": 0.7985001506737268,
+    "random_holdout": 0.7985932357123123,
+    "donor_holdout": 0.7071285065298346,
+    "branch_holdout": -0.0010123536030740103,
+    "passes": false
+  },
+  "verdict": "POSITIVE: H65 passes all four gates and null fails at least one"
+}

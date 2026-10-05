@@ -1,0 +1,2045 @@
+{
+ "AI:T3:paper:4:repair-generic": {
+  "shared_pkg_read": 1,
+  "_examples": {
+   "shared_pkg_read": [
+    "{\"file_path\": \"<CODE_ROOT>/analysis-tasks/w6895/BRIEF.md\"}"
+   ]
+  }
+ },
+ "AI:T1:contract:2:review-checklist": {
+  "shared_pkg_read": 5,
+  "shared_pkg_write": 1,
+  "_examples": {
+   "shared_pkg_read": [
+    "{\"file_path\": \"<CODE_ROOT>/analysis-tasks/w6252/BRIEF.md\"}",
+    "{\"file_path\": \"<CODE_ROOT>/analysis-tasks/w6252/contract/SPEC.md\", \"limit\": 200}"
+   ],
+   "shared_pkg_write": [
+    "{\"command\": \"wc -l <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/w6252/data/*.tsv 2>/dev/null\"}"
+   ]
+  }
+ },
+ "AI:T4:paper:2:rgrade-checklist": {
+  "_examples": {}
+ },
+ "AI:T1:paper:3:generic:grade1": {
+  "_examples": {}
+ },
+ "AI:T4:paper:1:review-generic": {
+  "_examples": {}
+ },
+ "AI:T1:contract:4:review-checklist": {
+  "tmp": 1,
+  "_examples": {
+   "tmp": [
+    "{\"command\": \"cd <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/u469158 && cat > <TMP>/run_analysis.py << 'EOF'\\n\"\"\"\\nMaxToki-217M Attention-Derived Gene Regul"
+   ]
+  }
+ },
+ "AI:T4:contract:5:rgrade-checklist": {
+  "_examples": {}
+ },
+ "AI:T3:paper:5:rgrade-generic": {
+  "_examples": {}
+ },
+ "AI:T2:paper:1:generic:grade2": {
+  "_examples": {}
+ },
+ "AI:T1:contract:4:generic:grade1": {
+  "_examples": {}
+ },
+ "AI:T2:contract:4:repair-checklist": {
+  "tmp": 3,
+  "_examples": {
+   "tmp": [
+    "{\"command\": \"cd <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/u800830 && cat > <TMP>/revised_report.txt << 'EOF'\\n# Do MaxToki-217M SAE Feature Circuits Pred",
+    "{\"command\": \"cd <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/u800830 && cat > <TMP>/final_analysis.py << 'EOFSCRIPT'\\n#!/usr/bin/env python3\\n\"\"\"\\nAnalysis "
+   ]
+  }
+ },
+ "AI:T2:contract:2:exec": {
+  "shared_pkg_read": 2,
+  "_examples": {
+   "shared_pkg_read": [
+    "{\"file_path\": \"<CODE_ROOT>/analysis-tasks/w3318/contract/SPEC.md\"}",
+    "{\"file_path\": \"<CODE_ROOT>/analysis-tasks/w3318/data/README.md\"}"
+   ]
+  }
+ },
+ "AI:T1:contract:2:exec": {
+  "shared_pkg_read": 1,
+  "_examples": {
+   "shared_pkg_read": [
+    "{\"file_path\": \"<CODE_ROOT>/analysis-tasks/w6252/data/README.md\"}"
+   ]
+  }
+ },
+ "AI:T2:paper:4:rgrade-checklist": {
+  "_examples": {}
+ },
+ "AI:T4:contract:1:review-checklist": {
+  "_examples": {}
+ },
+ "AI:T3:contract:1:review-checklist": {
+  "shared_pkg_read": 12,
+  "shared_pkg_write": 1,
+  "_examples": {
+   "shared_pkg_read": [
+    "{\"file_path\": \"<CODE_ROOT>/analysis-tasks/w9668/BRIEF.md\"}",
+    "{\"file_path\": \"<CODE_ROOT>/analysis-tasks/w9668/contract/SPEC.md\"}"
+   ],
+   "shared_pkg_write": [
+    "{\"command\": \"cat \"<CODE_ROOT>/analysis-tasks/w9668/data/README.md\" 2>/dev/null | head -100\"}"
+   ]
+  }
+ },
+ "AI:T2:paper:2:rgrade-generic": {
+  "_examples": {}
+ },
+ "AI:T4:contract:2:repair-checklist": {
+  "shared_pkg_read": 1,
+  "_examples": {
+   "shared_pkg_read": [
+    "{\"file_path\": \"<LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/w3033/BRIEF.md\"}"
+   ]
+  }
+ },
+ "AI:T1:paper:4:none:grade2": {
+  "_examples": {}
+ },
+ "AI:T2:paper:5:exec": {
+  "tmp": 1,
+  "_examples": {
+   "tmp": [
+    "{\"command\": \"cd <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/u170998 && <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/bin/python << 'EOF'\\nimport panda"
+   ]
+  }
+ },
+ "AI:T4:paper:4:generic:grade1": {
+  "_examples": {}
+ },
+ "AI:T3:contract:3:exec": {
+  "_examples": {}
+ },
+ "AI:T1:contract:4:review-generic": {
+  "shared_pkg_read": 1,
+  "_examples": {
+   "shared_pkg_read": [
+    "{\"file_path\": \"<CODE_ROOT>/analysis-tasks/w6252/data/README.md\"}"
+   ]
+  }
+ },
+ "AI:T4:paper:3:generic:grade2": {
+  "_examples": {}
+ },
+ "AI:T2:contract:3:checklist:grade2": {
+  "_examples": {}
+ },
+ "AI:T4:contract:5:none:grade1": {
+  "_examples": {}
+ },
+ "AI:T3:paper:2:none:grade1": {
+  "_examples": {}
+ },
+ "AI:T3:paper:4:generic:grade2": {
+  "_examples": {}
+ },
+ "AI:T4:contract:4:checklist:grade2": {
+  "_examples": {}
+ },
+ "AI:T3:contract:4:review-checklist": {
+  "tmp": 1,
+  "_examples": {
+   "tmp": [
+    "{\"command\": \"cat > <TMP>/compare_scripts.txt << 'EOF'\\nFrom the JSON deliverable:\\n- \"Mean responding features per TF: 2.0 \\u00b1 2.2 (SD)\"\\n- \"Mean specific fea"
+   ]
+  }
+ },
+ "AI:T3:paper:4:generic:grade1": {
+  "_examples": {}
+ },
+ "AI:T2:paper:3:repair-checklist": {
+  "shared_pkg_read": 1,
+  "tmp": 1,
+  "_examples": {
+   "shared_pkg_read": [
+    "{\"file_path\": \"<CODE_ROOT>/analysis-tasks/w3637/BRIEF.md\"}"
+   ],
+   "tmp": [
+    "{\"command\": \"<LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/bin/python << 'EOF' > <TMP>/test_analysis.py\\n\"\"\"Analysis: Do SAE feature circuits of MaxToki-217M"
+   ]
+  }
+ },
+ "AI:T1:contract:2:repair-generic": {
+  "shared_pkg_read": 1,
+  "_examples": {
+   "shared_pkg_read": [
+    "{\"file_path\": \"<CODE_ROOT>/analysis-tasks/w6252/data/README.md\"}"
+   ]
+  }
+ },
+ "AI:T3:contract:4:none:grade2": {
+  "_examples": {}
+ },
+ "AI:T4:contract:5:repair-generic": {
+  "_examples": {}
+ },
+ "AI:T4:paper:2:checklist:grade1": {
+  "_examples": {}
+ },
+ "AI:T1:paper:3:rgrade-checklist": {
+  "_examples": {}
+ },
+ "AI:T4:contract:4:rgrade-checklist": {
+  "_examples": {}
+ },
+ "AI:T2:paper:1:rgrade-generic": {
+  "_examples": {}
+ },
+ "AI:T1:contract:4:none:grade1": {
+  "_examples": {}
+ },
+ "AI:T1:paper:2:exec": {
+  "_examples": {}
+ },
+ "AI:T3:contract:2:repair-generic": {
+  "_examples": {}
+ },
+ "AI:T1:paper:4:checklist:grade1": {
+  "_examples": {}
+ },
+ "AI:T2:contract:1:repair-generic": {
+  "_examples": {}
+ },
+ "AI:T2:paper:1:repair-generic": {
+  "_examples": {}
+ },
+ "AI:T4:paper:5:generic:grade1": {
+  "_examples": {}
+ },
+ "AI:T3:contract:2:generic:grade1": {
+  "_examples": {}
+ },
+ "AI:T3:contract:5:none:grade2": {
+  "_examples": {}
+ },
+ "AI:T3:paper:5:review-generic": {
+  "_examples": {}
+ },
+ "AI:T3:paper:2:repair-generic": {
+  "tmp": 2,
+  "_examples": {
+   "tmp": [
+    "{\"command\": \"cat > <TMP>/final_report.md << 'EOF'\\n# Are Sparse Autoencoder Features Specific to Transcription Factor Target Genes?\\n\\n## Question\\n\\nAre the spa",
+    "{\"command\": \"cat > <TMP>/analysis_script.py << 'EOF'\\n#!/usr/bin/env python3\\n\"\"\"\\nComplete analysis script: Are SAE features that respond to TF knockdown specif"
+   ]
+  }
+ },
+ "AI:T2:paper:2:review-generic": {
+  "_examples": {}
+ },
+ "AI:T2:contract:4:exec": {
+  "_examples": {}
+ },
+ "AI:T4:contract:5:review-generic": {
+  "shared_pkg_read": 2,
+  "_examples": {
+   "shared_pkg_read": [
+    "{\"command\": \"cd <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/u499541 && grep -n \"PCA\\\\|pca\\\\|reduce\\\\|20\\\\|dimen\" <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analys",
+    "{\"file_path\": \"<CODE_ROOT>/analysis-tasks/w3033/BRIEF.md\", \"limit\": 200}"
+   ]
+  }
+ },
+ "AI:T2:paper:5:generic:grade1": {
+  "_examples": {}
+ },
+ "AI:T1:paper:5:repair-checklist": {
+  "_examples": {}
+ },
+ "AI:T3:contract:4:exec": {
+  "tmp": 1,
+  "_examples": {
+   "tmp": [
+    "{\"command\": \"cd <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/u830184 && <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/bin/python - <<'EOF'\\nimport nump"
+   ]
+  }
+ },
+ "AI:T3:paper:2:rgrade-generic": {
+  "_examples": {}
+ },
+ "AI:T4:paper:2:exec": {
+  "scratch": 6,
+  "_examples": {
+   "scratch": [
+    "{\"command\": \"cat > <AGENT_TMP>/<SESSION_DIR>/d422dc33-6d6f-4b2b-bbf7-f274d8a82fae/scratchpad/",
+    "{\"command\": \"cat > <AGENT_TMP>/<SESSION_DIR>/d422dc33-6d6f-4b2b-bbf7-f274d8a82fae/scratchpad/"
+   ]
+  }
+ },
+ "AI:T4:paper:3:checklist:grade2": {
+  "_examples": {}
+ },
+ "AI:T3:contract:2:checklist:grade1": {
+  "_examples": {}
+ },
+ "AI:T2:paper:2:exec": {
+  "tmp": 1,
+  "_examples": {
+   "tmp": [
+    "{\"command\": \"cat > <TMP>/report.md << 'EOF'\\n# SAE Circuit Prediction of CRISPRi Knockdown Effects in K562 Cells\\n\\n## Question\\n\\nDo the SAE feature circuits of"
+   ]
+  }
+ },
+ "AI:T4:paper:4:repair-generic": {
+  "_examples": {}
+ },
+ "AI:T2:paper:3:generic:grade1": {
+  "_examples": {}
+ },
+ "AI:T4:paper:4:repair-checklist": {
+  "_examples": {}
+ },
+ "AI:T2:contract:2:generic:grade1": {
+  "_examples": {}
+ },
+ "AI:T3:contract:4:none:grade1": {
+  "_examples": {}
+ },
+ "AI:T2:paper:5:repair-generic": {
+  "_examples": {}
+ },
+ "AI:T4:paper:5:rgrade-checklist": {
+  "_examples": {}
+ },
+ "AI:T1:paper:5:generic:grade2": {
+  "_examples": {}
+ },
+ "AI:T2:paper:4:checklist:grade2": {
+  "_examples": {}
+ },
+ "AI:T2:contract:3:review-checklist": {
+  "_examples": {}
+ },
+ "AI:T3:contract:1:generic:grade2": {
+  "_examples": {}
+ },
+ "AI:T4:contract:1:checklist:grade1": {
+  "_examples": {}
+ },
+ "AI:T4:contract:3:review-generic": {
+  "_examples": {}
+ },
+ "AI:T4:paper:4:checklist:grade2": {
+  "_examples": {}
+ },
+ "AI:T3:paper:5:checklist:grade1": {
+  "_examples": {}
+ },
+ "AI:T1:paper:3:review-generic": {
+  "_examples": {}
+ },
+ "AI:T1:paper:1:rgrade-generic": {
+  "_examples": {}
+ },
+ "AI:T1:contract:5:rgrade-generic": {
+  "_examples": {}
+ },
+ "AI:T3:paper:2:none:grade2": {
+  "_examples": {}
+ },
+ "AI:T3:contract:1:exec": {
+  "tmp": 1,
+  "scratch": 2,
+  "_examples": {
+   "tmp": [
+    "{\"command\": \"<LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/bin/python << 'SCRIPT_EOF'\\n\"\"\"\\nAnalysis: Are SAE features responding to TF knockdown specific t"
+   ],
+   "scratch": [
+    "{\"command\": \"cat > <AGENT_TMP>/<SESSION_DIR>/d422dc33-6d6f-4b2b-bbf7-f274d8a82fae/scratchpad/",
+    "{\"command\": \"cat > <AGENT_TMP>/<SESSION_DIR>/d422dc33-6d6f-4b2b-bbf7-f274d8a82fae/scratchpad/"
+   ]
+  }
+ },
+ "AI:T4:paper:3:rgrade-checklist": {
+  "_examples": {}
+ },
+ "AI:T3:contract:2:review-checklist": {
+  "shared_pkg_read": 4,
+  "_examples": {
+   "shared_pkg_read": [
+    "{\"file_path\": \"<LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/w9668/contract/SPEC.md\"}",
+    "{\"command\": \"cat <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/w9668/contract/SPEC.md\"}"
+   ]
+  }
+ },
+ "AI:T1:paper:1:checklist:grade2": {
+  "_examples": {}
+ },
+ "AI:T3:paper:5:rgrade-checklist": {
+  "_examples": {}
+ },
+ "AI:T1:paper:2:repair-generic": {
+  "shared_pkg_read": 1,
+  "_examples": {
+   "shared_pkg_read": [
+    "{\"file_path\": \"<LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/w4891/BRIEF.md\"}"
+   ]
+  }
+ },
+ "AI:T4:contract:4:none:grade2": {
+  "_examples": {}
+ },
+ "AI:T2:paper:3:generic:grade2": {
+  "_examples": {}
+ },
+ "AI:T4:paper:2:checklist:grade2": {
+  "_examples": {}
+ },
+ "AI:T3:paper:1:generic:grade1": {
+  "_examples": {}
+ },
+ "AI:T2:paper:4:none:grade2": {
+  "_examples": {}
+ },
+ "AI:T3:contract:4:rgrade-generic": {
+  "_examples": {}
+ },
+ "AI:T1:contract:2:review-generic": {
+  "_examples": {}
+ },
+ "AI:T4:contract:1:review-generic": {
+  "_examples": {}
+ },
+ "AI:T3:contract:2:none:grade2": {
+  "_examples": {}
+ },
+ "AI:T4:paper:4:none:grade1": {
+  "_examples": {}
+ },
+ "AI:T4:contract:2:none:grade1": {
+  "_examples": {}
+ },
+ "AI:T3:paper:5:checklist:grade2": {
+  "_examples": {}
+ },
+ "AI:T1:contract:3:exec": {
+  "shared_pkg_read": 1,
+  "tmp": 2,
+  "_examples": {
+   "shared_pkg_read": [
+    "{\"file_path\": \"<CODE_ROOT>/analysis-tasks/w6252/data/README.md\"}"
+   ],
+   "tmp": [
+    "{\"command\": \"cd <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/u533121 && <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/bin/python << 'EOF'\\nimport numpy",
+    "{\"command\": \"cd <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/u533121 && <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/bin/python analysis_script.py > /"
+   ]
+  }
+ },
+ "AI:T2:contract:3:rgrade-checklist": {
+  "_examples": {}
+ },
+ "AI:T1:paper:4:checklist:grade2": {
+  "_examples": {}
+ },
+ "AI:T1:paper:2:rgrade-generic": {
+  "_examples": {}
+ },
+ "AI:T1:contract:1:checklist:grade1": {
+  "_examples": {}
+ },
+ "AI:T3:contract:3:repair-generic": {
+  "_examples": {}
+ },
+ "AI:T1:contract:5:repair-checklist": {
+  "shared_pkg_read": 1,
+  "_examples": {
+   "shared_pkg_read": [
+    "{\"file_path\": \"<CODE_ROOT>/analysis-tasks/w6252/BRIEF.md\"}"
+   ]
+  }
+ },
+ "AI:T1:paper:5:checklist:grade2": {
+  "_examples": {}
+ },
+ "AI:T2:paper:4:generic:grade2": {
+  "_examples": {}
+ },
+ "AI:T3:contract:4:generic:grade1": {
+  "_examples": {}
+ },
+ "AI:T1:contract:4:rgrade-generic": {
+  "_examples": {}
+ },
+ "AI:T2:contract:5:none:grade1": {
+  "_examples": {}
+ },
+ "AI:T2:contract:5:checklist:grade1": {
+  "_examples": {}
+ },
+ "AI:T4:paper:4:none:grade2": {
+  "_examples": {}
+ },
+ "AI:T2:contract:1:none:grade1": {
+  "_examples": {}
+ },
+ "AI:T4:paper:2:review-generic": {
+  "shared_pkg_read": 1,
+  "_examples": {
+   "shared_pkg_read": [
+    "{\"file_path\": \"<CODE_ROOT>/analysis-tasks/w7421/BRIEF.md\"}"
+   ]
+  }
+ },
+ "AI:T1:contract:5:rgrade-checklist": {
+  "_examples": {}
+ },
+ "AI:T2:contract:2:repair-checklist": {
+  "tmp": 2,
+  "_examples": {
+   "tmp": [
+    "{\"command\": \"cat > <TMP>/final_report.md << 'EOFMD'\\n# Analysis Report: SAE Feature Circuit Predictions of CRISPRi Knockdown Effects (Revised)\\n\\n## Question\\n\\n",
+    "{\"command\": \"cd <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/u252312 && <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/bin/python << 'EOFPYTHON'\\nimport"
+   ]
+  }
+ },
+ "AI:T1:contract:3:none:grade2": {
+  "_examples": {}
+ },
+ "AI:T3:contract:1:repair-checklist": {
+  "tmp": 1,
+  "_examples": {
+   "tmp": [
+    "{\"command\": \"cat > <TMP>/revised_report.md << 'EOF'\\n# Regulatory Enrichment in SAE Features: Revised Analysis Report\\n\\n## Question\\n\\n**Do sparse-autoencoder f"
+   ]
+  }
+ },
+ "AI:T2:paper:3:exec": {
+  "_examples": {}
+ },
+ "AI:T2:paper:5:rgrade-generic": {
+  "_examples": {}
+ },
+ "AI:T1:paper:3:repair-checklist": {
+  "_examples": {}
+ },
+ "AI:T4:paper:1:exec": {
+  "_examples": {}
+ },
+ "AI:T3:paper:2:checklist:grade1": {
+  "_examples": {}
+ },
+ "AI:T3:paper:2:review-checklist": {
+  "_examples": {}
+ },
+ "AI:T3:contract:1:none:grade2": {
+  "_examples": {}
+ },
+ "AI:T4:paper:3:none:grade1": {
+  "_examples": {}
+ },
+ "AI:T2:contract:5:none:grade2": {
+  "_examples": {}
+ },
+ "AI:T1:paper:5:review-generic": {
+  "_examples": {}
+ },
+ "AI:T1:contract:5:repair-generic": {
+  "tmp": 2,
+  "_examples": {
+   "tmp": [
+    "{\"command\": \"cat > <TMP>/revised_report.md << 'EOF'\\n# Analysis Report: Do MaxToki-217M Attention Maps Encode Regulator-to-Target Relationships?\\n\\n## 1. Questio",
+    "{\"command\": \"cat > <TMP>/analysis_script_final.py << 'EOFPYTHON'\\n#!/usr/bin/env python3\\n\"\"\"\\nAnalysis: Do MaxToki-217M attention maps encode regulator-to-targe"
+   ]
+  }
+ },
+ "AI:T2:paper:4:rgrade-generic": {
+  "_examples": {}
+ },
+ "AI:T2:contract:1:rgrade-generic": {
+  "_examples": {}
+ },
+ "AI:T2:contract:4:rgrade-generic": {
+  "_examples": {}
+ },
+ "AI:T1:contract:2:rgrade-checklist": {
+  "_examples": {}
+ },
+ "AI:T4:contract:1:rgrade-generic": {
+  "_examples": {}
+ },
+ "AI:T4:contract:1:rgrade-checklist": {
+  "_examples": {}
+ },
+ "AI:T1:contract:2:checklist:grade2": {
+  "_examples": {}
+ },
+ "AI:T4:contract:2:checklist:grade1": {
+  "_examples": {}
+ },
+ "AI:T4:contract:5:review-checklist": {
+  "tmp": 1,
+  "shared_pkg_read": 1,
+  "_examples": {
+   "tmp": [
+    "{\"command\": \"cd <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/u698504 && cat > <TMP>/test_script.py << 'EOF'\\nimport json\\nimport sys\\n\\n# Extract the script"
+   ],
+   "shared_pkg_read": [
+    "{\"command\": \"ls -lh <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/w3033/data/panels/ && ls -lh <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/w3033/data/"
+   ]
+  }
+ },
+ "AI:T3:paper:4:none:grade2": {
+  "_examples": {}
+ },
+ "AI:T3:paper:4:checklist:grade1": {
+  "_examples": {}
+ },
+ "AI:T2:paper:5:review-checklist": {
+  "shared_pkg_read": 1,
+  "tmp": 1,
+  "_examples": {
+   "shared_pkg_read": [
+    "{\"file_path\": \"<CODE_ROOT>/analysis-tasks/w3637/data/README.md\"}"
+   ],
+   "tmp": [
+    "{\"command\": \"cat > <TMP>/test_json.json << 'EOF'\\n{\\n  \"summary\": \"Test summary\",\\n  \"points\": [\\n    {\\n      \"id\": \"test_1\",\\n      \"location\": \"Test location\""
+   ]
+  }
+ },
+ "AI:T1:paper:1:rgrade-checklist": {
+  "_examples": {}
+ },
+ "AI:T4:paper:1:repair-generic": {
+  "_examples": {}
+ },
+ "AI:T1:paper:1:none:grade1": {
+  "_examples": {}
+ },
+ "AI:T3:contract:2:rgrade-generic": {
+  "_examples": {}
+ },
+ "AI:T1:contract:5:review-generic": {
+  "tmp": 1,
+  "_examples": {
+   "tmp": [
+    "{\"command\": \"cd <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/u672206 && cat > <TMP>/run_analysis.py << 'SCRIPT_EOF'\\n#!/usr/bin/env python3\\n\\n\"\"\"\\nAnalysis"
+   ]
+  }
+ },
+ "AI:T3:contract:2:exec": {
+  "_examples": {}
+ },
+ "AI:T3:paper:1:none:grade2": {
+  "_examples": {}
+ },
+ "AI:T3:contract:5:rgrade-generic": {
+  "_examples": {}
+ },
+ "AI:T4:paper:5:review-checklist": {
+  "tmp": 3,
+  "_examples": {
+   "tmp": [
+    "{\"command\": \"cd <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/u819580 && python3 << 'EOF'\\nimport json\\n\\n# Analysis script from the JSON\\nscript = '''#!/us",
+    "{\"command\": \"cd <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/u819580 && <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/bin/python <TMP>/test_script.py\"}"
+   ]
+  }
+ },
+ "AI:T2:contract:4:none:grade2": {
+  "_examples": {}
+ },
+ "AI:T2:contract:4:rgrade-checklist": {
+  "_examples": {}
+ },
+ "AI:T3:paper:5:none:grade1": {
+  "_examples": {}
+ },
+ "AI:T4:contract:3:review-checklist": {
+  "scratch": 6,
+  "_examples": {
+   "scratch": [
+    "{\"command\": \"cat > <AGENT_TMP>/<SESSION_DIR>/d422dc33-6d6f-4b2b-bbf7-f274d8a82fae/scratchpad/",
+    "{\"command\": \"<LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/bin/python <AGENT_TMP>/<SESSION_DIR>"
+   ]
+  }
+ },
+ "AI:T4:paper:1:none:grade2": {
+  "_examples": {}
+ },
+ "AI:T1:paper:2:generic:grade2": {
+  "_examples": {}
+ },
+ "AI:T2:contract:1:review-generic": {
+  "shared_pkg_read": 17,
+  "_examples": {
+   "shared_pkg_read": [
+    "{\"file_path\": \"<CODE_ROOT>/analysis-tasks/w3318/BRIEF.md\"}",
+    "{\"file_path\": \"<CODE_ROOT>/analysis-tasks/w3318/contract/SPEC.md\"}"
+   ]
+  }
+ },
+ "AI:T4:paper:1:rgrade-checklist": {
+  "_examples": {}
+ },
+ "AI:T3:paper:5:repair-generic": {
+  "_examples": {}
+ },
+ "AI:T2:contract:3:checklist:grade1": {
+  "_examples": {}
+ },
+ "AI:T4:paper:5:checklist:grade1": {
+  "_examples": {}
+ },
+ "AI:T2:paper:4:exec": {
+  "tmp": 1,
+  "_examples": {
+   "tmp": [
+    "{\"command\": \"cd <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/u713859 && <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/bin/python analysis_script.py > /"
+   ]
+  }
+ },
+ "AI:T3:paper:5:generic:grade2": {
+  "_examples": {}
+ },
+ "AI:T1:contract:3:repair-generic": {
+  "_examples": {}
+ },
+ "AI:T2:contract:5:review-generic": {
+  "tmp": 1,
+  "_examples": {
+   "tmp": [
+    "{\"command\": \"cd <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/u626251 && cat > <TMP>/run_analysis.py << 'EOF'\\n\"\"\"\\nAnalysis of SAE circuit predictions for K"
+   ]
+  }
+ },
+ "AI:T3:paper:4:review-checklist": {
+  "other_agent_folder": 2,
+  "scratch": 1,
+  "_examples": {
+   "other_agent_folder": [
+    "{\"command\": \"cd <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/u639630 && <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/bin/python << 'PYEOF'\\nimport num",
+    "{\"summary\": \"The analysis contains a critical error in the null model for Test 1 that reverses the main finding. The background rate is computed as the fraction"
+   ],
+   "scratch": [
+    "{\"command\": \"cd <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/u639630 && cat > <AGENT_TMP>/<SESSION_DIR>"
+   ]
+  }
+ },
+ "AI:T1:contract:5:checklist:grade1": {
+  "_examples": {}
+ },
+ "AI:T4:paper:5:review-generic": {
+  "shared_pkg_read": 4,
+  "scratch": 13,
+  "shared_pkg_write": 3,
+  "_examples": {
+   "shared_pkg_read": [
+    "{\"command\": \"ls -lh <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/w7421/data/maxtoki_217m/ 2>&1 | head -20\"}",
+    "{\"file_path\": \"<CODE_ROOT>/analysis-tasks/w7421/BRIEF.md\"}"
+   ],
+   "scratch": [
+    "{\"command\": \"cat > <AGENT_TMP>/<SESSION_DIR>/d422dc33-6d6f-4b2b-bbf7-f274d8a82fae/scratchpad/",
+    "{\"command\": \"<LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/bin/python <AGENT_TMP>/<SESSION_DIR>"
+   ],
+   "shared_pkg_write": [
+    "{\"command\": \"cat > <AGENT_TMP>/<SESSION_DIR>/d422dc33-6d6f-4b2b-bbf7-f274d8a82fae/scratchpad/",
+    "{\"command\": \"cat > <AGENT_TMP>/<SESSION_DIR>/d422dc33-6d6f-4b2b-bbf7-f274d8a82fae/scratchpad/"
+   ]
+  }
+ },
+ "AI:T1:paper:5:rgrade-generic": {
+  "_examples": {}
+ },
+ "AI:T3:paper:5:exec": {
+  "tmp": 1,
+  "_examples": {
+   "tmp": [
+    "{\"command\": \"cat > <TMP>/final_results.json << 'EOF'\\n{\\n  \"report\": \"# Are SAE Features Responding to TF Knockdown Specific to That TF's Target Genes?\\\\n\\\\n## Q"
+   ]
+  }
+ },
+ "AI:T4:paper:4:rgrade-checklist": {
+  "_examples": {}
+ },
+ "AI:T3:contract:5:review-checklist": {
+  "scratch": 1,
+  "_examples": {
+   "scratch": [
+    "{\"command\": \"cat > <AGENT_TMP>/<SESSION_DIR>/d422dc33-6d6f-4b2b-bbf7-f274d8a82fae/scratchpad/"
+   ]
+  }
+ },
+ "AI:T2:contract:5:review-checklist": {
+  "shared_pkg_read": 3,
+  "_examples": {
+   "shared_pkg_read": [
+    "{\"file_path\": \"<CODE_ROOT>/analysis-tasks/w3318/BRIEF.md\"}",
+    "{\"file_path\": \"<CODE_ROOT>/analysis-tasks/w3318/contract/SPEC.md\"}"
+   ]
+  }
+ },
+ "AI:T1:contract:1:review-checklist": {
+  "shared_pkg_read": 1,
+  "_examples": {
+   "shared_pkg_read": [
+    "{\"command\": \"find <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/w6252 -type f \\\\( -name \"*.md\" -o -name \"*.json\" \\\\) ! -name \"._*\" | head -20\"}"
+   ]
+  }
+ },
+ "AI:T2:paper:4:none:grade1": {
+  "_examples": {}
+ },
+ "AI:T3:paper:1:generic:grade2": {
+  "_examples": {}
+ },
+ "AI:T1:contract:3:review-generic": {
+  "tmp": 1,
+  "_examples": {
+   "tmp": [
+    "{\"command\": \"cd <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/u304076 && cat > <TMP>/run_analysis.py << 'EOF'\\n#!/usr/bin/env python\\n\"\"\"Analysis: Do MaxToki"
+   ]
+  }
+ },
+ "AI:T1:contract:2:checklist:grade1": {
+  "_examples": {}
+ },
+ "AI:T3:contract:1:review-generic": {
+  "other_agent_folder": 4,
+  "_examples": {
+   "other_agent_folder": [
+    "{\"command\": \"ls -la <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/u992345/data 2>&1 | head -10\"}",
+    "{\"command\": \"cd <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/u315380 && <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/bin/python - <<'EOF'\\n# Test if t"
+   ]
+  }
+ },
+ "AI:T3:contract:5:repair-checklist": {
+  "shared_pkg_read": 1,
+  "_examples": {
+   "shared_pkg_read": [
+    "{\"command\": \"ls -lh \"<CODE_ROOT>/analysis-tasks/w9668/data/\" | head -20\"}"
+   ]
+  }
+ },
+ "AI:T3:contract:5:none:grade1": {
+  "_examples": {}
+ },
+ "AI:T1:paper:5:repair-generic": {
+  "shared_pkg_read": 5,
+  "_examples": {
+   "shared_pkg_read": [
+    "{\"file_path\": \"<CODE_ROOT>/analysis-tasks/w4891/BRIEF.md\"}",
+    "{\"file_path\": \"<CODE_ROOT>/analysis-tasks/w4891/data/README.md\"}"
+   ]
+  }
+ },
+ "AI:T2:paper:2:generic:grade1": {
+  "_examples": {}
+ },
+ "AI:T4:contract:5:exec": {
+  "_examples": {}
+ },
+ "AI:T2:contract:4:generic:grade2": {
+  "_examples": {}
+ },
+ "AI:T1:paper:2:review-checklist": {
+  "tmp": 4,
+  "_examples": {
+   "tmp": [
+    "{\"command\": \"cd <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/u678402 && cat > <TMP>/test_analysis.py << 'EOF'\\n#!/usr/bin/env python3\\n\\nimport numpy as np\\",
+    "{\"command\": \"cd <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/u678402 && cat > <TMP>/full_analysis.py << 'EOF'\\n#!/usr/bin/env python3\\n\\nimport numpy as np\\"
+   ]
+  }
+ },
+ "AI:T4:contract:2:checklist:grade2": {
+  "_examples": {}
+ },
+ "AI:T2:contract:4:checklist:grade1": {
+  "_examples": {}
+ },
+ "AI:T4:contract:3:rgrade-generic": {
+  "_examples": {}
+ },
+ "AI:T3:paper:3:review-checklist": {
+  "_examples": {}
+ },
+ "AI:T1:contract:5:checklist:grade2": {
+  "_examples": {}
+ },
+ "AI:T3:paper:1:repair-generic": {
+  "_examples": {}
+ },
+ "AI:T4:contract:2:rgrade-checklist": {
+  "_examples": {}
+ },
+ "AI:T3:contract:5:generic:grade1": {
+  "_examples": {}
+ },
+ "AI:T1:paper:5:generic:grade1": {
+  "_examples": {}
+ },
+ "AI:T1:paper:3:repair-generic": {
+  "_examples": {}
+ },
+ "AI:T3:contract:5:checklist:grade2": {
+  "_examples": {}
+ },
+ "AI:T4:paper:2:review-checklist": {
+  "shared_pkg_read": 1,
+  "_examples": {
+   "shared_pkg_read": [
+    "{\"file_path\": \"<CODE_ROOT>/analysis-tasks/w7421/BRIEF.md\", \"limit\": 100}"
+   ]
+  }
+ },
+ "AI:T2:contract:2:review-generic": {
+  "shared_pkg_write": 8,
+  "other_agent_folder": 4,
+  "shared_pkg_read": 3,
+  "_examples": {
+   "shared_pkg_write": [
+    "{\"command\": \"ls -la <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/w3318/data/gene_pairs.parquet 2>/dev/null && echo \"w3318 data exists\" || echo \"w3318 data ",
+    "{\"command\": \"cat > <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/u179956/verify_analysis.py << 'EOF'\\n#!/usr/bin/env python3\\n\"\"\"Verify the numerical claims"
+   ],
+   "other_agent_folder": [
+    "{\"command\": \"ls <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/u800345/data/gene_pairs.parquet 2>&1 | head -1\"}",
+    "{\"command\": \"\\n# Check if the data files are the same\\nmd5_u800345=$(<LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/bin/python3 -c \"import hashlib; f = open("
+   ],
+   "shared_pkg_read": [
+    "{\"command\": \"\\n# Check if the data files are the same\\nmd5_u800345=$(<LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/bin/python3 -c \"import hashlib; f = open(",
+    "{\"command\": \"md5 <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/w3318/data/gene_pairs.parquet\"}"
+   ]
+  }
+ },
+ "AI:T3:contract:3:none:grade1": {
+  "_examples": {}
+ },
+ "AI:T1:paper:5:none:grade2": {
+  "_examples": {}
+ },
+ "AI:T4:paper:1:none:grade1": {
+  "_examples": {}
+ },
+ "AI:T4:contract:1:checklist:grade2": {
+  "_examples": {}
+ },
+ "AI:T2:paper:5:review-generic": {
+  "_examples": {}
+ },
+ "AI:T4:paper:1:rgrade-generic": {
+  "_examples": {}
+ },
+ "AI:T2:paper:4:review-checklist": {
+  "scratch": 2,
+  "_examples": {
+   "scratch": [
+    "{\"command\": \"cat > <AGENT_TMP>/<SESSION_DIR>/d422dc33-6d6f-4b2b-bbf7-f274d8a82fae/scratchpad/",
+    "{\"command\": \"cd <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/u254659 && <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/bin/python <TMP>/claude-50"
+   ]
+  }
+ },
+ "AI:T4:paper:3:generic:grade1": {
+  "_examples": {}
+ },
+ "AI:T3:paper:3:review-generic": {
+  "tmp": 1,
+  "_examples": {
+   "tmp": [
+    "{\"command\": \"cd <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/u302420 && <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/bin/python << 'SCRIPT_EOF'\\n\"\"\"Ch"
+   ]
+  }
+ },
+ "AI:T3:paper:4:checklist:grade2": {
+  "_examples": {}
+ },
+ "AI:T4:paper:1:generic:grade1": {
+  "_examples": {}
+ },
+ "AI:T3:contract:1:generic:grade1": {
+  "_examples": {}
+ },
+ "AI:T4:paper:5:none:grade1": {
+  "_examples": {}
+ },
+ "AI:T3:paper:1:none:grade1": {
+  "_examples": {}
+ },
+ "AI:T1:contract:2:repair-checklist": {
+  "_examples": {}
+ },
+ "AI:T4:contract:4:none:grade1": {
+  "_examples": {}
+ },
+ "AI:T1:paper:3:generic:grade2": {
+  "_examples": {}
+ },
+ "AI:T4:contract:4:review-generic": {
+  "shared_pkg_read": 1,
+  "tmp": 2,
+  "_examples": {
+   "shared_pkg_read": [
+    "{\"command\": \"ls -la <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/w3033/\"}"
+   ],
+   "tmp": [
+    "{\"command\": \"cat > <TMP>/review_summary.txt << 'EOF'\\nCRITICAL DISCREPANCIES FOUND IN DELIVERABLE REVIEW\\n\\n1. SPEARMAN DISTANCE CORRELATION NUMBERS\\n   ",
+    "{\"command\": \"cat > <TMP>/verdict_check.txt << 'EOF'\\nVERDICT VALIDITY CHECK\\n\\nReported Spearman Distance Correlation:\\n- MaxToki vs scGPT: 0.2207\\n- MaxToki vs "
+   ]
+  }
+ },
+ "AI:T3:contract:2:rgrade-checklist": {
+  "_examples": {}
+ },
+ "AI:T2:paper:5:none:grade1": {
+  "_examples": {}
+ },
+ "AI:T2:contract:2:checklist:grade2": {
+  "_examples": {}
+ },
+ "AI:T4:paper:3:repair-checklist": {
+  "_examples": {}
+ },
+ "AI:T2:paper:1:none:grade2": {
+  "_examples": {}
+ },
+ "AI:T4:contract:1:exec": {
+  "tmp": 1,
+  "_examples": {
+   "tmp": [
+    "{\"command\": \"cd <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/u649876 && <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/bin/python analysis_script.py > /"
+   ]
+  }
+ },
+ "AI:T2:paper:5:generic:grade2": {
+  "_examples": {}
+ },
+ "AI:T3:contract:5:review-generic": {
+  "_examples": {}
+ },
+ "AI:T2:contract:5:generic:grade1": {
+  "_examples": {}
+ },
+ "AI:T4:contract:1:repair-checklist": {
+  "tmp": 1,
+  "_examples": {
+   "tmp": [
+    "{\"command\": \"cd <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/u953905 && timeout 480 <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/bin/python << 'EOF' 2"
+   ]
+  }
+ },
+ "AI:T3:paper:3:none:grade1": {
+  "_examples": {}
+ },
+ "AI:T3:paper:3:checklist:grade2": {
+  "_examples": {}
+ },
+ "AI:T2:contract:2:none:grade2": {
+  "_examples": {}
+ },
+ "AI:T1:paper:2:none:grade2": {
+  "_examples": {}
+ },
+ "AI:T1:paper:3:checklist:grade1": {
+  "_examples": {}
+ },
+ "AI:T1:paper:1:generic:grade1": {
+  "_examples": {}
+ },
+ "AI:T1:contract:2:rgrade-generic": {
+  "_examples": {}
+ },
+ "AI:T1:contract:3:rgrade-checklist": {
+  "_examples": {}
+ },
+ "AI:T4:paper:5:generic:grade2": {
+  "_examples": {}
+ },
+ "AI:T4:paper:4:generic:grade2": {
+  "_examples": {}
+ },
+ "AI:T4:paper:3:rgrade-generic": {
+  "_examples": {}
+ },
+ "AI:T2:contract:4:generic:grade1": {
+  "_examples": {}
+ },
+ "AI:T2:contract:2:generic:grade2": {
+  "_examples": {}
+ },
+ "AI:T2:contract:5:repair-checklist": {
+  "_examples": {}
+ },
+ "AI:T3:contract:1:none:grade1": {
+  "_examples": {}
+ },
+ "AI:T1:paper:4:generic:grade2": {
+  "_examples": {}
+ },
+ "AI:T4:contract:5:none:grade2": {
+  "_examples": {}
+ },
+ "AI:T1:contract:1:checklist:grade2": {
+  "_examples": {}
+ },
+ "AI:T1:contract:5:none:grade1": {
+  "_examples": {}
+ },
+ "AI:T1:paper:5:none:grade1": {
+  "_examples": {}
+ },
+ "AI:T1:paper:1:repair-checklist": {
+  "_examples": {}
+ },
+ "AI:T3:paper:2:checklist:grade2": {
+  "_examples": {}
+ },
+ "AI:T3:contract:5:checklist:grade1": {
+  "_examples": {}
+ },
+ "AI:T4:paper:1:checklist:grade2": {
+  "_examples": {}
+ },
+ "AI:T4:paper:2:none:grade1": {
+  "_examples": {}
+ },
+ "AI:T1:paper:5:exec": {
+  "_examples": {}
+ },
+ "AI:T2:paper:2:review-checklist": {
+  "_examples": {}
+ },
+ "AI:T3:contract:1:rgrade-checklist": {
+  "_examples": {}
+ },
+ "AI:T3:paper:4:repair-checklist": {
+  "tmp": 1,
+  "_examples": {
+   "tmp": [
+    "{\"command\": \"cat > <TMP>/final_report.md << 'EOF'\\n# Analysis Report: SAE Feature Specificity to Transcription Factor Targets\\n\\n## 1. Question\\n\\n**Are the spar"
+   ]
+  }
+ },
+ "AI:T2:paper:3:rgrade-checklist": {
+  "_examples": {}
+ },
+ "AI:T1:paper:1:review-generic": {
+  "_examples": {}
+ },
+ "AI:T1:contract:2:none:grade1": {
+  "_examples": {}
+ },
+ "AI:T2:paper:4:generic:grade1": {
+  "_examples": {}
+ },
+ "AI:T3:contract:5:repair-generic": {
+  "_examples": {}
+ },
+ "AI:T3:contract:2:review-generic": {
+  "scratch": 1,
+  "_examples": {
+   "scratch": [
+    "{\"command\": \"cat > <AGENT_TMP>/<SESSION_DIR>/d422dc33-6d6f-4b2b-bbf7-f274d8a82fae/scratchpad/"
+   ]
+  }
+ },
+ "AI:T1:paper:3:none:grade2": {
+  "_examples": {}
+ },
+ "AI:T2:paper:3:checklist:grade2": {
+  "_examples": {}
+ },
+ "AI:T4:contract:1:generic:grade1": {
+  "_examples": {}
+ },
+ "AI:T1:contract:3:rgrade-generic": {
+  "_examples": {}
+ },
+ "AI:T2:contract:1:rgrade-checklist": {
+  "_examples": {}
+ },
+ "AI:T1:paper:4:exec": {
+  "_examples": {}
+ },
+ "AI:T3:paper:3:checklist:grade1": {
+  "_examples": {}
+ },
+ "AI:T3:paper:1:rgrade-generic": {
+  "_examples": {}
+ },
+ "AI:T1:paper:2:repair-checklist": {
+  "_examples": {}
+ },
+ "AI:T1:contract:2:none:grade2": {
+  "_examples": {}
+ },
+ "AI:T4:contract:4:review-checklist": {
+  "_examples": {}
+ },
+ "AI:T4:paper:4:rgrade-generic": {
+  "_examples": {}
+ },
+ "AI:T4:paper:3:exec": {
+  "_examples": {}
+ },
+ "AI:T4:contract:5:generic:grade2": {
+  "_examples": {}
+ },
+ "AI:T3:paper:5:review-checklist": {
+  "_examples": {}
+ },
+ "AI:T1:paper:4:review-generic": {
+  "_examples": {}
+ },
+ "AI:T2:paper:2:repair-generic": {
+  "shared_pkg_read": 1,
+  "tmp": 1,
+  "_examples": {
+   "shared_pkg_read": [
+    "{\"file_path\": \"<CODE_ROOT>/analysis-tasks/w3637/BRIEF.md\"}"
+   ],
+   "tmp": [
+    "{\"command\": \"cd <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/u798469 && cat > <TMP>/test_analysis.py << 'EOF'\\nimport numpy as np\\nimport pandas as pd\\nimpo"
+   ]
+  }
+ },
+ "AI:T4:paper:2:repair-checklist": {
+  "_examples": {}
+ },
+ "AI:T1:contract:4:exec": {
+  "_examples": {}
+ },
+ "AI:T3:paper:2:generic:grade1": {
+  "_examples": {}
+ },
+ "AI:T1:contract:3:checklist:grade1": {
+  "_examples": {}
+ },
+ "AI:T1:contract:5:none:grade2": {
+  "_examples": {}
+ },
+ "AI:T2:contract:5:rgrade-checklist": {
+  "_examples": {}
+ },
+ "AI:T3:contract:3:none:grade2": {
+  "_examples": {}
+ },
+ "AI:T3:contract:5:exec": {
+  "_examples": {}
+ },
+ "AI:T2:contract:4:review-generic": {
+  "tmp": 1,
+  "_examples": {
+   "tmp": [
+    "{\"command\": \"cat > <TMP>/check_script.py << 'EOF'\\n#!/usr/bin/env python3\\n\"\"\"\\nCheck the analysis script provided in the JSON.\\n\"\"\"\\n\\nanalysis_script = \"\"\"#!/u"
+   ]
+  }
+ },
+ "AI:T2:paper:3:review-checklist": {
+  "_examples": {}
+ },
+ "AI:T3:contract:3:review-checklist": {
+  "shared_pkg_read": 1,
+  "shared_pkg_write": 5,
+  "_examples": {
+   "shared_pkg_read": [
+    "{\"command\": \"ls -l <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/w9668/data/cell_feature_means.npz\"}"
+   ],
+   "shared_pkg_write": [
+    "{\"command\": \"cat > <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/u128807/test_verification.py << 'SCRIPTEOF'\\n#!/usr/bin/env python3\\nimport numpy as np\\nim",
+    "{\"command\": \"cat > <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/u128807/full_analysis.py << 'SCRIPTEOF'\\n#!/usr/bin/env python3\\nimport numpy as np\\nimport"
+   ]
+  }
+ },
+ "AI:T4:paper:5:rgrade-generic": {
+  "_examples": {}
+ },
+ "AI:T4:paper:5:checklist:grade2": {
+  "_examples": {}
+ },
+ "AI:T3:paper:4:exec": {
+  "tmp": 1,
+  "_examples": {
+   "tmp": [
+    "{\"command\": \"cat > <TMP>/final_script.py << 'EOF'\\n\"\"\"\\nComplete analysis script for: Are SAE features responding to TF knockdown \\nspecific to that TF's target "
+   ]
+  }
+ },
+ "AI:T4:contract:5:checklist:grade1": {
+  "_examples": {}
+ },
+ "AI:T2:paper:3:checklist:grade1": {
+  "_examples": {}
+ },
+ "AI:T4:contract:2:review-checklist": {
+  "_examples": {}
+ },
+ "AI:T3:contract:2:generic:grade2": {
+  "_examples": {}
+ },
+ "AI:T1:paper:4:repair-generic": {
+  "shared_pkg_read": 1,
+  "tmp": 3,
+  "_examples": {
+   "shared_pkg_read": [
+    "{\"file_path\": \"<CODE_ROOT>/analysis-tasks/w4891/BRIEF.md\"}"
+   ],
+   "tmp": [
+    "{\"command\": \"cat > <TMP>/revised_report.md << 'ENDREPORT'\\n# Analysis: Do MaxToki-217M Attention Maps Encode Regulator-to-Target Relationships?\\n\\n## Question\\n\\",
+    "{\"command\": \"cat > <TMP>/analysis_script.py << 'ENDSCRIPT'\\n\"\"\"Analysis: Do MaxToki-217M attention maps encode regulator-to-target relationships?\\n\\nThis script "
+   ]
+  }
+ },
+ "AI:T2:contract:1:generic:grade1": {
+  "_examples": {}
+ },
+ "AI:T2:paper:4:checklist:grade1": {
+  "_examples": {}
+ },
+ "AI:T3:paper:5:generic:grade1": {
+  "_examples": {}
+ },
+ "AI:T1:contract:3:generic:grade1": {
+  "_examples": {}
+ },
+ "AI:T2:paper:3:none:grade1": {
+  "_examples": {}
+ },
+ "AI:T4:contract:2:review-generic": {
+  "shared_pkg_write": 7,
+  "_examples": {
+   "shared_pkg_write": [
+    "{\"command\": \"ls -lah <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/w3033/data/maxtoki_217m/ 2>/dev/null | head -20\"}",
+    "{\"command\": \"cat > <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/u482378/quick_check.py << 'EOF'\\n#!/usr/bin/env python3\\nimport numpy as np\\nimport json\\nf"
+   ]
+  }
+ },
+ "AI:T2:contract:5:generic:grade2": {
+  "_examples": {}
+ },
+ "AI:T2:paper:2:checklist:grade2": {
+  "_examples": {}
+ },
+ "AI:T1:contract:5:review-checklist": {
+  "_examples": {}
+ },
+ "AI:T2:contract:2:none:grade1": {
+  "_examples": {}
+ },
+ "AI:T4:paper:4:checklist:grade1": {
+  "_examples": {}
+ },
+ "AI:T4:paper:2:repair-generic": {
+  "tmp": 2,
+  "_examples": {
+   "tmp": [
+    "{\"command\": \"cd <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/u459411 && cat > <TMP>/run_analysis.py << 'PYTHON_SCRIPT'\\n#!/usr/bin/env python3\\n\"\"\"\\nAnalyze",
+    "{\"command\": \"cd <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/u459411 && <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/bin/python <TMP>/run_analysis.py\"}"
+   ]
+  }
+ },
+ "AI:T1:contract:4:generic:grade2": {
+  "_examples": {}
+ },
+ "AI:T1:paper:2:none:grade1": {
+  "_examples": {}
+ },
+ "AI:T3:contract:2:repair-checklist": {
+  "_examples": {}
+ },
+ "AI:T1:paper:5:review-checklist": {
+  "shared_pkg_read": 1,
+  "_examples": {
+   "shared_pkg_read": [
+    "{\"file_path\": \"<LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/w4891/data/README.md\"}"
+   ]
+  }
+ },
+ "AI:T3:contract:3:generic:grade1": {
+  "_examples": {}
+ },
+ "AI:T4:contract:1:repair-generic": {
+  "tmp": 1,
+  "_examples": {
+   "tmp": [
+    "{\"command\": \"cd <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/u585116 && <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/bin/python revised_analysis.py > "
+   ]
+  }
+ },
+ "AI:T1:paper:1:exec": {
+  "_examples": {}
+ },
+ "AI:T1:paper:5:rgrade-checklist": {
+  "_examples": {}
+ },
+ "AI:T2:contract:1:repair-checklist": {
+  "_examples": {}
+ },
+ "AI:T2:contract:4:none:grade1": {
+  "_examples": {}
+ },
+ "AI:T1:paper:2:rgrade-checklist": {
+  "_examples": {}
+ },
+ "AI:T3:paper:2:rgrade-checklist": {
+  "_examples": {}
+ },
+ "AI:T3:contract:5:generic:grade2": {
+  "_examples": {}
+ },
+ "AI:T3:paper:1:exec": {
+  "_examples": {}
+ },
+ "AI:T2:contract:5:exec": {
+  "_examples": {}
+ },
+ "AI:T1:contract:1:exec": {
+  "shared_pkg_read": 1,
+  "_examples": {
+   "shared_pkg_read": [
+    "{\"command\": \"ls -lh <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/w6252/data/*.npy <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/w6252/data/*.tsv\"}"
+   ]
+  }
+ },
+ "AI:T4:paper:3:repair-generic": {
+  "_examples": {}
+ },
+ "AI:T3:contract:1:checklist:grade2": {
+  "_examples": {}
+ },
+ "AI:T2:paper:1:review-checklist": {
+  "shared_pkg_read": 9,
+  "_examples": {
+   "shared_pkg_read": [
+    "{\"command\": \"cd <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/w3637 && <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/bin/python << 'EOF'\\nimport pandas ",
+    "{\"command\": \"cd <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/w3637 && <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/bin/python << 'EOF'\\nimport pandas "
+   ]
+  }
+ },
+ "AI:T2:contract:5:rgrade-generic": {
+  "_examples": {}
+ },
+ "AI:T2:paper:1:review-generic": {
+  "shared_pkg_read": 24,
+  "_examples": {
+   "shared_pkg_read": [
+    "{\"file_path\": \"<CODE_ROOT>/analysis-tasks/w3637/BRIEF.md\"}",
+    "{\"file_path\": \"<CODE_ROOT>/analysis-tasks/w3637/data/README.md\"}"
+   ]
+  }
+ },
+ "AI:T2:contract:5:repair-generic": {
+  "_examples": {}
+ },
+ "AI:T2:contract:3:none:grade2": {
+  "_examples": {}
+ },
+ "AI:T2:paper:2:none:grade2": {
+  "_examples": {}
+ },
+ "AI:T1:paper:2:checklist:grade2": {
+  "_examples": {}
+ },
+ "AI:T1:contract:2:generic:grade2": {
+  "_examples": {}
+ },
+ "AI:T4:contract:1:none:grade1": {
+  "_examples": {}
+ },
+ "AI:T2:contract:2:rgrade-checklist": {
+  "_examples": {}
+ },
+ "AI:T2:paper:4:repair-checklist": {
+  "tmp": 3,
+  "_examples": {
+   "tmp": [
+    "{\"command\": \"cd <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/u330398 && <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/bin/python << 'EOFSCRIPT'\\n#!/usr",
+    "{\"command\": \"cat > <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/u330398/analysis_script_final.py << 'EOFSCRIPT'\\n#!/usr/bin/env python3\\n\"\"\"\\nRevised Analy"
+   ]
+  }
+ },
+ "AI:T2:paper:2:generic:grade2": {
+  "_examples": {}
+ },
+ "AI:T3:paper:2:repair-checklist": {
+  "tmp": 1,
+  "_examples": {
+   "tmp": [
+    "{\"command\": \"cd <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/u979865 && <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/bin/python analysis_complete.py 2"
+   ]
+  }
+ },
+ "AI:T1:paper:1:review-checklist": {
+  "_examples": {}
+ },
+ "AI:T1:contract:3:none:grade1": {
+  "_examples": {}
+ },
+ "AI:T2:paper:4:repair-generic": {
+  "_examples": {}
+ },
+ "AI:T2:contract:2:review-checklist": {
+  "other_agent_folder": 6,
+  "_examples": {
+   "other_agent_folder": [
+    "{\"command\": \"cd <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/u394665 && <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/bin/python << 'PYTHON_EOF'\\nimpor",
+    "{\"command\": \"ls <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/u800345/ 2>/dev/null || echo \"u800345 doesn't exist at that location\"\\nfind <LOCAL_VOLUME>\\\\"
+   ]
+  }
+ },
+ "AI:T2:contract:2:rgrade-generic": {
+  "_examples": {}
+ },
+ "AI:T1:paper:3:none:grade1": {
+  "_examples": {}
+ },
+ "AI:T1:paper:1:repair-generic": {
+  "tmp": 2,
+  "_examples": {
+   "tmp": [
+    "{\"command\": \"cd <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/u942053 && <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/bin/python revised_analysis.py > ",
+    "{\"command\": \"cat > <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/u942053/final_analysis.py << 'EOF'\\n#!/usr/bin/env python\\n\"\"\"\\nFinal Analysis: Do MaxToki-"
+   ]
+  }
+ },
+ "AI:T1:paper:4:repair-checklist": {
+  "_examples": {}
+ },
+ "AI:T2:paper:1:exec": {
+  "_examples": {}
+ },
+ "AI:T2:contract:1:exec": {
+  "_examples": {}
+ },
+ "AI:T4:paper:3:none:grade2": {
+  "_examples": {}
+ },
+ "AI:T1:paper:4:rgrade-generic": {
+  "_examples": {}
+ },
+ "AI:T2:paper:3:none:grade2": {
+  "_examples": {}
+ },
+ "AI:T4:paper:2:none:grade2": {
+  "_examples": {}
+ },
+ "AI:T2:contract:1:none:grade2": {
+  "_examples": {}
+ },
+ "AI:T1:contract:1:review-generic": {
+  "_examples": {}
+ },
+ "AI:T3:contract:4:generic:grade2": {
+  "_examples": {}
+ },
+ "AI:T4:paper:2:generic:grade2": {
+  "_examples": {}
+ },
+ "AI:T1:paper:3:exec": {
+  "_examples": {}
+ },
+ "AI:T3:contract:2:none:grade1": {
+  "_examples": {}
+ },
+ "AI:T2:paper:3:rgrade-generic": {
+  "_examples": {}
+ },
+ "AI:T2:contract:3:repair-checklist": {
+  "_examples": {}
+ },
+ "AI:T3:contract:1:repair-generic": {
+  "_examples": {}
+ },
+ "AI:T3:paper:1:review-generic": {
+  "_examples": {}
+ },
+ "AI:T1:contract:1:repair-checklist": {
+  "_examples": {}
+ },
+ "AI:T2:contract:4:review-checklist": {
+  "_examples": {}
+ },
+ "AI:T2:paper:1:none:grade1": {
+  "_examples": {}
+ },
+ "AI:T3:contract:4:repair-generic": {
+  "_examples": {}
+ },
+ "AI:T1:contract:1:rgrade-checklist": {
+  "_examples": {}
+ },
+ "AI:T3:paper:3:none:grade2": {
+  "_examples": {}
+ },
+ "AI:T4:paper:5:none:grade2": {
+  "_examples": {}
+ },
+ "AI:T4:paper:3:review-checklist": {
+  "_examples": {}
+ },
+ "AI:T3:contract:3:review-generic": {
+  "_examples": {}
+ },
+ "AI:T1:contract:3:generic:grade2": {
+  "_examples": {}
+ },
+ "AI:T4:contract:3:repair-generic": {
+  "tmp": 3,
+  "_examples": {
+   "tmp": [
+    "{\"command\": \"cat > <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/u103646/analysis_optimized.py << 'EOF'\\n#!/usr/bin/env python3\\n\"\"\"Cross-model embedding al",
+    "{\"command\": \"cat > <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/u103646/analysis_script_final.py << 'EOF'\\n#!/usr/bin/env python3\\n\"\"\"Cross-model embedding"
+   ]
+  }
+ },
+ "AI:T4:paper:5:exec": {
+  "_examples": {}
+ },
+ "AI:T1:paper:1:none:grade2": {
+  "_examples": {}
+ },
+ "AI:T1:contract:2:generic:grade1": {
+  "_examples": {}
+ },
+ "AI:T3:paper:5:none:grade2": {
+  "_examples": {}
+ },
+ "AI:T3:paper:2:exec": {
+  "tmp": 6,
+  "_examples": {
+   "tmp": [
+    "{\"command\": \"cat > <TMP>/analysis_script.py << 'EOFSCRIPT'\\n#!/usr/bin/env python3\\n\"\"\"\\nComplete analysis script: Are SAE features that respond to TF knockdown ",
+    "{\"command\": \"cd <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/u198060 && <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/bin/python <TMP>/analysis_script.p"
+   ]
+  }
+ },
+ "AI:T1:contract:3:review-checklist": {
+  "shared_pkg_read": 2,
+  "tmp": 3,
+  "_examples": {
+   "shared_pkg_read": [
+    "{\"file_path\": \"<CODE_ROOT>/analysis-tasks/w6252/BRIEF.md\"}",
+    "{\"file_path\": \"<CODE_ROOT>/analysis-tasks/w6252/contract/SPEC.md\"}"
+   ],
+   "tmp": [
+    "{\"command\": \"cd <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/u142977 && cat > <TMP>/test_script.py << 'EOF'\\n#!/usr/bin/env python\\nimport sys\\nsys.path.ins",
+    "{\"command\": \"cd <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/u142977 && cat > <TMP>/run_analysis.py << 'EOF'\\n#!/usr/bin/env python\\n\"\"\"Run the embedded ana"
+   ]
+  }
+ },
+ "AI:T4:paper:4:review-checklist": {
+  "tmp": 1,
+  "_examples": {
+   "tmp": [
+    "{\"command\": \"cat > <TMP>/analysis_summary.txt << 'EOF'\\nISSUES FOUND IN GENE EMBEDDING ALIGNMENT ANALYSIS\\n\\n1. CRITICAL: Bootstrap Resampling Flaw\\n   - Resampl"
+   ]
+  }
+ },
+ "AI:T1:paper:2:review-generic": {
+  "_examples": {}
+ },
+ "AI:T3:contract:4:review-generic": {
+  "shared_pkg_read": 2,
+  "_examples": {
+   "shared_pkg_read": [
+    "{\"command\": \"ls -la \"<CODE_ROOT>/analysis-tasks/w9668/BRIEF.md\"\"}",
+    "{\"file_path\": \"<LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/w9668/contract/SPEC.md\"}"
+   ]
+  }
+ },
+ "AI:T4:contract:3:none:grade1": {
+  "_examples": {}
+ },
+ "AI:T1:contract:5:generic:grade2": {
+  "_examples": {}
+ },
+ "AI:T3:paper:4:rgrade-generic": {
+  "_examples": {}
+ },
+ "AI:T2:contract:1:checklist:grade2": {
+  "_examples": {}
+ },
+ "AI:T3:contract:3:rgrade-generic": {
+  "_examples": {}
+ },
+ "AI:T4:paper:2:rgrade-generic": {
+  "_examples": {}
+ },
+ "AI:T4:contract:4:repair-checklist": {
+  "tmp": 6,
+  "_examples": {
+   "tmp": [
+    "{\"command\": \"cd <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/u663348 && cat > <TMP>/test_analysis.py << 'ANALYSIS_SCRIPT_EOF'\\nimport json\\nimport numpy as ",
+    "{\"command\": \"cd <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/u663348 && cat > <TMP>/revised_analysis.py << 'REVISED_ANALYSIS_EOF'\\nimport json\\nimport numpy"
+   ]
+  }
+ },
+ "AI:T1:paper:3:review-checklist": {
+  "_examples": {}
+ },
+ "AI:T2:paper:2:rgrade-checklist": {
+  "_examples": {}
+ },
+ "AI:T4:contract:5:repair-checklist": {
+  "shared_pkg_read": 1,
+  "tmp": 1,
+  "_examples": {
+   "shared_pkg_read": [
+    "{\"file_path\": \"<LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/w3033/BRIEF.md\"}"
+   ],
+   "tmp": [
+    "{\"command\": \"cat > <TMP>/revised_report.md << 'REPORT_EOF'\\n# Cross-Model Alignment of Gene-Embedding Geometry: MaxToki-217M, scGPT, and Geneformer V2-316M\\n\\n##"
+   ]
+  }
+ },
+ "AI:T4:paper:4:exec": {
+  "_examples": {}
+ },
+ "AI:T4:paper:5:repair-generic": {
+  "tmp": 1,
+  "_examples": {
+   "tmp": [
+    "{\"command\": \"cd \"<CODE_ROOT>/analysis-tasks/u536540\" && <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/bin/python analysis_script.py > /"
+   ]
+  }
+ },
+ "AI:T4:contract:3:none:grade2": {
+  "_examples": {}
+ },
+ "AI:T1:paper:2:generic:grade1": {
+  "_examples": {}
+ },
+ "AI:T2:contract:3:none:grade1": {
+  "_examples": {}
+ },
+ "AI:T2:contract:1:checklist:grade1": {
+  "_examples": {}
+ },
+ "AI:T4:contract:3:exec": {
+  "shared_pkg_read": 1,
+  "_examples": {
+   "shared_pkg_read": [
+    "{\"file_path\": \"<CODE_ROOT>/analysis-tasks/w3033/contract/SPEC.md\"}"
+   ]
+  }
+ },
+ "AI:T2:contract:1:generic:grade2": {
+  "_examples": {}
+ },
+ "AI:T2:contract:1:review-checklist": {
+  "shared_pkg_read": 3,
+  "_examples": {
+   "shared_pkg_read": [
+    "{\"file_path\": \"<CODE_ROOT>/analysis-tasks/w3318/BRIEF.md\"}",
+    "{\"file_path\": \"<CODE_ROOT>/analysis-tasks/w3318/data/README.md\"}"
+   ]
+  }
+ },
+ "AI:T2:contract:3:review-generic": {
+  "_examples": {}
+ },
+ "AI:T4:paper:1:review-checklist": {
+  "_examples": {}
+ },
+ "AI:T4:contract:4:checklist:grade1": {
+  "_examples": {}
+ },
+ "AI:T1:contract:3:checklist:grade2": {
+  "_examples": {}
+ },
+ "AI:T1:paper:4:generic:grade1": {
+  "_examples": {}
+ },
+ "AI:T4:paper:1:repair-checklist": {
+  "_examples": {}
+ },
+ "AI:T1:contract:1:none:grade2": {
+  "_examples": {}
+ },
+ "AI:T4:contract:1:generic:grade2": {
+  "_examples": {}
+ },
+ "AI:T3:paper:3:repair-checklist": {
+  "_examples": {}
+ },
+ "AI:T1:contract:1:none:grade1": {
+  "_examples": {}
+ },
+ "AI:T1:contract:4:repair-generic": {
+  "_examples": {}
+ },
+ "AI:T1:paper:1:checklist:grade1": {
+  "_examples": {}
+ },
+ "AI:T3:paper:5:repair-checklist": {
+  "_examples": {}
+ },
+ "AI:T3:paper:2:review-generic": {
+  "shared_pkg_read": 9,
+  "_examples": {
+   "shared_pkg_read": [
+    "{\"command\": \"ls -lh <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/w6895/data/ | head -15\"}",
+    "{\"command\": \"head -20 <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/w6895/data/tf_info.tsv && echo \"---\" && wc -l <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysi"
+   ]
+  }
+ },
+ "AI:T4:contract:5:generic:grade1": {
+  "_examples": {}
+ },
+ "AI:T1:contract:5:exec": {
+  "_examples": {}
+ },
+ "AI:T3:contract:3:generic:grade2": {
+  "_examples": {}
+ },
+ "AI:T4:contract:5:rgrade-generic": {
+  "_examples": {}
+ },
+ "AI:T3:paper:2:generic:grade2": {
+  "_examples": {}
+ },
+ "AI:T2:contract:3:exec": {
+  "shared_pkg_read": 1,
+  "shared_pkg_write": 7,
+  "_examples": {
+   "shared_pkg_read": [
+    "{\"file_path\": \"<CODE_ROOT>/analysis-tasks/w3318/data/README.md\"}"
+   ],
+   "shared_pkg_write": [
+    "{\"command\": \"cat > <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/u909004/analyze.py << 'EOF'\\n#!/usr/bin/env python3\\n\"\"\"\\nAnalyze whether SAE circuit predi",
+    "{\"command\": \"cat > <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/u909004/analyze.py << 'EOF'\\n#!/usr/bin/env python3\\n\"\"\"\\nAnalyze whether SAE circuit predi"
+   ]
+  }
+ },
+ "AI:T4:contract:2:exec": {
+  "_examples": {}
+ },
+ "AI:T4:paper:1:generic:grade2": {
+  "_examples": {}
+ },
+ "AI:T4:contract:3:generic:grade1": {
+  "_examples": {}
+ },
+ "AI:T4:paper:2:generic:grade1": {
+  "_examples": {}
+ },
+ "AI:T1:paper:2:checklist:grade1": {
+  "_examples": {}
+ },
+ "AI:T3:contract:2:checklist:grade2": {
+  "_examples": {}
+ },
+ "AI:T1:contract:5:generic:grade1": {
+  "_examples": {}
+ },
+ "AI:T4:contract:2:none:grade2": {
+  "_examples": {}
+ },
+ "AI:T4:paper:4:review-generic": {
+  "scratch": 7,
+  "_examples": {
+   "scratch": [
+    "{\"command\": \"cat > <AGENT_TMP>/<SESSION_DIR>/d422dc33-6d6f-4b2b-bbf7-f274d8a82fae/scratchpad/",
+    "{\"command\": \"cd <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/u588620 && <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/bin/python <TMP>/claude-50"
+   ]
+  }
+ },
+ "AI:T2:paper:2:checklist:grade1": {
+  "_examples": {}
+ },
+ "AI:T4:paper:1:checklist:grade1": {
+  "_examples": {}
+ },
+ "AI:T1:contract:4:none:grade2": {
+  "_examples": {}
+ },
+ "AI:T3:contract:1:rgrade-generic": {
+  "_examples": {}
+ },
+ "AI:T3:paper:3:exec": {
+  "_examples": {}
+ },
+ "AI:T1:paper:5:checklist:grade1": {
+  "_examples": {}
+ },
+ "AI:T1:paper:4:review-checklist": {
+  "shared_pkg_read": 1,
+  "_examples": {
+   "shared_pkg_read": [
+    "{\"file_path\": \"<CODE_ROOT>/analysis-tasks/w4891/data/README.md\"}"
+   ]
+  }
+ },
+ "AI:T1:paper:3:rgrade-generic": {
+  "_examples": {}
+ },
+ "AI:T1:paper:4:none:grade1": {
+  "_examples": {}
+ },
+ "AI:T2:paper:3:repair-generic": {
+  "_examples": {}
+ },
+ "AI:T4:paper:3:review-generic": {
+  "shared_pkg_read": 2,
+  "tmp": 2,
+  "_examples": {
+   "shared_pkg_read": [
+    "{\"file_path\": \"<LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/w7421/BRIEF.md\"}",
+    "{\"command\": \"cat \"<CODE_ROOT>/analysis-tasks/w7421/BRIEF.md\"\"}"
+   ],
+   "tmp": [
+    "{\"command\": \"cd \"<CODE_ROOT>/analysis-tasks/u892707\" && cat > <TMP>/analysis_script.py << 'SCRIPTEOF'\\n#!/usr/bin/env python3\\n\"\"\"\\nCross-Mo",
+    "{\"command\": \"cat > <TMP>/script_check.py << 'EOF'\\n\"\"\"\\nCheck for specific issues in the analysis script\\n\"\"\"\\n\\n# The script defines bootstrap as:\\ndef bootstra"
+   ]
+  }
+ },
+ "AI:T1:contract:3:repair-checklist": {
+  "shared_pkg_read": 1,
+  "scratch": 6,
+  "tmp": 1,
+  "_examples": {
+   "shared_pkg_read": [
+    "{\"file_path\": \"<LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/w6252/BRIEF.md\"}"
+   ],
+   "scratch": [
+    "{\"command\": \"cat > \"<AGENT_TMP>/<SESSION_DIR>/d422dc33-6d6f-4b2b-bbf7-f274d8a82fae/scratchpad",
+    "{\"command\": \"cat > \"<AGENT_TMP>/<SESSION_DIR>/d422dc33-6d6f-4b2b-bbf7-f274d8a82fae/scratchpad"
+   ],
+   "tmp": [
+    "{\"command\": \"cat \"<AGENT_TMP>/<SESSION_DIR>/d422dc33-6d6f-4b2b-bbf7-f274d8a82fae/scratchpad/f"
+   ]
+  }
+ },
+ "AI:T2:paper:3:review-generic": {
+  "tmp": 2,
+  "_examples": {
+   "tmp": [
+    "{\"command\": \"cd <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/u402169 && <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/bin/python << 'EOF'\\nimport json\\",
+    "{\"command\": \"cd <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/u402169 && cat > <TMP>/test_script.py << 'SCRIPTEOF'\\nimport pandas as pd\\nimport numpy as np\\n"
+   ]
+  }
+ },
+ "AI:T2:contract:4:repair-generic": {
+  "tmp": 1,
+  "_examples": {
+   "tmp": [
+    "{\"command\": \"cat > <TMP>/revised_report.txt << 'EOF'\\n# Do MaxToki-217M SAE Feature Circuits Predict CRISPRi Knockdown Effects?\\n\\n## Question\\n\\nDo the sparse a"
+   ]
+  }
+ },
+ "AI:T4:contract:1:none:grade2": {
+  "_examples": {}
+ },
+ "AI:T2:paper:4:review-generic": {
+  "_examples": {}
+ },
+ "AI:T1:paper:4:rgrade-checklist": {
+  "_examples": {}
+ },
+ "AI:T3:paper:3:rgrade-checklist": {
+  "_examples": {}
+ },
+ "AI:T3:paper:1:review-checklist": {
+  "tmp": 5,
+  "shared_pkg_read": 1,
+  "_examples": {
+   "tmp": [
+    "{\"command\": \"cat > <TMP>/test_script.py << 'EOF'\\n#!/usr/bin/env python3\\n\"\"\"\\nAnalysis: Are sparse autoencoder features responding to TF knockdown speci",
+    "{\"command\": \"cat > <TMP>/check_control_overlap.py << 'EOF'\\nimport numpy as np\\nimport pandas as pd\\n\\n# Check if there's overlap between catalog (used f"
+   ],
+   "shared_pkg_read": [
+    "{\"file_path\": \"<CODE_ROOT>/analysis-tasks/w6895/data/README.md\"}"
+   ]
+  }
+ },
+ "AI:T2:contract:5:checklist:grade2": {
+  "_examples": {}
+ },
+ "AI:T2:paper:5:none:grade2": {
+  "_examples": {}
+ },
+ "AI:T1:paper:1:generic:grade2": {
+  "_examples": {}
+ },
+ "AI:T4:paper:5:repair-checklist": {
+  "shared_pkg_read": 1,
+  "tmp": 8,
+  "_examples": {
+   "shared_pkg_read": [
+    "{\"command\": \"ls -la <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/w7421/data/panels/\"}"
+   ],
+   "tmp": [
+    "{\"command\": \"cd <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/u988817 && timeout 300 <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/bin/python analysis_r",
+    "{\"command\": \"cat <TMP>/script_output.json\"}"
+   ]
+  }
+ },
+ "AI:T2:paper:2:none:grade1": {
+  "_examples": {}
+ },
+ "AI:T3:contract:5:rgrade-checklist": {
+  "_examples": {}
+ },
+ "AI:T4:contract:5:checklist:grade2": {
+  "_examples": {}
+ },
+ "AI:T3:paper:4:none:grade1": {
+  "_examples": {}
+ },
+ "AI:T4:paper:3:checklist:grade1": {
+  "_examples": {}
+ },
+ "AI:T1:paper:3:checklist:grade2": {
+  "_examples": {}
+ },
+ "AI:T2:contract:2:checklist:grade1": {
+  "_examples": {}
+ },
+ "AI:T3:paper:4:review-generic": {
+  "other_agent_folder": 3,
+  "_examples": {
+   "other_agent_folder": [
+    "{\"command\": \"cd <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/u748715 && python3 << 'EOF'\\nimport json\\n\\n# Check if the analysis script in the JSON is synt",
+    "{\"findings\": \"[\\n  {\\n    \"id\": \"reproducibility_script_path_error\",\\n    \"location\": \"JSON results object: analysis_script field\",\\n    \"severity\": \"critical\","
+   ]
+  }
+ },
+ "AI:T4:contract:4:exec": {
+  "_examples": {}
+ },
+ "AI:T4:contract:3:generic:grade2": {
+  "_examples": {}
+ },
+ "AI:T3:paper:4:rgrade-checklist": {
+  "_examples": {}
+ },
+ "AI:T2:paper:1:generic:grade1": {
+  "_examples": {}
+ },
+ "AI:T3:contract:1:checklist:grade1": {
+  "_examples": {}
+ },
+ "AI:T2:contract:2:repair-generic": {
+  "scratch": 3,
+  "_examples": {
+   "scratch": [
+    "{\"command\": \"cat > <AGENT_TMP>/<SESSION_DIR>/d422dc33-6d6f-4b2b-bbf7-f274d8a82fae/scratchpad/",
+    "{\"command\": \"cat > <AGENT_TMP>/<SESSION_DIR>/d422dc33-6d6f-4b2b-bbf7-f274d8a82fae/scratchpad/"
+   ]
+  }
+ },
+ "AI:T2:contract:4:checklist:grade2": {
+  "_examples": {}
+ },
+ "AI:T2:paper:2:repair-checklist": {
+  "shared_pkg_read": 2,
+  "tmp": 2,
+  "_examples": {
+   "shared_pkg_read": [
+    "{\"file_path\": \"<LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/w3637/BRIEF.md\"}",
+    "{\"command\": \"cat \"<CODE_ROOT>/analysis-tasks/w3637/data/README.md\" | head -100\"}"
+   ],
+   "tmp": [
+    "{\"command\": \"cd \"<CODE_ROOT>/analysis-tasks/u681880\" && <LOCAL_VOLUME>\\\\ X6/MacBook/Code/analysis-tasks/bin/python analysis_final.py > /t",
+    "{\"command\": \"cat > <TMP>/report_final.md << 'EOF'\\n# SAE Circuit Prediction of CRISPRi Knockdown Effects in K562 Cells: Revised Analysis\\n\\n## Question\\n\\nDo the"
+   ]
+  }
+ }
+}

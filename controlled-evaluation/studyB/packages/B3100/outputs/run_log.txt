@@ -1,0 +1,8 @@
+[norman] 2000 control cells | 105 singles | 115 doubles | 1000 genes -> 115,000 (pair,gene) training examples
+[ceiling] I profile split-half 0.3946 -> full-data reliability 0.5659 -> a perfect model reaches ~0.752
+  additive           corr(pred I, true I) = +0.0000 [+0.0000,+0.0000]   variance of I explained = +0.000     0.0% of ceiling
+  sum-only           corr(pred I, true I) = +0.3700 [+0.3025,+0.4376]   variance of I explained = +0.184    49.2% of ceiling
+  saturation         corr(pred I, true I) = +0.3767 [+0.3093,+0.4415]   variance of I explained = +0.197    50.1% of ceiling
+  saturation+gene    corr(pred I, true I) = +0.4056 [+0.3470,+0.4623]   variance of I explained = +0.211    53.9% of ceiling
+
+wrote outputs/results.json

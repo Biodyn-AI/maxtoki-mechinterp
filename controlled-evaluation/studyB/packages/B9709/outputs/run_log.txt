@@ -1,0 +1,13 @@
+[cells] 3000 non-targeting control cells selected (RandomState 42, sorted)
+[expression] 3000 cells x 6546-d | S markers 37/43, G2M 50/54 | phase {'G1': 747, 'G2M': 1045, 'S': 1208}
+      G1: n= 747  circ-mean phi =    +0.0 deg
+       S: n=1208  circ-mean phi =   +99.2 deg
+     G2M: n=1045  circ-mean phi =  -130.0 deg
+    linear circ-R2 = 0.929 | kNN circ-R2 = 0.858   (20 whitened PCs, 5-fold)
+[state_se_L11] 3000 cells x 2048-d | S markers 37/43, G2M 50/54 | phase {'G1': 1463, 'G2M': 816, 'S': 721}
+      G1: n=1463  circ-mean phi =    -0.0 deg
+       S: n= 721  circ-mean phi =  +121.7 deg
+     G2M: n= 816  circ-mean phi =  -152.1 deg
+    linear circ-R2 = -0.017 | kNN circ-R2 = -0.097   (20 whitened PCs, 5-fold)
+
+===== linear circ-R2: expression 0.929 | STATE-SE L11 -0.017 | STATE / expression = -0.02 =====

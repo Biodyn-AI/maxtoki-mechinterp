@@ -1,0 +1,17 @@
+{
+  "branch": "H65_anchor_LET10D",
+  "panel": "lung_control",
+  "expected_to_fail": true,
+  "frozen_from": "internal_anchor",
+  "n_anchors": 51,
+  "n_donors": 4,
+  "n_tissues": 1,
+  "global_correlation": 0.9211880106649079,
+  "trustworthiness": 0.8013071895424837,
+  "random_holdout": 0.8937933113845415,
+  "donor_holdout": 0.9253112444323854,
+  "branch_holdout": 0.522474657577425,
+  "all_gates_pass": true,
+  "diagnostic": "BAD: negative control passed (gates too loose or pipeline confound)",
+  "elapsed_s": 12.361408948898315
+}

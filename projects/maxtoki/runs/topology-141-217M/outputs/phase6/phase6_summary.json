@@ -1,0 +1,100 @@
+{
+  "per_domain_per_metric": [
+    {
+      "domain": "external_lung",
+      "metric": "diffusion",
+      "mean": 0.009087031389145009,
+      "median": 0.018689268742464016,
+      "std": 0.03130594850308952,
+      "count": 12
+    },
+    {
+      "domain": "external_lung",
+      "metric": "euclidean",
+      "mean": -0.05310266291541557,
+      "median": -0.035286190509965176,
+      "std": 0.06118921625458143,
+      "count": 12
+    },
+    {
+      "domain": "external_lung",
+      "metric": "geodesic",
+      "mean": -0.06894500003940389,
+      "median": -0.07981062486701179,
+      "std": 0.058500144121174304,
+      "count": 12
+    },
+    {
+      "domain": "external_lung",
+      "metric": "triangle_defect",
+      "mean": -0.05713565185868186,
+      "median": -0.058491145944156775,
+      "std": 0.08890208535486323,
+      "count": 12
+    },
+    {
+      "domain": "immune",
+      "metric": "diffusion",
+      "mean": 0.004272357090984548,
+      "median": -0.0004889803143479643,
+      "std": 0.022323985900705643,
+      "count": 12
+    },
+    {
+      "domain": "immune",
+      "metric": "euclidean",
+      "mean": -0.004049912789189712,
+      "median": -0.002499610955493281,
+      "std": 0.022326346509288268,
+      "count": 12
+    },
+    {
+      "domain": "immune",
+      "metric": "geodesic",
+      "mean": 0.00705191798941802,
+      "median": 0.004024665421724305,
+      "std": 0.018057368260710683,
+      "count": 12
+    },
+    {
+      "domain": "immune",
+      "metric": "triangle_defect",
+      "mean": -0.07126424064996366,
+      "median": -0.06862915305010889,
+      "std": 0.01014811695029904,
+      "count": 12
+    },
+    {
+      "domain": "lung",
+      "metric": "diffusion",
+      "mean": 0.023452844416386093,
+      "median": 0.02650199915824919,
+      "std": 0.029638368035806502,
+      "count": 12
+    },
+    {
+      "domain": "lung",
+      "metric": "euclidean",
+      "mean": -0.048609545354337015,
+      "median": -0.043297558922558876,
+      "std": 0.033657023128314444,
+      "count": 12
+    },
+    {
+      "domain": "lung",
+      "metric": "geodesic",
+      "mean": -0.044164518448372624,
+      "median": -0.039326486592111604,
+      "std": 0.031047646398722508,
+      "count": 12
+    },
+    {
+      "domain": "lung",
+      "metric": "triangle_defect",
+      "mean": -0.0356723234327401,
+      "median": -0.03740342412217407,
+      "std": 0.03219692985859574,
+      "count": 12
+    }
+  ]
+}

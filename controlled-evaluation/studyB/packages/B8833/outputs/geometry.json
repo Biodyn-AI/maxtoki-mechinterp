@@ -1,0 +1,76 @@
+{
+ "tissue": "gut",
+ "layer": 11,
+ "pooling": "mean over expressed gene tokens",
+ "n_halves": 10,
+ "seed": 0,
+ "models": {
+  "scgpt": {
+   "n_cells": 4269,
+   "width": 512,
+   "participation_ratio": 1.8174309126290566,
+   "pc1_share": 0.7240690244760638,
+   "d90": 3,
+   "norm_mean": 21.648090644191562,
+   "norm_cv": 0.00308525579513537,
+   "participation_ratio_halves_min": 1.8085001190826795,
+   "participation_ratio_halves_max": 1.82748482949165,
+   "pc1_share_halves_min": 0.721525334133856,
+   "pc1_share_halves_max": 0.7264604980723697,
+   "d90_halves_min": 3.0,
+   "d90_halves_max": 3.0
+  },
+  "geneformer": {
+   "n_cells": 4269,
+   "width": 1152,
+   "participation_ratio": 2.7250548973196316,
+   "pc1_share": 0.5757558975108026,
+   "d90": 20,
+   "norm_mean": 6.751425202615733,
+   "norm_cv": 0.018591032711895387,
+   "participation_ratio_halves_min": 2.6879164602178958,
+   "participation_ratio_halves_max": 2.7672272803477584,
+   "pc1_share_halves_min": 0.5702321459172491,
+   "pc1_share_halves_max": 0.5810461368173281,
+   "d90_halves_min": 19.0,
+   "d90_halves_max": 20.0
+  },
+  "state": {
+   "n_cells": 4269,
+   "width": 2048,
+   "participation_ratio": 56.479499894973806,
+   "pc1_share": 0.11320608122860729,
+   "d90": 775,
+   "norm_mean": 15.563031766267931,
+   "norm_cv": 0.028411346714835327,
+   "participation_ratio_halves_min": 53.5819948711134,
+   "participation_ratio_halves_max": 57.655238889560096,
+   "pc1_share_halves_min": 0.11128943375104695,
+   "pc1_share_halves_max": 0.11629883904851435,
+   "d90_halves_min": 644.0,
+   "d90_halves_max": 650.0
+  }
+ },
+ "most_to_least_compact": {
+  "participation_ratio": [
+   "scgpt",
+   "geneformer",
+   "state"
+  ],
+  "pc1_share": [
+   "scgpt",
+   "geneformer",
+   "state"
+  ],
+  "d90": [
+   "scgpt",
+   "geneformer",
+   "state"
+  ],
+  "norm_cv": [
+   "scgpt",
+   "geneformer",
+   "state"
+  ]
+ }
+}

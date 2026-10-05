@@ -1,0 +1,72 @@
+{
+  "universe": {
+    "n_genes": 6328,
+    "n_positions": 1019996,
+    "n_special_positions": 1000,
+    "repeated_gene_in_a_cell": 0,
+    "max_detection_count": 500,
+    "n_with_length": 6274,
+    "length_tertile_edges_bp": [
+      21392.270999999993,
+      56262.455
+    ],
+    "vs_v2_universe": {
+      "n_v2": 6324,
+      "n_shared": 6324,
+      "only_v3": 4,
+      "only_v2": 0,
+      "spearman_detection_count_shared": 0.8878254329778811
+    }
+  },
+  "targets": {
+    "trrust_edges_in_universe": 2161,
+    "trrust_tfs": 483,
+    "dorothea_edges_in_universe": 107166,
+    "dorothea_tfs": 459,
+    "chip_edges_in_universe": 47428,
+    "chip_tfs": 296,
+    "GATA1_trrust_in_universe": 11,
+    "GATA1_chip_in_universe": 221
+  },
+  "catalog_cells_found": 500,
+  "catalog_cells_missing": 0,
+  "token_check": {
+    "n_positions_ours": 1019996,
+    "n_positions_v3_sae": 1019996,
+    "identical": true
+  },
+  "codes_A_vs_B": {
+    "n_positions": 1019996,
+    "frac_positions_same_active_set": 1.0,
+    "n_positions_different_set": 0,
+    "max_abs_value_diff_same_set": 0.0,
+    "median_abs_value_diff_same_set": 0.0,
+    "max_value": 65.30707550048828
+  },
+  "catalog_A_vs_B": {
+    "n_features": 4928,
+    "n_same_ordered_list": 4928,
+    "n_same_set": 4928,
+    "mean_jaccard": 1.0,
+    "min_jaccard": 1.0,
+    "n_features_jaccard_lt_0.9": 0,
+    "pass": true
+  },
+  "catalog": {
+    "source": "A (outputs/v3_sae/codes/layer_05_topk.npz)",
+    "n_features_with_list": 4928,
+    "n_features_20_genes": 4928,
+    "n_features_with_special": 47,
+    "median_of_median_detection_count_top20": 116.0,
+    "share_top20_slots_detection_count_le_5": 0.011262175324675324,
+    "v2_deployed_median_of_median_detection_count_top20": 119.5,
+    "v2_deployed_share_top20_slots_detection_count_le_5": 0.013077996143273294
+  },
+  "script_sha256": "341850b4d06e83b2c450c53a44b2c331682e6fe15e2b693957e2f513abe93349",
+  "inputs_sha256": {
+    "codes_layer_05_topk.npz": "614f9e01da44585a199e04bac01c4610f2c9f9c81b4430daaa32f75173cc156c",
+    "gene_names_v3.json": "55f14c20030d95b718b775111b5f48bc5d3281c30782156a6a0b6645f55a413f",
+    "cells.npz": "04cded211a3be521a441e61dc11d8f0bc727cf0531e773ca3ad1abd8cdeb33a3"
+  },
+  "wall_s": 16.2
+}

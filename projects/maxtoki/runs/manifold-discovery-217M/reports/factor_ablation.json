@@ -1,0 +1,34 @@
+{
+  "compact_head": "L10H6",
+  "rank": 64,
+  "intact_metrics": {
+    "branch_balanced_acc": 0.9728397172822617,
+    "branch_macro_f1": 0.9805960806971931,
+    "stage_balanced_acc": 0.9114457441968469,
+    "stage_macro_f1": 0.9291949124561251,
+    "cd_auroc": 0.9888381532217149,
+    "mm_auroc": 0.9863201094391244,
+    "pseudotime_spearman": 0.5099447422682759
+  },
+  "n_for_50pct_impact": 16,
+  "n_for_66pct_impact": 25,
+  "n_for_80pct_impact": 36,
+  "top4_pct_of_total_impact": 0.18252924533058643,
+  "top10_pct_of_total_impact": 0.3759426205393003,
+  "core_factors": [
+    1,
+    4,
+    11,
+    9
+  ],
+  "core_metrics": {
+    "branch_balanced_acc": 0.12339780489676876,
+    "branch_macro_f1": 0.0779714726749191,
+    "stage_balanced_acc": 0.07481427648578812,
+    "stage_macro_f1": 0.030203090844390223,
+    "cd_auroc": 0.5068493150684932,
+    "mm_auroc": 0.755813953488372,
+    "pseudotime_spearman": 0.04486391693274189
+  },
+  "elapsed_s": 6.668951988220215
+}

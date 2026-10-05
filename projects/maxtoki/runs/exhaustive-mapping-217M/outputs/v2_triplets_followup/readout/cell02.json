@@ -1,0 +1,146 @@
+{
+  "cell": 2,
+  "row": 293501,
+  "triplets": [
+    {
+      "triplet_index_in_real": 13,
+      "a": 810,
+      "b": 3811,
+      "c": 121,
+      "h11": {
+        "per_position_energy_share_I": 1.3069823987056351e-08,
+        "per_position_energy_share_all_orders": 2.55419312268638e-05,
+        "posmean_energy_share_I": 2.2844553796818218e-10,
+        "posmean_energy_share_all_orders": 4.58067079252462e-06
+      },
+      "logits_centered": {
+        "per_position_energy_share_I": 9.704071775954598e-09,
+        "posmean_energy_share_I": 2.199837035610992e-10
+      },
+      "sae_preact": {
+        "per_position_energy_share_I": 1.7954212424727146e-08,
+        "per_position_energy_share_all_orders": 2.6210047138817018e-05,
+        "posmean_energy_share_I": 3.064240052169126e-10,
+        "posmean_energy_share_all_orders": 4.791276532298983e-06
+      },
+      "sae_code": {
+        "per_position_energy_share_I": 0.22026987407270832,
+        "per_position_energy_share_all_orders": 0.4336502125547933,
+        "posmean_energy_share_I": 0.11329879591436438,
+        "posmean_energy_share_all_orders": 0.22063269476748718,
+        "share_of_I_energy_on_switching_entries": 0.999999998066266,
+        "share_of_dABC_energy_on_switching_entries": 0.9916732645692958,
+        "positions_with_topk_set_change_vs_clean_ABC": 0.2685546875,
+        "mean_features_switched_per_position_ABC": 0.33056640625,
+        "max_abs_diff_vs_stored_posmean_dz_ABC": 1.862645149230957e-09,
+        "max_abs_stored_posmean_dz_ABC": 0.026590052992105484
+      },
+      "rel_size_dh11_ABC_over_h11": 0.01688642265148003
+    },
+    {
+      "triplet_index_in_real": 109,
+      "a": 3147,
+      "b": 4904,
+      "c": 121,
+      "h11": {
+        "per_position_energy_share_I": 1.426895923937142e-08,
+        "per_position_energy_share_all_orders": 8.736585717136262e-05,
+        "posmean_energy_share_I": 5.874082565438072e-10,
+        "posmean_energy_share_all_orders": 7.348109331621555e-06
+      },
+      "logits_centered": {
+        "per_position_energy_share_I": 1.3459545290929238e-08,
+        "posmean_energy_share_I": 7.851815389141138e-10
+      },
+      "sae_preact": {
+        "per_position_energy_share_I": 1.93144383298612e-08,
+        "per_position_energy_share_all_orders": 8.647445786267663e-05,
+        "posmean_energy_share_I": 7.415028102608857e-10,
+        "posmean_energy_share_all_orders": 8.480499039452945e-06
+      },
+      "sae_code": {
+        "per_position_energy_share_I": 0.29802034184115805,
+        "per_position_energy_share_all_orders": 0.6167902325438762,
+        "posmean_energy_share_I": 0.1556255027069383,
+        "posmean_energy_share_all_orders": 0.32420375436871074,
+        "share_of_I_energy_on_switching_entries": 0.9999999987065754,
+        "share_of_dABC_energy_on_switching_entries": 0.9864457924807466,
+        "positions_with_topk_set_change_vs_clean_ABC": 0.314453125,
+        "mean_features_switched_per_position_ABC": 0.400390625,
+        "max_abs_diff_vs_stored_posmean_dz_ABC": 9.313225746154785e-10,
+        "max_abs_stored_posmean_dz_ABC": 0.028792332857847214
+      },
+      "rel_size_dh11_ABC_over_h11": 0.019954739023484283
+    },
+    {
+      "triplet_index_in_real": 389,
+      "a": 1947,
+      "b": 3783,
+      "c": 121,
+      "h11": {
+        "per_position_energy_share_I": 1.4333512372859525e-08,
+        "per_position_energy_share_all_orders": 7.14314294377642e-05,
+        "posmean_energy_share_I": 3.1745332621916305e-10,
+        "posmean_energy_share_all_orders": 6.760187014198101e-06
+      },
+      "logits_centered": {
+        "per_position_energy_share_I": 1.2678747197895887e-08,
+        "posmean_energy_share_I": 3.858796636633046e-10
+      },
+      "sae_preact": {
+        "per_position_energy_share_I": 1.923368911237456e-08,
+        "per_position_energy_share_all_orders": 7.029712965130027e-05,
+        "posmean_energy_share_I": 4.4837222903847846e-10,
+        "posmean_energy_share_all_orders": 8.287676467599991e-06
+      },
+      "sae_code": {
+        "per_position_energy_share_I": 0.31527401115929765,
+        "per_position_energy_share_all_orders": 0.6499546238620176,
+        "posmean_energy_share_I": 0.16576717925951764,
+        "posmean_energy_share_all_orders": 0.3355119510409317,
+        "share_of_I_energy_on_switching_entries": 0.9999999988780361,
+        "share_of_dABC_energy_on_switching_entries": 0.9903726981743075,
+        "positions_with_topk_set_change_vs_clean_ABC": 0.349609375,
+        "mean_features_switched_per_position_ABC": 0.43310546875,
+        "max_abs_diff_vs_stored_posmean_dz_ABC": 1.862645149230957e-09,
+        "max_abs_stored_posmean_dz_ABC": 0.026629891246557236
+      },
+      "rel_size_dh11_ABC_over_h11": 0.019479393288042414
+    },
+    {
+      "triplet_index_in_real": 398,
+      "a": 1947,
+      "b": 3811,
+      "c": 2868,
+      "h11": {
+        "per_position_energy_share_I": 5.6171486314735596e-08,
+        "per_position_energy_share_all_orders": 0.005305735602247847,
+        "posmean_energy_share_I": 1.1929012984893973e-09,
+        "posmean_energy_share_all_orders": 1.912927611823981e-05
+      },
+      "logits_centered": {
+        "per_position_energy_share_I": 5.9253003393094795e-08,
+        "posmean_energy_share_I": 1.4060756752795929e-09
+      },
+      "sae_preact": {
+        "per_position_energy_share_I": 7.420253681758314e-08,
+        "per_position_energy_share_all_orders": 0.005253508335191257,
+        "posmean_energy_share_I": 1.4613537437131445e-09,
+        "posmean_energy_share_all_orders": 2.5699279805092543e-05
+      },
+      "sae_code": {
+        "per_position_energy_share_I": 0.3018944604284157,
+        "per_position_energy_share_all_orders": 0.6653419458696612,
+        "posmean_energy_share_I": 0.12126037665417028,
+        "posmean_energy_share_all_orders": 0.2760228424602776,
+        "share_of_I_energy_on_switching_entries": 0.9999999977801158,
+        "share_of_dABC_energy_on_switching_entries": 0.9774113838482085,
+        "positions_with_topk_set_change_vs_clean_ABC": 0.25390625,
+        "mean_features_switched_per_position_ABC": 0.2783203125,
+        "max_abs_diff_vs_stored_posmean_dz_ABC": 9.313225746154785e-10,
+        "max_abs_stored_posmean_dz_ABC": 0.07814417034387589
+      },
+      "rel_size_dh11_ABC_over_h11": 0.012098265580496051
+    }
+  ]
+}

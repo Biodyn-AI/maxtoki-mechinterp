@@ -1,0 +1,153 @@
+{
+ "mean_seq_len": {
+  "spectral phase0": 1783.629,
+  "attn K562 217M": 2038.9945,
+  "attn RPE1": 2038.8755,
+  "attn Adamson": 991.08,
+  "attn K562 1B": 2040.41,
+  "sae 12-layer (positions/500)": 2039.992,
+  "longevity stage1": 998.2484868863484
+ },
+ "max_len_in_run_configs": {
+  "runs/attention-grn-217M/outputs/phase0/run_config.json": 2048,
+  "runs/spectral-geometry-217M/outputs/phase0/run_config.json": 2048,
+  "runs/topology-141-217M/outputs/phase0/lung/run_config.json": 2048,
+  "runs/topology-141-217M/outputs/phase0/external_lung/run_config.json": 2048,
+  "runs/topology-141-217M/outputs/seed_stability_phase0/seed43/lung/run_config.json": 2048
+ },
+ "manifold_npz": {
+  "cells_external.npz": {
+   "n": 30000,
+   "mean": 2344.0,
+   "frac_4096": 0.1168,
+   "max_id": 20239
+  },
+  "cells_internal.npz": {
+   "n": 11804,
+   "mean": 2190.3,
+   "frac_4096": 0.0783,
+   "max_id": 20239
+  },
+  "cells_lung_control.npz": {
+   "n": 2124,
+   "mean": 2395.8,
+   "frac_4096": 0.1121,
+   "max_id": 20239
+  },
+  "cells_lung_nonhema.npz": {
+   "n": 1500,
+   "mean": 2901.5,
+   "frac_4096": 0.256,
+   "max_id": 20239
+  },
+  "cells_zeroshot.npz": {
+   "n": 7796,
+   "mean": 2261.1,
+   "frac_4096": 0.1045,
+   "max_id": 20239
+  }
+ },
+ "token_dictionary": {
+  "n": 23277,
+  "n_non_gene": 3006,
+  "min_non_gene_id_ge_20275": 20275,
+  "max_id": 23276,
+  "hf_vocab": 20275,
+  "n_numeric_keys": 3000
+ },
+ "strict_max_null": {
+  "n": 36,
+  "layers": [
+   "3",
+   "6",
+   "9"
+  ],
+  "n_pass": 4
+ },
+ "dual_axis": {
+  "scope": "H123 motif AUROC under 4 CV schemes (no-grouping, GroupKFold-by-TF, GroupKFold-by-target, dual-axis disjoint), immune domain \u00d7 12 layers",
+  "layers": 12,
+  "domains": [
+   "immune"
+  ],
+  "pairs": [
+   76
+  ],
+  "auc": [
+   0.4478887168902649,
+   0.4756664946680427
+  ]
+ },
+ "immune_layer_states": 12,
+ "hf_num_hidden_layers_217M": 11,
+ "autoloop": {
+  "n_spawn": 6,
+  "n_model_sonnet": 6,
+  "other_model_flags": [],
+  "calls": [
+   "iter_0002 executor done  rc=0  dt=925s  valid=True  fails=[]",
+   "iter_0002 brainstormer done  rc=0  dt=447s",
+   "iter_0003 executor done  rc=124  dt=1800s  valid=True  fails=[]",
+   "iter_0003 brainstormer done  rc=1  dt=777s",
+   "iter_0004 executor done  rc=1  dt=913s  valid=False  fails=['missing executor_iteration_re",
+   "iter_0005 executor done  rc=1  dt=884s  valid=False  fails=['missing executor_iteration_re"
+  ],
+  "last": "00] aborting: 2 consecutive executor failures",
+  "api_errors": {
+   "iter_0003_brainstormer.log": [
+    "API Error: Unable to connect to API (UNKNOWN_CERTIFICATE_VERIFICATION_ERROR)"
+   ],
+   "iter_0004.log": [
+    "API Error: Unable to connect to API (ECONNRESET)"
+   ],
+   "iter_0005.log": [
+    "API Error: Unable to connect to API (ECONNRESET)"
+   ]
+  }
+ },
+ "topology_phase11": {
+  "n_iterations": 6,
+  "n_promote": 0,
+  "n_inconclusive": 5,
+  "n_retire": 1
+ },
+ "h115_h118_files": {
+  "projects/maxtoki/runs": [],
+  "projects/maxtoki/summaries": [],
+  "projects/maxtoki/audits": [],
+  "projects/maxtoki/setup": [],
+  "pipelines": [],
+  "repos": [
+   "repos/topology-biomechinterp2/iterations/iter_0044/executor_hypothesis_screen.json",
+   "repos/topology-biomechinterp2/iterations/iter_0044/executor_iteration_report.md",
+   "repos/topology-biomechinterp2/iterations/iter_0044/executor_last_message.md",
+   "repos/topology-biomechinterp2/iterations/iter_0044/executor_next_steps.md",
+   "repos/topology-biomechinterp2/iterations/iter_0044/h115_tangent_acceleration_by_domain_split.csv",
+   "repos/topology-biomechinterp2/iterations/iter_0044/h115_tangent_acceleration_null_summary.csv",
+   "repos/topology-biomechinterp2/iterations/iter_0044/iter0044_screen_summary.json",
+   "repos/topology-biomechinterp2/iterations/iter_0044/run_iter0044_screen.py",
+   "repos/topology-biomechinterp2/iterations/iter_0045/brainstormer_hypothesis_roadmap.md",
+   "repos/topology-biomechinterp2/iterations/iter_0045/brainstormer_next_iteration_brief.md",
+   "repos/topology-biomechinterp2/iterations/iter_0045/brainstormer_last_message.md",
+   "repos/topology-biomechinterp2/iterations/iter_0045/brainstormer_structured_feedback.md"
+  ],
+  "references": [],
+  "prompts": []
+ },
+ "h115_h118_counts": {
+  "projects/maxtoki/runs": 0,
+  "projects/maxtoki/summaries": 0,
+  "projects/maxtoki/audits": 0,
+  "projects/maxtoki/setup": 0,
+  "pipelines": 0,
+  "repos": 39,
+  "references": 0,
+  "prompts": 0
+ },
+ "prior_repo_iter0045_lines": [
+  "5. Tangent-acceleration formulation (`H115`) -> `retire_now`.",
+  "7. Signed motif-community (`H118`) -> `prioritize_hardening`.",
+  "| `N600` | module_structure + biological anchoring | The signed TRRUST motif-community eff",
+  "1. High-probability discovery candidate: `N600` (strict hardening of `H118`)."
+ ]
+}

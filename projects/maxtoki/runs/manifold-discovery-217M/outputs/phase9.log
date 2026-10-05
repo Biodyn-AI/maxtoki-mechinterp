@@ -1,0 +1,1603 @@
+======================================================================
+PHASE 9 — head/layer attribution scan (88 single-head LET-10D)
+======================================================================
+  centroids (290, 12, 1232)  layers=11 heads=8 head_dim=154
+  [L0H0] trained 1500 epochs in 3.3s
+  [rand-holdout] trained 1500 epochs in 4.3s
+  [rand-holdout] trained 1500 epochs in 3.9s
+  [rand-holdout] trained 1500 epochs in 3.7s
+  [L0H0-branch] groups: 12
+  [L0H0-branch-monocyte] trained 1500 epochs in 3.8s
+  [L0H0-branch-T_lineage] trained 1500 epochs in 2.8s
+  [L0H0-branch-macrophage] trained 1500 epochs in 4.1s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L0H0-branch-B_lineage] trained 1500 epochs in 3.9s
+  [L0H0-branch-NK] trained 1500 epochs in 4.6s
+  [L0H0-branch-erythroid] trained 1500 epochs in 4.4s
+  [L0H0-branch-granulocyte] trained 1500 epochs in 4.1s
+  [L0H0-branch-stem] trained 1500 epochs in 4.0s
+  [L0H0-branch-lymphoid] trained 1500 epochs in 4.1s
+  [L0H0-branch-dendritic] trained 1500 epochs in 4.0s
+  L0H0: trust=0.824  rand=0.782  branch=0.481  (56.1s)
+  [L0H1] trained 1500 epochs in 4.2s
+  [rand-holdout] trained 1500 epochs in 3.9s
+  [rand-holdout] trained 1500 epochs in 3.7s
+  [rand-holdout] trained 1500 epochs in 3.9s
+  [L0H1-branch] groups: 12
+  [L0H1-branch-monocyte] trained 1500 epochs in 3.7s
+  [L0H1-branch-T_lineage] trained 1500 epochs in 2.2s
+  [L0H1-branch-macrophage] trained 1500 epochs in 3.2s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L0H1-branch-B_lineage] trained 1500 epochs in 3.7s
+  [L0H1-branch-NK] trained 1500 epochs in 3.2s
+  [L0H1-branch-erythroid] trained 1500 epochs in 4.5s
+  [L0H1-branch-granulocyte] trained 1500 epochs in 3.6s
+  [L0H1-branch-stem] trained 1500 epochs in 5.0s
+  [L0H1-branch-lymphoid] trained 1500 epochs in 5.2s
+  [L0H1-branch-dendritic] trained 1500 epochs in 5.0s
+  L0H1: trust=0.825  rand=0.783  branch=0.246  (55.0s)
+  [L0H2] trained 1500 epochs in 4.6s
+  [rand-holdout] trained 1500 epochs in 4.1s
+  [rand-holdout] trained 1500 epochs in 4.2s
+  [rand-holdout] trained 1500 epochs in 3.5s
+  [L0H2-branch] groups: 12
+  [L0H2-branch-monocyte] trained 1500 epochs in 3.7s
+  [L0H2-branch-T_lineage] trained 1500 epochs in 2.9s
+  [L0H2-branch-macrophage] trained 1500 epochs in 3.1s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L0H2-branch-B_lineage] trained 1500 epochs in 4.0s
+  [L0H2-branch-NK] trained 1500 epochs in 4.9s
+  [L0H2-branch-erythroid] trained 1500 epochs in 4.5s
+  [L0H2-branch-granulocyte] trained 1500 epochs in 3.7s
+  [L0H2-branch-stem] trained 1500 epochs in 4.8s
+  [L0H2-branch-lymphoid] trained 1500 epochs in 4.3s
+  [L0H2-branch-dendritic] trained 1500 epochs in 4.2s
+  L0H2: trust=0.798  rand=0.787  branch=0.395  (56.8s)
+  [L0H3] trained 1500 epochs in 3.9s
+  [rand-holdout] trained 1500 epochs in 3.5s
+  [rand-holdout] trained 1500 epochs in 3.3s
+  [rand-holdout] trained 1500 epochs in 3.3s
+  [L0H3-branch] groups: 12
+  [L0H3-branch-monocyte] trained 1500 epochs in 3.3s
+  [L0H3-branch-T_lineage] trained 1500 epochs in 2.0s
+  [L0H3-branch-macrophage] trained 1500 epochs in 3.8s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L0H3-branch-B_lineage] trained 1500 epochs in 3.6s
+  [L0H3-branch-NK] trained 1500 epochs in 4.2s
+  [L0H3-branch-erythroid] trained 1500 epochs in 4.0s
+  [L0H3-branch-granulocyte] trained 1500 epochs in 3.7s
+  [L0H3-branch-stem] trained 1500 epochs in 3.7s
+  [L0H3-branch-lymphoid] trained 1500 epochs in 4.3s
+  [L0H3-branch-dendritic] trained 1500 epochs in 3.7s
+  L0H3: trust=0.774  rand=0.791  branch=0.272  (50.1s)
+  [L0H4] trained 1500 epochs in 4.0s
+  [rand-holdout] trained 1500 epochs in 4.0s
+  [rand-holdout] trained 1500 epochs in 3.3s
+  [rand-holdout] trained 1500 epochs in 3.3s
+  [L0H4-branch] groups: 12
+  [L0H4-branch-monocyte] trained 1500 epochs in 3.9s
+  [L0H4-branch-T_lineage] trained 1500 epochs in 2.4s
+  [L0H4-branch-macrophage] trained 1500 epochs in 3.4s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L0H4-branch-B_lineage] trained 1500 epochs in 3.3s
+  [L0H4-branch-NK] trained 1500 epochs in 4.2s
+  [L0H4-branch-erythroid] trained 1500 epochs in 4.0s
+  [L0H4-branch-granulocyte] trained 1500 epochs in 4.6s
+  [L0H4-branch-stem] trained 1500 epochs in 4.3s
+  [L0H4-branch-lymphoid] trained 1500 epochs in 4.2s
+  [L0H4-branch-dendritic] trained 1500 epochs in 4.5s
+  L0H4: trust=0.805  rand=0.806  branch=0.294  (53.4s)
+  [L0H5] trained 1500 epochs in 5.4s
+  [rand-holdout] trained 1500 epochs in 5.4s
+  [rand-holdout] trained 1500 epochs in 4.1s
+  [rand-holdout] trained 1500 epochs in 3.9s
+  [L0H5-branch] groups: 12
+  [L0H5-branch-monocyte] trained 1500 epochs in 4.2s
+  [L0H5-branch-T_lineage] trained 1500 epochs in 3.0s
+  [L0H5-branch-macrophage] trained 1500 epochs in 4.2s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L0H5-branch-B_lineage] trained 1500 epochs in 4.3s
+  [L0H5-branch-NK] trained 1500 epochs in 4.7s
+  [L0H5-branch-erythroid] trained 1500 epochs in 6.3s
+  [L0H5-branch-granulocyte] trained 1500 epochs in 4.1s
+  [L0H5-branch-stem] trained 1500 epochs in 3.8s
+  [L0H5-branch-lymphoid] trained 1500 epochs in 4.3s
+  [L0H5-branch-dendritic] trained 1500 epochs in 4.5s
+  L0H5: trust=0.817  rand=0.781  branch=0.421  (62.4s)
+  [L0H6] trained 1500 epochs in 4.6s
+  [rand-holdout] trained 1500 epochs in 3.6s
+  [rand-holdout] trained 1500 epochs in 3.2s
+  [rand-holdout] trained 1500 epochs in 2.7s
+  [L0H6-branch] groups: 12
+  [L0H6-branch-monocyte] trained 1500 epochs in 4.4s
+  [L0H6-branch-T_lineage] trained 1500 epochs in 2.9s
+  [L0H6-branch-macrophage] trained 1500 epochs in 3.0s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L0H6-branch-B_lineage] trained 1500 epochs in 4.2s
+  [L0H6-branch-NK] trained 1500 epochs in 3.3s
+  [L0H6-branch-erythroid] trained 1500 epochs in 4.5s
+  [L0H6-branch-granulocyte] trained 1500 epochs in 5.7s
+  [L0H6-branch-stem] trained 1500 epochs in 5.3s
+  [L0H6-branch-lymphoid] trained 1500 epochs in 5.0s
+  [L0H6-branch-dendritic] trained 1500 epochs in 4.2s
+  L0H6: trust=0.803  rand=0.805  branch=0.437  (56.8s)
+  [L0H7] trained 1500 epochs in 4.4s
+  [rand-holdout] trained 1500 epochs in 3.1s
+  [rand-holdout] trained 1500 epochs in 3.0s
+  [rand-holdout] trained 1500 epochs in 3.6s
+  [L0H7-branch] groups: 12
+  [L0H7-branch-monocyte] trained 1500 epochs in 3.1s
+  [L0H7-branch-T_lineage] trained 1500 epochs in 2.1s
+  [L0H7-branch-macrophage] trained 1500 epochs in 3.3s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L0H7-branch-B_lineage] trained 1500 epochs in 3.4s
+  [L0H7-branch-NK] trained 1500 epochs in 3.4s
+  [L0H7-branch-erythroid] trained 1500 epochs in 4.5s
+  [L0H7-branch-granulocyte] trained 1500 epochs in 4.9s
+  [L0H7-branch-stem] trained 1500 epochs in 5.1s
+  [L0H7-branch-lymphoid] trained 1500 epochs in 4.1s
+  [L0H7-branch-dendritic] trained 1500 epochs in 4.0s
+  L0H7: trust=0.828  rand=0.798  branch=0.394  (52.3s)
+  [L1H0] trained 1500 epochs in 3.9s
+  [rand-holdout] trained 1500 epochs in 3.4s
+  [rand-holdout] trained 1500 epochs in 3.5s
+  [rand-holdout] trained 1500 epochs in 4.0s
+  [L1H0-branch] groups: 12
+  [L1H0-branch-monocyte] trained 1500 epochs in 3.6s
+  [L1H0-branch-T_lineage] trained 1500 epochs in 2.3s
+  [L1H0-branch-macrophage] trained 1500 epochs in 3.3s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L1H0-branch-B_lineage] trained 1500 epochs in 3.6s
+  [L1H0-branch-NK] trained 1500 epochs in 3.7s
+  [L1H0-branch-erythroid] trained 1500 epochs in 3.7s
+  [L1H0-branch-granulocyte] trained 1500 epochs in 3.8s
+  [L1H0-branch-stem] trained 1500 epochs in 3.8s
+  [L1H0-branch-lymphoid] trained 1500 epochs in 3.7s
+  [L1H0-branch-dendritic] trained 1500 epochs in 3.6s
+  L1H0: trust=0.743  rand=0.794  branch=0.348  (50.0s)
+  [L1H1] trained 1500 epochs in 4.1s
+  [rand-holdout] trained 1500 epochs in 3.7s
+  [rand-holdout] trained 1500 epochs in 3.8s
+  [rand-holdout] trained 1500 epochs in 3.8s
+  [L1H1-branch] groups: 12
+  [L1H1-branch-monocyte] trained 1500 epochs in 3.8s
+  [L1H1-branch-T_lineage] trained 1500 epochs in 2.5s
+  [L1H1-branch-macrophage] trained 1500 epochs in 3.8s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L1H1-branch-B_lineage] trained 1500 epochs in 3.4s
+  [L1H1-branch-NK] trained 1500 epochs in 4.2s
+  [L1H1-branch-erythroid] trained 1500 epochs in 3.6s
+  [L1H1-branch-granulocyte] trained 1500 epochs in 3.4s
+  [L1H1-branch-stem] trained 1500 epochs in 3.7s
+  [L1H1-branch-lymphoid] trained 1500 epochs in 3.9s
+  [L1H1-branch-dendritic] trained 1500 epochs in 4.9s
+  L1H1: trust=0.844  rand=0.805  branch=0.425  (52.7s)
+  [L1H2] trained 1500 epochs in 4.8s
+  [rand-holdout] trained 1500 epochs in 4.6s
+  [rand-holdout] trained 1500 epochs in 4.0s
+  [rand-holdout] trained 1500 epochs in 3.9s
+  [L1H2-branch] groups: 12
+  [L1H2-branch-monocyte] trained 1500 epochs in 4.1s
+  [L1H2-branch-T_lineage] trained 1500 epochs in 2.0s
+  [L1H2-branch-macrophage] trained 1500 epochs in 3.5s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L1H2-branch-B_lineage] trained 1500 epochs in 4.0s
+  [L1H2-branch-NK] trained 1500 epochs in 4.4s
+  [L1H2-branch-erythroid] trained 1500 epochs in 3.3s
+  [L1H2-branch-granulocyte] trained 1500 epochs in 4.1s
+  [L1H2-branch-stem] trained 1500 epochs in 4.1s
+  [L1H2-branch-lymphoid] trained 1500 epochs in 4.1s
+  [L1H2-branch-dendritic] trained 1500 epochs in 4.4s
+  L1H2: trust=0.707  rand=0.788  branch=0.420  (55.5s)
+  [L1H3] trained 1500 epochs in 4.0s
+  [rand-holdout] trained 1500 epochs in 4.2s
+  [rand-holdout] trained 1500 epochs in 3.8s
+  [rand-holdout] trained 1500 epochs in 3.1s
+  [L1H3-branch] groups: 12
+  [L1H3-branch-monocyte] trained 1500 epochs in 3.8s
+  [L1H3-branch-T_lineage] trained 1500 epochs in 2.6s
+  [L1H3-branch-macrophage] trained 1500 epochs in 3.3s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L1H3-branch-B_lineage] trained 1500 epochs in 3.8s
+  [L1H3-branch-NK] trained 1500 epochs in 4.4s
+  [L1H3-branch-erythroid] trained 1500 epochs in 4.4s
+  [L1H3-branch-granulocyte] trained 1500 epochs in 3.4s
+  [L1H3-branch-stem] trained 1500 epochs in 4.0s
+  [L1H3-branch-lymphoid] trained 1500 epochs in 3.8s
+  [L1H3-branch-dendritic] trained 1500 epochs in 3.7s
+  L1H3: trust=0.746  rand=0.768  branch=0.437  (52.4s)
+  [L1H4] trained 1500 epochs in 3.8s
+  [rand-holdout] trained 1500 epochs in 3.9s
+  [rand-holdout] trained 1500 epochs in 4.0s
+  [rand-holdout] trained 1500 epochs in 3.6s
+  [L1H4-branch] groups: 12
+  [L1H4-branch-monocyte] trained 1500 epochs in 4.4s
+  [L1H4-branch-T_lineage] trained 1500 epochs in 2.6s
+  [L1H4-branch-macrophage] trained 1500 epochs in 3.9s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L1H4-branch-B_lineage] trained 1500 epochs in 3.5s
+  [L1H4-branch-NK] trained 1500 epochs in 4.0s
+  [L1H4-branch-erythroid] trained 1500 epochs in 4.0s
+  [L1H4-branch-granulocyte] trained 1500 epochs in 3.9s
+  [L1H4-branch-stem] trained 1500 epochs in 4.2s
+  [L1H4-branch-lymphoid] trained 1500 epochs in 3.8s
+  [L1H4-branch-dendritic] trained 1500 epochs in 3.7s
+  L1H4: trust=0.681  rand=0.805  branch=0.332  (53.5s)
+  [L1H5] trained 1500 epochs in 4.5s
+  [rand-holdout] trained 1500 epochs in 4.8s
+  [rand-holdout] trained 1500 epochs in 4.1s
+  [rand-holdout] trained 1500 epochs in 4.0s
+  [L1H5-branch] groups: 12
+  [L1H5-branch-monocyte] trained 1500 epochs in 4.2s
+  [L1H5-branch-T_lineage] trained 1500 epochs in 2.7s
+  [L1H5-branch-macrophage] trained 1500 epochs in 4.6s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L1H5-branch-B_lineage] trained 1500 epochs in 4.2s
+  [L1H5-branch-NK] trained 1500 epochs in 4.2s
+  [L1H5-branch-erythroid] trained 1500 epochs in 5.2s
+  [L1H5-branch-granulocyte] trained 1500 epochs in 4.2s
+  [L1H5-branch-stem] trained 1500 epochs in 4.2s
+  [L1H5-branch-lymphoid] trained 1500 epochs in 4.6s
+  [L1H5-branch-dendritic] trained 1500 epochs in 4.3s
+  L1H5: trust=0.726  rand=0.772  branch=0.488  (60.0s)
+  [L1H6] trained 1500 epochs in 4.2s
+  [rand-holdout] trained 1500 epochs in 3.5s
+  [rand-holdout] trained 1500 epochs in 3.6s
+  [rand-holdout] trained 1500 epochs in 3.5s
+  [L1H6-branch] groups: 12
+  [L1H6-branch-monocyte] trained 1500 epochs in 3.9s
+  [L1H6-branch-T_lineage] trained 1500 epochs in 2.8s
+  [L1H6-branch-macrophage] trained 1500 epochs in 4.1s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L1H6-branch-B_lineage] trained 1500 epochs in 3.0s
+  [L1H6-branch-NK] trained 1500 epochs in 3.7s
+  [L1H6-branch-erythroid] trained 1500 epochs in 4.7s
+  [L1H6-branch-granulocyte] trained 1500 epochs in 4.1s
+  [L1H6-branch-stem] trained 1500 epochs in 3.4s
+  [L1H6-branch-lymphoid] trained 1500 epochs in 4.6s
+  [L1H6-branch-dendritic] trained 1500 epochs in 3.6s
+  L1H6: trust=0.717  rand=0.808  branch=0.474  (53.0s)
+  [L1H7] trained 1500 epochs in 4.2s
+  [rand-holdout] trained 1500 epochs in 3.3s
+  [rand-holdout] trained 1500 epochs in 3.0s
+  [rand-holdout] trained 1500 epochs in 2.6s
+  [L1H7-branch] groups: 12
+  [L1H7-branch-monocyte] trained 1500 epochs in 4.1s
+  [L1H7-branch-T_lineage] trained 1500 epochs in 3.0s
+  [L1H7-branch-macrophage] trained 1500 epochs in 3.4s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L1H7-branch-B_lineage] trained 1500 epochs in 3.4s
+  [L1H7-branch-NK] trained 1500 epochs in 3.3s
+  [L1H7-branch-erythroid] trained 1500 epochs in 3.7s
+  [L1H7-branch-granulocyte] trained 1500 epochs in 3.1s
+  [L1H7-branch-stem] trained 1500 epochs in 3.5s
+  [L1H7-branch-lymphoid] trained 1500 epochs in 4.0s
+  [L1H7-branch-dendritic] trained 1500 epochs in 3.8s
+  L1H7: trust=0.714  rand=0.804  branch=0.414  (48.6s)
+  [L2H0] trained 1500 epochs in 4.1s
+  [rand-holdout] trained 1500 epochs in 3.1s
+  [rand-holdout] trained 1500 epochs in 3.5s
+  [rand-holdout] trained 1500 epochs in 3.4s
+  [L2H0-branch] groups: 12
+  [L2H0-branch-monocyte] trained 1500 epochs in 3.7s
+  [L2H0-branch-T_lineage] trained 1500 epochs in 2.4s
+  [L2H0-branch-macrophage] trained 1500 epochs in 3.6s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L2H0-branch-B_lineage] trained 1500 epochs in 3.5s
+  [L2H0-branch-NK] trained 1500 epochs in 3.5s
+  [L2H0-branch-erythroid] trained 1500 epochs in 3.7s
+  [L2H0-branch-granulocyte] trained 1500 epochs in 4.2s
+  [L2H0-branch-stem] trained 1500 epochs in 3.9s
+  [L2H0-branch-lymphoid] trained 1500 epochs in 4.0s
+  [L2H0-branch-dendritic] trained 1500 epochs in 4.6s
+  L2H0: trust=0.720  rand=0.828  branch=0.336  (51.4s)
+  [L2H1] trained 1500 epochs in 4.3s
+  [rand-holdout] trained 1500 epochs in 4.1s
+  [rand-holdout] trained 1500 epochs in 3.1s
+  [rand-holdout] trained 1500 epochs in 3.2s
+  [L2H1-branch] groups: 12
+  [L2H1-branch-monocyte] trained 1500 epochs in 3.0s
+  [L2H1-branch-T_lineage] trained 1500 epochs in 2.5s
+  [L2H1-branch-macrophage] trained 1500 epochs in 3.5s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L2H1-branch-B_lineage] trained 1500 epochs in 3.5s
+  [L2H1-branch-NK] trained 1500 epochs in 3.5s
+  [L2H1-branch-erythroid] trained 1500 epochs in 3.5s
+  [L2H1-branch-granulocyte] trained 1500 epochs in 3.7s
+  [L2H1-branch-stem] trained 1500 epochs in 3.9s
+  [L2H1-branch-lymphoid] trained 1500 epochs in 4.1s
+  [L2H1-branch-dendritic] trained 1500 epochs in 4.2s
+  L2H1: trust=0.833  rand=0.783  branch=0.372  (50.0s)
+  [L2H2] trained 1500 epochs in 5.2s
+  [rand-holdout] trained 1500 epochs in 4.4s
+  [rand-holdout] trained 1500 epochs in 3.8s
+  [rand-holdout] trained 1500 epochs in 3.5s
+  [L2H2-branch] groups: 12
+  [L2H2-branch-monocyte] trained 1500 epochs in 4.1s
+  [L2H2-branch-T_lineage] trained 1500 epochs in 2.2s
+  [L2H2-branch-macrophage] trained 1500 epochs in 3.9s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L2H2-branch-B_lineage] trained 1500 epochs in 3.3s
+  [L2H2-branch-NK] trained 1500 epochs in 4.5s
+  [L2H2-branch-erythroid] trained 1500 epochs in 4.2s
+  [L2H2-branch-granulocyte] trained 1500 epochs in 4.6s
+  [L2H2-branch-stem] trained 1500 epochs in 3.8s
+  [L2H2-branch-lymphoid] trained 1500 epochs in 4.2s
+  [L2H2-branch-dendritic] trained 1500 epochs in 4.6s
+  L2H2: trust=0.698  rand=0.819  branch=0.340  (56.5s)
+  [L2H3] trained 1500 epochs in 4.3s
+  [rand-holdout] trained 1500 epochs in 4.4s
+  [rand-holdout] trained 1500 epochs in 3.6s
+  [rand-holdout] trained 1500 epochs in 3.6s
+  [L2H3-branch] groups: 12
+  [L2H3-branch-monocyte] trained 1500 epochs in 3.5s
+  [L2H3-branch-T_lineage] trained 1500 epochs in 2.5s
+  [L2H3-branch-macrophage] trained 1500 epochs in 4.9s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L2H3-branch-B_lineage] trained 1500 epochs in 3.8s
+  [L2H3-branch-NK] trained 1500 epochs in 3.7s
+  [L2H3-branch-erythroid] trained 1500 epochs in 5.0s
+  [L2H3-branch-granulocyte] trained 1500 epochs in 5.0s
+  [L2H3-branch-stem] trained 1500 epochs in 4.2s
+  [L2H3-branch-lymphoid] trained 1500 epochs in 5.1s
+  [L2H3-branch-dendritic] trained 1500 epochs in 5.4s
+  L2H3: trust=0.725  rand=0.804  branch=0.320  (59.1s)
+  [L2H4] trained 1500 epochs in 5.8s
+  [rand-holdout] trained 1500 epochs in 4.4s
+  [rand-holdout] trained 1500 epochs in 3.9s
+  [rand-holdout] trained 1500 epochs in 6.1s
+  [L2H4-branch] groups: 12
+  [L2H4-branch-monocyte] trained 1500 epochs in 4.8s
+  [L2H4-branch-T_lineage] trained 1500 epochs in 4.5s
+  [L2H4-branch-macrophage] trained 1500 epochs in 6.2s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L2H4-branch-B_lineage] trained 1500 epochs in 6.9s
+  [L2H4-branch-NK] trained 1500 epochs in 5.2s
+  [L2H4-branch-erythroid] trained 1500 epochs in 6.8s
+  [L2H4-branch-granulocyte] trained 1500 epochs in 7.0s
+  [L2H4-branch-stem] trained 1500 epochs in 9.9s
+  [L2H4-branch-lymphoid] trained 1500 epochs in 4.7s
+  [L2H4-branch-dendritic] trained 1500 epochs in 4.3s
+  L2H4: trust=0.692  rand=0.804  branch=0.346  (81.2s)
+  [L2H5] trained 1500 epochs in 8.8s
+  [rand-holdout] trained 1500 epochs in 4.3s
+  [rand-holdout] trained 1500 epochs in 2.8s
+  [rand-holdout] trained 1500 epochs in 3.4s
+  [L2H5-branch] groups: 12
+  [L2H5-branch-monocyte] trained 1500 epochs in 2.9s
+  [L2H5-branch-T_lineage] trained 1500 epochs in 2.6s
+  [L2H5-branch-macrophage] trained 1500 epochs in 3.8s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L2H5-branch-B_lineage] trained 1500 epochs in 9.7s
+  [L2H5-branch-NK] trained 1500 epochs in 4.9s
+  [L2H5-branch-erythroid] trained 1500 epochs in 3.4s
+  [L2H5-branch-granulocyte] trained 1500 epochs in 4.0s
+  [L2H5-branch-stem] trained 1500 epochs in 4.1s
+  [L2H5-branch-lymphoid] trained 1500 epochs in 4.0s
+  [L2H5-branch-dendritic] trained 1500 epochs in 3.6s
+  L2H5: trust=0.781  rand=0.821  branch=0.377  (62.5s)
+  [L2H6] trained 1500 epochs in 3.6s
+  [rand-holdout] trained 1500 epochs in 4.2s
+  [rand-holdout] trained 1500 epochs in 3.1s
+  [rand-holdout] trained 1500 epochs in 3.1s
+  [L2H6-branch] groups: 12
+  [L2H6-branch-monocyte] trained 1500 epochs in 3.6s
+  [L2H6-branch-T_lineage] trained 1500 epochs in 2.7s
+  [L2H6-branch-macrophage] trained 1500 epochs in 3.4s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L2H6-branch-B_lineage] trained 1500 epochs in 3.1s
+  [L2H6-branch-NK] trained 1500 epochs in 3.7s
+  [L2H6-branch-erythroid] trained 1500 epochs in 3.3s
+  [L2H6-branch-granulocyte] trained 1500 epochs in 3.6s
+  [L2H6-branch-stem] trained 1500 epochs in 4.3s
+  [L2H6-branch-lymphoid] trained 1500 epochs in 5.0s
+  [L2H6-branch-dendritic] trained 1500 epochs in 3.6s
+  L2H6: trust=0.681  rand=0.759  branch=0.320  (50.5s)
+  [L2H7] trained 1500 epochs in 5.4s
+  [rand-holdout] trained 1500 epochs in 6.7s
+  [rand-holdout] trained 1500 epochs in 5.1s
+  [rand-holdout] trained 1500 epochs in 3.8s
+  [L2H7-branch] groups: 12
+  [L2H7-branch-monocyte] trained 1500 epochs in 4.8s
+  [L2H7-branch-T_lineage] trained 1500 epochs in 3.5s
+  [L2H7-branch-macrophage] trained 1500 epochs in 5.2s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L2H7-branch-B_lineage] trained 1500 epochs in 4.1s
+  [L2H7-branch-NK] trained 1500 epochs in 4.8s
+  [L2H7-branch-erythroid] trained 1500 epochs in 4.6s
+  [L2H7-branch-granulocyte] trained 1500 epochs in 3.3s
+  [L2H7-branch-stem] trained 1500 epochs in 3.1s
+  [L2H7-branch-lymphoid] trained 1500 epochs in 3.7s
+  [L2H7-branch-dendritic] trained 1500 epochs in 4.3s
+  L2H7: trust=0.773  rand=0.779  branch=0.400  (62.6s)
+  [L3H0] trained 1500 epochs in 4.4s
+  [rand-holdout] trained 1500 epochs in 3.8s
+  [rand-holdout] trained 1500 epochs in 3.4s
+  [rand-holdout] trained 1500 epochs in 3.8s
+  [L3H0-branch] groups: 12
+  [L3H0-branch-monocyte] trained 1500 epochs in 5.1s
+  [L3H0-branch-T_lineage] trained 1500 epochs in 3.4s
+  [L3H0-branch-macrophage] trained 1500 epochs in 3.9s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L3H0-branch-B_lineage] trained 1500 epochs in 3.6s
+  [L3H0-branch-NK] trained 1500 epochs in 4.1s
+  [L3H0-branch-erythroid] trained 1500 epochs in 4.1s
+  [L3H0-branch-granulocyte] trained 1500 epochs in 3.6s
+  [L3H0-branch-stem] trained 1500 epochs in 4.0s
+  [L3H0-branch-lymphoid] trained 1500 epochs in 4.9s
+  [L3H0-branch-dendritic] trained 1500 epochs in 4.4s
+  L3H0: trust=0.771  rand=0.764  branch=0.369  (56.9s)
+  [L3H1] trained 1500 epochs in 5.4s
+  [rand-holdout] trained 1500 epochs in 4.7s
+  [rand-holdout] trained 1500 epochs in 4.0s
+  [rand-holdout] trained 1500 epochs in 3.9s
+  [L3H1-branch] groups: 12
+  [L3H1-branch-monocyte] trained 1500 epochs in 4.6s
+  [L3H1-branch-T_lineage] trained 1500 epochs in 2.8s
+  [L3H1-branch-macrophage] trained 1500 epochs in 4.0s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L3H1-branch-B_lineage] trained 1500 epochs in 4.3s
+  [L3H1-branch-NK] trained 1500 epochs in 4.1s
+  [L3H1-branch-erythroid] trained 1500 epochs in 4.8s
+  [L3H1-branch-granulocyte] trained 1500 epochs in 4.4s
+  [L3H1-branch-stem] trained 1500 epochs in 4.5s
+  [L3H1-branch-lymphoid] trained 1500 epochs in 5.4s
+  [L3H1-branch-dendritic] trained 1500 epochs in 4.3s
+  L3H1: trust=0.659  rand=0.817  branch=0.269  (61.3s)
+  [L3H2] trained 1500 epochs in 3.7s
+  [rand-holdout] trained 1500 epochs in 3.4s
+  [rand-holdout] trained 1500 epochs in 3.5s
+  [rand-holdout] trained 1500 epochs in 3.6s
+  [L3H2-branch] groups: 12
+  [L3H2-branch-monocyte] trained 1500 epochs in 3.4s
+  [L3H2-branch-T_lineage] trained 1500 epochs in 2.7s
+  [L3H2-branch-macrophage] trained 1500 epochs in 3.3s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L3H2-branch-B_lineage] trained 1500 epochs in 3.4s
+  [L3H2-branch-NK] trained 1500 epochs in 3.5s
+  [L3H2-branch-erythroid] trained 1500 epochs in 4.0s
+  [L3H2-branch-granulocyte] trained 1500 epochs in 3.6s
+  [L3H2-branch-stem] trained 1500 epochs in 3.7s
+  [L3H2-branch-lymphoid] trained 1500 epochs in 4.6s
+  [L3H2-branch-dendritic] trained 1500 epochs in 4.2s
+  L3H2: trust=0.700  rand=0.813  branch=0.426  (50.6s)
+  [L3H3] trained 1500 epochs in 5.1s
+  [rand-holdout] trained 1500 epochs in 4.5s
+  [rand-holdout] trained 1500 epochs in 3.6s
+  [rand-holdout] trained 1500 epochs in 4.5s
+  [L3H3-branch] groups: 12
+  [L3H3-branch-monocyte] trained 1500 epochs in 3.9s
+  [L3H3-branch-T_lineage] trained 1500 epochs in 2.6s
+  [L3H3-branch-macrophage] trained 1500 epochs in 3.3s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L3H3-branch-B_lineage] trained 1500 epochs in 3.4s
+  [L3H3-branch-NK] trained 1500 epochs in 3.8s
+  [L3H3-branch-erythroid] trained 1500 epochs in 4.2s
+  [L3H3-branch-granulocyte] trained 1500 epochs in 3.6s
+  [L3H3-branch-stem] trained 1500 epochs in 3.8s
+  [L3H3-branch-lymphoid] trained 1500 epochs in 4.2s
+  [L3H3-branch-dendritic] trained 1500 epochs in 3.8s
+  L3H3: trust=0.721  rand=0.745  branch=0.330  (54.3s)
+  [L3H4] trained 1500 epochs in 4.7s
+  [rand-holdout] trained 1500 epochs in 3.7s
+  [rand-holdout] trained 1500 epochs in 3.3s
+  [rand-holdout] trained 1500 epochs in 3.6s
+  [L3H4-branch] groups: 12
+  [L3H4-branch-monocyte] trained 1500 epochs in 4.0s
+  [L3H4-branch-T_lineage] trained 1500 epochs in 2.4s
+  [L3H4-branch-macrophage] trained 1500 epochs in 3.1s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L3H4-branch-B_lineage] trained 1500 epochs in 3.7s
+  [L3H4-branch-NK] trained 1500 epochs in 3.5s
+  [L3H4-branch-erythroid] trained 1500 epochs in 3.5s
+  [L3H4-branch-granulocyte] trained 1500 epochs in 3.7s
+  [L3H4-branch-stem] trained 1500 epochs in 3.3s
+  [L3H4-branch-lymphoid] trained 1500 epochs in 4.2s
+  [L3H4-branch-dendritic] trained 1500 epochs in 3.7s
+  L3H4: trust=0.744  rand=0.773  branch=0.409  (50.4s)
+  [L3H5] trained 1500 epochs in 4.1s
+  [rand-holdout] trained 1500 epochs in 4.2s
+  [rand-holdout] trained 1500 epochs in 3.6s
+  [rand-holdout] trained 1500 epochs in 2.9s
+  [L3H5-branch] groups: 12
+  [L3H5-branch-monocyte] trained 1500 epochs in 3.6s
+  [L3H5-branch-T_lineage] trained 1500 epochs in 2.6s
+  [L3H5-branch-macrophage] trained 1500 epochs in 3.9s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L3H5-branch-B_lineage] trained 1500 epochs in 3.1s
+  [L3H5-branch-NK] trained 1500 epochs in 4.0s
+  [L3H5-branch-erythroid] trained 1500 epochs in 3.5s
+  [L3H5-branch-granulocyte] trained 1500 epochs in 3.1s
+  [L3H5-branch-stem] trained 1500 epochs in 4.3s
+  [L3H5-branch-lymphoid] trained 1500 epochs in 3.8s
+  [L3H5-branch-dendritic] trained 1500 epochs in 4.5s
+  L3H5: trust=0.726  rand=0.805  branch=0.324  (51.3s)
+  [L3H6] trained 1500 epochs in 5.1s
+  [rand-holdout] trained 1500 epochs in 4.1s
+  [rand-holdout] trained 1500 epochs in 2.7s
+  [rand-holdout] trained 1500 epochs in 3.5s
+  [L3H6-branch] groups: 12
+  [L3H6-branch-monocyte] trained 1500 epochs in 3.9s
+  [L3H6-branch-T_lineage] trained 1500 epochs in 2.8s
+  [L3H6-branch-macrophage] trained 1500 epochs in 4.1s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L3H6-branch-B_lineage] trained 1500 epochs in 3.6s
+  [L3H6-branch-NK] trained 1500 epochs in 4.9s
+  [L3H6-branch-erythroid] trained 1500 epochs in 3.3s
+  [L3H6-branch-granulocyte] trained 1500 epochs in 3.9s
+  [L3H6-branch-stem] trained 1500 epochs in 3.9s
+  [L3H6-branch-lymphoid] trained 1500 epochs in 3.3s
+  [L3H6-branch-dendritic] trained 1500 epochs in 3.1s
+  L3H6: trust=0.769  rand=0.762  branch=0.457  (52.3s)
+  [L3H7] trained 1500 epochs in 4.7s
+  [rand-holdout] trained 1500 epochs in 3.7s
+  [rand-holdout] trained 1500 epochs in 3.1s
+  [rand-holdout] trained 1500 epochs in 4.3s
+  [L3H7-branch] groups: 12
+  [L3H7-branch-monocyte] trained 1500 epochs in 4.4s
+  [L3H7-branch-T_lineage] trained 1500 epochs in 3.1s
+  [L3H7-branch-macrophage] trained 1500 epochs in 3.7s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L3H7-branch-B_lineage] trained 1500 epochs in 3.4s
+  [L3H7-branch-NK] trained 1500 epochs in 4.3s
+  [L3H7-branch-erythroid] trained 1500 epochs in 3.9s
+  [L3H7-branch-granulocyte] trained 1500 epochs in 3.3s
+  [L3H7-branch-stem] trained 1500 epochs in 3.9s
+  [L3H7-branch-lymphoid] trained 1500 epochs in 3.9s
+  [L3H7-branch-dendritic] trained 1500 epochs in 3.9s
+  L3H7: trust=0.704  rand=0.774  branch=0.345  (53.6s)
+  [L4H0] trained 1500 epochs in 4.3s
+  [rand-holdout] trained 1500 epochs in 3.8s
+  [rand-holdout] trained 1500 epochs in 3.6s
+  [rand-holdout] trained 1500 epochs in 3.8s
+  [L4H0-branch] groups: 12
+  [L4H0-branch-monocyte] trained 1500 epochs in 4.2s
+  [L4H0-branch-T_lineage] trained 1500 epochs in 3.5s
+  [L4H0-branch-macrophage] trained 1500 epochs in 3.6s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L4H0-branch-B_lineage] trained 1500 epochs in 3.8s
+  [L4H0-branch-NK] trained 1500 epochs in 3.5s
+  [L4H0-branch-erythroid] trained 1500 epochs in 4.1s
+  [L4H0-branch-granulocyte] trained 1500 epochs in 3.7s
+  [L4H0-branch-stem] trained 1500 epochs in 3.7s
+  [L4H0-branch-lymphoid] trained 1500 epochs in 3.8s
+  [L4H0-branch-dendritic] trained 1500 epochs in 4.0s
+  L4H0: trust=0.745  rand=0.717  branch=0.146  (53.5s)
+  [L4H1] trained 1500 epochs in 4.3s
+  [rand-holdout] trained 1500 epochs in 3.6s
+  [rand-holdout] trained 1500 epochs in 3.6s
+  [rand-holdout] trained 1500 epochs in 3.7s
+  [L4H1-branch] groups: 12
+  [L4H1-branch-monocyte] trained 1500 epochs in 3.7s
+  [L4H1-branch-T_lineage] trained 1500 epochs in 2.5s
+  [L4H1-branch-macrophage] trained 1500 epochs in 3.6s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L4H1-branch-B_lineage] trained 1500 epochs in 3.7s
+  [L4H1-branch-NK] trained 1500 epochs in 4.7s
+  [L4H1-branch-erythroid] trained 1500 epochs in 4.8s
+  [L4H1-branch-granulocyte] trained 1500 epochs in 5.1s
+  [L4H1-branch-stem] trained 1500 epochs in 4.4s
+  [L4H1-branch-lymphoid] trained 1500 epochs in 5.3s
+  [L4H1-branch-dendritic] trained 1500 epochs in 5.0s
+  L4H1: trust=0.735  rand=0.764  branch=0.264  (58.2s)
+  [L4H2] trained 1500 epochs in 4.8s
+  [rand-holdout] trained 1500 epochs in 4.8s
+  [rand-holdout] trained 1500 epochs in 4.3s
+  [rand-holdout] trained 1500 epochs in 3.5s
+  [L4H2-branch] groups: 12
+  [L4H2-branch-monocyte] trained 1500 epochs in 4.2s
+  [L4H2-branch-T_lineage] trained 1500 epochs in 2.7s
+  [L4H2-branch-macrophage] trained 1500 epochs in 3.6s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L4H2-branch-B_lineage] trained 1500 epochs in 3.8s
+  [L4H2-branch-NK] trained 1500 epochs in 3.8s
+  [L4H2-branch-erythroid] trained 1500 epochs in 4.4s
+  [L4H2-branch-granulocyte] trained 1500 epochs in 3.3s
+  [L4H2-branch-stem] trained 1500 epochs in 4.1s
+  [L4H2-branch-lymphoid] trained 1500 epochs in 4.2s
+  [L4H2-branch-dendritic] trained 1500 epochs in 4.0s
+  L4H2: trust=0.787  rand=0.784  branch=0.179  (55.8s)
+  [L4H3] trained 1500 epochs in 4.1s
+  [rand-holdout] trained 1500 epochs in 3.8s
+  [rand-holdout] trained 1500 epochs in 3.7s
+  [rand-holdout] trained 1500 epochs in 3.6s
+  [L4H3-branch] groups: 12
+  [L4H3-branch-monocyte] trained 1500 epochs in 3.7s
+  [L4H3-branch-T_lineage] trained 1500 epochs in 2.7s
+  [L4H3-branch-macrophage] trained 1500 epochs in 3.8s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L4H3-branch-B_lineage] trained 1500 epochs in 3.8s
+  [L4H3-branch-NK] trained 1500 epochs in 3.3s
+  [L4H3-branch-erythroid] trained 1500 epochs in 4.2s
+  [L4H3-branch-granulocyte] trained 1500 epochs in 3.5s
+  [L4H3-branch-stem] trained 1500 epochs in 2.9s
+  [L4H3-branch-lymphoid] trained 1500 epochs in 3.4s
+  [L4H3-branch-dendritic] trained 1500 epochs in 3.5s
+  L4H3: trust=0.725  rand=0.775  branch=0.401  (49.9s)
+  [L4H4] trained 1500 epochs in 4.9s
+  [rand-holdout] trained 1500 epochs in 4.1s
+  [rand-holdout] trained 1500 epochs in 2.8s
+  [rand-holdout] trained 1500 epochs in 3.5s
+  [L4H4-branch] groups: 12
+  [L4H4-branch-monocyte] trained 1500 epochs in 2.9s
+  [L4H4-branch-T_lineage] trained 1500 epochs in 2.5s
+  [L4H4-branch-macrophage] trained 1500 epochs in 3.3s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L4H4-branch-B_lineage] trained 1500 epochs in 3.8s
+  [L4H4-branch-NK] trained 1500 epochs in 3.1s
+  [L4H4-branch-erythroid] trained 1500 epochs in 4.0s
+  [L4H4-branch-granulocyte] trained 1500 epochs in 3.6s
+  [L4H4-branch-stem] trained 1500 epochs in 3.3s
+  [L4H4-branch-lymphoid] trained 1500 epochs in 3.9s
+  [L4H4-branch-dendritic] trained 1500 epochs in 3.9s
+  L4H4: trust=0.702  rand=0.805  branch=0.376  (49.8s)
+  [L4H5] trained 1500 epochs in 4.1s
+  [rand-holdout] trained 1500 epochs in 3.1s
+  [rand-holdout] trained 1500 epochs in 3.2s
+  [rand-holdout] trained 1500 epochs in 3.4s
+  [L4H5-branch] groups: 12
+  [L4H5-branch-monocyte] trained 1500 epochs in 3.1s
+  [L4H5-branch-T_lineage] trained 1500 epochs in 2.2s
+  [L4H5-branch-macrophage] trained 1500 epochs in 3.6s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L4H5-branch-B_lineage] trained 1500 epochs in 3.0s
+  [L4H5-branch-NK] trained 1500 epochs in 3.2s
+  [L4H5-branch-erythroid] trained 1500 epochs in 3.3s
+  [L4H5-branch-granulocyte] trained 1500 epochs in 3.1s
+  [L4H5-branch-stem] trained 1500 epochs in 3.7s
+  [L4H5-branch-lymphoid] trained 1500 epochs in 3.1s
+  [L4H5-branch-dendritic] trained 1500 epochs in 4.0s
+  L4H5: trust=0.722  rand=0.738  branch=0.332  (46.3s)
+  [L4H6] trained 1500 epochs in 3.4s
+  [rand-holdout] trained 1500 epochs in 3.3s
+  [rand-holdout] trained 1500 epochs in 3.3s
+  [rand-holdout] trained 1500 epochs in 3.4s
+  [L4H6-branch] groups: 12
+  [L4H6-branch-monocyte] trained 1500 epochs in 3.6s
+  [L4H6-branch-T_lineage] trained 1500 epochs in 2.6s
+  [L4H6-branch-macrophage] trained 1500 epochs in 3.3s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L4H6-branch-B_lineage] trained 1500 epochs in 4.2s
+  [L4H6-branch-NK] trained 1500 epochs in 4.5s
+  [L4H6-branch-erythroid] trained 1500 epochs in 3.9s
+  [L4H6-branch-granulocyte] trained 1500 epochs in 3.6s
+  [L4H6-branch-stem] trained 1500 epochs in 3.6s
+  [L4H6-branch-lymphoid] trained 1500 epochs in 3.9s
+  [L4H6-branch-dendritic] trained 1500 epochs in 2.8s
+  L4H6: trust=0.747  rand=0.764  branch=0.279  (49.4s)
+  [L4H7] trained 1500 epochs in 3.9s
+  [rand-holdout] trained 1500 epochs in 3.7s
+  [rand-holdout] trained 1500 epochs in 3.1s
+  [rand-holdout] trained 1500 epochs in 2.7s
+  [L4H7-branch] groups: 12
+  [L4H7-branch-monocyte] trained 1500 epochs in 4.1s
+  [L4H7-branch-T_lineage] trained 1500 epochs in 2.3s
+  [L4H7-branch-macrophage] trained 1500 epochs in 3.6s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L4H7-branch-B_lineage] trained 1500 epochs in 4.3s
+  [L4H7-branch-NK] trained 1500 epochs in 5.4s
+  [L4H7-branch-erythroid] trained 1500 epochs in 4.1s
+  [L4H7-branch-granulocyte] trained 1500 epochs in 3.5s
+  [L4H7-branch-stem] trained 1500 epochs in 4.1s
+  [L4H7-branch-lymphoid] trained 1500 epochs in 4.0s
+  [L4H7-branch-dendritic] trained 1500 epochs in 3.0s
+  L4H7: trust=0.783  rand=0.747  branch=0.171  (51.9s)
+  [L5H0] trained 1500 epochs in 3.5s
+  [rand-holdout] trained 1500 epochs in 3.7s
+  [rand-holdout] trained 1500 epochs in 3.6s
+  [rand-holdout] trained 1500 epochs in 3.4s
+  [L5H0-branch] groups: 12
+  [L5H0-branch-monocyte] trained 1500 epochs in 3.2s
+  [L5H0-branch-T_lineage] trained 1500 epochs in 2.3s
+  [L5H0-branch-macrophage] trained 1500 epochs in 3.6s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L5H0-branch-B_lineage] trained 1500 epochs in 3.5s
+  [L5H0-branch-NK] trained 1500 epochs in 4.0s
+  [L5H0-branch-erythroid] trained 1500 epochs in 4.7s
+  [L5H0-branch-granulocyte] trained 1500 epochs in 4.6s
+  [L5H0-branch-stem] trained 1500 epochs in 4.1s
+  [L5H0-branch-lymphoid] trained 1500 epochs in 4.5s
+  [L5H0-branch-dendritic] trained 1500 epochs in 4.3s
+  L5H0: trust=0.734  rand=0.781  branch=0.388  (53.0s)
+  [L5H1] trained 1500 epochs in 4.3s
+  [rand-holdout] trained 1500 epochs in 2.9s
+  [rand-holdout] trained 1500 epochs in 3.5s
+  [rand-holdout] trained 1500 epochs in 2.5s
+  [L5H1-branch] groups: 12
+  [L5H1-branch-monocyte] trained 1500 epochs in 3.1s
+  [L5H1-branch-T_lineage] trained 1500 epochs in 2.0s
+  [L5H1-branch-macrophage] trained 1500 epochs in 3.0s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L5H1-branch-B_lineage] trained 1500 epochs in 3.5s
+  [L5H1-branch-NK] trained 1500 epochs in 4.0s
+  [L5H1-branch-erythroid] trained 1500 epochs in 3.0s
+  [L5H1-branch-granulocyte] trained 1500 epochs in 3.6s
+  [L5H1-branch-stem] trained 1500 epochs in 4.0s
+  [L5H1-branch-lymphoid] trained 1500 epochs in 4.0s
+  [L5H1-branch-dendritic] trained 1500 epochs in 3.9s
+  L5H1: trust=0.731  rand=0.751  branch=0.317  (47.5s)
+  [L5H2] trained 1500 epochs in 5.6s
+  [rand-holdout] trained 1500 epochs in 4.4s
+  [rand-holdout] trained 1500 epochs in 4.2s
+  [rand-holdout] trained 1500 epochs in 4.7s
+  [L5H2-branch] groups: 12
+  [L5H2-branch-monocyte] trained 1500 epochs in 3.2s
+  [L5H2-branch-T_lineage] trained 1500 epochs in 3.0s
+  [L5H2-branch-macrophage] trained 1500 epochs in 3.8s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L5H2-branch-B_lineage] trained 1500 epochs in 3.9s
+  [L5H2-branch-NK] trained 1500 epochs in 4.3s
+  [L5H2-branch-erythroid] trained 1500 epochs in 4.9s
+  [L5H2-branch-granulocyte] trained 1500 epochs in 3.8s
+  [L5H2-branch-stem] trained 1500 epochs in 4.9s
+  [L5H2-branch-lymphoid] trained 1500 epochs in 5.8s
+  [L5H2-branch-dendritic] trained 1500 epochs in 5.1s
+  L5H2: trust=0.714  rand=0.753  branch=0.318  (61.6s)
+  [L5H3] trained 1500 epochs in 4.0s
+  [rand-holdout] trained 1500 epochs in 3.4s
+  [rand-holdout] trained 1500 epochs in 2.6s
+  [rand-holdout] trained 1500 epochs in 3.2s
+  [L5H3-branch] groups: 12
+  [L5H3-branch-monocyte] trained 1500 epochs in 3.3s
+  [L5H3-branch-T_lineage] trained 1500 epochs in 2.2s
+  [L5H3-branch-macrophage] trained 1500 epochs in 2.9s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L5H3-branch-B_lineage] trained 1500 epochs in 3.2s
+  [L5H3-branch-NK] trained 1500 epochs in 3.7s
+  [L5H3-branch-erythroid] trained 1500 epochs in 3.8s
+  [L5H3-branch-granulocyte] trained 1500 epochs in 3.5s
+  [L5H3-branch-stem] trained 1500 epochs in 3.6s
+  [L5H3-branch-lymphoid] trained 1500 epochs in 3.5s
+  [L5H3-branch-dendritic] trained 1500 epochs in 4.0s
+  L5H3: trust=0.735  rand=0.765  branch=0.340  (47.1s)
+  [L5H4] trained 1500 epochs in 3.9s
+  [rand-holdout] trained 1500 epochs in 3.9s
+  [rand-holdout] trained 1500 epochs in 3.2s
+  [rand-holdout] trained 1500 epochs in 4.0s
+  [L5H4-branch] groups: 12
+  [L5H4-branch-monocyte] trained 1500 epochs in 3.6s
+  [L5H4-branch-T_lineage] trained 1500 epochs in 2.9s
+  [L5H4-branch-macrophage] trained 1500 epochs in 4.1s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L5H4-branch-B_lineage] trained 1500 epochs in 3.7s
+  [L5H4-branch-NK] trained 1500 epochs in 4.3s
+  [L5H4-branch-erythroid] trained 1500 epochs in 3.7s
+  [L5H4-branch-granulocyte] trained 1500 epochs in 3.7s
+  [L5H4-branch-stem] trained 1500 epochs in 3.9s
+  [L5H4-branch-lymphoid] trained 1500 epochs in 4.0s
+  [L5H4-branch-dendritic] trained 1500 epochs in 3.4s
+  L5H4: trust=0.745  rand=0.771  branch=0.265  (52.4s)
+  [L5H5] trained 1500 epochs in 4.4s
+  [rand-holdout] trained 1500 epochs in 3.7s
+  [rand-holdout] trained 1500 epochs in 3.8s
+  [rand-holdout] trained 1500 epochs in 3.5s
+  [L5H5-branch] groups: 12
+  [L5H5-branch-monocyte] trained 1500 epochs in 5.3s
+  [L5H5-branch-T_lineage] trained 1500 epochs in 3.5s
+  [L5H5-branch-macrophage] trained 1500 epochs in 5.0s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L5H5-branch-B_lineage] trained 1500 epochs in 4.5s
+  [L5H5-branch-NK] trained 1500 epochs in 4.5s
+  [L5H5-branch-erythroid] trained 1500 epochs in 5.7s
+  [L5H5-branch-granulocyte] trained 1500 epochs in 4.6s
+  [L5H5-branch-stem] trained 1500 epochs in 5.0s
+  [L5H5-branch-lymphoid] trained 1500 epochs in 4.0s
+  [L5H5-branch-dendritic] trained 1500 epochs in 3.2s
+  L5H5: trust=0.700  rand=0.807  branch=0.226  (60.7s)
+  [L5H6] trained 1500 epochs in 4.3s
+  [rand-holdout] trained 1500 epochs in 3.4s
+  [rand-holdout] trained 1500 epochs in 3.5s
+  [rand-holdout] trained 1500 epochs in 3.6s
+  [L5H6-branch] groups: 12
+  [L5H6-branch-monocyte] trained 1500 epochs in 3.8s
+  [L5H6-branch-T_lineage] trained 1500 epochs in 2.5s
+  [L5H6-branch-macrophage] trained 1500 epochs in 3.4s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L5H6-branch-B_lineage] trained 1500 epochs in 3.5s
+  [L5H6-branch-NK] trained 1500 epochs in 5.0s
+  [L5H6-branch-erythroid] trained 1500 epochs in 3.2s
+  [L5H6-branch-granulocyte] trained 1500 epochs in 3.0s
+  [L5H6-branch-stem] trained 1500 epochs in 3.4s
+  [L5H6-branch-lymphoid] trained 1500 epochs in 3.6s
+  [L5H6-branch-dendritic] trained 1500 epochs in 3.9s
+  L5H6: trust=0.728  rand=0.779  branch=0.365  (50.1s)
+  [L5H7] trained 1500 epochs in 4.0s
+  [rand-holdout] trained 1500 epochs in 2.6s
+  [rand-holdout] trained 1500 epochs in 3.2s
+  [rand-holdout] trained 1500 epochs in 3.1s
+  [L5H7-branch] groups: 12
+  [L5H7-branch-monocyte] trained 1500 epochs in 3.0s
+  [L5H7-branch-T_lineage] trained 1500 epochs in 1.8s
+  [L5H7-branch-macrophage] trained 1500 epochs in 3.4s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L5H7-branch-B_lineage] trained 1500 epochs in 4.2s
+  [L5H7-branch-NK] trained 1500 epochs in 3.2s
+  [L5H7-branch-erythroid] trained 1500 epochs in 3.8s
+  [L5H7-branch-granulocyte] trained 1500 epochs in 4.1s
+  [L5H7-branch-stem] trained 1500 epochs in 4.4s
+  [L5H7-branch-lymphoid] trained 1500 epochs in 3.4s
+  [L5H7-branch-dendritic] trained 1500 epochs in 4.7s
+  L5H7: trust=0.733  rand=0.698  branch=0.376  (49.1s)
+  [L6H0] trained 1500 epochs in 4.1s
+  [rand-holdout] trained 1500 epochs in 3.8s
+  [rand-holdout] trained 1500 epochs in 3.2s
+  [rand-holdout] trained 1500 epochs in 3.4s
+  [L6H0-branch] groups: 12
+  [L6H0-branch-monocyte] trained 1500 epochs in 4.9s
+  [L6H0-branch-T_lineage] trained 1500 epochs in 3.1s
+  [L6H0-branch-macrophage] trained 1500 epochs in 4.5s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L6H0-branch-B_lineage] trained 1500 epochs in 3.3s
+  [L6H0-branch-NK] trained 1500 epochs in 4.2s
+  [L6H0-branch-erythroid] trained 1500 epochs in 4.6s
+  [L6H0-branch-granulocyte] trained 1500 epochs in 3.9s
+  [L6H0-branch-stem] trained 1500 epochs in 5.7s
+  [L6H0-branch-lymphoid] trained 1500 epochs in 3.0s
+  [L6H0-branch-dendritic] trained 1500 epochs in 5.4s
+  L6H0: trust=0.657  rand=0.801  branch=0.096  (57.0s)
+  [L6H1] trained 1500 epochs in 4.8s
+  [rand-holdout] trained 1500 epochs in 3.7s
+  [rand-holdout] trained 1500 epochs in 3.2s
+  [rand-holdout] trained 1500 epochs in 2.8s
+  [L6H1-branch] groups: 12
+  [L6H1-branch-monocyte] trained 1500 epochs in 3.2s
+  [L6H1-branch-T_lineage] trained 1500 epochs in 2.3s
+  [L6H1-branch-macrophage] trained 1500 epochs in 3.6s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L6H1-branch-B_lineage] trained 1500 epochs in 3.4s
+  [L6H1-branch-NK] trained 1500 epochs in 3.8s
+  [L6H1-branch-erythroid] trained 1500 epochs in 3.4s
+  [L6H1-branch-granulocyte] trained 1500 epochs in 3.8s
+  [L6H1-branch-stem] trained 1500 epochs in 3.4s
+  [L6H1-branch-lymphoid] trained 1500 epochs in 4.1s
+  [L6H1-branch-dendritic] trained 1500 epochs in 3.2s
+  L6H1: trust=0.617  rand=0.785  branch=0.162  (48.8s)
+  [L6H2] trained 1500 epochs in 4.0s
+  [rand-holdout] trained 1500 epochs in 6.3s
+  [rand-holdout] trained 1500 epochs in 6.3s
+  [rand-holdout] trained 1500 epochs in 6.2s
+  [L6H2-branch] groups: 12
+  [L6H2-branch-monocyte] trained 1500 epochs in 4.7s
+  [L6H2-branch-T_lineage] trained 1500 epochs in 3.5s
+  [L6H2-branch-macrophage] trained 1500 epochs in 4.7s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L6H2-branch-B_lineage] trained 1500 epochs in 3.9s
+  [L6H2-branch-NK] trained 1500 epochs in 3.9s
+  [L6H2-branch-erythroid] trained 1500 epochs in 5.0s
+  [L6H2-branch-granulocyte] trained 1500 epochs in 3.2s
+  [L6H2-branch-stem] trained 1500 epochs in 4.0s
+  [L6H2-branch-lymphoid] trained 1500 epochs in 3.8s
+  [L6H2-branch-dendritic] trained 1500 epochs in 3.0s
+  L6H2: trust=0.639  rand=0.783  branch=0.437  (62.6s)
+  [L6H3] trained 1500 epochs in 4.1s
+  [rand-holdout] trained 1500 epochs in 3.7s
+  [rand-holdout] trained 1500 epochs in 3.0s
+  [rand-holdout] trained 1500 epochs in 2.7s
+  [L6H3-branch] groups: 12
+  [L6H3-branch-monocyte] trained 1500 epochs in 4.3s
+  [L6H3-branch-T_lineage] trained 1500 epochs in 2.5s
+  [L6H3-branch-macrophage] trained 1500 epochs in 5.2s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L6H3-branch-B_lineage] trained 1500 epochs in 4.1s
+  [L6H3-branch-NK] trained 1500 epochs in 3.9s
+  [L6H3-branch-erythroid] trained 1500 epochs in 4.5s
+  [L6H3-branch-granulocyte] trained 1500 epochs in 3.5s
+  [L6H3-branch-stem] trained 1500 epochs in 4.4s
+  [L6H3-branch-lymphoid] trained 1500 epochs in 3.2s
+  [L6H3-branch-dendritic] trained 1500 epochs in 4.2s
+  L6H3: trust=0.766  rand=0.796  branch=0.293  (53.3s)
+  [L6H4] trained 1500 epochs in 4.9s
+  [rand-holdout] trained 1500 epochs in 3.9s
+  [rand-holdout] trained 1500 epochs in 3.2s
+  [rand-holdout] trained 1500 epochs in 3.9s
+  [L6H4-branch] groups: 12
+  [L6H4-branch-monocyte] trained 1500 epochs in 3.4s
+  [L6H4-branch-T_lineage] trained 1500 epochs in 2.3s
+  [L6H4-branch-macrophage] trained 1500 epochs in 4.5s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L6H4-branch-B_lineage] trained 1500 epochs in 2.8s
+  [L6H4-branch-NK] trained 1500 epochs in 3.4s
+  [L6H4-branch-erythroid] trained 1500 epochs in 3.0s
+  [L6H4-branch-granulocyte] trained 1500 epochs in 2.8s
+  [L6H4-branch-stem] trained 1500 epochs in 3.1s
+  [L6H4-branch-lymphoid] trained 1500 epochs in 4.1s
+  [L6H4-branch-dendritic] trained 1500 epochs in 3.9s
+  L6H4: trust=0.651  rand=0.814  branch=0.327  (49.5s)
+  [L6H5] trained 1500 epochs in 5.5s
+  [rand-holdout] trained 1500 epochs in 4.4s
+  [rand-holdout] trained 1500 epochs in 3.5s
+  [rand-holdout] trained 1500 epochs in 3.2s
+  [L6H5-branch] groups: 12
+  [L6H5-branch-monocyte] trained 1500 epochs in 3.0s
+  [L6H5-branch-T_lineage] trained 1500 epochs in 2.0s
+  [L6H5-branch-macrophage] trained 1500 epochs in 2.7s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L6H5-branch-B_lineage] trained 1500 epochs in 2.9s
+  [L6H5-branch-NK] trained 1500 epochs in 3.5s
+  [L6H5-branch-erythroid] trained 1500 epochs in 3.9s
+  [L6H5-branch-granulocyte] trained 1500 epochs in 3.0s
+  [L6H5-branch-stem] trained 1500 epochs in 3.8s
+  [L6H5-branch-lymphoid] trained 1500 epochs in 3.6s
+  [L6H5-branch-dendritic] trained 1500 epochs in 3.1s
+  L6H5: trust=0.702  rand=0.780  branch=0.343  (48.3s)
+  [L6H6] trained 1500 epochs in 3.8s
+  [rand-holdout] trained 1500 epochs in 4.0s
+  [rand-holdout] trained 1500 epochs in 4.7s
+  [rand-holdout] trained 1500 epochs in 3.3s
+  [L6H6-branch] groups: 12
+  [L6H6-branch-monocyte] trained 1500 epochs in 2.7s
+  [L6H6-branch-T_lineage] trained 1500 epochs in 1.9s
+  [L6H6-branch-macrophage] trained 1500 epochs in 3.6s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L6H6-branch-B_lineage] trained 1500 epochs in 3.2s
+  [L6H6-branch-NK] trained 1500 epochs in 3.3s
+  [L6H6-branch-erythroid] trained 1500 epochs in 3.5s
+  [L6H6-branch-granulocyte] trained 1500 epochs in 3.4s
+  [L6H6-branch-stem] trained 1500 epochs in 4.4s
+  [L6H6-branch-lymphoid] trained 1500 epochs in 4.4s
+  [L6H6-branch-dendritic] trained 1500 epochs in 3.5s
+  L6H6: trust=0.671  rand=0.784  branch=0.250  (49.8s)
+  [L6H7] trained 1500 epochs in 5.3s
+  [rand-holdout] trained 1500 epochs in 4.6s
+  [rand-holdout] trained 1500 epochs in 3.8s
+  [rand-holdout] trained 1500 epochs in 4.6s
+  [L6H7-branch] groups: 12
+  [L6H7-branch-monocyte] trained 1500 epochs in 4.7s
+  [L6H7-branch-T_lineage] trained 1500 epochs in 3.3s
+  [L6H7-branch-macrophage] trained 1500 epochs in 3.7s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L6H7-branch-B_lineage] trained 1500 epochs in 5.3s
+  [L6H7-branch-NK] trained 1500 epochs in 3.5s
+  [L6H7-branch-erythroid] trained 1500 epochs in 4.9s
+  [L6H7-branch-granulocyte] trained 1500 epochs in 3.8s
+  [L6H7-branch-stem] trained 1500 epochs in 4.3s
+  [L6H7-branch-lymphoid] trained 1500 epochs in 4.9s
+  [L6H7-branch-dendritic] trained 1500 epochs in 4.3s
+  L6H7: trust=0.694  rand=0.795  branch=0.407  (61.0s)
+  [L7H0] trained 1500 epochs in 4.7s
+  [rand-holdout] trained 1500 epochs in 3.7s
+  [rand-holdout] trained 1500 epochs in 3.8s
+  [rand-holdout] trained 1500 epochs in 3.5s
+  [L7H0-branch] groups: 12
+  [L7H0-branch-monocyte] trained 1500 epochs in 3.1s
+  [L7H0-branch-T_lineage] trained 1500 epochs in 2.2s
+  [L7H0-branch-macrophage] trained 1500 epochs in 3.9s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L7H0-branch-B_lineage] trained 1500 epochs in 3.5s
+  [L7H0-branch-NK] trained 1500 epochs in 3.6s
+  [L7H0-branch-erythroid] trained 1500 epochs in 3.6s
+  [L7H0-branch-granulocyte] trained 1500 epochs in 3.9s
+  [L7H0-branch-stem] trained 1500 epochs in 4.1s
+  [L7H0-branch-lymphoid] trained 1500 epochs in 4.0s
+  [L7H0-branch-dendritic] trained 1500 epochs in 4.4s
+  L7H0: trust=0.756  rand=0.746  branch=0.340  (52.2s)
+  [L7H1] trained 1500 epochs in 4.0s
+  [rand-holdout] trained 1500 epochs in 3.9s
+  [rand-holdout] trained 1500 epochs in 4.0s
+  [rand-holdout] trained 1500 epochs in 3.8s
+  [L7H1-branch] groups: 12
+  [L7H1-branch-monocyte] trained 1500 epochs in 4.0s
+  [L7H1-branch-T_lineage] trained 1500 epochs in 2.7s
+  [L7H1-branch-macrophage] trained 1500 epochs in 4.1s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L7H1-branch-B_lineage] trained 1500 epochs in 4.9s
+  [L7H1-branch-NK] trained 1500 epochs in 5.3s
+  [L7H1-branch-erythroid] trained 1500 epochs in 4.8s
+  [L7H1-branch-granulocyte] trained 1500 epochs in 5.1s
+  [L7H1-branch-stem] trained 1500 epochs in 3.5s
+  [L7H1-branch-lymphoid] trained 1500 epochs in 4.3s
+  [L7H1-branch-dendritic] trained 1500 epochs in 3.3s
+  L7H1: trust=0.736  rand=0.779  branch=0.330  (57.6s)
+  [L7H2] trained 1500 epochs in 4.0s
+  [rand-holdout] trained 1500 epochs in 4.0s
+  [rand-holdout] trained 1500 epochs in 3.5s
+  [rand-holdout] trained 1500 epochs in 3.6s
+  [L7H2-branch] groups: 12
+  [L7H2-branch-monocyte] trained 1500 epochs in 3.4s
+  [L7H2-branch-T_lineage] trained 1500 epochs in 2.2s
+  [L7H2-branch-macrophage] trained 1500 epochs in 3.3s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L7H2-branch-B_lineage] trained 1500 epochs in 3.2s
+  [L7H2-branch-NK] trained 1500 epochs in 2.8s
+  [L7H2-branch-erythroid] trained 1500 epochs in 4.5s
+  [L7H2-branch-granulocyte] trained 1500 epochs in 3.1s
+  [L7H2-branch-stem] trained 1500 epochs in 4.6s
+  [L7H2-branch-lymphoid] trained 1500 epochs in 4.4s
+  [L7H2-branch-dendritic] trained 1500 epochs in 6.2s
+  L7H2: trust=0.748  rand=0.751  branch=0.310  (53.0s)
+  [L7H3] trained 1500 epochs in 6.3s
+  [rand-holdout] trained 1500 epochs in 4.1s
+  [rand-holdout] trained 1500 epochs in 3.6s
+  [rand-holdout] trained 1500 epochs in 3.1s
+  [L7H3-branch] groups: 12
+  [L7H3-branch-monocyte] trained 1500 epochs in 5.0s
+  [L7H3-branch-T_lineage] trained 1500 epochs in 2.2s
+  [L7H3-branch-macrophage] trained 1500 epochs in 4.1s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L7H3-branch-B_lineage] trained 1500 epochs in 3.4s
+  [L7H3-branch-NK] trained 1500 epochs in 5.4s
+  [L7H3-branch-erythroid] trained 1500 epochs in 5.5s
+  [L7H3-branch-granulocyte] trained 1500 epochs in 3.8s
+  [L7H3-branch-stem] trained 1500 epochs in 4.1s
+  [L7H3-branch-lymphoid] trained 1500 epochs in 4.3s
+  [L7H3-branch-dendritic] trained 1500 epochs in 3.5s
+  L7H3: trust=0.769  rand=0.742  branch=0.317  (58.5s)
+  [L7H4] trained 1500 epochs in 4.3s
+  [rand-holdout] trained 1500 epochs in 3.9s
+  [rand-holdout] trained 1500 epochs in 3.2s
+  [rand-holdout] trained 1500 epochs in 3.0s
+  [L7H4-branch] groups: 12
+  [L7H4-branch-monocyte] trained 1500 epochs in 3.6s
+  [L7H4-branch-T_lineage] trained 1500 epochs in 2.3s
+  [L7H4-branch-macrophage] trained 1500 epochs in 3.2s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L7H4-branch-B_lineage] trained 1500 epochs in 2.7s
+  [L7H4-branch-NK] trained 1500 epochs in 3.5s
+  [L7H4-branch-erythroid] trained 1500 epochs in 3.5s
+  [L7H4-branch-granulocyte] trained 1500 epochs in 3.4s
+  [L7H4-branch-stem] trained 1500 epochs in 3.4s
+  [L7H4-branch-lymphoid] trained 1500 epochs in 3.2s
+  [L7H4-branch-dendritic] trained 1500 epochs in 3.6s
+  L7H4: trust=0.759  rand=0.786  branch=0.335  (47.1s)
+  [L7H5] trained 1500 epochs in 4.3s
+  [rand-holdout] trained 1500 epochs in 3.3s
+  [rand-holdout] trained 1500 epochs in 3.7s
+  [rand-holdout] trained 1500 epochs in 3.9s
+  [L7H5-branch] groups: 12
+  [L7H5-branch-monocyte] trained 1500 epochs in 3.3s
+  [L7H5-branch-T_lineage] trained 1500 epochs in 2.6s
+  [L7H5-branch-macrophage] trained 1500 epochs in 3.4s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L7H5-branch-B_lineage] trained 1500 epochs in 3.9s
+  [L7H5-branch-NK] trained 1500 epochs in 3.4s
+  [L7H5-branch-erythroid] trained 1500 epochs in 3.1s
+  [L7H5-branch-granulocyte] trained 1500 epochs in 3.0s
+  [L7H5-branch-stem] trained 1500 epochs in 3.1s
+  [L7H5-branch-lymphoid] trained 1500 epochs in 3.2s
+  [L7H5-branch-dendritic] trained 1500 epochs in 3.3s
+  L7H5: trust=0.736  rand=0.785  branch=0.413  (47.6s)
+  [L7H6] trained 1500 epochs in 4.1s
+  [rand-holdout] trained 1500 epochs in 3.9s
+  [rand-holdout] trained 1500 epochs in 3.3s
+  [rand-holdout] trained 1500 epochs in 3.9s
+  [L7H6-branch] groups: 12
+  [L7H6-branch-monocyte] trained 1500 epochs in 3.4s
+  [L7H6-branch-T_lineage] trained 1500 epochs in 2.3s
+  [L7H6-branch-macrophage] trained 1500 epochs in 3.4s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L7H6-branch-B_lineage] trained 1500 epochs in 3.5s
+  [L7H6-branch-NK] trained 1500 epochs in 3.3s
+  [L7H6-branch-erythroid] trained 1500 epochs in 4.0s
+  [L7H6-branch-granulocyte] trained 1500 epochs in 3.3s
+  [L7H6-branch-stem] trained 1500 epochs in 3.3s
+  [L7H6-branch-lymphoid] trained 1500 epochs in 3.9s
+  [L7H6-branch-dendritic] trained 1500 epochs in 4.1s
+  L7H6: trust=0.753  rand=0.749  branch=0.475  (49.8s)
+  [L7H7] trained 1500 epochs in 4.1s
+  [rand-holdout] trained 1500 epochs in 4.8s
+  [rand-holdout] trained 1500 epochs in 3.4s
+  [rand-holdout] trained 1500 epochs in 3.7s
+  [L7H7-branch] groups: 12
+  [L7H7-branch-monocyte] trained 1500 epochs in 3.3s
+  [L7H7-branch-T_lineage] trained 1500 epochs in 2.1s
+  [L7H7-branch-macrophage] trained 1500 epochs in 4.9s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L7H7-branch-B_lineage] trained 1500 epochs in 3.6s
+  [L7H7-branch-NK] trained 1500 epochs in 4.1s
+  [L7H7-branch-erythroid] trained 1500 epochs in 4.2s
+  [L7H7-branch-granulocyte] trained 1500 epochs in 6.1s
+  [L7H7-branch-stem] trained 1500 epochs in 5.0s
+  [L7H7-branch-lymphoid] trained 1500 epochs in 4.7s
+  [L7H7-branch-dendritic] trained 1500 epochs in 3.7s
+  L7H7: trust=0.739  rand=0.772  branch=0.399  (57.6s)
+  [L8H0] trained 1500 epochs in 5.1s
+  [rand-holdout] trained 1500 epochs in 3.6s
+  [rand-holdout] trained 1500 epochs in 3.6s
+  [rand-holdout] trained 1500 epochs in 4.1s
+  [L8H0-branch] groups: 12
+  [L8H0-branch-monocyte] trained 1500 epochs in 3.2s
+  [L8H0-branch-T_lineage] trained 1500 epochs in 1.9s
+  [L8H0-branch-macrophage] trained 1500 epochs in 3.6s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L8H0-branch-B_lineage] trained 1500 epochs in 4.6s
+  [L8H0-branch-NK] trained 1500 epochs in 3.8s
+  [L8H0-branch-erythroid] trained 1500 epochs in 3.4s
+  [L8H0-branch-granulocyte] trained 1500 epochs in 3.5s
+  [L8H0-branch-stem] trained 1500 epochs in 3.5s
+  [L8H0-branch-lymphoid] trained 1500 epochs in 4.3s
+  [L8H0-branch-dendritic] trained 1500 epochs in 3.7s
+  L8H0: trust=0.741  rand=0.813  branch=0.197  (52.0s)
+  [L8H1] trained 1500 epochs in 4.4s
+  [rand-holdout] trained 1500 epochs in 3.2s
+  [rand-holdout] trained 1500 epochs in 3.7s
+  [rand-holdout] trained 1500 epochs in 3.4s
+  [L8H1-branch] groups: 12
+  [L8H1-branch-monocyte] trained 1500 epochs in 2.8s
+  [L8H1-branch-T_lineage] trained 1500 epochs in 2.4s
+  [L8H1-branch-macrophage] trained 1500 epochs in 3.4s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L8H1-branch-B_lineage] trained 1500 epochs in 3.5s
+  [L8H1-branch-NK] trained 1500 epochs in 3.0s
+  [L8H1-branch-erythroid] trained 1500 epochs in 4.6s
+  [L8H1-branch-granulocyte] trained 1500 epochs in 4.2s
+  [L8H1-branch-stem] trained 1500 epochs in 3.3s
+  [L8H1-branch-lymphoid] trained 1500 epochs in 3.4s
+  [L8H1-branch-dendritic] trained 1500 epochs in 3.4s
+  L8H1: trust=0.825  rand=0.782  branch=0.390  (48.8s)
+  [L8H2] trained 1500 epochs in 4.2s
+  [rand-holdout] trained 1500 epochs in 3.8s
+  [rand-holdout] trained 1500 epochs in 3.4s
+  [rand-holdout] trained 1500 epochs in 2.6s
+  [L8H2-branch] groups: 12
+  [L8H2-branch-monocyte] trained 1500 epochs in 3.2s
+  [L8H2-branch-T_lineage] trained 1500 epochs in 2.2s
+  [L8H2-branch-macrophage] trained 1500 epochs in 3.5s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L8H2-branch-B_lineage] trained 1500 epochs in 3.1s
+  [L8H2-branch-NK] trained 1500 epochs in 3.6s
+  [L8H2-branch-erythroid] trained 1500 epochs in 3.8s
+  [L8H2-branch-granulocyte] trained 1500 epochs in 3.5s
+  [L8H2-branch-stem] trained 1500 epochs in 3.4s
+  [L8H2-branch-lymphoid] trained 1500 epochs in 3.6s
+  [L8H2-branch-dendritic] trained 1500 epochs in 3.9s
+  L8H2: trust=0.743  rand=0.813  branch=0.309  (48.1s)
+  [L8H3] trained 1500 epochs in 4.7s
+  [rand-holdout] trained 1500 epochs in 4.0s
+  [rand-holdout] trained 1500 epochs in 4.1s
+  [rand-holdout] trained 1500 epochs in 2.8s
+  [L8H3-branch] groups: 12
+  [L8H3-branch-monocyte] trained 1500 epochs in 3.5s
+  [L8H3-branch-T_lineage] trained 1500 epochs in 2.6s
+  [L8H3-branch-macrophage] trained 1500 epochs in 3.4s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L8H3-branch-B_lineage] trained 1500 epochs in 3.5s
+  [L8H3-branch-NK] trained 1500 epochs in 3.1s
+  [L8H3-branch-erythroid] trained 1500 epochs in 3.9s
+  [L8H3-branch-granulocyte] trained 1500 epochs in 4.5s
+  [L8H3-branch-stem] trained 1500 epochs in 4.5s
+  [L8H3-branch-lymphoid] trained 1500 epochs in 4.9s
+  [L8H3-branch-dendritic] trained 1500 epochs in 5.5s
+  L8H3: trust=0.684  rand=0.798  branch=0.447  (55.0s)
+  [L8H4] trained 1500 epochs in 4.8s
+  [rand-holdout] trained 1500 epochs in 3.6s
+  [rand-holdout] trained 1500 epochs in 3.1s
+  [rand-holdout] trained 1500 epochs in 2.8s
+  [L8H4-branch] groups: 12
+  [L8H4-branch-monocyte] trained 1500 epochs in 3.2s
+  [L8H4-branch-T_lineage] trained 1500 epochs in 2.6s
+  [L8H4-branch-macrophage] trained 1500 epochs in 3.7s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L8H4-branch-B_lineage] trained 1500 epochs in 3.7s
+  [L8H4-branch-NK] trained 1500 epochs in 2.9s
+  [L8H4-branch-erythroid] trained 1500 epochs in 4.2s
+  [L8H4-branch-granulocyte] trained 1500 epochs in 2.9s
+  [L8H4-branch-stem] trained 1500 epochs in 3.6s
+  [L8H4-branch-lymphoid] trained 1500 epochs in 3.9s
+  [L8H4-branch-dendritic] trained 1500 epochs in 3.5s
+  L8H4: trust=0.728  rand=0.794  branch=0.416  (48.6s)
+  [L8H5] trained 1500 epochs in 4.4s
+  [rand-holdout] trained 1500 epochs in 3.8s
+  [rand-holdout] trained 1500 epochs in 3.5s
+  [rand-holdout] trained 1500 epochs in 6.1s
+  [L8H5-branch] groups: 12
+  [L8H5-branch-monocyte] trained 1500 epochs in 4.5s
+  [L8H5-branch-T_lineage] trained 1500 epochs in 3.6s
+  [L8H5-branch-macrophage] trained 1500 epochs in 3.6s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L8H5-branch-B_lineage] trained 1500 epochs in 4.8s
+  [L8H5-branch-NK] trained 1500 epochs in 3.8s
+  [L8H5-branch-erythroid] trained 1500 epochs in 3.9s
+  [L8H5-branch-granulocyte] trained 1500 epochs in 3.7s
+  [L8H5-branch-stem] trained 1500 epochs in 4.2s
+  [L8H5-branch-lymphoid] trained 1500 epochs in 3.8s
+  [L8H5-branch-dendritic] trained 1500 epochs in 4.8s
+  L8H5: trust=0.733  rand=0.772  branch=0.460  (58.4s)
+  [L8H6] trained 1500 epochs in 3.4s
+  [rand-holdout] trained 1500 epochs in 2.8s
+  [rand-holdout] trained 1500 epochs in 3.0s
+  [rand-holdout] trained 1500 epochs in 2.9s
+  [L8H6-branch] groups: 12
+  [L8H6-branch-monocyte] trained 1500 epochs in 3.3s
+  [L8H6-branch-T_lineage] trained 1500 epochs in 2.3s
+  [L8H6-branch-macrophage] trained 1500 epochs in 2.8s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L8H6-branch-B_lineage] trained 1500 epochs in 3.5s
+  [L8H6-branch-NK] trained 1500 epochs in 3.2s
+  [L8H6-branch-erythroid] trained 1500 epochs in 3.1s
+  [L8H6-branch-granulocyte] trained 1500 epochs in 3.0s
+  [L8H6-branch-stem] trained 1500 epochs in 2.9s
+  [L8H6-branch-lymphoid] trained 1500 epochs in 3.3s
+  [L8H6-branch-dendritic] trained 1500 epochs in 3.5s
+  L8H6: trust=0.707  rand=0.779  branch=0.403  (43.0s)
+  [L8H7] trained 1500 epochs in 4.0s
+  [rand-holdout] trained 1500 epochs in 3.6s
+  [rand-holdout] trained 1500 epochs in 3.2s
+  [rand-holdout] trained 1500 epochs in 3.4s
+  [L8H7-branch] groups: 12
+  [L8H7-branch-monocyte] trained 1500 epochs in 3.9s
+  [L8H7-branch-T_lineage] trained 1500 epochs in 2.6s
+  [L8H7-branch-macrophage] trained 1500 epochs in 3.4s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L8H7-branch-B_lineage] trained 1500 epochs in 3.3s
+  [L8H7-branch-NK] trained 1500 epochs in 3.7s
+  [L8H7-branch-erythroid] trained 1500 epochs in 4.1s
+  [L8H7-branch-granulocyte] trained 1500 epochs in 3.6s
+  [L8H7-branch-stem] trained 1500 epochs in 3.8s
+  [L8H7-branch-lymphoid] trained 1500 epochs in 4.1s
+  [L8H7-branch-dendritic] trained 1500 epochs in 3.8s
+  L8H7: trust=0.739  rand=0.803  branch=0.409  (50.6s)
+  [L9H0] trained 1500 epochs in 4.3s
+  [rand-holdout] trained 1500 epochs in 3.8s
+  [rand-holdout] trained 1500 epochs in 3.4s
+  [rand-holdout] trained 1500 epochs in 3.5s
+  [L9H0-branch] groups: 12
+  [L9H0-branch-monocyte] trained 1500 epochs in 3.8s
+  [L9H0-branch-T_lineage] trained 1500 epochs in 2.5s
+  [L9H0-branch-macrophage] trained 1500 epochs in 3.9s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L9H0-branch-B_lineage] trained 1500 epochs in 3.6s
+  [L9H0-branch-NK] trained 1500 epochs in 3.9s
+  [L9H0-branch-erythroid] trained 1500 epochs in 3.8s
+  [L9H0-branch-granulocyte] trained 1500 epochs in 4.2s
+  [L9H0-branch-stem] trained 1500 epochs in 4.2s
+  [L9H0-branch-lymphoid] trained 1500 epochs in 4.6s
+  [L9H0-branch-dendritic] trained 1500 epochs in 4.1s
+  L9H0: trust=0.707  rand=0.805  branch=0.447  (53.8s)
+  [L9H1] trained 1500 epochs in 4.1s
+  [rand-holdout] trained 1500 epochs in 3.1s
+  [rand-holdout] trained 1500 epochs in 3.4s
+  [rand-holdout] trained 1500 epochs in 3.5s
+  [L9H1-branch] groups: 12
+  [L9H1-branch-monocyte] trained 1500 epochs in 3.4s
+  [L9H1-branch-T_lineage] trained 1500 epochs in 2.4s
+  [L9H1-branch-macrophage] trained 1500 epochs in 3.4s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L9H1-branch-B_lineage] trained 1500 epochs in 3.5s
+  [L9H1-branch-NK] trained 1500 epochs in 4.1s
+  [L9H1-branch-erythroid] trained 1500 epochs in 4.8s
+  [L9H1-branch-granulocyte] trained 1500 epochs in 3.9s
+  [L9H1-branch-stem] trained 1500 epochs in 3.9s
+  [L9H1-branch-lymphoid] trained 1500 epochs in 3.8s
+  [L9H1-branch-dendritic] trained 1500 epochs in 4.2s
+  L9H1: trust=0.697  rand=0.797  branch=0.337  (51.6s)
+  [L9H2] trained 1500 epochs in 4.5s
+  [rand-holdout] trained 1500 epochs in 3.9s
+  [rand-holdout] trained 1500 epochs in 3.7s
+  [rand-holdout] trained 1500 epochs in 3.2s
+  [L9H2-branch] groups: 12
+  [L9H2-branch-monocyte] trained 1500 epochs in 3.2s
+  [L9H2-branch-T_lineage] trained 1500 epochs in 2.6s
+  [L9H2-branch-macrophage] trained 1500 epochs in 3.7s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L9H2-branch-B_lineage] trained 1500 epochs in 3.4s
+  [L9H2-branch-NK] trained 1500 epochs in 3.5s
+  [L9H2-branch-erythroid] trained 1500 epochs in 3.9s
+  [L9H2-branch-granulocyte] trained 1500 epochs in 3.6s
+  [L9H2-branch-stem] trained 1500 epochs in 3.8s
+  [L9H2-branch-lymphoid] trained 1500 epochs in 3.9s
+  [L9H2-branch-dendritic] trained 1500 epochs in 4.2s
+  L9H2: trust=0.688  rand=0.803  branch=0.390  (51.0s)
+  [L9H3] trained 1500 epochs in 3.5s
+  [rand-holdout] trained 1500 epochs in 3.1s
+  [rand-holdout] trained 1500 epochs in 3.1s
+  [rand-holdout] trained 1500 epochs in 2.7s
+  [L9H3-branch] groups: 12
+  [L9H3-branch-monocyte] trained 1500 epochs in 3.0s
+  [L9H3-branch-T_lineage] trained 1500 epochs in 2.2s
+  [L9H3-branch-macrophage] trained 1500 epochs in 2.9s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L9H3-branch-B_lineage] trained 1500 epochs in 3.3s
+  [L9H3-branch-NK] trained 1500 epochs in 3.1s
+  [L9H3-branch-erythroid] trained 1500 epochs in 3.2s
+  [L9H3-branch-granulocyte] trained 1500 epochs in 3.8s
+  [L9H3-branch-stem] trained 1500 epochs in 4.1s
+  [L9H3-branch-lymphoid] trained 1500 epochs in 3.6s
+  [L9H3-branch-dendritic] trained 1500 epochs in 3.0s
+  L9H3: trust=0.702  rand=0.809  branch=0.415  (44.7s)
+  [L9H4] trained 1500 epochs in 4.2s
+  [rand-holdout] trained 1500 epochs in 3.6s
+  [rand-holdout] trained 1500 epochs in 3.4s
+  [rand-holdout] trained 1500 epochs in 3.0s
+  [L9H4-branch] groups: 12
+  [L9H4-branch-monocyte] trained 1500 epochs in 3.1s
+  [L9H4-branch-T_lineage] trained 1500 epochs in 3.2s
+  [L9H4-branch-macrophage] trained 1500 epochs in 3.5s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L9H4-branch-B_lineage] trained 1500 epochs in 2.8s
+  [L9H4-branch-NK] trained 1500 epochs in 3.7s
+  [L9H4-branch-erythroid] trained 1500 epochs in 3.7s
+  [L9H4-branch-granulocyte] trained 1500 epochs in 3.3s
+  [L9H4-branch-stem] trained 1500 epochs in 4.0s
+  [L9H4-branch-lymphoid] trained 1500 epochs in 4.1s
+  [L9H4-branch-dendritic] trained 1500 epochs in 3.3s
+  L9H4: trust=0.713  rand=0.802  branch=0.427  (48.9s)
+  [L9H5] trained 1500 epochs in 3.6s
+  [rand-holdout] trained 1500 epochs in 2.8s
+  [rand-holdout] trained 1500 epochs in 3.5s
+  [rand-holdout] trained 1500 epochs in 2.9s
+  [L9H5-branch] groups: 12
+  [L9H5-branch-monocyte] trained 1500 epochs in 3.1s
+  [L9H5-branch-T_lineage] trained 1500 epochs in 2.4s
+  [L9H5-branch-macrophage] trained 1500 epochs in 3.7s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L9H5-branch-B_lineage] trained 1500 epochs in 3.3s
+  [L9H5-branch-NK] trained 1500 epochs in 3.2s
+  [L9H5-branch-erythroid] trained 1500 epochs in 3.3s
+  [L9H5-branch-granulocyte] trained 1500 epochs in 4.0s
+  [L9H5-branch-stem] trained 1500 epochs in 3.4s
+  [L9H5-branch-lymphoid] trained 1500 epochs in 3.3s
+  [L9H5-branch-dendritic] trained 1500 epochs in 3.1s
+  L9H5: trust=0.694  rand=0.792  branch=0.278  (45.9s)
+  [L9H6] trained 1500 epochs in 3.6s
+  [rand-holdout] trained 1500 epochs in 4.2s
+  [rand-holdout] trained 1500 epochs in 3.5s
+  [rand-holdout] trained 1500 epochs in 3.7s
+  [L9H6-branch] groups: 12
+  [L9H6-branch-monocyte] trained 1500 epochs in 3.8s
+  [L9H6-branch-T_lineage] trained 1500 epochs in 2.4s
+  [L9H6-branch-macrophage] trained 1500 epochs in 3.6s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L9H6-branch-B_lineage] trained 1500 epochs in 3.9s
+  [L9H6-branch-NK] trained 1500 epochs in 3.5s
+  [L9H6-branch-erythroid] trained 1500 epochs in 3.4s
+  [L9H6-branch-granulocyte] trained 1500 epochs in 3.7s
+  [L9H6-branch-stem] trained 1500 epochs in 3.4s
+  [L9H6-branch-lymphoid] trained 1500 epochs in 4.1s
+  [L9H6-branch-dendritic] trained 1500 epochs in 4.6s
+  L9H6: trust=0.684  rand=0.782  branch=0.430  (51.5s)
+  [L9H7] trained 1500 epochs in 3.7s
+  [rand-holdout] trained 1500 epochs in 3.3s
+  [rand-holdout] trained 1500 epochs in 2.8s
+  [rand-holdout] trained 1500 epochs in 3.2s
+  [L9H7-branch] groups: 12
+  [L9H7-branch-monocyte] trained 1500 epochs in 3.4s
+  [L9H7-branch-T_lineage] trained 1500 epochs in 2.5s
+  [L9H7-branch-macrophage] trained 1500 epochs in 3.2s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L9H7-branch-B_lineage] trained 1500 epochs in 3.0s
+  [L9H7-branch-NK] trained 1500 epochs in 3.8s
+  [L9H7-branch-erythroid] trained 1500 epochs in 3.3s
+  [L9H7-branch-granulocyte] trained 1500 epochs in 2.8s
+  [L9H7-branch-stem] trained 1500 epochs in 3.9s
+  [L9H7-branch-lymphoid] trained 1500 epochs in 2.9s
+  [L9H7-branch-dendritic] trained 1500 epochs in 3.6s
+  L9H7: trust=0.680  rand=0.801  branch=0.404  (45.5s)
+  [L10H0] trained 1500 epochs in 4.1s
+  [rand-holdout] trained 1500 epochs in 4.2s
+  [rand-holdout] trained 1500 epochs in 3.4s
+  [rand-holdout] trained 1500 epochs in 3.6s
+  [L10H0-branch] groups: 12
+  [L10H0-branch-monocyte] trained 1500 epochs in 3.5s
+  [L10H0-branch-T_lineage] trained 1500 epochs in 2.4s
+  [L10H0-branch-macrophage] trained 1500 epochs in 3.4s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L10H0-branch-B_lineage] trained 1500 epochs in 3.7s
+  [L10H0-branch-NK] trained 1500 epochs in 3.6s
+  [L10H0-branch-erythroid] trained 1500 epochs in 4.2s
+  [L10H0-branch-granulocyte] trained 1500 epochs in 3.7s
+  [L10H0-branch-stem] trained 1500 epochs in 4.4s
+  [L10H0-branch-lymphoid] trained 1500 epochs in 3.4s
+  [L10H0-branch-dendritic] trained 1500 epochs in 4.3s
+  L10H0: trust=0.784  rand=0.771  branch=0.440  (52.2s)
+  [L10H1] trained 1500 epochs in 4.7s
+  [rand-holdout] trained 1500 epochs in 3.9s
+  [rand-holdout] trained 1500 epochs in 3.7s
+  [rand-holdout] trained 1500 epochs in 3.4s
+  [L10H1-branch] groups: 12
+  [L10H1-branch-monocyte] trained 1500 epochs in 4.2s
+  [L10H1-branch-T_lineage] trained 1500 epochs in 2.6s
+  [L10H1-branch-macrophage] trained 1500 epochs in 3.5s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L10H1-branch-B_lineage] trained 1500 epochs in 3.5s
+  [L10H1-branch-NK] trained 1500 epochs in 3.0s
+  [L10H1-branch-erythroid] trained 1500 epochs in 4.1s
+  [L10H1-branch-granulocyte] trained 1500 epochs in 4.2s
+  [L10H1-branch-stem] trained 1500 epochs in 4.6s
+  [L10H1-branch-lymphoid] trained 1500 epochs in 4.0s
+  [L10H1-branch-dendritic] trained 1500 epochs in 4.5s
+  L10H1: trust=0.763  rand=0.784  branch=0.280  (53.9s)
+  [L10H2] trained 1500 epochs in 4.8s
+  [rand-holdout] trained 1500 epochs in 3.4s
+  [rand-holdout] trained 1500 epochs in 3.2s
+  [rand-holdout] trained 1500 epochs in 3.8s
+  [L10H2-branch] groups: 12
+  [L10H2-branch-monocyte] trained 1500 epochs in 4.1s
+  [L10H2-branch-T_lineage] trained 1500 epochs in 2.6s
+  [L10H2-branch-macrophage] trained 1500 epochs in 4.2s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L10H2-branch-B_lineage] trained 1500 epochs in 3.8s
+  [L10H2-branch-NK] trained 1500 epochs in 4.0s
+  [L10H2-branch-erythroid] trained 1500 epochs in 3.5s
+  [L10H2-branch-granulocyte] trained 1500 epochs in 3.8s
+  [L10H2-branch-stem] trained 1500 epochs in 3.5s
+  [L10H2-branch-lymphoid] trained 1500 epochs in 4.0s
+  [L10H2-branch-dendritic] trained 1500 epochs in 4.1s
+  L10H2: trust=0.769  rand=0.797  branch=0.457  (52.8s)
+  [L10H3] trained 1500 epochs in 4.3s
+  [rand-holdout] trained 1500 epochs in 3.6s
+  [rand-holdout] trained 1500 epochs in 3.5s
+  [rand-holdout] trained 1500 epochs in 3.7s
+  [L10H3-branch] groups: 12
+  [L10H3-branch-monocyte] trained 1500 epochs in 3.4s
+  [L10H3-branch-T_lineage] trained 1500 epochs in 2.7s
+  [L10H3-branch-macrophage] trained 1500 epochs in 4.0s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L10H3-branch-B_lineage] trained 1500 epochs in 3.4s
+  [L10H3-branch-NK] trained 1500 epochs in 3.0s
+  [L10H3-branch-erythroid] trained 1500 epochs in 4.0s
+  [L10H3-branch-granulocyte] trained 1500 epochs in 4.2s
+  [L10H3-branch-stem] trained 1500 epochs in 4.3s
+  [L10H3-branch-lymphoid] trained 1500 epochs in 3.9s
+  [L10H3-branch-dendritic] trained 1500 epochs in 3.9s
+  L10H3: trust=0.844  rand=0.793  branch=0.271  (51.9s)
+  [L10H4] trained 1500 epochs in 4.3s
+  [rand-holdout] trained 1500 epochs in 3.9s
+  [rand-holdout] trained 1500 epochs in 3.2s
+  [rand-holdout] trained 1500 epochs in 2.5s
+  [L10H4-branch] groups: 12
+  [L10H4-branch-monocyte] trained 1500 epochs in 3.4s
+  [L10H4-branch-T_lineage] trained 1500 epochs in 2.6s
+  [L10H4-branch-macrophage] trained 1500 epochs in 3.3s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L10H4-branch-B_lineage] trained 1500 epochs in 2.6s
+  [L10H4-branch-NK] trained 1500 epochs in 3.8s
+  [L10H4-branch-erythroid] trained 1500 epochs in 3.2s
+  [L10H4-branch-granulocyte] trained 1500 epochs in 3.4s
+  [L10H4-branch-stem] trained 1500 epochs in 4.4s
+  [L10H4-branch-lymphoid] trained 1500 epochs in 3.9s
+  [L10H4-branch-dendritic] trained 1500 epochs in 3.3s
+  L10H4: trust=0.801  rand=0.774  branch=0.294  (48.0s)
+  [L10H5] trained 1500 epochs in 3.8s
+  [rand-holdout] trained 1500 epochs in 3.7s
+  [rand-holdout] trained 1500 epochs in 3.1s
+  [rand-holdout] trained 1500 epochs in 3.3s
+  [L10H5-branch] groups: 12
+  [L10H5-branch-monocyte] trained 1500 epochs in 3.5s
+  [L10H5-branch-T_lineage] trained 1500 epochs in 2.5s
+  [L10H5-branch-macrophage] trained 1500 epochs in 3.4s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L10H5-branch-B_lineage] trained 1500 epochs in 3.8s
+  [L10H5-branch-NK] trained 1500 epochs in 4.3s
+  [L10H5-branch-erythroid] trained 1500 epochs in 3.6s
+  [L10H5-branch-granulocyte] trained 1500 epochs in 3.7s
+  [L10H5-branch-stem] trained 1500 epochs in 3.6s
+  [L10H5-branch-lymphoid] trained 1500 epochs in 3.4s
+  [L10H5-branch-dendritic] trained 1500 epochs in 5.2s
+  L10H5: trust=0.770  rand=0.805  branch=0.263  (51.0s)
+  [L10H6] trained 1500 epochs in 4.4s
+  [rand-holdout] trained 1500 epochs in 3.4s
+  [rand-holdout] trained 1500 epochs in 3.9s
+  [rand-holdout] trained 1500 epochs in 3.1s
+  [L10H6-branch] groups: 12
+  [L10H6-branch-monocyte] trained 1500 epochs in 3.3s
+  [L10H6-branch-T_lineage] trained 1500 epochs in 2.4s
+  [L10H6-branch-macrophage] trained 1500 epochs in 3.2s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L10H6-branch-B_lineage] trained 1500 epochs in 3.2s
+  [L10H6-branch-NK] trained 1500 epochs in 3.4s
+  [L10H6-branch-erythroid] trained 1500 epochs in 3.3s
+  [L10H6-branch-granulocyte] trained 1500 epochs in 2.9s
+  [L10H6-branch-stem] trained 1500 epochs in 4.0s
+  [L10H6-branch-lymphoid] trained 1500 epochs in 4.0s
+  [L10H6-branch-dendritic] trained 1500 epochs in 3.3s
+  L10H6: trust=0.882  rand=0.793  branch=0.467  (47.9s)
+  [L10H7] trained 1500 epochs in 4.5s
+  [rand-holdout] trained 1500 epochs in 3.9s
+  [rand-holdout] trained 1500 epochs in 3.4s
+  [rand-holdout] trained 1500 epochs in 3.0s
+  [L10H7-branch] groups: 12
+  [L10H7-branch-monocyte] trained 1500 epochs in 3.6s
+  [L10H7-branch-T_lineage] trained 1500 epochs in 2.2s
+  [L10H7-branch-macrophage] trained 1500 epochs in 3.6s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [L10H7-branch-B_lineage] trained 1500 epochs in 3.1s
+  [L10H7-branch-NK] trained 1500 epochs in 3.6s
+  [L10H7-branch-erythroid] trained 1500 epochs in 3.5s
+  [L10H7-branch-granulocyte] trained 1500 epochs in 3.7s
+  [L10H7-branch-stem] trained 1500 epochs in 3.7s
+  [L10H7-branch-lymphoid] trained 1500 epochs in 4.2s
+  [L10H7-branch-dendritic] trained 1500 epochs in 4.0s
+  L10H7: trust=0.828  rand=0.805  branch=0.417  (49.9s)
+
+=== TOP 10 (by composite score) ===
+  L10H6: trust=0.882  rand=0.793  branch=0.467  score=0.756
+  L1H1: trust=0.844  rand=0.805  branch=0.425  score=0.730
+  L0H0: trust=0.824  rand=0.782  branch=0.481  score=0.728
+  L10H7: trust=0.828  rand=0.805  branch=0.417  score=0.719
+  L0H7: trust=0.828  rand=0.798  branch=0.394  score=0.712
+  L0H6: trust=0.803  rand=0.805  branch=0.437  score=0.712
+  L0H5: trust=0.817  rand=0.781  branch=0.421  score=0.709
+  L8H1: trust=0.825  rand=0.782  branch=0.390  score=0.705
+  L2H1: trust=0.833  rand=0.783  branch=0.372  score=0.705
+  L10H2: trust=0.769  rand=0.797  branch=0.457  score=0.698
+
+Phase 9 complete in 4672.3s
+Top-1 head: L10H6

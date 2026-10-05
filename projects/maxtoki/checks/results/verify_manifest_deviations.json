@@ -1,0 +1,356 @@
+{
+  "n_values": 35,
+  "n_confirmed": 35,
+  "checks": [
+    {
+      "run": "attention-grn-217M",
+      "param": "n_ctrl",
+      "file": "projects/maxtoki/runs/attention-grn-217M/outputs/phase0_k562_1b/run_config.json",
+      "loc": "n_ctrl",
+      "value": 200.0,
+      "kind": "json",
+      "confirmed_from_raw_text": true,
+      "raw": "raw JSON values for 'n_ctrl': [200.0]"
+    },
+    {
+      "run": "attention-grn-217M",
+      "param": "hvg",
+      "file": "projects/maxtoki/runs/attention-grn-217M/outputs/phase0/run_config.json",
+      "loc": "n_hvg",
+      "value": 1500.0,
+      "kind": "json",
+      "confirmed_from_raw_text": true,
+      "raw": "raw JSON values for 'n_hvg': [1500.0]"
+    },
+    {
+      "run": "attention-grn-217M",
+      "param": "hvg",
+      "file": "projects/maxtoki/runs/attention-grn-217M/outputs/phase0_adamson/run_config.json",
+      "loc": "n_hvg",
+      "value": 1500.0,
+      "kind": "json",
+      "confirmed_from_raw_text": true,
+      "raw": "raw JSON values for 'n_hvg': [1500.0]"
+    },
+    {
+      "run": "attention-grn-217M",
+      "param": "hvg",
+      "file": "projects/maxtoki/runs/attention-grn-217M/outputs/phase0_k562_1b/run_config.json",
+      "loc": "n_hvg",
+      "value": 1500.0,
+      "kind": "json",
+      "confirmed_from_raw_text": true,
+      "raw": "raw JSON values for 'n_hvg': [1500.0]"
+    },
+    {
+      "run": "attention-grn-217M",
+      "param": "hvg",
+      "file": "projects/maxtoki/runs/attention-grn-217M/outputs/phase0_rpe1/run_config.json",
+      "loc": "n_hvg",
+      "value": 1500.0,
+      "kind": "json",
+      "confirmed_from_raw_text": true,
+      "raw": "raw JSON values for 'n_hvg': [1500.0]"
+    },
+    {
+      "run": "attention-grn-217M",
+      "param": "hvg",
+      "file": "projects/maxtoki/runs/attention-grn-217M/outputs/phase0b/run_config.json",
+      "loc": "n_hvg",
+      "value": 1500.0,
+      "kind": "json",
+      "confirmed_from_raw_text": true,
+      "raw": "raw JSON values for 'n_hvg': [1500.0]"
+    },
+    {
+      "run": "attention-grn-217M",
+      "param": "hvg",
+      "file": "projects/maxtoki/runs/attention-grn-217M/scripts/phase0_any.py",
+      "loc": "39",
+      "value": 1500.0,
+      "kind": "env_default",
+      "confirmed_from_raw_text": true,
+      "raw": "N_HVG = int(os.environ.get(\"PHASE0_N_HVG\", \"1500\"))"
+    },
+    {
+      "run": "attention-grn-217M",
+      "param": "hvg",
+      "file": "projects/maxtoki/runs/attention-grn-217M/scripts/phase0_extract.py",
+      "loc": "48",
+      "value": 1500.0,
+      "kind": "env_default",
+      "confirmed_from_raw_text": true,
+      "raw": "N_HVG = int(os.environ.get(\"PHASE0_N_HVG\", \"1500\"))"
+    },
+    {
+      "run": "attention-grn-217M",
+      "param": "hvg",
+      "file": "projects/maxtoki/runs/attention-grn-217M/scripts/phase0_rpe1.py",
+      "loc": "37",
+      "value": 1500.0,
+      "kind": "assign",
+      "confirmed_from_raw_text": true,
+      "raw": "N_HVG = 1500"
+    },
+    {
+      "run": "attention-grn-217M",
+      "param": "hvg",
+      "file": "projects/maxtoki/runs/attention-grn-217M/scripts/phase0b_value_weighted.py",
+      "loc": "52",
+      "value": 1500.0,
+      "kind": "assign",
+      "confirmed_from_raw_text": true,
+      "raw": "N_HVG = 1500"
+    },
+    {
+      "run": "attention-grn-217M",
+      "param": "intervention_cells_fidelity",
+      "file": "projects/maxtoki/runs/attention-grn-217M/outputs/phase4/run_config.json",
+      "loc": "n_ctrl",
+      "value": 300.0,
+      "kind": "json",
+      "confirmed_from_raw_text": true,
+      "raw": "raw JSON values for 'n_ctrl': [300.0]"
+    },
+    {
+      "run": "attention-grn-217M",
+      "param": "degree_null_n_curveball",
+      "file": "projects/maxtoki/runs/attention-grn-217M/outputs/phase3/null_results.json",
+      "loc": "curveball.n_iter",
+      "value": 50.0,
+      "kind": "json",
+      "confirmed_from_raw_text": true,
+      "raw": "raw JSON values for 'n_iter': [50.0, 1000.0]"
+    },
+    {
+      "run": "attention-grn-217M",
+      "param": "degree_null_n_curveball",
+      "file": "projects/maxtoki/runs/attention-grn-217M/outputs/phase3_adamson/null_results.json",
+      "loc": "curveball.n_iter",
+      "value": 50.0,
+      "kind": "json",
+      "confirmed_from_raw_text": true,
+      "raw": "raw JSON values for 'n_iter': [50.0, 1000.0]"
+    },
+    {
+      "run": "attention-grn-217M",
+      "param": "degree_null_n_curveball",
+      "file": "projects/maxtoki/runs/attention-grn-217M/outputs/phase3_k562_1b/null_results.json",
+      "loc": "curveball.n_iter",
+      "value": 50.0,
+      "kind": "json",
+      "confirmed_from_raw_text": true,
+      "raw": "raw JSON values for 'n_iter': [50.0, 1000.0]"
+    },
+    {
+      "run": "attention-grn-217M",
+      "param": "degree_null_n_curveball",
+      "file": "projects/maxtoki/runs/attention-grn-217M/outputs/phase3_rpe1/null_results.json",
+      "loc": "curveball.n_iter",
+      "value": 50.0,
+      "kind": "json",
+      "confirmed_from_raw_text": true,
+      "raw": "raw JSON values for 'n_iter': [50.0, 1000.0]"
+    },
+    {
+      "run": "attention-grn-217M",
+      "param": "degree_null_n_curveball",
+      "file": "projects/maxtoki/runs/attention-grn-217M/outputs/phase12_verdict.json",
+      "loc": "scope_notes.curveball_null_iters",
+      "value": 50.0,
+      "kind": "json",
+      "confirmed_from_raw_text": true,
+      "raw": "raw JSON values for 'curveball_null_iters': [50.0]"
+    },
+    {
+      "run": "attention-grn-217M",
+      "param": "degree_null_n_curveball",
+      "file": "projects/maxtoki/runs/attention-grn-217M/outputs/phase12_verdict_adamson.json",
+      "loc": "scope_notes.curveball_null_iters",
+      "value": 50.0,
+      "kind": "json",
+      "confirmed_from_raw_text": true,
+      "raw": "raw JSON values for 'curveball_null_iters': [50.0]"
+    },
+    {
+      "run": "attention-grn-217M",
+      "param": "degree_null_n_curveball",
+      "file": "projects/maxtoki/runs/attention-grn-217M/outputs/phase12_verdict_k562_1b.json",
+      "loc": "scope_notes.curveball_null_iters",
+      "value": 50.0,
+      "kind": "json",
+      "confirmed_from_raw_text": true,
+      "raw": "raw JSON values for 'curveball_null_iters': [50.0]"
+    },
+    {
+      "run": "attention-grn-217M",
+      "param": "degree_null_n_curveball",
+      "file": "projects/maxtoki/runs/attention-grn-217M/outputs/phase12_verdict_rpe1.json",
+      "loc": "scope_notes.curveball_null_iters",
+      "value": 50.0,
+      "kind": "json",
+      "confirmed_from_raw_text": true,
+      "raw": "raw JSON values for 'curveball_null_iters': [50.0]"
+    },
+    {
+      "run": "attention-grn-217M",
+      "param": "degree_null_n_curveball",
+      "file": "projects/maxtoki/runs/attention-grn-217M/outputs/phase3/run_config.json",
+      "loc": "curveball_n",
+      "value": 50.0,
+      "kind": "json",
+      "confirmed_from_raw_text": true,
+      "raw": "raw JSON values for 'curveball_n': [50.0]"
+    },
+    {
+      "run": "attention-grn-217M",
+      "param": "degree_null_n_curveball",
+      "file": "projects/maxtoki/runs/attention-grn-217M/outputs/phase3_adamson/run_config.json",
+      "loc": "curveball_n",
+      "value": 50.0,
+      "kind": "json",
+      "confirmed_from_raw_text": true,
+      "raw": "raw JSON values for 'curveball_n': [50.0]"
+    },
+    {
+      "run": "attention-grn-217M",
+      "param": "degree_null_n_curveball",
+      "file": "projects/maxtoki/runs/attention-grn-217M/outputs/phase3_k562_1b/run_config.json",
+      "loc": "curveball_n",
+      "value": 50.0,
+      "kind": "json",
+      "confirmed_from_raw_text": true,
+      "raw": "raw JSON values for 'curveball_n': [50.0]"
+    },
+    {
+      "run": "attention-grn-217M",
+      "param": "degree_null_n_curveball",
+      "file": "projects/maxtoki/runs/attention-grn-217M/outputs/phase3_rpe1/run_config.json",
+      "loc": "curveball_n",
+      "value": 50.0,
+      "kind": "json",
+      "confirmed_from_raw_text": true,
+      "raw": "raw JSON values for 'curveball_n': [50.0]"
+    },
+    {
+      "run": "spectral-geometry-217M",
+      "param": "autoloop_iterations",
+      "file": "projects/maxtoki/runs/spectral-geometry-217M/autoloop/run_maxtoki_autoloop.py",
+      "loc": "217",
+      "value": 8.0,
+      "kind": "argparse",
+      "confirmed_from_raw_text": true,
+      "raw": "parser.add_argument(\"--max-iterations\", type=int, default=8)"
+    },
+    {
+      "run": "topology-141-217M",
+      "param": "null_label_permutation_replicates",
+      "file": "projects/maxtoki/runs/topology-141-217M/scripts/phase10_h139_sectional_anisotropy.py",
+      "loc": "57",
+      "value": 8.0,
+      "kind": "assign",
+      "confirmed_from_raw_text": true,
+      "raw": "N_NULL = 8"
+    },
+    {
+      "run": "topology-141-217M",
+      "param": "null_label_permutation_replicates",
+      "file": "projects/maxtoki/runs/topology-141-217M/scripts/phase11_autoloop.py",
+      "loc": "54",
+      "value": 50.0,
+      "kind": "assign",
+      "confirmed_from_raw_text": true,
+      "raw": "N_NULL = 50"
+    },
+    {
+      "run": "topology-141-217M",
+      "param": "null_rewiring_replicates",
+      "file": "projects/maxtoki/runs/topology-141-217M/scripts/phase12_strict_max_null.py",
+      "loc": "55",
+      "value": 8.0,
+      "kind": "assign",
+      "confirmed_from_raw_text": true,
+      "raw": "N_REWIRE = 8"
+    },
+    {
+      "run": "topology-141-217M",
+      "param": "null_rewiring_replicates",
+      "file": "projects/maxtoki/runs/topology-141-217M/scripts/phase5_persistent_homology.py",
+      "loc": "33",
+      "value": 12.0,
+      "kind": "assign",
+      "confirmed_from_raw_text": true,
+      "raw": "N_REWIRE = 12"
+    },
+    {
+      "run": "sae-atlas-217M",
+      "param": "n_cells_training",
+      "file": "projects/maxtoki/runs/sae-atlas-217M/scripts/phase0_extract_positions.py",
+      "loc": "36",
+      "value": 500.0,
+      "kind": "env_default",
+      "confirmed_from_raw_text": true,
+      "raw": "N_CTRL = int(os.environ.get(\"PHASE0_N_CTRL\", \"500\"))"
+    },
+    {
+      "run": "sae-atlas-217M",
+      "param": "n_cells_training",
+      "file": "projects/maxtoki/runs/sae-atlas-217M/scripts/full_12layer_pipeline.py",
+      "loc": "45",
+      "value": 500.0,
+      "kind": "assign",
+      "confirmed_from_raw_text": true,
+      "raw": "N_CTRL = 500"
+    },
+    {
+      "run": "sae-atlas-217M",
+      "param": "n_cells_training",
+      "file": "projects/maxtoki/runs/sae-atlas-217M/scripts/phase0_extract_positions.py",
+      "loc": "36",
+      "value": 500.0,
+      "kind": "env_default",
+      "confirmed_from_raw_text": true,
+      "raw": "N_CTRL = int(os.environ.get(\"PHASE0_N_CTRL\", \"500\"))"
+    },
+    {
+      "run": "sae-atlas-217M",
+      "param": "n_cells_training",
+      "file": "projects/maxtoki/runs/sae-atlas-217M/scripts/full_12layer_pipeline.py",
+      "loc": "45",
+      "value": 500.0,
+      "kind": "assign",
+      "confirmed_from_raw_text": true,
+      "raw": "N_CTRL = 500"
+    },
+    {
+      "run": "sae-atlas-217M",
+      "param": "causal_patching_cells",
+      "file": "projects/maxtoki/runs/sae-atlas-217M/scripts/phase6_patching.py",
+      "loc": "39",
+      "value": 50.0,
+      "kind": "assign",
+      "confirmed_from_raw_text": true,
+      "raw": "N_CELLS = 50"
+    },
+    {
+      "run": "exhaustive-mapping-217M",
+      "param": "n_cells_per_condition",
+      "file": "projects/maxtoki/runs/exhaustive-mapping-217M/outputs/experiment2_v2/combinatorial_summary.json",
+      "loc": "n_cells_per_condition",
+      "value": 50.0,
+      "kind": "json",
+      "confirmed_from_raw_text": true,
+      "raw": "raw JSON values for 'n_cells_per_condition': [50.0]"
+    },
+    {
+      "run": "exhaustive-mapping-217M",
+      "param": "n_cells_per_condition",
+      "file": "projects/maxtoki/runs/exhaustive-mapping-217M/scripts/experiment2_rerun.py",
+      "loc": "50",
+      "value": 50.0,
+      "kind": "assign",
+      "confirmed_from_raw_text": true,
+      "raw": "N_CELLS = 50"
+    }
+  ]
+}

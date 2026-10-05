@@ -1,0 +1,132 @@
+======================================================================
+PHASE 5 (anchor-trained) — initial LET head + four-gate check
+======================================================================
+
+[1] Loading internal anchors and operator library...
+  centroids: (290, 12, 1232)  d_target: (290, 290)
+  A_early: (1232, 1232)  A_mid: (1232, 1232)  A_late: (1232, 1232)
+
+[2] Building pooled-drift feature...
+  features: (290, 2464)
+
+[3] Training LET head on full internal panel (positive branch H65)...
+  [H65] epoch    0  loss 24.0866  fit 23.9868  rec 0.9982  β 5.701
+  [H65] epoch  100  loss 1.5283  fit 1.1886  rec 3.3963  β 4.301
+  [H65] epoch  200  loss 0.7194  fit 0.5709  rec 1.4848  β 4.221
+  [H65] epoch  300  loss 0.3848  fit 0.2732  rec 1.1161  β 4.245
+  [H65] epoch  400  loss 0.3359  fit 0.2340  rec 1.0193  β 4.293
+  [H65] epoch  500  loss 0.2495  fit 0.1479  rec 1.0159  β 4.349
+  [H65] epoch  600  loss 0.2713  fit 0.1692  rec 1.0210  β 4.406
+  [H65] epoch  700  loss 0.2088  fit 0.1063  rec 1.0245  β 4.464
+  [H65] epoch  800  loss 0.3002  fit 0.1976  rec 1.0260  β 4.520
+  [H65] epoch  900  loss 0.1830  fit 0.0801  rec 1.0296  β 4.571
+  [H65] epoch 1000  loss 0.1715  fit 0.0680  rec 1.0348  β 4.621
+  [H65] epoch 1100  loss 0.1892  fit 0.0860  rec 1.0319  β 4.672
+  [H65] epoch 1200  loss 0.2024  fit 0.0986  rec 1.0375  β 4.721
+  [H65] epoch 1300  loss 0.2013  fit 0.0977  rec 1.0354  β 4.771
+  [H65] epoch 1400  loss 0.1624  fit 0.0588  rec 1.0356  β 4.818
+  [H65] epoch 1499  loss 0.1597  fit 0.0560  rec 1.0369  β 4.865
+  [H65] trained 1500 epochs in 10.0s
+
+[4] Trustworthiness (k=15)...
+  trustworthiness = 0.8109
+
+[5] Random holdout (20-fold, frac 0.2)...
+  [rand-holdout] trained 1500 epochs in 8.3s
+  [rand-holdout] trained 1500 epochs in 8.1s
+  [rand-holdout] trained 1500 epochs in 8.7s
+  [rand-holdout] trained 1500 epochs in 9.1s
+  [rand-holdout] trained 1500 epochs in 8.3s
+  [rand-holdout] trained 1500 epochs in 8.3s
+  [rand-holdout] trained 1500 epochs in 8.3s
+  [rand-holdout] trained 1500 epochs in 8.4s
+  [rand-holdout] trained 1500 epochs in 8.0s
+  [rand-holdout] trained 1500 epochs in 8.1s
+  random holdout Spearman = 0.8341 ± 0.0549
+
+[6] Donor holdout...
+  [donor] groups: 11
+  [donor-TSP2] trained 1500 epochs in 3.2s
+  [donor-TSP20] trained 1500 epochs in 10.0s
+  [donor-TSP9] trained 1500 epochs in 10.7s
+  [donor-TSP4] trained 1500 epochs in 12.1s
+  [donor-TSP17] trained 1500 epochs in 12.8s
+  [donor-TSP5] trained 1500 epochs in 12.6s
+  [donor-TSP15] trained 1500 epochs in 13.3s
+  [donor-TSP28] trained 1500 epochs in 12.7s
+  [donor-TSP3] trained 1500 epochs in 13.5s
+  donor holdout Spearman = 0.7159 (over 9 donors)
+
+[7] Branch holdout (using stage_to_branch on H65 DAG)...
+  [branch] groups: 12
+  [branch-monocyte] trained 1500 epochs in 12.0s
+  [branch-T_lineage] trained 1500 epochs in 9.3s
+  [branch-macrophage] trained 1500 epochs in 11.9s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [branch-B_lineage] trained 1500 epochs in 11.9s
+  [branch-NK] trained 1500 epochs in 12.8s
+  [branch-erythroid] trained 1500 epochs in 18.4s
+  [branch-granulocyte] trained 1500 epochs in 15.8s
+  [branch-stem] trained 1500 epochs in 14.8s
+  [branch-lymphoid] trained 1500 epochs in 13.8s
+  [branch-dendritic] trained 1500 epochs in 14.5s
+  branch holdout Spearman = 0.3704 (over 6 branches)
+
+[8] Null branch (within-branch shuffled stage labels) — must FAIL gates...
+  [H65_null] epoch    0  loss 24.2091  fit 24.1093  rec 0.9982  β 5.701
+  [H65_null] epoch  100  loss 1.6576  fit 1.3227  rec 3.3486  β 4.282
+  [H65_null] epoch  200  loss 0.8351  fit 0.6863  rec 1.4882  β 4.180
+  [H65_null] epoch  300  loss 0.4712  fit 0.3591  rec 1.1209  β 4.203
+  [H65_null] epoch  400  loss 0.4079  fit 0.3045  rec 1.0338  β 4.250
+  [H65_null] epoch  500  loss 0.3213  fit 0.2182  rec 1.0301  β 4.304
+  [H65_null] epoch  600  loss 0.2984  fit 0.1953  rec 1.0308  β 4.364
+  [H65_null] epoch  700  loss 0.2740  fit 0.1705  rec 1.0352  β 4.425
+  [H65_null] epoch  800  loss 0.2511  fit 0.1465  rec 1.0460  β 4.480
+  [H65_null] epoch  900  loss 0.2656  fit 0.1611  rec 1.0445  β 4.538
+  [H65_null] epoch 1000  loss 0.2506  fit 0.1459  rec 1.0473  β 4.592
+  [H65_null] epoch 1100  loss 0.2479  fit 0.1430  rec 1.0498  β 4.643
+  [H65_null] epoch 1200  loss 0.2125  fit 0.1072  rec 1.0529  β 4.692
+  [H65_null] epoch 1300  loss 0.1916  fit 0.0863  rec 1.0535  β 4.740
+  [H65_null] epoch 1400  loss 0.2080  fit 0.1023  rec 1.0569  β 4.788
+  [H65_null] epoch 1499  loss 0.1843  fit 0.0782  rec 1.0613  β 4.833
+  [H65_null] trained 1500 epochs in 15.6s
+  [rand-holdout] trained 1500 epochs in 12.8s
+  [rand-holdout] trained 1500 epochs in 19.6s
+  [rand-holdout] trained 1500 epochs in 11.7s
+  [rand-holdout] trained 1500 epochs in 13.4s
+  [rand-holdout] trained 1500 epochs in 10.5s
+  [rand-holdout] trained 1500 epochs in 17.2s
+  [rand-holdout] trained 1500 epochs in 13.2s
+  [rand-holdout] trained 1500 epochs in 13.0s
+  [rand-holdout] trained 1500 epochs in 14.2s
+  [rand-holdout] trained 1500 epochs in 20.1s
+  [donor_null] groups: 11
+  [donor_null-TSP2] trained 1500 epochs in 5.5s
+  [donor_null-TSP20] trained 1500 epochs in 11.7s
+  [donor_null-TSP9] trained 1500 epochs in 14.2s
+  [donor_null-TSP4] trained 1500 epochs in 12.7s
+  [donor_null-TSP17] trained 1500 epochs in 15.0s
+  [donor_null-TSP5] trained 1500 epochs in 13.6s
+  [donor_null-TSP15] trained 1500 epochs in 13.4s
+  [donor_null-TSP28] trained 1500 epochs in 13.4s
+  [donor_null-TSP3] trained 1500 epochs in 14.8s
+  [branch_null] groups: 12
+  [branch_null-monocyte] trained 1500 epochs in 12.4s
+  [branch_null-T_lineage] trained 1500 epochs in 8.4s
+  [branch_null-macrophage] trained 1500 epochs in 13.0s
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+  [branch_null-B_lineage] trained 1500 epochs in 13.3s
+  [branch_null-NK] trained 1500 epochs in 14.3s
+  [branch_null-erythroid] trained 1500 epochs in 14.2s
+  [branch_null-granulocyte] trained 1500 epochs in 11.1s
+  [branch_null-stem] trained 1500 epochs in 13.5s
+  [branch_null-lymphoid] trained 1500 epochs in 15.9s
+  [branch_null-dendritic] trained 1500 epochs in 14.5s
+
+======================================================================
+VERDICT: POSITIVE: H65 passes all four gates and null fails at least one
+  H65   trust=0.811  rand=0.834  donor=0.716  branch=0.370
+  null  trust=0.799  rand=0.799  donor=0.707  branch=-0.001
+Total time: 738.3s

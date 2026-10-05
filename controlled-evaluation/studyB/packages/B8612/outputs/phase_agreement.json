@@ -1,0 +1,33 @@
+{
+ "lines": {
+  "k562": {
+   "n_cells": 3000,
+   "n_genes": 6546,
+   "n_cc_genes": 87,
+   "pc12_var_ratio": 0.30622318099734014,
+   "phase_R": 0.079,
+   "s_peak_deg": 90.9,
+   "g2m_peak_deg": 342.1,
+   "s_g2m_separation_deg": 108.8
+  },
+  "rpe1": {
+   "n_cells": 3000,
+   "n_genes": 8749,
+   "n_cc_genes": 93,
+   "pc12_var_ratio": 0.3492807411777894,
+   "phase_R": 0.043,
+   "s_peak_deg": 280.1,
+   "g2m_peak_deg": 17.2,
+   "s_g2m_separation_deg": 97.1
+  }
+ },
+ "n_genes_compared": 43,
+ "genes_not_compared": [
+  "CCNE1",
+  "CCNE2",
+  "UBE2C"
+ ],
+ "circ_corr_k562_vs_rpe1": -0.9832,
+ "median_abs_diff_deg": 62.8,
+ "mean_abs_diff_deg": 86.9
+}

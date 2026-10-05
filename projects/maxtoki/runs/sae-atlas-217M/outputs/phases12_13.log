@@ -1,0 +1,42 @@
+======================================================================
+Phases 12 + 13 — Feature geometry + Interactive atlas
+======================================================================
+
+[Phase 12] Feature-space geometry...
+
+  --- Layer 0 ---
+  unique annotation terms: 1739
+  computing UMAP on TF-IDF ontology vectors...
+<REPO_ROOT>/projects/maxtoki/.venv/lib/python3.12/site-packages/umap/umap_.py:1952: UserWarning: n_jobs value 1 overridden to 1 by setting random_state. Use no seed for parallelism.
+  warn(
+  computing t-SNE...
+  computing force-directed layout...
+  saved: <REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/outputs/phase12/layer_00
+
+  --- Layer 5 ---
+  unique annotation terms: 1932
+  computing UMAP on TF-IDF ontology vectors...
+<REPO_ROOT>/projects/maxtoki/.venv/lib/python3.12/site-packages/umap/umap_.py:1952: UserWarning: n_jobs value 1 overridden to 1 by setting random_state. Use no seed for parallelism.
+  warn(
+  computing t-SNE...
+  computing force-directed layout...
+  saved: <REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/outputs/phase12/layer_05
+
+  --- Layer 11 ---
+  unique annotation terms: 1787
+  computing UMAP on TF-IDF ontology vectors...
+<REPO_ROOT>/projects/maxtoki/.venv/lib/python3.12/site-packages/umap/umap_.py:1952: UserWarning: n_jobs value 1 overridden to 1 by setting random_state. Use no seed for parallelism.
+  warn(
+  computing t-SNE...
+  computing force-directed layout...
+  saved: <REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/outputs/phase12/layer_11
+
+Phase 12 COMPLETE
+
+[Phase 13] Building interactive HTML atlas...
+
+  atlas written: <REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/outputs/phase13/maxtoki_sae_atlas.html
+  size: 4980 KB
+  copied to summaries/sae-atlas-interactive.html
+
+Phases 12 + 13 COMPLETE

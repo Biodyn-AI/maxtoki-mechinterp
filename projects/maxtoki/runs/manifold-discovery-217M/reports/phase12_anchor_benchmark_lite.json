@@ -1,0 +1,55 @@
+{
+  "scope_note": "PHASE 12 LITE \u2014 anchor-level leave-one-donor-out (11 splits) over 5 endpoints and 5 features. NOT cell-level Robust-V2 with scVI/Palantir as in source paper \u00a76 Phase 12. Use these as relative-comparison signal only.",
+  "n_splits": 9,
+  "n_baselines": 6,
+  "endpoints": [
+    "branch_balanced_acc",
+    "stage_balanced_acc",
+    "cd_auroc",
+    "mm_auroc",
+    "pseudotime_spearman"
+  ],
+  "mean_per_baseline": {
+    "branch_balanced_acc": {
+      "extracted_let_drift_anchor": 0.8293896766508067,
+      "extracted_let_z10": 0.7564837216248507,
+      "frozen_maxtoki_avgpool": 0.7916263481168687,
+      "pca10": 0.8441265147252225,
+      "raw_log1p": 0.14166666666666666,
+      "svd10": 0.8365723038603156
+    },
+    "stage_balanced_acc": {
+      "extracted_let_drift_anchor": 0.6393398973991079,
+      "extracted_let_z10": 0.5505863412113412,
+      "frozen_maxtoki_avgpool": 0.6645898996227944,
+      "pca10": 0.595458249935589,
+      "raw_log1p": 0.08117283950617284,
+      "svd10": 0.6353016961386844
+    },
+    "cd_auroc": {
+      "extracted_let_drift_anchor": 0.9054968287526428,
+      "extracted_let_z10": 0.7895544593219012,
+      "frozen_maxtoki_avgpool": 0.8741484613577638,
+      "pca10": 0.7345783415550858,
+      "raw_log1p": 0.6191919191919192,
+      "svd10": 0.6929880197322058
+    },
+    "mm_auroc": {
+      "extracted_let_drift_anchor": 0.7863697705802969,
+      "extracted_let_z10": 0.9176788124156545,
+      "frozen_maxtoki_avgpool": 0.9599190283400809,
+      "pca10": 0.9481781376518219,
+      "raw_log1p": 0.762753036437247,
+      "svd10": 0.9491902834008098
+    },
+    "pseudotime_spearman": {
+      "extracted_let_drift_anchor": -0.022496460209125314,
+      "extracted_let_z10": 0.2621493369153369,
+      "frozen_maxtoki_avgpool": 0.5373966219112085,
+      "pca10": 0.5090851452088829,
+      "raw_log1p": 0.08517558924490574,
+      "svd10": 0.5003875566304782
+    }
+  },
+  "elapsed_s": 100.4777090549469
+}

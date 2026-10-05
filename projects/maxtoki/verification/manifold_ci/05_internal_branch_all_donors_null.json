@@ -1,0 +1,63 @@
+{
+  "all_donors_null": {
+    "per_branch": {
+      "monocyte": {
+        "n_test": 34,
+        "n_stages": 2,
+        "rho": 0.19454788360977826
+      },
+      "T_lineage": {
+        "n_test": 101,
+        "n_stages": 6,
+        "rho": -0.07201724273940877
+      },
+      "macrophage": {
+        "n_test": 43,
+        "n_stages": 1,
+        "rho": null
+      },
+      "B_lineage": {
+        "n_test": 45,
+        "n_stages": 3,
+        "rho": 0.015168556718015095
+      },
+      "NK": {
+        "n_test": 22,
+        "n_stages": 1,
+        "rho": null
+      },
+      "erythroid": {
+        "n_test": 7,
+        "n_stages": 2,
+        "rho": 0.2959320151246863
+      },
+      "granulocyte": {
+        "n_test": 25,
+        "n_stages": 3,
+        "rho": -0.025665998726102385
+      },
+      "stem": {
+        "n_test": 4,
+        "n_stages": 2,
+        "rho": -0.4140393356054126
+      },
+      "lymphoid": {
+        "n_test": 3,
+        "n_stages": 1,
+        "rho": null
+      },
+      "dendritic": {
+        "n_test": 4,
+        "n_stages": 1,
+        "rho": null
+      }
+    },
+    "mean": -0.0010123536030740103,
+    "n_scored": 6,
+    "sd_across_branches": 0.24613913574146223,
+    "t_ci95_over_branches": [
+      -0.25931953502335997,
+      0.25729482781721197
+    ]
+  }
+}

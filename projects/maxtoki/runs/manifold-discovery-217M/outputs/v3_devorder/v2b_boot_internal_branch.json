@@ -1,0 +1,147 @@
+{
+ "method": "internal branch-holdout with held-out heads fixed; evaluation donors drawn with replacement; copies never paired; plain mean over scored branches; percentile 2.5/97.5",
+ "rng": "default_rng([8080, 9, b])",
+ "n_boot": 2000,
+ "results": {
+  "branch|maxtoki": {
+   "observed": 0.41359109582602277,
+   "ci95": [
+    0.06304917951263295,
+    0.4635204540066944
+   ],
+   "boot_mean": 0.38592234573151435,
+   "n_valid": 1999,
+   "share_le_0": null
+  },
+  "branch|lookup_ct_mean5": {
+   "observed": 0.39211837407056327,
+   "ci95": [
+    0.3840864060872027,
+    0.5469466117743906
+   ],
+   "boot_mean": 0.41996541864644404,
+   "n_valid": 1999,
+   "share_le_0": null
+  },
+  "branch|tokenbag_pca64": {
+   "observed": 0.4294707541298854,
+   "ci95": [
+    0.29490210966173686,
+    0.5213852438743906
+   ],
+   "boot_mean": 0.4355183385535635,
+   "n_valid": 1999,
+   "share_le_0": null
+  },
+  "branch|hvg_pca64": {
+   "observed": 0.35362594611502945,
+   "ci95": [
+    0.308818805623844,
+    0.5779087226863133
+   ],
+   "boot_mean": 0.4367399029011092,
+   "n_valid": 1999,
+   "share_le_0": null
+  },
+  "branch|maxtoki_minus_lookup": {
+   "observed": 0.0214727217554595,
+   "ci95": [
+    -0.39265193931374404,
+    0.06329133598670415
+   ],
+   "boot_mean": -0.03404307291492968,
+   "n_valid": 1999,
+   "share_le_0": 0.3476738369184592
+  },
+  "branch|maxtoki_minus_tokenbag": {
+   "observed": -0.01587965830386262,
+   "ci95": [
+    -0.35797773155412255,
+    0.06297349477149765
+   ],
+   "boot_mean": -0.049595992822049205,
+   "n_valid": 1999,
+   "share_le_0": 0.688344172086043
+  },
+  "branch|maxtoki_minus_hvg": {
+   "observed": 0.059965149710993315,
+   "ci95": [
+    -0.347058758026944,
+    0.08253999732812387
+   ],
+   "boot_mean": -0.05081755716959482,
+   "n_valid": 1999,
+   "share_le_0": 0.5822911455727864
+  },
+  "branch_diff_ct|maxtoki": {
+   "observed": 0.06734615043299123,
+   "ci95": [
+    -0.31673495290639125,
+    0.31157682777919105
+   ],
+   "boot_mean": 0.06528444163656366,
+   "n_valid": 1979,
+   "share_le_0": null
+  },
+  "branch_diff_ct|lookup_ct_mean5": {
+   "observed": 0.05402266633283883,
+   "ci95": [
+    -0.035917568318982906,
+    0.3154460081178466
+   ],
+   "boot_mean": 0.0837529706749531,
+   "n_valid": 1979,
+   "share_le_0": null
+  },
+  "branch_diff_ct|tokenbag_pca64": {
+   "observed": -0.07828389880561494,
+   "ci95": [
+    -0.41507568869035644,
+    0.04802686866034084
+   ],
+   "boot_mean": -0.10480696296338528,
+   "n_valid": 1979,
+   "share_le_0": null
+  },
+  "branch_diff_ct|hvg_pca64": {
+   "observed": 0.0879186823994107,
+   "ci95": [
+    -0.31244596252274853,
+    0.3792031151918553
+   ],
+   "boot_mean": 0.08100916479164011,
+   "n_valid": 1979,
+   "share_le_0": null
+  },
+  "branch_diff_ct|maxtoki_minus_lookup": {
+   "observed": 0.013323484100152404,
+   "ci95": [
+    -0.4377676140011978,
+    0.0865801201950796
+   ],
+   "boot_mean": -0.01846852903838945,
+   "n_valid": 1979,
+   "share_le_0": 0.3719050025265285
+  },
+  "branch_diff_ct|maxtoki_minus_tokenbag": {
+   "observed": 0.14563004923860617,
+   "ci95": [
+    -0.025196638339509882,
+    0.5940297488078409
+   ],
+   "boot_mean": 0.1700914045999489,
+   "n_valid": 1979,
+   "share_le_0": 0.039413845376452754
+  },
+  "branch_diff_ct|maxtoki_minus_hvg": {
+   "observed": -0.020572531966419463,
+   "ci95": [
+    -0.13116517774800818,
+    0.08228462543482962
+   ],
+   "boot_mean": -0.01572472315507646,
+   "n_valid": 1979,
+   "share_le_0": 0.628600303183426
+  }
+ }
+}

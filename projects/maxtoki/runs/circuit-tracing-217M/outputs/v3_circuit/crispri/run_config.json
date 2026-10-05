@@ -1,0 +1,38 @@
+{
+  "script": "<REPO_ROOT>/projects/maxtoki/runs/circuit-tracing-217M/scripts/v3_circuit_crispri.py",
+  "script_sha256": "0c39bf46330855a174bad960e3b768e8f5f802295b3b646835df7fcd95f073bd",
+  "metric_code": "<REPO_ROOT>/projects/maxtoki/runs/circuit-tracing-217M/scripts/v2_circuit_crispri.py",
+  "metric_code_sha256": "e7658d82fd8682b094fc16e43088d645119e456a20fce717df95a1775c0590e3",
+  "device": "cpu",
+  "seeds": {
+    "bootstrap": 42,
+    "source_folds": 42,
+    "within_source_target_folds": 43
+  },
+  "n_boot": 2000,
+  "inputs": {
+    "edges": "<REPO_ROOT>/projects/maxtoki/runs/circuit-tracing-217M/outputs/v3_circuit/circuit_edges_v3.csv",
+    "edges_sha256": "40f41a74196aa6347662c82c34cf9348d6e53604e67e6f5a23574931c156d92d",
+    "catalogs": "<REPO_ROOT>/projects/maxtoki/runs/circuit-tracing-217M/outputs/v3_circuit/annotation",
+    "lfc_panel_sha256": "b32e49447676813e0c578395a8f38083370fe3fd65153e59565097fc48281636",
+    "lfc_file_sha256": "28483a1732c68664ddbe19202570bdd4428f09fceee05b998ec1c191a35b5188",
+    "lfc_v2style_sha256": "ad4784a49a2a90865ab18fde52179ce52b2a8dcf1a23fd1efe0c308b52bc65dc",
+    "v2_edges": "<REPO_ROOT>/projects/maxtoki/runs/circuit-tracing-217M/outputs/v2_circuit/circuit_edges_v2.csv",
+    "v2_per_pair": "<REPO_ROOT>/projects/maxtoki/runs/circuit-tracing-217M/outputs/v2_circuit/per_pair.parquet"
+  },
+  "lfc_cell_counts": {
+    "n_candidates": 1543,
+    "n_with_ge10_cells": 394,
+    "n_without_guide": 976,
+    "n_with_lt10_cells": 173,
+    "kd_cells_min": 31,
+    "kd_cells_median": 106.5,
+    "kd_cells_max": 575,
+    "kd_cells_total": 50729,
+    "n_control_cells": 3000
+  },
+  "numpy": "1.26.4",
+  "pandas": "2.3.3",
+  "timestamp": "2026-10-02T13:14:29",
+  "wall_seconds": 10.8
+}

@@ -1,0 +1,109 @@
+{
+  "device": "mps",
+  "torch": "2.11.0",
+  "transformers": "5.5.4",
+  "python": "3.12.9",
+  "platform": "macOS-26.3-arm64-arm-64bit",
+  "hooks_v2_sha256": "1ba6fda5ad761b1f82041a7b1397fa9332fa7438e13db955a00d751c4b440f54",
+  "model_dir": "<REPO_ROOT>/projects/maxtoki/setup/MaxToki-217M-HF",
+  "model_dtype": "float32",
+  "timestamp": "2026-10-02T04:34:54",
+  "script": "<REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/scripts/v3_tf_specificity_extract.py",
+  "script_sha256": "eb7dbfd18f377e32ea9c6f12f923c6ffae3d67b8e58bde0bb42790466e044d2d",
+  "sae_path": "<REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/outputs/v3_sae/layer_05/sae_final.pt",
+  "sae_sha256": "aff63f2744474945df50cac688b8fd402f50c8434a56fac5b670051b3cc05a25",
+  "layer_site": "input of model.model.layers[5] = hidden_states[5] (hooks_v2.site_module)",
+  "max_len": 2048,
+  "batch_size_forward": 1,
+  "attention": "eager",
+  "seeds": {
+    "catalog": 42,
+    "ctrl": 20261001,
+    "kd": 20261002
+  },
+  "n_ref": 400,
+  "n_pool": 800,
+  "n_kd_max": 100,
+  "memory_guard_gb": 3.0,
+  "threads": {
+    "OMP_NUM_THREADS": "4",
+    "torch": 4
+  },
+  "input_encoding": {
+    "inputs_module": "<REPO_ROOT>/projects/maxtoki/setup/inputs_v3.py",
+    "inputs_v3_sha256": "019e38346748c027a55ce3d32c33c9096f9e60b9434e51e51b1d836a6bfc3707",
+    "dataset": "k562",
+    "file": {
+      "path": "<DATA_ROOT>/biodyn-nmi-paper/src/02_cssi_method/crispri_validation/data/replogle_concat.h5ad",
+      "size": 30010775846,
+      "mtime": "2026-02-14T23:33:00",
+      "sha256_head_tail_16MB": "ef45fd6a820bf4f2795ab091c1f22ac25fb5f39daae1712804d902b9680bb995"
+    },
+    "count_source": "expm1_X",
+    "count_source_description": "expm1(X) (X = log1p(CP10k)), checked per row to be whole-number multiples of the cell's smallest non-zero value; by default divided by that value and rounded (= integer counts up to one per-cell factor; expm1_mode='integer')",
+    "encoding": "counts / row total * 1e4 / Geneformer gc104M gene median, ranked high->low, first max_len-2 genes, <bos>=2 ... <eos>=3 (maxtoki_adapter.tokenize_cell)",
+    "gene_median_pkl": "<DATA_ROOT>/biodyn-nmi-paper/src/02_cssi_method/crispri_validation/data/gene_median_dictionary_gc104M.pkl",
+    "token_dictionary": "<REPO_ROOT>/projects/maxtoki/setup/token_dictionary.json"
+  },
+  "encoding_check_result": {
+    "batches": 368,
+    "cells_checked": 9200,
+    "cells_done": 9200,
+    "all_pass": true,
+    "positions_tie_reordered": 1212,
+    "max_order_violations": 0,
+    "rule": "every cell of every 25-cell batch passes inputs_v3.assert_encoding_batch before its forward pass; a failure raises EncodingError and aborts"
+  },
+  "bos_code_max_abs_diff_across_cells": 0.0,
+  "rows_accepted_unit_one": [
+    282850,
+    401789
+  ],
+  "unit_one_note": "expm1(X) of these rows is already whole numbers (smallest value 1); inputs_v3.CountReader.counts rejects them, inputs_v3.counts_accept_unit_one (added by this item) accepts them as counts with factor 1",
+  "cell_ids": "cell_manifest.csv (dataset row index + barcode) in this folder",
+  "per_cell_input_sha256": "cells/summ_*.npz: counts_sha256, tokens_sha256 (first 16 hex chars) per cell",
+  "chunks": [
+    {
+      "start": "2026-10-02T03:55:31",
+      "wall_s": 453.1,
+      "n_cells": 2050,
+      "s_per_cell": 0.207,
+      "mem_gb_at_start": 16.94,
+      "stop_reason": "max_minutes"
+    },
+    {
+      "start": "2026-10-02T04:05:41",
+      "wall_s": 452.5,
+      "n_cells": 1975,
+      "s_per_cell": 0.213,
+      "mem_gb_at_start": 13.95,
+      "stop_reason": "max_minutes"
+    },
+    {
+      "start": "2026-10-02T04:15:14",
+      "wall_s": 453.7,
+      "n_cells": 2075,
+      "s_per_cell": 0.21,
+      "mem_gb_at_start": 9.78,
+      "stop_reason": "max_minutes"
+    },
+    {
+      "start": "2026-10-02T04:24:30",
+      "wall_s": 453.5,
+      "n_cells": 2050,
+      "s_per_cell": 0.212,
+      "mem_gb_at_start": 9.3,
+      "stop_reason": "max_minutes"
+    },
+    {
+      "start": "2026-10-02T04:32:28",
+      "wall_s": 146.3,
+      "n_cells": 650,
+      "s_per_cell": 0.215,
+      "mem_gb_at_start": 16.89,
+      "stop_reason": "finished"
+    }
+  ],
+  "n_done": 9200,
+  "n_failed": 0
+}

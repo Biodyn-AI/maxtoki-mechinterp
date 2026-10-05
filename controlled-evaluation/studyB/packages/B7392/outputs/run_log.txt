@@ -1,0 +1,22 @@
+source (3000, 2304) | target (3000, 2304) | shared genes 6544 | k=512
+
+arm                R_diff   med err
+expr_full           0.878       16d
+expr_512_mag        0.820       17d
+expr_512_rank       0.792       20d
+model               0.789       23d
+constant            0.043       86d
+random              0.017       88d
+
+PAIRED CONTRASTS (5000 draws, same cells per draw)
+  contrast                            delta R_diff                95% CI    P(>0)
+  model - expr_512_rank                    -0.0022   [-0.0144, +0.0105]    0.360
+  model - expr_full                        -0.0889   [-0.1000, -0.0781]    0.000
+  expr_full - expr_512_rank                +0.0868   [+0.0743, +0.0992]    1.000
+  expr_full - expr_512_mag                 +0.0582   [+0.0473, +0.0694]    1.000
+  expr_512_mag - expr_512_rank             +0.0285   [+0.0195, +0.0378]    1.000
+
+VERDICT: PARITY — the CI on model minus its own input encoding spans 0
+  tokenisation loss (expr_full - expr_512_rank) = +0.0868 [0.07432228519013437, 0.09923783287846202]
+  model vs its own input               = -0.0022 [-0.0144, +0.0105]
+[done] -> outputs/transfer_results.json

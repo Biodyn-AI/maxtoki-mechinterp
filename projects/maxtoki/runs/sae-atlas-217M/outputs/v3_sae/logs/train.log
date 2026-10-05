@@ -1,0 +1,107 @@
+17:58:20   L0 epoch 0: loss=0.000315 steps=225 time=433.8s (batch reads 360.9s)
+17:58:24 paused in layer 0; run again
+17:59:39   L0: resumed after epoch 0
+18:00:32   L0 epoch 1: loss=0.000208 steps=450 time=487.1s (batch reads 16.5s)
+18:01:58   L0 epoch 2: loss=0.000167 steps=675 time=573.7s (batch reads 31.2s)
+18:03:31   L0 epoch 3: loss=0.000141 steps=900 time=665.8s (batch reads 37.8s)
+<REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/scripts/v3_sae.py:471: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at /Users/runner/work/pytorch/pytorch/pytorch/torch/csrc/utils/tensor_numpy.cpp:219.)
+  xb = torch.from_numpy(np.ascontiguousarray(X_ev_mm[a:a + 8192], dtype=np.float32)).to(dev)
+Traceback (most recent call last):
+  File "<REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/scripts/v3_sae.py", line 965, in <module>
+    main()
+  File "<REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/scripts/v3_sae.py", line 960, in main
+    {"prepare": cmd_prepare, "extract": cmd_extract, "train": cmd_train, "evaluate": cmd_evaluate,
+  File "<REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/scripts/v3_sae.py", line 600, in cmd_train
+    st = train_one(l, args.max_minutes, t_call)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/scripts/v3_sae.py", line 565, in train_one
+    ev = eval_like_deployed(model, X_eval_mm, mu, SEED)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<REPO_ROOT>/projects/maxtoki/.venv/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "<REPO_ROOT>/projects/maxtoki/runs/sae-atlas-217M/scripts/v3_sae.py", line 473, in eval_like_deployed
+    sse += float(((xb - x_hat) ** 2).double().sum().item())
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Cannot convert a MPS Tensor to float64 dtype as the MPS framework doesn't support float64. Please use float32 instead.
+18:04:25   L0: resumed after epoch 3
+18:04:33   L0 DONE: FVE=0.6997 dead=2431 L0=32.00 (24s)
+18:05:42   L1 epoch 0: loss=0.042315 steps=225 time=57.3s (batch reads 3.9s)
+18:06:34   L1 epoch 1: loss=0.016039 steps=450 time=109.1s (batch reads 1.2s)
+18:07:28   L1 epoch 2: loss=0.012216 steps=675 time=163.7s (batch reads 2.7s)
+18:08:29   L1 epoch 3: loss=0.010594 steps=900 time=224.5s (batch reads 8.3s)
+18:08:36   L1 DONE: FVE=0.9105 dead=0 L0=32.00 (243s)
+18:08:37 time budget used; run again
+18:10:17   L2 epoch 0: loss=0.082850 steps=225 time=59.7s (batch reads 7.0s)
+18:11:11   L2 epoch 1: loss=0.023686 steps=450 time=113.8s (batch reads 3.8s)
+18:12:00   L2 epoch 2: loss=0.016970 steps=675 time=162.7s (batch reads 0.8s)
+18:12:55   L2 epoch 3: loss=0.014604 steps=900 time=217.7s (batch reads 4.8s)
+18:13:01   L2 DONE: FVE=0.9278 dead=0 L0=32.00 (234s)
+18:15:00   L3 epoch 0: loss=0.106857 steps=225 time=99.7s (batch reads 41.5s)
+18:15:01 paused in layer 3; run again
+18:15:44   L3: resumed after epoch 0
+18:16:56   L3 epoch 1: loss=0.035652 steps=450 time=172.5s (batch reads 17.0s)
+18:18:34   L3 epoch 2: loss=0.025503 steps=675 time=269.7s (batch reads 37.7s)
+18:20:03   L3 epoch 3: loss=0.022208 steps=900 time=358.6s (batch reads 33.0s)
+18:20:11   L3 DONE: FVE=0.9122 dead=0 L0=32.00 (280s)
+18:20:32 paused in layer 4; run again
+18:26:42   L4 epoch 0: loss=0.128759 steps=225 time=309.4s (batch reads 209.2s)
+18:26:44 paused in layer 4; run again
+18:29:16   L4: resumed after epoch 0
+18:32:17   L4 epoch 1: loss=0.047101 steps=450 time=490.6s (batch reads 130.5s)
+18:32:54   L4 epoch 2: loss=0.034553 steps=675 time=527.2s (batch reads 6.3s)
+18:34:14   L4 epoch 3: loss=0.029816 steps=900 time=607.6s (batch reads 50.4s)
+18:34:21   L4 DONE: FVE=0.8999 dead=0 L0=32.00 (374s)
+18:34:21 time budget used; run again
+18:37:36   L5 epoch 0: loss=0.169492 steps=225 time=129.8s (batch reads 94.8s)
+18:41:53   L5 epoch 1: loss=0.077208 steps=450 time=387.2s (batch reads 198.0s)
+18:41:55 paused in layer 5; run again
+18:44:01   L5: resumed after epoch 1
+18:45:13   L5 epoch 2: loss=0.058854 steps=675 time=459.8s (batch reads 0.2s)
+18:46:20   L5 epoch 3: loss=0.051266 steps=900 time=527.0s (batch reads 1.0s)
+18:46:30   L5 DONE: FVE=0.8624 dead=0 L0=32.84 (160s)
+18:48:25   L6 epoch 0: loss=0.229161 steps=225 time=61.9s (batch reads 3.9s)
+18:49:44   L6 epoch 1: loss=0.116192 steps=450 time=141.0s (batch reads 3.4s)
+18:49:45 paused in layer 6; run again
+18:52:51   L0: recounted {'variance_explained': 0.699656946840679, 'n_alive': 2497, 'n_dead': 2431, 'mean_l0_eval': 32.0} -> FVE 0.6997 dead 2431 L0 32.000
+18:53:00   L1: recounted {'variance_explained': 0.9105024484239517, 'n_alive': 4928, 'n_dead': 0, 'mean_l0_eval': 32.0} -> FVE 0.9105 dead 0 L0 32.000
+18:53:10   L2: recounted {'variance_explained': 0.9278175082595812, 'n_alive': 4928, 'n_dead': 0, 'mean_l0_eval': 32.0} -> FVE 0.9278 dead 0 L0 32.000
+18:53:21   L3: recounted {'variance_explained': 0.9121814085372211, 'n_alive': 4928, 'n_dead': 0, 'mean_l0_eval': 32.0} -> FVE 0.9122 dead 0 L0 32.000
+18:53:33   L4: recounted {'variance_explained': 0.8999476708000153, 'n_alive': 4928, 'n_dead': 0, 'mean_l0_eval': 32.0} -> FVE 0.8999 dead 0 L0 32.000
+18:53:47   L5: recounted {'variance_explained': 0.8623862034938105, 'n_alive': 4928, 'n_dead': 0, 'mean_l0_eval': 32.84196078431373} -> FVE 0.8624 dead 0 L0 32.000
+18:53:54   L6: resumed after epoch 1
+18:55:04   L6 epoch 2: loss=0.088303 steps=675 time=211.5s (batch reads 7.9s)
+18:56:33   L6 epoch 3: loss=0.076245 steps=900 time=300.4s (batch reads 26.2s)
+18:56:51   L6 DONE: FVE=0.8472 dead=0 L0=32.00 (184s)
+18:57:58 paused in layer 7; run again
+19:00:05   L7 epoch 0: loss=0.307547 steps=225 time=49.1s (batch reads 14.9s)
+19:01:02   L7 epoch 1: loss=0.159226 steps=450 time=105.8s (batch reads 25.0s)
+19:01:43   L7 epoch 2: loss=0.122157 steps=675 time=146.6s (batch reads 9.2s)
+19:02:16   L7 epoch 3: loss=0.104860 steps=900 time=180.5s (batch reads 4.9s)
+19:02:25   L7 DONE: FVE=0.8472 dead=5 L0=32.00 (196s)
+19:03:21   L8 epoch 0: loss=0.542349 steps=225 time=30.7s (batch reads 0.1s)
+19:03:52   L8 epoch 1: loss=0.285789 steps=450 time=61.0s (batch reads 0.1s)
+19:04:19   L8 epoch 2: loss=0.220809 steps=675 time=88.4s (batch reads 0.1s)
+19:04:19 paused in layer 8; run again
+03:00:01   L8: resumed after epoch 2
+03:00:55   L8 epoch 3: loss=0.192083 steps=900 time=142.5s (batch reads 0.1s)
+03:01:05   L8 DONE: FVE=0.8421 dead=18 L0=32.00 (69s)
+03:02:37   L9 epoch 0: loss=0.663671 steps=225 time=59.7s (batch reads 1.0s)
+03:03:38   L9 epoch 1: loss=0.345861 steps=450 time=120.4s (batch reads 0.5s)
+03:04:45   L9 epoch 2: loss=0.269516 steps=675 time=187.0s (batch reads 1.8s)
+03:05:43   L9 epoch 3: loss=0.231537 steps=900 time=245.5s (batch reads 0.2s)
+03:05:50   L9 DONE: FVE=0.8588 dead=12 L0=32.00 (285s)
+03:05:50 time budget used; run again
+03:07:51   L10 epoch 0: loss=0.794763 steps=225 time=59.5s (batch reads 0.6s)
+03:08:47   L10 epoch 1: loss=0.404010 steps=450 time=115.3s (batch reads 0.2s)
+03:09:42   L10 epoch 2: loss=0.321303 steps=675 time=170.3s (batch reads 0.6s)
+03:10:40   L10 epoch 3: loss=0.276239 steps=900 time=228.7s (batch reads 1.6s)
+03:10:50   L10 DONE: FVE=0.8693 dead=4 L0=32.00 (264s)
+03:12:14   L11 epoch 0: loss=2.174578 steps=225 time=56.3s (batch reads 0.2s)
+03:12:14 paused in layer 11; run again
+03:12:54   L11: resumed after epoch 0
+03:13:52   L11 epoch 1: loss=1.108093 steps=450 time=114.4s (batch reads 0.2s)
+03:14:49   L11 epoch 2: loss=0.889266 steps=675 time=171.1s (batch reads 0.1s)
+03:15:43   L11 epoch 3: loss=0.766749 steps=900 time=225.2s (batch reads 0.2s)
+03:15:52   L11 DONE: FVE=0.8714 dead=4 L0=32.00 (184s)
+03:15:52 train DONE (all 12 layers)

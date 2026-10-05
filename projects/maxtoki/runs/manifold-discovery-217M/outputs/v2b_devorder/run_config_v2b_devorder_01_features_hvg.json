@@ -1,0 +1,70 @@
+{
+  "script": "v2b_devorder_01_features_hvg",
+  "written_at": "2026-10-01 12:11:35",
+  "python": "3.12.9",
+  "torch": "2.11.0",
+  "numpy": "1.26.4",
+  "torch_threads": 6,
+  "inputs": {
+    "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/artifacts/anchors/anchor_meta_internal.csv": "9b8c5686d7d87497e5b973693dbbd2bf2bb865872d3c27b8e50622a3e7a784ca",
+    "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/artifacts/anchors/anchor_meta_external.csv": "85436fada49d034ae1f048b56b7dba394b0650ccb09e0c58e62b710365806011",
+    "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/artifacts/anchors/anchor_meta_zeroshot.csv": "6b6bae3162bacf37a21aa213794c3693ec4db9544905af59e302db9027c9ade2",
+    "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/artifacts/anchors/anchor_meta_lung_nonhema.csv": "6c1d4598c712892fa97184f6756b0d9b4bc2884f151dbf645cfb95cc767328c0",
+    "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/outputs/phase1/cells_internal_obs.csv": "83f1637521f92395ea4981c1dce1056dded1fe76cab2a94ae4d961ac6e8bd6b5",
+    "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/outputs/phase1/cells_external_obs.csv": "bb28ee7a3ea3e9f5f12a36eb751b454e9d633af51b2fc73d87fc9aff6ca262bc",
+    "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/outputs/phase1/cells_zeroshot_obs.csv": "b44ae7a724ef1284b9ada2a61e4fd276b41492ed2219c5b3ab9fd81302c1c3af",
+    "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/outputs/phase1/cells_lung_nonhema_obs.csv": "3aff04607a956448e85705cb7c899156a36b0b0adfeb8396b96d7a0dba30ebda",
+    "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/outputs/phase1/anchors_internal.csv": "fa85d68ba900833494421d8adc7c97aa9e2f99c64d6f8c996f7b42e9414a2586",
+    "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/outputs/phase1/anchors_external.csv": "ec65a0442620de81ba2de6fd2b9e943338ca3a8e54099dbde00858a07e272a3a",
+    "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/outputs/phase1/anchors_zeroshot.csv": "519c0afc5367d5661e63c718392a43b4387a7594d39b607d595bb4a35a97b7ab",
+    "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/outputs/phase1/anchors_lung_nonhema.csv": "a8bd358e80c9f5fa89843846cb58b155a88a409d84a22c8fec0e49122f371464"
+  },
+  "info": {
+    "hvg_n_genes_total": 60606,
+    "hvg_selected": 2000,
+    "hvg_first10": [
+      "ENSG00000211648",
+      "ENSG00000196502",
+      "ENSG00000143971",
+      "ENSG00000132300",
+      "ENSG00000197891",
+      "ENSG00000244588",
+      "ENSG00000211666",
+      "ENSG00000224086",
+      "ENSG00000243238",
+      "ENSG00000211640"
+    ],
+    "hvg_pca64_evr_sum": 0.7327830791473389,
+    "library_size": {
+      "internal": {
+        "median_counts_per_cell": 8731.5,
+        "n_cells": 11804
+      },
+      "external": {
+        "median_counts_per_cell": 7482.0,
+        "n_cells": 12000
+      },
+      "zeroshot": {
+        "median_counts_per_cell": 7216.5,
+        "n_cells": 5120
+      },
+      "lung_nonhema": {
+        "median_counts_per_cell": 11796.5,
+        "n_cells": 1500
+      }
+    },
+    "n_internal_cells_for_hvg": 11804
+  },
+  "seconds": 61.026526927948,
+  "seeds": {
+    "pca": 42,
+    "lookup_ct": "default_rng([7001,k]) codes, default_rng([7001,k,panel_index]) noise",
+    "lookup_cls": "default_rng([7002,k]) codes, default_rng([7002,k,panel_index]) noise",
+    "cell_subsample": "default_rng(42) as phase1bc"
+  },
+  "raw_h5ad_note": "raw counts read from raw/X of tabula_sapiens_immune.h5ad (19.8 GB) and tabula_sapiens_lung.h5ad; sha256 not computed for these two files (size); file sizes recorded instead",
+  "raw_h5ad_bytes": {
+    "<DATA_ROOT>/biodyn-work/single_cell_mechinterp/data/raw/tabula_sapiens_immune.h5ad": 19773999714,
+    "<DATA_ROOT>/biodyn-work/single_cell_mechinterp/data/raw/tabula_sapiens_lung.h5ad": 3196847019
+  }
+}

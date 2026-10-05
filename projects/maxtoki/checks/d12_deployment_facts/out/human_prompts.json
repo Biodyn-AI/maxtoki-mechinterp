@@ -1,0 +1,990 @@
+{
+  "source": {
+    "path": "<CLAUDE_HOME>/history.jsonl",
+    "sha256": "1aa095fd1389c86b6573ce4cf66c86b6102c2bd88b0b4302a8adb922e2bc2ccb",
+    "n_rows_total": 2304,
+    "first": "2026-01-06T00:02:31.716000",
+    "last": "2026-07-17T12:03:31.490000",
+    "note": "stores typed prompts only; no agent model, no replies, no reading/thinking time"
+  },
+  "window": {
+    "start": "2026-04-15T00:00:00",
+    "end": "2026-05-09T00:00:00",
+    "project": "<REPO_ROOT>"
+  },
+  "sessions": {
+    "17b19da0": "spec authoring (pipelines/*.md), last prompt starts the MaxToki project",
+    "965ec1c8": "MaxToki runs: setup, attention-grn, spectral, sae-atlas (+web atlas), circuit-tracing",
+    "8fb71b84": "MaxToki runs: exhaustive-mapping, atlas deployment, spectral extension + autoloop",
+    "3af9282c": "MaxToki runs: topology-141",
+    "8be46b0f": "MaxToki runs: manifold-discovery",
+    "b9b1ea22": "MaxToki runs: longevity",
+    "2a9284b9": "topology-141 completion + extensions, audit, repairs, start of paper",
+    "58d03bad": "MaxToki runs: longevity completion",
+    "5137b56d": "MaxToki runs: manifold-discovery continuation",
+    "862b8d39": "paper drafting and public repo"
+  },
+  "excluded_sessions_same_folder": {
+    "6fa7aa59": "AIDO.Cell project (different model)",
+    "9c9a1e82": "journal correspondence for an unrelated paper",
+    "91ff0dbe": "download of a different model"
+  },
+  "n_prompts_same_folder_in_window": 127,
+  "n_prompts_excluded_other_projects_same_folder": 30,
+  "n_prompts_maxtoki_sessions": 97,
+  "by_category": {
+    "spec_authoring": 14,
+    "setup": 3,
+    "session_admin": 11,
+    "continue": 21,
+    "run_request": 9,
+    "docs": 2,
+    "scope_check": 9,
+    "stop_decision": 1,
+    "atlas_webapp": 10,
+    "status_check": 1,
+    "scope_decision": 1,
+    "audit": 5,
+    "paper": 10
+  },
+  "n_deployment_prompts_excl_spec_and_paper": 73,
+  "deployment_window": {
+    "start": "2026-04-15 23:18:00",
+    "end": "2026-05-07 21:10:46"
+  },
+  "per_day": {
+    "2026-04-15": {
+      "all_maxtoki_session_prompts": 22,
+      "deployment_prompts": 8,
+      "by_category": {
+        "spec_authoring": 14,
+        "setup": 3,
+        "session_admin": 2,
+        "continue": 2,
+        "run_request": 1
+      },
+      "sessions": [
+        "17b19da0",
+        "965ec1c8"
+      ],
+      "first": "18:31",
+      "last": "23:57"
+    },
+    "2026-04-16": {
+      "all_maxtoki_session_prompts": 3,
+      "deployment_prompts": 3,
+      "by_category": {
+        "continue": 2,
+        "run_request": 1
+      },
+      "sessions": [
+        "965ec1c8"
+      ],
+      "first": "10:52",
+      "last": "18:57"
+    },
+    "2026-04-17": {
+      "all_maxtoki_session_prompts": 8,
+      "deployment_prompts": 8,
+      "by_category": {
+        "docs": 1,
+        "scope_check": 3,
+        "continue": 2,
+        "stop_decision": 1,
+        "run_request": 1
+      },
+      "sessions": [
+        "965ec1c8"
+      ],
+      "first": "10:15",
+      "last": "21:35"
+    },
+    "2026-04-18": {
+      "all_maxtoki_session_prompts": 1,
+      "deployment_prompts": 1,
+      "by_category": {
+        "continue": 1
+      },
+      "sessions": [
+        "965ec1c8"
+      ],
+      "first": "14:40",
+      "last": "14:40"
+    },
+    "2026-04-19": {
+      "all_maxtoki_session_prompts": 11,
+      "deployment_prompts": 11,
+      "by_category": {
+        "continue": 3,
+        "atlas_webapp": 7,
+        "run_request": 1
+      },
+      "sessions": [
+        "965ec1c8"
+      ],
+      "first": "13:10",
+      "last": "22:20"
+    },
+    "2026-04-20": {
+      "all_maxtoki_session_prompts": 4,
+      "deployment_prompts": 4,
+      "by_category": {
+        "scope_check": 2,
+        "continue": 1,
+        "run_request": 1
+      },
+      "sessions": [
+        "965ec1c8"
+      ],
+      "first": "11:03",
+      "last": "14:15"
+    },
+    "2026-04-23": {
+      "all_maxtoki_session_prompts": 10,
+      "deployment_prompts": 10,
+      "by_category": {
+        "session_admin": 5,
+        "scope_check": 2,
+        "continue": 2,
+        "status_check": 1
+      },
+      "sessions": [
+        "8fb71b84"
+      ],
+      "first": "19:27",
+      "last": "20:45"
+    },
+    "2026-04-24": {
+      "all_maxtoki_session_prompts": 1,
+      "deployment_prompts": 1,
+      "by_category": {
+        "docs": 1
+      },
+      "sessions": [
+        "8fb71b84"
+      ],
+      "first": "13:49",
+      "last": "13:49"
+    },
+    "2026-05-03": {
+      "all_maxtoki_session_prompts": 7,
+      "deployment_prompts": 7,
+      "by_category": {
+        "atlas_webapp": 3,
+        "run_request": 3,
+        "scope_decision": 1
+      },
+      "sessions": [
+        "3af9282c",
+        "8be46b0f",
+        "8fb71b84"
+      ],
+      "first": "18:55",
+      "last": "19:51"
+    },
+    "2026-05-05": {
+      "all_maxtoki_session_prompts": 5,
+      "deployment_prompts": 5,
+      "by_category": {
+        "continue": 3,
+        "scope_check": 1,
+        "run_request": 1
+      },
+      "sessions": [
+        "3af9282c",
+        "8be46b0f",
+        "8fb71b84",
+        "b9b1ea22"
+      ],
+      "first": "16:07",
+      "last": "16:10"
+    },
+    "2026-05-07": {
+      "all_maxtoki_session_prompts": 19,
+      "deployment_prompts": 15,
+      "by_category": {
+        "session_admin": 4,
+        "continue": 5,
+        "scope_check": 1,
+        "audit": 5,
+        "paper": 4
+      },
+      "sessions": [
+        "2a9284b9",
+        "5137b56d",
+        "58d03bad",
+        "862b8d39"
+      ],
+      "first": "11:33",
+      "last": "23:51"
+    },
+    "2026-05-08": {
+      "all_maxtoki_session_prompts": 6,
+      "deployment_prompts": 0,
+      "by_category": {
+        "paper": 6
+      },
+      "sessions": [
+        "862b8d39"
+      ],
+      "first": "00:13",
+      "last": "01:30"
+    }
+  },
+  "by_pipeline": {
+    "setup": 4,
+    "attention-grn": 4,
+    "spectral-geometry": 8,
+    "sae-atlas": 17,
+    "circuit-tracing": 4,
+    "exhaustive-mapping": 7,
+    "topology-141": 5,
+    "manifold-discovery": 6,
+    "longevity": 3,
+    "audit": 5
+  },
+  "audit_session_2a9284b9": [
+    {
+      "time": "2026-05-07 11:33:38",
+      "category": "session_admin",
+      "gist": "asks the agent to find the parallel sessions of the last days"
+    },
+    {
+      "time": "2026-05-07 11:35:42",
+      "category": "session_admin",
+      "gist": "picks one of the options the agent offered"
+    },
+    {
+      "time": "2026-05-07 11:38:36",
+      "category": "scope_check",
+      "gist": "asks to check whether the topology-141 run is complete"
+    },
+    {
+      "time": "2026-05-07 11:40:32",
+      "category": "continue",
+      "gist": "approves the agent's proposed completion work"
+    },
+    {
+      "time": "2026-05-07 15:55:24",
+      "category": "continue",
+      "gist": "asks to run the items the topology run had left out of scope"
+    },
+    {
+      "time": "2026-05-07 16:49:46",
+      "category": "audit",
+      "gist": "asks for a new audit pipeline built from earlier peer-review comments"
+    },
+    {
+      "time": "2026-05-07 17:30:17",
+      "category": "audit",
+      "gist": "asks to apply that audit to all MaxToki results (summaries folder)"
+    },
+    {
+      "time": "2026-05-07 17:50:00",
+      "category": "audit",
+      "gist": "asks to fix all issues the audit found"
+    },
+    {
+      "time": "2026-05-07 18:47:31",
+      "category": "audit",
+      "gist": "asks whether all audit issues are now addressed"
+    },
+    {
+      "time": "2026-05-07 18:48:59",
+      "category": "audit",
+      "gist": "asks to address the remaining issues"
+    },
+    {
+      "time": "2026-05-07 23:31:08",
+      "category": "paper",
+      "gist": "pasted text (content not stored); starts the paper work"
+    }
+  ],
+  "audit_prompts": {
+    "n": 5,
+    "first": "2026-05-07 16:49:46",
+    "last": "2026-05-07 18:48:59"
+  },
+  "prompts": [
+    {
+      "time": "2026-04-15 18:31:06",
+      "session": "17b19da0",
+      "category": "spec_authoring",
+      "pipeline": null,
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-04-15 18:32:24",
+      "session": "17b19da0",
+      "category": "spec_authoring",
+      "pipeline": null,
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-04-15 18:34:41",
+      "session": "17b19da0",
+      "category": "spec_authoring",
+      "pipeline": null,
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-04-15 18:46:25",
+      "session": "17b19da0",
+      "category": "spec_authoring",
+      "pipeline": null,
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-04-15 19:06:51",
+      "session": "17b19da0",
+      "category": "spec_authoring",
+      "pipeline": null,
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-04-15 19:40:55",
+      "session": "17b19da0",
+      "category": "spec_authoring",
+      "pipeline": null,
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-04-15 19:52:23",
+      "session": "17b19da0",
+      "category": "spec_authoring",
+      "pipeline": null,
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-04-15 20:09:18",
+      "session": "17b19da0",
+      "category": "spec_authoring",
+      "pipeline": null,
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-04-15 20:26:53",
+      "session": "17b19da0",
+      "category": "spec_authoring",
+      "pipeline": null,
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-04-15 20:43:17",
+      "session": "17b19da0",
+      "category": "spec_authoring",
+      "pipeline": null,
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-04-15 21:00:27",
+      "session": "17b19da0",
+      "category": "spec_authoring",
+      "pipeline": null,
+      "n_pasted_blocks": 2
+    },
+    {
+      "time": "2026-04-15 21:41:04",
+      "session": "17b19da0",
+      "category": "spec_authoring",
+      "pipeline": null,
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-04-15 21:53:45",
+      "session": "17b19da0",
+      "category": "spec_authoring",
+      "pipeline": null,
+      "n_pasted_blocks": 1
+    },
+    {
+      "time": "2026-04-15 23:18:02",
+      "session": "17b19da0",
+      "category": "setup",
+      "pipeline": "setup",
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-04-15 23:24:34",
+      "session": "965ec1c8",
+      "category": "session_admin",
+      "pipeline": null,
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-04-15 23:25:02",
+      "session": "965ec1c8",
+      "category": "session_admin",
+      "pipeline": null,
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-04-15 23:25:51",
+      "session": "965ec1c8",
+      "category": "continue",
+      "pipeline": "setup",
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-04-15 23:31:22",
+      "session": "965ec1c8",
+      "category": "spec_authoring",
+      "pipeline": "longevity",
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-04-15 23:43:15",
+      "session": "965ec1c8",
+      "category": "setup",
+      "pipeline": "setup",
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-04-15 23:45:14",
+      "session": "965ec1c8",
+      "category": "setup",
+      "pipeline": "setup",
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-04-15 23:46:27",
+      "session": "965ec1c8",
+      "category": "run_request",
+      "pipeline": "attention-grn",
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-04-15 23:57:23",
+      "session": "965ec1c8",
+      "category": "continue",
+      "pipeline": "attention-grn",
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-04-16 10:52:33",
+      "session": "965ec1c8",
+      "category": "continue",
+      "pipeline": "attention-grn",
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-04-16 13:55:58",
+      "session": "965ec1c8",
+      "category": "continue",
+      "pipeline": "attention-grn",
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-04-16 18:57:08",
+      "session": "965ec1c8",
+      "category": "run_request",
+      "pipeline": "spectral-geometry",
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-04-17 10:15:42",
+      "session": "965ec1c8",
+      "category": "docs",
+      "pipeline": null,
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-04-17 10:18:50",
+      "session": "965ec1c8",
+      "category": "scope_check",
+      "pipeline": "spectral-geometry",
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-04-17 10:20:33",
+      "session": "965ec1c8",
+      "category": "continue",
+      "pipeline": "spectral-geometry",
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-04-17 10:39:55",
+      "session": "965ec1c8",
+      "category": "scope_check",
+      "pipeline": "spectral-geometry",
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-04-17 10:41:10",
+      "session": "965ec1c8",
+      "category": "stop_decision",
+      "pipeline": "spectral-geometry",
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-04-17 15:48:34",
+      "session": "965ec1c8",
+      "category": "run_request",
+      "pipeline": "sae-atlas",
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-04-17 21:34:33",
+      "session": "965ec1c8",
+      "category": "scope_check",
+      "pipeline": "sae-atlas",
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-04-17 21:35:27",
+      "session": "965ec1c8",
+      "category": "continue",
+      "pipeline": "sae-atlas",
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-04-18 14:40:28",
+      "session": "965ec1c8",
+      "category": "continue",
+      "pipeline": "sae-atlas",
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-04-19 13:10:27",
+      "session": "965ec1c8",
+      "category": "continue",
+      "pipeline": "sae-atlas",
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-04-19 13:22:03",
+      "session": "965ec1c8",
+      "category": "atlas_webapp",
+      "pipeline": "sae-atlas",
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-04-19 13:45:59",
+      "session": "965ec1c8",
+      "category": "atlas_webapp",
+      "pipeline": "sae-atlas",
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-04-19 13:57:19",
+      "session": "965ec1c8",
+      "category": "atlas_webapp",
+      "pipeline": "sae-atlas",
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-04-19 14:25:25",
+      "session": "965ec1c8",
+      "category": "atlas_webapp",
+      "pipeline": "sae-atlas",
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-04-19 15:21:16",
+      "session": "965ec1c8",
+      "category": "atlas_webapp",
+      "pipeline": "sae-atlas",
+      "n_pasted_blocks": 1
+    },
+    {
+      "time": "2026-04-19 15:27:32",
+      "session": "965ec1c8",
+      "category": "continue",
+      "pipeline": "sae-atlas",
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-04-19 20:48:24",
+      "session": "965ec1c8",
+      "category": "atlas_webapp",
+      "pipeline": "sae-atlas",
+      "n_pasted_blocks": 1
+    },
+    {
+      "time": "2026-04-19 20:53:09",
+      "session": "965ec1c8",
+      "category": "atlas_webapp",
+      "pipeline": "sae-atlas",
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-04-19 21:06:01",
+      "session": "965ec1c8",
+      "category": "continue",
+      "pipeline": "sae-atlas",
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-04-19 22:20:41",
+      "session": "965ec1c8",
+      "category": "run_request",
+      "pipeline": "circuit-tracing",
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-04-20 11:03:01",
+      "session": "965ec1c8",
+      "category": "scope_check",
+      "pipeline": "circuit-tracing",
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-04-20 11:03:47",
+      "session": "965ec1c8",
+      "category": "continue",
+      "pipeline": "circuit-tracing",
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-04-20 14:14:10",
+      "session": "965ec1c8",
+      "category": "scope_check",
+      "pipeline": "circuit-tracing",
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-04-20 14:15:15",
+      "session": "965ec1c8",
+      "category": "run_request",
+      "pipeline": "exhaustive-mapping",
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-04-23 19:27:00",
+      "session": "8fb71b84",
+      "category": "session_admin",
+      "pipeline": null,
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-04-23 19:27:28",
+      "session": "8fb71b84",
+      "category": "session_admin",
+      "pipeline": null,
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-04-23 19:27:43",
+      "session": "8fb71b84",
+      "category": "session_admin",
+      "pipeline": null,
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-04-23 19:28:22",
+      "session": "8fb71b84",
+      "category": "session_admin",
+      "pipeline": null,
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-04-23 19:28:47",
+      "session": "8fb71b84",
+      "category": "session_admin",
+      "pipeline": null,
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-04-23 19:29:43",
+      "session": "8fb71b84",
+      "category": "scope_check",
+      "pipeline": "exhaustive-mapping",
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-04-23 19:31:40",
+      "session": "8fb71b84",
+      "category": "continue",
+      "pipeline": "exhaustive-mapping",
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-04-23 20:25:22",
+      "session": "8fb71b84",
+      "category": "scope_check",
+      "pipeline": "exhaustive-mapping",
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-04-23 20:26:06",
+      "session": "8fb71b84",
+      "category": "continue",
+      "pipeline": "exhaustive-mapping",
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-04-23 20:45:05",
+      "session": "8fb71b84",
+      "category": "status_check",
+      "pipeline": "exhaustive-mapping",
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-04-24 13:49:21",
+      "session": "8fb71b84",
+      "category": "docs",
+      "pipeline": "exhaustive-mapping",
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-05-03 18:55:12",
+      "session": "8fb71b84",
+      "category": "atlas_webapp",
+      "pipeline": "sae-atlas",
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-05-03 19:04:57",
+      "session": "8fb71b84",
+      "category": "atlas_webapp",
+      "pipeline": "sae-atlas",
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-05-03 19:11:53",
+      "session": "8fb71b84",
+      "category": "atlas_webapp",
+      "pipeline": "sae-atlas",
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-05-03 19:13:01",
+      "session": "8fb71b84",
+      "category": "run_request",
+      "pipeline": "spectral-geometry",
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-05-03 19:15:19",
+      "session": "3af9282c",
+      "category": "run_request",
+      "pipeline": "topology-141",
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-05-03 19:38:14",
+      "session": "8be46b0f",
+      "category": "run_request",
+      "pipeline": "manifold-discovery",
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-05-03 19:51:00",
+      "session": "8be46b0f",
+      "category": "scope_decision",
+      "pipeline": "manifold-discovery",
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-05-05 16:07:34",
+      "session": "8be46b0f",
+      "category": "continue",
+      "pipeline": "manifold-discovery",
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-05-05 16:08:13",
+      "session": "3af9282c",
+      "category": "continue",
+      "pipeline": "topology-141",
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-05-05 16:08:23",
+      "session": "8fb71b84",
+      "category": "scope_check",
+      "pipeline": "spectral-geometry",
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-05-05 16:09:25",
+      "session": "8fb71b84",
+      "category": "continue",
+      "pipeline": "spectral-geometry",
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-05-05 16:10:14",
+      "session": "b9b1ea22",
+      "category": "run_request",
+      "pipeline": "longevity",
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-05-07 11:33:38",
+      "session": "2a9284b9",
+      "category": "session_admin",
+      "pipeline": null,
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-05-07 11:35:42",
+      "session": "2a9284b9",
+      "category": "session_admin",
+      "pipeline": null,
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-05-07 11:37:00",
+      "session": "58d03bad",
+      "category": "session_admin",
+      "pipeline": "longevity",
+      "n_pasted_blocks": 1
+    },
+    {
+      "time": "2026-05-07 11:37:40",
+      "session": "5137b56d",
+      "category": "session_admin",
+      "pipeline": "manifold-discovery",
+      "n_pasted_blocks": 1
+    },
+    {
+      "time": "2026-05-07 11:38:03",
+      "session": "58d03bad",
+      "category": "continue",
+      "pipeline": "longevity",
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-05-07 11:38:36",
+      "session": "2a9284b9",
+      "category": "scope_check",
+      "pipeline": "topology-141",
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-05-07 11:39:17",
+      "session": "5137b56d",
+      "category": "continue",
+      "pipeline": "manifold-discovery",
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-05-07 11:40:32",
+      "session": "2a9284b9",
+      "category": "continue",
+      "pipeline": "topology-141",
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-05-07 15:54:55",
+      "session": "5137b56d",
+      "category": "continue",
+      "pipeline": "manifold-discovery",
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-05-07 15:55:24",
+      "session": "2a9284b9",
+      "category": "continue",
+      "pipeline": "topology-141",
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-05-07 16:49:46",
+      "session": "2a9284b9",
+      "category": "audit",
+      "pipeline": "audit",
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-05-07 17:30:17",
+      "session": "2a9284b9",
+      "category": "audit",
+      "pipeline": "audit",
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-05-07 17:50:00",
+      "session": "2a9284b9",
+      "category": "audit",
+      "pipeline": "audit",
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-05-07 18:47:31",
+      "session": "2a9284b9",
+      "category": "audit",
+      "pipeline": "audit",
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-05-07 18:48:59",
+      "session": "2a9284b9",
+      "category": "audit",
+      "pipeline": "audit",
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-05-07 23:31:08",
+      "session": "2a9284b9",
+      "category": "paper",
+      "pipeline": "paper",
+      "n_pasted_blocks": 2
+    },
+    {
+      "time": "2026-05-07 23:42:31",
+      "session": "862b8d39",
+      "category": "paper",
+      "pipeline": "paper",
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-05-07 23:46:56",
+      "session": "862b8d39",
+      "category": "paper",
+      "pipeline": "paper",
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-05-07 23:51:18",
+      "session": "862b8d39",
+      "category": "paper",
+      "pipeline": "paper",
+      "n_pasted_blocks": 1
+    },
+    {
+      "time": "2026-05-08 00:13:45",
+      "session": "862b8d39",
+      "category": "paper",
+      "pipeline": "paper",
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-05-08 00:28:39",
+      "session": "862b8d39",
+      "category": "paper",
+      "pipeline": "paper",
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-05-08 00:46:24",
+      "session": "862b8d39",
+      "category": "paper",
+      "pipeline": "paper",
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-05-08 00:51:05",
+      "session": "862b8d39",
+      "category": "paper",
+      "pipeline": "paper",
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-05-08 01:18:28",
+      "session": "862b8d39",
+      "category": "paper",
+      "pipeline": "paper",
+      "n_pasted_blocks": 0
+    },
+    {
+      "time": "2026-05-08 01:30:45",
+      "session": "862b8d39",
+      "category": "paper",
+      "pipeline": "paper",
+      "n_pasted_blocks": 0
+    }
+  ],
+  "supervision_time": "NOT LOGGED. history.jsonl records when a prompt was typed, not how long the person read, checked or thought. No stopwatch or time log exists."
+}

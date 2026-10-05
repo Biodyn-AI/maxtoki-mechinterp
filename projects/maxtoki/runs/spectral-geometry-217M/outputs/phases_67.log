@@ -1,0 +1,85 @@
+======================================================================
+PHASES 6 + 7 — cell-type + B-cell attractor  E shape (12, 1500, 1232)
+======================================================================
+[Phase 6] marker counts per cell type:
+    B cell: 6
+    T cell: 9
+    NK cell: 3
+    Macrophage: 3
+    Monocyte: 5
+
+[Phase 6] AUROC per layer (within vs across cell type):
+ layer  n_pairs  n_same  auc_same_vs_diff_type
+     0      325      67               0.778723
+     1      325      67               0.605056
+     2      325      67               0.631031
+     3      325      67               0.640634
+     4      325      67               0.541941
+     5      325      67               0.560974
+     6      325      67               0.583304
+     7      325      67               0.589205
+     8      325      67               0.657237
+     9      325      67               0.645262
+    10      325      67               0.580412
+    11      325      67               0.605288
+
+[Phase 7] B-cell attractor dynamics...
+  B-markers in vocab: 6/7: ['CD79A', 'MS4A1', 'BLK', 'VPREB3', 'FCRL1', 'PAX5']
+  watch genes: ['PAX5', 'BATF', 'BACH2', 'BCL6', 'PRDM1', 'IRF4', 'IRF8']
+  metabolic reference: ['NAMPT', 'GLUL', 'PFKFB3', 'HK1', 'PKM', 'LDHA', 'STAT3', 'GAPDH', 'ENO1', 'PGK1']
+
+[Phase 7] B-cell attractor trajectory:
+ layer  rank_PAX5  rank_BATF  dist_BATF_to_PAX5  rank_BACH2  dist_BACH2_to_PAX5  rank_BCL6  dist_BCL6_to_PAX5  rank_PRDM1  dist_PRDM1_to_PAX5  rank_IRF4  dist_IRF4_to_PAX5  rank_IRF8  dist_IRF8_to_PAX5  prec_at_10_b  gc_plasma_angle_deg  bcl6_top20_metabolic_overlap  bcl6_top20_bcell_overlap
+     0         12        698           1.054336        1365            1.081696        877           1.056599         999            1.049132        177           1.023177         68           1.014301      0.333333            71.705396                             0                         0
+     1          2        289          11.713864         348           11.654136        382          11.982944         384           11.999729        159          11.059435        133          10.504807      0.500000            69.937801                             1                         0
+     2          1        257          12.106638         387           12.431896        391          12.587317         292           12.393070        197          12.037177        130          11.414860      0.666667            69.316767                             0                         0
+     3          4        282          12.972420         338           13.337954        385          13.921445         300           13.795257        258          13.635716        170          12.926542      0.666667            66.783119                             0                         0
+     4          7        245          13.596396         278           14.336158        436          15.223719         341           15.138113        390          15.362260        221          14.476180      0.833333            67.457856                             0                         0
+     5          8        272          14.655787         290           15.381608        392          15.855276         310           15.916865        432          16.490568        227          15.584380      0.833333            67.739472                             0                         0
+     6         18        327          15.061881         321           14.640744        388          14.559034         290           15.212863        500          15.302482        182          15.006464      0.500000            68.011131                             0                         0
+     7         45        423          14.357025         272           13.283281        411          14.447315         244           14.236609        443          14.405895        157          13.191166      0.166667            59.882985                             0                         0
+     8         59        340          16.132294         313           14.593860        620          18.343384         230           16.393675        398          17.034132        146          13.966614      0.000000            51.560832                             0                         0
+     9         46        486          20.559797         268           18.135462        600          21.870005         204           19.900770        347          20.710941        105          17.072710      0.000000            53.526044                             0                         0
+    10         95        413          28.326052         204           24.378357        697          31.331766         218           28.655661        400          29.974270        180          24.779997      0.000000            53.188816                             1                         0
+    11        146        423          42.202328         671           38.764992       1230          50.762653         273           43.725655        271          43.376411        182          35.407871      0.000000            46.378600                             1                         0
+
+[Phase 7b] Lineage-specific intrinsic dimensionality:
+cell_type  layer  n_markers      twonn
+   B cell      0          6 101.114664
+   B cell      1          6  34.329681
+   B cell      2          6  34.450731
+   B cell      3          6  62.109487
+   B cell      4          6  34.628283
+   B cell      5          6  36.335871
+   B cell      6          6  13.824972
+   B cell      7          6  14.923178
+   B cell      8          6   8.708643
+   B cell      9          6   7.556448
+   B cell     10          6   6.028284
+   B cell     11          6   6.171547
+   T cell      0          9  81.360469
+   T cell      1          9 119.177070
+   T cell      2          9  59.219296
+   T cell      3          9  39.839776
+   T cell      4          9  58.465775
+   T cell      5          9  67.230261
+   T cell      6          9  22.916392
+   T cell      7          9  31.030883
+   T cell      8          9  16.076393
+   T cell      9          9  16.035748
+   T cell     10          9  15.336008
+   T cell     11          9  16.679011
+  Myeloid      0          1        NaN
+  Myeloid      1          1        NaN
+  Myeloid      2          1        NaN
+  Myeloid      3          1        NaN
+  Myeloid      4          1        NaN
+  Myeloid      5          1        NaN
+  Myeloid      6          1        NaN
+  Myeloid      7          1        NaN
+  Myeloid      8          1        NaN
+  Myeloid      9          1        NaN
+  Myeloid     10          1        NaN
+  Myeloid     11          1        NaN
+
+PHASES 6+7 COMPLETE — outputs: <REPO_ROOT>/projects/maxtoki/runs/spectral-geometry-217M/outputs/phase6, <REPO_ROOT>/projects/maxtoki/runs/spectral-geometry-217M/outputs/phase7

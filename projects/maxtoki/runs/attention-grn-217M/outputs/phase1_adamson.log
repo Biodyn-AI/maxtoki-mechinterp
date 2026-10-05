@@ -1,0 +1,61 @@
+======================================================================
+PHASE 1 — Trivial baselines (MaxToki primary layer L8)
+======================================================================
+
+[1] Loading Phase 0 artefacts...
+  edges shape: (11, 8, 1500, 1500)  primary layer: 8
+  gene_features: 1500
+  load: 0.1s
+
+[2] DE-calling against ADAMSON control cells...
+  cells in COI: 68,603
+  controls: 24,263
+  loading HVG-only expression (sequential)...
+  loaded HVG matrix: (68603, 1500)  (2.7s)
+  NT expression (HVG space): (5000, 1500)
+  perturbations with >= 30 cells: 86
+  evaluable perturbations after DE filter: 75  (0.5s)
+
+[3] Per-perturbation AUROCs...
+  saved per-perturbation AUROC table: (57, 11)
+
+[3b] Per-layer attention AUROC profile...
+ layer  mean_auroc  median_auroc  std_auroc  n_perts
+     0    0.554406      0.559377   0.093125       57
+     1    0.540661      0.530665   0.089113       57
+     2    0.519683      0.511995   0.088997       57
+     3    0.513408      0.513560   0.078579       57
+     4    0.540925      0.545898   0.078991       57
+     5    0.532258      0.541356   0.080417       57
+     6    0.536605      0.537624   0.076778       57
+     7    0.534169      0.542176   0.068644       57
+     8    0.508061      0.516831   0.080617       57
+     9    0.508756      0.523089   0.081743       57
+    10    0.528820      0.528126   0.080222       57
+
+[4] Paired Wilcoxon tests...
+              baseline              reference  n_valid  mean_auc_baseline  mean_auc_reference  mean_delta  median_delta  wilcoxon_W  wilcoxon_p_raw  wilcoxon_p_bh
+         gene_variance      attention_primary       57           0.712260            0.508061    0.204199      0.219704         4.0    6.363775e-11   1.378818e-10
+         gene_variance attention_primary_norm       57           0.712260            0.508061    0.204199      0.219704         4.0    6.363775e-11   1.378818e-10
+         gene_variance               spearman       57           0.712260            0.607899    0.104361      0.131691       209.0    9.287393e-07   1.341512e-06
+        gene_mean_expr      attention_primary       57           0.712482            0.508061    0.204420      0.205367         0.0    5.143754e-11   1.378818e-10
+        gene_mean_expr attention_primary_norm       57           0.712482            0.508061    0.204420      0.205367         0.0    5.143754e-11   1.378818e-10
+        gene_mean_expr               spearman       57           0.712482            0.607899    0.104583      0.120860       204.0    7.579596e-07   1.231684e-06
+gene_one_minus_dropout      attention_primary       57           0.697869            0.508061    0.189808      0.194381         0.0    5.143754e-11   1.378818e-10
+gene_one_minus_dropout attention_primary_norm       57           0.697869            0.508061    0.189808      0.194381         0.0    5.143754e-11   1.378818e-10
+gene_one_minus_dropout               spearman       57           0.697869            0.607899    0.089970      0.105328       271.0    1.016831e-05   1.321880e-05
+    gene_tf_out_degree      attention_primary       57           0.487093            0.508061   -0.020968     -0.033173       590.0    6.023880e-02   6.023880e-02
+    gene_tf_out_degree attention_primary_norm       57           0.487093            0.508061   -0.020968     -0.033173       590.0    6.023880e-02   6.023880e-02
+    gene_tf_out_degree               spearman       57           0.487093            0.607899   -0.120806     -0.092720        63.0    1.309994e-09   2.432847e-09
+     attention_primary               spearman       57           0.508061            0.607899   -0.099838     -0.080218       295.0    2.412023e-05   2.850573e-05
+
+[5] Mean AUROC across evaluable perturbations:
+  gene_mean_expr                 0.7125
+  gene_variance                  0.7123
+  gene_one_minus_dropout         0.6979
+  spearman                       0.6079
+  attention_primary_norm         0.5081
+  attention_primary              0.5081
+  gene_tf_out_degree             0.4871
+
+PHASE 1 COMPLETE — outputs: <REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/phase1_adamson

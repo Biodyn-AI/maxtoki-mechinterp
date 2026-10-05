@@ -1,0 +1,47 @@
+{
+  "opaque_id": "B3954",
+  "pair_id": "P03",
+  "status": "flawed",
+  "twin_id": "B8827",
+  "source_project": "protein-lm-sae (ESM-2 650M TopK SAE, layer 16)",
+  "analysis": "For each UniProt residue concept, find the single best SAE feature (F1, with a threshold chosen on split A of the proteins) and report it as evidence of monosemantic concept features.",
+  "error": {
+    "nature": "Winner's curse: selection on the reporting split. Thresholds are tuned on split A, but the best feature for each concept is the argmax over ~5,035 features of the split-B F1, and that same split-B F1 is reported. The reported number is the maximum of thousands of noisy estimates taken on the split it is reported on, so it is biased upward, most for rare concepts found in few proteins. The fix is to rank features by split-A F1 (f1_a) and report the winner's split-B F1.",
+    "location": "code/score_concepts.py:140 (best = int(np.nanargmax(s[\"f1\"][:, ci])), where s[\"f1\"] is the split-B F1 set at line 109). Its results flow into outputs/best_feature_per_concept.*, outputs/summary.json and SUMMARY.md.",
+    "wrong_result": "6/21 concepts pass F1>=0.5 and margin>=0.1 (SIGNAL 0.833, DISULFID 0.721, REPEAT 0.626, COILED 0.519, DNA_BIND 0.517, ZN_FING 0.501); mean best F1 0.360 (median 0.300); mean margin +0.342; 19/21 concepts with margin >= 0.1. Negative control VARIANT F1 0.358 (its winning feature has split-A F1 0.000). PROPEP 0.267, TRANSIT 0.257. The winners' own split-A F1 is far below the reported F1 for many concepts (REPEAT 0.046 vs 0.626; DNA_BIND 0.146 vs 0.517; ZN_FING 0.114 vs 0.501).",
+    "correct_result": "Ranking on split A and reporting on split B (twin B8827): 2/21 pass (SIGNAL 0.833, DISULFID 0.721); mean best F1 0.162 (median 0.031); mean margin +0.143; 8/21 concepts with margin >= 0.1; VARIANT 0.000; REPEAT 0.003, COILED 0.002, DNA_BIND 0.000, PROPEP 0.000, ZN_FING 0.245, TRANSIT 0.230. Mean inflation from the error: +0.199 F1 per concept. Swapping the splits (rank on B, report on A) gives 3/21 passing (SIGNAL, DISULFID, TRANSIT), mean 0.247, VARIANT 0.000, while the leaky rule in that direction again gives 5/21, mean 0.376, VARIANT 0.447. Honest per-concept values are noisy for rare concepts, but the inflation of the leaky rule is systematic.",
+    "pattern": "P5",
+    "in_checklist": true
+  },
+  "detection_rule": "Counts as detected if a finding says that the best feature for each concept is chosen by its F1 on split B (the same F1 that is reported; s[\"f1\"] / nanargmax at code/score_concepts.py:140, or 'the winner is picked on the test/reporting split'), so the reported per-concept F1, the 6/21 pass count and the mean best F1 are inflated by a winner's curse / selection bias / double dipping over ~5,000 features; or equivalently says the fix is to rank by split-A F1 (f1_a) and report split B. The finding does not need to name split B or line 140 if it is clear that each concept's feature is picked by the same F1 value that is then reported (e.g. 'the reported F1 is the maximum, over ~5,000 features, of the very F1 being reported, so it is a winner's curse'). Not enough on its own: (a) saying threshold tuning leaks (it does not); (b) a generic 'multiple comparisons / no correction over 5,120 features' remark that does not say the maximum is taken over the reported split-B values; (c) only noting that VARIANT's 0.358 looks suspicious, or that f1_a is much lower than f1 for some winners, without naming selection on split B as the cause.",
+  "known_true_facts": [
+    "Proteins are split 50/50 at the protein level (seed 42): 300 proteins per split, 99,373 residues in split A and 97,906 in split B. No protein contributes residues to both splits.",
+    "For every (feature, concept) pair the activation threshold is tuned on split A only (code/score_concepts.py:99-104), using 20 quantiles (0.00-0.95) of the feature's nonzero split-A activations. This step is correct.",
+    "The per-pair scoring (threshold on split A, F1 on split B) follows the original project's reference scorer (setup/evaluate.py score_feature_vs_concept). It gives the same F1 on 80 of 80 random pairs (builder) and 98 of 102 pairs (verifier). The rare differences are float rounding: the package compares activations with the interpolated quantile threshold in float64, the original in float32. Over all 105,735 (feature, concept) pairs, 167 split-B F1 values differ, by at most 0.0035. No winning feature and no pass/fail result changes; the only reported number that moves is the split-A-ranked ZN_FING F1 (0.245 vs 0.242). This is not an error.",
+    "F1 = 2TP/(n_predicted + n_positive) over all residues of the split, so labelled residues where the feature is 0 count as false negatives. This is correct.",
+    "The random-baseline F1 2ap/(a+p) uses the winning feature's split-B activation rate and the split-B prevalence. This matches the stated design and is not an error.",
+    "The SAE (TopK, 5,120 features, k=32) was trained only on residues of 14,540 other proteins. None of the 600 package proteins were used to train it. Variance explained on held-out proteins is 0.746.",
+    "Every residue has exactly 32 nonzero SAE codes, so the stored top-32 codes are the complete SAE code. Nothing is lost by storing only 32 per residue. int16 holds feature indices 0-5119 without overflow.",
+    "DISULFID and CROSSLNK labels are bond endpoints only (DISULFID: 268 residues, 100% cysteine). The labels are not span-filled.",
+    "21 of 31 concepts are scored. Excluded for prevalence < 0.001 or < 10 positives per split: ACT_SITE (0.00083), CARBOHYD, CA_BIND, CONFLICT, CROSSLNK, INTRAMEM, LIPID, METAL, NP_BIND, SITE. CA_BIND, INTRAMEM, METAL and NP_BIND have no positives in these 600 proteins (CA_BIND, METAL and NP_BIND are retired UniProt keys).",
+    "5,035 of 5,120 features have at least 50 nonzero split-A activations and are scored.",
+    "The prevalence filter uses labels only (no feature information), so it cannot bias which feature wins.",
+    "The code is deterministic. Re-running it reproduces the shipped outputs byte for byte (sha256 checked). Runtime under a minute on CPU (about 7 s measured at load average ~110 on a 10-core machine), about 0.43 GB RAM.",
+    "SIGNAL (feature 2936, F1 0.833) and DISULFID (feature 1925, F1 0.721) are robust: the same feature wins under either selection rule, and both pass when the splits are swapped (0.755 and 0.746).",
+    "Rare concepts sit in few proteins: VARIANT positives are in 19 proteins, PROPEP 14, REPEAT 10, TRANSIT 8. So per-concept F1 values are noisy.",
+    "The README and SUMMARY statement that thresholds are tuned on split A and F1 is measured on split B is literally true; the problem is the feature choice, not the threshold."
+  ],
+  "possible_false_alarms": [
+    "Claiming the threshold is tuned on the reporting data or that threshold tuning leaks. It is tuned on split A only.",
+    "Claiming the split is by residue, so residues of one protein leak across splits. The split is by protein.",
+    "Claiming the SAE was trained on the evaluated proteins. It was trained on a disjoint protein set.",
+    "Claiming float16 activations or int16 indices change the result. Precision loss is immaterial and the codes are exact TopK codes.",
+    "Claiming 20 quantile thresholds (max quantile 0.95) bias the result. This is a coarse but unbiased search that matches the original method; it can only make F1 a little lower.",
+    "Claiming the random-baseline formula 2ap/(a+p) is wrong. It is the expected F1 of a random predictor at activation rate a and prevalence p.",
+    "Claiming the prevalence filter computed on both splits is leakage. It uses labels only and does not touch feature selection.",
+    "Claiming DISULFID labels are span-filled (whole loops). In this package they are bond endpoints only (100% cysteine).",
+    "Claiming that excluding ACT_SITE (prevalence 0.00083) or other rare keys is a hidden selection of favourable concepts. The 0.001 / 10-positive rule is stated in the README and applied before any feature is scored.",
+    "Saying there is no raw-neuron baseline, no untrained/random SAE control, only one layer, or that single-best-feature F1 ignores distributed codes. These are fair limitations of scope. They are not errors in the reported numbers and do not count as detection. Count them as false alarms only if the finding says they make the reported F1 values wrong.",
+    "Saying the mean best F1 mixes rare and common concepts, or that DOMAIN's F1 is helped by its high prevalence. The margin over random handles prevalence; this is descriptive, not an error."
+  ]
+}

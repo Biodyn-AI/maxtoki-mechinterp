@@ -1,0 +1,168 @@
+{
+  "description": "partial forward (start at block s from the clean input of block s) vs full forward, same hooks_v2 Ablate edit; first two source features per layer; 2 cells",
+  "max_abs_diff_hidden": 0.0,
+  "max_abs_diff_dz": 0.0,
+  "rows": [
+    {
+      "cell": 0,
+      "src_layer": 0,
+      "feature": 3635,
+      "max_abs_diff_hidden": 0.0,
+      "max_abs_diff_dz": 0.0,
+      "max_abs_dz": 0.03542499244213104,
+      "n_active": 35
+    },
+    {
+      "cell": 0,
+      "src_layer": 0,
+      "feature": 3083,
+      "max_abs_diff_hidden": 0.0,
+      "max_abs_diff_dz": 0.0,
+      "max_abs_dz": 0.01386953890323639,
+      "n_active": 16
+    },
+    {
+      "cell": 0,
+      "src_layer": 3,
+      "feature": 3099,
+      "max_abs_diff_hidden": 0.0,
+      "max_abs_diff_dz": 0.0,
+      "max_abs_dz": 0.007357633672654629,
+      "n_active": 8
+    },
+    {
+      "cell": 0,
+      "src_layer": 3,
+      "feature": 1865,
+      "max_abs_diff_hidden": 0.0,
+      "max_abs_diff_dz": 0.0,
+      "max_abs_dz": 0.0048026735894382,
+      "n_active": 14
+    },
+    {
+      "cell": 0,
+      "src_layer": 6,
+      "feature": 1035,
+      "max_abs_diff_hidden": 0.0,
+      "max_abs_diff_dz": 0.0,
+      "max_abs_dz": 0.0,
+      "n_active": 0
+    },
+    {
+      "cell": 0,
+      "src_layer": 6,
+      "feature": 1224,
+      "max_abs_diff_hidden": 0.0,
+      "max_abs_diff_dz": 0.0,
+      "max_abs_dz": 0.004293324425816536,
+      "n_active": 5
+    },
+    {
+      "cell": 0,
+      "src_layer": 9,
+      "feature": 4923,
+      "max_abs_diff_hidden": 0.0,
+      "max_abs_diff_dz": 0.0,
+      "max_abs_dz": 0.0024132768157869577,
+      "n_active": 1
+    },
+    {
+      "cell": 0,
+      "src_layer": 9,
+      "feature": 3683,
+      "max_abs_diff_hidden": 0.0,
+      "max_abs_diff_dz": 0.0,
+      "max_abs_dz": 0.0,
+      "n_active": 0
+    },
+    {
+      "cell": 1,
+      "src_layer": 0,
+      "feature": 3635,
+      "max_abs_diff_hidden": 0.0,
+      "max_abs_diff_dz": 0.0,
+      "max_abs_dz": 0.03877302631735802,
+      "n_active": 33
+    },
+    {
+      "cell": 1,
+      "src_layer": 0,
+      "feature": 3083,
+      "max_abs_diff_hidden": 0.0,
+      "max_abs_diff_dz": 0.0,
+      "max_abs_dz": 0.04192165285348892,
+      "n_active": 14
+    },
+    {
+      "cell": 1,
+      "src_layer": 3,
+      "feature": 3099,
+      "max_abs_diff_hidden": 0.0,
+      "max_abs_diff_dz": 0.0,
+      "max_abs_dz": 0.007781189866364002,
+      "n_active": 3
+    },
+    {
+      "cell": 1,
+      "src_layer": 3,
+      "feature": 1865,
+      "max_abs_diff_hidden": 0.0,
+      "max_abs_diff_dz": 0.0,
+      "max_abs_dz": 0.0074274251237511635,
+      "n_active": 8
+    },
+    {
+      "cell": 1,
+      "src_layer": 6,
+      "feature": 1035,
+      "max_abs_diff_hidden": 0.0,
+      "max_abs_diff_dz": 0.0,
+      "max_abs_dz": 0.0,
+      "n_active": 0
+    },
+    {
+      "cell": 1,
+      "src_layer": 6,
+      "feature": 1224,
+      "max_abs_diff_hidden": 0.0,
+      "max_abs_diff_dz": 0.0,
+      "max_abs_dz": 0.0051129404455423355,
+      "n_active": 1
+    },
+    {
+      "cell": 1,
+      "src_layer": 9,
+      "feature": 4923,
+      "max_abs_diff_hidden": 0.0,
+      "max_abs_diff_dz": 0.0,
+      "max_abs_dz": 0.0,
+      "n_active": 0
+    },
+    {
+      "cell": 1,
+      "src_layer": 9,
+      "feature": 3683,
+      "max_abs_diff_hidden": 0.0,
+      "max_abs_diff_dz": 0.0,
+      "max_abs_dz": 0.002245540963485837,
+      "n_active": 1
+    }
+  ],
+  "cell_rows": [
+    282477,
+    285191
+  ],
+  "env": {
+    "device": "mps",
+    "torch": "2.11.0",
+    "transformers": "5.5.4",
+    "python": "3.12.9",
+    "platform": "macOS-26.3-arm64-arm-64bit",
+    "hooks_v2_sha256": "1ba6fda5ad761b1f82041a7b1397fa9332fa7438e13db955a00d751c4b440f54",
+    "model_dir": "<REPO_ROOT>/projects/maxtoki/setup/MaxToki-217M-HF",
+    "model_dtype": "float32",
+    "timestamp": "2026-10-01T04:31:18"
+  },
+  "script_sha256": "24559cc021559231dae2d1bae8b250dd248c3005ec9bf5b7f6db0e5d340b9de6",
+  "wall_seconds": 59.2
+}

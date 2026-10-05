@@ -1,0 +1,269 @@
+spec,name,qualifier,default_raw,default_parsed,range_raw,range_parsed,nonnegotiable,used_in
+pipelines/attention-grn-extraction-and-evaluation.md,n_ctrl,(control cell count),**2000**,2000,"{500, 2000, 10000} (Supp Note 6.3); baseline uses 500","{500, 2000, 10000}",False,"Phase 0, all edge extraction"
+pipelines/attention-grn-extraction-and-evaluation.md,hvg,(highly-variable gene count),"**2000** (K562), **3309** (RPE1 with forced pert. genes)","{2000, 3309}","{1000, 2000, 5000}; RPE1 restricted = 2000","{1000, 2000, 5000}",False,"Phase 0, Phases 1–5"
+pipelines/attention-grn-extraction-and-evaluation.md,lfc_thresh,(DE log-fold-change),**0.5** (primary),0.5,"{0.1 (baseline), 0.25, 0.5, 1.0}",0.1,False,"Phase 1, §3.2"
+pipelines/attention-grn-extraction-and-evaluation.md,analysis_layer,(Geneformer V2-316M),**L13** (pre-specified DLPFC); **L15** (nested-CV selected),not machine-readable,18-layer profile as secondary,not machine-readable,False,Phases 1–4
+pipelines/attention-grn-extraction-and-evaluation.md,de_test,,**Welch *t*** (primary); Mann-Whitney *U* (baseline config),not machine-readable,—,not machine-readable,False,Phase 1
+pipelines/attention-grn-extraction-and-evaluation.md,n_splits,(CV folds),**5**,5,3–10,3–10,False,Phase 2
+pipelines/attention-grn-extraction-and-evaluation.md,split_protocol,,cross-perturbation (primary),not machine-readable,"cross-gene, joint cross-gene × cross-pert",not machine-readable,False,Phase 2
+pipelines/attention-grn-extraction-and-evaluation.md,bootstrap_n,,"**200** (per-test); **10,000** (headline CIs)","{200, 10000}","100–10,000",100–10000,False,All CIs
+pipelines/attention-grn-extraction-and-evaluation.md,ablation_k_trrust_ranked,,"{5, 10, 20, 50}","{5, 10, 20, 50}",1–`n_heads`,not machine-readable,False,Phase 4
+pipelines/attention-grn-extraction-and-evaluation.md,ablation_k_composite,,"{5, 10}","{5, 10}",—,not machine-readable,False,Phase 4
+pipelines/attention-grn-extraction-and-evaluation.md,ablation_k_bottom,,"{5, 10}","{5, 10}",—,not machine-readable,False,Phase 4
+pipelines/attention-grn-extraction-and-evaluation.md,ablation_k_random,,"{10, 20, 50}","{10, 20, 50}",—,not machine-readable,False,Phase 4
+pipelines/attention-grn-extraction-and-evaluation.md,intervention_cells_fidelity,,**2000**,2000,—,not machine-readable,False,Phase 4 step 5
+pipelines/attention-grn-extraction-and-evaluation.md,cssi_K,(strata count),**5–7** (optimal),5–7,"scan {2,…,20}",not machine-readable,False,Phase 6
+pipelines/attention-grn-extraction-and-evaluation.md,cssi_knn_k,(k-NN neighbours),**15**,15,5–50,5–50,False,Phase 6
+pipelines/attention-grn-extraction-and-evaluation.md,cssi_aggregator,,CSSI-max (primary),not machine-readable,"CSSI-mean, CSSI-range, CSSI-deviation",not machine-readable,False,Phase 6
+pipelines/attention-grn-extraction-and-evaluation.md,cssi_null_n,(null permutations),100+,≥ 100,—,not machine-readable,False,Phase 6 step 4
+pipelines/attention-grn-extraction-and-evaluation.md,leiden_resolution,,**1.0**,1,0.1–3.0,0.1–3,False,Phase 6
+pipelines/attention-grn-extraction-and-evaluation.md,propensity_k,(matches per DE+),**5**,5,1–10,1–10,False,Phase 3
+pipelines/attention-grn-extraction-and-evaluation.md,propensity_smd_threshold,,**0.1**,0.1,—,not machine-readable,False,Phase 3 step 5
+pipelines/attention-grn-extraction-and-evaluation.md,residualizer,,OLS (primary); GBDT (secondary),not machine-readable,—,not machine-readable,False,Phase 3 steps 1–2
+pipelines/attention-grn-extraction-and-evaluation.md,degree_null_n_curveball,,**200**,200,—,not machine-readable,False,Phase 3 step 3
+pipelines/attention-grn-extraction-and-evaluation.md,degree_null_n_labelshuffle,,**1000**,1000,—,not machine-readable,False,Phase 3 step 3
+pipelines/attention-grn-extraction-and-evaluation.md,fdr_alpha,(framework-level),**0.05**,0.05,0.01–0.1,0.01–0.1,False,Phase 12
+pipelines/attention-grn-extraction-and-evaluation.md,fdr_family_primary,,**95** confirmatory,95,"153 maximal, 27 analysis-level",not machine-readable,False,Phase 12 sensitivity
+pipelines/attention-grn-extraction-and-evaluation.md,attn_implementation,(HF models),"**""eager""**",not machine-readable,—,not machine-readable,False,Phase 0 (non-negotiable)
+pipelines/attention-grn-extraction-and-evaluation.md,output_attentions,,**True**,not machine-readable,—,not machine-readable,False,Phase 0
+pipelines/attention-grn-extraction-and-evaluation.md,detectability_alpha,,0.05,0.05,0.01–0.1,0.01–0.1,False,Phase 8a
+pipelines/attention-grn-extraction-and-evaluation.md,detectability_power,,0.80,0.8,—,not machine-readable,False,Phase 8a
+pipelines/attention-grn-extraction-and-evaluation.md,detectability_tau,(tail inflation),1.0 (sub-Gaussian),1,scan 0.5–5,not machine-readable,False,Phase 8a
+pipelines/attention-grn-extraction-and-evaluation.md,ortholog_filter_abs_rho,,**0.05**,0.05,—,not machine-readable,False,Phase 8c
+pipelines/attention-grn-extraction-and-evaluation.md,pseudotime_knn_k,,**15**,15,—,not machine-readable,False,Phase 8d
+pipelines/attention-grn-extraction-and-evaluation.md,pseudotime_n_pca,,**30**,30,—,not machine-readable,False,Phase 8d
+pipelines/attention-grn-extraction-and-evaluation.md,asi_blacklist_threshold,,**0.5**,0.5,0.1–1.0,0.1–1,False,Phase 8e
+pipelines/attention-grn-extraction-and-evaluation.md,calibration_methods,,"Platt, isotonic",not machine-readable,—,not machine-readable,False,Phase 8f
+pipelines/attention-grn-extraction-and-evaluation.md,conformal_alpha,,"{0.05, 0.10, 0.20}","{0.05, 0.1, 0.2}",—,not machine-readable,False,Phase 8f
+pipelines/residual-stream-spectral-geometry.md,n_cells,(cells for embedding extraction),**2000**,2000,500–5000,500–5000,False,Phase 0
+pipelines/residual-stream-spectral-geometry.md,n_seeds,(fine-tuning seeds for robustness),"**3** (main, seed43, seed44)",3,1–10,1–10,False,Phase 8
+pipelines/residual-stream-spectral-geometry.md,n_layers,,**12** (scGPT),12,model-dependent (18 for Geneformer V2),not machine-readable,False,Phases 0–9
+pipelines/residual-stream-spectral-geometry.md,d_model,,**512** (scGPT),512,model-dependent,not machine-readable,False,Phases 0–9
+pipelines/residual-stream-spectral-geometry.md,vocab_full,,**4803** (scGPT immune),4803,—,not machine-readable,False,Phase 0
+pipelines/residual-stream-spectral-geometry.md,vocab_curated,,**195** (TRRUST ∩ STRING ∩ GO in-vocab),195,—,not machine-readable,False,Phases 2–9
+pipelines/residual-stream-spectral-geometry.md,nonzero_count_expected,,**2039** (constant across layers),2039,—,not machine-readable,False,Phase 0 step 6
+pipelines/residual-stream-spectral-geometry.md,copole_K,(top-*K* / bottom-*K*),**52**,52,20–100,20–100,False,Phase 2
+pipelines/residual-stream-spectral-geometry.md,copole_null_n,,**500**,500,200–2000,200–2000,False,Phase 2
+pipelines/residual-stream-spectral-geometry.md,intrinsic_dim_method,,**TwoNN** (Facco 2017),not machine-readable,"correlation dim, participation ratio",not machine-readable,False,Phase 1
+pipelines/residual-stream-spectral-geometry.md,intrinsic_dim_n_samples,,"**2000 random genes, 3 seeds**",not machine-readable,—,not machine-readable,False,Phase 1
+pipelines/residual-stream-spectral-geometry.md,effective_rank_method,,**Roy-Vetterli 2007** (entropy-exp),not machine-readable,—,not machine-readable,False,Phase 1
+pipelines/residual-stream-spectral-geometry.md,tf_vs_target_subspace,,"**Joint SV2–SV7** (6D, primary)",not machine-readable,"SV5–SV7 (3D), SV2–SV4 (3D), full SVD",not machine-readable,False,Phase 5 step 1
+pipelines/residual-stream-spectral-geometry.md,tf_count,,**51** (from TRRUST ∩ vocab),51,—,not machine-readable,False,Phase 5
+pipelines/residual-stream-spectral-geometry.md,target_count,,"**144** (non-TF, TRRUST target)",144,—,not machine-readable,False,Phase 5
+pipelines/residual-stream-spectral-geometry.md,classifier,,**multinomial cosine-similarity to class centroid**,not machine-readable,logistic regression,not machine-readable,False,Phase 5
+pipelines/residual-stream-spectral-geometry.md,classifier_null_n,(permutations),**100**,100,100–1000,100–1000,False,Phase 5
+pipelines/residual-stream-spectral-geometry.md,edge_positives,,**589** (TRRUST),589,—,not machine-readable,False,Phase 5 step 5
+pipelines/residual-stream-spectral-geometry.md,edge_negatives,,**2351** (TF-matched non-target),2351,—,not machine-readable,False,Phase 5 step 5
+pipelines/residual-stream-spectral-geometry.md,coexpression_residualizer,,**OLS**,not machine-readable,GBDT,not machine-readable,False,Phase 5 step 3
+pipelines/residual-stream-spectral-geometry.md,bootstrap_n,,**100**,100,50–500,50–500,False,Phase 5 step 3
+pipelines/residual-stream-spectral-geometry.md,string_confidence_primary,,**≥ 0.7** (1022 pairs),≥ 0.7,—,not machine-readable,False,Phase 4 step 1
+pipelines/residual-stream-spectral-geometry.md,string_confidence_gradient,,"**≥ 0.4** (3092 pairs, 5 quintiles)",≥ 0.4,—,not machine-readable,False,Phase 4 step 3
+pipelines/residual-stream-spectral-geometry.md,string_quintile_breakpoints,,"**[0.40, 0.46, 0.53, 0.64, 0.80, 1.00]**","{0.4, 0.46, 0.53, 0.64, 0.8, 1}",—,not machine-readable,False,Phase 4 step 3
+pipelines/residual-stream-spectral-geometry.md,go_compartment_terms,,**8** (secretory pathway),8,up to 591 (BP negative control),not machine-readable,False,"Phase 3, 9d"
+pipelines/residual-stream-spectral-geometry.md,cell_type_markers,,**17 markers across 7 types**,not machine-readable,—,not machine-readable,False,Phase 6
+pipelines/residual-stream-spectral-geometry.md,bcell_markers,,"**7** (CD19, CD79A, MS4A1, BLK, VPREB3, FCRL1, PAX5)",7,—,not machine-readable,False,Phase 7
+pipelines/residual-stream-spectral-geometry.md,bcell_precision_at_k,,**10**,10,5–20,5–20,False,Phase 7 step 3
+pipelines/residual-stream-spectral-geometry.md,bcell_bootstrap_n,,**500**,500,200–2000,200–2000,False,Phase 7 step 3
+pipelines/residual-stream-spectral-geometry.md,bcl6_neighbours_k,,**20**,20,10–50,10–50,False,Phase 7 step 8
+pipelines/residual-stream-spectral-geometry.md,angle_centroids,,"**GC = mean(BATF, BACH2, PAX5); Plasma = mean(IRF4, IRF8); anchor = B-cell centroid**",not machine-readable,—,not machine-readable,False,Phase 7 step 6
+pipelines/residual-stream-spectral-geometry.md,ffl_permutation_baseline,,**t ≈ 0.5** (symmetry-corrected),not machine-readable,NOT t = 0,not machine-readable,False,Phase 9c
+pipelines/residual-stream-spectral-geometry.md,ph_null_primary,,**degree-preserving curveball rewiring**,not machine-readable,feature-shuffle as weak control,not machine-readable,False,Phase 9a
+pipelines/residual-stream-spectral-geometry.md,go_bp_terms,,**591**,591,—,not machine-readable,False,Phase 9d
+pipelines/residual-stream-spectral-geometry.md,autoloop_iterations,,**63** (paper); **40–80** for new models,63,—,not machine-readable,False,Phase 10
+pipelines/residual-stream-spectral-geometry.md,autoloop_max_hypotheses_per_iter,,**2–3** (with ≥ 1 novel),2–3,—,not machine-readable,False,Phase 10
+pipelines/residual-stream-spectral-geometry.md,autoloop_retirement_policy,,**2 consecutive negative results**,not machine-readable,—,not machine-readable,False,Phase 10
+pipelines/residual-stream-spectral-geometry.md,autoloop_min_portfolio_size,,**10** (target 12–16),10,—,not machine-readable,False,Phase 10
+pipelines/topology-geometry-141-hypotheses.md,n_genes_per_domain,,**~320** (intersection of model vocab and regulatory DB),320,200–500,200–500,False,Phase 0
+pipelines/topology-geometry-141-hypotheses.md,pca_components,,**20**,20,"{10, 20} sensitivity",not machine-readable,False,Phase 0
+pipelines/topology-geometry-141-hypotheses.md,tissue_domains,,"**{lung, immune, external-lung}**",not machine-readable,any Tabula Sapiens domain,not machine-readable,False,Phase 0
+pipelines/topology-geometry-141-hypotheses.md,n_seeds_per_split,,**3** (at minimum),3,3–10,3–10,False,Phase 1
+pipelines/topology-geometry-141-hypotheses.md,null_feature_shuffle_replicates,,**20–24**,20–24,10–100,10–100,False,Phase 2
+pipelines/topology-geometry-141-hypotheses.md,null_label_permutation_replicates,,**100–200**,100–200,"100–1,000",100–1000,False,Phase 2
+pipelines/topology-geometry-141-hypotheses.md,null_rewiring_replicates,,**24** (across 6 refinement iterations),24,24+,≥ 24,False,Phase 2
+pipelines/topology-geometry-141-hypotheses.md,null_coexpression_bins,,**5** (quintiles of pairwise Pearson abs correlation),5,—,not machine-readable,False,Phase 2
+pipelines/topology-geometry-141-hypotheses.md,null_rewiring_k,,**12** (adaptive 10–35 for connectivity),12,—,not machine-readable,False,Phase 2
+pipelines/topology-geometry-141-hypotheses.md,delta_auroc_threshold,,"positive null-gap in **6/6 domain-splits** for ""robust""",not machine-readable,—,not machine-readable,False,Phase 3
+pipelines/topology-geometry-141-hypotheses.md,cca_n_components,,top-k canonical components,not machine-readable,all (min of d_model dimensions),not machine-readable,False,Phase 4
+pipelines/topology-geometry-141-hypotheses.md,cca_target_retrieval_accuracy,,**72% top-1** (paper's observed),not machine-readable,—,not machine-readable,False,Phase 4
+pipelines/topology-geometry-141-hypotheses.md,persistent_homology_n_genes,,**350**,350,200–500,200–500,False,Phase 5
+pipelines/topology-geometry-141-hypotheses.md,persistent_homology_k_range,,"**k ∈ {8, 12, 16}**","{8, 12, 16}",5–25,5–25,False,Phase 5
+pipelines/topology-geometry-141-hypotheses.md,ripser_max_dim,,**1** (H1 only; higher dims computationally prohibitive),1,0–2,0–2,False,Phase 5
+pipelines/topology-geometry-141-hypotheses.md,diffusion_time_t,,"swept over **{1, 2, 4, 8}**, best selected","{1, 2, 4, 8}",1–16,1–16,False,Phase 6
+pipelines/topology-geometry-141-hypotheses.md,geodesic_knn_k,,**10–35 adaptive** (connectivity-based),not machine-readable,5–50,5–50,False,Phase 6
+pipelines/topology-geometry-141-hypotheses.md,triangle_defect_scales,,"**k ∈ {8, 12, 16}**","{8, 12, 16}",5–25,5–25,False,Phase 6
+pipelines/topology-geometry-141-hypotheses.md,louvain_resolution,,**default (1.0)**,not machine-readable,0.5–2.0,0.5–2,False,Phase 7
+pipelines/topology-geometry-141-hypotheses.md,louvain_k,,"**12** (with stability at {8, 12, 16})",12,5–25,5–25,False,Phase 7
+pipelines/topology-geometry-141-hypotheses.md,stability_selection_n_bootstrap,,**100** randomised LASSO fits,100,50–500,50–500,False,Phase 9
+pipelines/topology-geometry-141-hypotheses.md,stability_selection_jaccard_target,,**0.65** (reproducibility threshold),0.65,—,not machine-readable,False,Phase 9
+pipelines/topology-geometry-141-hypotheses.md,stability_selection_sign_agreement_target,,**1.0** (unanimous sign),1,—,not machine-readable,False,Phase 9
+pipelines/topology-geometry-141-hypotheses.md,autoloop_model,,**gpt-5.3-codex**,not machine-readable,any LLM with reasoning-effort param,not machine-readable,False,Phase 11
+pipelines/topology-geometry-141-hypotheses.md,autoloop_reasoning_effort,,**`xhigh` (extra high)**,not machine-readable,high / xhigh,not machine-readable,False,Phase 11
+pipelines/topology-geometry-141-hypotheses.md,autoloop_hypotheses_per_iteration,,**2–3** (with ≥1 novel),2–3,1–5,1–5,False,Phase 11
+pipelines/topology-geometry-141-hypotheses.md,autoloop_retirement_policy,,**2 consecutive negatives**,not machine-readable,—,not machine-readable,False,Phase 11
+pipelines/topology-geometry-141-hypotheses.md,autoloop_brainstormer_portfolio_size,,"**12–16 ideas, top 3 selected**",not machine-readable,—,not machine-readable,False,Phase 11
+pipelines/topology-geometry-141-hypotheses.md,autoloop_iteration_count_target,,**40–80** (source paper ran 53),40–80,30–100,30–100,False,Phase 11
+pipelines/topology-geometry-141-hypotheses.md,strict_max_null_threshold,,**95th percentile across all null families**,not machine-readable,—,not machine-readable,False,Phase 12
+pipelines/manifold-discovery-extraction-compactification.md,target_foundation_model,,scGPT whole-human,not machine-readable,"Geneformer V2-316M, scBERT, scFoundation, UCE",not machine-readable,False,Phase 0
+pipelines/manifold-discovery-extraction-compactification.md,target_biological_system,,Hematopoietic development,not machine-readable,"Intercellular communication (H38), cell cycle, metabolic state, spatial, immune activation",not machine-readable,False,Phase 0
+pipelines/manifold-discovery-extraction-compactification.md,biological_ruler,,Curated stage DAG (H65),not machine-readable,"OmniPath (H38), KEGG, custom",not machine-readable,False,Phase 1 step 5
+pipelines/manifold-discovery-extraction-compactification.md,n_internal_anchors,,"**298** (H65), **104 → 392 after rescue** (H38)",298,system-dependent,not machine-readable,False,Phase 1
+pipelines/manifold-discovery-extraction-compactification.md,n_external_anchors_strict,,**616** (H65 Tabula Sapiens non-overlap),616,—,not machine-readable,False,"Phase 1, Phase 7"
+pipelines/manifold-discovery-extraction-compactification.md,n_multidonor_transfer,,"**165 anchors, 7 cohorts**",not machine-readable,—,not machine-readable,False,"Phase 1, Phase 8"
+pipelines/manifold-discovery-extraction-compactification.md,trustworthiness_gate,,**≥ 0.80**,≥ 0.8,non-negotiable,not machine-readable,True,Phase 2
+pipelines/manifold-discovery-extraction-compactification.md,random_holdout_gate,,**≥ 0.20**,≥ 0.2,non-negotiable,not machine-readable,True,Phase 2
+pipelines/manifold-discovery-extraction-compactification.md,donor_holdout_gate,,**≥ 0.20**,≥ 0.2,non-negotiable,not machine-readable,True,Phase 2
+pipelines/manifold-discovery-extraction-compactification.md,clade_holdout_gate,,**≥ 0.20**,≥ 0.2,non-negotiable,not machine-readable,True,Phase 2
+pipelines/manifold-discovery-extraction-compactification.md,blocked_permutation_p,,**≤ 0.001**,≤ 0.001,non-negotiable,not machine-readable,True,Phase 2
+pipelines/manifold-discovery-extraction-compactification.md,n_permutations,,at least 2000 (source paper does not specify exact n),≥ 2000,—,not machine-readable,False,Phase 2
+pipelines/manifold-discovery-extraction-compactification.md,phase1_null_branch_required,,**true** — paired biologically-nonsensical branch must fail the same gates,not machine-readable,—,not machine-readable,False,Phase 3a
+pipelines/manifold-discovery-extraction-compactification.md,operator_feature_dim,,`2400` (pooled drift for scGPT),2400,"`d` (single head), variable",not machine-readable,False,Phase 4
+pipelines/manifold-discovery-extraction-compactification.md,n_layers_block_partition,,3 blocks (early/mid/late),not machine-readable,2 or 4 blocks,not machine-readable,False,Phase 4 step 2
+pipelines/manifold-discovery-extraction-compactification.md,top_k_heads_pooled,,**3** (pooled drift) or **1** (compact top1),"{3, 1}",1–5,1–5,False,"Phase 4, Phase 10"
+pipelines/manifold-discovery-extraction-compactification.md,d_latent,,**10**,10,"3, 6, 10 (gate pass at all)","{3, 6, 10}",False,Phase 5
+pipelines/manifold-discovery-extraction-compactification.md,let_alpha_reconstruction_weight,,source paper does not specify exact value,not machine-readable,sensitivity via S3,not machine-readable,False,Phase 5
+pipelines/manifold-discovery-extraction-compactification.md,let_beta_distance_scale,,source paper does not specify exact value,not machine-readable,—,not machine-readable,False,Phase 5
+pipelines/manifold-discovery-extraction-compactification.md,cell_trained_n_cells,,"**6,925**",6925,"stage-balanced, max 500 cells/stage",not machine-readable,False,Phase 5
+pipelines/manifold-discovery-extraction-compactification.md,cell_trained_epochs,,**120**,120,—,not machine-readable,False,Phase 5
+pipelines/manifold-discovery-extraction-compactification.md,cell_trained_batch_size,,**896**,896,—,not machine-readable,False,Phase 5
+pipelines/manifold-discovery-extraction-compactification.md,cell_trained_w_stage,,**1.0**,1,—,not machine-readable,False,Phase 5
+pipelines/manifold-discovery-extraction-compactification.md,cell_trained_w_local,,**0.1**,0.1,—,not machine-readable,False,Phase 5
+pipelines/manifold-discovery-extraction-compactification.md,cell_trained_w_recon,,**0.08**,0.08,—,not machine-readable,False,Phase 5
+pipelines/manifold-discovery-extraction-compactification.md,cell_trained_w_cls,,**0.4**,0.4,—,not machine-readable,False,Phase 5
+pipelines/manifold-discovery-extraction-compactification.md,hybrid_lambda_topo_strong,,"**{0.04, 0.08, 0.12, 0.18}**","{0.04, 0.08, 0.12, 0.18}",—,not machine-readable,False,Phase 5
+pipelines/manifold-discovery-extraction-compactification.md,hybrid_lambda_topo_conservative,,"**{0.005, 0.01, 0.02, 0.03}**","{0.005, 0.01, 0.02, 0.03}",—,not machine-readable,False,Phase 5
+pipelines/manifold-discovery-extraction-compactification.md,hybrid_lambda_compact_strong,,**0.015**,0.015,—,not machine-readable,False,Phase 5
+pipelines/manifold-discovery-extraction-compactification.md,probe_architecture_default,,**linear**,not machine-readable,2-layer MLP for CD4/CD8,not machine-readable,False,Phase 6
+pipelines/manifold-discovery-extraction-compactification.md,probe_trainable_params_per_task,,**5–170**,5–170,vs 172k for frozen-scGPT-MLP,not machine-readable,False,Phase 6
+pipelines/manifold-discovery-extraction-compactification.md,n_robustv2_splits,,**88** grouped donor-holdout,88,—,not machine-readable,False,Phase 12
+pipelines/manifold-discovery-extraction-compactification.md,robustv2_training_cells_per_split,,"**100,000**",100000,—,not machine-readable,False,Phase 12
+pipelines/manifold-discovery-extraction-compactification.md,zero_shot_seed,,**15052** (deterministic reconstruction),15052,—,not machine-readable,False,Phase 8
+pipelines/manifold-discovery-extraction-compactification.md,compaction_ranks_svd,,"**{8, 16, 32, 64}**","{8, 16, 32, 64}",—,not machine-readable,False,Phase 10 step 3
+pipelines/manifold-discovery-extraction-compactification.md,hard_sparse_n_factors,,**16**,16,—,not machine-readable,False,Phase 10 step 4
+pipelines/manifold-discovery-extraction-compactification.md,hard_sparse_n_genes_per_factor,,**60**,60,—,not machine-readable,False,Phase 10 step 4
+pipelines/manifold-discovery-extraction-compactification.md,factor_ablation_protocol,,**fixed-probe leave-one-out** (no retraining),not machine-readable,—,not machine-readable,False,Phase 11
+pipelines/manifold-discovery-extraction-compactification.md,n_core_factors,,**4** (top-4 by impact),4,1–16,1–16,False,Phase 11
+pipelines/longevity-mechinterp-donor-aware.md,scgpt_layers,,`[9]`,9,any subset of 0–11; paper uses layer 9,not machine-readable,False,1
+pipelines/longevity-mechinterp-donor-aware.md,scgpt_max_genes,,1200,1200,≤ model context window,not machine-readable,False,1
+pipelines/longevity-mechinterp-donor-aware.md,geneformer_max_genes,,2048,2048,Geneformer hard limit,not machine-readable,False,1
+pipelines/longevity-mechinterp-donor-aware.md,n_splits,,5,5,5–10 donor-held-out folds,not machine-readable,False,"1, 5"
+pipelines/longevity-mechinterp-donor-aware.md,test_size,,0.25,0.25,0.2–0.3,0.2–0.3,False,"1, 5"
+pipelines/longevity-mechinterp-donor-aware.md,n_bins,(age),3,3,3–5; paper uses 3,3–5,False,1
+pipelines/longevity-mechinterp-donor-aware.md,min_per_label,,50,50,≥ donor count / n_bins,not machine-readable,False,1
+pipelines/longevity-mechinterp-donor-aware.md,n_perm,(stage 1 null),100,100,≥ 100,≥ 100,False,1
+pipelines/longevity-mechinterp-donor-aware.md,top_k_pcs,,10–32,10–32,"`min(32, n-1, d-1)`",not machine-readable,False,2
+pipelines/longevity-mechinterp-donor-aware.md,latent_dim,(SAE),`4 × input_dim`,not machine-readable,2× to 8×,2–8,False,3
+pipelines/longevity-mechinterp-donor-aware.md,epochs,(SAE),30,30,20–50,20–50,False,3
+pipelines/longevity-mechinterp-donor-aware.md,batch_size,(SAE),1024,1024,256–4096,256–4096,False,3
+pipelines/longevity-mechinterp-donor-aware.md,lr,(SAE),1e-3,0.001,1e-4 to 3e-3,0.0001–0.003,False,3
+pipelines/longevity-mechinterp-donor-aware.md,l1_coef,(SAE sparsity),1e-3,0.001,1e-4 to 1e-2; watch recon MSE vs `frac_active` tradeoff,0.0001–0.01,False,3
+pipelines/longevity-mechinterp-donor-aware.md,donor_corr_min,,0.3,0.3,0.2–0.5,0.2–0.5,False,3
+pipelines/longevity-mechinterp-donor-aware.md,donor_p_max,,0.05,0.05,0.01–0.1,0.01–0.1,False,3
+pipelines/longevity-mechinterp-donor-aware.md,max_celltype_eta2,,0.5,0.5,0.3–0.7,0.3–0.7,False,3
+pipelines/longevity-mechinterp-donor-aware.md,perm_iters,(donor permutation),500,500,≥ 500 for `p < 0.01` resolution,≥ 500,False,3
+pipelines/longevity-mechinterp-donor-aware.md,top_genes_per_feature,,50,50,30–100,30–100,False,4
+pipelines/longevity-mechinterp-donor-aware.md,pathway_p_threshold,,0.05,0.05,0.01–0.1,0.01–0.1,False,4
+pipelines/longevity-mechinterp-donor-aware.md,min_pathway_overlap,,2,2,2–4,2–4,False,4
+pipelines/longevity-mechinterp-donor-aware.md,intervention_scale,,2.0,2,1.0 and 2.0 in paper; 0.5–3.0 for dose-response,not machine-readable,False,5
+pipelines/longevity-mechinterp-donor-aware.md,split_seeds,,"`[42, 7, 13, 21, 99]`","{42, 7, 13, 21, 99}",≥ 5 seeds; 60 seeds in stage 9 deep-dive,not machine-readable,False,"5, 9"
+pipelines/longevity-mechinterp-donor-aware.md,donor_bootstrap_B,,1000,1000,≥ 1000,≥ 1000,False,5
+pipelines/longevity-mechinterp-donor-aware.md,min_donors,,grid,not machine-readable,"`{20, 30, 40, 50, 100, 200, 300, 400, 500}`","{20, 30, 40, 50, 100, 200, 300, 400, 500}",False,9
+pipelines/longevity-mechinterp-donor-aware.md,ridge_penalty,,"`{0.1, 1, 10, 100}`","{0.1, 1, 10, 100}",positive-control sweep,not machine-readable,False,9
+pipelines/longevity-mechinterp-donor-aware.md,target_n_cells,,700,700,should be ≥ donor count × 2,not machine-readable,False,10
+pipelines/longevity-mechinterp-donor-aware.md,top_celltypes,,16,16,8–32,8–32,False,10
+pipelines/longevity-mechinterp-donor-aware.md,min_count_per_bin,,1,1,1–3,1–3,False,10
+pipelines/longevity-mechinterp-donor-aware.md,seed,,42,42,"+ panel {101, 202, 303}",not machine-readable,False,"10, 11"
+pipelines/sparse-autoencoders/01-sae-atlas.md,n_cells_training,(K562),"**2,000** (Geneformer)",2000,—,not machine-readable,False,Phase 0
+pipelines/sparse-autoencoders/01-sae-atlas.md,n_cells_training,(TS),"**3,000** (1K immune + 1K kidney + 1K lung)",3000,—,not machine-readable,False,Phase 0 (scGPT)
+pipelines/sparse-autoencoders/01-sae-atlas.md,max_seq_len,,"**2,048** (Geneformer), **1,200** (scGPT)","{2048, 1200}",model-dependent,not machine-readable,False,Phase 0
+pipelines/sparse-autoencoders/01-sae-atlas.md,activations_batch_size,,**1** (MPS-friendly),1,8–64 (CUDA),8–64,False,Phase 0
+pipelines/sparse-autoencoders/01-sae-atlas.md,positions_per_layer_training,,"**1,000,000**",1e+06,500K–2M,not machine-readable,False,Phase 1
+pipelines/sparse-autoencoders/01-sae-atlas.md,d_SAE_expansion,,**4×**,4,"{2, 4, 8} per `c1_hyperparam_ablation.py`","{2, 4, 8}",False,Phase 1
+pipelines/sparse-autoencoders/01-sae-atlas.md,topk_k,,**32**,32,"{16, 32, 64} per `c1_hyperparam_ablation.py`","{16, 32, 64}",False,Phase 1
+pipelines/sparse-autoencoders/01-sae-atlas.md,optimizer,,**Adam**,not machine-readable,—,not machine-readable,False,Phase 1
+pipelines/sparse-autoencoders/01-sae-atlas.md,learning_rate,,**3×10⁻⁴**,0.0003,—,not machine-readable,False,Phase 1
+pipelines/sparse-autoencoders/01-sae-atlas.md,batch_size,,"**4,096**",4096,—,not machine-readable,False,Phase 1
+pipelines/sparse-autoencoders/01-sae-atlas.md,epochs,,**4**,4,3–6,3–6,False,Phase 1
+pipelines/sparse-autoencoders/01-sae-atlas.md,decoder_norm,,**unit-normalise after every step**,not machine-readable,non-negotiable,not machine-readable,True,Phase 1
+pipelines/sparse-autoencoders/01-sae-atlas.md,top_n_genes_per_feature,,**20**,20,10–50,10–50,False,Phase 2
+pipelines/sparse-autoencoders/01-sae-atlas.md,annotation_fdr,,**BH α=0.05**,not machine-readable,0.01–0.1,0.01–0.1,False,Phase 2
+pipelines/sparse-autoencoders/01-sae-atlas.md,annotation_databases,,"**GO BP, KEGG, Reactome, STRING≥700, TRRUST v2**",not machine-readable,"+DoRothEA, +MSigDB",not machine-readable,False,Phase 2 (+ b4)
+pipelines/sparse-autoencoders/01-sae-atlas.md,svd_n_axes,,**50** (top singular vectors),50,—,not machine-readable,False,Phase 3
+pipelines/sparse-autoencoders/01-sae-atlas.md,svd_alignment_threshold,,**cosine > 0.7**,> 0.7,"{0.3, 0.5, 0.7, 0.9} per `b1_svd_threshold_sweep.py`","{0.3, 0.5, 0.7, 0.9}",False,Phase 3
+pipelines/sparse-autoencoders/01-sae-atlas.md,cross_layer_match_threshold,,**cosine > 0.7**,> 0.7,—,not machine-readable,False,Phase 4
+pipelines/sparse-autoencoders/01-sae-atlas.md,pmi_threshold_coactivation,,**PMI > 2.0** (fast proxy),> 2,permutation null *p* < 0.001,not machine-readable,False,Phase 5
+pipelines/sparse-autoencoders/01-sae-atlas.md,leiden_resolution,,**1.0**,1,"{0.5, 0.75, 1.0, 1.5, 2.0} per `b2_pmi_and_leiden_sweep.py`; stability via ARI vs 1.0 baseline","{0.5, 0.75, 1, 1.5, 2}",False,Phase 5
+pipelines/sparse-autoencoders/01-sae-atlas.md,leiden_seed,,**42**,42,—,not machine-readable,False,Phase 5
+pipelines/sparse-autoencoders/01-sae-atlas.md,causal_patching_probe_layer,,"**L11 (Geneformer), L7 (scGPT)**",not machine-readable,—,not machine-readable,False,Phase 6
+pipelines/sparse-autoencoders/01-sae-atlas.md,causal_patching_features,,**50 richly annotated**,not machine-readable,—,not machine-readable,False,Phase 6
+pipelines/sparse-autoencoders/01-sae-atlas.md,causal_patching_cells,,**200 K562**,not machine-readable,—,not machine-readable,False,Phase 6
+pipelines/sparse-autoencoders/01-sae-atlas.md,cross_layer_pmi_positions,,"**500,000**",500000,—,not machine-readable,False,Phase 7
+pipelines/sparse-autoencoders/01-sae-atlas.md,information_highway_threshold,,**PMI > 3** (at least 1 target),> 3,—,not machine-readable,False,Phase 7
+pipelines/sparse-autoencoders/01-sae-atlas.md,perturbation_targets,,**100** (48 TFs + 52 other),100,—,not machine-readable,False,Phase 8
+pipelines/sparse-autoencoders/01-sae-atlas.md,perturbation_cells_per_target,,**20**,20,—,not machine-readable,False,Phase 8
+pipelines/sparse-autoencoders/01-sae-atlas.md,perturbation_control_positions,,"**100,000**",100000,—,not machine-readable,False,Phase 8
+pipelines/sparse-autoencoders/01-sae-atlas.md,perturbation_effect_threshold,,**,not machine-readable,effect,not machine-readable,False,> 0.5**
+pipelines/sparse-autoencoders/01-sae-atlas.md,perturbation_fdr,,**Wilcoxon BH q < 0.05**,not machine-readable,—,not machine-readable,False,Phase 8
+pipelines/sparse-autoencoders/01-sae-atlas.md,multi_tissue_pool_size,,**500K K562 + 500K TS**,not machine-readable,—,not machine-readable,False,Phase 9
+pipelines/sparse-autoencoders/01-sae-atlas.md,multi_tissue_layers_trained,,"**{0, 5, 11, 17}**","{0, 5, 11, 17}",—,not machine-readable,False,Phase 9
+pipelines/sparse-autoencoders/01-sae-atlas.md,unannotated_jaccard_leiden_resolution,,**0.5**,0.5,—,not machine-readable,False,Phase 10
+pipelines/sparse-autoencoders/01-sae-atlas.md,umap_n_neighbors,,"**15**, min_dist **0.1**, cosine","{15, 0.1}",—,not machine-readable,False,Phase 12
+pipelines/sparse-autoencoders/01-sae-atlas.md,tsne_perplexity,,"**20**, cosine",20,—,not machine-readable,False,Phase 12
+pipelines/sparse-autoencoders/02-causal-circuit-tracing.md,n_cells,(per condition),**200**,200,"100–1,000 (sensitivity limited by compute)",100–1000,False,Phase 0
+pipelines/sparse-autoencoders/02-causal-circuit-tracing.md,n_source_features_per_layer,,**30**,30,10–120,10–120,False,Phase 1
+pipelines/sparse-autoencoders/02-causal-circuit-tracing.md,annotation_quality_score,,sum of `−log₁₀(p)` over significant enrichments,not machine-readable,—,not machine-readable,False,Phase 1
+pipelines/sparse-autoencoders/02-causal-circuit-tracing.md,cohens_d_threshold,,**,not machine-readable,d,not machine-readable,False,"> 0.5** (Cohen's ""medium"")"
+pipelines/sparse-autoencoders/02-causal-circuit-tracing.md,consistency_threshold,,**> 0.7**,> 0.7,"{0.6, 0.7, 0.8} for sensitivity","{0.6, 0.7, 0.8}",False,Phase 4
+pipelines/sparse-autoencoders/02-causal-circuit-tracing.md,welford_algorithm,,online mean/variance (Welford 1962),not machine-readable,—,not machine-readable,False,Phase 3
+pipelines/sparse-autoencoders/02-causal-circuit-tracing.md,source_layers_geneformer_k562_k562,,"**{L0, L5, L11, L15}**",not machine-readable,—,not machine-readable,False,Phase 8 condition 1
+pipelines/sparse-autoencoders/02-causal-circuit-tracing.md,source_layers_geneformer_multi,,"**{L0, L5, L11, L17}**",not machine-readable,multi-tissue SAEs available only here,not machine-readable,False,"Phase 8 conditions 2, 3"
+pipelines/sparse-autoencoders/02-causal-circuit-tracing.md,source_layers_scgpt,,"**{L0, L4, L8}**",not machine-readable,—,not machine-readable,False,Phase 8 condition 4
+pipelines/sparse-autoencoders/02-causal-circuit-tracing.md,clean_forward_cache,,**per-cell**,not machine-readable,non-negotiable for compute,not machine-readable,True,Phase 2
+pipelines/sparse-autoencoders/02-causal-circuit-tracing.md,checkpoint_interval_cells,,**50**,50,—,not machine-readable,False,Phase 3 (resume)
+pipelines/sparse-autoencoders/02-causal-circuit-tracing.md,pmi_comparison_layer_pairs,,"**L0→L5, L5→L11, L11→L17** (Geneformer); L0→L4, L4→L8, L8→L11 (scGPT)",not machine-readable,—,not machine-readable,False,Phase 7
+pipelines/sparse-autoencoders/02-causal-circuit-tracing.md,permutation_iterations_consensus,,"**1,000**",1000,—,not machine-readable,False,Phase 9 cross-model consensus
+pipelines/sparse-autoencoders/02-causal-circuit-tracing.md,high_confidence_threshold,,**,not machine-readable,d,not machine-readable,False,> 1.0 in both models**
+pipelines/sparse-autoencoders/02-causal-circuit-tracing.md,gene_prediction_top_n,,**top 10 genes per feature** (rank-weighted),not machine-readable,—,not machine-readable,False,Phase 10
+pipelines/sparse-autoencoders/02-causal-circuit-tracing.md,gene_prediction_evidence_filter,,**≥ 2 edges OR,not machine-readable,d,not machine-readable,False,> 2**
+pipelines/sparse-autoencoders/02-causal-circuit-tracing.md,crispri_perturbation_threshold,,**,not machine-readable,d,not machine-readable,False,> 0.5** for predicted edges
+pipelines/sparse-autoencoders/02-causal-circuit-tracing.md,disease_categories,,"**11** (Table 10, keyword-matched)",11,—,not machine-readable,False,Phase 12
+pipelines/sparse-autoencoders/02-causal-circuit-tracing.md,reference_graph_shared_genes,,**≥ 3** shared genes in GO BP terms,≥ 3,—,not machine-readable,False,Phase 10 (novel detection)
+pipelines/sparse-autoencoders/02-causal-circuit-tracing.md,flash_mha_conversion,,`W_qkv → in_proj_weight`,not machine-readable,required for scGPT on MPS,not machine-readable,False,Phase 0
+pipelines/sparse-autoencoders/02-causal-circuit-tracing.md,device,,**MPS** (Apple Silicon) or CUDA,not machine-readable,—,not machine-readable,False,all phases
+pipelines/sparse-autoencoders/02-causal-circuit-tracing.md,mps_fallback_env,,**`PYTORCH_ENABLE_MPS_FALLBACK=1`**,not machine-readable,required for some ops on MPS,not machine-readable,False,Phase 0
+pipelines/sparse-autoencoders/03-exhaustive-mapping-and-steering.md,source_layer,,**5** (Geneformer),5,any layer with trained SAE,not machine-readable,False,Phase 2
+pipelines/sparse-autoencoders/03-exhaustive-mapping-and-steering.md,downstream_layers,,"**{6, 11, 17}**","{6, 11, 17}",subset of layers with trained SAEs,not machine-readable,False,Phase 2
+pipelines/sparse-autoencoders/03-exhaustive-mapping-and-steering.md,n_cells_per_feature,,**20**,20,"10–200 (↑ = more power, ↑ compute)",10–200,False,Phase 2
+pipelines/sparse-autoencoders/03-exhaustive-mapping-and-steering.md,activation_frequency_threshold,,**0.001**,0.001,0.0001–0.01,0.0001–0.01,False,Phase 1
+pipelines/sparse-autoencoders/03-exhaustive-mapping-and-steering.md,cohens_d_threshold,,"**|d| > 0.5** (Cohen ""medium"")",> 0.5,0.3–1.0,0.3–1,False,Phase 2
+pipelines/sparse-autoencoders/03-exhaustive-mapping-and-steering.md,consistency_threshold,,**> 0.7**,> 0.7,0.6–0.8,0.6–0.8,False,Phase 2
+pipelines/sparse-autoencoders/03-exhaustive-mapping-and-steering.md,top_edges_per_feature,,**50** (retained per downstream layer),50,10–200,10–200,False,Phase 2
+pipelines/sparse-autoencoders/03-exhaustive-mapping-and-steering.md,clean_forward_cache,,**on** (non-negotiable),not machine-readable,—,not machine-readable,True,Phase 2
+pipelines/sparse-autoencoders/03-exhaustive-mapping-and-steering.md,welford_online,,**on** (non-negotiable),not machine-readable,—,not machine-readable,True,Phase 2
+pipelines/sparse-autoencoders/03-exhaustive-mapping-and-steering.md,n_triplets,,**8**,8,4–32,4–32,False,Phase 6
+pipelines/sparse-autoencoders/03-exhaustive-mapping-and-steering.md,triplet_layers,,"**{L0, L5, L11}**",not machine-readable,configurable,not machine-readable,False,Phase 6
+pipelines/sparse-autoencoders/03-exhaustive-mapping-and-steering.md,measurement_layer,,**L17**,not machine-readable,any downstream layer,not machine-readable,False,Phase 6
+pipelines/sparse-autoencoders/03-exhaustive-mapping-and-steering.md,ablation_conditions,,"**{A, B, C, AB, AC, BC, ABC, clean}** (7+1)",not machine-readable,—,not machine-readable,False,Phase 6
+pipelines/sparse-autoencoders/03-exhaustive-mapping-and-steering.md,n_cells_per_condition,,**200**,200,100–500,100–500,False,Phase 6
+pipelines/sparse-autoencoders/03-exhaustive-mapping-and-steering.md,triplet_pathway_grouping,,**same-pathway + cross-pathway**,not machine-readable,—,not machine-readable,False,Phase 6
+pipelines/sparse-autoencoders/03-exhaustive-mapping-and-steering.md,redundancy_ratio_formula,,`|d_ABC| / (|d_A|+|d_B|+|d_C|)`,not machine-readable,—,not machine-readable,False,Phase 7
+pipelines/sparse-autoencoders/03-exhaustive-mapping-and-steering.md,superadditivity_threshold,,`|d_ABC| > |d_A|+|d_B|+|d_C|`,not machine-readable,—,not machine-readable,False,Phase 8
+pipelines/sparse-autoencoders/03-exhaustive-mapping-and-steering.md,n_cells_tabula_sapiens,,**481**,481,"100–2,000",100–2000,False,Phase 9
+pipelines/sparse-autoencoders/03-exhaustive-mapping-and-steering.md,pseudotime_method,,**scanpy diffusion pseudotime** (Haghverdi 2016),not machine-readable,—,not machine-readable,False,Phase 9
+pipelines/sparse-autoencoders/03-exhaustive-mapping-and-steering.md,early_cells_tertile,,**bottom 30%**,not machine-readable,10–50%,10–50,False,Phase 9
+pipelines/sparse-autoencoders/03-exhaustive-mapping-and-steering.md,gene_signature_decile,,**top/bottom 10% of pseudotime**,not machine-readable,—,not machine-readable,False,Phase 9
+pipelines/sparse-autoencoders/03-exhaustive-mapping-and-steering.md,n_switch_features,,**14** (hard-coded from Stage 1),14,configurable,not machine-readable,False,Phase 10
+pipelines/sparse-autoencoders/03-exhaustive-mapping-and-steering.md,switch_feature_layers,,"**{L0: 5, L5: 2, L11: 4, L17: 3}**",not machine-readable,configurable,not machine-readable,False,Phase 10
+pipelines/sparse-autoencoders/03-exhaustive-mapping-and-steering.md,switch_d_threshold,,**> 0.9** (switch score from Stage 1),> 0.9,0.5–2.0,0.5–2,False,Phase 10
+pipelines/sparse-autoencoders/03-exhaustive-mapping-and-steering.md,steering_alpha,,"**α ∈ {2, 5}**","{2, 5}",1.5–10,1.5–10,False,Phase 11
+pipelines/sparse-autoencoders/03-exhaustive-mapping-and-steering.md,steering_formula,,`h'_ℓ = h_ℓ + (α−1) · a_f · d_f`,not machine-readable,—,not machine-readable,False,Phase 11
+pipelines/sparse-autoencoders/03-exhaustive-mapping-and-steering.md,state_shift_metric,,cosine sim to `g_late` vs `g_early`,not machine-readable,—,not machine-readable,False,Phase 11
+pipelines/audit-recurring-review-issues.md,min_null_families_for_strict_claim,,3,3,,not machine-readable,False,P1
+pipelines/audit-recurring-review-issues.md,require_trivial_baseline_in_summary,,yes,not machine-readable,,not machine-readable,False,P2
+pipelines/audit-recurring-review-issues.md,min_groupkfold_axes_for_pair_claim,,2,2,,not machine-readable,False,P4
+pipelines/audit-recurring-review-issues.md,random_unselected_comparison,,yes,not machine-readable,,not machine-readable,False,P5
+pipelines/audit-recurring-review-issues.md,positive_control_required,,yes-for-load-bearing-negatives,not machine-readable,,not machine-readable,False,P6
+pipelines/audit-recurring-review-issues.md,min_held_out_conditions,,1,1,,not machine-readable,False,P7
+pipelines/audit-recurring-review-issues.md,min_seeds_for_headline,,3,3,,not machine-readable,False,P8
+pipelines/audit-recurring-review-issues.md,min_threshold_sweep_points,,3,3,,not machine-readable,False,P8
+pipelines/audit-recurring-review-issues.md,causal_language_audit,,every-revision,not machine-readable,,not machine-readable,False,P9
+pipelines/audit-recurring-review-issues.md,repo_+_doi,,yes,not machine-readable,,not machine-readable,False,P10

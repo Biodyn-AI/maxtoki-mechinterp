@@ -1,0 +1,17 @@
+{
+  "primary_layer": 8,
+  "n_perturbations_evaluated": 174,
+  "mean_auc": {
+    "attention_primary": 0.511937906049327,
+    "attention_primary_norm": 0.511937906049327,
+    "spearman": 0.5102519703531523,
+    "gene_variance": 0.59566434928783,
+    "gene_mean_expr": 0.5604681212519123,
+    "gene_one_minus_dropout": 0.548264245541578,
+    "gene_tf_out_degree": 0.499959964044735
+  },
+  "lfc_threshold": 0.5,
+  "de_pval_threshold": 0.05,
+  "min_cells_per_pert": 30,
+  "min_de_positives": 3
+}

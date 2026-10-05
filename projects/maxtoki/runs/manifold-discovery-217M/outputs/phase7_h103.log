@@ -1,0 +1,15 @@
+======================================================================
+PHASE 7 H103 — frozen B-cell-maturation head on external panel
+======================================================================
+  internal H103 anchors kept: 45/290
+[1] Training H103 anchor head on internal panel...
+  [H103_internal] trained 1500 epochs in 1.7s
+  external H103 anchors kept: 106/600
+[2] Frozen H103 forward pass on external...
+[3] Trustworthiness, holdouts on external...
+
+======================================================================
+VERDICT: POSITIVE_3GATE_FALLBACK: H103 transfers (one gate undefined)
+  trust=0.877  rand=0.858  donor=0.859  depth=nan
+  global ρ = 0.864
+Total time: 2.6s

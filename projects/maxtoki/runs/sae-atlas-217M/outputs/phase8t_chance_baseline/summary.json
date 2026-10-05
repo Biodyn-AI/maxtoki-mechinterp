@@ -1,0 +1,27 @@
+{
+  "observed_n_tf_specific": 0,
+  "n_tfs_tested": 48,
+  "n_tfs_detected": 3,
+  "detected_tfs": [
+    "CDC5L",
+    "GATA1",
+    "MED1"
+  ],
+  "n_responding_per_detected_tf": [
+    1,
+    5,
+    3
+  ],
+  "chance_baseline_method": "random TF-target-set assignment, sampled feature top-20s",
+  "n_perm": 1000,
+  "null_n_specific_mean": 0.005,
+  "null_n_specific_median": 0.0,
+  "null_n_specific_std": 0.07053367989832943,
+  "null_n_specific_q05": 0.0,
+  "null_n_specific_q25": 0.0,
+  "null_n_specific_q75": 0.0,
+  "null_n_specific_q95": 0.0,
+  "p_observed_le_null": 0.995,
+  "p_observed_ge_null": 1.0,
+  "interpretation": "Under random TF-target-set assignment, n_tf_specific has null mean 0.01 (q5-q95: 0-0). Observed = 0. The 0/48 finding is INDISTINGUISHABLE from chance \u2014 meaning the TF\u2192target alignment of responding features is not detectable above what random gene-set overlap produces."
+}

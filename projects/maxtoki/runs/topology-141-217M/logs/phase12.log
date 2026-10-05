@@ -1,0 +1,69 @@
+
+[lung] strict audit on layers [3, 6, 9]
+  L03        euclidean  obs=0.529  max_null_p95=0.558  strict=-0.029  pass=0
+  L03         geodesic  obs=0.519  max_null_p95=0.551  strict=-0.033  pass=0
+  L03     diffusion_t4  obs=0.547  max_null_p95=0.552  strict=-0.004  pass=0
+  L03  triangle_defect  obs=0.504  max_null_p95=0.550  strict=-0.045  pass=0
+  L06        euclidean  obs=0.507  max_null_p95=0.550  strict=-0.043  pass=0
+  L06         geodesic  obs=0.533  max_null_p95=0.545  strict=-0.013  pass=0
+  L06     diffusion_t4  obs=0.572  max_null_p95=0.545  strict=+0.026  pass=1
+  L06  triangle_defect  obs=0.434  max_null_p95=0.551  strict=-0.118  pass=0
+  L09        euclidean  obs=0.464  max_null_p95=0.545  strict=-0.082  pass=0
+  L09         geodesic  obs=0.476  max_null_p95=0.545  strict=-0.069  pass=0
+  L09     diffusion_t4  obs=0.504  max_null_p95=0.547  strict=-0.043  pass=0
+  L09  triangle_defect  obs=0.529  max_null_p95=0.545  strict=-0.016  pass=0
+
+[immune] strict audit on layers [3, 6, 9]
+  L03        euclidean  obs=0.506  max_null_p95=0.557  strict=-0.050  pass=0
+  L03         geodesic  obs=0.535  max_null_p95=0.548  strict=-0.013  pass=0
+  L03     diffusion_t4  obs=0.491  max_null_p95=0.544  strict=-0.053  pass=0
+  L03  triangle_defect  obs=0.467  max_null_p95=0.528  strict=-0.061  pass=0
+  L06        euclidean  obs=0.541  max_null_p95=0.528  strict=+0.013  pass=1
+  L06         geodesic  obs=0.546  max_null_p95=0.532  strict=+0.015  pass=1
+  L06     diffusion_t4  obs=0.502  max_null_p95=0.528  strict=-0.026  pass=0
+  L06  triangle_defect  obs=0.458  max_null_p95=0.528  strict=-0.070  pass=0
+  L09        euclidean  obs=0.508  max_null_p95=0.545  strict=-0.037  pass=0
+  L09         geodesic  obs=0.519  max_null_p95=0.536  strict=-0.017  pass=0
+  L09     diffusion_t4  obs=0.497  max_null_p95=0.530  strict=-0.033  pass=0
+  L09  triangle_defect  obs=0.468  max_null_p95=0.530  strict=-0.062  pass=0
+
+[external_lung] strict audit on layers [3, 6, 9]
+  L03        euclidean  obs=0.564  max_null_p95=0.575  strict=-0.012  pass=0
+  L03         geodesic  obs=0.542  max_null_p95=0.575  strict=-0.034  pass=0
+  L03     diffusion_t4  obs=0.466  max_null_p95=0.575  strict=-0.110  pass=0
+  L03  triangle_defect  obs=0.426  max_null_p95=0.575  strict=-0.149  pass=0
+  L06        euclidean  obs=0.517  max_null_p95=0.575  strict=-0.059  pass=0
+  L06         geodesic  obs=0.484  max_null_p95=0.575  strict=-0.091  pass=0
+  L06     diffusion_t4  obs=0.451  max_null_p95=0.575  strict=-0.124  pass=0
+  L06  triangle_defect  obs=0.570  max_null_p95=0.575  strict=-0.005  pass=0
+  L09        euclidean  obs=0.441  max_null_p95=0.575  strict=-0.134  pass=0
+  L09         geodesic  obs=0.440  max_null_p95=0.575  strict=-0.135  pass=0
+  L09     diffusion_t4  obs=0.440  max_null_p95=0.575  strict=-0.136  pass=0
+  L09  triangle_defect  obs=0.633  max_null_p95=0.575  strict=+0.058  pass=1
+
+[phase 12] summary:
+{
+  "external_lung": {
+    "n_tests": 12,
+    "mean_strict_margin": -0.07771729279460322,
+    "n_strict_positive": 1,
+    "fraction_strict_positive": 0.08333333333333333
+  },
+  "immune": {
+    "n_tests": 12,
+    "mean_strict_margin": -0.03282836572128847,
+    "n_strict_positive": 2,
+    "fraction_strict_positive": 0.16666666666666666
+  },
+  "lung": {
+    "n_tests": 12,
+    "mean_strict_margin": -0.0389882048410694,
+    "n_strict_positive": 1,
+    "fraction_strict_positive": 0.08333333333333333
+  },
+  "overall": {
+    "mean_strict_margin": -0.049844621118987034,
+    "n_strict_positive": 4,
+    "n_tests": 36
+  }
+}

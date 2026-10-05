@@ -1,0 +1,12 @@
+{
+  "script": "<REPO_ROOT>/projects/maxtoki/runs/circuit-tracing-217M/scripts/v2_circuit_taskdata.py",
+  "script_sha256": "93d8f46d71b91a9dd0a298f8cc8e9b78bf9ddf440ea5d8eec62e9838ca7bd596",
+  "device": "cpu",
+  "sources": {
+    "per_pair": "<REPO_ROOT>/projects/maxtoki/runs/circuit-tracing-217M/outputs/v2_circuit/per_pair.parquet",
+    "edges": "<REPO_ROOT>/projects/maxtoki/runs/circuit-tracing-217M/outputs/v2_circuit/circuit_edges_v2.csv",
+    "lfc": "<REPO_ROOT>/projects/maxtoki/runs/circuit-tracing-217M/outputs/v2_circuit/lfc"
+  },
+  "timestamp": "2026-10-01T11:48:46",
+  "wall_seconds": 3.6
+}

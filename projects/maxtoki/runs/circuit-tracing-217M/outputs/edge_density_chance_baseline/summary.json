@@ -1,0 +1,12 @@
+{
+  "headline_finding": "2,144,011 edges at |d|>=0.5 \u2229 consistency>=0.7 (41\u00d7 denser than paper's 52K)",
+  "chance_baseline_anchor": "Under noise-floor null (Cohen's d ~ N(0, 0.235); consistency ~ Bin(20, 0.5)/20), the gate-pass rate would be 0.0020 = 0.20%. Observed pass rate is 0.659 = 65.9% (2,144,011 / 3,252,480 candidate pairs). Observed exceeds null by ~26629 SD; observed/null ratio \u2248 332\u00d7.",
+  "threshold_sensitivity": {
+    "headline_at_d_0.5_c_0.7": 2144011,
+    "stricter_at_d_1.0_c_0.7": 1305540,
+    "stricter_at_d_2.0_c_0.9": 761429,
+    "edge_count_density_remains_above_paper_at_d_2.0_c_0.9": true,
+    "threshold_at_which_count_matches_paper": null
+  },
+  "interpretation": "The 2.14M edge count is overwhelmingly above noise floor (observed/null ratio \u2248 332\u00d7). This is not a noise artifact. However, the 41\u00d7 density gap to the source paper is partly a *threshold-sensitivity* artifact: at |d|>=2.0 \u2229 consistency>=0.9, MaxToki retains 761,429 edges \u2014 still 14.6\u00d7 the paper's 52K. Conclusion: the dense-circuit picture survives strict-threshold audit (genuine architectural property), but the precise '41\u00d7 denser than paper' headline depends on threshold choice and should be qualified with a threshold-sensitivity sweep."
+}

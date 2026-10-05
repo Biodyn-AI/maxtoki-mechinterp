@@ -1,0 +1,71 @@
+======================================================================
+PHASE 1B+C — panel=internal  device=mps
+======================================================================
+  cells: 11804  anchors: 290  L_cap: 4096
+  seq_len  median: 2043  mean: 2190.3  max: 4096
+
+[1] Loading MaxToki-217M on mps...
+  n_layers=11 hidden=1232  loaded in 2.5s
+
+[2] Running forward passes (mean-pool hidden states across gene-token positions)...
+    cell 236/11804  elapsed 169.7s  eta 8320.5s
+    cell 472/11804  elapsed 373.9s  eta 8975.8s
+    cell 708/11804  elapsed 614.1s  eta 9624.1s
+    cell 944/11804  elapsed 766.5s  eta 8818.5s
+    cell 1180/11804  elapsed 927.6s  eta 8351.5s
+    cell 1416/11804  elapsed 1104.6s  eta 8103.7s
+    cell 1652/11804  elapsed 1251.2s  eta 7688.7s
+    cell 1888/11804  elapsed 1391.6s  eta 7309.0s
+    cell 2124/11804  elapsed 1541.8s  eta 7026.8s
+    cell 2360/11804  elapsed 1791.6s  eta 7169.5s
+    cell 2596/11804  elapsed 1896.9s  eta 6728.4s
+    cell 2832/11804  elapsed 2102.1s  eta 6659.6s
+    cell 3068/11804  elapsed 2293.4s  eta 6530.2s
+    cell 3304/11804  elapsed 2587.4s  eta 6656.6s
+    cell 3540/11804  elapsed 2757.1s  eta 6436.3s
+    cell 3776/11804  elapsed 2931.4s  eta 6232.4s
+    cell 4012/11804  elapsed 3166.4s  eta 6149.6s
+    cell 4248/11804  elapsed 3371.5s  eta 5997.0s
+    cell 4484/11804  elapsed 3587.8s  eta 5857.0s
+    cell 4720/11804  elapsed 3911.3s  eta 5870.2s
+    cell 4956/11804  elapsed 4115.4s  eta 5686.5s
+    cell 5192/11804  elapsed 4211.0s  eta 5362.8s
+    cell 5428/11804  elapsed 4447.5s  eta 5224.3s
+    cell 5664/11804  elapsed 4664.8s  eta 5056.8s
+    cell 5900/11804  elapsed 4995.3s  eta 4998.7s
+    cell 6136/11804  elapsed 5145.1s  eta 4752.6s
+    cell 6372/11804  elapsed 5379.9s  eta 4586.2s
+    cell 6608/11804  elapsed 5649.2s  eta 4442.0s
+    cell 6844/11804  elapsed 5846.6s  eta 4237.1s
+    cell 7080/11804  elapsed 6125.9s  eta 4087.4s
+    cell 7316/11804  elapsed 6276.7s  eta 3850.5s
+    cell 7552/11804  elapsed 6383.7s  eta 3594.2s
+    cell 7788/11804  elapsed 6564.1s  eta 3384.9s
+    cell 8024/11804  elapsed 6743.2s  eta 3176.6s
+    cell 8260/11804  elapsed 7208.1s  eta 3092.7s
+    cell 8496/11804  elapsed 7468.9s  eta 2908.1s
+    cell 8732/11804  elapsed 7647.7s  eta 2690.5s
+    cell 8968/11804  elapsed 8024.3s  eta 2537.6s
+    cell 9204/11804  elapsed 8311.2s  eta 2347.8s
+    cell 9440/11804  elapsed 8686.9s  eta 2175.4s
+    cell 9676/11804  elapsed 8853.7s  eta 1947.2s
+    cell 9912/11804  elapsed 9047.0s  eta 1726.9s
+    cell 10148/11804  elapsed 9174.1s  eta 1497.1s
+    cell 10384/11804  elapsed 9583.2s  eta 1310.5s
+    cell 10620/11804  elapsed 9919.5s  eta 1105.9s
+    cell 10856/11804  elapsed 10061.6s  eta 878.6s
+    cell 11092/11804  elapsed 10228.2s  eta 656.6s
+    cell 11328/11804  elapsed 10496.4s  eta 441.1s
+    cell 11564/11804  elapsed 10731.4s  eta 222.7s
+    cell 11800/11804  elapsed 10960.1s  eta 3.7s
+  done in 10973.4s  per_cell shape=(11804, 12, 1232)
+
+[3] Aggregating to anchor centroids...
+  centroids saved → artifacts/anchors/centroids_internal.npy
+  anchor cell counts: min 13, median 50, max 50
+
+[4] Building H65 ruler (graph distance on stage DAG)...
+  d_target shape=(290, 290)  min=0.0 median=7.0 max=9.0
+  d_target_null_shuffled saved (within-branch shuffle)
+
+Phase 1B+C (internal) complete in 10985.4s

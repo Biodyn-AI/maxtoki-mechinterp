@@ -1,0 +1,32 @@
+======================================================================
+PHASE 17 — Cross-axis orthogonality H65 × H95
+======================================================================
+  Anchor intersection (H65 ∩ H95): 208/290
+  D_h65 max/median: 9.0/7.0
+  D_h95 max/median: 2.0/2.0
+  Spearman(D_target_h65, D_target_h95) = 0.814
+
+[1] Train H_h65 on intersection-restricted anchors...
+  [H_h65_intersect] trained 1500 epochs in 36.5s
+[2] Train H_h95 on intersection-restricted anchors...
+  [H_h95_intersect] trained 1500 epochs in 39.6s
+  Self-fit ρ(D̂_h65, D_target_h65) = 0.986
+  Self-fit ρ(D̂_h95, D_target_h95) = 0.825
+  Trustworthiness  H65 head: 0.841   H95 head: 0.800
+
+[3] Cross-head latent-distance Spearman: ρ(D̂_h65, D̂_h95) = 0.642
+   (compare to ground-truth ruler overlap ρ_target = 0.814)
+   Δ (head_overlap − target_overlap) = -0.173
+
+[4] Paired null — head trained on scrambled H95 ruler...
+  [H_h95_null] trained 1500 epochs in 36.0s
+   null self-fit ρ = 0.825   trust = 0.666
+   ρ(D̂_h65, D̂_null_h95) = 0.022  (vs real H95 head: 0.642)
+
+======================================================================
+VERDICT: PARTIALLY_ORTHOGONAL: H_h65 and H_h95 share some variance but each head also captures structure not available from the other.
+  rho_overlap (real H95 head) = 0.642
+  rho_overlap (null H95 head) = 0.022
+  ground-truth ruler overlap  = 0.814
+  Total time: 119.7s
+  → <REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/reports/phase17_cross_axis_h65_h95.json

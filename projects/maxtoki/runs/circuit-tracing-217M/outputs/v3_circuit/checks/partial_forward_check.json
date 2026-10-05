@@ -1,0 +1,178 @@
+{
+  "description": "partial forward (start at block s from the clean input of block s) vs full forward, same hooks_v2 Ablate edit; first two source features per layer; 2 cells; v3 SAEs, v3 inputs",
+  "max_abs_diff_hidden": 0.0,
+  "max_abs_diff_dz": 0.0,
+  "rows": [
+    {
+      "cell": 0,
+      "src_layer": 0,
+      "feature": 3635,
+      "max_abs_diff_hidden": 0.0,
+      "max_abs_diff_dz": 0.0,
+      "max_abs_dz": 0.08314324170351028,
+      "n_active": 41
+    },
+    {
+      "cell": 0,
+      "src_layer": 0,
+      "feature": 3083,
+      "max_abs_diff_hidden": 0.0,
+      "max_abs_diff_dz": 0.0,
+      "max_abs_dz": 0.08193304389715195,
+      "n_active": 20
+    },
+    {
+      "cell": 0,
+      "src_layer": 3,
+      "feature": 3050,
+      "max_abs_diff_hidden": 0.0,
+      "max_abs_diff_dz": 0.0,
+      "max_abs_dz": 0.017779449000954628,
+      "n_active": 23
+    },
+    {
+      "cell": 0,
+      "src_layer": 3,
+      "feature": 1370,
+      "max_abs_diff_hidden": 0.0,
+      "max_abs_diff_dz": 0.0,
+      "max_abs_dz": 0.03559045493602753,
+      "n_active": 14
+    },
+    {
+      "cell": 0,
+      "src_layer": 6,
+      "feature": 3559,
+      "max_abs_diff_hidden": 0.0,
+      "max_abs_diff_dz": 0.0,
+      "max_abs_dz": 0.003833167254924774,
+      "n_active": 3
+    },
+    {
+      "cell": 0,
+      "src_layer": 6,
+      "feature": 271,
+      "max_abs_diff_hidden": 0.0,
+      "max_abs_diff_dz": 0.0,
+      "max_abs_dz": 0.02047201432287693,
+      "n_active": 19
+    },
+    {
+      "cell": 0,
+      "src_layer": 9,
+      "feature": 1468,
+      "max_abs_diff_hidden": 0.0,
+      "max_abs_diff_dz": 0.0,
+      "max_abs_dz": 0.01298287883400917,
+      "n_active": 17
+    },
+    {
+      "cell": 0,
+      "src_layer": 9,
+      "feature": 1107,
+      "max_abs_diff_hidden": 0.0,
+      "max_abs_diff_dz": 0.0,
+      "max_abs_dz": 0.03323740512132645,
+      "n_active": 17
+    },
+    {
+      "cell": 1,
+      "src_layer": 0,
+      "feature": 3635,
+      "max_abs_diff_hidden": 0.0,
+      "max_abs_diff_dz": 0.0,
+      "max_abs_dz": 0.13956403732299805,
+      "n_active": 41
+    },
+    {
+      "cell": 1,
+      "src_layer": 0,
+      "feature": 3083,
+      "max_abs_diff_hidden": 0.0,
+      "max_abs_diff_dz": 0.0,
+      "max_abs_dz": 0.05479537323117256,
+      "n_active": 13
+    },
+    {
+      "cell": 1,
+      "src_layer": 3,
+      "feature": 3050,
+      "max_abs_diff_hidden": 0.0,
+      "max_abs_diff_dz": 0.0,
+      "max_abs_dz": 0.008203781209886074,
+      "n_active": 13
+    },
+    {
+      "cell": 1,
+      "src_layer": 3,
+      "feature": 1370,
+      "max_abs_diff_hidden": 0.0,
+      "max_abs_diff_dz": 0.0,
+      "max_abs_dz": 0.024045370519161224,
+      "n_active": 8
+    },
+    {
+      "cell": 1,
+      "src_layer": 6,
+      "feature": 3559,
+      "max_abs_diff_hidden": 0.0,
+      "max_abs_diff_dz": 0.0,
+      "max_abs_dz": 0.002760083880275488,
+      "n_active": 7
+    },
+    {
+      "cell": 1,
+      "src_layer": 6,
+      "feature": 271,
+      "max_abs_diff_hidden": 0.0,
+      "max_abs_diff_dz": 0.0,
+      "max_abs_dz": 0.012676583603024483,
+      "n_active": 18
+    },
+    {
+      "cell": 1,
+      "src_layer": 9,
+      "feature": 1468,
+      "max_abs_diff_hidden": 0.0,
+      "max_abs_diff_dz": 0.0,
+      "max_abs_dz": 0.0036335287149995565,
+      "n_active": 4
+    },
+    {
+      "cell": 1,
+      "src_layer": 9,
+      "feature": 1107,
+      "max_abs_diff_hidden": 0.0,
+      "max_abs_diff_dz": 0.0,
+      "max_abs_dz": 0.01946430653333664,
+      "n_active": 14
+    }
+  ],
+  "cell_rows": [
+    282477,
+    285191
+  ],
+  "encoding_check": {
+    "label": "v3_circuit chunk",
+    "n_checked": 2,
+    "n_cells": 2,
+    "all_pass": true,
+    "max_order_violations": 0,
+    "n_positions_tie_reordered": 0,
+    "check": "inputs_v3.check_encoding (token order == counts/median order; counts count-like)",
+    "count_rows_all_ok": true
+  },
+  "env": {
+    "device": "mps",
+    "torch": "2.11.0",
+    "transformers": "5.5.4",
+    "python": "3.12.9",
+    "platform": "macOS-26.3-arm64-arm-64bit",
+    "hooks_v2_sha256": "1ba6fda5ad761b1f82041a7b1397fa9332fa7438e13db955a00d751c4b440f54",
+    "model_dir": "<REPO_ROOT>/projects/maxtoki/setup/MaxToki-217M-HF",
+    "model_dtype": "float32",
+    "timestamp": "2026-10-02T05:18:58"
+  },
+  "script_sha256": "28a1bf3b51d31d67b857a87c483a0843f1e0dbf9383e013edfee0deacef1f4ed",
+  "wall_seconds": 23.9
+}

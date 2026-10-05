@@ -1,0 +1,1044 @@
+{
+ "n_checked": 128,
+ "n_match": 128,
+ "rows": [
+  {
+   "name": "pooled.frac_obs_dec",
+   "source": 0.5431276337486258,
+   "reference": 0.54313,
+   "match": true
+  },
+  {
+   "name": "pooled.frac_pred_dec",
+   "source": 0.5088760191462074,
+   "reference": 0.50888,
+   "match": true
+  },
+  {
+   "name": "pooled.accuracy",
+   "source": 0.4976052926896299,
+   "reference": 0.49761,
+   "match": true
+  },
+  {
+   "name": "pooled.balanced_acc",
+   "source": 0.49681600041877017,
+   "reference": 0.49682,
+   "match": true
+  },
+  {
+   "name": "pooled.mcc",
+   "source": -0.006345265957617339,
+   "reference": -0.00635,
+   "match": true
+  },
+  {
+   "name": "pooled.cohen_kappa",
+   "source": -0.006330314452883259,
+   "reference": -0.00633,
+   "match": true
+  },
+  {
+   "name": "pooled.chance_acc_given_marginals",
+   "source": 0.5007656034057668,
+   "reference": 0.50077,
+   "match": true
+  },
+  {
+   "name": "pooled.tp_pred_dec_obs_dec",
+   "source": 191985,
+   "reference": 191985,
+   "match": true
+  },
+  {
+   "name": "pooled.fn_pred_inc_obs_dec",
+   "source": 187457,
+   "reference": 187457,
+   "match": true
+  },
+  {
+   "name": "pooled.fp_pred_dec_obs_inc",
+   "source": 163528,
+   "reference": 163528,
+   "match": true
+  },
+  {
+   "name": "pooled.tn_pred_inc_obs_inc",
+   "source": 155654,
+   "reference": 155654,
+   "match": true
+  },
+  {
+   "name": "pooled.n_ties",
+   "source": 72275,
+   "reference": 72275,
+   "match": true
+  },
+  {
+   "name": "target_baseline.accuracy",
+   "source": 0.5869952936057163,
+   "reference": 0.587,
+   "match": true
+  },
+  {
+   "name": "target_baseline.balanced_acc",
+   "source": 0.5754878954526115,
+   "reference": 0.57549,
+   "match": true
+  },
+  {
+   "name": "target_baseline.mcc",
+   "source": 0.1566729223892047,
+   "reference": 0.15667,
+   "match": true
+  },
+  {
+   "name": "within_knockdown_baseline.accuracy",
+   "source": 0.5671176484060095,
+   "reference": 0.56712,
+   "match": true
+  },
+  {
+   "name": "bootstrap_by_silenced_gene.n_groups",
+   "source": 227,
+   "reference": 227,
+   "match": true
+  },
+  {
+   "name": "bootstrap_by_silenced_gene.pooled_accuracy.point",
+   "source": 0.4976052926896299,
+   "reference": 0.49761,
+   "match": true
+  },
+  {
+   "name": "bootstrap_by_silenced_gene.pooled_accuracy.ci95",
+   "source": [
+    0.49188463572813085,
+    0.5036980413151794
+   ],
+   "reference": [
+    0.49188,
+    0.5037
+   ],
+   "match": true
+  },
+  {
+   "name": "bootstrap_by_silenced_gene.pooled_acc_minus_always_dec.point",
+   "source": -0.04552234105899594,
+   "reference": -0.04552,
+   "match": true
+  },
+  {
+   "name": "bootstrap_by_silenced_gene.pooled_acc_minus_always_dec.ci95",
+   "source": [
+    -0.05791983544970303,
+    -0.03341487522559736
+   ],
+   "reference": [
+    -0.05792,
+    -0.03341
+   ],
+   "match": true
+  },
+  {
+   "name": "bootstrap_by_silenced_gene.pooled_acc_minus_best_constant_rechosen_each_rep.point",
+   "source": -0.04552234105899594,
+   "reference": -0.04552,
+   "match": true
+  },
+  {
+   "name": "bootstrap_by_silenced_gene.pooled_acc_minus_best_constant_rechosen_each_rep.ci95",
+   "source": [
+    -0.05791983544970303,
+    -0.03341487522559736
+   ],
+   "reference": [
+    -0.05792,
+    -0.03341
+   ],
+   "match": true
+  },
+  {
+   "name": "bootstrap_by_silenced_gene.pooled_balanced_acc_minus_0.5.point",
+   "source": -0.003183999581229835,
+   "reference": -0.00318,
+   "match": true
+  },
+  {
+   "name": "bootstrap_by_silenced_gene.pooled_balanced_acc_minus_0.5.ci95",
+   "source": [
+    -0.008302954811040642,
+    0.002028989372484043
+   ],
+   "reference": [
+    -0.0083,
+    0.00203
+   ],
+   "match": true
+  },
+  {
+   "name": "bootstrap_by_silenced_gene.pooled_mcc.point",
+   "source": -0.006345265957617339,
+   "reference": -0.00635,
+   "match": true
+  },
+  {
+   "name": "bootstrap_by_silenced_gene.pooled_mcc.ci95",
+   "source": [
+    -0.016551625038785486,
+    0.0040506332518165065
+   ],
+   "reference": [
+    -0.01655,
+    0.00405
+   ],
+   "match": true
+  },
+  {
+   "name": "bootstrap_by_silenced_gene.pooled_acc_minus_chance_given_marginals.point",
+   "source": -0.003160310716136927,
+   "reference": -0.00316,
+   "match": true
+  },
+  {
+   "name": "bootstrap_by_silenced_gene.pooled_acc_minus_chance_given_marginals.ci95",
+   "source": [
+    -0.008245016398883361,
+    0.002013829220887336
+   ],
+   "reference": [
+    -0.00825,
+    0.00201
+   ],
+   "match": true
+  },
+  {
+   "name": "bootstrap_by_silenced_gene.pooled_acc_minus_target_direction_baseline.point",
+   "source": -0.08939000091608645,
+   "reference": -0.08939,
+   "match": true
+  },
+  {
+   "name": "bootstrap_by_silenced_gene.pooled_acc_minus_target_direction_baseline.ci95",
+   "source": [
+    -0.09980916023707768,
+    -0.07993745166925682
+   ],
+   "reference": [
+    -0.09981,
+    -0.07994
+   ],
+   "match": true
+  },
+  {
+   "name": "bootstrap_by_silenced_gene.per_source_mean_accuracy.point",
+   "source": 0.5127195784347347,
+   "reference": 0.51272,
+   "match": true
+  },
+  {
+   "name": "bootstrap_by_silenced_gene.per_source_mean_accuracy.ci95",
+   "source": [
+    0.501545234847186,
+    0.5246669565073849
+   ],
+   "reference": [
+    0.50155,
+    0.52467
+   ],
+   "match": true
+  },
+  {
+   "name": "bootstrap_by_silenced_gene.per_source_mean_acc_minus_always_dec.point",
+   "source": -0.03445711870388277,
+   "reference": -0.03446,
+   "match": true
+  },
+  {
+   "name": "bootstrap_by_silenced_gene.per_source_mean_acc_minus_always_dec.ci95",
+   "source": [
+    -0.04311311668831066,
+    -0.025865715781990064
+   ],
+   "reference": [
+    -0.04311,
+    -0.02587
+   ],
+   "match": true
+  },
+  {
+   "name": "bootstrap_by_silenced_gene.per_source_mean_balanced_acc_minus_0.5.point",
+   "source": 0.0011195606700100669,
+   "reference": 0.00112,
+   "match": true
+  },
+  {
+   "name": "bootstrap_by_silenced_gene.per_source_mean_balanced_acc_minus_0.5.ci95",
+   "source": [
+    -0.0018580352282751191,
+    0.004187062897863362
+   ],
+   "reference": [
+    -0.00186,
+    0.00419
+   ],
+   "match": true
+  },
+  {
+   "name": "bootstrap_by_silenced_gene.per_source_mean_mcc.point",
+   "source": 0.004665989542734089,
+   "reference": 0.00467,
+   "match": true
+  },
+  {
+   "name": "bootstrap_by_silenced_gene.per_source_mean_mcc.ci95",
+   "source": [
+    -0.0041425691380933315,
+    0.013883667996807719
+   ],
+   "reference": [
+    -0.00414,
+    0.01388
+   ],
+   "match": true
+  },
+  {
+   "name": "bootstrap_by_source_feature_group.n_groups",
+   "source": 119,
+   "reference": 119,
+   "match": true
+  },
+  {
+   "name": "bootstrap_by_source_feature_group.pooled_accuracy.point",
+   "source": 0.4976052926896299,
+   "reference": 0.49761,
+   "match": true
+  },
+  {
+   "name": "bootstrap_by_source_feature_group.pooled_accuracy.ci95",
+   "source": [
+    0.48997479482254536,
+    0.5052790160133777
+   ],
+   "reference": [
+    0.48997,
+    0.50528
+   ],
+   "match": true
+  },
+  {
+   "name": "bootstrap_by_source_feature_group.pooled_acc_minus_always_dec.point",
+   "source": -0.04552234105899594,
+   "reference": -0.04552,
+   "match": true
+  },
+  {
+   "name": "bootstrap_by_source_feature_group.pooled_acc_minus_always_dec.ci95",
+   "source": [
+    -0.05840190028770637,
+    -0.031459565434979096
+   ],
+   "reference": [
+    -0.0584,
+    -0.03146
+   ],
+   "match": true
+  },
+  {
+   "name": "bootstrap_by_source_feature_group.pooled_acc_minus_best_constant_rechosen_each_rep.point",
+   "source": -0.04552234105899594,
+   "reference": -0.04552,
+   "match": true
+  },
+  {
+   "name": "bootstrap_by_source_feature_group.pooled_acc_minus_best_constant_rechosen_each_rep.ci95",
+   "source": [
+    -0.05840190028770637,
+    -0.031459565434979096
+   ],
+   "reference": [
+    -0.0584,
+    -0.03146
+   ],
+   "match": true
+  },
+  {
+   "name": "bootstrap_by_source_feature_group.pooled_balanced_acc_minus_0.5.point",
+   "source": -0.003183999581229835,
+   "reference": -0.00318,
+   "match": true
+  },
+  {
+   "name": "bootstrap_by_source_feature_group.pooled_balanced_acc_minus_0.5.ci95",
+   "source": [
+    -0.007884666492318275,
+    0.0013903841909556852
+   ],
+   "reference": [
+    -0.00788,
+    0.00139
+   ],
+   "match": true
+  },
+  {
+   "name": "bootstrap_by_source_feature_group.pooled_mcc.point",
+   "source": -0.006345265957617339,
+   "reference": -0.00635,
+   "match": true
+  },
+  {
+   "name": "bootstrap_by_source_feature_group.pooled_mcc.ci95",
+   "source": [
+    -0.015734392508413665,
+    0.0027716550654383132
+   ],
+   "reference": [
+    -0.01573,
+    0.00277
+   ],
+   "match": true
+  },
+  {
+   "name": "bootstrap_by_source_feature_group.pooled_acc_minus_chance_given_marginals.point",
+   "source": -0.003160310716136927,
+   "reference": -0.00316,
+   "match": true
+  },
+  {
+   "name": "bootstrap_by_source_feature_group.pooled_acc_minus_chance_given_marginals.ci95",
+   "source": [
+    -0.007842014771826463,
+    0.0013774588036800485
+   ],
+   "reference": [
+    -0.00784,
+    0.00138
+   ],
+   "match": true
+  },
+  {
+   "name": "bootstrap_by_source_feature_group.pooled_acc_minus_target_direction_baseline.point",
+   "source": -0.08939000091608645,
+   "reference": -0.08939,
+   "match": true
+  },
+  {
+   "name": "bootstrap_by_source_feature_group.pooled_acc_minus_target_direction_baseline.ci95",
+   "source": [
+    -0.09992934729702015,
+    -0.07957835220721303
+   ],
+   "reference": [
+    -0.09993,
+    -0.07958
+   ],
+   "match": true
+  },
+  {
+   "name": "bootstrap_by_source_feature_group.per_source_mean_accuracy.point",
+   "source": 0.5127195784347347,
+   "reference": 0.51272,
+   "match": true
+  },
+  {
+   "name": "bootstrap_by_source_feature_group.per_source_mean_accuracy.ci95",
+   "source": [
+    0.49798504366287466,
+    0.5276596349305624
+   ],
+   "reference": [
+    0.49799,
+    0.52766
+   ],
+   "match": true
+  },
+  {
+   "name": "bootstrap_by_source_feature_group.per_source_mean_acc_minus_always_dec.point",
+   "source": -0.03445711870388277,
+   "reference": -0.03446,
+   "match": true
+  },
+  {
+   "name": "bootstrap_by_source_feature_group.per_source_mean_acc_minus_always_dec.ci95",
+   "source": [
+    -0.04394890913670293,
+    -0.024961137105433254
+   ],
+   "reference": [
+    -0.04395,
+    -0.02496
+   ],
+   "match": true
+  },
+  {
+   "name": "bootstrap_by_source_feature_group.per_source_mean_balanced_acc_minus_0.5.point",
+   "source": 0.0011195606700100669,
+   "reference": 0.00112,
+   "match": true
+  },
+  {
+   "name": "bootstrap_by_source_feature_group.per_source_mean_balanced_acc_minus_0.5.ci95",
+   "source": [
+    -0.0017734977800202445,
+    0.004022313651428611
+   ],
+   "reference": [
+    -0.00177,
+    0.00402
+   ],
+   "match": true
+  },
+  {
+   "name": "bootstrap_by_source_feature_group.per_source_mean_mcc.point",
+   "source": 0.004665989542734089,
+   "reference": 0.00467,
+   "match": true
+  },
+  {
+   "name": "bootstrap_by_source_feature_group.per_source_mean_mcc.ci95",
+   "source": [
+    -0.005265966962946525,
+    0.015647421535723686
+   ],
+   "reference": [
+    -0.00527,
+    0.01565
+   ],
+   "match": true
+  },
+  {
+   "name": "bootstrap_by_component.n_groups",
+   "source": 50,
+   "reference": 50,
+   "match": true
+  },
+  {
+   "name": "bootstrap_by_component.pooled_accuracy.point",
+   "source": 0.4976052926896299,
+   "reference": 0.49761,
+   "match": true
+  },
+  {
+   "name": "bootstrap_by_component.pooled_accuracy.ci95",
+   "source": [
+    0.492224910900941,
+    0.5123835210076897
+   ],
+   "reference": [
+    0.49222,
+    0.51238
+   ],
+   "match": true
+  },
+  {
+   "name": "bootstrap_by_component.pooled_acc_minus_always_dec.point",
+   "source": -0.04552234105899594,
+   "reference": -0.04552,
+   "match": true
+  },
+  {
+   "name": "bootstrap_by_component.pooled_acc_minus_always_dec.ci95",
+   "source": [
+    -0.056785530395822965,
+    -0.03256854212374689
+   ],
+   "reference": [
+    -0.05679,
+    -0.03257
+   ],
+   "match": true
+  },
+  {
+   "name": "bootstrap_by_component.pooled_acc_minus_best_constant_rechosen_each_rep.point",
+   "source": -0.04552234105899594,
+   "reference": -0.04552,
+   "match": true
+  },
+  {
+   "name": "bootstrap_by_component.pooled_acc_minus_best_constant_rechosen_each_rep.ci95",
+   "source": [
+    -0.056785530395822965,
+    -0.03256854212374689
+   ],
+   "reference": [
+    -0.05679,
+    -0.03257
+   ],
+   "match": true
+  },
+  {
+   "name": "bootstrap_by_component.pooled_balanced_acc_minus_0.5.point",
+   "source": -0.003183999581229835,
+   "reference": -0.00318,
+   "match": true
+  },
+  {
+   "name": "bootstrap_by_component.pooled_balanced_acc_minus_0.5.ci95",
+   "source": [
+    -0.006692552358704108,
+    0.005966555526752507
+   ],
+   "reference": [
+    -0.00669,
+    0.00597
+   ],
+   "match": true
+  },
+  {
+   "name": "bootstrap_by_component.pooled_mcc.point",
+   "source": -0.006345265957617339,
+   "reference": -0.00635,
+   "match": true
+  },
+  {
+   "name": "bootstrap_by_component.pooled_mcc.ci95",
+   "source": [
+    -0.013338807802627374,
+    0.012089351401904473
+   ],
+   "reference": [
+    -0.01334,
+    0.01209
+   ],
+   "match": true
+  },
+  {
+   "name": "bootstrap_by_component.pooled_acc_minus_chance_given_marginals.point",
+   "source": -0.003160310716136927,
+   "reference": -0.00316,
+   "match": true
+  },
+  {
+   "name": "bootstrap_by_component.pooled_acc_minus_chance_given_marginals.ci95",
+   "source": [
+    -0.006646267220160751,
+    0.0058983916449361126
+   ],
+   "reference": [
+    -0.00665,
+    0.0059
+   ],
+   "match": true
+  },
+  {
+   "name": "bootstrap_by_component.pooled_acc_minus_target_direction_baseline.point",
+   "source": -0.08939000091608645,
+   "reference": -0.08939,
+   "match": true
+  },
+  {
+   "name": "bootstrap_by_component.pooled_acc_minus_target_direction_baseline.ci95",
+   "source": [
+    -0.09723991581199676,
+    -0.06810607142461829
+   ],
+   "reference": [
+    -0.09724,
+    -0.06811
+   ],
+   "match": true
+  },
+  {
+   "name": "bootstrap_by_component.per_source_mean_accuracy.point",
+   "source": 0.5127195784347347,
+   "reference": 0.51272,
+   "match": true
+  },
+  {
+   "name": "bootstrap_by_component.per_source_mean_accuracy.ci95",
+   "source": [
+    0.49647541766991155,
+    0.5344760328562611
+   ],
+   "reference": [
+    0.49648,
+    0.53448
+   ],
+   "match": true
+  },
+  {
+   "name": "bootstrap_by_component.per_source_mean_acc_minus_always_dec.point",
+   "source": -0.03445711870388277,
+   "reference": -0.03446,
+   "match": true
+  },
+  {
+   "name": "bootstrap_by_component.per_source_mean_acc_minus_always_dec.ci95",
+   "source": [
+    -0.040881085853921056,
+    -0.0226016790014047
+   ],
+   "reference": [
+    -0.04088,
+    -0.0226
+   ],
+   "match": true
+  },
+  {
+   "name": "bootstrap_by_component.per_source_mean_balanced_acc_minus_0.5.point",
+   "source": 0.0011195606700100669,
+   "reference": 0.00112,
+   "match": true
+  },
+  {
+   "name": "bootstrap_by_component.per_source_mean_balanced_acc_minus_0.5.ci95",
+   "source": [
+    -0.002257061249687957,
+    0.004693147840886668
+   ],
+   "reference": [
+    -0.00226,
+    0.00469
+   ],
+   "match": true
+  },
+  {
+   "name": "bootstrap_by_component.per_source_mean_mcc.point",
+   "source": 0.004665989542734089,
+   "reference": 0.00467,
+   "match": true
+  },
+  {
+   "name": "bootstrap_by_component.per_source_mean_mcc.ci95",
+   "source": [
+    -0.005617342183915356,
+    0.019241118272896054
+   ],
+   "reference": [
+    -0.00562,
+    0.01924
+   ],
+   "match": true
+  },
+  {
+   "name": "per_gene.n_beat_always_dec",
+   "source": 63,
+   "reference": 63,
+   "match": true
+  },
+  {
+   "name": "per_gene.n_one_sign",
+   "source": 14,
+   "reference": 14,
+   "match": true
+  },
+  {
+   "name": "per_gene.n_beat_target_baseline",
+   "source": 29,
+   "reference": 29,
+   "match": true
+  },
+  {
+   "name": "per_gene.n_groups",
+   "source": 119,
+   "reference": 119,
+   "match": true
+  },
+  {
+   "name": "per_gene.n_components",
+   "source": 50,
+   "reference": 50,
+   "match": true
+  },
+  {
+   "name": "per_gene.largest_component",
+   "source": 88,
+   "reference": 88,
+   "match": true
+  },
+  {
+   "name": "band0.n",
+   "source": 91200.0,
+   "reference": 91200.0,
+   "match": true
+  },
+  {
+   "name": "band0.balanced_acc",
+   "source": 0.4977393612656075,
+   "reference": 0.49774,
+   "match": true
+  },
+  {
+   "name": "band0.ci_bal",
+   "source": [
+    -0.005507357238781508,
+    0.0011286088339543235
+   ],
+   "reference": [
+    -0.00551,
+    0.00113
+   ],
+   "match": true
+  },
+  {
+   "name": "band0.ci_mcc",
+   "source": [
+    -0.011020689948725678,
+    0.0022577735409307718
+   ],
+   "reference": [
+    -0.01102,
+    0.00226
+   ],
+   "match": true
+  },
+  {
+   "name": "band1.n",
+   "source": 128906.0,
+   "reference": 128906.0,
+   "match": true
+  },
+  {
+   "name": "band1.balanced_acc",
+   "source": 0.4987158832736176,
+   "reference": 0.49872,
+   "match": true
+  },
+  {
+   "name": "band1.ci_bal",
+   "source": [
+    -0.004778991990485178,
+    0.0023248299083115363
+   ],
+   "reference": [
+    -0.00478,
+    0.00232
+   ],
+   "match": true
+  },
+  {
+   "name": "band1.ci_mcc",
+   "source": [
+    -0.009557058058569393,
+    0.004649686030595221
+   ],
+   "reference": [
+    -0.00956,
+    0.00465
+   ],
+   "match": true
+  },
+  {
+   "name": "band2.n",
+   "source": 172980.0,
+   "reference": 172980.0,
+   "match": true
+  },
+  {
+   "name": "band2.balanced_acc",
+   "source": 0.4944101018617719,
+   "reference": 0.49441,
+   "match": true
+  },
+  {
+   "name": "band2.ci_bal",
+   "source": [
+    -0.009729040549391148,
+    -0.0012905894697343503
+   ],
+   "reference": [
+    -0.00973,
+    -0.00129
+   ],
+   "match": true
+  },
+  {
+   "name": "band2.ci_mcc",
+   "source": [
+    -0.019466442204423475,
+    -0.002578293219745426
+   ],
+   "reference": [
+    -0.01947,
+    -0.00258
+   ],
+   "match": true
+  },
+  {
+   "name": "band3.n",
+   "source": 189197.0,
+   "reference": 189197.0,
+   "match": true
+  },
+  {
+   "name": "band3.balanced_acc",
+   "source": 0.494073023649915,
+   "reference": 0.49407,
+   "match": true
+  },
+  {
+   "name": "band3.ci_bal",
+   "source": [
+    -0.012249235307831364,
+    0.0005683400543112341
+   ],
+   "reference": [
+    -0.01225,
+    0.00057
+   ],
+   "match": true
+  },
+  {
+   "name": "band3.ci_mcc",
+   "source": [
+    -0.024382432547989698,
+    0.0011274608323845654
+   ],
+   "reference": [
+    -0.02438,
+    0.00113
+   ],
+   "match": true
+  },
+  {
+   "name": "band4.n",
+   "source": 106312.0,
+   "reference": 106312.0,
+   "match": true
+  },
+  {
+   "name": "band4.balanced_acc",
+   "source": 0.4998282830098269,
+   "reference": 0.49983,
+   "match": true
+  },
+  {
+   "name": "band4.ci_bal",
+   "source": [
+    -0.011839772328622645,
+    0.011699281571391044
+   ],
+   "reference": [
+    -0.01184,
+    0.0117
+   ],
+   "match": true
+  },
+  {
+   "name": "band4.ci_mcc",
+   "source": [
+    -0.023386380321821484,
+    0.02292657379799569
+   ],
+   "reference": [
+    -0.02339,
+    0.02293
+   ],
+   "match": true
+  },
+  {
+   "name": "band5.n",
+   "source": 10029.0,
+   "reference": 10029.0,
+   "match": true
+  },
+  {
+   "name": "band5.balanced_acc",
+   "source": 0.5137599728290737,
+   "reference": 0.51376,
+   "match": true
+  },
+  {
+   "name": "band5.ci_bal",
+   "source": [
+    -0.016410775602198457,
+    0.04387248318715396
+   ],
+   "reference": [
+    -0.01641,
+    0.04387
+   ],
+   "match": true
+  },
+  {
+   "name": "band5.ci_mcc",
+   "source": [
+    -0.0302136334050738,
+    0.0768676301533587
+   ],
+   "reference": [
+    -0.03021,
+    0.07687
+   ],
+   "match": true
+  },
+  {
+   "name": "ties_as_decrease.accuracy",
+   "source": 0.5054678911689263,
+   "reference": 0.50547,
+   "match": true
+  },
+  {
+   "name": "ties_as_decrease.balanced_acc",
+   "source": 0.4957472502088349,
+   "reference": 0.49575,
+   "match": true
+  },
+  {
+   "name": "ties_as_decrease.mcc",
+   "source": -0.008696094075443427,
+   "reference": -0.0087,
+   "match": true
+  },
+  {
+   "name": "fold0.circuit_acc",
+   "source": 0.4936966051259079,
+   "reference": 0.4937,
+   "match": true
+  },
+  {
+   "name": "fold0.target_acc",
+   "source": 0.592007167311938,
+   "reference": 0.59201,
+   "match": true
+  },
+  {
+   "name": "fold1.circuit_acc",
+   "source": 0.5016410999464517,
+   "reference": 0.50164,
+   "match": true
+  },
+  {
+   "name": "fold1.target_acc",
+   "source": 0.5903738935962454,
+   "reference": 0.59037,
+   "match": true
+  },
+  {
+   "name": "fold2.circuit_acc",
+   "source": 0.49391354962797995,
+   "reference": 0.49391,
+   "match": true
+  },
+  {
+   "name": "fold2.target_acc",
+   "source": 0.5911575644075517,
+   "reference": 0.59116,
+   "match": true
+  },
+  {
+   "name": "fold3.circuit_acc",
+   "source": 0.4950292283962619,
+   "reference": 0.49503,
+   "match": true
+  },
+  {
+   "name": "fold3.target_acc",
+   "source": 0.574918017912924,
+   "reference": 0.57492,
+   "match": true
+  },
+  {
+   "name": "fold4.circuit_acc",
+   "source": 0.5056916278933661,
+   "reference": 0.50569,
+   "match": true
+  },
+  {
+   "name": "fold4.target_acc",
+   "source": 0.5874130648952877,
+   "reference": 0.58741,
+   "match": true
+  }
+ ]
+}

@@ -1,0 +1,33 @@
+{
+  "n_boot": 1000,
+  "mean_n_oob_genes": 140.409,
+  "method": "gene bootstrap with replacement (same resamples as 'boot'); fit on the resample, score on out-of-bag genes; percentile 2.5/97.5. Trains on ~63% distinct genes, so values sit a little below the 5-fold held-out values (which train on 80%).",
+  "oob_cca_mean_r": {
+    "mean": 0.44914999340859596,
+    "ci95": [
+      0.3963126523061292,
+      0.4985000019646862
+    ],
+    "sd": 0.02575299835421944
+  },
+  "oob_cca_first_r": {
+    "mean": 0.7429883708767925,
+    "ci95": [
+      0.5354729991172714,
+      0.833753089642242
+    ],
+    "sd": 0.07592005969193258
+  },
+  "oob_top1": {
+    "mean": 0.05696517637157079,
+    "ci95": [
+      0.02158273381294964,
+      0.09774830432725169
+    ],
+    "sd": 0.019503437534896872
+  },
+  "wall_seconds": 95.0665647983551,
+  "model": "scgpt_fixed",
+  "domain": "lung",
+  "part": "oob"
+}

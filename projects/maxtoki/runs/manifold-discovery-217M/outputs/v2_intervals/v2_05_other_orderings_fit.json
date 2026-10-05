@@ -1,0 +1,258 @@
+{
+  "H38_lite": {
+    "internal": {
+      "n_anchors_kept": 279,
+      "trust_in_sample_k15": 0.813508064516129
+    },
+    "external": {
+      "panel": "external",
+      "n_anchors_kept": 580,
+      "n_donors": 13,
+      "n_categories": 7,
+      "ruler_max": 5.0,
+      "trustworthiness": 0.8827922573722116,
+      "random_holdout": 0.8027689124567582,
+      "donor_holdout": 0.7588308836487697,
+      "category_holdout": 0.5939387887806408,
+      "global_correlation": 0.8044501515832144,
+      "pass_trust": true,
+      "pass_random": true,
+      "pass_donor": true,
+      "pass_category": true,
+      "n_gates_passing": 4,
+      "verdict": "POSITIVE_external"
+    },
+    "zeroshot": {
+      "panel": "zeroshot",
+      "n_anchors_kept": 154,
+      "n_donors": 12,
+      "n_categories": 7,
+      "ruler_max": 5.0,
+      "trustworthiness": 0.7865437361620568,
+      "random_holdout": 0.7468825111989683,
+      "donor_holdout": 0.5907064673942526,
+      "category_holdout": 0.5852414322226771,
+      "global_correlation": 0.7427088166982272,
+      "pass_trust": false,
+      "pass_random": true,
+      "pass_donor": true,
+      "pass_category": true,
+      "n_gates_passing": 3,
+      "verdict": "FAIL_zeroshot"
+    },
+    "seconds": 18.683080196380615
+  },
+  "H95": {
+    "internal": {
+      "n_anchors_kept": 208,
+      "trust_in_sample_k15": 0.800483367983368
+    },
+    "external": {
+      "panel": "external",
+      "n_anchors_kept": 441,
+      "n_donors": 13,
+      "n_categories": 4,
+      "ruler_max": 3.0,
+      "trustworthiness": 0.8884635832004253,
+      "random_holdout": 0.8056451141426647,
+      "donor_holdout": 0.81205460627841,
+      "category_holdout": 0.1550163933377279,
+      "global_correlation": 0.8116124125926556,
+      "pass_trust": true,
+      "pass_random": true,
+      "pass_donor": true,
+      "pass_category": false,
+      "n_gates_passing": 3,
+      "verdict": "POSITIVE_3GATE_FALLBACK_external"
+    },
+    "zeroshot": {
+      "panel": "zeroshot",
+      "n_anchors_kept": 104,
+      "n_donors": 12,
+      "n_categories": 4,
+      "ruler_max": 3.0,
+      "trustworthiness": 0.818755935422602,
+      "random_holdout": 0.8056371691576729,
+      "donor_holdout": 0.7941371480874526,
+      "category_holdout": -0.003737694633670863,
+      "global_correlation": 0.8004988285577089,
+      "pass_trust": true,
+      "pass_random": true,
+      "pass_donor": true,
+      "pass_category": false,
+      "n_gates_passing": 3,
+      "verdict": "POSITIVE_3GATE_FALLBACK_zeroshot"
+    },
+    "seconds": 7.166110992431641
+  },
+  "H103": {
+    "internal": {
+      "n_anchors_kept": 45,
+      "trust_in_sample_k15_kept": 0.8601346801346801,
+      "trust_k15_all_internal_anchors": 0.8195806965431142,
+      "n_all": 290
+    },
+    "external": {
+      "n_anchors_kept": 106,
+      "n_donors_kept": 12,
+      "n_distinct_depths_kept": 2,
+      "trust_kept_k15": 0.8772069409714329,
+      "trust_kept_k5": 0.8348093954562957,
+      "trust_kept_k8": 0.8458026435273938,
+      "trust_all_anchors_k15": 0.8844151742730599,
+      "n_all_anchors": 600,
+      "n_donors_all": 13,
+      "global_spearman_kept": 0.863818916177829,
+      "random_holdout_kept": 0.8584149027136343,
+      "donor_holdout_kept": 0.8589515692314038,
+      "n_donor_groups": 7,
+      "depth_holdout_kept": NaN,
+      "n_depth_groups": 0
+    },
+    "zeroshot": {
+      "n_anchors_kept": 18,
+      "n_donors_kept": 9,
+      "n_distinct_depths_kept": 2,
+      "trust_kept_k15": null,
+      "trust_kept_k5": 0.8566666666666667,
+      "trust_kept_k8": 0.8308080808080808,
+      "trust_all_anchors_k15": 0.7764537712895377,
+      "n_all_anchors": 160,
+      "n_donors_all": 12,
+      "global_spearman_kept": 0.8645442578333183,
+      "random_holdout_kept": 0.8643569005306648,
+      "donor_holdout_kept": 0.8574713802163146,
+      "n_donor_groups": 3,
+      "depth_holdout_kept": NaN,
+      "n_depth_groups": 0
+    },
+    "seconds": 7.693100690841675
+  },
+  "deployed": {
+    "H38_internal": {
+      "scope_note": "PHASE 13 LITE \u2014 second-manifold proxy. NOT source paper's H38 with OmniPath LR-pair anchors and 100k cells. Uses existing internal-panel anchors (n=keep) with a curated cell-type \u2192 signalling-category Hamming-distance ruler.",
+      "n_anchors_kept": 279,
+      "n_anchors_dropped_no_category": 11,
+      "n_categories": 7,
+      "categories": [
+        "cyto",
+        "chemo",
+        "lipid",
+        "antigen",
+        "cytotox",
+        "ab",
+        "prog"
+      ],
+      "ruler_range": [
+        0.0,
+        2.0,
+        5.0
+      ],
+      "positive": {
+        "trustworthiness": 0.813508064516129,
+        "random_holdout": 0.7601297514964446,
+        "donor_holdout": 0.6730271557133849,
+        "category_holdout": 0.2932314462238862,
+        "passes": true
+      },
+      "null_shuffled": {
+        "trustworthiness": 0.5898213485663082,
+        "random_holdout": 0.01239614504338394,
+        "donor_holdout": -0.0053139900927484905,
+        "category_holdout": 0.025988127437248976,
+        "passes": false
+      },
+      "verdict": "POSITIVE: H38 LITE passes all gates and shuffled null fails",
+      "elapsed_s": 385.1953122615814
+    },
+    "H38_external": {
+      "panel": "external",
+      "n_anchors_kept": 580,
+      "n_donors": 13,
+      "n_categories": 7,
+      "ruler_max": 5.0,
+      "trustworthiness": 0.8827922573722116,
+      "random_holdout": 0.8027689124567582,
+      "donor_holdout": 0.7588308836487697,
+      "category_holdout": 0.5939387887806408,
+      "global_correlation": 0.8044501515832144,
+      "pass_trust": true,
+      "pass_random": true,
+      "pass_donor": true,
+      "pass_category": true,
+      "n_gates_passing": 4,
+      "verdict": "POSITIVE_external"
+    },
+    "H38_zeroshot": {
+      "panel": "zeroshot",
+      "n_anchors_kept": 154,
+      "n_donors": 12,
+      "n_categories": 7,
+      "ruler_max": 5.0,
+      "trustworthiness": 0.7865437361620568,
+      "random_holdout": 0.7468825111989683,
+      "donor_holdout": 0.5907064673942526,
+      "category_holdout": 0.5852414322226771,
+      "global_correlation": 0.7427088166982272,
+      "pass_trust": false,
+      "pass_random": true,
+      "pass_donor": true,
+      "pass_category": true,
+      "n_gates_passing": 3,
+      "verdict": "FAIL_zeroshot"
+    },
+    "H95_external_inline": {
+      "branch": "H95_effector_modality_external",
+      "n_external_anchors_kept": 441,
+      "trustworthiness": 0.8884635832004253,
+      "global_correlation": 0.8116124125926556,
+      "donor_holdout_mean": 0.81205460627841
+    },
+    "H95_zeroshot": {
+      "panel": "zeroshot",
+      "n_anchors_kept": 104,
+      "n_donors": 12,
+      "n_categories": 4,
+      "ruler_max": 3.0,
+      "trustworthiness": 0.818755935422602,
+      "random_holdout": 0.8056371691576729,
+      "donor_holdout": 0.7941371480874526,
+      "category_holdout": -0.003737694633670863,
+      "global_correlation": 0.8004988285577089,
+      "pass_trust": true,
+      "pass_random": true,
+      "pass_donor": true,
+      "pass_category": false,
+      "n_gates_passing": 3,
+      "verdict": "POSITIVE_3GATE_FALLBACK_zeroshot"
+    },
+    "H103_external": {
+      "branch": "H103_b_cell_maturation",
+      "panel": "external",
+      "n_external_anchors_kept": 106,
+      "n_external_donors": 12,
+      "trustworthiness": 0.8772069409714329,
+      "random_holdout": 0.8584149027136343,
+      "donor_holdout": 0.8589515692314038,
+      "depth_holdout": NaN,
+      "global_correlation": 0.863818916177829,
+      "pass_trust": true,
+      "pass_random": true,
+      "pass_donor": true,
+      "pass_depth": false,
+      "n_gates_passing": 3,
+      "verdict": "POSITIVE_3GATE_FALLBACK: H103 transfers (one gate undefined)",
+      "elapsed_s": 2.6036949157714844
+    },
+    "H103_zeroshot_inline": {
+      "branch": "H103_b_cell_maturation_zeroshot",
+      "n_zs_anchors_kept": 18,
+      "n_zs_donors": 9,
+      "trustworthiness_k5": 0.8566666666666667,
+      "global_correlation": 0.8645442578333183,
+      "note": "Used k=5 for trustworthiness because only 18 B-lineage anchors in zero-shot panel"
+    },
+    "H95_internal_trust": 0.800483367983368,
+    "H103_internal_trust": 0.8601346801346801
+  }
+}

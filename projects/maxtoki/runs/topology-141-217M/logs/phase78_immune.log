@@ -1,0 +1,43 @@
+
+[immune] emb (12, 350, 20)  pairs 2544
+  L00  H16 auc=0.497  H116 Δcombo=+0.012  H123 Δcombo=+0.007
+  L01  H16 auc=0.507  H116 Δcombo=-0.007  H123 Δcombo=-0.013
+  L02  H16 auc=0.487  H116 Δcombo=-0.026  H123 Δcombo=-0.026
+  L03  H16 auc=0.500  H116 Δcombo=-0.029  H123 Δcombo=-0.029
+  L04  H16 auc=0.490  H116 Δcombo=-0.024  H123 Δcombo=-0.024
+  L05  H16 auc=0.507  H116 Δcombo=-0.015  H123 Δcombo=-0.022
+  L06  H16 auc=0.498  H116 Δcombo=-0.033  H123 Δcombo=-0.038
+  L07  H16 auc=0.499  H116 Δcombo=-0.027  H123 Δcombo=-0.032
+  L08  H16 auc=0.502  H116 Δcombo=-0.023  H123 Δcombo=-0.029
+  L09  H16 auc=0.508  H116 Δcombo=+0.001  H123 Δcombo=-0.001
+  L10  H16 auc=0.483  H116 Δcombo=-0.011  H123 Δcombo=-0.010
+  L11  H16 auc=0.494  H116 Δcombo=-0.025  H123 Δcombo=-0.023
+
+[phase 7+8] summary:
+{
+  "h16": {
+    "immune": {
+      "n_layers": 12,
+      "n_layers_above_chance": 5,
+      "mean_auc": 0.4976647603485838
+    }
+  },
+  "h116": {
+    "immune": {
+      "n_layers": 12,
+      "mean_delta": -0.017192146245072093,
+      "n_layers_positive_null_gap": 2,
+      "fraction_layers_positive": 0.16666666666666666,
+      "n_layers_significant": 2
+    }
+  },
+  "h123": {
+    "immune": {
+      "n_layers": 12,
+      "mean_delta": -0.02008339533730161,
+      "n_layers_positive_null_gap": 1,
+      "fraction_layers_positive": 0.08333333333333333,
+      "n_layers_significant": 1
+    }
+  }
+}

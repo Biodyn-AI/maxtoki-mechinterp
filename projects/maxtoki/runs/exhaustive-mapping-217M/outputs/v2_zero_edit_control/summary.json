@@ -1,0 +1,378 @@
+{
+  "what": "Deployed experiment3 steering hook run with a zero feature edit (alpha=1)",
+  "n_cells": 50,
+  "resampling": "cell-level percentile bootstrap, 10000 resamples, seed 20261001",
+  "max_clean_vs_cached_meanlogit_maxabs": 2.384185791015625e-05,
+  "layers": {
+    "L0": {
+      "n_cells": 50,
+      "feature_for_alpha5": 40,
+      "old_zero": {
+        "mean_delta_s": 0.09630631923675537,
+        "ci95_cell_bootstrap": [
+          0.08566483733057975,
+          0.10609792739152908
+        ],
+        "sd": 0.03698502366247312,
+        "frac_positive": 0.98,
+        "meanabs_logit_change": 2.9491273164749146
+      },
+      "old_a5": {
+        "mean_delta_s": 0.09575119376182556,
+        "ci95_cell_bootstrap": [
+          0.08517655056715011,
+          0.10551637569069862
+        ],
+        "sd": 0.03690221076148688,
+        "frac_positive": 0.98,
+        "meanabs_logit_change": 2.9508906316757204
+      },
+      "new_zero": {
+        "mean_delta_s": 0.0,
+        "ci95_cell_bootstrap": [
+          0.0,
+          0.0
+        ],
+        "sd": 0.0,
+        "frac_positive": 0.0,
+        "meanabs_logit_change": 0.0
+      },
+      "new_a5": {
+        "mean_delta_s": -0.0008922946453094482,
+        "ci95_cell_bootstrap": [
+          -0.0010558955371379852,
+          -0.0007465795874595643
+        ],
+        "sd": 0.0005637646861631079,
+        "frac_positive": 0.02,
+        "meanabs_logit_change": 0.040021040663123134
+      },
+      "old_a5_minus_old_zero": {
+        "mean": -0.0005551254749298095,
+        "ci95_cell_bootstrap": [
+          -0.0007187800109386444,
+          -0.00039485913515090946
+        ],
+        "max_abs": 0.00226438045501709
+      },
+      "share_of_old_a5_explained_by_zero_edit": 1.0057975828093657,
+      "old_zero_top_up_genes": [
+        "KITLG",
+        "SOD3",
+        "APOE",
+        "SEMA6D",
+        "TMSB10"
+      ],
+      "old_zero_frac_mean_logit_delta_positive": 0.94,
+      "published": {
+        "layer_mean_delta_s_alpha5": 0.096226,
+        "feature_delta_s_alpha5": 0.095751,
+        "feature_delta_s_alpha2": 0.096138,
+        "feature_frac_positive_maturity_alpha5": 0.98,
+        "feature_top_up_gene_alpha5": "SOD3",
+        "all_3_features_delta_s_alpha5": [
+          0.095751,
+          0.09616,
+          0.096766
+        ]
+      },
+      "reproduction_old_a5_vs_published_feature_abs_diff": 1.9376182555652655e-07
+    },
+    "L3": {
+      "n_cells": 50,
+      "feature_for_alpha5": 4071,
+      "old_zero": {
+        "mean_delta_s": 0.01774142384529114,
+        "ci95_cell_bootstrap": [
+          0.016042308419942856,
+          0.019322897791862487
+        ],
+        "sd": 0.005992172776210451,
+        "frac_positive": 1.0,
+        "meanabs_logit_change": 1.5141532564163207
+      },
+      "old_a5": {
+        "mean_delta_s": 0.01785069465637207,
+        "ci95_cell_bootstrap": [
+          0.01611685761809349,
+          0.0194430761039257
+        ],
+        "sd": 0.006145242834512297,
+        "frac_positive": 1.0,
+        "meanabs_logit_change": 1.5168611991405487
+      },
+      "new_zero": {
+        "mean_delta_s": 0.0,
+        "ci95_cell_bootstrap": [
+          0.0,
+          0.0
+        ],
+        "sd": 0.0,
+        "frac_positive": 0.0,
+        "meanabs_logit_change": 0.0
+      },
+      "new_a5": {
+        "mean_delta_s": -0.00019068121910095214,
+        "ci95_cell_bootstrap": [
+          -0.0003969651162624359,
+          -4.73233759403229e-05
+        ],
+        "sd": 0.0006657048574643511,
+        "frac_positive": 0.36,
+        "meanabs_logit_change": 0.04159458710346371
+      },
+      "old_a5_minus_old_zero": {
+        "mean": 0.00010927081108093262,
+        "ci95_cell_bootstrap": [
+          -1.4697164297103871e-05,
+          0.00020839270949363705
+        ],
+        "max_abs": 0.0021567940711975098
+      },
+      "share_of_old_a5_explained_by_zero_edit": 0.993878624155283,
+      "old_zero_top_up_genes": [
+        "C1QTNF3-AMACR",
+        "ENSG00000255872",
+        "ENSG00000214265",
+        "ENSG00000273269",
+        "ENSG00000264324"
+      ],
+      "old_zero_frac_mean_logit_delta_positive": 0.2,
+      "published": {
+        "layer_mean_delta_s_alpha5": 0.017829,
+        "feature_delta_s_alpha5": 0.017851,
+        "feature_delta_s_alpha2": 0.017759,
+        "feature_frac_positive_maturity_alpha5": 1.0,
+        "feature_top_up_gene_alpha5": "C1QTNF3-AMACR",
+        "all_3_features_delta_s_alpha5": [
+          0.017851,
+          0.017903,
+          0.017734
+        ]
+      },
+      "reproduction_old_a5_vs_published_feature_abs_diff": 3.0534362792725145e-07
+    },
+    "L6": {
+      "n_cells": 50,
+      "feature_for_alpha5": 4138,
+      "old_zero": {
+        "mean_delta_s": -0.00780290961265564,
+        "ci95_cell_bootstrap": [
+          -0.009026245921850204,
+          -0.0066069037020206455
+        ],
+        "sd": 0.00442140756056535,
+        "frac_positive": 0.02,
+        "meanabs_logit_change": 0.9770869517326355
+      },
+      "old_a5": {
+        "mean_delta_s": -0.00791898488998413,
+        "ci95_cell_bootstrap": [
+          -0.009159492433071136,
+          -0.006733870089054108
+        ],
+        "sd": 0.00438185645491675,
+        "frac_positive": 0.0,
+        "meanabs_logit_change": 0.9816937899589538
+      },
+      "new_zero": {
+        "mean_delta_s": 0.0,
+        "ci95_cell_bootstrap": [
+          0.0,
+          0.0
+        ],
+        "sd": 0.0,
+        "frac_positive": 0.0,
+        "meanabs_logit_change": 0.0
+      },
+      "new_a5": {
+        "mean_delta_s": -0.00018698692321777343,
+        "ci95_cell_bootstrap": [
+          -0.00020897111296653748,
+          -0.0001648574471473694
+        ],
+        "sd": 7.991143519858816e-05,
+        "frac_positive": 0.0,
+        "meanabs_logit_change": 0.026554086189717056
+      },
+      "old_a5_minus_old_zero": {
+        "mean": -0.00011607527732849122,
+        "ci95_cell_bootstrap": [
+          -0.00014914992451667787,
+          -8.483755588531494e-05
+        ],
+        "max_abs": 0.00043570995330810547
+      },
+      "share_of_old_a5_explained_by_zero_edit": 0.9853421519372639,
+      "old_zero_top_up_genes": [
+        "C1QB",
+        "HBE1",
+        "CPA3",
+        "RPL37A",
+        "RPL7A"
+      ],
+      "old_zero_frac_mean_logit_delta_positive": 0.74,
+      "published": {
+        "layer_mean_delta_s_alpha5": -0.007897,
+        "feature_delta_s_alpha5": -0.007919,
+        "feature_delta_s_alpha2": -0.00784,
+        "feature_frac_positive_maturity_alpha5": 0.0,
+        "feature_top_up_gene_alpha5": "C1QB",
+        "all_3_features_delta_s_alpha5": [
+          -0.007919,
+          -0.007877,
+          -0.007896
+        ]
+      },
+      "reproduction_old_a5_vs_published_feature_abs_diff": 1.511001587045646e-08
+    },
+    "L9": {
+      "n_cells": 50,
+      "feature_for_alpha5": 1014,
+      "old_zero": {
+        "mean_delta_s": 0.01418019413948059,
+        "ci95_cell_bootstrap": [
+          0.012437288373708725,
+          0.016033984035253523
+        ],
+        "sd": 0.006652947968039646,
+        "frac_positive": 1.0,
+        "meanabs_logit_change": 1.2359130048751832
+      },
+      "old_a5": {
+        "mean_delta_s": 0.01390943169593811,
+        "ci95_cell_bootstrap": [
+          0.012078968107700348,
+          0.01577260085940361
+        ],
+        "sd": 0.0067190954365165135,
+        "frac_positive": 1.0,
+        "meanabs_logit_change": 1.2368972504138946
+      },
+      "new_zero": {
+        "mean_delta_s": 0.0,
+        "ci95_cell_bootstrap": [
+          0.0,
+          0.0
+        ],
+        "sd": 0.0,
+        "frac_positive": 0.0,
+        "meanabs_logit_change": 0.0
+      },
+      "new_a5": {
+        "mean_delta_s": -0.0002345728874206543,
+        "ci95_cell_bootstrap": [
+          -0.00029407617449760435,
+          -0.0001789272725582123
+        ],
+        "sd": 0.00021275767508764274,
+        "frac_positive": 0.0,
+        "meanabs_logit_change": 0.030482105142436922
+      },
+      "old_a5_minus_old_zero": {
+        "mean": -0.0002707624435424805,
+        "ci95_cell_bootstrap": [
+          -0.0003348121643066406,
+          -0.00020671451091766358
+        ],
+        "max_abs": 0.000826418399810791
+      },
+      "share_of_old_a5_explained_by_zero_edit": 1.0194661039689745,
+      "old_zero_top_up_genes": [
+        "PAQR3",
+        "CEP70",
+        "SLC26A11",
+        "PALS2",
+        "INSYN2B"
+      ],
+      "old_zero_frac_mean_logit_delta_positive": 0.36,
+      "published": {
+        "layer_mean_delta_s_alpha5": 0.014076,
+        "feature_delta_s_alpha5": 0.013909,
+        "feature_delta_s_alpha2": 0.014104,
+        "feature_frac_positive_maturity_alpha5": 1.0,
+        "feature_top_up_gene_alpha5": "PAQR3",
+        "all_3_features_delta_s_alpha5": [
+          0.013909,
+          0.014137,
+          0.014182
+        ]
+      },
+      "reproduction_old_a5_vs_published_feature_abs_diff": 4.316959381113483e-07
+    },
+    "L11": {
+      "n_cells": 50,
+      "feature_for_alpha5": 3924,
+      "old_zero": {
+        "mean_delta_s": 0.004491454362869263,
+        "ci95_cell_bootstrap": [
+          0.003042100191116333,
+          0.005904540330171585
+        ],
+        "sd": 0.005225765643970685,
+        "frac_positive": 0.78,
+        "meanabs_logit_change": 1.3289415168762206
+      },
+      "old_a5": {
+        "mean_delta_s": 0.004435302019119263,
+        "ci95_cell_bootstrap": [
+          0.0030134246051311494,
+          0.0058603397011756896
+        ],
+        "sd": 0.005208206532413389,
+        "frac_positive": 0.78,
+        "meanabs_logit_change": 1.3279012107849122
+      },
+      "new_zero": {
+        "mean_delta_s": 0.0,
+        "ci95_cell_bootstrap": [
+          0.0,
+          0.0
+        ],
+        "sd": 0.0,
+        "frac_positive": 0.0,
+        "meanabs_logit_change": 0.0
+      },
+      "new_a5": {
+        "mean_delta_s": -5.1531791687011715e-05,
+        "ci95_cell_bootstrap": [
+          -6.230640411376953e-05,
+          -4.119598865509034e-05
+        ],
+        "sd": 3.8332225061580936e-05,
+        "frac_positive": 0.0,
+        "meanabs_logit_change": 0.007719926038116682
+      },
+      "old_a5_minus_old_zero": {
+        "mean": -5.615234375e-05,
+        "ci95_cell_bootstrap": [
+          -7.012537121772766e-05,
+          -4.285424947738648e-05
+        ],
+        "max_abs": 0.00024503469467163086
+      },
+      "share_of_old_a5_explained_by_zero_edit": 1.0126603202009568,
+      "old_zero_top_up_genes": [
+        "FTL",
+        "MT-CO3",
+        "MT-CO1",
+        "MT-CO2",
+        "MT-ND1"
+      ],
+      "old_zero_frac_mean_logit_delta_positive": 0.0,
+      "published": {
+        "layer_mean_delta_s_alpha5": 0.004817,
+        "feature_delta_s_alpha5": 0.004435,
+        "feature_delta_s_alpha2": 0.004477,
+        "feature_frac_positive_maturity_alpha5": 0.78,
+        "feature_top_up_gene_alpha5": "FTL",
+        "all_3_features_delta_s_alpha5": [
+          0.004435,
+          0.004277,
+          0.00574
+        ]
+      },
+      "reproduction_old_a5_vs_published_feature_abs_diff": 3.0201911926323183e-07
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "script": "<REPO_ROOT>/projects/maxtoki/runs/circuit-tracing-217M/scripts/v3_circuit_lfc.py",
+  "script_sha256": "0a592c37a19d9a51620262d9c8e27bff767b926c2685972a8777cab8ede492c3",
+  "inputs_v3_sha256": "019e38346748c027a55ce3d32c33c9096f9e60b9434e51e51b1d836a6bfc3707",
+  "device": "cpu",
+  "dataset": {
+    "path": "<DATA_ROOT>/biodyn-nmi-paper/src/02_cssi_method/crispri_validation/data/replogle_concat.h5ad",
+    "size": 30010775846,
+    "mtime": "2026-02-14T23:33:00",
+    "sha256_head_tail_16MB": "ef45fd6a820bf4f2795ab091c1f22ac25fb5f39daae1712804d902b9680bb995"
+  },
+  "seeds": {
+    "control_sample": 42
+  },
+  "n_control_cells": 3000,
+  "min_cells_per_guide": 10,
+  "formula_primary": "LFC(s,g) = mean_{KD(s)} log1p(1e4*n_ig/sum_g' n_ig') - mean_{CTRL} log1p(1e4*n_ig/sum_g' n_ig'), n = round(expm1(X)/u) integer counts (sum over the 6,546 file genes)",
+  "formula_sensitivity": "LFC_file(s,g) = mean_{KD(s)} X_ig - mean_{CTRL} X_ig, X = log1p(CP10k) of the file (full-library total)",
+  "formula_v2_double_log": "mean log1p(X / rowsum(X) * 1e4) (float32), as v2_circuit_lfc.py -- reproduced, not used for v3 labels",
+  "input_encoding_check": "every count row checked with inputs_v3.check_count_like (expm1(X) whole-number multiples of the cell unit)",
+  "numpy": "1.26.4",
+  "pandas": "2.3.3",
+  "h5py": "3.16.0",
+  "timestamp": "2026-10-02T10:05:03",
+  "wall_seconds_last_chunk": 141.4
+}

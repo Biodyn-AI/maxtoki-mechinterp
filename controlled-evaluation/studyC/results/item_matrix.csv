@@ -1,0 +1,69 @@
+id,severity,error_type,pattern_group,original_audit,deployed_1,deployed_2,deployed_3,checklist_1,checklist_2,checklist_3,generic_1,generic_2,generic_3
+L001,critical,code bug,outside_checklist,no,yes,yes,yes,yes,yes,yes,yes,yes,yes
+L005,critical,code bug,outside_checklist,no,yes,yes,yes,yes,yes,yes,yes,yes,yes
+L006,minor,missing baseline or null,in_checklist,yes,partial,partial,partial,partial,partial,partial,partial,partial,partial
+L007,minor,wrong statistic,outside_checklist,no,yes,yes,yes,no,yes,yes,no,yes,no
+L010,major,missing baseline or null,in_checklist,yes,yes,yes,yes,yes,yes,yes,yes,yes,yes
+L011,critical,code bug,outside_checklist,no,yes,yes,yes,yes,yes,yes,yes,yes,yes
+L012,critical,code bug,outside_checklist,no,partial,partial,partial,partial,yes,partial,yes,yes,yes
+L014,major,missing baseline or null,in_checklist,no,partial,partial,partial,partial,partial,partial,partial,partial,partial
+L015,critical,code bug,outside_checklist,no,yes,yes,yes,yes,yes,yes,yes,yes,yes
+L016,major,missing baseline or null,in_checklist,no,yes,yes,partial,yes,yes,yes,yes,yes,yes
+L017,minor,wrong statistic,outside_checklist,no,partial,yes,partial,partial,partial,yes,partial,partial,partial
+L019,major,missing baseline or null,in_checklist,yes,yes,yes,yes,yes,yes,yes,yes,yes,yes
+L020,major,missing baseline or null,in_checklist,yes,yes,partial,partial,partial,yes,partial,yes,partial,partial
+L021,major,wrong statistic,in_checklist,no,yes,yes,yes,yes,yes,yes,yes,yes,yes
+L022,major,code bug,in_checklist,no,yes,partial,yes,yes,yes,yes,yes,yes,yes
+L023,major,reproducibility,in_checklist,no,no,no,no,no,no,no,no,no,no
+L024,minor,wrong description,in_checklist,no,no,no,no,no,no,no,partial,partial,no
+L031,major,code bug,outside_checklist,no,yes,yes,yes,yes,yes,yes,yes,yes,yes
+L033,major,code bug,in_checklist,no,yes,no,partial,partial,yes,yes,yes,yes,yes
+L034,minor,reproducibility,outside_checklist,no,partial,no,no,no,yes,partial,no,no,yes
+L035,minor,reproducibility,outside_checklist,no,partial,partial,partial,no,yes,partial,no,partial,partial
+L036,major,missing baseline or null,in_checklist,no,partial,partial,partial,no,partial,partial,no,partial,partial
+L037,major,wrong description,outside_checklist,no,yes,yes,yes,yes,yes,yes,partial,yes,yes
+L038,minor,wrong description,outside_checklist,no,no,yes,yes,yes,yes,yes,no,yes,yes
+L039,minor,wrong statistic,outside_checklist,no,no,no,no,no,no,no,no,no,no
+L040,minor,wrong description,in_checklist,no,yes,partial,partial,yes,yes,yes,yes,yes,yes
+L041,minor,wrong description,outside_checklist,no,no,no,no,no,yes,no,no,no,no
+L042,minor,wrong description,outside_checklist,no,no,no,no,no,no,no,no,no,no
+L043,minor,unsupported claim,in_checklist,no,no,no,no,no,yes,yes,no,no,yes
+L046,major,missing baseline or null,in_checklist,no,yes,yes,yes,yes,yes,yes,yes,yes,yes
+L047,minor,wrong description,in_checklist,no,no,yes,yes,yes,yes,yes,yes,no,yes
+L048,minor,wrong description,in_checklist,no,no,no,no,no,no,no,no,no,no
+L049,minor,wrong description,outside_checklist,no,no,no,yes,yes,yes,partial,yes,no,yes
+L051,minor,wrong description,outside_checklist,no,yes,yes,yes,yes,partial,yes,yes,yes,yes
+L052,minor,code bug,outside_checklist,no,partial,partial,partial,no,no,partial,partial,no,partial
+L053,major,missing baseline or null,in_checklist,no,yes,yes,yes,yes,yes,yes,yes,partial,yes
+L054,minor,missing baseline or null,in_checklist,no,yes,yes,yes,yes,partial,yes,yes,no,yes
+L055,minor,unsupported claim,in_checklist,no,partial,partial,partial,partial,partial,partial,no,partial,partial
+L056,minor,wrong description,in_checklist,no,no,yes,no,yes,no,no,no,yes,yes
+L057,major,unsupported claim,in_checklist,partly,yes,yes,yes,no,partial,partial,no,no,no
+L059,minor,wrong statistic,in_checklist,yes,no,yes,yes,no,no,no,no,no,no
+L061,minor,missing baseline or null,in_checklist,yes,yes,yes,yes,yes,yes,no,no,no,no
+L062,minor,unsupported claim,in_checklist,partly,no,partial,partial,no,no,partial,no,no,no
+L064,minor,missing baseline or null,in_checklist,no,no,partial,no,no,no,no,no,no,no
+L065,minor,reproducibility,in_checklist,no,partial,partial,partial,no,no,partial,no,no,no
+L066,major,missing baseline or null,in_checklist,no,yes,yes,yes,yes,yes,yes,no,no,yes
+L067,major,missing baseline or null,in_checklist,no,no,yes,yes,no,yes,yes,yes,yes,partial
+L069,major,wrong description,in_checklist,no,no,no,no,no,no,no,no,no,no
+L070,minor,wrong description,in_checklist,no,partial,partial,partial,partial,partial,partial,no,partial,yes
+L072,major,wrong description,in_checklist,no,no,no,no,partial,partial,no,no,no,no
+L074,major,wrong statistic,in_checklist,no,no,partial,no,no,no,no,no,no,no
+L075,major,unsupported claim,in_checklist,no,yes,yes,yes,yes,yes,yes,yes,yes,yes
+L076,minor,wrong statistic,in_checklist,no,no,yes,no,partial,no,no,no,no,no
+L077,minor,reproducibility,in_checklist,no,partial,partial,no,no,yes,no,yes,no,no
+L078,minor,unsupported claim,in_checklist,no,yes,yes,yes,yes,yes,yes,partial,yes,yes
+L082,minor,reproducibility,in_checklist,no,partial,partial,partial,partial,partial,partial,partial,partial,partial
+L083,minor,missing baseline or null,in_checklist,yes,partial,yes,yes,partial,partial,yes,no,no,partial
+L084,minor,wrong description,outside_checklist,no,yes,yes,yes,yes,yes,yes,yes,yes,yes
+L086,minor,reproducibility,in_checklist,no,no,no,no,no,no,no,no,no,no
+L087,minor,missing baseline or null,in_checklist,no,partial,partial,partial,partial,partial,no,no,no,partial
+L088,minor,reproducibility,in_checklist,no,partial,partial,partial,partial,partial,partial,partial,partial,no
+L089,minor,reproducibility,in_checklist,partly,yes,yes,yes,yes,yes,yes,yes,yes,partial
+L118,major,code bug,outside_checklist,no,no,no,no,partial,yes,no,yes,yes,partial
+L119,critical,code bug,outside_checklist,no,partial,partial,partial,partial,partial,partial,no,partial,partial
+L120,minor,wrong statistic,outside_checklist,no,no,no,partial,no,no,partial,no,no,no
+L121,major,missing baseline or null,in_checklist,no,partial,no,partial,no,partial,partial,no,partial,no
+L122,major,wrong statistic,in_checklist,no,partial,partial,partial,no,no,partial,partial,partial,partial
+L123,major,code bug,outside_checklist,no,yes,yes,yes,yes,yes,yes,yes,yes,yes

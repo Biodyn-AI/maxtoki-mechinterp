@@ -1,0 +1,22 @@
+{
+  "n_proteins": 600,
+  "n_residues": 197279,
+  "n_residues_split_a": 99373,
+  "n_residues_split_b": 97906,
+  "n_features": 5120,
+  "n_features_scored": 5035,
+  "n_concepts_scored": 21,
+  "gate": {
+    "min_f1": 0.5,
+    "min_margin": 0.1
+  },
+  "n_concepts_passing": 2,
+  "concepts_passing": [
+    "SIGNAL",
+    "DISULFID"
+  ],
+  "mean_best_f1": 0.16167918903926806,
+  "median_best_f1": 0.030829353017802867,
+  "mean_best_margin": 0.1433669881064828,
+  "n_concepts_margin_above_0.1": 8
+}

@@ -1,0 +1,11 @@
+SOURCE (3000, 6546) (87 cc genes) | TARGET (3000, 8749) (93 cc genes)
+  SOURCE orientation: flipped=True rot=135.9deg -> S peak 45.0deg, G2M peak 153.8deg (sep 108.8deg)
+  TARGET orientation: flipped=False rot=124.9deg -> S peak 45.0deg, G2M peak 142.1deg (sep 97.1deg)
+shared gene space: 6544 genes
+
+  readout         within (src)    transfer (tgt)   retention
+  MODEL           0.897 ( 13deg)     -0.814 ( 24deg)       -0.91
+  EXPRESSION      0.919 ( 11deg)     -0.796 ( 16deg)       -0.87
+
+  !! NO VALID TRANSFER: model -0.814 (24deg), expression -0.796 (16deg) -- both worse than chance (90deg). The target's phase label is not cell cycle.
+[done] -> outputs/transfer_rpe1.json

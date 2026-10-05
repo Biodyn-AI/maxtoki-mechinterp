@@ -1,0 +1,27 @@
+[attention-grn-217M]
+[spectral-geometry-217M]
+[topology-141-217M]
+[manifold-discovery-217M]
+[longevity-mechinterp-217M]
+[sae-atlas-217M]
+[circuit-tracing-217M]
+[exhaustive-mapping-217M]
+attention-grn-217M           rows= 36 with_evidence= 9 (map 9, auto 0) deviations=4 gates={'AMBIGUOUS_NOT_RECOMPUTED': 1, 'CONSISTENT': 7, 'CONSISTENT; IMPLAUSIBLE_FRACTION': 1}
+     - n_ctrl: used 200;2000 vs spec 2000 (range {500, 2000, 10000}) [no reason found]
+     - hvg: used 1500 vs spec {2000, 3309} (range {1000, 2000, 5000}) [no reason found]
+     - intervention_cells_fidelity: used 2000;300 vs spec 2000 (range not machine-readable) [no reason found]
+     - degree_null_n_curveball: used 50 vs spec 200 (range not machine-readable) [reason noted at projects/maxtoki/runs/attention-grn-217M/README.md:32]
+spectral-geometry-217M       rows= 38 with_evidence= 5 (map 6, auto 0) deviations=1 gates={}
+     - autoloop_iterations: used 8 vs spec 63 (range 40–80) [no reason found]
+topology-141-217M            rows= 30 with_evidence= 5 (map 5, auto 0) deviations=2 gates={}
+     - null_label_permutation_replicates: used 100;50;8 vs spec 100–200 (range 100–1000) [no reason found]
+     - null_rewiring_replicates: used 12;8 vs spec 24 (range ≥ 24) [no reason found]
+manifold-discovery-217M      rows= 39 with_evidence=10 (map 10, auto 0) deviations=0 gates={'CONSISTENT': 4, 'CONSISTENT; GATE_SET_FOR_PANEL_UNSTATED': 1, 'CONSISTENT; NEGATIVE_CONTROL_PASSED': 1, 'PASS_WITH_UNCOMPUTED_GATES': 2, "PROTOCOL_K_DIFFERS(['trustworthiness_k5'] vs k=15)": 1}
+longevity-mechinterp-217M    rows= 30 with_evidence=13 (map 4, auto 10) deviations=0 gates={}
+sae-atlas-217M               rows= 36 with_evidence= 9 (map 9, auto 0) deviations=3 gates={}
+     - n_cells_training: used 500 vs spec 2000 (range not machine-readable) [no reason found]
+     - n_cells_training: used 500 vs spec 3000 (range not machine-readable) [no reason found]
+     - causal_patching_cells: used 50 vs spec 200 (range not machine-readable) [no reason found]
+circuit-tracing-217M         rows= 22 with_evidence= 4 (map 4, auto 0) deviations=0 gates={}
+exhaustive-mapping-217M      rows= 27 with_evidence=11 (map 11, auto 1) deviations=1 gates={}
+     - n_cells_per_condition: used 50 vs spec 200 (range 100–500) [no reason found]

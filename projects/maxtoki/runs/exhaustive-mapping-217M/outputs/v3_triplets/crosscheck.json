@@ -1,0 +1,44 @@
+{
+  "n_cells": 20,
+  "conditions_per_cell": [
+    826
+  ],
+  "n_real_triplets": 512,
+  "triplets_any_target_BH_within(scipy t-test, step-up BH)": 4,
+  "triplets_any_target_BH_across_all": 0,
+  "targets_BH_across_all": 0,
+  "min_p_over_all_tests": 6.7083671950148406e-06,
+  "median_rho3_u_statistic": 1.0037108247777669,
+  "median_eshare_I_u_statistic": 2.782929376257306e-06,
+  "max_rel_diff_rho3_vs_analyze": 8.884962280719362e-16,
+  "max_abs_diff_eshare_I_vs_analyze": 1.9922214919421144e-18,
+  "signflip_new_seed": {
+    "n_p05": 44,
+    "n_BH05": 0
+  },
+  "eshare_I_median_percentile_ci95_new_seed(1000 reps, Gram-matrix formula)": [
+    0.0006184328666796337,
+    0.002232995132372314
+  ],
+  "gram_formula_vs_u_statistic_max_abs_diff": 2.087089182034596e-18,
+  "analyze_values": {
+    "triplets_any_target_BH_within": [
+      4,
+      512
+    ],
+    "triplets_any_target_BH_across": [
+      0,
+      512
+    ],
+    "min_p": 6.70836719501481e-06,
+    "rho3_median": 1.0037108247777673,
+    "eshare_I_median": 2.782929376257503e-06,
+    "eshare_I_ci": [
+      -0.0009196945058829875,
+      0.0005906754915303751
+    ],
+    "signflip_p05": 44,
+    "signflip_BH05": 0
+  },
+  "wall_seconds": 13.7
+}

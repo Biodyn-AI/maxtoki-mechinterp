@@ -1,0 +1,532 @@
+{
+  "rows": [
+    {
+      "quantity": "triplets with any target BH within (t)",
+      "v2": [
+        0,
+        512
+      ],
+      "v3": [
+        4,
+        512
+      ]
+    },
+    {
+      "quantity": "triplets with any target BH across (t)",
+      "v2": [
+        0,
+        512
+      ],
+      "v3": [
+        0,
+        512
+      ]
+    },
+    {
+      "quantity": "aggregate sign-flip p<0.05 (of 512)",
+      "v2": 18,
+      "v3": 44
+    },
+    {
+      "quantity": "aggregate sign-flip BH",
+      "v2": 0,
+      "v3": 0
+    },
+    {
+      "quantity": "T_obs / T_null median",
+      "v2": 0.9989745870199223,
+      "v3": 1.0010534756917997
+    },
+    {
+      "quantity": "all-orders sign-flip p<0.05",
+      "v2": 16,
+      "v3": 28
+    },
+    {
+      "quantity": "all-orders sign-flip BH",
+      "v2": 0,
+      "v3": 0
+    },
+    {
+      "quantity": "energy share I_ABC median",
+      "v2": -4.927605657071875e-05,
+      "v3": 2.782929376257503e-06
+    },
+    {
+      "quantity": "energy share I_ABC CI",
+      "v2": [
+        -0.01450581797815177,
+        0.00944788676735696
+      ],
+      "v3": [
+        -0.0009196945058829875,
+        0.0005906754915303751
+      ]
+    },
+    {
+      "quantity": "energy share all orders median",
+      "v2": -6.818556740390524e-05,
+      "v3": 7.819005538269834e-06
+    },
+    {
+      "quantity": "energy share all orders CI",
+      "v2": [
+        -0.043973573683499696,
+        0.027354539172053917
+      ],
+      "v3": [
+        -0.00406382729987337,
+        0.0027301062074145048
+      ]
+    },
+    {
+      "quantity": "triplets eshare_I CI above 0",
+      "v2": 0,
+      "v3": 0
+    },
+    {
+      "quantity": "rho3 median",
+      "v2": 1.0056170503056734,
+      "v3": 1.0037108247777673
+    },
+    {
+      "quantity": "rho3 CI",
+      "v2": [
+        0.9778496100473515,
+        1.0507324590253941
+      ],
+      "v3": [
+        0.9977133993553453,
+        1.01120395255559
+      ]
+    },
+    {
+      "quantity": "rho3 uncorrected median",
+      "v2": 0.9439120132934473,
+      "v3": 0.9983110784437736
+    },
+    {
+      "quantity": "rho3 triplets CI>1",
+      "v2": 7,
+      "v3": 28
+    },
+    {
+      "quantity": "rho3 triplets CI<1",
+      "v2": 1,
+      "v3": 11
+    },
+    {
+      "quantity": "rho2 median",
+      "v2": 1.002539434256497,
+      "v3": 1.0020088663403595
+    },
+    {
+      "quantity": "rho2 CI",
+      "v2": [
+        0.9854114525409257,
+        1.0271494351716552
+      ],
+      "v3": [
+        0.9993453063168554,
+        1.0063384480872182
+      ]
+    },
+    {
+      "quantity": "rho3 logits median",
+      "v2": 1.0005542864522539,
+      "v3": 1.000553284812848
+    },
+    {
+      "quantity": "rho3 logits CI",
+      "v2": [
+        1.000321256118074,
+        1.000737332301393
+      ],
+      "v3": [
+        1.0004687616373298,
+        1.0006721714283224
+      ]
+    },
+    {
+      "quantity": "eshare_I logits median",
+      "v2": -1.043690798059329e-08,
+      "v3": -9.243207269357291e-13
+    },
+    {
+      "quantity": "per-cell I share (codes)",
+      "v2": 0.10640941037104218,
+      "v3": 0.009098730854059595
+    },
+    {
+      "quantity": "per-cell I share (logits)",
+      "v2": 9.35281358137053e-10,
+      "v3": 2.081522207314098e-10
+    },
+    {
+      "quantity": "three-way ratio median",
+      "v2": 0.6385728025483318,
+      "v3": 0.7433794624570952
+    },
+    {
+      "quantity": "three-way ratio CI",
+      "v2": [
+        0.6331603530143157,
+        0.6457281473372833
+      ],
+      "v3": [
+        0.7300203203089924,
+        0.7461071564682218
+      ]
+    },
+    {
+      "quantity": "three-way ratio if additive",
+      "v2": 0.7063275309887611,
+      "v3": 0.7673401853546695
+    },
+    {
+      "quantity": "pair mean ratio median",
+      "v2": 0.7663019060132046,
+      "v3": 0.8512467594224797
+    },
+    {
+      "quantity": "pair mean ratio CI",
+      "v2": [
+        0.7548535061949768,
+        0.7692949159020462
+      ],
+      "v3": [
+        0.836245580271599,
+        0.8498878421939585
+      ]
+    },
+    {
+      "quantity": "pair mean if additive",
+      "v2": 0.8106453067055897,
+      "v3": 0.864837182235838
+    },
+    {
+      "quantity": "three-way logits",
+      "v2": 0.677652344015115,
+      "v3": 0.7580955086029837
+    },
+    {
+      "quantity": "marginal C|AB",
+      "v2": 0.2532540278193789,
+      "v3": 0.4395957465765565
+    },
+    {
+      "quantity": "three-way SD across triplets",
+      "v2": 0.0390527880252444,
+      "v3": 0.041968077042070166
+    },
+    {
+      "quantity": "deployed rule targets",
+      "v2": 2049,
+      "v3": 6738
+    },
+    {
+      "quantity": "deployed rule superadditive",
+      "v2": 7,
+      "v3": 3
+    },
+    {
+      "quantity": "spec included",
+      "v2": 583779,
+      "v3": 1528321
+    },
+    {
+      "quantity": "spec strict superadditive",
+      "v2": 10347,
+      "v3": 5407
+    },
+    {
+      "quantity": "pairs agg BH",
+      "v2": 0,
+      "v3": 0
+    },
+    {
+      "quantity": "pairs any target BH",
+      "v2": 0,
+      "v3": 29
+    },
+    {
+      "quantity": "pair share I2 median",
+      "v2": 0.2850487085571449,
+      "v3": 0.08066548441565918
+    },
+    {
+      "quantity": "pair share I2 noise",
+      "v2": 0.2852407566291295,
+      "v3": 0.08107070090209854
+    },
+    {
+      "quantity": "KL order 1 median",
+      "v2": 0.00017857403764764967,
+      "v3": 0.0001971837511234753
+    },
+    {
+      "quantity": "KL order 2 median",
+      "v2": 0.0003933534178941045,
+      "v3": 0.000520193708507577
+    },
+    {
+      "quantity": "KL order 3 median",
+      "v2": 0.0006244196250918321,
+      "v3": 0.0007475622369383927
+    },
+    {
+      "quantity": "power constant plant 0.05 (signflip p<.05)",
+      "v2": 64,
+      "v3": 64
+    },
+    {
+      "quantity": "power constant plant 0.1 (signflip p<.05)",
+      "v2": 64,
+      "v3": 64
+    },
+    {
+      "quantity": "power constant plant 0.2 (signflip p<.05)",
+      "v2": 64,
+      "v3": 64
+    },
+    {
+      "quantity": "power proportional 0.05: aggregate p<.05 / BH",
+      "v2": [
+        47,
+        46
+      ],
+      "v3": [
+        64,
+        64
+      ]
+    },
+    {
+      "quantity": "power proportional 0.05: per-target triplets BH within / across",
+      "v2": [
+        27,
+        20
+      ],
+      "v3": [
+        64,
+        64
+      ]
+    },
+    {
+      "quantity": "power proportional 0.1: aggregate p<.05 / BH",
+      "v2": [
+        64,
+        64
+      ],
+      "v3": [
+        64,
+        64
+      ]
+    },
+    {
+      "quantity": "power proportional 0.1: per-target triplets BH within / across",
+      "v2": [
+        39,
+        38
+      ],
+      "v3": [
+        64,
+        64
+      ]
+    },
+    {
+      "quantity": "power proportional 0.2: aggregate p<.05 / BH",
+      "v2": [
+        64,
+        64
+      ],
+      "v3": [
+        64,
+        64
+      ]
+    },
+    {
+      "quantity": "power proportional 0.2: per-target triplets BH within / across",
+      "v2": [
+        48,
+        50
+      ],
+      "v3": [
+        64,
+        64
+      ]
+    },
+    {
+      "quantity": "power proportional 0.5: aggregate p<.05 / BH",
+      "v2": [
+        64,
+        64
+      ],
+      "v3": [
+        64,
+        64
+      ]
+    },
+    {
+      "quantity": "power proportional 0.5: per-target triplets BH within / across",
+      "v2": [
+        56,
+        59
+      ],
+      "v3": [
+        64,
+        64
+      ]
+    },
+    {
+      "quantity": "power proportional 1.0: aggregate p<.05 / BH",
+      "v2": [
+        64,
+        64
+      ],
+      "v3": [
+        64,
+        64
+      ]
+    },
+    {
+      "quantity": "power proportional 1.0: per-target triplets BH within / across",
+      "v2": [
+        56,
+        63
+      ],
+      "v3": [
+        64,
+        64
+      ]
+    },
+    {
+      "quantity": "targets with BH effect per triplet, A (median/mean)",
+      "v2": [
+        7.5,
+        38.375
+      ],
+      "v3": [
+        415.0,
+        446.0
+      ]
+    },
+    {
+      "quantity": "targets with BH effect per triplet, B (median/mean)",
+      "v2": [
+        1.5,
+        2.625
+      ],
+      "v3": [
+        283.5,
+        277.25
+      ]
+    },
+    {
+      "quantity": "targets with BH effect per triplet, C (median/mean)",
+      "v2": [
+        2.0,
+        3.625
+      ],
+      "v3": [
+        1502.0,
+        1476.875
+      ]
+    },
+    {
+      "quantity": "targets with BH effect per triplet, ABC (median/mean)",
+      "v2": [
+        17.0,
+        36.291015625
+      ],
+      "v3": [
+        273.5,
+        317.533203125
+      ]
+    },
+    {
+      "quantity": "targets with BH effect per triplet, I (median/mean)",
+      "v2": [
+        0.0,
+        0.0
+      ],
+      "v3": [
+        0.0,
+        0.0078125
+      ]
+    },
+    {
+      "quantity": "readout per-position I share, h11 (median)",
+      "v2": 2.534533781807046e-08,
+      "v3": 5.038758662653089e-09
+    },
+    {
+      "quantity": "readout per-position I share, sae_preact (median)",
+      "v2": 3.7506743634764896e-08,
+      "v3": 8.179579197694872e-09
+    },
+    {
+      "quantity": "readout per-position I share, sae_code (median)",
+      "v2": 0.2798924780894772,
+      "v3": 0.04635161584122475
+    },
+    {
+      "quantity": "readout per-position I share, logits_centered (median)",
+      "v2": 2.6630809893342926e-08,
+      "v3": 7.125450124957197e-09
+    },
+    {
+      "quantity": "readout share of code I energy on top-k switching entries",
+      "v2": 0.9999999983183331,
+      "v3": 0.9999999743245569
+    },
+    {
+      "quantity": "readout positions with top-k set change under ABC",
+      "v2": 0.316650390625,
+      "v3": 0.244873046875
+    },
+    {
+      "quantity": "|dh11 ABC| / |h11| (median)",
+      "v2": 0.01782500149536112,
+      "v3": 0.021883287724727175
+    },
+    {
+      "quantity": "single effect eff range by layer",
+      "v2": {
+        "L0": [
+          0.00018046141188030808,
+          0.00044184446661855374
+        ],
+        "L5": [
+          7.075776309222844e-05,
+          0.0004025575553636632
+        ],
+        "L9": [
+          8.30900195187378e-05,
+          0.00021673757539908615
+        ]
+      },
+      "v3": {
+        "L0": [
+          0.00015357878054683994,
+          0.0006356676129380266
+        ],
+        "L5": [
+          8.538764200061628e-05,
+          0.00023962413449237814
+        ],
+        "L9": [
+          5.705137983367623e-05,
+          9.722980785817845e-05
+        ]
+      }
+    }
+  ],
+  "deployed": {
+    "n_triplets": 4,
+    "pair_mean": 0.3235,
+    "three_way": 0.1896,
+    "three_way_std": 0.0001,
+    "superadditive": "0 of ~2,980 targets"
+  },
+  "note": "v2 = deployed SAEs + wrongly encoded inputs + fixed hooks; v3 = v3 SAEs + right inputs + same hooks. Feature IDs differ between v2 and v3 (different SAEs); only design-level numbers are comparable."
+}

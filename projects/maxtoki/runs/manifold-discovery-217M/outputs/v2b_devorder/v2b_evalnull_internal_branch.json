@@ -1,0 +1,223 @@
+{
+ "method": "eval-only structured null; heads fixed (fitted without the held-out branch on the true H65 ruler); held-out ruler from the class->stage map permuted within branch; class = (cell_type, hema_stage) over all blood panels; p = (1 + #null >= obs) / (1 + N)",
+ "rng": "default_rng([2027, d])",
+ "n_draws": 2000,
+ "results": {
+  "maxtoki": {
+   "branch_all_pairs": {
+    "observed": 0.3704037377671307,
+    "null_mean": 0.3703464015413151,
+    "null_sd": 0.06542616816367094,
+    "p_one_sided": 0.5497251374312844,
+    "n_draws": 2000,
+    "null_q95": 0.4739202828959535
+   },
+   "branch_diff_ct": {
+    "observed": 0.04715746246036318,
+    "null_mean": 0.009511930674667931,
+    "null_sd": 0.11242695007116014,
+    "p_one_sided": 0.3778110944527736,
+    "n_draws": 2000,
+    "null_q95": 0.20286702179928465
+   }
+  },
+  "maxtoki_pca64": {
+   "branch_all_pairs": {
+    "observed": 0.4899783111133518,
+    "null_mean": 0.5081443975617065,
+    "null_sd": 0.07334797044872836,
+    "p_one_sided": 0.6506746626686657,
+    "n_draws": 2000,
+    "null_q95": 0.6352707804546027
+   },
+   "branch_diff_ct": {
+    "observed": 0.06523915592736607,
+    "null_mean": 0.002758557832776875,
+    "null_sd": 0.11537899732977389,
+    "p_one_sided": 0.2908545727136432,
+    "n_draws": 2000,
+    "null_q95": 0.20463780725949832
+   }
+  },
+  "lookup_ct_s0": {
+   "branch_all_pairs": {
+    "observed": 0.3643998493167195,
+    "null_mean": 0.37471569710405916,
+    "null_sd": 0.05672694868932563,
+    "p_one_sided": 0.6086956521739131,
+    "n_draws": 2000,
+    "null_q95": 0.4689984461146533
+   },
+   "branch_diff_ct": {
+    "observed": 0.055771939877888844,
+    "null_mean": 0.004987283031640633,
+    "null_sd": 0.10599958927175186,
+    "p_one_sided": 0.30484757621189407,
+    "n_draws": 2000,
+    "null_q95": 0.19805565166671202
+   }
+  },
+  "lookup_ct_s1": {
+   "branch_all_pairs": {
+    "observed": 0.4588442304983758,
+    "null_mean": 0.4543709406345478,
+    "null_sd": 0.06720204684976769,
+    "p_one_sided": 0.46026986506746626,
+    "n_draws": 2000,
+    "null_q95": 0.5680649559608643
+   },
+   "branch_diff_ct": {
+    "observed": 0.14569488329775956,
+    "null_mean": 0.015212030893577531,
+    "null_sd": 0.13110558783088985,
+    "p_one_sided": 0.16691654172913542,
+    "n_draws": 2000,
+    "null_q95": 0.24001994739718607
+   }
+  },
+  "lookup_ct_s2": {
+   "branch_all_pairs": {
+    "observed": 0.3187764420081715,
+    "null_mean": 0.3612359260966697,
+    "null_sd": 0.05857674692140274,
+    "p_one_sided": 0.7641179410294853,
+    "n_draws": 2000,
+    "null_q95": 0.4584921152755474
+   },
+   "branch_diff_ct": {
+    "observed": -0.02702489121671146,
+    "null_mean": 0.0039874528899357334,
+    "null_sd": 0.12319315347367782,
+    "p_one_sided": 0.5922038980509745,
+    "n_draws": 2000,
+    "null_q95": 0.21409576764337745
+   }
+  },
+  "lookup_ct_s3": {
+   "branch_all_pairs": {
+    "observed": 0.41223649813688623,
+    "null_mean": 0.4161181993185508,
+    "null_sd": 0.056431996126330916,
+    "p_one_sided": 0.512743628185907,
+    "n_draws": 2000,
+    "null_q95": 0.5163049362073562
+   },
+   "branch_diff_ct": {
+    "observed": 0.12861512739412373,
+    "null_mean": 0.011757630239129103,
+    "null_sd": 0.11719299331647627,
+    "p_one_sided": 0.175912043978011,
+    "n_draws": 2000,
+    "null_q95": 0.2188814971688872
+   }
+  },
+  "lookup_ct_s4": {
+   "branch_all_pairs": {
+    "observed": 0.4063348503926634,
+    "null_mean": 0.4345589918255887,
+    "null_sd": 0.06108719621620058,
+    "p_one_sided": 0.6986506746626686,
+    "n_draws": 2000,
+    "null_q95": 0.5279199038149299
+   },
+   "branch_diff_ct": {
+    "observed": -0.032943727688866525,
+    "null_mean": -0.0012945448518858918,
+    "null_sd": 0.1058578818073147,
+    "p_one_sided": 0.6016991504247876,
+    "n_draws": 2000,
+    "null_q95": 0.17329229688691758
+   }
+  },
+  "lookup_cls_s0": {
+   "branch_all_pairs": {
+    "observed": 0.4463376455091476,
+    "null_mean": 0.4827075958136786,
+    "null_sd": 0.06548968154212605,
+    "p_one_sided": 0.7041479260369815,
+    "n_draws": 2000,
+    "null_q95": 0.590832462949436
+   },
+   "branch_diff_ct": {
+    "observed": -0.011212231104370399,
+    "null_mean": -0.00791284181824117,
+    "null_sd": 0.15527468857041746,
+    "p_one_sided": 0.5097451274362819,
+    "n_draws": 2000,
+    "null_q95": 0.25211579034891707
+   }
+  },
+  "lookup_cls_s1": {
+   "branch_all_pairs": {
+    "observed": 0.33161262141420916,
+    "null_mean": 0.37205361227140465,
+    "null_sd": 0.0369465423973403,
+    "p_one_sided": 0.8425787106446777,
+    "n_draws": 2000,
+    "null_q95": 0.4334425070673428
+   },
+   "branch_diff_ct": {
+    "observed": -0.04313734219806056,
+    "null_mean": -0.011013306381339103,
+    "null_sd": 0.07165225727194083,
+    "p_one_sided": 0.6516741629185407,
+    "n_draws": 2000,
+    "null_q95": 0.11480606934207152
+   }
+  },
+  "lookup_cls_s2": {
+   "branch_all_pairs": {
+    "observed": 0.5472436035970201,
+    "null_mean": 0.5187241966283729,
+    "null_sd": 0.07207453851314254,
+    "p_one_sided": 0.36881559220389803,
+    "n_draws": 2000,
+    "null_q95": 0.629885447177212
+   },
+   "branch_diff_ct": {
+    "observed": 0.08389768618606602,
+    "null_mean": 0.008558846966828345,
+    "null_sd": 0.16191440284691982,
+    "p_one_sided": 0.3173413293353323,
+    "n_draws": 2000,
+    "null_q95": 0.27820063309258847
+   }
+  },
+  "tokenbag_pca64": {
+   "branch_all_pairs": {
+    "observed": 0.4165644670160747,
+    "null_mean": 0.41984427887926606,
+    "null_sd": 0.04910515588488106,
+    "p_one_sided": 0.5057471264367817,
+    "n_draws": 2000,
+    "null_q95": 0.5116205791114123
+   },
+   "branch_diff_ct": {
+    "observed": 0.0064020171259901795,
+    "null_mean": 0.005809319170485998,
+    "null_sd": 0.09471727172235175,
+    "p_one_sided": 0.47926036981509246,
+    "n_draws": 2000,
+    "null_q95": 0.17613272057823923
+   }
+  },
+  "hvg_pca64": {
+   "branch_all_pairs": {
+    "observed": 0.35362594611502945,
+    "null_mean": 0.34305860702945506,
+    "null_sd": 0.06615047448388685,
+    "p_one_sided": 0.5372313843078461,
+    "n_draws": 2000,
+    "null_q95": 0.44668042568703736
+   },
+   "branch_diff_ct": {
+    "observed": 0.0879186823994107,
+    "null_mean": 0.011999053461848066,
+    "null_sd": 0.11615052924529666,
+    "p_one_sided": 0.29235382308845576,
+    "n_draws": 2000,
+    "null_q95": 0.19676452796209248
+   }
+  }
+ }
+}

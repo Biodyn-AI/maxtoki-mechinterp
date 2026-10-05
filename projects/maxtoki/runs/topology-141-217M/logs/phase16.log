@@ -1,0 +1,171 @@
+
+[lung] running H-lineage + H-depth + H-hub + H23 on emb (12, 382, 20)
+  L6       T_cell  purity=0.133  null=0.011  z=+6.24  (5 markers)
+  L6      NK_cell  purity=0.000  null=0.009  z=-0.55  (4 markers)
+  L6      Myeloid  purity=0.156  null=0.019  z=+7.53  (8 markers)
+  depth twonn dims: 0.4 0.9 0.3 -0.1 -0.2 -0.2 0.1 -0.4 0.4 0.4 0.3 0.2
+  depth h1       : 4 35 73 110 122 162 107 72 79 85 100 204
+  H-hub TF-deg vs centrality: ρ=+0.060  null=-0.006  z=+1.31
+  H23 Forman: AUROC=0.352  (paper expects 0.34–0.39 if direction replicates)  replicates_direction=True
+
+[immune] running H-lineage + H-depth + H-hub + H23 on emb (12, 350, 20)
+  depth twonn dims: -0.7 1.8 -0.1 -0.2 -0.1 -0.1 -0.1 0.0 -0.1 0.0 -0.0 -0.1
+  depth h1       : 3 46 76 130 198 210 142 110 129 129 131 231
+  H-hub TF-deg vs centrality: ρ=+0.118  null=+0.002  z=+2.34
+  H23 Forman: AUROC=0.416  (paper expects 0.34–0.39 if direction replicates)  replicates_direction=True
+
+[external_lung] running H-lineage + H-depth + H-hub + H23 on emb (12, 380, 20)
+  L6       T_cell  purity=0.100  null=0.013  z=+5.26  (5 markers)
+  L6       B_cell  purity=0.056  null=0.007  z=+3.05  (3 markers)
+  L6      NK_cell  purity=0.111  null=0.012  z=+5.92  (6 markers)
+  L6      Myeloid  purity=0.100  null=0.013  z=+5.26  (5 markers)
+  depth twonn dims: 2.0 0.1 -0.1 -0.3 -0.4 -0.3 -0.3 -0.4 0.2 0.1 0.1 -0.1
+  depth h1       : 3 35 70 124 142 149 81 46 53 56 63 70
+  H-hub TF-deg vs centrality: ρ=+0.115  null=-0.005  z=+2.36
+  H23 Forman: AUROC=0.340  (paper expects 0.34–0.39 if direction replicates)  replicates_direction=True
+
+[phase 16] summary:
+{
+  "lineage": {
+    "external_lung": {
+      "n_lineages_tested": 4,
+      "n_lineages_significant": 4,
+      "mean_z": 4.872072383519371,
+      "top_lineage": "NK_cell",
+      "top_z": 5.922454517714938
+    },
+    "lung": {
+      "n_lineages_tested": 3,
+      "n_lineages_significant": 2,
+      "mean_z": 4.406425774173873,
+      "top_lineage": "Myeloid",
+      "top_z": 7.532842172276164
+    }
+  },
+  "depth": {
+    "external_lung": {
+      "twonn_dim_per_layer": [
+        2.010088279588291,
+        0.10530892121789555,
+        -0.13261955822098173,
+        -0.341562320939772,
+        -0.41019539442952363,
+        -0.3124820879715746,
+        -0.3446036275244819,
+        -0.36134091311593297,
+        0.19644917313651403,
+        0.06300112123758907,
+        0.10432451507501546,
+        -0.09020351126365034
+      ],
+      "total_h1_per_layer": [
+        3.201394557952881,
+        35.40563428401947,
+        70.1340115070343,
+        123.70358943939209,
+        142.19139170646667,
+        148.9232521057129,
+        81.49870157241821,
+        46.38627624511719,
+        52.88658595085144,
+        56.31923460960388,
+        62.755682706832886,
+        70.2370491027832
+      ],
+      "dim_compression_l0_to_l_last": -22.28392499836427
+    },
+    "immune": {
+      "twonn_dim_per_layer": [
+        -0.6782240327618372,
+        1.7713198989527175,
+        -0.12221293056958278,
+        -0.1941535726507399,
+        -0.07033774929244285,
+        -0.08330420120077939,
+        -0.05583129552165943,
+        0.0063464837400845475,
+        -0.08826450664343563,
+        0.0027022102769244955,
+        -0.02244337760127458,
+        -0.07342243140834978
+      ],
+      "total_h1_per_layer": [
+        2.7146040499210358,
+        46.496591687202454,
+        76.15435910224915,
+        130.17245388031006,
+        198.35665941238403,
+        210.48000478744507,
+        141.8611478805542,
+        109.87472319602966,
+        129.20487761497498,
+        129.23649787902832,
+        131.30137634277344,
+        231.03684043884277
+      ],
+      "dim_compression_l0_to_l_last": 9.237286477068476
+    },
+    "lung": {
+      "twonn_dim_per_layer": [
+        0.37141175578397606,
+        0.9497880055623789,
+        0.33156759058882507,
+        -0.06617359070252732,
+        -0.15128129565114307,
+        -0.17909181114719594,
+        0.09325607555183664,
+        -0.4491083894497937,
+        0.4234753198546373,
+        0.4032917968276064,
+        0.2734716761306359,
+        0.19135886209103456
+      ],
+      "total_h1_per_layer": [
+        3.539484426379204,
+        34.637802600860596,
+        73.00558626651764,
+        109.73338484764099,
+        122.36250019073486,
+        162.22962069511414,
+        106.80852174758911,
+        71.51013565063477,
+        79.2186963558197,
+        84.98109006881714,
+        100.4728775024414,
+        203.54153108596802
+      ],
+      "dim_compression_l0_to_l_last": 1.940917455953963
+    }
+  },
+  "hub": {
+    "external_lung": {
+      "spearman_obs": 0.11549365151509726,
+      "z": 2.3625464136960184,
+      "significant": true
+    },
+    "immune": {
+      "spearman_obs": 0.11846243975347466,
+      "z": 2.3380766218072244,
+      "significant": true
+    },
+    "lung": {
+      "spearman_obs": 0.06036838287716861,
+      "z": 1.3071871236459747,
+      "significant": false
+    }
+  },
+  "forman": {
+    "external_lung": {
+      "auroc_high_curvature": 0.34035476718403546,
+      "replicates_paper_direction": true
+    },
+    "immune": {
+      "auroc_high_curvature": 0.4158415841584159,
+      "replicates_paper_direction": true
+    },
+    "lung": {
+      "auroc_high_curvature": 0.35243328100470955,
+      "replicates_paper_direction": true
+    }
+  }
+}

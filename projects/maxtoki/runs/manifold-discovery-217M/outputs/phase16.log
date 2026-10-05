@@ -1,0 +1,73 @@
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase5_let_anchor.py:196: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(d_hat[triu], D_test[triu])
+======================================================================
+PHASE 16 — Graph-DAG rescue for H107 antigen-receptor axis
+======================================================================
+  n_anchors_kept = 290/290
+  D unique values: [0.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0]
+  D max = 10.0, mean (off-diag) = 4.98
+[1] Train head, gates...
+  [H107_graph] trained 1500 epochs in 40.4s
+  [rand-holdout] trained 1500 epochs in 33.8s
+  [rand-holdout] trained 1500 epochs in 34.1s
+  [rand-holdout] trained 1500 epochs in 38.3s
+  [rand-holdout] trained 1500 epochs in 36.8s
+  [rand-holdout] trained 1500 epochs in 35.8s
+  [H107_graph-donor] groups: 11
+  [H107_graph-donor-TSP2] trained 1500 epochs in 17.7s
+  [H107_graph-donor-TSP20] trained 1500 epochs in 40.9s
+  [H107_graph-donor-TSP9] trained 1500 epochs in 43.4s
+  [H107_graph-donor-TSP4] trained 1500 epochs in 48.2s
+  [H107_graph-donor-TSP17] trained 1500 epochs in 56.7s
+  [H107_graph-donor-TSP5] trained 1500 epochs in 52.6s
+  [H107_graph-donor-TSP15] trained 1500 epochs in 43.6s
+  [H107_graph-donor-TSP28] trained 1500 epochs in 44.0s
+  [H107_graph-donor-TSP3] trained 1500 epochs in 45.7s
+  [H107_graph-bucket] groups: 4
+  [H107_graph-bucket-myeloid] trained 1500 epochs in 26.9s
+  [H107_graph-bucket-tcr_ab] trained 1500 epochs in 37.3s
+  [H107_graph-bucket-bcr] trained 1500 epochs in 39.2s
+  [H107_graph-bucket-innate_lymphoid] trained 1500 epochs in 45.6s
+  [H107_graph-subclass] groups: 13
+  [H107_graph-subclass-myeloid|monocyte] trained 1500 epochs in 52.2s
+  [H107_graph-subclass-tcr_ab|mature_T] trained 1500 epochs in 46.3s
+  [H107_graph-subclass-myeloid|macrophage] trained 1500 epochs in 50.8s
+  [H107_graph-subclass-bcr|naive_B] trained 1500 epochs in 53.7s
+  [H107_graph-subclass-tcr_ab|naive_T] trained 1500 epochs in 52.6s
+  [H107_graph-subclass-bcr|plasma] trained 1500 epochs in 58.9s
+  [H107_graph-subclass-innate_lymphoid|NK] trained 1500 epochs in 57.0s
+  [H107_graph-subclass-myeloid|progenitor] trained 1500 epochs in 54.1s
+  [H107_graph-subclass-myeloid|granulocyte] trained 1500 epochs in 45.8s
+  [H107_graph-subclass-tcr_ab|Treg_NKT] trained 1500 epochs in 49.5s
+  [H107_graph-subclass-innate_lymphoid|ILC] trained 1500 epochs in 46.5s
+  [H107_graph-subclass-myeloid|DC] trained 1500 epochs in 45.9s
+[2] Null (global label shuffle)...
+  [H107_graph_null] trained 1500 epochs in 48.5s
+  [rand-holdout] trained 1500 epochs in 38.3s
+  [rand-holdout] trained 1500 epochs in 40.7s
+  [rand-holdout] trained 1500 epochs in 43.5s
+  [rand-holdout] trained 1500 epochs in 37.4s
+  [rand-holdout] trained 1500 epochs in 40.7s
+  [H107_graph-donor-null] groups: 11
+  [H107_graph-donor-null-TSP2] trained 1500 epochs in 20.7s
+  [H107_graph-donor-null-TSP20] trained 1500 epochs in 50.3s
+  [H107_graph-donor-null-TSP9] trained 1500 epochs in 40.2s
+  [H107_graph-donor-null-TSP4] trained 1500 epochs in 51.1s
+  [H107_graph-donor-null-TSP17] trained 1500 epochs in 44.1s
+  [H107_graph-donor-null-TSP5] trained 1500 epochs in 47.7s
+  [H107_graph-donor-null-TSP15] trained 1500 epochs in 52.0s
+  [H107_graph-donor-null-TSP28] trained 1500 epochs in 51.9s
+  [H107_graph-donor-null-TSP3] trained 1500 epochs in 44.6s
+  [H107_graph-bucket-null] groups: 4
+  [H107_graph-bucket-null-myeloid] trained 1500 epochs in 36.1s
+  [H107_graph-bucket-null-innate_lymphoid] trained 1500 epochs in 54.1s
+  [H107_graph-bucket-null-tcr_ab] trained 1500 epochs in 37.3s
+  [H107_graph-bucket-null-bcr] trained 1500 epochs in 42.7s
+
+======================================================================
+VERDICT: DIRECTIONAL_TRUST_SUBTHRESHOLD
+  POS  trust=0.769  rand=0.891  donor=0.8422655018366301  bucket=0.36252216992838127  subclass=None
+  NULL trust=0.586  rand=0.024  donor=0.025227006499006825  bucket=-0.007169421007167791
+  Compared to flat H107 Hamming: trust 0.771 (DIRECTIONAL).
+  Total elapsed: 2204.3s
+  → <REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/reports/phase16_graph_dag_rescue.json

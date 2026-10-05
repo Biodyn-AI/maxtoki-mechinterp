@@ -1,0 +1,25 @@
+[lung] pairs: 1308  trrust+=252  string+=48
+[immune] pairs: 2544  trrust+=504  string+=24
+[external_lung] pairs: 751  trrust+=138  string+=61
+
+[phase 1+2+3] done. summary:
+{
+  "lung": {
+    "n_pairs": 1308,
+    "n_pos_trrust": 252,
+    "n_pos_string": 48,
+    "n_genes": 382
+  },
+  "immune": {
+    "n_pairs": 2544,
+    "n_pos_trrust": 504,
+    "n_pos_string": 24,
+    "n_genes": 350
+  },
+  "external_lung": {
+    "n_pairs": 751,
+    "n_pos_trrust": 138,
+    "n_pos_string": 61,
+    "n_genes": 380
+  }
+}

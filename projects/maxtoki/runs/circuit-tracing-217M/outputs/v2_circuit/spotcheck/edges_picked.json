@@ -1,0 +1,47 @@
+[
+  {
+    "src_layer": 0,
+    "src_feature": 3421,
+    "tgt_layer": 1,
+    "tgt_feature": 1053,
+    "cohens_d": 0.5108,
+    "consistency": 0.885,
+    "sign": "excitatory",
+    "mean_delta": 7.225306923174912e-05,
+    "n_pos": 177,
+    "n_neg": 23,
+    "n_zero": 0,
+    "consistency_sym": 0.885,
+    "passes_symmetric_rule": true
+  },
+  {
+    "src_layer": 9,
+    "src_feature": 4490,
+    "tgt_layer": 10,
+    "tgt_feature": 1671,
+    "cohens_d": 0.7219,
+    "consistency": 0.835,
+    "sign": "excitatory",
+    "mean_delta": 0.000453794156283,
+    "n_pos": 167,
+    "n_neg": 31,
+    "n_zero": 2,
+    "consistency_sym": 0.835,
+    "passes_symmetric_rule": true
+  },
+  {
+    "src_layer": 6,
+    "src_feature": 1524,
+    "tgt_layer": 11,
+    "tgt_feature": 4558,
+    "cohens_d": -0.6667,
+    "consistency": 0.895,
+    "sign": "inhibitory",
+    "mean_delta": -0.0005686134336019,
+    "n_pos": 21,
+    "n_neg": 168,
+    "n_zero": 11,
+    "consistency_sym": 0.84,
+    "passes_symmetric_rule": true
+  }
+]

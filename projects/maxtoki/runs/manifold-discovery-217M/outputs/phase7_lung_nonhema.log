@@ -1,0 +1,20 @@
+======================================================================
+PHASE 7 — frozen-head external validation on panel='lung_nonhema'
+======================================================================
+[1] Re-training anchor LET head on internal panel (deterministic)...
+  [internal_anchor] trained 1500 epochs in 7.6s
+
+[2] Loading lung_nonhema panel...
+  centroids: (50, 12, 1232)
+
+[3] Frozen forward pass...
+
+[4] Trustworthiness, holdouts on lung_nonhema...
+<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/phase7_external_validation.py:148: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, _ = spearmanr(np.arccos(cos_t)[triu_t], D_t[triu_t])
+
+======================================================================
+VERDICT: GOOD: negative control fails
+  trust=0.800  rand=-0.016  donor=0.013  branch=-0.147
+  global ρ on full panel: -0.017
+Total time: 9.0s

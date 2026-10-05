@@ -1,0 +1,71 @@
+======================================================================
+PHASE 1B+C — panel=lung_nonhema  device=mps
+======================================================================
+  cells (full): 1500  anchors: 50  L_cap: 4096
+  seq_len  median: 2937  mean: 2901.5  max: 4096
+
+[1] Loading MaxToki-217M on mps...
+  n_layers=11 hidden=1232  loaded in 2.7s
+
+[2] Running forward passes (mean-pool hidden states across gene-token positions)...
+    cell 30/1500  elapsed 32.2s  eta 1578.9s
+    cell 60/1500  elapsed 59.8s  eta 1435.8s
+    cell 90/1500  elapsed 72.0s  eta 1128.3s
+    cell 120/1500  elapsed 100.8s  eta 1159.3s
+    cell 150/1500  elapsed 129.6s  eta 1166.7s
+    cell 180/1500  elapsed 147.9s  eta 1084.9s
+    cell 210/1500  elapsed 179.6s  eta 1103.5s
+    cell 240/1500  elapsed 210.1s  eta 1103.2s
+    cell 270/1500  elapsed 243.3s  eta 1108.3s
+    cell 300/1500  elapsed 255.8s  eta 1023.0s
+    cell 330/1500  elapsed 282.8s  eta 1002.7s
+    cell 360/1500  elapsed 305.7s  eta 968.0s
+    cell 390/1500  elapsed 334.6s  eta 952.4s
+    cell 420/1500  elapsed 346.9s  eta 892.0s
+    cell 450/1500  elapsed 364.9s  eta 851.4s
+    cell 480/1500  elapsed 397.7s  eta 845.2s
+    cell 510/1500  elapsed 423.2s  eta 821.5s
+    cell 540/1500  elapsed 447.4s  eta 795.4s
+    cell 570/1500  elapsed 469.9s  eta 766.7s
+    cell 600/1500  elapsed 489.5s  eta 734.3s
+    cell 630/1500  elapsed 521.5s  eta 720.2s
+    cell 660/1500  elapsed 552.3s  eta 702.9s
+    cell 690/1500  elapsed 582.3s  eta 683.6s
+    cell 720/1500  elapsed 606.1s  eta 656.7s
+    cell 750/1500  elapsed 639.9s  eta 639.9s
+    cell 780/1500  elapsed 673.9s  eta 622.0s
+    cell 810/1500  elapsed 708.4s  eta 603.5s
+    cell 840/1500  elapsed 742.2s  eta 583.2s
+    cell 870/1500  elapsed 765.5s  eta 554.3s
+    cell 900/1500  elapsed 785.3s  eta 523.6s
+    cell 930/1500  elapsed 804.4s  eta 493.0s
+    cell 960/1500  elapsed 830.9s  eta 467.4s
+    cell 990/1500  elapsed 870.3s  eta 448.3s
+    cell 1020/1500  elapsed 898.1s  eta 422.6s
+    cell 1050/1500  elapsed 933.5s  eta 400.1s
+    cell 1080/1500  elapsed 967.2s  eta 376.1s
+    cell 1110/1500  elapsed 1000.5s  eta 351.5s
+    cell 1140/1500  elapsed 1034.4s  eta 326.6s
+    cell 1170/1500  elapsed 1056.4s  eta 298.0s
+    cell 1200/1500  elapsed 1081.1s  eta 270.3s
+    cell 1230/1500  elapsed 1096.5s  eta 240.7s
+    cell 1260/1500  elapsed 1110.4s  eta 211.5s
+    cell 1290/1500  elapsed 1121.2s  eta 182.5s
+    cell 1320/1500  elapsed 1143.2s  eta 155.9s
+    cell 1350/1500  elapsed 1154.0s  eta 128.2s
+    cell 1380/1500  elapsed 1191.0s  eta 103.6s
+    cell 1410/1500  elapsed 1218.7s  eta 77.8s
+    cell 1440/1500  elapsed 1250.1s  eta 52.1s
+    cell 1470/1500  elapsed 1293.7s  eta 26.4s
+    cell 1500/1500  elapsed 1321.3s  eta 0.0s
+  done in 1321.3s  per_cell shape=(1500, 12, 1232)
+
+[3] Aggregating to anchor centroids...
+  centroids saved → artifacts/anchors/centroids_lung_nonhema.npy
+  anchor cell counts: min 30, median 30, max 30
+
+[4] Building H65 ruler (graph distance on stage DAG)...
+  d_target shape=(50, 50)  min=0.0 median=5.0 max=10.0
+  d_target_null_shuffled saved (within-branch shuffle)
+
+Phase 1B+C (lung_nonhema) complete in 1325.4s

@@ -1,0 +1,491 @@
+{
+  "primary": [
+    {
+      "labels": "single-log panel LFC (primary)",
+      "abs_lfc_lo": 0,
+      "abs_lfc_hi": 0.01,
+      "n_pairs": 144824,
+      "n_silenced_genes": 248,
+      "n_components": 42,
+      "frac_obs_dec": 0.5056551400320389,
+      "accuracy": 0.4971275479202342,
+      "always_dec": 0.5056551400320389,
+      "balanced_acc_minus_half": -0.0030984698813586453,
+      "mcc": -0.006201480945717143,
+      "ci95_bal_genes": [
+        -0.005637829517706061,
+        -0.0005736734086279172
+      ],
+      "ci_bonferroni6_bal_genes": [
+        -0.006392109226542572,
+        0.00023750080163546043
+      ],
+      "ci95_bal_components": [
+        -0.00453291554052618,
+        0.003177214759489802
+      ],
+      "ci95_mcc_genes": [
+        -0.011283483349555468,
+        -0.0011476394936337157
+      ],
+      "ci_bonferroni6_mcc_genes": [
+        -0.012796221668964249,
+        0.00047561233146692014
+      ],
+      "ci95_mcc_components": [
+        -0.009114035916549437,
+        0.006363585351754182
+      ],
+      "target_baseline_accuracy": 0.5132989007346849,
+      "target_baseline_balanced_acc": 0.512904366808093,
+      "target_baseline_mcc": 0.025870648064131873
+    },
+    {
+      "labels": "single-log panel LFC (primary)",
+      "abs_lfc_lo": 0.01,
+      "abs_lfc_hi": 0.025,
+      "n_pairs": 190600,
+      "n_silenced_genes": 248,
+      "n_components": 42,
+      "frac_obs_dec": 0.519417628541448,
+      "accuracy": 0.49939664218258134,
+      "always_dec": 0.519417628541448,
+      "balanced_acc_minus_half": -0.0012735873390917751,
+      "mcc": -0.00254676201796398,
+      "ci95_bal_genes": [
+        -0.004651039543691539,
+        0.0019416755974821106
+      ],
+      "ci_bonferroni6_bal_genes": [
+        -0.00585996746583546,
+        0.003320964755008165
+      ],
+      "ci95_bal_components": [
+        -0.004407839352680262,
+        0.0019905736518796265
+      ],
+      "ci95_mcc_genes": [
+        -0.009333635397101692,
+        0.0038858918491059204
+      ],
+      "ci_bonferroni6_mcc_genes": [
+        -0.011756498484962163,
+        0.006639330939709357
+      ],
+      "ci95_mcc_components": [
+        -0.008872707711165821,
+        0.004041842694526728
+      ],
+      "target_baseline_accuracy": 0.5418572927597062,
+      "target_baseline_balanced_acc": 0.5401641682937464,
+      "target_baseline_mcc": 0.08059711785454984
+    },
+    {
+      "labels": "single-log panel LFC (primary)",
+      "abs_lfc_lo": 0.025,
+      "abs_lfc_hi": 0.05,
+      "n_pairs": 210107,
+      "n_silenced_genes": 248,
+      "n_components": 42,
+      "frac_obs_dec": 0.5278500954275679,
+      "accuracy": 0.5007353396126736,
+      "always_dec": 0.5278500954275679,
+      "balanced_acc_minus_half": -0.00033685791108151175,
+      "mcc": -0.0006731679896753357,
+      "ci95_bal_genes": [
+        -0.004141410872047823,
+        0.003507977389415577
+      ],
+      "ci_bonferroni6_bal_genes": [
+        -0.005400928913965051,
+        0.004944717428672853
+      ],
+      "ci95_bal_components": [
+        -0.0027049796529553236,
+        0.009530789554532508
+      ],
+      "ci95_mcc_genes": [
+        -0.008254453617060708,
+        0.007020974873697026
+      ],
+      "ci_bonferroni6_mcc_genes": [
+        -0.010777953137467489,
+        0.009886343553682545
+      ],
+      "ci95_mcc_components": [
+        -0.005407287995337997,
+        0.019155750573751063
+      ],
+      "target_baseline_accuracy": 0.5872388830453055,
+      "target_baseline_balanced_acc": 0.5833923418586828,
+      "target_baseline_mcc": 0.16836496030953052
+    },
+    {
+      "labels": "single-log panel LFC (primary)",
+      "abs_lfc_lo": 0.05,
+      "abs_lfc_hi": 0.1,
+      "n_pairs": 165582,
+      "n_silenced_genes": 247,
+      "n_components": 42,
+      "frac_obs_dec": 0.5328356947011148,
+      "accuracy": 0.5049582684108176,
+      "always_dec": 0.5328356947011148,
+      "balanced_acc_minus_half": 0.003358154071451569,
+      "mcc": 0.0067099265079811465,
+      "ci95_bal_genes": [
+        -0.0028029801724962474,
+        0.00943742733421876
+      ],
+      "ci_bonferroni6_bal_genes": [
+        -0.004822602606513999,
+        0.011809208576954078
+      ],
+      "ci95_bal_components": [
+        -0.0009879497196620928,
+        0.020990387849489603
+      ],
+      "ci95_mcc_genes": [
+        -0.005612678563081934,
+        0.018920852788428665
+      ],
+      "ci_bonferroni6_mcc_genes": [
+        -0.009569776357346557,
+        0.023780718840008347
+      ],
+      "ci95_mcc_components": [
+        -0.0019722965082813945,
+        0.042646121630407145
+      ],
+      "target_baseline_accuracy": 0.6378833448080106,
+      "target_baseline_balanced_acc": 0.6308402574324268,
+      "target_baseline_mcc": 0.2684187345004154
+    },
+    {
+      "labels": "single-log panel LFC (primary)",
+      "abs_lfc_lo": 0.1,
+      "abs_lfc_hi": 0.25,
+      "n_pairs": 75098,
+      "n_silenced_genes": 245,
+      "n_components": 41,
+      "frac_obs_dec": 0.5374044581746518,
+      "accuracy": 0.5202002716450504,
+      "always_dec": 0.5374044581746518,
+      "balanced_acc_minus_half": 0.01810107539821426,
+      "mcc": 0.03616334218947732,
+      "ci95_bal_genes": [
+        0.006315792778571305,
+        0.029695133802009076
+      ],
+      "ci_bonferroni6_bal_genes": [
+        0.0019290639137974383,
+        0.03505767242329841
+      ],
+      "ci95_bal_components": [
+        0.004400229076281051,
+        0.04563586194052365
+      ],
+      "ci95_mcc_genes": [
+        0.012582641860374486,
+        0.059663924851221635
+      ],
+      "ci_bonferroni6_mcc_genes": [
+        0.0038459157739762968,
+        0.07059070393273999
+      ],
+      "ci95_mcc_components": [
+        0.008843019632779609,
+        0.09266583493442555
+      ],
+      "target_baseline_accuracy": 0.6955844363365202,
+      "target_baseline_balanced_acc": 0.6844456956240497,
+      "target_baseline_mcc": 0.3890284357798151
+    },
+    {
+      "labels": "single-log panel LFC (primary)",
+      "abs_lfc_lo": 0.25,
+      "abs_lfc_hi": Infinity,
+      "n_pairs": 10093,
+      "n_silenced_genes": 179,
+      "n_components": 33,
+      "frac_obs_dec": 0.6129000297235708,
+      "accuracy": 0.5341325671257307,
+      "always_dec": 0.6129000297235708,
+      "balanced_acc_minus_half": 0.02838733333713983,
+      "mcc": 0.05542096666653146,
+      "ci95_bal_genes": [
+        0.003233889326306821,
+        0.05368599102491244
+      ],
+      "ci_bonferroni6_bal_genes": [
+        -0.005277126923177539,
+        0.06551353045288776
+      ],
+      "ci95_bal_components": [
+        -0.010642699067125963,
+        0.05470691747813158
+      ],
+      "ci95_mcc_genes": [
+        0.0063024489782166765,
+        0.10687960614832873
+      ],
+      "ci_bonferroni6_mcc_genes": [
+        -0.010174798584707125,
+        0.12903794033412697
+      ],
+      "ci95_mcc_components": [
+        -0.018735068452720955,
+        0.10767194817038277
+      ],
+      "target_baseline_accuracy": 0.7267413058555434,
+      "target_baseline_balanced_acc": 0.7002735810967424,
+      "target_baseline_mcc": 0.4125827532900202
+    }
+  ],
+  "file_labels": [
+    {
+      "labels": "file log1p(CP10k) LFC",
+      "abs_lfc_lo": 0,
+      "abs_lfc_hi": 0.01,
+      "n_pairs": 150666,
+      "n_silenced_genes": 248,
+      "n_components": 42,
+      "frac_obs_dec": 0.5059734777587511,
+      "accuracy": 0.4976836180691065,
+      "always_dec": 0.5059734777587511,
+      "balanced_acc_minus_half": -0.002557008631417279,
+      "mcc": -0.005117793651245244,
+      "ci95_bal_genes": [
+        -0.004941745340545647,
+        -7.60245664442414e-05
+      ],
+      "ci_bonferroni6_bal_genes": [
+        -0.005962607215223198,
+        0.0007384896600365555
+      ],
+      "ci95_bal_components": [
+        -0.004037115816590231,
+        0.0034260105010314743
+      ],
+      "ci95_mcc_genes": [
+        -0.00990430412486921,
+        -0.00015208770534424666
+      ],
+      "ci_bonferroni6_mcc_genes": [
+        -0.01196302008675247,
+        0.0014796308727158588
+      ],
+      "ci95_mcc_components": [
+        -0.00812584979852013,
+        0.006888503703145765
+      ],
+      "target_baseline_accuracy": 0.5137323616476179,
+      "target_baseline_balanced_acc": 0.5133343043830997,
+      "target_baseline_mcc": 0.02672668215289305
+    },
+    {
+      "labels": "file log1p(CP10k) LFC",
+      "abs_lfc_lo": 0.01,
+      "abs_lfc_hi": 0.025,
+      "n_pairs": 196077,
+      "n_silenced_genes": 248,
+      "n_components": 42,
+      "frac_obs_dec": 0.522855816847463,
+      "accuracy": 0.4995180464817393,
+      "always_dec": 0.522855816847463,
+      "balanced_acc_minus_half": -0.0012367350224350426,
+      "mcc": -0.0024722236695230576,
+      "ci95_bal_genes": [
+        -0.004390393088815381,
+        0.0018463876199376463
+      ],
+      "ci_bonferroni6_bal_genes": [
+        -0.005486176343921411,
+        0.002962495730059406
+      ],
+      "ci95_bal_components": [
+        -0.0028261256604426464,
+        0.0030659728218606426
+      ],
+      "ci95_mcc_genes": [
+        -0.00878166778553793,
+        0.0036954296628638
+      ],
+      "ci_bonferroni6_mcc_genes": [
+        -0.01097512932036826,
+        0.005917435242833212
+      ],
+      "ci95_mcc_components": [
+        -0.005716566258182543,
+        0.006159536173858458
+      ],
+      "target_baseline_accuracy": 0.544153572321078,
+      "target_baseline_balanced_acc": 0.5422138902045611,
+      "target_baseline_mcc": 0.08467346731034199
+    },
+    {
+      "labels": "file log1p(CP10k) LFC",
+      "abs_lfc_lo": 0.025,
+      "abs_lfc_hi": 0.05,
+      "n_pairs": 210143,
+      "n_silenced_genes": 248,
+      "n_components": 42,
+      "frac_obs_dec": 0.5321233636143008,
+      "accuracy": 0.5022151582493826,
+      "always_dec": 0.5321233636143008,
+      "balanced_acc_minus_half": 0.0009704152698408741,
+      "mcc": 0.0019382859463152843,
+      "ci95_bal_genes": [
+        -0.002809242777624674,
+        0.004789667271922958
+      ],
+      "ci_bonferroni6_bal_genes": [
+        -0.004172553702286953,
+        0.006305235918941448
+      ],
+      "ci95_bal_components": [
+        -0.0016241779447625337,
+        0.011764410806717154
+      ],
+      "ci95_mcc_genes": [
+        -0.005603490897695483,
+        0.00961241746975706
+      ],
+      "ci_bonferroni6_mcc_genes": [
+        -0.008336045802065551,
+        0.012605651918727864
+      ],
+      "ci95_mcc_components": [
+        -0.003244905164005348,
+        0.023862668555767082
+      ],
+      "target_baseline_accuracy": 0.5905692790147662,
+      "target_baseline_balanced_acc": 0.5861028821159144,
+      "target_baseline_mcc": 0.17381929221048867
+    },
+    {
+      "labels": "file log1p(CP10k) LFC",
+      "abs_lfc_lo": 0.05,
+      "abs_lfc_hi": 0.1,
+      "n_pairs": 159775,
+      "n_silenced_genes": 247,
+      "n_components": 42,
+      "frac_obs_dec": 0.5393522140510092,
+      "accuracy": 0.505329369425755,
+      "always_dec": 0.5393522140510092,
+      "balanced_acc_minus_half": 0.0033732329467337507,
+      "mcc": 0.00673404204539396,
+      "ci95_bal_genes": [
+        -0.002607224826717577,
+        0.009311558314569326
+      ],
+      "ci_bonferroni6_bal_genes": [
+        -0.004620909944249342,
+        0.011703134293830698
+      ],
+      "ci95_bal_components": [
+        -0.000830082066206142,
+        0.02020177626770562
+      ],
+      "ci95_mcc_genes": [
+        -0.005188198474247174,
+        0.01862685970726284
+      ],
+      "ci_bonferroni6_mcc_genes": [
+        -0.00920010210132051,
+        0.023500322731321233
+      ],
+      "ci95_mcc_components": [
+        -0.0016560195328288317,
+        0.04091762381240396
+      ],
+      "target_baseline_accuracy": 0.6424910029729307,
+      "target_baseline_balanced_acc": 0.6338413010368185,
+      "target_baseline_mcc": 0.2749474177478392
+    },
+    {
+      "labels": "file log1p(CP10k) LFC",
+      "abs_lfc_lo": 0.1,
+      "abs_lfc_hi": 0.25,
+      "n_pairs": 70276,
+      "n_silenced_genes": 244,
+      "n_components": 41,
+      "frac_obs_dec": 0.5500313051397347,
+      "accuracy": 0.5229950480960783,
+      "always_dec": 0.5500313051397347,
+      "balanced_acc_minus_half": 0.020155508164385938,
+      "mcc": 0.04018301372533917,
+      "ci95_bal_genes": [
+        0.008226501539121231,
+        0.0321637253673325
+      ],
+      "ci_bonferroni6_bal_genes": [
+        0.004632073982359066,
+        0.03769748503343036
+      ],
+      "ci95_bal_components": [
+        0.006768983622881847,
+        0.04704538578955404
+      ],
+      "ci95_mcc_genes": [
+        0.016309161150560223,
+        0.06451717493047848
+      ],
+      "ci_bonferroni6_mcc_genes": [
+        0.009188748140332914,
+        0.07549318061941894
+      ],
+      "ci95_mcc_components": [
+        0.013485186140748963,
+        0.09485572573953965
+      ],
+      "target_baseline_accuracy": 0.7017616255905288,
+      "target_baseline_balanced_acc": 0.6867718542699096,
+      "target_baseline_mcc": 0.39475844591857023
+    },
+    {
+      "labels": "file log1p(CP10k) LFC",
+      "abs_lfc_lo": 0.25,
+      "abs_lfc_hi": Infinity,
+      "n_pairs": 9367,
+      "n_silenced_genes": 175,
+      "n_components": 33,
+      "frac_obs_dec": 0.6418276929646631,
+      "accuracy": 0.5330415287712181,
+      "always_dec": 0.6418276929646631,
+      "balanced_acc_minus_half": 0.025377932659271574,
+      "mcc": 0.04878549630439206,
+      "ci95_bal_genes": [
+        0.00118401629963642,
+        0.04830043687250722
+      ],
+      "ci_bonferroni6_bal_genes": [
+        -0.00748727762249439,
+        0.05659852796535483
+      ],
+      "ci95_bal_components": [
+        -0.01415132727599141,
+        0.04597387314486486
+      ],
+      "ci95_mcc_genes": [
+        0.002306556400619892,
+        0.0948236392392259
+      ],
+      "ci_bonferroni6_mcc_genes": [
+        -0.014334340006378071,
+        0.11052202447090397
+      ],
+      "ci95_mcc_components": [
+        -0.023710708970966412,
+        0.08957055324314714
+      ],
+      "target_baseline_accuracy": 0.7316109746984093,
+      "target_baseline_balanced_acc": 0.6989716047289425,
+      "target_baseline_mcc": 0.4062447631812242
+    }
+  ],
+  "note": "exploratory; bands were part of the v2 design, the follow-up CIs were added after seeing the v3 numbers; the target-direction baseline is the cross-fitted one from the primary run (fit on the primary labels), so for the file labels it is only approximate",
+  "script_sha256": "0aad61dc10b45fb61b84e4fbdeee5901e71dd035dbc9360a93b4ec4f5f7631ea",
+  "seed": 42,
+  "n_boot": 2000,
+  "wall_seconds": 0.7
+}

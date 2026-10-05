@@ -1,0 +1,143 @@
+{
+  "edges": {
+    "n_edges_main": 318387,
+    "n_edges_second_way": 318387,
+    "n_both": 318387,
+    "n_only_main": 0,
+    "n_only_second": 0,
+    "sign_agree": 1.0,
+    "max_abs_diff_d_vs_csv_rounded": 4.9999981412640615e-05,
+    "max_abs_diff_d_vs_npz_float32": 4.708528162922221e-07,
+    "share_inhibitory_second": 0.5792416147644219,
+    "pass_": true
+  },
+  "records_v3": {
+    "n_a": 796304,
+    "n_b": 796304,
+    "n_both": 796304,
+    "evidence_equal": true,
+    "n_inhibitory_equal": true,
+    "pred_equal": true,
+    "max_abs_lfc_diff": 0.0,
+    "pass_": true
+  },
+  "records_v2_second_way_vs_v2_per_pair": {
+    "n_a": 698624,
+    "n_b": 698624,
+    "n_both": 698624,
+    "evidence_equal": true,
+    "n_inhibitory_equal": true,
+    "pred_equal": true,
+    "max_abs_lfc_diff": 0.0,
+    "pass_": true
+  },
+  "metrics_v3_second_way": {
+    "n": 796304,
+    "accuracy": 0.5028958789607989,
+    "balanced_accuracy": 0.5018528623816707,
+    "mcc": 0.003704463144479645,
+    "always_decrease": 0.5248108762482669,
+    "always_increase": 0.47518912375173306,
+    "chance_from_marginals": 0.5010475789161165,
+    "target_baseline_accuracy": 0.585446010568828,
+    "boot_seed7_ci_balanced_minus_half": [
+      -0.0019344139995539703,
+      0.005695137356689292
+    ],
+    "boot_seed7_ci_mcc": [
+      -0.0038731331733367234,
+      0.011406766246580236
+    ],
+    "boot_seed7_ci_acc_minus_best_constant": [
+      -0.03659195694781796,
+      -0.0053185323991745284
+    ]
+  },
+  "metrics_compare": {
+    "accuracy": [
+      0.5028958789607989,
+      0.5028958789607989
+    ],
+    "balanced": [
+      0.5018528623816707,
+      0.5018528623816707
+    ],
+    "mcc": [
+      0.003704463144479645,
+      0.003704463144479645
+    ],
+    "chance": [
+      0.5010475789161165,
+      0.5010475789161165
+    ],
+    "target_baseline": [
+      0.585446010568828,
+      0.585446010568828
+    ],
+    "ci_balanced_minus_half": [
+      [
+        -0.0018282460075429135,
+        0.005731941692444208
+      ],
+      [
+        -0.0019344139995539703,
+        0.005695137356689292
+      ]
+    ],
+    "ci_mcc": [
+      [
+        -0.0036559164146629797,
+        0.011463216952820411
+      ],
+      [
+        -0.0038731331733367234,
+        0.011406766246580236
+      ]
+    ],
+    "pass_point_estimates": true
+  },
+  "lfc": {
+    "control_rows_equal": true,
+    "genes": [
+      {
+        "gene": "CDC6",
+        "n_cells_second_way": 153,
+        "n_cells_main": 153,
+        "max_abs_diff": 1.021405182655144e-14,
+        "self_lfc": -0.5021125973721356
+      },
+      {
+        "gene": "CENPH",
+        "n_cells_second_way": 58,
+        "n_cells_main": 58,
+        "max_abs_diff": 1.021405182655144e-14,
+        "self_lfc": -0.4808311132042635
+      },
+      {
+        "gene": "CLTC",
+        "n_cells_second_way": 129,
+        "n_cells_main": 129,
+        "max_abs_diff": 1.021405182655144e-14,
+        "self_lfc": -1.041700315613343
+      },
+      {
+        "gene": "MCM4",
+        "n_cells_second_way": 80,
+        "n_cells_main": 80,
+        "max_abs_diff": 1.021405182655144e-14,
+        "self_lfc": -0.8061215580913216
+      },
+      {
+        "gene": "WDHD1",
+        "n_cells_second_way": 175,
+        "n_cells_main": 175,
+        "max_abs_diff": 1.021405182655144e-14,
+        "self_lfc": -0.2410460850921189
+      }
+    ],
+    "pass_": true
+  },
+  "all_pass": true,
+  "script_sha256": "dd5333789054e2bf4bce63f315c160da7c5fb94d1a6f8c125821b49facbfcd16",
+  "wall_seconds": 19.3
+}

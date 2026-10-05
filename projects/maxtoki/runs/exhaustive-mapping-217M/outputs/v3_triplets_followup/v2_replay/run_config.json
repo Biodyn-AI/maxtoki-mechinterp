@@ -1,0 +1,23 @@
+{
+ "chunks": [
+  {
+   "stage": "analyze",
+   "start": "2026-10-02T16:45:30",
+   "wall_seconds": 350.8,
+   "triplets_done": 544,
+   "device": "cpu",
+   "status": "DONE",
+   "script_sha256": "94e31c039de90776339871ad99a4f344e39cae20b7c1bebe8b4382c5120d7bb5"
+  },
+  {
+   "stage": "power",
+   "end": "2026-10-02T16:51:36",
+   "wall_seconds": 14.8,
+   "script_sha256": "94e31c039de90776339871ad99a4f344e39cae20b7c1bebe8b4382c5120d7bb5"
+  }
+ ],
+ "item": "V3-4: triplet grid with v3 SAEs and correctly encoded inputs",
+ "script": "<REPO_ROOT>/projects/maxtoki/runs/exhaustive-mapping-217M/scripts/v3_triplets.py",
+ "script_sha256": "94e31c039de90776339871ad99a4f344e39cae20b7c1bebe8b4382c5120d7bb5",
+ "note": "v2_replay/ is the v3 analyze + power code run on the stored v2 grid (outputs/v2_triplets: deployed SAEs, log1p-ranked inputs, by design) only to test that the analysis code reproduces the v2 numbers."
+}

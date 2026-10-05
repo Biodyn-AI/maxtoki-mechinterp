@@ -1,0 +1,40 @@
+{
+  "seed_gene_perm_base": 20261107,
+  "n_boot": 1000,
+  "method": "same gene-bootstrap resamples as 'boot'; chance per resample = CCA / top-1 after replacing each gene of the other model by a randomly chosen gene (whole-gene permutation, copies stay paired); one permutation per resample; percentile 2.5/97.5 of (resample value - resample chance)",
+  "resample_check_max_abs_diff": 0.0,
+  "cca_null_gene": {
+    "mean": 0.7951727334025054,
+    "ci95": [
+      0.7450739738439507,
+      0.8400752392246171
+    ]
+  },
+  "top1_null_gene": {
+    "mean": 0.2905114285714286,
+    "ci95": [
+      0.24857142857142858,
+      0.3342857142857143
+    ]
+  },
+  "cca_excess": {
+    "mean": 0.11532577806117161,
+    "ci95": [
+      0.0772925525443648,
+      0.15552264187241185
+    ],
+    "sd": 0.020113247151024888
+  },
+  "top1_excess": {
+    "mean": 0.2656457142857143,
+    "ci95": [
+      0.19428571428571423,
+      0.33999999999999997
+    ],
+    "sd": 0.03706383965325902
+  },
+  "wall_seconds": 122.75050210952759,
+  "model": "gf",
+  "domain": "immune",
+  "part": "bootgene"
+}

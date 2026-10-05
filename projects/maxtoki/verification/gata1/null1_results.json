@@ -1,0 +1,127 @@
+{
+ "gata1_chip_overlap_distribution_all_features": {
+  "0": 2638,
+  "1": 1462,
+  "2": 544,
+  "3": 195,
+  "4": 58,
+  "5": 21,
+  "6": 6,
+  "7": 3,
+  "8": 1
+ },
+ "gata1_trrust_overlap_distribution_all_features": {
+  "0": 4751,
+  "1": 174,
+  "2": 3
+ },
+ "observed_max_overlap_chip": 8,
+ "exact_random_feature_null_chip": {
+  ">=2": 0.60154,
+  ">=3": 0.25689,
+  ">=4": 0.08713,
+  ">=5": 0.03107,
+  ">=6": 0.01011,
+  ">=7": 0.00405,
+  ">=8": 0.00101
+ },
+ "exact_random_feature_null_trrust": {
+  ">=1": 0.1672,
+  ">=2": 0.00304,
+  ">=3": 0.0
+ },
+ "n_features_with_chip_overlap_ge8": 1,
+ "rank_of_2610_among_all_features_by_chip_overlap": 1,
+ "threshold_search_adjusted_p_random_feature_null": 0.03155,
+ "simulated_P(max>=8)_200k": 0.001035,
+ "gene_rarity_vs_chip_membership": [
+  {
+   "count_bin": "(0,1]",
+   "n_genes": 17,
+   "frac_GATA1_chip": 0.4706,
+   "frac_any_chip_TF": 0.7647
+  },
+  {
+   "count_bin": "(1,2]",
+   "n_genes": 25,
+   "frac_GATA1_chip": 0.2,
+   "frac_any_chip_TF": 0.96
+  },
+  {
+   "count_bin": "(2,5]",
+   "n_genes": 86,
+   "frac_GATA1_chip": 0.2791,
+   "frac_any_chip_TF": 0.907
+  },
+  {
+   "count_bin": "(5,10]",
+   "n_genes": 94,
+   "frac_GATA1_chip": 0.234,
+   "frac_any_chip_TF": 0.8936
+  },
+  {
+   "count_bin": "(10,50]",
+   "n_genes": 894,
+   "frac_GATA1_chip": 0.0794,
+   "frac_any_chip_TF": 0.7819
+  },
+  {
+   "count_bin": "(50,200]",
+   "n_genes": 3222,
+   "frac_GATA1_chip": 0.0202,
+   "frac_any_chip_TF": 0.6989
+  },
+  {
+   "count_bin": "(200,100000]",
+   "n_genes": 1986,
+   "frac_GATA1_chip": 0.0121,
+   "frac_any_chip_TF": 0.6964
+  }
+ ],
+ "spearman_count_vs_GATA1chip": [
+  -0.16982392908213226,
+  3.936898876224538e-42
+ ],
+ "median_top20_gene_count_resp_features": {
+  "628": 93.5,
+  "1334": 97.0,
+  "2006": 79.5,
+  "2610": 6.5,
+  "2627": 72.5
+ },
+ "feature_rarity_quantiles_all": [
+  55.5,
+  93.0,
+  119.5,
+  151.5,
+  244.0
+ ],
+ "spearman_feature_rarity_vs_GATA1chip_overlap": [
+  -0.19070957891332727,
+  1.3929431136012722e-41
+ ],
+ "n_features_as_rare_as_2610": 3,
+ "mean_chip_overlap_rare_features": 5.666666666666667,
+ "mean_chip_overlap_all": 0.7177353896103896,
+ "P_single_feature_overlap>=8_all": 0.00020292207792207794,
+ "P_single_feature_overlap>=8_rare_matched": 0.3333333333333333,
+ "approx_P_max5>=8_one_rare_matched": 0.3338742941872609,
+ "tf_swap": {
+  "n_tfs_with_>=20_in_universe": 291,
+  "GATA1_rank_by_p_randfeat_maxge_obs": 1,
+  "GATA1_p_randfeat_maxge_obs": 0.0010146103896103709,
+  "frac_TFs_with_p<=GATA1": 0.03436426116838488,
+  "GATA1_rank_by_minp_thr2to5": 98,
+  "frac_TFs_with_minp<=GATA1_minp": 0.3402061855670103,
+  "n_TFs_where_2610_overlap>=8": 3,
+  "n_TFs_where_2610_overlap>=5": 69,
+  "GATA1_rank_by_2610_hypergeom": 4,
+  "frac_TFs_with_max_overlap>=5": 0.2542955326460481,
+  "size_matched_150to300_in_uni": {
+   "n": 154,
+   "frac_maxoverlap>=8": 0.012987012987012988,
+   "GATA1_rank_by_p": 1,
+   "frac_p<=GATA1": 0.03896103896103896
+  }
+ }
+}

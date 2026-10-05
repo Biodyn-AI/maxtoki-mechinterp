@@ -1,0 +1,174 @@
+{
+ "manifest_lists_all_files": true,
+ "manifest_mismatch": [],
+ "shapes": {
+  "mt": [
+   20275,
+   1232
+  ],
+  "gf": [
+   20275,
+   1152
+  ],
+  "sc": [
+   60697,
+   512
+  ]
+ },
+ "dtypes": {
+  "mt": "float32",
+  "gf": "float32",
+  "sc": "float32"
+ },
+ "ln": {
+  "weight": [
+   [
+    512
+   ],
+   "float32"
+  ],
+  "bias": [
+   [
+    512
+   ],
+   "float32"
+  ],
+  "eps": [
+   [],
+   "float64"
+  ]
+ },
+ "ln_eps": 1e-05,
+ "finite": {
+  "mt": true,
+  "gf": true,
+  "sc": true
+ },
+ "maxtoki_dict": {
+  "n": 23277,
+  "ensg": 20271,
+  "special": {
+   "<pad>": 0,
+   "<mask>": 1,
+   "<eos>": 3,
+   "<boq>": 23275,
+   "<eoq>": 23276,
+   "<bos>": 2
+  },
+  "numeric": 3000,
+  "numeric_min": -1500,
+  "numeric_max": 1499,
+  "ids_ge_20275": [
+   "<boq>",
+   "<eoq>"
+  ],
+  "numeric_all_ge_20275": true,
+  "ensg_max_id": 20274,
+  "ids_unique": true
+ },
+ "gf_dict": {
+  "n": 20275,
+  "ensg": 20271,
+  "special": {
+   "<pad>": 0,
+   "<mask>": 1,
+   "<cls>": 2,
+   "<eos>": 3
+  },
+  "max_id": 20274
+ },
+ "mt_gf_same_ids_all_genes": true,
+ "scgpt_vocab": {
+  "n": 60697,
+  "ids_perm": true,
+  "pos_eq_id": 1,
+  "special": {
+   "<eoc>": 60696,
+   "<pad>": 60694,
+   "<cls>": 60695
+  }
+ },
+ "scgpt_case_collisions": 0,
+ "ens_sym": {
+  "rows": 63675,
+  "cols": [
+   "ensembl_id",
+   "symbol"
+  ],
+  "uniq_ens": 63675,
+  "uniq_sym": 63675,
+  "na": 0
+ },
+ "panels": {
+  "lung": {
+   "n": 382,
+   "uniq": 382,
+   "in_mt": 382,
+   "in_gf": 382,
+   "has_symbol": 382,
+   "sym_in_scgpt_exact": 382,
+   "mt_id_lt_20275": 382,
+   "same_as_deployed_order": true,
+   "sym_matches_deployed": 382
+  },
+  "immune": {
+   "n": 350,
+   "uniq": 350,
+   "in_mt": 350,
+   "in_gf": 350,
+   "has_symbol": 350,
+   "sym_in_scgpt_exact": 350,
+   "mt_id_lt_20275": 350,
+   "same_as_deployed_order": true,
+   "sym_matches_deployed": 350
+  },
+  "external_lung": {
+   "n": 380,
+   "uniq": 380,
+   "in_mt": 380,
+   "in_gf": 380,
+   "has_symbol": 380,
+   "sym_in_scgpt_exact": 380,
+   "mt_id_lt_20275": 380,
+   "same_as_deployed_order": true,
+   "sym_matches_deployed": 380
+  }
+ },
+ "overlaps": {
+  "lung_immune": 75,
+  "lung_ext": 168,
+  "immune_ext": 77,
+  "all3": 36,
+  "union": 828
+ },
+ "mt_eq_ckpt": 0.0,
+ "gf_eq_ckpt": 0.0,
+ "gf_dict_eq_pkl": true,
+ "ens_sym_eq_pkl": true,
+ "sc_eq_ckpt": 0.0,
+ "ln_w_eq": 0.0,
+ "ln_b_eq": 0.0,
+ "d10_subset_keys": [
+  "lung__gf__mt",
+  "lung__gf__other",
+  "lung__gf__ens",
+  "lung__sc__mt",
+  "lung__sc__fixed",
+  "lung__sc__deployed",
+  "lung__sc__fixed_raw",
+  "lung__sc__ens",
+  "lung__sc__sym",
+  "immune__gf__mt",
+  "immune__gf__other",
+  "immune__gf__ens",
+  "immune__sc__mt",
+  "immune__sc__fixed",
+  "immune__sc__deployed",
+  "immune__sc__fixed_raw",
+  "immune__sc__ens",
+  "immune__sc__sym",
+  "external_lung__gf__mt",
+  "external_lung__gf__other"
+ ],
+ "d10_subset_compare": {}
+}

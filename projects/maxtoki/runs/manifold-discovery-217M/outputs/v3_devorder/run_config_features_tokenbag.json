@@ -1,0 +1,60 @@
+{
+ "script": "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/scripts/v3_devorder_features.py",
+ "script_sha256": "ee3098c583aa9b58748c90f0c41539e98a133e96ca0496c8d8f23275089ed8b8",
+ "imports": {
+  "v2b_devorder_01_features.py": "150210f84a4768a744e3e65f96e36be6e27553a27df234790a9703032ff51cf9",
+  "v2b_devorder_common.py": "98202441b03c093ef6c010bebd64a06e65377d9ab5f9568cc0030ee620f2e951",
+  "v3_devorder_common.py": "f58d70d87624211bfbdfc8b0c043d698f8a06a281848bd82440c7ebaa57d9b91"
+ },
+ "written_at": "2026-10-03 07:42:38",
+ "python": "3.12.9",
+ "numpy": "1.26.4",
+ "torch": "2.11.0",
+ "torch_threads": 4,
+ "inputs_sha256": {
+  "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/outputs/v3_devorder/artifacts/anchors/anchor_meta_internal.csv": "9b8c5686d7d87497e5b973693dbbd2bf2bb865872d3c27b8e50622a3e7a784ca",
+  "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/outputs/v3_devorder/artifacts/anchors/anchor_meta_external.csv": "85436fada49d034ae1f048b56b7dba394b0650ccb09e0c58e62b710365806011",
+  "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/outputs/v3_devorder/artifacts/anchors/anchor_meta_zeroshot.csv": "6b6bae3162bacf37a21aa213794c3693ec4db9544905af59e302db9027c9ade2",
+  "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/outputs/v3_devorder/artifacts/anchors/anchor_meta_lung_nonhema.csv": "6c1d4598c712892fa97184f6756b0d9b4bc2884f151dbf645cfb95cc767328c0",
+  "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/outputs/v3_devorder/cells/tokens_internal.npz": "4309b4301bddfe3fe5830e159474db384df389f495dfeebcb9645ccf77adeef7",
+  "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/outputs/v3_devorder/cells/tokens_external.npz": "85633d4f67390ef377a756ee7045b683fe7d72d695d6dcea2abb1dc34e74b27d",
+  "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/outputs/v3_devorder/cells/tokens_zeroshot.npz": "dc19927d94dd29f1b207fd5592a52294da43208995f479b271a48f57f38cc5fd",
+  "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/outputs/v3_devorder/cells/tokens_lung_nonhema.npz": "d7bfad69002d2cf2bdca2352251601198f6a02195eed0ca05553af9a24179232",
+  "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/outputs/v3_devorder/cells/plan_internal.csv": "190cd827990709bae5307381930d0acb0dd00c71698950e4997e8ef5dc68f99f",
+  "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/outputs/v3_devorder/cells/plan_external.csv": "2f14273609c8f63718906429c55bb3ed90a974c240bd7213e53e65392701e3df",
+  "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/outputs/v3_devorder/cells/plan_zeroshot.csv": "681ae1e6496d599201776d3692a4983bdc86ee754d1dbce59c129922f2154848",
+  "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/outputs/v3_devorder/cells/plan_lung_nonhema.csv": "2e6f15f5e0b921605aa2101ecc86fb131092c5ec04e5442e378393d34d105f9c",
+  "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/outputs/phase1/cells_internal.npz": "51ff9caf378c607c926c069eae4f547d07fd92510c6a5a2958663bedfabd45a6",
+  "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/outputs/phase1/cells_external.npz": "f7253ab9a4536dcb7a8d5e9f49a4664b8e4ffc1868d7d8e0cbc02ebd99f797ca",
+  "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/outputs/phase1/cells_zeroshot.npz": "0cba9c84c9d83ecb09ed319873b58e639f827cb596e97a90650b6f9906cd0425",
+  "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/outputs/phase1/cells_lung_nonhema.npz": "e94bbf6e8e7df1af03c26e9419bbb47303dee0b0dcc4020323e549fff3c13481",
+  "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/outputs/v2b_devorder/features/tokenbag_pca64__internal.npy": "086c15af537a45f3cac06ae5f8a0d2341fff88fa102404a82befe46aa548c010",
+  "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/outputs/v2b_devorder/features/tokenbag_pca64__external.npy": "675d3336ffb7a5a89d073e454a6fb0d958fce4102e27d8f9c20f49cd15c2c14a",
+  "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/outputs/v2b_devorder/features/tokenbag_pca64__zeroshot.npy": "a116be7fe1ae2acb1f59db3e493e6a0d663111e4890745c0d7c22b1c948588b0",
+  "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/outputs/v2b_devorder/features/tokenbag_pca64__lung_nonhema.npy": "5c5b3acd8ef4be015d3773b12cd11b1b712d9f191857c3bd1a3e32b3b608ae19"
+ },
+ "seeds": {
+  "pca": "sklearn PCA random_state 42",
+  "lookup_ct": "default_rng([7001,k]) / ([7001,k,panel])",
+  "lookup_cls": "default_rng([7002,k]) / ([7002,k,panel])"
+ },
+ "info": {
+  "tokenbag_v3": {
+   "vocab": 20240,
+   "genes_kept": 19599,
+   "pca64_evr_sum": 0.677087398711592
+  },
+  "tokenbag_deployed_recipe_check": {
+   "max_abs_diff_vs_v2b": {
+    "internal": 0.0,
+    "external": 0.0,
+    "zeroshot": 0.0,
+    "lung_nonhema": 0.0
+   },
+   "vocab": 20240,
+   "genes_kept": 19601,
+   "pca64_evr_sum": 0.6775231743231416
+  }
+ },
+ "seconds": 3.6897342205047607
+}

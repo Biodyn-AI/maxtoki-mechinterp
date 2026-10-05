@@ -1,0 +1,34 @@
+======================================================================
+PHASE 3 — Residualization + degree null + propensity matching (MaxToki L8)
+======================================================================
+
+[1] Loading Phase 0 + Phase 1 artefacts...
+
+[2] Building TRRUST ground-truth edge matrix...
+  TRRUST rows: 9,396  TFs in HVG: 86
+  TRRUST edges in HVG grid: 173
+  TFs with >= 3 TRRUST targets in HVG: 16
+  TRRUST AUROC baseline — attention: 0.6045
+  TRRUST AUROC baseline — spearman:  0.5963
+
+[3a] Cross-fitted residualization...
+  attention  | ols  | R²=0.061  baseline AUROC=0.6045  residual AUROC=0.4922
+  attention  | gbdt | R²=0.372  baseline AUROC=0.6045  residual AUROC=0.5191
+  spearman   | ols  | R²=0.140  baseline AUROC=0.5963  residual AUROC=0.4799
+  spearman   | gbdt | R²=0.281  baseline AUROC=0.5963  residual AUROC=0.4624
+
+[3b] Degree-preserving null (curveball n=50)...
+  curveball null complete (0.5s)
+  observed: 0.6045  null mean=0.6043  std=0.0015  z=0.17
+  label-shuffle null (4.3s): mean=0.5019  std=0.0245  z=4.18
+
+[3c] Propensity matching on Phase-1 DE targets...
+  loading HVG-only expression (sequential)...
+  loaded HVG matrix: (247914, 1500)  (19.4s)
+  full pair set: 487,175  positive rate 0.0990
+  matched set: 289,470  positive rate 0.1667
+  SMD pre→post: {'t_mean': {'pre': 0.28736721419099753, 'post': -0.013658282579502554}, 't_var': {'pre': 0.5909987783450991, 'post': 0.1400936944265662}, 't_drop': {'pre': 0.06735135531631263, 'post': -0.028139187462102793}}
+  matched per-pert mean AUROC (raw): attn=0.5009  spear=0.5489  (n_perts=325)
+  matched GroupKFold: gene_only=0.5702  gene+attn=0.5717  gene+corr=0.5931
+
+PHASE 3 COMPLETE — outputs: <REPO_ROOT>/projects/maxtoki/runs/attention-grn-217M/outputs/phase3_rpe1

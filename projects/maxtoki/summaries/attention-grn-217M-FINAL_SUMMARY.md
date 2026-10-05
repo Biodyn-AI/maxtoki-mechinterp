@@ -124,7 +124,7 @@ Six conditions × 300 cells × TRRUST-AUROC at primary layer. All deltas tiny an
 | All downstream analyses (Phase 1, 2, 3, 12 × 4 runs) | ~20 min |
 | **Total** | **~5.5 h compute** |
 
-Hardware: Apple Silicon laptop (32 GB unified memory), MPS backend, float32.
+Hardware: MacBook Pro (Apple Silicon, 32 GB unified memory), MPS backend, float32.
 
 ## Artefacts in outputs/
 

@@ -1,0 +1,37 @@
+{
+  "n_cells": 3,
+  "rows": [
+    289300,
+    292833,
+    293501
+  ],
+  "T0_max_pre_vs_hidden_states": 0.0,
+  "T0_hs11_vs_norm_out10": 0.0,
+  "T0_hs11_vs_out10_min": 748.4371948242188,
+  "noise_floor_logits": 0.0,
+  "T1_zero_delta_max": 0.0,
+  "T1_steer_alpha1_max": 0.0,
+  "T2_upstream_max": 0.0,
+  "T2_downstream_min": 0.2708415985107422,
+  "T3_AB_vs_B_h11_min": 0.5537523031234741,
+  "T3_ABC_vs_C_h11_min": 2.552326202392578,
+  "T3_legacy_AB_vs_B_h11_max": 0.0,
+  "T3_legacy_ABC_vs_C_h11_max": 0.0,
+  "T4_never_active_max": 0.0,
+  "T5_linearity_max": 5.60954213142395e-05,
+  "T5_legacy_zero_edit_L11_meanabs": [
+    0.7265610694885254,
+    0.7111395597457886,
+    0.7328840494155884
+  ],
+  "per_check_pass": {
+    "T0_convention": true,
+    "T1_zero_delta": true,
+    "T2_locality": true,
+    "T3_stacking": true,
+    "T4_never_active": true,
+    "T5_L11_no_double_norm": true
+  },
+  "T3_legacy_reproduces_overwrite_bug": true,
+  "all_pass": true
+}

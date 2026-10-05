@@ -1,0 +1,69 @@
+======================================================================
+EXPERIMENTS 2 + 3
+======================================================================
+  SAEs loaded: [0, 3, 5, 6, 8, 9, 11]
+
+============================================================
+EXPERIMENT 2 — Combinatorial ablation (4 triplets)
+============================================================
+
+  Selecting triplets (L0, L5, L9 with shared ontology)...
+  selected 4 triplets
+  100 cells
+Loading weights:   0%|          | 0/102 [00:00<?, ?it/s]Loading weights: 100%|██████████| 102/102 [00:00<00:00, 13551.01it/s]
+
+  Triplet 0: L0_F0 × L5_F0 × L9_F74 (shared: 1 terms)
+    pairwise_ratio=0.165  threeway_ratio=0.190  marginal_C|AB=0.294  synergy=0/2980
+
+  Triplet 1: L0_F0 × L5_F0 × L9_F81 (shared: 1 terms)
+    pairwise_ratio=0.165  threeway_ratio=0.190  marginal_C|AB=0.294  synergy=0/2976
+
+  Triplet 2: L0_F0 × L5_F0 × L9_F101 (shared: 1 terms)
+    pairwise_ratio=0.165  threeway_ratio=0.190  marginal_C|AB=0.294  synergy=0/2980
+
+  Triplet 3: L0_F0 × L5_F0 × L9_F108 (shared: 1 terms)
+    pairwise_ratio=0.165  threeway_ratio=0.190  marginal_C|AB=0.294  synergy=0/2980
+
+  SUMMARY: pairwise=0.165  threeway=0.190  synergy=0.00%
+  Paper: pairwise=0.74  threeway=0.59  synergy=0.14%
+  EXPERIMENT 2 COMPLETE
+
+============================================================
+EXPERIMENT 3 — Trajectory steering
+============================================================
+
+  Loading Tabula Sapiens immune cells...
+  200 cells, pseudotime range [0.00, 1.00]
+
+  Identifying switch features...
+Loading weights:   0%|          | 0/102 [00:00<?, ?it/s]Loading weights:  55%|█████▍    | 56/102 [00:00<00:00, 557.94it/s]Loading weights: 100%|██████████| 102/102 [00:00<00:00, 863.13it/s]
+  L0: 610 switch features (|ρ| > 0.3, p < 0.01)
+  L3: 1195 switch features (|ρ| > 0.3, p < 0.01)
+  L6: 1371 switch features (|ρ| > 0.3, p < 0.01)
+  L9: 1356 switch features (|ρ| > 0.3, p < 0.01)
+  L11: 1235 switch features (|ρ| > 0.3, p < 0.01)
+  total switch features: 5767
+
+  steering 15 features...
+  L0_F40 (negative): α=5 frac_pos=0.04  Δ=0.4241
+  L0_F1657 (positive): α=5 frac_pos=0.96  Δ=0.4134
+  L0_F4797 (negative): α=5 frac_pos=0.02  Δ=0.4262
+  L3_F4071 (positive): α=5 frac_pos=0.20  Δ=-0.1204
+  L3_F2080 (positive): α=5 frac_pos=0.20  Δ=-0.1178
+  L3_F2546 (negative): α=5 frac_pos=0.80  Δ=-0.1151
+  L6_F4138 (negative): α=5 frac_pos=0.26  Δ=0.0442
+  L6_F4888 (negative): α=5 frac_pos=0.26  Δ=0.0428
+  L6_F42 (negative): α=5 frac_pos=0.26  Δ=0.0426
+  L9_F1014 (negative): α=5 frac_pos=0.64  Δ=-0.0389
+  L9_F1228 (negative): α=5 frac_pos=0.64  Δ=-0.0358
+  L9_F1765 (negative): α=5 frac_pos=0.64  Δ=-0.0392
+Traceback (most recent call last):
+  File "<REPO_ROOT>/projects/maxtoki/runs/exhaustive-mapping-217M/scripts/experiments_2_3.py", line 392, in <module>
+    hook = xt.model.model.layers[li].register_forward_hook(_hook)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^
+  File "<REPO_ROOT>/projects/maxtoki/.venv/lib/python3.12/site-packages/torch/nn/modules/container.py", line 386, in __getitem__
+    return self._modules[self._get_abs_string_index(idx)]
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<REPO_ROOT>/projects/maxtoki/.venv/lib/python3.12/site-packages/torch/nn/modules/container.py", line 370, in _get_abs_string_index
+    raise IndexError(f"index {idx} is out of range")
+IndexError: index 11 is out of range

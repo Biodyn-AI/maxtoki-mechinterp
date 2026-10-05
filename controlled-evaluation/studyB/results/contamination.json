@@ -1,0 +1,1732 @@
+{
+ "B:B2418:generic:3:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B2418.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B2418\\\" | head -100\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B4328:checklist:2:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B4328.json\\\"; echo; ls -laR \\\"<CODE_ROOT>/analysis-tasks/B4328\\\" | head -50\", \"description\": \"Read answer key and list analysis package\"}"
+  }
+ ],
+ "B:B8104:generic:1:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B8104.json\\\"; echo; ls -la \\\"<CODE_ROOT>/analysis-tasks/B8104\\\" \\\"<CODE_ROOT>/analysis-tasks/B8104\\\"/*\", \"description\": \"Read answer key and list analysis package\"}"
+  }
+ ],
+ "B:B4174:generic:3:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B4174.json\\\"; echo; ls -la \\\"<CODE_ROOT>/analysis-tasks/B4174\\\" \\\"<CODE_ROOT>/analysis-tasks/B4174\\\"/*\", \"description\": \"Read answer key and list analysis package\"}"
+  }
+ ],
+ "B:B9296:generic:1:grade3": [],
+ "B:B8827:checklist:1:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B8827.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B8827\\\" | head -50\", \"description\": \"Read answer key and list package\"}"
+  }
+ ],
+ "B:B4481:checklist:2:grade2": [],
+ "B:B3100:generic:3:review": [],
+ "B:B4328:generic:1:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B4328.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B4328\\\"\", \"description\": \"Read answer key and list package\"}"
+  }
+ ],
+ "B:B9296:generic:1:grade1": [],
+ "B:B8045:checklist:3:grade2": [],
+ "B:B2418:checklist:3:grade3": [],
+ "B:B1249:checklist:2:grade1": [],
+ "B:B2418:generic:3:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B2418.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B2418\\\" | head -50\", \"description\": \"Read answer key and list package\"}"
+  }
+ ],
+ "B:B3954:checklist:1:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B3954.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B3954\\\"\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B4481:generic:3:grade1": [],
+ "B:B6874:checklist:3:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B6874.json\\\"; echo; ls -la \\\"<CODE_ROOT>/analysis-tasks/B6874\\\" \\\"<CODE_ROOT>/analysis-tasks/B6874\\\"/*\", \"description\": \"Read answer key and list analysis package\"}"
+  }
+ ],
+ "B:B4481:checklist:3:verify": [],
+ "B:B7037:checklist:3:grade1": [],
+ "B:B8612:checklist:2:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B8612.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B8612\\\"\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B9709:generic:1:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B9709.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B9709\\\" | head -50\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B2418:generic:1:grade2": [],
+ "B:B4328:checklist:1:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B4328.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B4328\\\"\", \"description\": \"Read answer key and list analysis package\"}"
+  }
+ ],
+ "B:B6874:generic:3:verify": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cd \\\"<CODE_ROOT>/analysis-tasks/B6874\\\" && find . -maxdepth 3 -not -path '*/.*' | head -100; echo; cat \\\"<EVAL_ROOT>/studyB/keys/B6874.json\\\"\", \"description\": \"List package files and show answer key\"}"
+  }
+ ],
+ "B:B8833:checklist:2:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B8833.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B8833\\\" | head -100\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B7392:checklist:2:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B7392.json\\\"; echo; ls -la \\\"<CODE_ROOT>/analysis-tasks/B7392\\\" \\\"<CODE_ROOT>/analysis-tasks/B7392\\\"/*\", \"description\": \"Read answer key and list package\"}"
+  }
+ ],
+ "B:B4668:checklist:2:grade2": [],
+ "B:B7037:checklist:2:grade1": [],
+ "B:B8104:generic:3:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B8104.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B8104\\\"\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B8104:generic:2:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B8104.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B8104\\\" | head -50\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B9296:generic:2:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B9296.json\\\"; echo; ls -la \\\"<CODE_ROOT>/analysis-tasks/B9296\\\" \\\"<CODE_ROOT>/analysis-tasks/B9296\\\"/*\", \"description\": \"Read answer key and list analysis package\"}"
+  }
+ ],
+ "B:B9709:generic:1:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B9709.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B9709\\\" | head -50\", \"description\": \"Read answer key and list package\"}"
+  }
+ ],
+ "B:B8045:generic:3:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B8045.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B8045\\\"\", \"description\": \"Read answer key and list package\"}"
+  }
+ ],
+ "B:B2977:checklist:2:grade3": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B2977.json\\\"; echo; find \\\"<CODE_ROOT>/analysis-tasks/B2977\\\" -maxdepth 3 | head -50\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B9296:checklist:1:grade3": [],
+ "B:B4328:checklist:1:review": [],
+ "B:B8045:generic:2:verify": [],
+ "B:B2101:checklist:1:grade3": [],
+ "B:B6874:generic:3:grade3": [],
+ "B:B4481:checklist:1:grade2": [],
+ "B:B8104:generic:2:grade3": [],
+ "B:B8045:generic:2:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B8045.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B8045\\\" | head -50\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B4174:checklist:1:grade1": [],
+ "B:B1144:checklist:2:grade1": [],
+ "B:B8827:generic:1:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B8827.json\\\"; echo; ls -laR \\\"<CODE_ROOT>/analysis-tasks/B8827\\\"\", \"description\": \"Read answer key and list analysis package\"}"
+  }
+ ],
+ "B:B4668:checklist:3:grade3": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B4668.json\\\"; echo; ls -la \\\"<CODE_ROOT>/analysis-tasks/B4668\\\" \\\"<CODE_ROOT>/analysis-tasks/B4668\\\"/*\", \"description\": \"Read answer key and list analysis package\"}"
+  }
+ ],
+ "B:B8612:checklist:2:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B8612.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B8612\\\" | head -50\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B8104:checklist:2:review": [],
+ "B:B8104:generic:2:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B8104.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B8104\\\" | head -50\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B8827:generic:1:grade2": [],
+ "B:B9296:checklist:2:grade3": [],
+ "B:B7148:generic:3:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B7148.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B7148\\\" | head -50\", \"description\": \"Read answer key and list package\"}"
+  }
+ ],
+ "B:B4328:generic:1:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B4328.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B4328\\\" | head -50\", \"description\": \"Read answer key and list package\"}"
+  }
+ ],
+ "B:B7392:checklist:1:review": [],
+ "B:B7037:generic:3:review": [],
+ "B:B4174:checklist:2:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B4174.json\\\"; echo; ls -la \\\"<CODE_ROOT>/analysis-tasks/B4174\\\"; find \\\"<CODE_ROOT>/analysis-tasks/B4174\\\" -type f | head -50\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B8045:generic:3:grade2": [],
+ "B:B7392:generic:1:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B7392.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B7392\\\" | head -50\", \"description\": \"Read answer key and list package\"}"
+  }
+ ],
+ "B:B9296:checklist:3:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B9296.json\\\"; echo; ls -laR \\\"<CODE_ROOT>/analysis-tasks/B9296\\\"\", \"description\": \"Read answer key and list analysis package\"}"
+  },
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cd \\\"<CODE_ROOT>/analysis-tasks/B9296\\\"; ls \\\"<EVAL_ROOT>/studyB/keys/\\\" | grep -i P02; timeout 300 ./../bin/python - <<'EOF'\\nimport numpy as np\\nz=np.load(\\\"data/norman2019_subset.npz\\\")\\ncounts,totals,lab=z[\\\"counts\\\"],z[\\\"totals\\\"],z[\\\"labels\\\"].astype(str)\\nX=counts.astype(np.float32); X*= (1e4/totals).astype(np.flo"
+  },
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cd \\\"<EVAL_ROOT>/studyB/keys/\\\"; grep -n -i -E \\\"offset|goff|leak|control mean|cmean|group\\\" P02_BUILD.md P02_VERIFICATION.md | head -60\", \"description\": \"Search build/verification notes for offset discussion\"}"
+  }
+ ],
+ "B:B2977:generic:1:verify": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cd \\\"<CODE_ROOT>/analysis-tasks/B2977\\\" && ls -la && find . -maxdepth 3 -not -path '*/.*' | head -100; cat \\\"<EVAL_ROOT>/studyB/keys/B2977.json\\\"\", \"description\": \"List package and read answer key\"}"
+  }
+ ],
+ "B:B7148:generic:1:grade2": [],
+ "B:B9296:checklist:1:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B9296.json\\\"; echo; ls -laR \\\"<CODE_ROOT>/analysis-tasks/B9296\\\"\", \"description\": \"Read answer key and list analysis package\"}"
+  }
+ ],
+ "B:B4174:generic:1:grade3": [],
+ "B:B8045:checklist:2:grade1": [],
+ "B:B4328:checklist:3:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B4328.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B4328\\\"\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B8612:checklist:3:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B8612.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B8612\\\"\", \"description\": \"Read answer key and list package\"}"
+  }
+ ],
+ "B:B7037:checklist:1:verify": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cd \\\"<CODE_ROOT>/analysis-tasks/B7037\\\" && ls -R | head -100 && cat SUMMARY.md && cat \\\"<EVAL_ROOT>/studyB/keys/B7037.json\\\"\", \"description\": \"List package files, read summary and answer key\"}"
+  }
+ ],
+ "B:B3954:checklist:1:grade2": [],
+ "B:B2977:generic:2:grade3": [],
+ "B:B2418:checklist:1:grade1": [],
+ "B:B4668:checklist:3:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B4668.json\\\"; echo; ls -la \\\"<CODE_ROOT>/analysis-tasks/B4668\\\" \\\"<CODE_ROOT>/analysis-tasks/B4668\\\"/*\", \"description\": \"Read answer key and list package\"}"
+  }
+ ],
+ "B:B6874:generic:1:grade3": [],
+ "B:B2418:checklist:2:grade1": [],
+ "B:B4668:generic:1:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B4668.json\\\"; echo; ls -la \\\"<CODE_ROOT>/analysis-tasks/B4668\\\" \\\"<CODE_ROOT>/analysis-tasks/B4668\\\"/*\", \"description\": \"Read answer key and list analysis package\"}"
+  }
+ ],
+ "B:B9296:checklist:2:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B9296.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B9296\\\"\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B9709:generic:3:grade3": [],
+ "B:B9709:checklist:1:grade3": [],
+ "B:B8827:generic:3:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B8827.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B8827\\\" | head -50\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B2977:checklist:2:grade2": [],
+ "B:B3100:checklist:2:grade3": [],
+ "B:B9709:generic:2:grade3": [],
+ "B:B8833:generic:1:verify": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B8833.json\\\"\", \"description\": \"Show answer key\"}"
+  },
+  {
+   "pattern": "biomi_automation",
+   "call": "{\"command\": \"ls ~/ 2>/dev/null | head -50; ls \\\"<REPO_ROOT>/projects/biotensor\\\" | head -50\", \"description\": \"List home and project dirs\"}"
+  }
+ ],
+ "B:B4328:generic:2:grade1": [],
+ "B:B4481:generic:2:grade1": [],
+ "B:B4328:checklist:1:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B4328.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B4328\\\"\", \"description\": \"Read answer key and list analysis package\"}"
+  }
+ ],
+ "B:B3100:checklist:2:review": [],
+ "B:B1144:generic:2:grade1": [],
+ "B:B2418:checklist:3:grade2": [],
+ "B:B8612:generic:1:review": [],
+ "B:B7148:generic:3:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B7148.json\\\"; echo; ls -la \\\"<CODE_ROOT>/analysis-tasks/B7148\\\" \\\"<CODE_ROOT>/analysis-tasks/B7148\\\"/*\", \"description\": \"Read answer key and list package\"}"
+  }
+ ],
+ "B:B6874:checklist:2:grade1": [],
+ "B:B3954:checklist:2:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B3954.json\\\"; echo; ls -laR \\\"<CODE_ROOT>/analysis-tasks/B3954\\\"\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B3954:generic:1:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B3954.json\\\"; echo; ls -la \\\"<CODE_ROOT>/analysis-tasks/B3954\\\" \\\"<CODE_ROOT>/analysis-tasks/B3954\\\"/*\", \"description\": \"Read answer key and list package\"}"
+  }
+ ],
+ "B:B4328:generic:1:grade3": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B4328.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B4328\\\" | head -50\", \"description\": \"Read answer key and list package\"}"
+  }
+ ],
+ "B:B4328:generic:3:grade3": [],
+ "B:B8833:checklist:2:grade1": [],
+ "B:B9709:generic:2:grade2": [],
+ "B:B7148:checklist:3:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B7148.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B7148\\\" | head -50\", \"description\": \"Read answer key and list package\"}"
+  }
+ ],
+ "B:B6874:generic:1:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B6874.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B6874\\\" | head -50\", \"description\": \"Read answer key and list analysis package\"}"
+  }
+ ],
+ "B:B2977:generic:1:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B2977.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B2977\\\" | head -50\", \"description\": \"Read answer key and list analysis package\"}"
+  }
+ ],
+ "B:B4174:generic:1:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B4174.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B4174\\\" | head -50\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B8104:generic:3:grade2": [],
+ "B:B4174:checklist:3:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B4174.json\\\"; echo; ls -laR \\\"<CODE_ROOT>/analysis-tasks/B4174\\\"\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B1249:checklist:1:review": [],
+ "B:B8833:generic:2:review": [],
+ "B:B7037:generic:1:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B7037.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B7037\\\" | head -80\", \"description\": \"Read answer key and list analysis package\"}"
+  }
+ ],
+ "B:B7037:checklist:1:grade3": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B7037.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B7037\\\"\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B4481:generic:3:grade3": [],
+ "B:B4481:checklist:3:grade1": [],
+ "B:B9296:generic:3:grade2": [],
+ "B:B7037:generic:3:grade2": [],
+ "B:B2977:checklist:2:grade1": [],
+ "B:B3100:checklist:2:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B3100.json\\\"; echo; ls -la \\\"<CODE_ROOT>/analysis-tasks/B3100\\\" \\\"<CODE_ROOT>/analysis-tasks/B3100\\\"/*\", \"description\": \"Read answer key and list analysis package\"}"
+  }
+ ],
+ "B:B8833:checklist:3:grade2": [],
+ "B:B1249:checklist:1:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B1249.json\\\"; echo; ls -la \\\"<CODE_ROOT>/analysis-tasks/B1249\\\" \\\"<CODE_ROOT>/analysis-tasks/B1249\\\"/*\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B6874:generic:2:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B6874.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B6874\\\" | head -50\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B8833:checklist:1:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B8833.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B8833\\\" | head -100\", \"description\": \"Read answer key and list package\"}"
+  }
+ ],
+ "B:B9709:generic:2:grade1": [],
+ "B:B2101:generic:1:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B2101.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B2101\\\" | head -50\", \"description\": \"Read answer key and list package\"}"
+  }
+ ],
+ "B:B1144:checklist:2:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B1144.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B1144\\\" | head -50\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B9296:generic:2:grade3": [],
+ "B:B7392:checklist:3:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B7392.json\\\"; echo; ls -la \\\"<CODE_ROOT>/analysis-tasks/B7392\\\" \\\"<CODE_ROOT>/analysis-tasks/B7392\\\"/*\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B4481:generic:3:grade2": [],
+ "B:B4328:checklist:2:grade1": [],
+ "B:B3100:generic:1:grade1": [],
+ "B:B8612:generic:3:grade3": [],
+ "B:B1249:generic:1:grade1": [],
+ "B:B7392:checklist:3:verify": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cd \\\"<CODE_ROOT>/analysis-tasks/B7392\\\" && ls -la && find . -maxdepth 3 -not -path '*/.*' | head -100 && cat SUMMARY.md && cat \\\"<EVAL_ROOT>/studyB/keys/B7392.json\\\"\", \"description\": \"List package and read summary and key\"}"
+  }
+ ],
+ "B:B8612:checklist:2:review": [],
+ "B:B8833:checklist:3:grade1": [],
+ "B:B4481:generic:1:grade2": [],
+ "B:B4328:generic:2:grade2": [],
+ "B:B3954:generic:3:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B3954.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B3954\\\" | head -50\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B4668:checklist:2:grade3": [],
+ "B:B8833:generic:2:grade3": [],
+ "B:B6874:generic:3:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B6874.json\\\"; echo; ls -laR \\\"<CODE_ROOT>/analysis-tasks/B6874\\\"\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B9709:checklist:3:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B9709.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B9709\\\"\", \"description\": \"Read answer key and list package\"}"
+  }
+ ],
+ "B:B6874:generic:1:grade2": [],
+ "B:B8612:generic:2:review": [],
+ "B:B8104:checklist:2:grade3": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B8104.json\\\"; echo; ls -laR \\\"<CODE_ROOT>/analysis-tasks/B8104\\\" | head -80\", \"description\": \"Read answer key and list analysis package\"}"
+  }
+ ],
+ "B:B7392:checklist:1:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B7392.json\\\"; echo; ls -laR \\\"<CODE_ROOT>/analysis-tasks/B7392\\\" | head -80\", \"description\": \"Read answer key and list analysis package\"}"
+  }
+ ],
+ "B:B3100:generic:2:review": [],
+ "B:B1144:checklist:3:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B1144.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B1144\\\" | head -50\", \"description\": \"Read answer key and list package\"}"
+  }
+ ],
+ "B:B4328:generic:3:grade1": [],
+ "B:B9709:checklist:1:grade1": [],
+ "B:B7148:generic:2:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B7148.json\\\"; echo; ls -la \\\"<CODE_ROOT>/analysis-tasks/B7148\\\" \\\"<CODE_ROOT>/analysis-tasks/B7148/code\\\"\", \"description\": \"Read answer key and list package\"}"
+  }
+ ],
+ "B:B6874:checklist:1:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B6874.json\\\"; echo; ls -laR \\\"<CODE_ROOT>/analysis-tasks/B6874\\\"\", \"description\": \"Read answer key and list analysis package\"}"
+  }
+ ],
+ "B:B7392:checklist:1:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B7392.json\\\"; echo; ls -la \\\"<CODE_ROOT>/analysis-tasks/B7392\\\" \\\"<CODE_ROOT>/analysis-tasks/B7392\\\"/*\", \"description\": \"Read answer key and list package\"}"
+  }
+ ],
+ "B:B8827:generic:3:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B8827.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B8827\\\"\", \"description\": \"Read answer key and list analysis package\"}"
+  }
+ ],
+ "B:B7148:generic:2:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B7148.json\\\"; echo; ls -la \\\"<CODE_ROOT>/analysis-tasks/B7148\\\" \\\"<CODE_ROOT>/analysis-tasks/B7148/code\\\"\", \"description\": \"Read answer key and list package\"}"
+  }
+ ],
+ "B:B8827:checklist:2:verify": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cd \\\"<CODE_ROOT>/analysis-tasks/B8827\\\" && ls -la && find . -maxdepth 3 -type f | head -100 && cat \\\"<EVAL_ROOT>/studyB/keys/B8827.json\\\"\", \"description\": \"List package files and read answer key\"}"
+  }
+ ],
+ "B:B9296:checklist:3:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B9296.json\\\"; echo; ls -laR \\\"<CODE_ROOT>/analysis-tasks/B9296\\\"\", \"description\": \"Read answer key and list analysis package\"}"
+  },
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cd \\\"<CODE_ROOT>/analysis-tasks/B9296\\\"; ls \\\"<EVAL_ROOT>/studyB/keys/\\\" | grep -i P02; time ./../bin/python - <<'EOF'\\nimport numpy as np\\nfrom sklearn.linear_model import Ridge\\nz=np.load(\\\"data/norman2019_subset.npz\\\"); counts=z[\\\"counts\\\"]; totals=z[\\\"totals\\\"]; lab=z[\\\"labels\\\"].astype(str)\\nX=counts.astype(np.float"
+  },
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cd \\\"<EVAL_ROOT>/studyB/keys/\\\"; grep -n -i -E \\\"offset|goff|leak|cluster|bootstrap|saturation|pair-specific\\\" P02_BUILD.md P02_VERIFICATION.md | head -60\", \"description\": \"Search build/verification notes for offset and bootstrap remarks\"}"
+  }
+ ],
+ "B:B7148:checklist:1:grade1": [],
+ "B:B7037:generic:1:grade1": [],
+ "B:B3100:checklist:1:grade3": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B3100.json\\\"; echo; ls -laR \\\"<CODE_ROOT>/analysis-tasks/B3100\\\"\", \"description\": \"Read answer key and list package\"}"
+  },
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cd \\\"<CODE_ROOT>/analysis-tasks/B3100\\\"; ls \\\"<EVAL_ROOT>/studyB/keys/\\\" | grep -i P02; sed -n 1,200p \\\"<EVAL_ROOT>/studyB/keys/P02_BUILD.md\\\" 2>/dev/null | head -150\", \"description\": \"Look for build record of the pair\"}"
+  }
+ ],
+ "B:B8612:checklist:1:review": [],
+ "B:B4481:generic:2:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B4481.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B4481\\\" | head -50\", \"description\": \"Read answer key and list package\"}"
+  }
+ ],
+ "B:B2101:checklist:2:review": [],
+ "B:B4668:generic:1:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B4668.json\\\"; echo; ls -la \\\"<CODE_ROOT>/analysis-tasks/B4668\\\" \\\"<CODE_ROOT>/analysis-tasks/B4668\\\"/*\", \"description\": \"Read answer key and list analysis package\"}"
+  }
+ ],
+ "B:B8612:generic:3:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B8612.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B8612\\\"\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B2418:checklist:2:grade2": [],
+ "B:B3100:checklist:1:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B3100.json\\\"; echo; ls -la \\\"<CODE_ROOT>/analysis-tasks/B3100\\\" \\\"<CODE_ROOT>/analysis-tasks/B3100\\\"/*\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B3100:generic:2:grade2": [],
+ "B:B4174:generic:1:grade1": [],
+ "B:B7148:generic:2:review": [],
+ "B:B8104:generic:3:verify": [],
+ "B:B3954:checklist:3:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B3954.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B3954\\\"\", \"description\": \"Read answer key and list package\"}"
+  }
+ ],
+ "B:B8104:checklist:3:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B8104.json\\\"; echo; ls -la \\\"<CODE_ROOT>/analysis-tasks/B8104\\\" \\\"<CODE_ROOT>/analysis-tasks/B8104\\\"/*\", \"description\": \"Read answer key and list package\"}"
+  }
+ ],
+ "B:B8827:checklist:1:grade3": [],
+ "B:B6874:checklist:1:grade3": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B6874.json\\\"; echo; ls -laR \\\"<CODE_ROOT>/analysis-tasks/B6874\\\"\", \"description\": \"Read answer key and list analysis package\"}"
+  }
+ ],
+ "B:B4174:checklist:3:grade1": [],
+ "B:B9709:checklist:2:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B9709.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B9709\\\" | head -50\", \"description\": \"Read answer key and list package\"}"
+  }
+ ],
+ "B:B9709:generic:3:review": [],
+ "B:B1249:generic:2:review": [],
+ "B:B9296:checklist:1:review": [],
+ "B:B8827:generic:3:grade3": [],
+ "B:B6874:checklist:3:grade3": [],
+ "B:B7148:checklist:1:review": [],
+ "B:B2977:checklist:1:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B2977.json\\\"; echo; ls -laR \\\"<CODE_ROOT>/analysis-tasks/B2977\\\"\", \"description\": \"Read answer key and list analysis package\"}"
+  }
+ ],
+ "B:B2977:generic:3:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B2977.json\\\"; echo; ls -laR \\\"<CODE_ROOT>/analysis-tasks/B2977\\\" | head -50\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B7392:generic:2:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B7392.json\\\"; echo; ls -la \\\"<CODE_ROOT>/analysis-tasks/B7392\\\"; find \\\"<CODE_ROOT>/analysis-tasks/B7392\\\" -maxdepth 3 | head -50\", \"description\": \"Read answer key and list analysis package\"}"
+  }
+ ],
+ "B:B8833:checklist:1:grade3": [],
+ "B:B8833:checklist:3:grade3": [],
+ "B:B7037:generic:2:grade1": [],
+ "B:B8827:generic:1:review": [],
+ "B:B9709:checklist:1:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B9709.json\\\"; echo; find \\\"<CODE_ROOT>/analysis-tasks/B9709\\\" -type f | head -50\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B7392:generic:3:review": [],
+ "B:B7148:checklist:2:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B7148.json\\\"; echo; ls -laR \\\"<CODE_ROOT>/analysis-tasks/B7148\\\" | head -60\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B3954:checklist:1:review": [],
+ "B:B2101:checklist:3:grade2": [],
+ "B:B7392:generic:1:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B7392.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B7392\\\" | head -50\", \"description\": \"Read answer key and list package\"}"
+  }
+ ],
+ "B:B6874:checklist:3:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B6874.json\\\"; echo; ls -la \\\"<CODE_ROOT>/analysis-tasks/B6874\\\" \\\"<CODE_ROOT>/analysis-tasks/B6874\\\"/*\", \"description\": \"Read answer key and list analysis package\"}"
+  }
+ ],
+ "B:B3100:generic:3:grade2": [],
+ "B:B7148:generic:1:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B7148.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B7148\\\" | head -50\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B7148:generic:3:grade3": [],
+ "B:B9296:generic:3:review": [],
+ "B:B9709:checklist:2:review": [],
+ "B:B2977:checklist:3:grade1": [],
+ "B:B4481:checklist:1:review": [],
+ "B:B2977:generic:1:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B2977.json\\\"; echo; ls -la \\\"<CODE_ROOT>/analysis-tasks/B2977\\\"; find \\\"<CODE_ROOT>/analysis-tasks/B2977\\\" -maxdepth 3 | head -50\", \"description\": \"Read answer key and list package\"}"
+  }
+ ],
+ "B:B9709:checklist:2:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B9709.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B9709\\\" | head -50\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B8104:checklist:3:review": [],
+ "B:B2101:checklist:2:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B2101.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B2101\\\" | head -50\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B7037:checklist:1:review": [],
+ "B:B4481:checklist:1:grade1": [],
+ "B:B3954:generic:1:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B3954.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B3954\\\"\", \"description\": \"Read answer key and list package\"}"
+  }
+ ],
+ "B:B1249:checklist:3:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B1249.json\\\"; echo; ls -laR \\\"<CODE_ROOT>/analysis-tasks/B1249\\\"\", \"description\": \"Read answer key and list package\"}"
+  }
+ ],
+ "B:B8827:checklist:3:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B8827.json\\\"; echo; ls -laR \\\"<CODE_ROOT>/analysis-tasks/B8827\\\"\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B8104:generic:1:grade3": [],
+ "B:B8612:generic:1:grade3": [],
+ "B:B7392:checklist:3:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B7392.json\\\"; echo; ls -la \\\"<CODE_ROOT>/analysis-tasks/B7392\\\" \\\"<CODE_ROOT>/analysis-tasks/B7392/code\\\" \\\"<CODE_ROOT>/analysis-tasks/B7392/data\\\" \\\"<CODE_ROOT>/analysis-tasks/B7392/outputs\\\"\", \"description\": \"Read answer key an"
+  }
+ ],
+ "B:B4328:checklist:2:review": [],
+ "B:B8833:generic:3:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B8833.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B8833\\\" | head -100\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B9709:generic:3:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B9709.json\\\"; echo; find \\\"<CODE_ROOT>/analysis-tasks/B9709\\\" -type f | head -50\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B2977:generic:1:grade3": [],
+ "B:B8833:generic:1:review": [],
+ "B:B8833:generic:2:grade2": [],
+ "B:B2418:checklist:1:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B2418.json\\\"; echo; find \\\"<CODE_ROOT>/analysis-tasks/B2418\\\" -maxdepth 4 | head -100\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B8827:checklist:2:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B8827.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B8827\\\"\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B7037:generic:3:grade1": [],
+ "B:B8045:checklist:1:review": [],
+ "B:B2101:generic:1:review": [],
+ "B:B2418:generic:2:grade3": [],
+ "B:B8827:generic:3:review": [],
+ "B:B3954:generic:2:grade3": [],
+ "B:B7392:generic:2:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B7392.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B7392\\\" | head -50\", \"description\": \"Read answer key and list package\"}"
+  }
+ ],
+ "B:B6874:generic:2:grade3": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B6874.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B6874\\\"\", \"description\": \"Read answer key and list analysis package\"}"
+  }
+ ],
+ "B:B8104:checklist:3:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B8104.json\\\"; echo; ls -la \\\"<CODE_ROOT>/analysis-tasks/B8104\\\" \\\"<CODE_ROOT>/analysis-tasks/B8104\\\"/*\", \"description\": \"Read answer key and list analysis package\"}"
+  }
+ ],
+ "B:B9709:checklist:3:grade3": [],
+ "B:B8612:generic:2:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B8612.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B8612\\\" | head -50\", \"description\": \"Read answer key and list analysis package\"}"
+  }
+ ],
+ "B:B2101:checklist:1:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B2101.json\\\"; echo; ls -laR \\\"<CODE_ROOT>/analysis-tasks/B2101\\\" | head -60\", \"description\": \"Read answer key and list package\"}"
+  }
+ ],
+ "B:B1144:generic:1:grade3": [],
+ "B:B4174:checklist:1:grade2": [],
+ "B:B1144:generic:1:grade1": [],
+ "B:B9296:checklist:2:grade2": [],
+ "B:B9296:generic:1:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B9296.json\\\"; echo; ls -laR \\\"<CODE_ROOT>/analysis-tasks/B9296\\\" | head -50\", \"description\": \"Read answer key and list analysis package\"}"
+  }
+ ],
+ "B:B8045:generic:2:review": [],
+ "B:B1144:checklist:1:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B1144.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B1144\\\" | head -50\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B2977:generic:2:verify": [],
+ "B:B4668:generic:3:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B4668.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B4668\\\" | head -50\", \"description\": \"Read answer key and list package\"}"
+  }
+ ],
+ "B:B1144:checklist:1:grade2": [],
+ "B:B7148:checklist:3:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B7148.json\\\"; echo; ls -laR \\\"<CODE_ROOT>/analysis-tasks/B7148\\\" | head -80\", \"description\": \"Read answer key and list analysis package\"}"
+  }
+ ],
+ "B:B2101:checklist:3:grade3": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B2101.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B2101\\\" | head -50\", \"description\": \"Read answer key and list package\"}"
+  }
+ ],
+ "B:B8612:generic:2:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B8612.json\\\"; echo; ls -la \\\"<CODE_ROOT>/analysis-tasks/B8612\\\" \\\"<CODE_ROOT>/analysis-tasks/B8612\\\"/*\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B6874:generic:2:verify": [],
+ "B:B8612:generic:3:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B8612.json\\\"; echo; find \\\"<CODE_ROOT>/analysis-tasks/B8612\\\" -type f | head -50\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B3954:generic:2:grade1": [],
+ "B:B4481:generic:1:review": [],
+ "B:B3954:checklist:3:grade3": [],
+ "B:B3100:checklist:3:grade1": [],
+ "B:B8612:generic:1:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B8612.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B8612\\\"\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B7037:generic:3:grade3": [],
+ "B:B7148:checklist:2:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B7148.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B7148\\\" | head -50\", \"description\": \"Read answer key and list analysis package\"}"
+  }
+ ],
+ "B:B7392:generic:3:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B7392.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B7392\\\" | head -50\", \"description\": \"Read answer key and list analysis package\"}"
+  }
+ ],
+ "B:B3954:generic:2:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B3954.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B3954\\\" | head -50\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B4174:generic:3:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B4174.json\\\"; echo; ls -laR \\\"<CODE_ROOT>/analysis-tasks/B4174\\\" | head -60\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B4481:checklist:2:grade3": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B4481.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B4481\\\" | head -50\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B4328:checklist:1:grade3": [],
+ "B:B6874:checklist:2:grade2": [],
+ "B:B1144:generic:3:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B1144.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B1144\\\"\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B8045:checklist:2:grade2": [],
+ "B:B1249:generic:3:grade1": [],
+ "B:B3954:generic:3:grade3": [],
+ "B:B8104:checklist:1:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B8104.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B8104\\\" | head -50\", \"description\": \"Read answer key and list package\"}"
+  }
+ ],
+ "B:B4481:generic:2:grade3": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B4481.json\\\"; echo; ls -laR \\\"<CODE_ROOT>/analysis-tasks/B4481\\\" | head -50\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B4481:generic:3:review": [],
+ "B:B1144:generic:1:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B1144.json\\\"; echo; ls -laR \\\"<CODE_ROOT>/analysis-tasks/B1144\\\"\", \"description\": \"Read answer key and list analysis package\"}"
+  }
+ ],
+ "B:B4668:checklist:1:grade2": [],
+ "B:B6874:checklist:2:grade3": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B6874.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B6874\\\"\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B8827:checklist:3:grade3": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B8827.json\\\"; echo; ls -laR \\\"<CODE_ROOT>/analysis-tasks/B8827\\\"\", \"description\": \"Read answer key and list analysis package\"}"
+  }
+ ],
+ "B:B3954:checklist:3:review": [],
+ "B:B8045:generic:2:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B8045.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B8045\\\" | head -50\", \"description\": \"Read answer key and list analysis package\"}"
+  }
+ ],
+ "B:B9709:generic:1:grade3": [],
+ "B:B2977:generic:3:verify": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cd \\\"<CODE_ROOT>/analysis-tasks/B2977\\\" && ls -la && find . -maxdepth 3 -not -path '*/.*' | head -100 && cat \\\"<EVAL_ROOT>/studyB/keys/B2977.json\\\"\", \"description\": \"List package files and read answer key\"}"
+  }
+ ],
+ "B:B3100:generic:3:grade3": [],
+ "B:B1144:checklist:3:grade2": [],
+ "B:B8833:generic:3:review": [],
+ "B:B8827:checklist:1:grade1": [],
+ "B:B1249:checklist:2:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B1249.json\\\"; echo; ls -laR \\\"<CODE_ROOT>/analysis-tasks/B1249\\\"\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B8827:generic:2:grade1": [],
+ "B:B3954:checklist:2:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B3954.json\\\"; echo; ls -laR \\\"<CODE_ROOT>/analysis-tasks/B3954\\\"\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B8833:generic:1:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B8833.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B8833\\\" | head -50\", \"description\": \"Read answer key and list package\"}"
+  }
+ ],
+ "B:B2101:checklist:3:grade1": [],
+ "B:B7392:checklist:2:review": [],
+ "B:B2418:generic:2:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B2418.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B2418\\\" | head -100\", \"description\": \"Read answer key and list package files\"}"
+  },
+  {
+   "pattern": "biomi_automation",
+   "call": "{\"command\": \"find \\\"<REPO_ROOT>\\\" \\\"<CODE_ROOT>/virtual_cell\\\" -maxdepth 9 -name \\\"loader.py\\\" -path \\\"*emb/data*\\\" 2>/dev/null | head -5\", \"description\": \"Search for arc-state emb loader source\", \"timeout\": 110000}"
+  }
+ ],
+ "B:B9296:checklist:1:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B9296.json\\\"; echo; ls -laR \\\"<CODE_ROOT>/analysis-tasks/B9296\\\"\", \"description\": \"Read answer key and list analysis package\"}"
+  }
+ ],
+ "B:B6874:checklist:2:review": [],
+ "B:B8045:checklist:3:grade3": [],
+ "B:B3100:generic:3:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B3100.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B3100\\\" | head -50\", \"description\": \"Read answer key and list analysis package\"}"
+  }
+ ],
+ "B:B4174:generic:3:grade3": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B4174.json\\\"; echo; ls -la \\\"<CODE_ROOT>/analysis-tasks/B4174\\\"; find \\\"<CODE_ROOT>/analysis-tasks/B4174\\\" -type f | head -50\", \"description\": \"Read answer key and list analysis package files\"}"
+  }
+ ],
+ "B:B8045:checklist:1:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B8045.json\\\"; echo; ls -laR \\\"<CODE_ROOT>/analysis-tasks/B8045\\\"\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B8612:checklist:1:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B8612.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B8612\\\" | head -50\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B7148:checklist:3:review": [],
+ "B:B7392:checklist:2:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B7392.json\\\"; echo; ls -la \\\"<CODE_ROOT>/analysis-tasks/B7392\\\" \\\"<CODE_ROOT>/analysis-tasks/B7392\\\"/*\", \"description\": \"Read answer key and list analysis package\"}"
+  }
+ ],
+ "B:B7037:checklist:1:grade2": [],
+ "B:B8104:checklist:2:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B8104.json\\\"; echo; ls -la \\\"<CODE_ROOT>/analysis-tasks/B8104\\\" \\\"<CODE_ROOT>/analysis-tasks/B8104\\\"/*\", \"description\": \"Read answer key and list package\"}"
+  }
+ ],
+ "B:B6874:generic:3:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B6874.json\\\"; echo; ls -laR \\\"<CODE_ROOT>/analysis-tasks/B6874\\\"\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B8104:generic:2:verify": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cd \\\"<CODE_ROOT>/analysis-tasks/B8104\\\" && find . -maxdepth 3 -not -path '*/.*' | head -50 && cat SUMMARY.md && cat \\\"<EVAL_ROOT>/studyB/keys/B8104.json\\\"\", \"description\": \"List package files, read summary and answer key\"}"
+  }
+ ],
+ "B:B9296:generic:3:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B9296.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B9296\\\" | head -50\", \"description\": \"Read answer key and list package\"}"
+  },
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cd \\\"<CODE_ROOT>/analysis-tasks/B9296\\\"; cat outputs/run_log.txt; ls \\\"<EVAL_ROOT>/studyB/keys/\\\" | head; \", \"description\": \"View run log and keys dir\"}"
+  }
+ ],
+ "B:B8104:generic:1:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B8104.json\\\"; echo; ls -la \\\"<CODE_ROOT>/analysis-tasks/B8104\\\" \\\"<CODE_ROOT>/analysis-tasks/B8104\\\"/*\", \"description\": \"Read answer key and list package\"}"
+  }
+ ],
+ "B:B8045:checklist:3:review": [],
+ "B:B1144:checklist:2:review": [],
+ "B:B2977:checklist:1:verify": [],
+ "B:B8045:checklist:2:review": [],
+ "B:B4481:checklist:2:grade1": [],
+ "B:B7037:checklist:3:grade2": [],
+ "B:B3100:checklist:1:grade1": [],
+ "B:B8827:checklist:3:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B8827.json\\\"; echo; ls -laR \\\"<CODE_ROOT>/analysis-tasks/B8827\\\" | head -50\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B8045:generic:1:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B8045.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B8045\\\"\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B8045:generic:1:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B8045.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B8045\\\"\", \"description\": \"Read answer key and list package\"}"
+  }
+ ],
+ "B:B4668:generic:3:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B4668.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B4668\\\" | head -50\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B7148:generic:2:grade3": [],
+ "B:B8104:checklist:1:verify": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cd \\\"<CODE_ROOT>/analysis-tasks/B8104\\\" && find . -maxdepth 3 -not -path '*/.*' | head -100; echo ---; cat \\\"<EVAL_ROOT>/studyB/keys/B8104.json\\\"\", \"description\": \"List package files and show answer key\"}"
+  }
+ ],
+ "B:B4328:checklist:3:grade3": [],
+ "B:B4174:generic:2:grade1": [],
+ "B:B3100:generic:1:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B3100.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B3100\\\" | head -50\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B4328:checklist:2:grade3": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B4328.json\\\"; echo; ls -la \\\"<CODE_ROOT>/analysis-tasks/B4328\\\" \\\"<CODE_ROOT>/analysis-tasks/B4328\\\"/*\", \"description\": \"Read answer key and list analysis package\"}"
+  }
+ ],
+ "B:B3954:generic:3:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B3954.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B3954\\\" | head -50\", \"description\": \"Read answer key and list package\"}"
+  }
+ ],
+ "B:B2101:checklist:1:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B2101.json\\\"; echo; ls -laR \\\"<CODE_ROOT>/analysis-tasks/B2101\\\" | head -80\", \"description\": \"Read answer key and list analysis package\"}"
+  }
+ ],
+ "B:B3954:checklist:2:grade3": [],
+ "B:B4328:generic:3:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B4328.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B4328\\\"\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B8612:generic:1:grade1": [],
+ "B:B2977:checklist:3:grade2": [],
+ "B:B3100:checklist:3:review": [],
+ "B:B9296:generic:1:review": [],
+ "B:B6874:checklist:1:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B6874.json\\\"; echo; ls -laR \\\"<CODE_ROOT>/analysis-tasks/B6874\\\"\", \"description\": \"Read answer key and list analysis package\"}"
+  }
+ ],
+ "B:B2101:generic:3:grade1": [],
+ "B:B4174:generic:2:grade3": [],
+ "B:B9296:checklist:3:review": [],
+ "B:B4668:generic:2:grade3": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B4668.json\\\"; echo; ls -la \\\"<CODE_ROOT>/analysis-tasks/B4668\\\" \\\"<CODE_ROOT>/analysis-tasks/B4668\\\"/*\", \"description\": \"Read answer key and list package\"}"
+  }
+ ],
+ "B:B8833:generic:1:grade3": [],
+ "B:B4481:checklist:2:review": [],
+ "B:B2101:generic:1:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B2101.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B2101\\\" | head -50\", \"description\": \"Read answer key and list package\"}"
+  }
+ ],
+ "B:B3954:checklist:1:grade3": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B3954.json\\\"; echo; ls -laR \\\"<CODE_ROOT>/analysis-tasks/B3954\\\"\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B8833:generic:3:grade2": [],
+ "B:B4328:generic:3:verify": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B4328.json\\\"\", \"description\": \"Show answer key\"}"
+  }
+ ],
+ "B:B6874:checklist:3:verify": [],
+ "B:B2977:generic:3:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B2977.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B2977\\\" | head -50\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B7037:generic:2:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B7037.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B7037\\\"\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B4668:generic:1:review": [],
+ "B:B8827:generic:2:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B8827.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B8827\\\" | head -50\", \"description\": \"Read answer key and list package\"}"
+  }
+ ],
+ "B:B7037:checklist:1:grade1": [],
+ "B:B8045:checklist:3:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B8045.json\\\"; echo; ls -laR \\\"<CODE_ROOT>/analysis-tasks/B8045\\\"\", \"description\": \"Read answer key and list analysis package\"}"
+  }
+ ],
+ "B:B6874:generic:3:review": [],
+ "B:B8612:checklist:2:grade3": [],
+ "B:B8104:generic:3:grade3": [],
+ "B:B6874:checklist:1:review": [],
+ "B:B7037:generic:2:grade3": [],
+ "B:B8104:checklist:2:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B8104.json\\\"; echo; ls -laR \\\"<CODE_ROOT>/analysis-tasks/B8104\\\" | head -80\", \"description\": \"Read answer key and list analysis package\"}"
+  }
+ ],
+ "B:B9709:generic:1:review": [],
+ "B:B2977:generic:2:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B2977.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B2977\\\" | head -50\", \"description\": \"Read answer key and list package\"}"
+  }
+ ],
+ "B:B8045:generic:3:grade3": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B8045.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B8045\\\" | head -50\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B2418:checklist:2:review": [],
+ "B:B4481:checklist:1:grade3": [],
+ "B:B7392:checklist:3:review": [],
+ "B:B2977:generic:2:grade1": [],
+ "B:B4174:checklist:2:grade1": [],
+ "B:B1249:checklist:2:review": [],
+ "B:B2418:generic:2:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B2418.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B2418\\\" | head -80\", \"description\": \"Read answer key and list package files\"}"
+  },
+  {
+   "pattern": "biomi_automation",
+   "call": "{\"command\": \"cat \\\"<AGENT_TMP>/<SESSION_DIR>/d422dc33-6d6f-4b2b-bbf7-f274d8a82fae/tasks/bvlqv40e9.output\\\"; ls \\\"<REPO_ROOT>/projects/biotensor\\\" | head -50\", \"description\": \"Check background output and list source project\"}"
+  },
+  {
+   "pattern": "biomi_automation",
+   "call": "{\"command\": \"pkill -f \\\"name loader.py\\\" 2>/dev/null; timeout 60 find \\\"<REPO_ROOT>/projects/biotensor\\\" -maxdepth 8 -path \\\"*state/emb/data*\\\" -name \\\"*.py\\\" 2>/dev/null | head; timeout 30 find ~ -maxdepth 7 -path \\\"*site-packages/state/emb/data*\\\" -name \\\"*.py\\\" 2>/dev/null | head\", \"description\": \"Locate arc-state data loader source\"}"
+  },
+  {
+   "pattern": "biomi_automation",
+   "call": "{\"command\": \"F=\\\"<REPO_ROOT>/projects/biotensor/.venv_state/lib/python3.12/site-packages/state/emb/data/loader.py\\\"; grep -n \\\"rand\\\\|argsort\\\\|sort\\\\|multinomial\\\\|shuffle\\\\|perm\\\\|seed\\\\|def sample_cell_sentences\\\\|pad_length\\\" \\\"$F\\\" | head -60\", \"description\": \"Grep STATE loader for randomness in sentence construction\"}"
+  }
+ ],
+ "B:B4328:generic:2:grade3": [],
+ "B:B4481:checklist:3:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B4481.json\\\"; echo; ls -laR \\\"<CODE_ROOT>/analysis-tasks/B4481\\\"\", \"description\": \"Read answer key and list package\"}"
+  }
+ ],
+ "B:B8833:generic:1:grade2": [],
+ "B:B4174:generic:2:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B4174.json\\\"; echo; ls -la \\\"<CODE_ROOT>/analysis-tasks/B4174\\\" \\\"<CODE_ROOT>/analysis-tasks/B4174\\\"/*\", \"description\": \"Read answer key and list package\"}"
+  }
+ ],
+ "B:B2101:checklist:2:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B2101.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B2101\\\" | head -50\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B2101:generic:2:grade1": [],
+ "B:B2101:checklist:1:review": [],
+ "B:B8104:generic:1:review": [],
+ "B:B4668:generic:2:grade1": [],
+ "B:B1249:checklist:3:grade1": [],
+ "B:B8104:checklist:1:grade3": [],
+ "B:B4668:generic:2:verify": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"ls -la \\\"<CODE_ROOT>/analysis-tasks/B4668\\\"; cat \\\"<EVAL_ROOT>/studyB/keys/B4668.json\\\"\", \"description\": \"List package and show answer key\"}"
+  }
+ ],
+ "B:B8827:checklist:2:review": [],
+ "B:B2101:generic:3:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B2101.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B2101\\\" | head -50\", \"description\": \"Read answer key and list package\"}"
+  }
+ ],
+ "B:B9296:generic:2:review": [],
+ "B:B3954:checklist:3:grade1": [],
+ "B:B8045:checklist:1:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B8045.json\\\"; echo; ls -laR \\\"<CODE_ROOT>/analysis-tasks/B8045\\\" | head -50\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B4174:generic:1:review": [],
+ "B:B3100:checklist:3:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B3100.json\\\"; echo; ls -laR \\\"<CODE_ROOT>/analysis-tasks/B3100\\\"\", \"description\": \"Read answer key and list analysis package\"}"
+  }
+ ],
+ "B:B1144:checklist:3:review": [],
+ "B:B7148:checklist:1:grade3": [],
+ "B:B2418:checklist:3:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B2418.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B2418\\\" | head -100\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B9296:generic:3:grade3": [],
+ "B:B2418:generic:1:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B2418.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B2418\\\" | head -100\", \"description\": \"Read answer key and list analysis package\"}"
+  }
+ ],
+ "B:B8827:checklist:1:review": [],
+ "B:B2418:checklist:1:review": [],
+ "B:B9296:checklist:3:grade3": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B9296.json\\\"; echo; ls -laR \\\"<CODE_ROOT>/analysis-tasks/B9296\\\"\", \"description\": \"Read answer key and list analysis package\"}"
+  },
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cd \\\"<CODE_ROOT>/analysis-tasks/B9296\\\"; ls <LOCAL_VOLUME>\\\\ X6/MacBook/Code/maxtoki-framework-eval/studyB/keys/ | grep -i P02; timeout 600 ./../bin/python - <<'EOF'\\nimport numpy as np\\nfrom sklearn.linear_model import Ridge\\nz=np.load(\\\"data/norman2019_subset.npz\\\")\\ncounts,totals,lab=z[\\\"counts\\\"],z[\\\"totals\\\"],z[\\\"labels\\\"].astype(str)\\nX=counts.astype(np.fl"
+  }
+ ],
+ "B:B8833:generic:3:grade3": [],
+ "B:B8045:checklist:2:grade3": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B8045.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B8045\\\" | head -50\", \"description\": \"Read answer key and list package\"}"
+  }
+ ],
+ "B:B3954:generic:1:review": [],
+ "B:B2977:checklist:3:review": [],
+ "B:B4668:checklist:2:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B4668.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B4668\\\" | head -50\", \"description\": \"Read answer key and list analysis package\"}"
+  }
+ ],
+ "B:B6874:generic:2:grade1": [],
+ "B:B3100:checklist:2:grade2": [],
+ "B:B4174:checklist:2:grade3": [],
+ "B:B3100:generic:1:grade3": [],
+ "B:B7392:generic:3:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B7392.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B7392\\\" | head -50\", \"description\": \"Read answer key and list package\"}"
+  }
+ ],
+ "B:B4481:generic:1:grade1": [],
+ "B:B1249:generic:3:grade3": [],
+ "B:B3100:checklist:3:grade3": [],
+ "B:B4174:generic:2:review": [],
+ "B:B2418:generic:2:review": [],
+ "B:B7037:generic:2:review": [],
+ "B:B4668:generic:2:grade2": [],
+ "B:B2977:checklist:1:grade2": [],
+ "B:B9709:checklist:2:grade3": [],
+ "B:B8827:checklist:2:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B8827.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B8827\\\"\", \"description\": \"Read answer key and list package\"}"
+  }
+ ],
+ "B:B8612:checklist:3:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B8612.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B8612\\\" | head -50\", \"description\": \"Read answer key and list analysis package\"}"
+  }
+ ],
+ "B:B4668:generic:3:grade3": [],
+ "B:B6874:generic:1:verify": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cd \\\"<CODE_ROOT>/analysis-tasks/B6874\\\" && ls -R | head -50 && cat SUMMARY.md && cat \\\"<EVAL_ROOT>/studyB/keys/B6874.json\\\"\", \"description\": \"List package files, read summary and answer key\"}"
+  }
+ ],
+ "B:B4668:checklist:1:grade1": [],
+ "B:B8833:checklist:3:review": [],
+ "B:B8045:generic:1:grade3": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B8045.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B8045\\\"\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B4668:checklist:3:grade2": [],
+ "B:B4668:checklist:1:grade3": [],
+ "B:B8104:generic:2:review": [],
+ "B:B6874:generic:1:review": [],
+ "B:B2977:generic:2:review": [],
+ "B:B8833:generic:2:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B8833.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B8833\\\" | head -100\", \"description\": \"Read answer key and list package\"}"
+  }
+ ],
+ "B:B7392:generic:1:grade3": [],
+ "B:B7037:checklist:2:grade3": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B7037.json\\\"; echo; ls -laR \\\"<CODE_ROOT>/analysis-tasks/B7037\\\"\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B7392:checklist:3:grade3": [],
+ "B:B9709:generic:3:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B9709.json\\\"; echo; ls -laR \\\"<CODE_ROOT>/analysis-tasks/B9709\\\"\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B7037:checklist:2:verify": [],
+ "B:B7148:generic:3:verify": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cd \\\"<CODE_ROOT>/analysis-tasks/B7148\\\" && ls -R | head -100 && cat SUMMARY.md && cat \\\"<EVAL_ROOT>/studyB/keys/B7148.json\\\"\", \"description\": \"List package files and read summary and key\"}"
+  }
+ ],
+ "B:B2418:generic:3:review": [],
+ "B:B1144:generic:2:grade2": [],
+ "B:B7392:checklist:1:grade3": [],
+ "B:B4668:generic:3:verify": [],
+ "B:B3100:generic:2:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B3100.json\\\"; echo; ls -laR \\\"<CODE_ROOT>/analysis-tasks/B3100\\\" | head -50\", \"description\": \"Read answer key and list analysis package\"}"
+  }
+ ],
+ "B:B4668:generic:1:grade3": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B4668.json\\\"; echo; ls -la \\\"<CODE_ROOT>/analysis-tasks/B4668\\\" \\\"<CODE_ROOT>/analysis-tasks/B4668\\\"/*\", \"description\": \"Read answer key and list analysis package\"}"
+  }
+ ],
+ "B:B3100:generic:2:grade3": [],
+ "B:B1249:checklist:3:review": [],
+ "B:B4668:checklist:1:review": [],
+ "B:B3100:checklist:2:verify": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cd \\\"<CODE_ROOT>/analysis-tasks/B3100\\\" && ls -R | head -50 && cat SUMMARY.md && cat \\\"<EVAL_ROOT>/studyB/keys/B3100.json\\\"\", \"description\": \"List package and read summary and key\"}"
+  }
+ ],
+ "B:B7037:checklist:2:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B7037.json\\\"; echo; ls -laR \\\"<CODE_ROOT>/analysis-tasks/B7037\\\"\", \"description\": \"Read answer key and list package\"}"
+  }
+ ],
+ "B:B4174:checklist:1:grade3": [],
+ "B:B8833:checklist:1:review": [],
+ "B:B9296:generic:2:grade1": [],
+ "B:B4668:checklist:3:review": [],
+ "B:B7148:checklist:1:grade2": [],
+ "B:B2977:generic:3:grade3": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B2977.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B2977\\\" | head -50\", \"description\": \"Read answer key and list analysis package\"}"
+  }
+ ],
+ "B:B1249:generic:1:review": [],
+ "B:B2418:generic:3:grade3": [],
+ "B:B4668:checklist:1:verify": [],
+ "B:B1249:generic:2:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B1249.json\\\"; echo; ls -la \\\"<CODE_ROOT>/analysis-tasks/B1249\\\" \\\"<CODE_ROOT>/analysis-tasks/B1249\\\"/*\", \"description\": \"Read answer key and list package\"}"
+  }
+ ],
+ "B:B4481:checklist:3:grade3": [],
+ "B:B8045:generic:1:review": [],
+ "B:B8045:generic:3:review": [],
+ "B:B7392:generic:2:review": [],
+ "B:B4328:generic:2:review": [],
+ "B:B7392:generic:1:review": [],
+ "B:B9709:checklist:1:review": [],
+ "B:B9709:checklist:3:grade1": [],
+ "B:B2101:generic:2:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B2101.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B2101\\\" | head -50\", \"description\": \"Read answer key and list analysis package\"}"
+  }
+ ],
+ "B:B2101:checklist:2:grade3": [],
+ "B:B8833:checklist:2:review": [],
+ "B:B1249:checklist:2:grade3": [],
+ "B:B8104:checklist:1:grade1": [],
+ "B:B1249:checklist:3:grade3": [],
+ "B:B2977:checklist:3:grade3": [],
+ "B:B8612:generic:3:review": [],
+ "B:B4328:checklist:3:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B4328.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B4328\\\"\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B1249:generic:1:grade3": [],
+ "B:B8612:checklist:3:review": [],
+ "B:B2101:generic:2:review": [],
+ "B:B1249:checklist:1:grade2": [],
+ "B:B8104:generic:1:verify": [],
+ "B:B1249:checklist:1:grade3": [],
+ "B:B1249:generic:3:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B1249.json\\\"; echo; ls -laR \\\"<CODE_ROOT>/analysis-tasks/B1249\\\"\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B4328:checklist:3:review": [],
+ "B:B2418:generic:1:verify": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cd \\\"<CODE_ROOT>/analysis-tasks/B2418\\\" && find . -type f | grep -v __pycache__ | head -100; echo; cat \\\"<EVAL_ROOT>/studyB/keys/B2418.json\\\"\", \"description\": \"List package files and read answer key\"}"
+  }
+ ],
+ "B:B8612:checklist:1:grade1": [],
+ "B:B2101:generic:3:grade3": [],
+ "B:B4328:checklist:1:verify": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B4328.json\\\"\", \"description\": \"Read answer key\"}"
+  }
+ ],
+ "B:B8104:checklist:2:verify": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B8104.json\\\"\", \"description\": \"Show answer key\"}"
+  }
+ ],
+ "B:B1249:generic:2:grade2": [],
+ "B:B8104:checklist:3:grade3": [],
+ "B:B9709:generic:2:review": [],
+ "B:B3954:generic:1:grade3": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B3954.json\\\"; echo; ls -laR \\\"<CODE_ROOT>/analysis-tasks/B3954\\\"\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B1144:generic:2:grade3": [],
+ "B:B1249:generic:1:grade2": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B1249.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B1249\\\"\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B8612:checklist:3:grade3": [],
+ "B:B4174:checklist:3:grade3": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B4174.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B4174\\\" | head -50\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B6874:checklist:1:verify": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B6874.json\\\"\", \"description\": \"Show answer key\"}"
+  }
+ ],
+ "B:B8827:generic:2:review": [],
+ "B:B9296:checklist:2:review": [],
+ "B:B8833:checklist:2:grade3": [],
+ "B:B7148:checklist:2:review": [],
+ "B:B2977:generic:1:review": [],
+ "B:B2977:checklist:1:grade3": [],
+ "B:B7037:checklist:3:grade3": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B7037.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B7037\\\"\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B2418:checklist:1:grade3": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B2418.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B2418\\\" | head -50\", \"description\": \"Read answer key and list package\"}"
+  }
+ ],
+ "B:B4668:checklist:3:verify": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"ls -la \\\"<CODE_ROOT>/analysis-tasks/B4668\\\"; cat \\\"<EVAL_ROOT>/studyB/keys/B4668.json\\\"\", \"description\": \"List package and show answer key\"}"
+  }
+ ],
+ "B:B6874:generic:2:review": [],
+ "B:B7148:generic:1:review": [],
+ "B:B1144:checklist:1:review": [],
+ "B:B4174:checklist:1:review": [],
+ "B:B2101:checklist:2:verify": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cd \\\"<CODE_ROOT>/analysis-tasks/B2101\\\" && ls -R | head -100; cat \\\"<EVAL_ROOT>/studyB/keys/B2101.json\\\"\", \"description\": \"List package files and read answer key\"}"
+  }
+ ],
+ "B:B4481:generic:2:review": [],
+ "B:B7037:generic:3:verify": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B7037.json\\\"\", \"description\": \"Read answer key\"}"
+  }
+ ],
+ "B:B2101:generic:2:grade3": [],
+ "B:B8104:generic:3:review": [],
+ "B:B8833:generic:2:verify": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B8833.json\\\"\", \"description\": \"Read answer key\"}"
+  }
+ ],
+ "B:B4481:checklist:3:review": [],
+ "B:B7392:generic:3:grade3": [],
+ "B:B9709:checklist:3:review": [],
+ "B:B8833:generic:3:verify": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cd \\\"<CODE_ROOT>/analysis-tasks/B8833\\\" && ls -R | head -100 && cat \\\"<EVAL_ROOT>/studyB/keys/B8833.json\\\"\", \"description\": \"List package and show answer key\"}"
+  }
+ ],
+ "B:B4481:generic:3:verify": [],
+ "B:B4668:generic:2:review": [],
+ "B:B2418:generic:2:verify": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cd \\\"<CODE_ROOT>/analysis-tasks/B2418\\\" && ls -R | head -100; cat \\\"<EVAL_ROOT>/studyB/keys/B2418.json\\\"\", \"description\": \"List package files and read answer key\"}"
+  },
+  {
+   "pattern": "biomi_automation",
+   "call": "{\"command\": \"cat <AGENT_TMP>/<SESSION_DIR>/d422dc33-6d6f-4b2b-bbf7-f274d8a82fae/tasks/b4t6obpgd.output; ls ~/miniforge3/envs 2>/dev/null; ls ~/.venvs 2>/dev/null; ls \\\"<REPO_ROOT>/projects/biotensor\\\" | head -50\", \"description\": \"Check search output and environment locations\"}"
+  },
+  {
+   "pattern": "biomi_automation",
+   "call": "{\"command\": \"for p in ~/miniforge3/envs/*/lib/python3*/site-packages \\\"<REPO_ROOT>/projects/biotensor\\\"/*/.venv/lib/python3*/site-packages \\\"<REPO_ROOT>/projects/biotensor\\\"/.venv/lib/python3*/site-packages; do ls -d \\\"$p/state/emb\\\" 2>/dev/null; done; ls ~/miniforge3/envs/*/bin/python 2>/dev/null\", \"description\": \"Look fo"
+  },
+  {
+   "pattern": "biomi_automation",
+   "call": "{\"command\": \"ls ~/miniforge3/envs/; ls ~/miniforge3/envs/*/lib/ 2>/dev/null | head; timeout 60 find \\\"<REPO_ROOT>/projects/biotensor\\\" -maxdepth 7 -type d -path \\\"*state/emb\\\" 2>/dev/null | head\", \"description\": \"Locate arc-state source tree\"}"
+  },
+  {
+   "pattern": "biomi_automation",
+   "call": "{\"command\": \"S=\\\"<REPO_ROOT>/projects/biotensor/.venv_state/lib/python3.12/site-packages/state/emb\\\"; ls \\\"$S\\\" \\\"$S/data\\\"; grep -n \\\"randperm\\\\|randint\\\\|torch.rand\\\\|np.random\\\\|multinomial\\\\|shuffle\\\\|def sample_cell_sentences\\\\|def __call__\\\\|is_train\\\\|argsort\\\" \\\"$S\\\"/data/*.py | head -60\", \"description\": \"Find randomness in STATE collator\"}"
+  },
+  {
+   "pattern": "biomi_automation",
+   "call": "{\"command\": \"S=\\\"<REPO_ROOT>/projects/biotensor/.venv_state/lib/python3.12/site-packages/state/emb\\\"; sed -n 20,80p \\\"$S/data/loader.py\\\"; echo ======; sed -n 270,600p \\\"$S/data/loader.py\\\"\", \"description\": \"Read STATE collator sentence sampling\"}"
+  },
+  {
+   "pattern": "biomi_automation",
+   "call": "{\"command\": \"S=\\\"<REPO_ROOT>/projects/biotensor/.venv_state/lib/python3.12/site-packages/state/emb\\\"; sed -n 270,600p \\\"$S/data/loader.py\\\"\", \"description\": \"Read STATE collator sentence sampling\"}"
+  },
+  {
+   "pattern": "biomi_automation",
+   "call": "{\"command\": \"P=\\\"<REPO_ROOT>/projects/biotensor/.venv_state/bin/python\\\"; for i in 1 2; do \\\"$P\\\" -c \\\"import torch; print(torch.__version__, torch.initial_seed(), torch.randperm(20).tolist()[:8], torch.empty((),dtype=torch.int64).random_().item())\\\"; done\", \"description\": \"Test torch default RNG determinism across processes\"}"
+  },
+  {
+   "pattern": "biomi_automation",
+   "call": "{\"command\": \"S=\\\"<REPO_ROOT>/projects/biotensor/.venv_state/lib/python3.12/site-packages/state\\\"; grep -n \\\"create_dataloader\\\\|manual_seed\\\\|seed\\\" \\\"$S/emb/inference.py\\\" | head; grep -rn \\\"manual_seed\\\\|seed_everything\\\" \\\"$S/_cli/_emb\\\"* 2>/dev/null | head; grep -n \\\"def _compute_embedding_for_batch\\\" -A25 \\\"$S/emb/nn/model.py\\\" | grep -n \\\"mask\\\\|src_key\\"
+  }
+ ],
+ "B:B8045:checklist:1:grade3": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B8045.json\\\"; echo; ls -la \\\"<CODE_ROOT>/analysis-tasks/B8045\\\" \\\"<CODE_ROOT>/analysis-tasks/B8045/code\\\" \\\"<CODE_ROOT>/analysis-tasks/B8045/\\\"*\", \"description\": \"Read answer key and list package\"}"
+  }
+ ],
+ "B:B4481:generic:1:grade3": [],
+ "B:B1144:generic:1:review": [],
+ "B:B7037:generic:1:grade3": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B7037.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B7037\\\" | head -50\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B8827:generic:2:grade3": [],
+ "B:B1144:generic:3:grade3": [],
+ "B:B6874:checklist:3:review": [],
+ "B:B1144:checklist:1:grade3": [],
+ "B:B3100:checklist:1:review": [],
+ "B:B1144:generic:3:review": [],
+ "B:B3100:generic:1:review": [],
+ "B:B8833:checklist:1:grade2": [],
+ "B:B1249:generic:3:review": [],
+ "B:B1144:checklist:3:grade3": [],
+ "B:B3954:checklist:2:review": [],
+ "B:B7148:generic:1:grade3": [],
+ "B:B1144:generic:3:grade1": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B1144.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B1144\\\" | head -50\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B8612:checklist:1:grade3": [],
+ "B:B4328:generic:1:review": [],
+ "B:B2101:generic:3:review": [],
+ "B:B2101:checklist:3:review": [],
+ "B:B2977:checklist:1:review": [],
+ "B:B8104:checklist:1:review": [],
+ "B:B8045:generic:2:grade3": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B8045.json\\\"; echo; ls -R \\\"<CODE_ROOT>/analysis-tasks/B8045\\\" | head -50\", \"description\": \"Read answer key and list package files\"}"
+  }
+ ],
+ "B:B2418:generic:1:grade3": [],
+ "B:B7037:generic:1:review": [],
+ "B:B4668:generic:3:review": [],
+ "B:B8827:checklist:3:review": [],
+ "B:B4174:generic:3:review": [],
+ "B:B1144:checklist:2:grade3": [],
+ "B:B2977:generic:3:review": [],
+ "B:B7037:generic:1:verify": [],
+ "B:B7148:generic:1:verify": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cd \\\"<CODE_ROOT>/analysis-tasks/B7148\\\" && find . -type f | grep -v __pycache__ | head -100 && cat SUMMARY.md && cat \\\"<EVAL_ROOT>/studyB/keys/B7148.json\\\"\", \"description\": \"List package files, show summary and answer key\"}"
+  }
+ ],
+ "B:B8827:checklist:2:grade3": [],
+ "B:B7148:generic:3:review": [],
+ "B:B8045:generic:3:verify": [
+  {
+   "pattern": "maxtoki-framework-eval/studyB/keys",
+   "call": "{\"command\": \"cat \\\"<EVAL_ROOT>/studyB/keys/B8045.json\\\"\", \"description\": \"Show answer key\"}"
+  }
+ ],
+ "B:B2977:checklist:2:review": [],
+ "B:B7037:checklist:3:review": [],
+ "B:B4174:checklist:2:review": [],
+ "B:B2418:generic:1:review": [],
+ "B:B8827:generic:1:grade3": [],
+ "B:B7392:checklist:2:grade3": [],
+ "B:B2418:checklist:3:review": [],
+ "B:B4668:checklist:2:review": [],
+ "B:B2418:checklist:2:grade3": [],
+ "B:B4328:generic:1:verify": [],
+ "B:B1144:generic:2:review": [],
+ "B:B2101:generic:1:grade3": [],
+ "B:B3954:generic:2:review": [],
+ "B:B1249:generic:2:grade3": [],
+ "B:B4328:generic:3:review": [],
+ "B:B3954:generic:3:review": [],
+ "B:B8612:generic:2:grade3": [],
+ "B:B7037:checklist:2:review": [],
+ "B:B4174:checklist:3:review": []
+}

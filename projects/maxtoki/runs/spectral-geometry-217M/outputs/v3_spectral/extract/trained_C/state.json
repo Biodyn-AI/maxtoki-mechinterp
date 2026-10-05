@@ -1,0 +1,50 @@
+{
+  "job": "trained_C",
+  "next": 2000,
+  "done": true,
+  "chunks": [
+    {
+      "start": "2026-10-02T19:43:28",
+      "cells": [
+        0,
+        450
+      ],
+      "wall_s": 284.2,
+      "min_free_gb": 7.32,
+      "peak_rss_gb": 3.21,
+      "mps_driver_peak_gb": 2.22,
+      "stopped": "time"
+    },
+    {
+      "start": "2026-10-02T19:48:50",
+      "cells": [
+        450,
+        1250
+      ],
+      "wall_s": 440.4,
+      "min_free_gb": 8.08,
+      "peak_rss_gb": 2.89,
+      "mps_driver_peak_gb": 2.23,
+      "stopped": "time"
+    },
+    {
+      "start": "2026-10-02T19:56:31",
+      "cells": [
+        1250,
+        2000
+      ],
+      "wall_s": 415.3,
+      "min_free_gb": 5.91,
+      "peak_rss_gb": 2.53,
+      "mps_driver_peak_gb": 2.23,
+      "stopped": ""
+    }
+  ],
+  "batches_checked": 40,
+  "cells_checked": 2000,
+  "model_info": {
+    "kind": "trained",
+    "model_dir": "<REPO_ROOT>/projects/maxtoki/setup/MaxToki-217M-HF",
+    "attn_implementation": "eager"
+  }
+}

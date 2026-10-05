@@ -1,0 +1,7 @@
+model	tissue	species	n_cells	linear_r2	poly2_r2	curvature	null_mean	null_sd	z	p_value	q_bh	boot_ci_lo	boot_ci_hi
+geneformer	lung	human	1500	0.9353	0.9533	+0.0180	+0.0069	0.0104	+1.07	0.1244	0.3383	+0.0146	+0.0216
+scgpt	lung	human	1500	0.9657	0.9734	+0.0076	+0.0164	0.0134	-0.65	0.7711	0.7711	+0.0051	+0.0108
+geneformer	gut	human	1500	0.7587	0.7994	+0.0407	+0.0006	0.0070	+5.73	0.0050	0.0299	+0.0300	+0.0513
+scgpt	gut	human	1500	0.8606	0.8780	+0.0174	+0.0083	0.0095	+0.96	0.1692	0.3383	+0.0083	+0.0270
+geneformer	pancreas	mouse	1500	0.9455	0.9476	+0.0021	+0.0037	0.0074	-0.22	0.6219	0.7711	+0.0000	+0.0042
+scgpt	pancreas	mouse	1500	0.9726	0.9750	+0.0024	+0.0082	0.0086	-0.68	0.7413	0.7711	+0.0012	+0.0036

@@ -1,0 +1,35 @@
+{
+  "script": "v2_05_other_orderings_boot",
+  "written_at": "2026-10-01 02:27:37",
+  "python": "3.12.9",
+  "torch": "2.11.0",
+  "numpy": "1.26.4",
+  "inputs": {
+    "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/outputs/v2_intervals/v2_05_other_orderings_fit.json": "a77dd237e3a94846032e7987e9f92a6666c132647341d54351cd383a56b6a812",
+    "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/outputs/v2_intervals/orderings/._H103_external_all.npz": "1ab597c9db9c3308e5823d0fad4785e0db351c0824cbb840765e7b9394b69030",
+    "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/outputs/v2_intervals/orderings/._H103_external_kept.npz": "1ab597c9db9c3308e5823d0fad4785e0db351c0824cbb840765e7b9394b69030",
+    "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/outputs/v2_intervals/orderings/._H103_zeroshot_all.npz": "1ab597c9db9c3308e5823d0fad4785e0db351c0824cbb840765e7b9394b69030",
+    "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/outputs/v2_intervals/orderings/._H103_zeroshot_kept.npz": "1ab597c9db9c3308e5823d0fad4785e0db351c0824cbb840765e7b9394b69030",
+    "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/outputs/v2_intervals/orderings/._H38_lite_external.npz": "1ab597c9db9c3308e5823d0fad4785e0db351c0824cbb840765e7b9394b69030",
+    "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/outputs/v2_intervals/orderings/._H38_lite_zeroshot.npz": "1ab597c9db9c3308e5823d0fad4785e0db351c0824cbb840765e7b9394b69030",
+    "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/outputs/v2_intervals/orderings/._H95_external.npz": "1ab597c9db9c3308e5823d0fad4785e0db351c0824cbb840765e7b9394b69030",
+    "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/outputs/v2_intervals/orderings/._H95_zeroshot.npz": "1ab597c9db9c3308e5823d0fad4785e0db351c0824cbb840765e7b9394b69030",
+    "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/outputs/v2_intervals/orderings/H103_external_all.npz": "a218c6064e320ef8cc0072fb11125bc8e309caed5a5b6d5ab6754e0947b05981",
+    "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/outputs/v2_intervals/orderings/H103_external_kept.npz": "42670d151954c4b6fbbbc9ec585abeaa38749d41811da9ba468e50b9e6d69e2f",
+    "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/outputs/v2_intervals/orderings/H103_zeroshot_all.npz": "add384a40f8b96c66e89abd8b9ae6cbf014995681069889a66c17f2e95d977c0",
+    "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/outputs/v2_intervals/orderings/H103_zeroshot_kept.npz": "f048b9cfb410f53055fd174d148da4626728930f12006a77b34e91fef793258c",
+    "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/outputs/v2_intervals/orderings/H38_lite_external.npz": "1d790c20d29ea4765fc1fcc9901f43a75701fdf4b15de98d4da3e7410175c75b",
+    "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/outputs/v2_intervals/orderings/H38_lite_zeroshot.npz": "ee7f3d63409fdbf4a38d3fcde2bf6ba217d1e8d553330ef9ea35f823e80f6ec4",
+    "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/outputs/v2_intervals/orderings/H95_external.npz": "d5fc6343faaf615cf57f840e97f8d4af8ad548d0e169beb743113f61037a2ace",
+    "<REPO_ROOT>/projects/maxtoki/runs/manifold-discovery-217M/outputs/v2_intervals/orderings/H95_zeroshot.npz": "0c2194b86fe8483601de513a4703b79b3e2b2877c10189980d8c2fd2b75edacd"
+  },
+  "boot_seed": 5353,
+  "keys": {
+    "H38_lite_external": 1,
+    "H38_lite_zeroshot": 2,
+    "H95_external": 3,
+    "H95_zeroshot": 4,
+    "H103_external_all": 5,
+    "H103_zeroshot_all": 6
+  }
+}

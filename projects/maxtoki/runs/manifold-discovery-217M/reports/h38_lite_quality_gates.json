@@ -1,0 +1,36 @@
+{
+  "scope_note": "PHASE 13 LITE \u2014 second-manifold proxy. NOT source paper's H38 with OmniPath LR-pair anchors and 100k cells. Uses existing internal-panel anchors (n=keep) with a curated cell-type \u2192 signalling-category Hamming-distance ruler.",
+  "n_anchors_kept": 279,
+  "n_anchors_dropped_no_category": 11,
+  "n_categories": 7,
+  "categories": [
+    "cyto",
+    "chemo",
+    "lipid",
+    "antigen",
+    "cytotox",
+    "ab",
+    "prog"
+  ],
+  "ruler_range": [
+    0.0,
+    2.0,
+    5.0
+  ],
+  "positive": {
+    "trustworthiness": 0.813508064516129,
+    "random_holdout": 0.7601297514964446,
+    "donor_holdout": 0.6730271557133849,
+    "category_holdout": 0.2932314462238862,
+    "passes": true
+  },
+  "null_shuffled": {
+    "trustworthiness": 0.5898213485663082,
+    "random_holdout": 0.01239614504338394,
+    "donor_holdout": -0.0053139900927484905,
+    "category_holdout": 0.025988127437248976,
+    "passes": false
+  },
+  "verdict": "POSITIVE: H38 LITE passes all gates and shuffled null fails",
+  "elapsed_s": 385.1953122615814
+}

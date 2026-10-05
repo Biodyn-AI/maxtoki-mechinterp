@@ -28,7 +28,7 @@ Running them in this order avoids Reviewer 2 flagging scientific issues that dis
 
 ## Domain context baked into the prompts
 
-All three prompts are aware of the project's accumulated knowledge base — the seven  papers in `../references/` and the eight pipeline specifications in `../pipelines/`. This means:
+All three prompts are aware of the project's accumulated knowledge base — the seven Kendiukhov papers in `../references/` and the eight pipeline specifications in `../pipelines/`. This means:
 
 - **Reviewer 1** knows the standard notation in the project (ΔAUROC vs null baselines, blocked-permutation *p*, trustworthiness ≥ 0.80, strict max-null margins, etc.) and can catch inconsistencies with the project's conventions.
 - **Reviewer 2** knows the failure modes that recur across this literature: the co-expression confound, the feature-shuffle-null trap, the annotation-database-circularity trap, the selective reporting of positive findings, the "looks great until you control properly" pattern, the immune-tissue concentration pattern, and so on. It proactively tests for these.

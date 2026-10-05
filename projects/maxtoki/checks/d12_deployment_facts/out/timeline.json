@@ -1,0 +1,2127 @@
+{
+  "deployment": {
+    "n_files_in_window": 2195,
+    "n_files_excluded_post_cutoff": 181,
+    "post_cutoff_examples": [
+      "runs/attention-grn-217M/outputs/v2_eval/curveball/curveball_217M_K562.json",
+      "runs/attention-grn-217M/outputs/v2_eval/curveball/curveball_217M_RPE1.json",
+      "runs/attention-grn-217M/outputs/v2_eval/curveball/mixing_curve_217M_K562.csv",
+      "runs/attention-grn-217M/outputs/v2_eval/curveball/mixing_curve_217M_RPE1.csv",
+      "runs/attention-grn-217M/outputs/v2_eval/curveball/null_curveball_217M_K562.npy",
+      "runs/attention-grn-217M/outputs/v2_eval/curveball/null_curveball_217M_RPE1.npy",
+      "runs/attention-grn-217M/outputs/v2_eval/de_labels/1B_K562.npz",
+      "runs/attention-grn-217M/outputs/v2_eval/de_labels/1B_K562_meta.json",
+      "runs/attention-grn-217M/outputs/v2_eval/de_labels/217M_Adamson.npz",
+      "runs/attention-grn-217M/outputs/v2_eval/de_labels/217M_Adamson_meta.json"
+    ],
+    "n_files_copied_with_old_mtime": 27,
+    "first_artefact": {
+      "path": "setup/token_dictionary.json",
+      "time": "2026-04-15 23:59:54"
+    },
+    "first_run_folder_artefact": {
+      "path": "runs/attention-grn-217M/scripts/phase0_extract.py",
+      "time": "2026-04-16 00:12:57"
+    },
+    "last_artefact": {
+      "path": "audits/audit-20260507-completion-v2.md",
+      "time": "2026-05-07 21:10:46"
+    },
+    "span_days": 21.88,
+    "active_days": [
+      "2026-04-15",
+      "2026-04-16",
+      "2026-04-17",
+      "2026-04-18",
+      "2026-04-19",
+      "2026-04-20",
+      "2026-04-23",
+      "2026-05-03",
+      "2026-05-04",
+      "2026-05-05",
+      "2026-05-07"
+    ],
+    "n_active_days": 11,
+    "n_distinct_clock_hours_with_a_write": 66,
+    "files_per_day": {
+      "2026-04-16": 183,
+      "2026-04-17": 50,
+      "2026-05-03": 397,
+      "2026-05-07": 118,
+      "2026-05-05": 106,
+      "2026-04-18": 11,
+      "2026-04-19": 132,
+      "2026-04-20": 1016,
+      "2026-04-23": 27,
+      "2026-05-04": 154,
+      "2026-04-15": 1
+    }
+  },
+  "per_pipeline_files": {
+    "spectral-geometry-217M": {
+      "n_files": 122,
+      "first": "2026-04-16 19:05:58",
+      "last": "2026-05-07 18:54:38",
+      "days": {
+        "2026-04-16": {
+          "first": "19:05",
+          "last": "19:44",
+          "n_files": 24
+        },
+        "2026-04-17": {
+          "first": "10:16",
+          "last": "10:36",
+          "n_files": 21
+        },
+        "2026-05-03": {
+          "first": "19:16",
+          "last": "20:29",
+          "n_files": 13
+        },
+        "2026-05-05": {
+          "first": "16:13",
+          "last": "17:51",
+          "n_files": 61
+        },
+        "2026-05-07": {
+          "first": "18:53",
+          "last": "18:54",
+          "n_files": 3
+        }
+      }
+    },
+    "attention-grn-217M": {
+      "n_files": 157,
+      "first": "2026-04-16 00:12:57",
+      "last": "2026-04-23 20:31:58",
+      "days": {
+        "2026-04-16": {
+          "first": "00:12",
+          "last": "18:46",
+          "n_files": 151
+        },
+        "2026-04-17": {
+          "first": "10:16",
+          "last": "10:16",
+          "n_files": 5
+        },
+        "2026-04-23": {
+          "first": "20:31",
+          "last": "20:31",
+          "n_files": 1
+        }
+      }
+    },
+    "topology-141-217M": {
+      "n_files": 147,
+      "first": "2026-05-03 19:24:57",
+      "last": "2026-05-07 20:50:15",
+      "days": {
+        "2026-05-03": {
+          "first": "19:24",
+          "last": "20:41",
+          "n_files": 76
+        },
+        "2026-05-05": {
+          "first": "16:52",
+          "last": "17:10",
+          "n_files": 16
+        },
+        "2026-05-07": {
+          "first": "11:44",
+          "last": "20:50",
+          "n_files": 55
+        }
+      }
+    },
+    "sae-atlas-217M": {
+      "n_files": 358,
+      "first": "2026-04-17 15:53:17",
+      "last": "2026-05-07 19:31:01",
+      "days": {
+        "2026-04-17": {
+          "first": "15:53",
+          "last": "23:20",
+          "n_files": 23
+        },
+        "2026-04-18": {
+          "first": "14:42",
+          "last": "16:00",
+          "n_files": 11
+        },
+        "2026-04-19": {
+          "first": "13:13",
+          "last": "22:21",
+          "n_files": 131
+        },
+        "2026-05-03": {
+          "first": "18:59",
+          "last": "19:02",
+          "n_files": 181
+        },
+        "2026-05-07": {
+          "first": "17:55",
+          "last": "19:31",
+          "n_files": 12
+        }
+      }
+    },
+    "circuit-tracing-217M": {
+      "n_files": 19,
+      "first": "2026-04-19 22:25:20",
+      "last": "2026-05-07 21:10:10",
+      "days": {
+        "2026-04-19": {
+          "first": "22:25",
+          "last": "22:25",
+          "n_files": 1
+        },
+        "2026-04-20": {
+          "first": "02:26",
+          "last": "11:13",
+          "n_files": 9
+        },
+        "2026-05-07": {
+          "first": "17:56",
+          "last": "21:10",
+          "n_files": 9
+        }
+      }
+    },
+    "exhaustive-mapping-217M": {
+      "n_files": 1033,
+      "first": "2026-04-20 14:19:29",
+      "last": "2026-04-23 22:19:59",
+      "days": {
+        "2026-04-20": {
+          "first": "14:19",
+          "last": "20:39",
+          "n_files": 1007
+        },
+        "2026-04-23": {
+          "first": "19:36",
+          "last": "22:19",
+          "n_files": 26
+        }
+      }
+    },
+    "manifold-discovery-217M": {
+      "n_files": 328,
+      "first": "2026-05-03 19:41:10",
+      "last": "2026-05-07 19:39:22",
+      "days": {
+        "2026-05-03": {
+          "first": "19:41",
+          "last": "23:59",
+          "n_files": 127
+        },
+        "2026-05-04": {
+          "first": "00:00",
+          "last": "08:31",
+          "n_files": 154
+        },
+        "2026-05-05": {
+          "first": "16:09",
+          "last": "19:11",
+          "n_files": 17
+        },
+        "2026-05-07": {
+          "first": "12:41",
+          "last": "19:39",
+          "n_files": 30
+        }
+      }
+    },
+    "longevity-mechinterp-217M": {
+      "n_files": 15,
+      "first": "2026-05-05 16:16:10",
+      "last": "2026-05-07 18:50:28",
+      "days": {
+        "2026-05-05": {
+          "first": "16:16",
+          "last": "17:50",
+          "n_files": 12
+        },
+        "2026-05-07": {
+          "first": "11:40",
+          "last": "18:50",
+          "n_files": 3
+        }
+      }
+    }
+  },
+  "A_log_windows": {
+    "per_pipeline": {
+      "spectral-geometry-217M": {
+        "n_logs": 16,
+        "hours": 3.63,
+        "windows": [
+          "04-16 19:05 -> 19:43",
+          "04-17 10:24 -> 10:34",
+          "05-03 19:16 -> 20:29",
+          "05-05 16:15 -> 17:51"
+        ]
+      },
+      "attention-grn-217M": {
+        "n_logs": 19,
+        "hours": 8.83,
+        "windows": [
+          "04-16 00:14 -> 01:09",
+          "04-16 01:14 -> 01:36",
+          "04-16 01:37 -> 01:59",
+          "04-16 10:56 -> 11:15",
+          "04-16 11:15 -> 12:26",
+          "04-16 12:26 -> 13:00",
+          "04-16 13:02 -> 13:21",
+          "04-16 13:59 -> 14:36",
+          "04-16 14:36 -> 15:05",
+          "04-16 15:05 -> 15:43",
+          "04-16 15:45 -> 18:22",
+          "04-16 18:26 -> 18:45"
+        ]
+      },
+      "topology-141-217M": {
+        "n_logs": 26,
+        "hours": 2.59,
+        "windows": [
+          "05-03 19:25 -> 19:30",
+          "05-03 19:31 -> 20:13",
+          "05-03 20:13 -> 20:32",
+          "05-03 20:32 -> 20:40",
+          "05-05 16:10 -> 16:57",
+          "05-07 16:01 -> 16:14",
+          "05-07 16:14 -> 16:20",
+          "05-07 16:24 -> 16:36"
+        ]
+      },
+      "sae-atlas-217M": {
+        "n_logs": 12,
+        "hours": 10.1,
+        "windows": [
+          "04-17 15:53 -> 15:59",
+          "04-17 16:00 -> 16:06",
+          "04-17 16:09 -> 19:29",
+          "04-17 21:39 -> 23:11",
+          "04-17 23:12 -> 23:20",
+          "04-18 14:44 -> 16:00",
+          "04-19 15:30 -> 17:36",
+          "04-19 21:07 -> 22:14",
+          "05-07 19:10 -> 19:30"
+        ]
+      },
+      "circuit-tracing-217M": {
+        "n_logs": 2,
+        "hours": 4.17,
+        "windows": [
+          "04-19 22:24 -> 02:27",
+          "04-20 11:05 -> 11:13"
+        ]
+      },
+      "exhaustive-mapping-217M": {
+        "n_logs": 4,
+        "hours": 7.72,
+        "windows": [
+          "04-20 14:18 -> 19:51",
+          "04-20 20:01 -> 20:39",
+          "04-23 19:36 -> 20:05",
+          "04-23 20:28 -> 21:32"
+        ]
+      },
+      "manifold-discovery-217M": {
+        "n_logs": 33,
+        "hours": 15.21,
+        "windows": [
+          "05-03 19:54 -> 20:32",
+          "05-03 20:34 -> 23:37",
+          "05-03 23:39 -> 03:15",
+          "05-04 03:16 -> 07:18",
+          "05-04 07:18 -> 07:41",
+          "05-04 07:41 -> 07:47",
+          "05-04 08:24 -> 08:31",
+          "05-05 16:09 -> 17:37",
+          "05-05 18:38 -> 18:52",
+          "05-07 11:46 -> 12:41",
+          "05-07 16:00 -> 16:37"
+        ]
+      },
+      "longevity-mechinterp-217M": {
+        "n_logs": 1,
+        "hours": 1.54,
+        "windows": [
+          "05-05 16:18 -> 17:50"
+        ]
+      }
+    },
+    "total": {
+      "sum_of_pipelines_h": 53.79,
+      "overlap_aware_h": 47.75
+    },
+    "logs_longer_than_6h": [],
+    "concurrency": {
+      "hours_by_n_pipelines_running": {
+        "1": 44.35,
+        "2": 1.46,
+        "3": 1.24,
+        "4": 0.7
+      },
+      "hours_with_2_or_more": 3.4,
+      "max_pipelines_at_once": 4,
+      "first_time_max_reached": [
+        "2026-05-05 16:18:27",
+        [
+          "longevity-mechinterp-217M",
+          "manifold-discovery-217M",
+          "spectral-geometry-217M",
+          "topology-141-217M"
+        ]
+      ]
+    }
+  },
+  "B_activity_sessions": {
+    "gap_15min": {
+      "per_pipeline": {
+        "spectral-geometry-217M": {
+          "hours": 3.74,
+          "n_sessions": 5
+        },
+        "attention-grn-217M": {
+          "hours": 9.0,
+          "n_sessions": 3
+        },
+        "topology-141-217M": {
+          "hours": 3.25,
+          "n_sessions": 8
+        },
+        "sae-atlas-217M": {
+          "hours": 10.42,
+          "n_sessions": 9
+        },
+        "circuit-tracing-217M": {
+          "hours": 4.2,
+          "n_sessions": 5
+        },
+        "exhaustive-mapping-217M": {
+          "hours": 7.93,
+          "n_sessions": 4
+        },
+        "manifold-discovery-217M": {
+          "hours": 16.64,
+          "n_sessions": 9
+        },
+        "longevity-mechinterp-217M": {
+          "hours": 1.59,
+          "n_sessions": 3
+        }
+      },
+      "sum_of_pipelines_h": 56.77,
+      "overlap_aware_h": 49.76
+    },
+    "gap_30min": {
+      "per_pipeline": {
+        "spectral-geometry-217M": {
+          "hours": 3.74,
+          "n_sessions": 5
+        },
+        "attention-grn-217M": {
+          "hours": 9.0,
+          "n_sessions": 3
+        },
+        "topology-141-217M": {
+          "hours": 3.54,
+          "n_sessions": 7
+        },
+        "sae-atlas-217M": {
+          "hours": 10.42,
+          "n_sessions": 9
+        },
+        "circuit-tracing-217M": {
+          "hours": 4.2,
+          "n_sessions": 5
+        },
+        "exhaustive-mapping-217M": {
+          "hours": 8.29,
+          "n_sessions": 3
+        },
+        "manifold-discovery-217M": {
+          "hours": 17.23,
+          "n_sessions": 7
+        },
+        "longevity-mechinterp-217M": {
+          "hours": 1.59,
+          "n_sessions": 3
+        }
+      },
+      "sum_of_pipelines_h": 58.01,
+      "overlap_aware_h": 50.65
+    },
+    "gap_60min": {
+      "per_pipeline": {
+        "spectral-geometry-217M": {
+          "hours": 3.74,
+          "n_sessions": 5
+        },
+        "attention-grn-217M": {
+          "hours": 9.62,
+          "n_sessions": 2
+        },
+        "topology-141-217M": {
+          "hours": 3.54,
+          "n_sessions": 7
+        },
+        "sae-atlas-217M": {
+          "hours": 10.42,
+          "n_sessions": 9
+        },
+        "circuit-tracing-217M": {
+          "hours": 5.03,
+          "n_sessions": 4
+        },
+        "exhaustive-mapping-217M": {
+          "hours": 9.07,
+          "n_sessions": 2
+        },
+        "manifold-discovery-217M": {
+          "hours": 18.45,
+          "n_sessions": 5
+        },
+        "longevity-mechinterp-217M": {
+          "hours": 1.59,
+          "n_sessions": 3
+        }
+      },
+      "sum_of_pipelines_h": 61.46,
+      "overlap_aware_h": 53.59
+    }
+  },
+  "work_blocks_gap3h": {
+    "spectral-geometry-217M": [
+      {
+        "start": "2026-04-16 19:05:16",
+        "end": "2026-04-16 19:44:24",
+        "hours": 0.65
+      },
+      {
+        "start": "2026-04-17 10:24:52",
+        "end": "2026-04-17 10:36:50",
+        "hours": 0.2
+      },
+      {
+        "start": "2026-05-03 19:16:33",
+        "end": "2026-05-03 20:29:49",
+        "hours": 1.22
+      },
+      {
+        "start": "2026-05-05 16:13:02",
+        "end": "2026-05-05 17:51:50",
+        "hours": 1.65
+      },
+      {
+        "start": "2026-05-07 18:53:05",
+        "end": "2026-05-07 18:54:30",
+        "hours": 0.02
+      }
+    ],
+    "attention-grn-217M": [
+      {
+        "start": "2026-04-16 00:12:57",
+        "end": "2026-04-16 02:00:11",
+        "hours": 1.79
+      },
+      {
+        "start": "2026-04-16 10:56:22",
+        "end": "2026-04-16 18:46:34",
+        "hours": 7.84
+      }
+    ],
+    "topology-141-217M": [
+      {
+        "start": "2026-05-03 19:24:57",
+        "end": "2026-05-03 20:41:57",
+        "hours": 1.28
+      },
+      {
+        "start": "2026-05-05 16:10:46",
+        "end": "2026-05-05 17:08:08",
+        "hours": 0.96
+      },
+      {
+        "start": "2026-05-07 11:44:02",
+        "end": "2026-05-07 11:44:09",
+        "hours": 0.0
+      },
+      {
+        "start": "2026-05-07 16:01:24",
+        "end": "2026-05-07 20:50:15",
+        "hours": 4.81
+      }
+    ],
+    "sae-atlas-217M": [
+      {
+        "start": "2026-04-17 15:53:17",
+        "end": "2026-04-17 23:20:30",
+        "hours": 7.45
+      },
+      {
+        "start": "2026-04-18 14:42:32",
+        "end": "2026-04-18 16:00:06",
+        "hours": 1.29
+      },
+      {
+        "start": "2026-04-19 13:13:42",
+        "end": "2026-04-19 17:36:21",
+        "hours": 4.38
+      },
+      {
+        "start": "2026-04-19 21:07:16",
+        "end": "2026-04-19 22:14:13",
+        "hours": 1.12
+      },
+      {
+        "start": "2026-05-03 18:59:53",
+        "end": "2026-05-03 19:02:13",
+        "hours": 0.04
+      },
+      {
+        "start": "2026-05-07 17:55:00",
+        "end": "2026-05-07 19:30:18",
+        "hours": 1.59
+      }
+    ],
+    "circuit-tracing-217M": [
+      {
+        "start": "2026-04-19 22:24:22",
+        "end": "2026-04-20 02:27:21",
+        "hours": 4.05
+      },
+      {
+        "start": "2026-04-20 11:05:26",
+        "end": "2026-04-20 11:13:14",
+        "hours": 0.13
+      },
+      {
+        "start": "2026-05-07 17:56:28",
+        "end": "2026-05-07 21:09:39",
+        "hours": 3.22
+      }
+    ],
+    "exhaustive-mapping-217M": [
+      {
+        "start": "2026-04-20 14:18:31",
+        "end": "2026-04-20 20:39:53",
+        "hours": 6.36
+      },
+      {
+        "start": "2026-04-23 19:36:25",
+        "end": "2026-04-23 22:19:29",
+        "hours": 2.72
+      }
+    ],
+    "manifold-discovery-217M": [
+      {
+        "start": "2026-05-03 19:41:10",
+        "end": "2026-05-04 08:31:02",
+        "hours": 12.83
+      },
+      {
+        "start": "2026-05-05 16:09:27",
+        "end": "2026-05-05 19:11:50",
+        "hours": 3.04
+      },
+      {
+        "start": "2026-05-07 11:46:11",
+        "end": "2026-05-07 12:54:09",
+        "hours": 1.13
+      },
+      {
+        "start": "2026-05-07 15:57:30",
+        "end": "2026-05-07 19:38:41",
+        "hours": 3.69
+      }
+    ],
+    "longevity-mechinterp-217M": [
+      {
+        "start": "2026-05-05 16:16:10",
+        "end": "2026-05-05 17:50:53",
+        "hours": 1.58
+      },
+      {
+        "start": "2026-05-07 11:40:12",
+        "end": "2026-05-07 11:40:38",
+        "hours": 0.01
+      },
+      {
+        "start": "2026-05-07 18:50:28",
+        "end": "2026-05-07 18:50:28",
+        "hours": 0.0
+      }
+    ]
+  },
+  "C_logged_durations": {
+    "items": {
+      "spectral-geometry-217M": {
+        "phase0 extraction (total_phase_seconds)": {
+          "file": "runs/spectral-geometry-217M/outputs/phase0/run_config.json",
+          "pattern": "json:total_phase_seconds",
+          "how": "field",
+          "n_matches": 1,
+          "seconds": 907.4
+        },
+        "phase8 stability, 2 re-extractions (tqdm bars)": {
+          "file": "runs/spectral-geometry-217M/outputs/phase8.log",
+          "pattern": "tqdm bars >= 60 s",
+          "how": "sum",
+          "n_matches": null,
+          "seconds": 2701.8
+        },
+        "autoloop executor+brainstormer turns (driver dt)": {
+          "file": "runs/spectral-geometry-217M/autoloop/runtime/driver.log",
+          "pattern": "dt=(\\d+)s",
+          "how": "sum",
+          "n_matches": 6,
+          "seconds": 5746.0
+        }
+      },
+      "attention-grn-217M": {
+        "phase0 K562 217M": {
+          "file": "runs/attention-grn-217M/outputs/phase0/run_config.json",
+          "pattern": "json:total_phase_seconds",
+          "how": "field",
+          "n_matches": 1,
+          "seconds": 3286.3
+        },
+        "phase0 RPE1": {
+          "file": "runs/attention-grn-217M/outputs/phase0_rpe1/run_config.json",
+          "pattern": "json:total_phase_seconds",
+          "how": "field",
+          "n_matches": 1,
+          "seconds": 4259.7
+        },
+        "phase0 Adamson": {
+          "file": "runs/attention-grn-217M/outputs/phase0_adamson/run_config.json",
+          "pattern": "json:total_phase_seconds",
+          "how": "field",
+          "n_matches": 1,
+          "seconds": 1645.8
+        },
+        "phase0 K562 1B (200 cells)": {
+          "file": "runs/attention-grn-217M/outputs/phase0_k562_1b/run_config.json",
+          "pattern": "json:total_phase_seconds",
+          "how": "field",
+          "n_matches": 1,
+          "seconds": 5735.8
+        },
+        "phase0b value-weighted (total_fwd_seconds)": {
+          "file": "runs/attention-grn-217M/outputs/phase0b/run_config.json",
+          "pattern": "json:total_fwd_seconds",
+          "how": "field",
+          "n_matches": 1,
+          "seconds": 1062.7
+        }
+      },
+      "topology-141-217M": {
+        "phase0 lung": {
+          "file": "runs/topology-141-217M/outputs/phase0/lung/run_config.json",
+          "pattern": "json:wall_seconds",
+          "how": "field",
+          "n_matches": 1,
+          "seconds": 1182.4
+        },
+        "phase0 external lung": {
+          "file": "runs/topology-141-217M/outputs/phase0/external_lung/run_config.json",
+          "pattern": "json:wall_seconds",
+          "how": "field",
+          "n_matches": 1,
+          "seconds": 1100.0
+        },
+        "audit re-extraction lung seed 43": {
+          "file": "runs/topology-141-217M/outputs/seed_stability_phase0/seed43/lung/run_config.json",
+          "pattern": "json:wall_seconds",
+          "how": "field",
+          "n_matches": 1,
+          "seconds": 893.5
+        }
+      },
+      "sae-atlas-217M": {
+        "12-layer extraction+SAE training+annotation (sum of 'Lx DONE in')": {
+          "file": "runs/sae-atlas-217M/outputs/full_12layer.log",
+          "pattern": "L\\d+ DONE in (\\d+)s",
+          "how": "sum",
+          "n_matches": 12,
+          "seconds": 6681.0
+        }
+      },
+      "circuit-tracing-217M": {
+        "trace L0/L3/L6/L9 (sum of 'complete: ... in Ns')": {
+          "file": "runs/circuit-tracing-217M/outputs/circuit_trace.log",
+          "pattern": "complete: \\d+ edges in (\\d+)s",
+          "how": "sum",
+          "n_matches": 4,
+          "seconds": 14473.0
+        }
+      },
+      "exhaustive-mapping-217M": {
+        "experiment 1 (last 'min elapsed')": {
+          "file": "runs/exhaustive-mapping-217M/outputs/experiment1.log",
+          "pattern": "([\\d.]+)min elapsed",
+          "how": "last",
+          "n_matches": 50,
+          "seconds": 19872.0
+        },
+        "experiment 2 rerun (wall-clock)": {
+          "file": "runs/exhaustive-mapping-217M/outputs/experiment2_rerun.log",
+          "pattern": "wall-clock: ([\\d.]+) min",
+          "how": "last",
+          "n_matches": 1,
+          "seconds": 900.0
+        }
+      },
+      "manifold-discovery-217M": {
+        "STATUS.md iteration-log 'done in Ns' entries (one per step)": {
+          "file": "runs/manifold-discovery-217M/STATUS.md",
+          "pattern": "\\n- 2026-[^\\n]*?(?:done|completed) in ([\\d,]+)s\\b",
+          "how": "sum",
+          "n_matches": 8,
+          "seconds": 35520.0
+        }
+      },
+      "longevity-mechinterp-217M": {
+        "stage 1 extraction (last elapsed=)": {
+          "file": "runs/longevity-mechinterp-217M/outputs/stage1_run.log",
+          "pattern": "elapsed=(\\d+)s",
+          "how": "last",
+          "n_matches": 15,
+          "seconds": 624.0
+        }
+      }
+    },
+    "per_pipeline_hours": {
+      "spectral-geometry-217M": 2.6,
+      "attention-grn-217M": 4.44,
+      "topology-141-217M": 0.88,
+      "sae-atlas-217M": 1.86,
+      "circuit-tracing-217M": 4.02,
+      "exhaustive-mapping-217M": 5.77,
+      "manifold-discovery-217M": 9.87,
+      "longevity-mechinterp-217M": 0.17
+    },
+    "note": "lower bound: covers only steps whose scripts printed or saved a duration"
+  },
+  "audit_files": {
+    "n_audit_files": 53,
+    "n_on_2026_05_07": 53,
+    "days": [
+      "2026-05-07"
+    ],
+    "first": {
+      "path": "../../pipelines/audit-recurring-review-issues.md",
+      "time": "2026-05-07 16:57:38"
+    },
+    "last": {
+      "path": "audits/audit-20260507-completion-v2.md",
+      "time": "2026-05-07 21:10:46"
+    },
+    "key_files": {
+      "audits/audit-20260507.md": "2026-05-07 17:38:25",
+      "audits/bootstrap_cis_summary.json": "2026-05-07 17:59:48",
+      "audits/audit_a3_bootstrap_cis.py": "2026-05-07 17:59:36",
+      "audits/audit_a2_groupkfold_status.md": "2026-05-07 18:08:22",
+      "audits/audit-20260507-completion.md": "2026-05-07 18:09:25",
+      "audits/audit-20260507-completion-v2.md": "2026-05-07 21:10:46",
+      "../../pipelines/audit-recurring-review-issues.md": "2026-05-07 16:57:38"
+    },
+    "note": "audit-related = files in audits/, audit_* scripts, their output folders, and the audit spec"
+  },
+  "logs": [
+    {
+      "pipeline": "spectral-geometry-217M",
+      "log": "runs/spectral-geometry-217M/outputs/phase0.log",
+      "birth": "2026-04-16 19:05:16",
+      "mtime": "2026-04-16 19:41:20",
+      "size": 245118,
+      "sha256": "c0dca0461c3ced75d6e13433ca53e1dc873442d551e3f65291d0c637473b575d",
+      "window_h": 0.601,
+      "tqdm_bars_ge_60s_min": 13.07,
+      "device_mentions": [
+        "mps"
+      ]
+    },
+    {
+      "pipeline": "spectral-geometry-217M",
+      "log": "runs/spectral-geometry-217M/outputs/phase1.log",
+      "birth": "2026-04-16 19:21:59",
+      "mtime": "2026-04-16 19:42:49",
+      "size": 1460,
+      "sha256": "5fb3e415d0df422ed3c8afa03ca427d17e9978642ebf49e0f30383ccc2f8d832",
+      "window_h": 0.347,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "spectral-geometry-217M",
+      "log": "runs/spectral-geometry-217M/outputs/phases_345.log",
+      "birth": "2026-04-16 19:23:42",
+      "mtime": "2026-04-16 19:43:08",
+      "size": 5166,
+      "sha256": "1883383bb0a866ce19666c18985e53ddf46d9a667a932a41d329780475ec063d",
+      "window_h": 0.324,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "spectral-geometry-217M",
+      "log": "runs/spectral-geometry-217M/outputs/phases_67.log",
+      "birth": "2026-04-16 19:25:09",
+      "mtime": "2026-04-16 19:43:38",
+      "size": 6901,
+      "sha256": "f07bc3f150ff16f4e896583b2686b447fd9d828a916c864acded2da5093a6ff8",
+      "window_h": 0.308,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "spectral-geometry-217M",
+      "log": "runs/spectral-geometry-217M/outputs/phase9.log",
+      "birth": "2026-04-16 19:44:18",
+      "mtime": "2026-04-16 19:44:24",
+      "size": 423,
+      "sha256": "488e88c2373f29b346b9ceb993abc7cc16cfe6d834e11bf5d5985bed03f9662f",
+      "window_h": 0.002,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "spectral-geometry-217M",
+      "log": "runs/spectral-geometry-217M/outputs/remaining.log",
+      "birth": "2026-04-17 10:24:52",
+      "mtime": "2026-04-17 10:34:37",
+      "size": 7693,
+      "sha256": "05eac62ae57c6198a0754f1cf10eda5a3d7157f5829a5d245d310d92b25c531a",
+      "window_h": 0.163,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "spectral-geometry-217M",
+      "log": "runs/spectral-geometry-217M/outputs/phase8.log",
+      "birth": "2026-05-03 19:16:37",
+      "mtime": "2026-05-03 20:29:49",
+      "size": 454699,
+      "sha256": "a69d9e89870bff4e8e32bcae5bd618d82b6be2b04e3f341d931efa72c56ef219",
+      "window_h": 1.22,
+      "tqdm_bars_ge_60s_min": 45.03,
+      "device_mentions": [
+        "mps"
+      ]
+    },
+    {
+      "pipeline": "spectral-geometry-217M",
+      "log": "runs/spectral-geometry-217M/outputs/phase9b.log",
+      "birth": "2026-05-03 19:19:25",
+      "mtime": "2026-05-03 19:19:44",
+      "size": 3451,
+      "sha256": "a17f7e9c9475d3c1f5229783e1d669fd5e3fe570a5cd015ea80ccde642d95a45",
+      "window_h": 0.005,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "spectral-geometry-217M",
+      "log": "runs/spectral-geometry-217M/autoloop/iterations/iter_0003/h3g_run.log",
+      "birth": "2026-05-05 16:50:31",
+      "mtime": "2026-05-05 17:20:15",
+      "size": 135585,
+      "sha256": "6925ec8094d94f4c2d9f37856094e44725e5f770a61feec178388f385e8af7c1",
+      "window_h": 0.496,
+      "tqdm_bars_ge_60s_min": 8.83,
+      "device_mentions": [
+        "mps"
+      ]
+    },
+    {
+      "pipeline": "spectral-geometry-217M",
+      "log": "runs/spectral-geometry-217M/autoloop/runtime/driver.log",
+      "birth": "2026-05-05 16:15:34",
+      "mtime": "2026-05-05 17:51:50",
+      "size": 3203,
+      "sha256": "6fd0d88f24c0123175b3ef9e5206a0abeab99cfb93a1a072f84dd8206c3ec7cf",
+      "window_h": 1.605,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "spectral-geometry-217M",
+      "log": "runs/spectral-geometry-217M/autoloop/runtime/iter_0002.log",
+      "birth": "2026-05-05 16:15:34",
+      "mtime": "2026-05-05 16:30:59",
+      "size": 8572,
+      "sha256": "bec5ea231faaf1f11796b1fa73129539a847b13f15607cea767d4e15e0600972",
+      "window_h": 0.257,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "spectral-geometry-217M",
+      "log": "runs/spectral-geometry-217M/autoloop/runtime/iter_0002_brainstormer.log",
+      "birth": "2026-05-05 16:30:59",
+      "mtime": "2026-05-05 16:38:26",
+      "size": 5610,
+      "sha256": "0ab98b2756d92de45213c500f2dd4510cc7b2efcbbfa082bafe4939fb56bfe56",
+      "window_h": 0.124,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "spectral-geometry-217M",
+      "log": "runs/spectral-geometry-217M/autoloop/runtime/iter_0003.log",
+      "birth": "2026-05-05 16:38:36",
+      "mtime": "2026-05-05 17:08:36",
+      "size": 17807,
+      "sha256": "d68cd98f74179712f258cf5b0d07b9e19793e7c0e6c797ed44ac206b427b31ac",
+      "window_h": 0.5,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": [
+        "mps"
+      ]
+    },
+    {
+      "pipeline": "spectral-geometry-217M",
+      "log": "runs/spectral-geometry-217M/autoloop/runtime/iter_0003_brainstormer.log",
+      "birth": "2026-05-05 17:08:36",
+      "mtime": "2026-05-05 17:21:33",
+      "size": 4208,
+      "sha256": "557cc80a62b176bf62d41c4c7669bff8a9a3b269baac6bc3ffb24f8c0fc7060d",
+      "window_h": 0.216,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "spectral-geometry-217M",
+      "log": "runs/spectral-geometry-217M/autoloop/runtime/iter_0004.log",
+      "birth": "2026-05-05 17:21:43",
+      "mtime": "2026-05-05 17:36:56",
+      "size": 7649,
+      "sha256": "16ef4c87d5a93e6e341f649849af220d7956ae361a2b018aa9679bc9c8350ff0",
+      "window_h": 0.254,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "spectral-geometry-217M",
+      "log": "runs/spectral-geometry-217M/autoloop/runtime/iter_0005.log",
+      "birth": "2026-05-05 17:37:06",
+      "mtime": "2026-05-05 17:51:50",
+      "size": 7649,
+      "sha256": "356a26c45ff503799b2be304fd12a65c279c317e83cda1b75a4342d70b137898",
+      "window_h": 0.246,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "attention-grn-217M",
+      "log": "runs/attention-grn-217M/outputs/phase0.log",
+      "birth": "2026-04-16 00:14:28",
+      "mtime": "2026-04-16 01:09:35",
+      "size": 246727,
+      "sha256": "9ee5204bb7dbd803f9f3a15d4d4345c691b7324816cdebc0d2ced8c7bcf5568c",
+      "window_h": 0.919,
+      "tqdm_bars_ge_60s_min": 54.58,
+      "device_mentions": [
+        "mps"
+      ]
+    },
+    {
+      "pipeline": "attention-grn-217M",
+      "log": "runs/attention-grn-217M/outputs/phase1.log",
+      "birth": "2026-04-16 01:10:02",
+      "mtime": "2026-04-16 01:12:16",
+      "size": 4104,
+      "sha256": "089809ca81df67af0c0b1cb8b9ca6a46e0d377c240dd6830718878d49d95ffa7",
+      "window_h": 0.037,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "attention-grn-217M",
+      "log": "runs/attention-grn-217M/outputs/phase2.log",
+      "birth": "2026-04-16 01:12:46",
+      "mtime": "2026-04-16 01:14:16",
+      "size": 2819,
+      "sha256": "dcfc42c0daa784263f14d95ee70a08d1cb2c0c1650a8ed5058e8c01c9aa47066",
+      "window_h": 0.025,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "attention-grn-217M",
+      "log": "runs/attention-grn-217M/outputs/phase3.log",
+      "birth": "2026-04-16 01:14:35",
+      "mtime": "2026-04-16 01:36:32",
+      "size": 1724,
+      "sha256": "e428366292166d76cb3aa448bcc3a6c0b46401f1a1d9f13a768a8b5ddd4cf19c",
+      "window_h": 0.366,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "attention-grn-217M",
+      "log": "runs/attention-grn-217M/outputs/phase4.log",
+      "birth": "2026-04-16 01:37:00",
+      "mtime": "2026-04-16 01:59:50",
+      "size": 226010,
+      "sha256": "4cbc6a4ed93ab92f7d0613414e2f8a26d1751c8b9d6abe91e20bbf2bd9cb6993",
+      "window_h": 0.38,
+      "tqdm_bars_ge_60s_min": 22.43,
+      "device_mentions": [
+        "mps"
+      ]
+    },
+    {
+      "pipeline": "attention-grn-217M",
+      "log": "runs/attention-grn-217M/outputs/phase0b.log",
+      "birth": "2026-04-16 10:56:34",
+      "mtime": "2026-04-16 11:15:18",
+      "size": 246872,
+      "sha256": "54dc95e6c25215b62d8ab7afe576b3cadafd4fb3d466083e9c49dee64372250f",
+      "window_h": 0.312,
+      "tqdm_bars_ge_60s_min": 17.72,
+      "device_mentions": [
+        "mps"
+      ]
+    },
+    {
+      "pipeline": "attention-grn-217M",
+      "log": "runs/attention-grn-217M/outputs/phase0_rpe1.log",
+      "birth": "2026-04-16 11:15:40",
+      "mtime": "2026-04-16 12:26:51",
+      "size": 244284,
+      "sha256": "0635c90a84b198444cba5f8f67a25a8dbe40320f6af494117fdb949f09637eff",
+      "window_h": 1.186,
+      "tqdm_bars_ge_60s_min": 70.57,
+      "device_mentions": [
+        "mps"
+      ]
+    },
+    {
+      "pipeline": "attention-grn-217M",
+      "log": "runs/attention-grn-217M/outputs/phase1_rpe1.log",
+      "birth": "2026-04-16 12:26:55",
+      "mtime": "2026-04-16 13:00:58",
+      "size": 4191,
+      "sha256": "3f9347742b11223e5e07622a11232ae462a25db214a1663ad8433510323617af",
+      "window_h": 0.567,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "attention-grn-217M",
+      "log": "runs/attention-grn-217M/outputs/phase2_rpe1.log",
+      "birth": "2026-04-16 13:01:24",
+      "mtime": "2026-04-16 13:02:22",
+      "size": 2906,
+      "sha256": "d5cc492508e70ef481b0057f40afa990f4564db4dea634d473ec548965d80a27",
+      "window_h": 0.016,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "attention-grn-217M",
+      "log": "runs/attention-grn-217M/outputs/phase3_rpe1.log",
+      "birth": "2026-04-16 13:02:37",
+      "mtime": "2026-04-16 13:21:39",
+      "size": 1821,
+      "sha256": "0f760a0f615c7d3dd42b331c8fd20a72030ea07ebf6526d529d66258eb07361e",
+      "window_h": 0.317,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "attention-grn-217M",
+      "log": "runs/attention-grn-217M/outputs/phase6_cssi.log",
+      "birth": "2026-04-16 13:59:24",
+      "mtime": "2026-04-16 14:36:16",
+      "size": 246418,
+      "sha256": "dd022fb26cd67157774f54aed65a4856a9d34094a4443bea9e9534d567205783",
+      "window_h": 0.614,
+      "tqdm_bars_ge_60s_min": 36.47,
+      "device_mentions": [
+        "mps"
+      ]
+    },
+    {
+      "pipeline": "attention-grn-217M",
+      "log": "runs/attention-grn-217M/outputs/phase0_adamson.log",
+      "birth": "2026-04-16 14:36:46",
+      "mtime": "2026-04-16 15:05:08",
+      "size": 245666,
+      "sha256": "1a0f9ba2cec1d0b3ff204e3ecd9a99beee1592b657905418e3ee96fbbae0c03c",
+      "window_h": 0.473,
+      "tqdm_bars_ge_60s_min": 27.3,
+      "device_mentions": [
+        "mps"
+      ]
+    },
+    {
+      "pipeline": "attention-grn-217M",
+      "log": "runs/attention-grn-217M/outputs/phase1_adamson.log",
+      "birth": "2026-04-16 15:05:14",
+      "mtime": "2026-04-16 15:25:20",
+      "size": 4177,
+      "sha256": "006e45fbdfd9198c07aa016b19109d8039325ca4b1b42714b57fb971f365c12a",
+      "window_h": 0.335,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "attention-grn-217M",
+      "log": "runs/attention-grn-217M/outputs/phase2_adamson.log",
+      "birth": "2026-04-16 15:05:17",
+      "mtime": "2026-04-16 15:25:43",
+      "size": 2905,
+      "sha256": "212a8aebfe605f61bea7ca19b28f44e53de05edf9ee36fbfa774fbb298c5c501",
+      "window_h": 0.341,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "attention-grn-217M",
+      "log": "runs/attention-grn-217M/outputs/phase3_adamson.log",
+      "birth": "2026-04-16 15:05:18",
+      "mtime": "2026-04-16 15:43:36",
+      "size": 1816,
+      "sha256": "63bd3201b1ed919b485f4630f3f4019a2f6d6bbc5122bbfcc76976948f354de6",
+      "window_h": 0.638,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "attention-grn-217M",
+      "log": "runs/attention-grn-217M/outputs/phase0_k562_1b.log",
+      "birth": "2026-04-16 15:45:49",
+      "mtime": "2026-04-16 18:22:46",
+      "size": 26139,
+      "sha256": "f821cf0d310ff830668c43856a6e198a5c47d2873717e751a484c573868e711c",
+      "window_h": 2.616,
+      "tqdm_bars_ge_60s_min": 94.63,
+      "device_mentions": [
+        "mps"
+      ]
+    },
+    {
+      "pipeline": "attention-grn-217M",
+      "log": "runs/attention-grn-217M/outputs/phase1_k562_1b.log",
+      "birth": "2026-04-16 18:23:09",
+      "mtime": "2026-04-16 18:24:30",
+      "size": 4659,
+      "sha256": "71619a7752d9a26b7864363dd099edd9579bf74874913d9884b0ab5163ab099f",
+      "window_h": 0.022,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "attention-grn-217M",
+      "log": "runs/attention-grn-217M/outputs/phase2_k562_1b.log",
+      "birth": "2026-04-16 18:24:39",
+      "mtime": "2026-04-16 18:25:59",
+      "size": 2909,
+      "sha256": "c1b0d27d6113f8511c08eec6e4f04783b7dc935788474dfdbd196bc345da1b84",
+      "window_h": 0.022,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "attention-grn-217M",
+      "log": "runs/attention-grn-217M/outputs/phase3_k562_1b.log",
+      "birth": "2026-04-16 18:26:08",
+      "mtime": "2026-04-16 18:45:10",
+      "size": 1825,
+      "sha256": "f72643bff2ae343ba457219b646f715ba23dfd905eaa5de9d7c4caa214b9cbf7",
+      "window_h": 0.317,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "topology-141-217M",
+      "log": "runs/topology-141-217M/logs/phase0_immune.log",
+      "birth": "2026-05-03 19:25:05",
+      "mtime": "2026-05-03 19:30:58",
+      "size": 599,
+      "sha256": "f594cdf32f31ac38f8c8da195e4d21aed9f02fa91796042e132777800555fd2d",
+      "window_h": 0.098,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "topology-141-217M",
+      "log": "runs/topology-141-217M/logs/phase0_lung_extlung.log",
+      "birth": "2026-05-03 19:31:02",
+      "mtime": "2026-05-03 20:09:16",
+      "size": 365463,
+      "sha256": "feb8d2c2815a8c33382b9feed937d6e92baab585b23f897eb99e06061d660ece",
+      "window_h": 0.637,
+      "tqdm_bars_ge_60s_min": 36.73,
+      "device_mentions": [
+        "mps"
+      ]
+    },
+    {
+      "pipeline": "topology-141-217M",
+      "log": "runs/topology-141-217M/logs/phase5_immune.log",
+      "birth": "2026-05-03 19:38:02",
+      "mtime": "2026-05-03 19:40:12",
+      "size": 998,
+      "sha256": "3776aadb8839b1020a19a3b5233947d708f991f38d6d3cd06c553888b001b23a",
+      "window_h": 0.036,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "topology-141-217M",
+      "log": "runs/topology-141-217M/logs/phase6_immune.log",
+      "birth": "2026-05-03 19:40:26",
+      "mtime": "2026-05-03 19:43:39",
+      "size": 911,
+      "sha256": "90d278a7f53d92f67d7292f50da7e3fde1eb837b79a83331c166e67f4356caf2",
+      "window_h": 0.054,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "topology-141-217M",
+      "log": "runs/topology-141-217M/logs/phase78_immune.log",
+      "birth": "2026-05-03 19:43:53",
+      "mtime": "2026-05-03 19:45:27",
+      "size": 1411,
+      "sha256": "eda913a5af9c71fdcaf8fa18ff8f7ad9bc8afa9b377c0c1df96f8424a8acad27",
+      "window_h": 0.026,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "topology-141-217M",
+      "log": "runs/topology-141-217M/logs/phase9_immune.log",
+      "birth": "2026-05-03 19:45:41",
+      "mtime": "2026-05-03 19:46:19",
+      "size": 1204,
+      "sha256": "c2c29f50572e89ba74aefef33b995d95930f9c3d0163ce785074034f6429d763",
+      "window_h": 0.011,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "topology-141-217M",
+      "log": "runs/topology-141-217M/logs/phase12_immune.log",
+      "birth": "2026-05-03 19:46:31",
+      "mtime": "2026-05-03 19:49:25",
+      "size": 1271,
+      "sha256": "22c3f02706e0b7b2b7c9c96aa848d5810b2c489a563cca9f254ceec00de3b164",
+      "window_h": 0.048,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "topology-141-217M",
+      "log": "runs/topology-141-217M/logs/phase1_lung.log",
+      "birth": "2026-05-03 19:51:11",
+      "mtime": "2026-05-03 19:51:13",
+      "size": 380,
+      "sha256": "2b424dde0783ab517b5ad7d5bed535ca61b0ed70e647fc22ab211b4158c8dd5b",
+      "window_h": 0.0,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "topology-141-217M",
+      "log": "runs/topology-141-217M/logs/phase5_lung.log",
+      "birth": "2026-05-03 19:51:17",
+      "mtime": "2026-05-03 19:56:14",
+      "size": 1835,
+      "sha256": "04507eff700fafafff1ca00a83a96eb15f1ba1b16ead5d38c6164e3e50405768",
+      "window_h": 0.083,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "topology-141-217M",
+      "log": "runs/topology-141-217M/logs/phase6_lung.log",
+      "birth": "2026-05-03 19:56:19",
+      "mtime": "2026-05-03 19:59:07",
+      "size": 1643,
+      "sha256": "ad64ccf2ee0b990284d224d9788dcb48f59d855bc44384f01728c7fd6dc40059",
+      "window_h": 0.047,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "topology-141-217M",
+      "log": "runs/topology-141-217M/logs/phase78_lung.log",
+      "birth": "2026-05-03 19:59:11",
+      "mtime": "2026-05-03 20:02:26",
+      "size": 2711,
+      "sha256": "12ad5b6bd506071603cafaffde295ec4a62d39c355fdbb755c41cd1ff446f304",
+      "window_h": 0.054,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "topology-141-217M",
+      "log": "runs/topology-141-217M/logs/phase9_lung.log",
+      "birth": "2026-05-03 20:02:31",
+      "mtime": "2026-05-03 20:03:28",
+      "size": 2376,
+      "sha256": "5708bb80ab16afbc6e6914c24a6852a4a96bc9bb569ab94293832a964288e6cd",
+      "window_h": 0.016,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "topology-141-217M",
+      "log": "runs/topology-141-217M/logs/phase12_lung.log",
+      "birth": "2026-05-03 20:03:32",
+      "mtime": "2026-05-03 20:13:06",
+      "size": 3603,
+      "sha256": "dd5c8e7b2346ec9eddff3d633509a88d1e3342a7a0a7c0c9a3c90bb3e83fe554",
+      "window_h": 0.16,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "topology-141-217M",
+      "log": "runs/topology-141-217M/logs/phase1.log",
+      "birth": "2026-05-03 20:13:15",
+      "mtime": "2026-05-03 20:13:18",
+      "size": 503,
+      "sha256": "89e4eef95e0f560732937a9060be57799ac5e92bedf1073dc8c4b5ac9e61b07e",
+      "window_h": 0.001,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "topology-141-217M",
+      "log": "runs/topology-141-217M/logs/phase5.log",
+      "birth": "2026-05-03 20:13:24",
+      "mtime": "2026-05-03 20:22:49",
+      "size": 2677,
+      "sha256": "4510e1979da85343b1b1dbe89dd242771cd5b1359f603d55512fd7e4f780ca31",
+      "window_h": 0.157,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "topology-141-217M",
+      "log": "runs/topology-141-217M/logs/phase6.log",
+      "birth": "2026-05-03 20:22:49",
+      "mtime": "2026-05-03 20:28:12",
+      "size": 2383,
+      "sha256": "e21cbadbbe7a2a4e1de4575ed485a62d0f98b0c4724079cddc4a80590528b9d3",
+      "window_h": 0.09,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "topology-141-217M",
+      "log": "runs/topology-141-217M/logs/phase78.log",
+      "birth": "2026-05-03 20:28:12",
+      "mtime": "2026-05-03 20:31:38",
+      "size": 4045,
+      "sha256": "2ada3d4cf074cf6da4faae15f459606ad4ecfe84999b64a29be92c743cb62d61",
+      "window_h": 0.057,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "topology-141-217M",
+      "log": "runs/topology-141-217M/logs/phase9.log",
+      "birth": "2026-05-03 20:31:38",
+      "mtime": "2026-05-03 20:32:17",
+      "size": 3581,
+      "sha256": "0bd692e1703453ff00cb6d4fdfa9c8ef24e2906c86d43d238d3ff3b58853e963",
+      "window_h": 0.011,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "topology-141-217M",
+      "log": "runs/topology-141-217M/logs/phase12.log",
+      "birth": "2026-05-03 20:32:17",
+      "mtime": "2026-05-03 20:40:55",
+      "size": 3547,
+      "sha256": "52b0361c24a64f22290f55ba891e8bbc435b8ad533b8b002ffd6f5c42913974c",
+      "window_h": 0.144,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "topology-141-217M",
+      "log": "runs/topology-141-217M/logs/phase14.log",
+      "birth": "2026-05-05 16:10:46",
+      "mtime": "2026-05-05 16:57:48",
+      "size": 2014,
+      "sha256": "b6ba41b5ffe472c95236202fbeb6ae31590b02be4cd8d6fcf8dd9eb8e2178eea",
+      "window_h": 0.784,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "topology-141-217M",
+      "log": "runs/topology-141-217M/logs/phase15.log",
+      "birth": "2026-05-05 16:58:41",
+      "mtime": "2026-05-05 17:01:10",
+      "size": 1890,
+      "sha256": "45c87f7106602bcbff1d52cbb3c945f19998de794b7ad509aaf6eb1666f9dcf3",
+      "window_h": 0.041,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "topology-141-217M",
+      "log": "runs/topology-141-217M/logs/phase16.log",
+      "birth": "2026-05-05 17:07:51",
+      "mtime": "2026-05-05 17:08:08",
+      "size": 5308,
+      "sha256": "e4289e426c8f23f90b9547aa521f5d26f98c166867126d35dfa7ba2341d85d27",
+      "window_h": 0.005,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "topology-141-217M",
+      "log": "runs/topology-141-217M/logs/phase10.log",
+      "birth": "2026-05-07 11:44:06",
+      "mtime": "2026-05-07 11:44:09",
+      "size": 2610,
+      "sha256": "bcb4e379db2841df277daa5b81698ce8a253a2c1cc3528d5a8c2c13167678b8f",
+      "window_h": 0.001,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "topology-141-217M",
+      "log": "runs/topology-141-217M/logs/phase8ext.log",
+      "birth": "2026-05-07 16:01:29",
+      "mtime": "2026-05-07 16:14:28",
+      "size": 6893,
+      "sha256": "2319be75723c005181a8d130cff31b4b2a1626a10decfb7f6cfded1aec561369",
+      "window_h": 0.216,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "topology-141-217M",
+      "log": "runs/topology-141-217M/logs/phase4_scgpt.log",
+      "birth": "2026-05-07 16:14:35",
+      "mtime": "2026-05-07 16:20:06",
+      "size": 3120,
+      "sha256": "b52921462f3bf38e4c50ce1c9960e96cebc74160b36269baef0b2d3575b2a6e8",
+      "window_h": 0.092,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "topology-141-217M",
+      "log": "runs/topology-141-217M/logs/phase11.log",
+      "birth": "2026-05-07 16:24:46",
+      "mtime": "2026-05-07 16:36:12",
+      "size": 5763,
+      "sha256": "1be8a0bd8d928ff7deea7f8d163d4aea8b31634a4717995293be0e1c61da5e32",
+      "window_h": 0.191,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "sae-atlas-217M",
+      "log": "runs/sae-atlas-217M/outputs/phase0.log",
+      "birth": "2026-04-17 15:53:31",
+      "mtime": "2026-04-17 15:59:35",
+      "size": 63867,
+      "sha256": "d77fa878089c983c6b58770d8599c99d398eddff3baca46bdbee0e2078c4d40a",
+      "window_h": 0.101,
+      "tqdm_bars_ge_60s_min": 4.07,
+      "device_mentions": [
+        "mps"
+      ]
+    },
+    {
+      "pipeline": "sae-atlas-217M",
+      "log": "runs/sae-atlas-217M/outputs/phase1.log",
+      "birth": "2026-04-17 16:00:08",
+      "mtime": "2026-04-17 16:06:09",
+      "size": 1876,
+      "sha256": "78641dfd5025cf746a5cc726c6630baa63e012d3c23a9b8f36f47eb137541c3b",
+      "window_h": 0.1,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "sae-atlas-217M",
+      "log": "runs/sae-atlas-217M/outputs/phases2_to_8.log",
+      "birth": "2026-04-17 16:09:07",
+      "mtime": "2026-04-17 19:29:36",
+      "size": 3981,
+      "sha256": "a064377d3ea0da51604a9a7b6b2d0e3253181bea30af3028c6d86a9a19c1bd18",
+      "window_h": 3.341,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "sae-atlas-217M",
+      "log": "runs/sae-atlas-217M/outputs/phase8.log",
+      "birth": "2026-04-17 19:30:35",
+      "mtime": "2026-04-17 19:33:37",
+      "size": 123,
+      "sha256": "470703c751934df89fbfa9704bc72d99543b7ca8905919bd220de12ff750af64",
+      "window_h": 0.051,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "sae-atlas-217M",
+      "log": "runs/sae-atlas-217M/outputs/remaining_phases.log",
+      "birth": "2026-04-17 21:39:52",
+      "mtime": "2026-04-17 23:11:35",
+      "size": 2483,
+      "sha256": "6bf144d259ec85df66cde454a611f7bd4971b7f952807174d2dd8452f7b42fcf",
+      "window_h": 1.529,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "sae-atlas-217M",
+      "log": "runs/sae-atlas-217M/outputs/phase11.log",
+      "birth": "2026-04-17 23:12:15",
+      "mtime": "2026-04-17 23:20:30",
+      "size": 313,
+      "sha256": "9bc412d4b0bd148914998c4d01e958c74e2b3aae7e65f1fd84b6d12f4dc59e63",
+      "window_h": 0.138,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "sae-atlas-217M",
+      "log": "runs/sae-atlas-217M/outputs/phase6.log",
+      "birth": "2026-04-18 14:44:10",
+      "mtime": "2026-04-18 15:22:29",
+      "size": 785,
+      "sha256": "99cc34ed868099de1c7e697adede8ce336cee1dcb590acb42fb7e6ddc72361da",
+      "window_h": 0.639,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": [
+        "mps"
+      ]
+    },
+    {
+      "pipeline": "sae-atlas-217M",
+      "log": "runs/sae-atlas-217M/outputs/phase9.log",
+      "birth": "2026-04-18 15:22:29",
+      "mtime": "2026-04-18 16:00:06",
+      "size": 2027,
+      "sha256": "ea121f9728c1cdac8855448c4df90b1a7b4765692e8e60d5165cbd1d2ccc78d8",
+      "window_h": 0.627,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "sae-atlas-217M",
+      "log": "runs/sae-atlas-217M/outputs/phases12_13.log",
+      "birth": "2026-04-19 13:13:50",
+      "mtime": "2026-04-19 13:16:09",
+      "size": 2052,
+      "sha256": "07d2618e0584e39a085d175ff3e8f9124c46758d2b292cb55904b297c2ddb7f5",
+      "window_h": 0.039,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "sae-atlas-217M",
+      "log": "runs/sae-atlas-217M/outputs/full_12layer.log",
+      "birth": "2026-04-19 15:30:53",
+      "mtime": "2026-04-19 17:36:21",
+      "size": 17693,
+      "sha256": "77fbc95763cd714ed465b9119d7e3f3d4ecf0bb76447b67ff42f9bb90e13edab",
+      "window_h": 2.091,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": [
+        "mps"
+      ]
+    },
+    {
+      "pipeline": "sae-atlas-217M",
+      "log": "runs/sae-atlas-217M/outputs/crosslayer_full.log",
+      "birth": "2026-04-19 21:07:16",
+      "mtime": "2026-04-19 22:14:13",
+      "size": 2133,
+      "sha256": "b643e1894dd622966501c7155c06d94e619034024129bdc0dfc4259bc025cf67",
+      "window_h": 1.116,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "sae-atlas-217M",
+      "log": "runs/sae-atlas-217M/outputs/phase8t_positive_tf_rerun/run.log",
+      "birth": "2026-05-07 19:10:43",
+      "mtime": "2026-05-07 19:30:18",
+      "size": 2915,
+      "sha256": "b270a4b0e37237112ae18404343fa9c52053f4ee6812b4decc819867ce37fa04",
+      "window_h": 0.326,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": [
+        "mps"
+      ]
+    },
+    {
+      "pipeline": "circuit-tracing-217M",
+      "log": "runs/circuit-tracing-217M/outputs/circuit_trace.log",
+      "birth": "2026-04-19 22:24:22",
+      "mtime": "2026-04-20 02:27:21",
+      "size": 6844,
+      "sha256": "988b14a495811af0939412d553ee6825a3972e52270e972f1583efa3af4a247a",
+      "window_h": 4.05,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "circuit-tracing-217M",
+      "log": "runs/circuit-tracing-217M/outputs/remaining_phases.log",
+      "birth": "2026-04-20 11:05:44",
+      "mtime": "2026-04-20 11:13:14",
+      "size": 5244,
+      "sha256": "2f1b34e00a121b9743c96a1299bc48278f1c1d2f11045e0bafb1f547e9029453",
+      "window_h": 0.125,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "exhaustive-mapping-217M",
+      "log": "runs/exhaustive-mapping-217M/outputs/experiment1.log",
+      "birth": "2026-04-20 14:18:31",
+      "mtime": "2026-04-20 19:51:10",
+      "size": 5313,
+      "sha256": "36e7e31ba182461dac6f94635f739397d9b79da1f9baf6166b435cfc3c87e352",
+      "window_h": 5.544,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "exhaustive-mapping-217M",
+      "log": "runs/exhaustive-mapping-217M/outputs/experiments_2_3.log",
+      "birth": "2026-04-20 20:01:34",
+      "mtime": "2026-04-20 20:39:53",
+      "size": 3607,
+      "sha256": "460d6e1da84d850bd074f3fe4e547e4aee4015c103773a5eb376fdd5fd169764",
+      "window_h": 0.639,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "exhaustive-mapping-217M",
+      "log": "runs/exhaustive-mapping-217M/outputs/experiment3_rerun.log",
+      "birth": "2026-04-23 19:36:30",
+      "mtime": "2026-04-23 20:05:11",
+      "size": 2992,
+      "sha256": "25e1d9431d4751c7766017507dcad6e2e190b9c2e84f4a4255d00e05520223c4",
+      "window_h": 0.478,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "exhaustive-mapping-217M",
+      "log": "runs/exhaustive-mapping-217M/outputs/experiment2_rerun.log",
+      "birth": "2026-04-23 20:28:58",
+      "mtime": "2026-04-23 21:32:25",
+      "size": 2166,
+      "sha256": "fd9e1573158dabe6fac580039a8692c51a134e2b514dda34c09d962cff122284",
+      "window_h": 1.058,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "manifold-discovery-217M",
+      "log": "runs/manifold-discovery-217M/outputs/phase1a.log",
+      "birth": "2026-05-03 19:54:50",
+      "mtime": "2026-05-03 20:32:44",
+      "size": 4636,
+      "sha256": "5a7dacdf1064a44705b4decf05d3c746aec3f742423dcb56669e0255b83634fe",
+      "window_h": 0.632,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "manifold-discovery-217M",
+      "log": "runs/manifold-discovery-217M/outputs/phase1b_internal.log",
+      "birth": "2026-05-03 20:34:29",
+      "mtime": "2026-05-03 23:37:42",
+      "size": 3351,
+      "sha256": "4b8e9ff702bba082abc4d097f34248f68137d1bd00709b6c2a0ecd1e44140701",
+      "window_h": 3.054,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": [
+        "mps"
+      ]
+    },
+    {
+      "pipeline": "manifold-discovery-217M",
+      "log": "runs/manifold-discovery-217M/outputs/phase4.log",
+      "birth": "2026-05-03 20:34:32",
+      "mtime": "2026-05-03 20:34:35",
+      "size": 669,
+      "sha256": "8977ae58d826e0dee6ad4792bc1e983bb456cabc35e6f294080f7573f323fb62",
+      "window_h": 0.001,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "manifold-discovery-217M",
+      "log": "runs/manifold-discovery-217M/outputs/phase5_anchor.log",
+      "birth": "2026-05-03 23:39:15",
+      "mtime": "2026-05-03 23:53:26",
+      "size": 6895,
+      "sha256": "1076b022ad28b8149867da80d3ff2c39804874e44a3d383fd61125fa84959805",
+      "window_h": 0.236,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "manifold-discovery-217M",
+      "log": "runs/manifold-discovery-217M/outputs/phase1b_remaining.log",
+      "birth": "2026-05-03 23:39:19",
+      "mtime": "2026-05-04 01:54:00",
+      "size": 2638,
+      "sha256": "de25ea69b4ccd0615c0bb2fbb192a197f09b5d9d0755efa71164a0ef1f2fcf63",
+      "window_h": 2.245,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": [
+        "mps"
+      ]
+    },
+    {
+      "pipeline": "manifold-discovery-217M",
+      "log": "runs/manifold-discovery-217M/outputs/phase1b_zeroshot.log",
+      "birth": "2026-05-03 23:39:19",
+      "mtime": "2026-05-04 02:01:11",
+      "size": 2580,
+      "sha256": "6975a9c3abba5ac5e5803ecd7f4c2b20373bb79f82ab8e04b142ec1777dbfedf",
+      "window_h": 2.364,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": [
+        "mps"
+      ]
+    },
+    {
+      "pipeline": "manifold-discovery-217M",
+      "log": "runs/manifold-discovery-217M/outputs/phase9.log",
+      "birth": "2026-05-03 23:55:01",
+      "mtime": "2026-05-04 01:12:59",
+      "size": 93888,
+      "sha256": "b831a287d6bc55d2f102d482188fbdc40b826cee80c070d55516362b8fd1454b",
+      "window_h": 1.299,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "manifold-discovery-217M",
+      "log": "runs/manifold-discovery-217M/outputs/phase10.log",
+      "birth": "2026-05-04 01:14:30",
+      "mtime": "2026-05-04 01:27:15",
+      "size": 14183,
+      "sha256": "8447b1679374bbba68bcd5d3b8c3c4213a31b9760d86227978ed107f7b12a58c",
+      "window_h": 0.213,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "manifold-discovery-217M",
+      "log": "runs/manifold-discovery-217M/outputs/phase6.log",
+      "birth": "2026-05-04 01:28:53",
+      "mtime": "2026-05-04 01:29:20",
+      "size": 3730,
+      "sha256": "50c1dbad3b8b2721be652e6904f8e76d28d2b41129a56c4ff3e9adba20e80045",
+      "window_h": 0.007,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "manifold-discovery-217M",
+      "log": "runs/manifold-discovery-217M/outputs/phase11.log",
+      "birth": "2026-05-04 01:31:33",
+      "mtime": "2026-05-04 01:31:43",
+      "size": 2951,
+      "sha256": "92c2bb303d289b5d0080a65f08bb5d75757c76978ee9ea165321dd9974e56be2",
+      "window_h": 0.003,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "manifold-discovery-217M",
+      "log": "runs/manifold-discovery-217M/outputs/phase1b_remaining_v2.log",
+      "birth": "2026-05-04 01:33:19",
+      "mtime": "2026-05-04 02:01:34",
+      "size": 913,
+      "sha256": "84cd9c5372ea5d09ce013178674f0f916a1e0bee785a974e06e1d921eceef2a8",
+      "window_h": 0.471,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": [
+        "mps"
+      ]
+    },
+    {
+      "pipeline": "manifold-discovery-217M",
+      "log": "runs/manifold-discovery-217M/outputs/phase1b_zeroshot_v3.log",
+      "birth": "2026-05-04 02:01:00",
+      "mtime": "2026-05-04 03:15:43",
+      "size": 3326,
+      "sha256": "4e5e43ef779a2d0f0873b7cbbdf579908ff52e969cf027eb4eee53ccc17e62ec",
+      "window_h": 1.245,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": [
+        "mps"
+      ]
+    },
+    {
+      "pipeline": "manifold-discovery-217M",
+      "log": "runs/manifold-discovery-217M/outputs/phase1b_lung_external_chain.log",
+      "birth": "2026-05-04 03:16:57",
+      "mtime": "2026-05-04 07:18:13",
+      "size": 236,
+      "sha256": "218ca15048c57349a36cac1f69553b487f0c661dc6ea0642d2ea5ddd18a2bcd2",
+      "window_h": 4.021,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "manifold-discovery-217M",
+      "log": "runs/manifold-discovery-217M/outputs/phase1b_lung_control_v3.log",
+      "birth": "2026-05-04 03:16:57",
+      "mtime": "2026-05-04 03:43:17",
+      "size": 3035,
+      "sha256": "a29d8d0b65e45631117e405f22c18d303de262d3f3295c2f717dbaf16f1281fa",
+      "window_h": 0.439,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": [
+        "mps"
+      ]
+    },
+    {
+      "pipeline": "manifold-discovery-217M",
+      "log": "runs/manifold-discovery-217M/outputs/phase8.log",
+      "birth": "2026-05-04 03:17:51",
+      "mtime": "2026-05-04 03:18:03",
+      "size": 1325,
+      "sha256": "6be6678d38edb48e267b8a332c6d6bbdd121db8645f428ab59bd26e372992436",
+      "window_h": 0.003,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "manifold-discovery-217M",
+      "log": "runs/manifold-discovery-217M/outputs/phase1b_external_v3.log",
+      "birth": "2026-05-04 03:43:41",
+      "mtime": "2026-05-04 07:16:58",
+      "size": 3423,
+      "sha256": "ed63344695a499fe48a3d3047d9dcacfe044fd9a2c3106883b7c3ac20893ddf3",
+      "window_h": 3.555,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": [
+        "mps"
+      ]
+    },
+    {
+      "pipeline": "manifold-discovery-217M",
+      "log": "runs/manifold-discovery-217M/outputs/phase7_lung_control.log",
+      "birth": "2026-05-04 03:50:05",
+      "mtime": "2026-05-04 03:50:21",
+      "size": 1015,
+      "sha256": "98abcb2c13f0a296c50d07c31267aff919ef87381787d64d1cc96aac2d7c7449",
+      "window_h": 0.004,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "manifold-discovery-217M",
+      "log": "runs/manifold-discovery-217M/outputs/phase1a_lung_nonhema.log",
+      "birth": "2026-05-04 04:23:06",
+      "mtime": "2026-05-04 04:24:07",
+      "size": 1592,
+      "sha256": "b90bc7571cc97a1676b86516b95b47d5ba525e0d15e2ce43f991ee7377a340ff",
+      "window_h": 0.017,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "manifold-discovery-217M",
+      "log": "runs/manifold-discovery-217M/outputs/phase7_external.log",
+      "birth": "2026-05-04 07:18:33",
+      "mtime": "2026-05-04 07:18:46",
+      "size": 976,
+      "sha256": "46234e698a473dd83db9f93a8a9f2bf13abd68f2b98e6a460678500580f24551",
+      "window_h": 0.004,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "manifold-discovery-217M",
+      "log": "runs/manifold-discovery-217M/outputs/phase1b_lung_nonhema.log",
+      "birth": "2026-05-04 07:18:38",
+      "mtime": "2026-05-04 07:41:26",
+      "size": 3198,
+      "sha256": "a47685d58fe8f2e97c63ff2fcf19bd6c451d7268e9a823fa64c1f1d056401f8c",
+      "window_h": 0.38,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": [
+        "mps"
+      ]
+    },
+    {
+      "pipeline": "manifold-discovery-217M",
+      "log": "runs/manifold-discovery-217M/outputs/phase7_lung_nonhema.log",
+      "birth": "2026-05-04 07:41:46",
+      "mtime": "2026-05-04 07:47:19",
+      "size": 977,
+      "sha256": "c83632c10c129688faa266cd3706d1f7b6a7bb0b4f781b3512e86ed5ed563414",
+      "window_h": 0.093,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "manifold-discovery-217M",
+      "log": "runs/manifold-discovery-217M/outputs/phase12_lite.log",
+      "birth": "2026-05-04 07:52:22",
+      "mtime": "2026-05-04 07:54:05",
+      "size": 17148,
+      "sha256": "7cbc1ad54b00db5a4723b8b3826c54f376385a3f4c8b77e5ba646ce2bdf2bedc",
+      "window_h": 0.028,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "manifold-discovery-217M",
+      "log": "runs/manifold-discovery-217M/outputs/phase13_h38_lite.log",
+      "birth": "2026-05-04 08:24:34",
+      "mtime": "2026-05-04 08:31:02",
+      "size": 3983,
+      "sha256": "ad13649482acd003173856c643b8053f844516557ee747b43bff19ee34292b51",
+      "window_h": 0.108,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "manifold-discovery-217M",
+      "log": "runs/manifold-discovery-217M/outputs/phase3a_sweep.log",
+      "birth": "2026-05-05 16:09:40",
+      "mtime": "2026-05-05 17:37:05",
+      "size": 19177,
+      "sha256": "8ef7135db202e5e3717b625cab05c349db781127da2377abf2bc107f965d03d9",
+      "window_h": 1.457,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "manifold-discovery-217M",
+      "log": "runs/manifold-discovery-217M/outputs/phase3a_revaluate.log",
+      "birth": "2026-05-05 18:27:17",
+      "mtime": "2026-05-05 18:27:18",
+      "size": 761,
+      "sha256": "4b6654f6227a271347256e0f0efaca975c355cfcd93c8ebd6491f98d6e033a35",
+      "window_h": 0.0,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "manifold-discovery-217M",
+      "log": "runs/manifold-discovery-217M/outputs/phase3a_sweep2.log",
+      "birth": "2026-05-05 18:38:08",
+      "mtime": "2026-05-05 18:52:52",
+      "size": 19021,
+      "sha256": "649964bf4d71d67444745d8173e0d71ecf7ecc4f462aefd7fd7309aab57a93ce",
+      "window_h": 0.246,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "manifold-discovery-217M",
+      "log": "runs/manifold-discovery-217M/outputs/phase7_h103.log",
+      "birth": "2026-05-05 19:10:11",
+      "mtime": "2026-05-05 19:10:16",
+      "size": 697,
+      "sha256": "5ce5f9925b5de9b7a1f15d3f93d2c16b815b5c8752f0fbb4b558a5aab7e83a23",
+      "window_h": 0.001,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "manifold-discovery-217M",
+      "log": "runs/manifold-discovery-217M/outputs/phase14_sweep3.log",
+      "birth": "2026-05-07 11:46:11",
+      "mtime": "2026-05-07 12:41:31",
+      "size": 21921,
+      "sha256": "df25474da41075baa0e88bf300a97f2dcb4c70c57322973dc1bac264776ab941",
+      "window_h": 0.922,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "manifold-discovery-217M",
+      "log": "runs/manifold-discovery-217M/outputs/phase15_h38_lite.log",
+      "birth": "2026-05-07 12:51:43",
+      "mtime": "2026-05-07 12:51:57",
+      "size": 1617,
+      "sha256": "1fc726e0d84689c2adeca9c4843895dbf4dd8b1add73d6615824c98943e56802",
+      "window_h": 0.004,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "manifold-discovery-217M",
+      "log": "runs/manifold-discovery-217M/outputs/phase15_h95_zeroshot.log",
+      "birth": "2026-05-07 12:51:47",
+      "mtime": "2026-05-07 12:51:58",
+      "size": 1002,
+      "sha256": "c75653abbb4c3d2349d2082de1ef33eb3964c83a9fdee9b23dedd8014529b1a6",
+      "window_h": 0.003,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "manifold-discovery-217M",
+      "log": "runs/manifold-discovery-217M/outputs/phase15_h101.log",
+      "birth": "2026-05-07 15:57:40",
+      "mtime": "2026-05-07 15:57:58",
+      "size": 1598,
+      "sha256": "5d4fb20ab2cdb79e454318bb72d152eb60c4c93499bbec84b0ec2ac712d42503",
+      "window_h": 0.005,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "manifold-discovery-217M",
+      "log": "runs/manifold-discovery-217M/outputs/phase16.log",
+      "birth": "2026-05-07 16:00:27",
+      "mtime": "2026-05-07 16:37:18",
+      "size": 4301,
+      "sha256": "2233ddf3e1b9e0c8cc6ed081436cacb29d31c65f18f5e37e4014f176e28d400d",
+      "window_h": 0.614,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "manifold-discovery-217M",
+      "log": "runs/manifold-discovery-217M/outputs/phase17.log",
+      "birth": "2026-05-07 16:37:45",
+      "mtime": "2026-05-07 16:39:52",
+      "size": 1566,
+      "sha256": "04b8fe56968651692e04f5d3effd4bceb1971c56648f8fe535502b212411e6e3",
+      "window_h": 0.035,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    },
+    {
+      "pipeline": "longevity-mechinterp-217M",
+      "log": "runs/longevity-mechinterp-217M/outputs/stage1_run.log",
+      "birth": "2026-05-05 16:18:27",
+      "mtime": "2026-05-05 17:50:53",
+      "size": 10143,
+      "sha256": "382ddc6d2e473957de3ba2c14af5be475cdf6fa45e8add47b25faa703b0c69c8",
+      "window_h": 1.541,
+      "tqdm_bars_ge_60s_min": 0.0,
+      "device_mentions": []
+    }
+  ]
+}

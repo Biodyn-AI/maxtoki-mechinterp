@@ -1,0 +1,150 @@
+id,short_name,pipeline,type,severity,finder,audit_pattern,present_in_pre_audit_state
+L001,CRISPRi sign never compared,circuit-tracing,code bug,critical,"Deployment agent, outside the audit sweep",outside checklist,yes
+L002,CRISPRi accuracy judged against 50%,circuit-tracing,missing baseline or null,critical,Human reader,P1,partly
+L003,'Five-fold CV' that trains nothing,circuit-tracing,wrong description,major,Independent verification,P4,no
+L004,"Repair write-up numbers not in its JSON (966 genes, 53.55%)",circuit-tracing,wrong statistic,minor,Independent verification,outside checklist,no
+L005,Circuit-trace hook deletes the source block,circuit-tracing,code bug,critical,Independent verification,outside checklist,yes
+L006,Edge density lacked a null; repair used a parametric one,circuit-tracing,missing baseline or null,minor,In-session audit,P1,yes
+L007,'22x denser' headline contradicts own numbers (41x),circuit-tracing,wrong statistic,minor,Independent verification,outside checklist,yes
+L008,Old and new CRISPRi figures use different record sets,circuit-tracing,wrong description,minor,Independent verification,outside checklist,no
+L009,Silenced genes treated as independent units,circuit-tracing,unsupported claim,minor,Independent verification,P4,no
+L010,No intervention sanity check or positive control (circuit tracing),circuit-tracing,missing baseline or null,major,In-session audit,P6,yes
+L011,Exhaustive-mapping hooks delete a whole block,exhaustive-mapping,code bug,critical,Independent verification,outside checklist,yes
+L012,Triplet hooks overwrite each other (ABC = C),exhaustive-mapping,code bug,critical,Independent verification,outside checklist,yes
+L014,Synergy test has no statistic or null; spec design cut,exhaustive-mapping,missing baseline or null,major,Independent verification,P1,yes
+L015,Steering results are block-deletion artefacts,exhaustive-mapping,code bug,critical,Independent verification,outside checklist,yes
+L016,Steering has no random-feature null at any layer,exhaustive-mapping,missing baseline or null,major,Independent verification,P1,yes
+L017,Exhaustive summary numbers that do not match files,exhaustive-mapping,wrong statistic,minor,Independent verification,outside checklist,yes
+L019,No intervention sanity check or positive control (exhaustive mapping),exhaustive-mapping,missing baseline or null,major,In-session audit,P6,yes
+L020,"0/48 TF-specificity test null-saturated, no chance baseline",sae-atlas,missing baseline or null,major,In-session audit,P1,yes
+L021,TFs with no responding feature counted as negatives,sae-atlas,wrong statistic,major,"Deployment agent, outside the audit sweep",P6,yes
+L022,"Phase 8t selection: layer mismatch, ~5 control cells, token-level test",sae-atlas,code bug,major,Independent verification,P4,yes
+L023,"0/48 result cannot be reproduced (SAE overwritten, IDs not saved)",sae-atlas,reproducibility,major,Independent verification,P10,yes
+L024,48 TFs chosen alphabetically,sae-atlas,wrong description,minor,Independent verification,P5,yes
+L025,'Power' numbers are false-positive rates,sae-atlas,wrong statistic,major,Human reader,P6,no
+L026,GATA1 'positive' fails a rarity/length-matched null,sae-atlas,missing baseline or null,critical,Independent verification,P5,no
+L027,"A8 re-run selection code bugs (layer, controls, knife-edge)",sae-atlas,code bug,major,Independent verification,P4,no
+L028,Threshold search presented as a positive (p = 0.030 uncorrected),sae-atlas,unsupported claim,major,Human reader,P5,no
+L029,'above_random' column wrong,sae-atlas,code bug,minor,Independent verification,outside checklist,no
+L031,Phase 6 applies the L5 SAE to hidden_states[6],sae-atlas,code bug,major,Independent verification,outside checklist,yes
+L033,Curveball null never shuffles (z = 0 by construction),attention-grn,code bug,major,Independent verification,P1,yes
+L034,Curveball used 50 draws; spec asks 200,attention-grn,reproducibility,minor,"Deployment agent, outside the audit sweep",outside checklist,yes
+L035,Verdict thresholds looser than the spec,attention-grn,reproducibility,minor,Independent verification,outside checklist,yes
+L036,No gene-level baseline on the TRRUST endpoint,attention-grn,missing baseline or null,major,Independent verification,P2,yes
+L037,'Residualised attention collapses to chance in every run',attention-grn,wrong description,major,Independent verification,outside checklist,yes
+L038,'No run beats any trivial baseline' (RPE1 does),attention-grn,wrong description,minor,Independent verification,outside checklist,yes
+L039,Summary p-values are not the BH values,attention-grn,wrong statistic,minor,Independent verification,outside checklist,yes
+L040,1B run not like-for-like and mislabelled,attention-grn,wrong description,minor,Independent verification,P7,yes
+L041,RPE1/Adamson reports carry K562 scope text,attention-grn,wrong description,minor,Independent verification,outside checklist,yes
+L042,Adamson screen labelled CRISPRa,attention-grn,wrong description,minor,Independent verification,outside checklist,yes
+L043,'Gain <= +0.002 in every run' omits 1B +0.046,attention-grn,unsupported claim,minor,Independent verification,P5,yes
+L046,Feature-shuffle null cannot show compression is learned,spectral-geometry,missing baseline or null,major,Independent verification,P1,yes
+L047,CKA at L0 = 1 by construction; compared with scGPT's L0,spectral-geometry,wrong description,minor,Independent verification,P3,yes
+L048,'Three disjoint cell samples' overlap,spectral-geometry,wrong description,minor,Independent verification,P4,yes
+L049,Phase 8 JSON verdict contradicts the summary,spectral-geometry,wrong description,minor,Independent verification,outside checklist,yes
+L050,Cross-model CI from 80% subsampling (docstring says bootstrap),spectral-geometry,wrong statistic,minor,Independent verification,P8,no
+L051,L11 effective rank measured after the final norm,spectral-geometry,wrong description,minor,Independent verification,outside checklist,yes
+L052,Spectral autoloop: timeout passed validation; stop rule counts crashes,spectral-geometry,code bug,minor,Independent verification,outside checklist,yes
+L053,scGPT cross-model CCA has no null (0.40 is at chance),topology-141,missing baseline or null,major,Independent verification,P1,yes
+L054,Procrustes retrieval fitted and scored on the same genes,topology-141,missing baseline or null,minor,Independent verification,P5,yes
+L055,scGPT 'alignment breaks' despite retrieval z 19-31,topology-141,unsupported claim,minor,Independent verification,P9,yes
+L056,Geneformer called autoregressive / same family,topology-141,wrong description,minor,Independent verification,P7,yes
+L057,iter_04 relabelled 'NOVEL POSITIVE' by manual review,topology-141,unsupported claim,major,In-session audit,P9,yes
+L058,iter_04 replication verdict contradicts its numbers,topology-141,wrong description,minor,"Deployment agent, outside the audit sweep",P6,no
+L059,H123 cross-validation leaked shared endpoints,topology-141,wrong statistic,minor,In-session audit,P4,yes
+L060,H123 GroupKFold repair: all layers below 0.5; leakage claim untested,topology-141,unsupported claim,minor,Independent verification,P4,no
+L061,H123 negative had no positive control; repair control is one easy setting,topology-141,missing baseline or null,minor,In-session audit,P6,yes
+L062,Lung H123 'anti-predicts' rests on one cell sample,topology-141,unsupported claim,minor,In-session audit,P8,yes
+L063,H123 CIs resample the 12 layers,topology-141,wrong statistic,minor,Independent verification,P4,no
+L064,"H139 null uses 8 permutations (spec 100-1,000)",topology-141,missing baseline or null,minor,Independent verification,P1,yes
+L065,"Topology 'autoloop' is a scripted batch; decisions changed by hand, unlogged",topology-141,reproducibility,minor,Independent verification,P10,yes
+L066,Fifth pre-registered gate (permutation p) never computed,manifold-discovery,missing baseline or null,major,Independent verification,P1,yes
+L067,Shuffled null passes two of the four gates,manifold-discovery,missing baseline or null,major,Independent verification,P1,yes
+L069,External 'branch-holdout' holds nothing out,manifold-discovery,wrong description,major,Independent verification,P4,yes
+L070,"Lung negative control fails all four gates, reported as three",manifold-discovery,wrong description,minor,Independent verification,P6,yes
+L072,Zero-shot panel is not a separate cohort,manifold-discovery,wrong description,major,Independent verification,P4,yes
+L073,"Manifold intervals: 80% anchor subsampling, not donor bootstrap",manifold-discovery,wrong statistic,major,Human reader,P8,no
+L074,Internal branch-holdout 0.370 carried by three small branches,manifold-discovery,wrong statistic,major,Independent verification,P8,yes
+L075,3-gate fallback rule added after sweep 1,manifold-discovery,unsupported claim,major,Independent verification,P5,yes
+L076,H103 zero-shot uses k=5 on 18 anchors,manifold-discovery,wrong statistic,minor,Independent verification,P8,yes
+L077,Two diverging manifold summaries; stale copy hides a failed test,manifold-discovery,reproducibility,minor,Independent verification,P10,yes
+L078,'Compression costs no measurable quality' untested,manifold-discovery,unsupported claim,minor,Independent verification,P5,yes
+L082,Manifold run used an unrecorded second Python environment,manifold-discovery,reproducibility,minor,Independent verification,P10,yes
+L083,Longevity negative has no positive control,longevity-mechinterp,missing baseline or null,minor,In-session audit,P6,yes
+L084,Longevity summary: 'L5 used by every other pipeline',longevity-mechinterp,wrong description,minor,Independent verification,outside checklist,yes
+L085,'Five independent probes converge' on the negative,cross-pipeline,unsupported claim,major,Independent verification,P9,partly
+L086,Deployed specs break the ten-section template,framework (specs),reproducibility,minor,Independent verification,P10,yes
+L087,Source-model pre-flight in spec Validation never run,framework (specs),missing baseline or null,minor,Independent verification,P6,yes
+L088,No checkpoint revision pinned; code pins unverifiable,cross-pipeline,reproducibility,minor,Independent verification,P10,yes
+L089,Environment and intermediates not recorded,cross-pipeline,reproducibility,minor,In-session audit,P10,yes
+L090,Audit matrix 61% -> 75%: no cell table; '2 untouched' wrong,framework (audit),wrong statistic,critical,Independent verification,outside checklist,no
+L091,Audit graded its own same-day work; one session did everything,framework (audit),unsupported claim,major,Independent verification,outside checklist,no
+L092,"Audit checklist built after, and from, this project's results",framework (audit),unsupported claim,major,Independent verification,outside checklist,no
+L093,Audit bookkeeping errors (A3 'DONE' with 2/5 skipped; 'independent' zero-shot),framework (audit),wrong description,minor,Independent verification,outside checklist,no
+L118,Three attention runs feed log1p data as if it were counts,attention-grn,code bug,major,Independent verification,outside checklist,yes
+L119,scGPT cross-model comparison used the wrong embedding rows,topology-141 (phase4 cross-model),code bug,critical,Independent verification,outside checklist,yes
+L120,"Residualisation fitted in float32, not a least-squares fit",attention-grn,wrong statistic,minor,Independent verification,outside checklist,yes
+L121,Beating the degree-preserving null is not model-specific (co-expression also beats it),attention-grn,missing baseline or null,major,Independent verification,P2,yes
+L122,Manifold trustworthiness depends on the number of anchors scored,manifold-discovery,wrong statistic,major,Independent verification,P1,yes
+L123,Several SAE-atlas scripts apply an SAE to the wrong layer,sae-atlas,code bug,major,Independent verification,outside checklist,yes
+R01,SAE annotation: BH run only on tests that already had raw p<0.1,sae-atlas,wrong statistic,critical,Blind re-audit (Study C),"P5 (closest fit: tests are filtered on their own outcome, overlap>=2 and p<0.1, before the BH step; no checklist item covers multiple-testing families directly)",yes
+R02,SAE modules: '10 modules' is a hard-coded fallback setting,sae-atlas,code bug,major,Blind re-audit (Study C),outside checklist (closest is P1: the module count has no null and no data-driven choice of k),yes
+R03,SAE persistence: 3-layer and 12-layer summaries reach opposite verdicts,sae-atlas,missing baseline or null,major,Blind re-audit (Study C),P1,yes
+R04,12-layer summary misreports adjacent persistence values,sae-atlas,wrong description,minor,Blind re-audit (Study C),outside checklist,yes
+R05,Dead SAE features counted as alive (no-op alive check),sae-atlas,code bug,major,Blind re-audit (Study C),"outside checklist (code bug). The problem it hides, persistence with no null or chance value, is P1.",yes
+R06,'Massive superposition confirmed' uses a test any dictionary passes,sae-atlas,missing baseline or null,major,Blind re-audit (Study C),P1,yes
+R07,12-layer pipeline writes SVD-alignment results without running the test,sae-atlas,code bug,minor,Blind re-audit (Study C),"outside checklist (a placeholder value is written out as a result; the nearest checklist item is P7, because a 3-layer measurement is reported as if it covered all 12 layers)",yes
+R08,'Information highways 99.6-100%' has no null and no minimum co-occurrence,sae-atlas,missing baseline or null,major,Blind re-audit (Study C),P1,yes
+R09,Phase 10 'unannotated features co-activate with annotated' is ~100% by construction,sae-atlas,missing baseline or null,minor,Blind re-audit (Study C),P1,yes
+R10,Phase 11 cell-type enrichment tests token positions as independent,sae-atlas,wrong statistic,major,Blind re-audit (Study C),P4,yes
+R11,Phase 8 'perturbation response' proxy is a token-identity test scored as a replication,sae-atlas,wrong statistic,major,Blind re-audit (Study C),"P3 (endpoint does not match the object of the claim). Secondary: P1 (no null, 4,928 uncorrected tests per target) and P9 (line 67 says 'the model registers that a gene has been perturbed', but nothing was perturbed).",yes
+R12,Phase 6 patching drops the SAE reconstruction error; no reconstruction-only baseline,sae-atlas,missing baseline or null,major,Blind re-audit (Study C),"P6 (a negative result with no control showing the test could detect a feature effect). Secondary: P3 (the endpoint is input-token positions, not the target genes' logits).",yes
+R13,Cross-reference claims unannotated features carry 'disproportionate' causal influence,sae-atlas / exhaustive-mapping / circuit-tracing (summary cross-references),unsupported claim,major,Blind re-audit (Study C),"outside checklist (closest is P9, overreach; the core error is misreading the project's own numbers, not a missing null or control)",yes
+R14,'~5K edges per feature in both experiments' is false,exhaustive-mapping,wrong description,minor,Blind re-audit (Study C),outside checklist,yes
+R15,L0 (static token embedding) read as a computing layer; '12 layers' for 11 blocks,"sae-atlas (also circuit-tracing, exhaustive-mapping)",wrong description,minor,Blind re-audit (Study C),P3,yes
+R16,Architecture and field-wide claims drawn from one model under one condition,"cross-pipeline (sae-atlas, attention-grn, spectral-geometry, topology-141)",unsupported claim,minor,Blind re-audit (Study C),P7,yes
+R17,Circuit 'biological coherence 36.1%' has no chance baseline,circuit-tracing,missing baseline or null,major,Blind re-audit (Study C),P1,yes
+R18,Exp 3 'pseudotime' is PC1 of mixed immune cells; 'temporal information everywhere' unsupported,exhaustive-mapping,unsupported claim,critical,Blind re-audit (Study C),"P3 (endpoint-object mismatch). It is also a cell-type confound (P5). The audit graded exhaustive-mapping P3 'acknowledged' and said 'pushes toward maturity' was 'correctly framed' (audits/audit-20260507.md:131), so the audit missed this.",yes
+R19,"Wrong gene biology used to support steering (FTL 'terminal erythroid', SOD3/KITLG 'stemness')",exhaustive-mapping (repeated in attention-grn summary),unsupported claim,major,Blind re-audit (Study C),"outside checklist (closest is P9: the gene names are offered as proof that the steering is ""biologically coherent"")",yes
+R20,"Attention edge read from one direction of a causal mask, so it partly measures expression rank",attention-grn,missing baseline or null,major,Blind re-audit (Study C),"P3 (endpoint does not match the object of the claim), with a P2 part: the model-free rank-order share is a trivial baseline that was never run",yes
+R21,Phase 4 head ablation cannot test 'heads are not a causal bottleneck',attention-grn,unsupported claim,major,Blind re-audit (Study C),"P3 (endpoint does not match the claim); also P6 (no positive control behind a null), P8 (no CI, one draw), P5 (heads ranked on the same 8 TFs that score them)",yes
+R22,Phase 0b value-weighted vs attention AUROCs misquoted,attention-grn,wrong description,minor,Blind re-audit (Study C),outside checklist,yes
+R23,'Architectural asymmetry' compares different endpoints; VW TRRUST never null-tested,attention-grn,wrong statistic,major,Blind re-audit (Study C),P1 (main: the value-weighted TRRUST result had no null). Also P3 (two different endpoints compared as one) and P7 (the 'specific to causal Llama decoders' claim has no comparison model).,yes
+R24,CSSI test run on degenerate clusters (four single-cell clusters),attention-grn,wrong statistic,minor,Blind re-audit (Study C),P8 (the 'significantly worse' result does not survive a minimum-cluster-size threshold). Secondary: P6 (CSSI was never shown able to find signal on this data before its failure was reported).,yes
+R25,TRRUST endpoint rests on 8-32 TFs with edges pooled as independent,attention-grn,unsupported claim,major,Blind re-audit (Study C),"P8 (headline numbers of unknown stability), with P4 (edges sharing a regulator pooled as independent units)",yes
+R26,C3 retention ratio is undefined when the baseline is below 0.5,attention-grn,wrong statistic,minor,Blind re-audit (Study C),"outside checklist (closest is P8: an unstable ratio with a near-zero denominator, reported with no CI)",yes
+R27,Attention-GRN negative has no positive control or planted-signal check,attention-grn,missing baseline or null,minor,Blind re-audit (Study C),P6,yes
+R28,CRISPRi 54.6% cited as an attention-GRN Phase 11 result,attention-grn,wrong description,minor,Blind re-audit (Study C),outside checklist,yes
+R30,Attention-GRN README still lists Phase 0b and 5-11 as skipped,attention-grn,wrong description,minor,Blind re-audit (Study C),P10,yes
+R31,Lineage TwoNN dimension estimated from 6-9 points with no size-matched null,spectral-geometry,missing baseline or null,major,Blind re-audit (Study C),P1 (no chance value for the depth rho). Secondary: P8 (the estimate is unstable; leave-one-out and the null spread show it is noise).,yes
+R32,Audit row 16 calls BATF-to-PAX5 divergence 'distance metrics replicate strongly',spectral-geometry,wrong description,minor,Blind re-audit (Study C),outside checklist (the verdict label does not match the numbers in the same row and in the output JSON; same class as ledger rows L049 and L007),yes
+R33,Phase 9b 'paper's null does not replicate' compares a different statistic and null,spectral-geometry,wrong statistic,minor,Blind re-audit (Study C),P1 (the null is a plain label shuffle that keeps none of the shared gene-level structure; the stated null family does not match the one being compared to). There is also a P3-like part: the endpoint does not match the paper's endpoint.,yes
+R35,SV3 PPI significance reported as both 3/12 and 10/12 layers,spectral-geometry,wrong statistic,minor,Blind re-audit (Study C),"P5 (SV3 was picked post hoc as the best axis, then given an uncorrected count). The 3/12 vs 10/12 mismatch on its own is a reporting inconsistency outside the checklist.",yes
+R36,"'MaxToki layer-0 SV1 PPI z=5.62' is really SV7, a max over axes and pair sets",spectral-geometry,wrong description,minor,Blind re-audit (Study C),P5,yes
+R37,TF-vs-target 'jumps to 0.62 at L11 after ~0.53 at L0' is wrong,spectral-geometry,wrong description,minor,Blind re-audit (Study C),"outside checklist (a misreported number and the reading built on it). One sub-point touches P1: the summary compares the 0.57 mean with scGPT's 0.744 as if chance were 0.5, but this classifier's own permutation null sits at about 0.54.",yes
+R38,TF-vs-target AUROC judged against 0.5 though its in-sample null is 0.54; no expression baseline,spectral-geometry,missing baseline or null,major,Blind re-audit (Study C),"P2 (no gene-level baseline), with a P1 part (judged against 0.5, not the 0.54 permutation null). The 2026-05-07 audit rated spectral P1 'clean'. It rated P2 'acknowledged with gap', but the gap it named was the cross-model Pearson, not this classifier.",yes
+R39,Spectral scorecard tallies do not match their own rows,spectral-geometry,wrong description,minor,Blind re-audit (Study C),outside checklist,yes
+R40,Cell-type marker clustering 'replicated' only at static L0; L2-norm control misreported,spectral-geometry,unsupported claim,major,Blind re-audit (Study C),P3 (the endpoint does not match the object of the claim). It also touches P1: the per-layer control values were never compared with chance.,yes
+R41,Stale scope lines in the spectral summary,spectral-geometry,wrong description,minor,Blind re-audit (Study C),outside checklist for the stale scope line (same kind as ledger L041). The Phase 9a label is P3: the test that was run is not the test that was named.,yes
+R42,Spectral number slips: GC-plasma angle and z-score read as odds ratio,spectral-geometry,wrong description,minor,Blind re-audit (Study C),"P3 for the z-score called an odds ratio (the reported metric is not what its label says, and it is compared with a different metric). The angle endpoint slip is outside the checklist (a copying error).",yes
+R43,'Opposite of paper' hub-confound claim rests on 149 low-degree pairs with 0-2 hits,spectral-geometry,unsupported claim,minor,Blind re-audit (Study C),P6 (the weak low-degree result has no power check). Also touches P8 (no interval on the difference) and P4 (pairs that share a hub gene are treated as independent).,yes
+R44,"Spectral autoloop iterations ran and gave results, but the summary says Phase 10 was not run",spectral-geometry,wrong description,minor,Blind re-audit (Study C),"outside checklist (closest is P10, because the loop's compute is also not reported)",yes
+R45,'Tissue-invariant gene geometry' counts the static L0 layer and uses only a gene-shuffle null,topology-141,missing baseline or null,major,Blind re-audit (Study C),"P2 (trivial baseline absent), with P1 (gene-label shuffle is the only, weak, null) as a secondary pattern",yes
+R46,"Immune domain built differently (98% TFs, 2,000 cells) and not disclosed",topology-141,code bug,major,Blind re-audit (Study C),outside checklist (confounded cross-domain comparison; the misreported cell count and missing n_cells in run_config touch P10),yes
+R47,H-hub (z about 2.3 in 2 of 3 domains) called 'the strongest new result',topology-141,missing baseline or null,minor,Blind re-audit (Study C),"P1 (null too weak: plain uniform permutation, no expression/dropout matching); secondary P5 (effect not residualised on expression) and P9 (wording 'MaxToki does place regulatory hubs at central positions')",yes
+R48,H-lineage 'ext-lung 4/4 lineages significant' includes a B-cell result at the null p95,topology-141,wrong statistic,minor,Blind re-audit (Study C),P1,yes
+R49,H23 Forman 'replicates and validates the implementation' with no CI (all CIs include 0.5),topology-141,unsupported claim,minor,Blind re-audit (Study C),P8 (point estimate with no interval); the wording 'validates the spec implementation' is also P9-style language overreach,yes
+R50,H-depth labelled 'NON-TRIVIAL' though not significant; exploratory batch uncorrected,topology-141,unsupported claim,minor,Blind re-audit (Study C),P9 (claim stronger than the evidence). It also has P1 parts (H-depth has no null of its own) and P5 parts (no correction across the batch).,yes
+R51,"Topology pair table: TF-only positives vs random negatives, STRING-only pairs labelled negative",topology-141,missing baseline or null,minor,Blind re-audit (Study C),"P1 (null or negative set with no composition, degree or co-expression matching). P5 is secondary (a confound carried through to the deltas).",yes
+R52,Run-folder topology FINAL_SUMMARY is stale (says run phases were SKIPPED),topology-141,wrong description,minor,Blind re-audit (Study C),"outside checklist (closest is P10 reproducibility scaffolding, the class used for the similar manifold row L077)",yes
+R53,Topology TL;DR numbers wrong: 'Eucl ~ Geo (~0)' and 'H91 delta ~ +0.01',topology-141,wrong description,minor,Blind re-audit (Study C),outside checklist (a number copied wrongly into a summary; the stale summaries/ copy also touches P10),yes
+R54,"Other wrong statements in the run-folder topology summary (diffusion strict audit, iter_05, iter_03)",topology-141,wrong description,minor,Blind re-audit (Study C),outside checklist (wrong description of own results). The closest pattern for the iter_03 and iter_05 confound conclusions is P5 (confound carry-through).,yes
+R55,"Diffusion time chosen on the evaluation pairs in every domain, including external-lung",topology-141,wrong statistic,minor,Blind re-audit (Study C),P5 (selection-driven inflation / double-dipping),yes
+R56,"Triangle-defect spectrum collapsed to one signed sum, contrary to spec",topology-141,code bug,minor,Blind re-audit (Study C),"P3 (the endpoint does not match the object of the claim: the run scores a different feature, with a different sign, against a different comparator than the paper's triangle-defect spectrum, then calls it a non-replication). P6 is secondary: the negative was declared without checking the port against the source code.",yes
+R57,Manifold headline not shown to need MaxToki: extracted head does not beat simple PCA/avg-pool,manifold-discovery,missing baseline or null,major,Blind re-audit (Study C),P2,yes
+R58,Manifold rulers are lookups of cell-type labels on cell-type centroid anchors,manifold-discovery,missing baseline or null,critical,Blind re-audit (Study C),"P1 (null shuffles labels and keeps no cell-type structure), with P2 (no model-free baseline run through the gates)",yes
+R59,Phase 17 'partially orthogonal / rotates away' is explained by imperfect fits,manifold-discovery,unsupported claim,major,Blind re-audit (Study C),"P1 (the -0.173 gap has no chance value, and the plain-shuffle null tests the wrong thing); secondary P8 (one seed, no spread)",yes
+R60,Per-head 'operators' are o_proj slices; head attribution is not what heads compute,manifold-discovery,wrong description,major,Blind re-audit (Study C),"P3 (endpoint-object mismatch). Secondary: P9 (mechanistic wording) and P1 (no random-projection baseline). The 2026-05-07 audit graded manifold-discovery 'clean - exemplary' on P3, so it missed this.",yes
+R61,"Lung negative control gets random stage labels, so any feature set fails it",manifold-discovery,missing baseline or null,major,Blind re-audit (Study C),P1,yes
+R62,"Longevity: 'MaxToki beats HVG-PCA, encodes something beyond expression' from two below-chance scores",longevity-mechinterp,unsupported claim,minor,Blind re-audit (Study C),"P1 (main: the comparison is not anchored to chance or to a donor-level null), with P4 (17 donors are the real unit; the permutation null shuffles cells, not donors)",yes
+L124,Model inputs ranked from log1p(CP10k) instead of counts (every run except RPE1),"all (attention K562/Adamson/1B, SAE training and all SAE results, circuits, exhaustive mapping, manifold, spectral L1-11, topology L1-11, longevity)",code bug,critical,Independent verification,outside checklist,yes

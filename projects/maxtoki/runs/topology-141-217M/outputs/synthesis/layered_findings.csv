@@ -1,0 +1,7 @@
+layer,finding,status,verdict
+1,Cross-model CCA alignment (H17/H20/H24),SKIPPED,No reference model (scGPT/Geneformer) extracted on the same gene pool — Layer 1 cannot be evaluated for MaxToki-217M in this run.
+2,Persistent homology (H01/H03) + rewiring null,EVALUATED,external_lung: 0/12 layers feature-shuffle-sig; 0/12 rewire-sig; immune: 1/12 layers feature-shuffle-sig; 0/12 rewire-sig; lung: 1/12 layers feature-shuffle-sig; 0/12 rewire-sig
+3,Manifold distance hierarchy (H13/H16/H32/H69-H70),EVALUATED,"Mean ΔAUROC vs coexpression by metric: triangle_defect=-0.055, geodesic=-0.035, euclidean=-0.035, diffusion=+0.012; target hierarchy monotonic: False"
+4,H123 signed motif-community hardening (paper's strongest),EVALUATED,external_lung: 0/12 layers positive null-gap (mean Δ=-0.060); immune: 1/12 layers positive null-gap (mean Δ=-0.020); lung: 0/12 layers positive null-gap (mean Δ=-0.041)
+5,H141 strict max-null audit,EVALUATED,"Overall mean strict margin = -0.050, 4/36 tests pass; external_lung: mean strict margin -0.078, 1/12 tests strict-positive; immune: mean strict margin -0.033, 2/12 tests strict-positive; lung: mean strict margin -0.039, 1/12 tests strict-positive"
+99,H91 stability-selected descriptors (combined classifier),EVALUATED,external_lung: mean AUC 0.545 (67% above chance); immune: mean AUC 0.514 (78% above chance); lung: mean AUC 0.500 (50% above chance)
