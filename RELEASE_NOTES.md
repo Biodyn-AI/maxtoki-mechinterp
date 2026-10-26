@@ -1,6 +1,6 @@
 # Release notes
 
-Built by `projects/maxtoki/release/build_release.py` (the builder itself is not part of this tree). Newest source file: 2026-10-05 20:05 (local time).
+Built by `projects/maxtoki/release/build_release.py` (the builder itself is not part of this tree). Newest source file: 2026-10-26 13:21 (local time).
 
 ## What is here
 
@@ -59,7 +59,7 @@ Built by `projects/maxtoki/release/build_release.py` (the builder itself is not 
   deleted afterwards or put elsewhere with `--cache`, plus about 42 GB of placed files).
   36 of them are not deposited (67.0 GB); the `deposited` column says why and how to rebuild or re-extract them.
 - Files the manuscript's results map cites stay in the repository up to 50 MB.
-- Everything else left out, with the reason: `EXCLUDED.csv` (118 rows, 6.0 GB).
+- Everything else left out, with the reason: `EXCLUDED.csv` (123 rows, 6.0 GB).
 - `projects/maxtoki/paper-plos-one/` holds the manuscript source (`draft/`, `main.tex`, `references.bib`,
   `plos2025.bst`), the figure scripts and their source data, the figures, the supporting information
   and the build and check scripts; not the working files of the manuscript.
